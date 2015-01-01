@@ -1,7 +1,7 @@
 ---
 layout: page
-title: О Сайте
-permalink: /about/
+title: Обратная связь
+permalink: /contacts/
 ---
 
 Сайт (бывшего) системного администратора, который делает записи о том с чем
