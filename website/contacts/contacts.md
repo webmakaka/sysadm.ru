@@ -4,4 +4,5 @@ title: Контакты
 permalink: /contacts/
 ---
 
-email: 
+email:  
+![Alt text](http://fotografii.org/a3333333mail.gif "Marley")
