@@ -2,7 +2,7 @@
 title: sysadm.ru
 
 description: > #
-  Проект со всеми исходниками расположен и хостится на github. Любой желающий может создать свою копию. Желающие добавить свои знания могут прислать pull request'ы. Подробнее в разделе "О сайте".
+  Проект со всеми исходниками расположен и хостится на [github](https://github.com/sysadm-ru/sysadm-ru.github.io). Любой желающий может создать свою копию. Желающие добавить свои знания могут прислать pull request'ы. Подробнее в разделе "О сайте".
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sysadm.ru" # the base hostname & protocol for your site
 
