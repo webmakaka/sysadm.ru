@@ -252,3 +252,127 @@ cmd ["apache2ctl", "-D", "FOREGROUND"]
 
 
 http://localhost:80
+
+
+
+===================
+
+
+vi Dockerfile
+
+#Ubuntu based Hello World container
+FROM ubuntu:15.04
+MAINTAINER test@example.com
+RUN apt-get update \
+    && apt-get install -y iputils-ping apache2
+
+
+ENTRYPOINT ["apache2ctl"]
+
+
+docker run -d -p 80:80 web2 -D FOREGROUND
+
+=====================
+
+vi Dockerfile
+
+#Ubuntu based Hello World container
+FROM ubuntu:15.04
+MAINTAINER test@example.com
+RUN apt-get update \
+&& apt-get install -y iputils-ping apache2
+
+ENV var1=ping var=8.8.8.8
+
+CMD $var1 $var2
+
+docker build -t="pinger" .
+
+docker run -d pinger
+
+docker logs -f <containter_id>
+
+
+env
+
+=====================
+
+
+docker run -it -v /test-vol --name=voltainer ubuntu:15.04 /bin/bash
+
+conrainer
+  nano /test-vol/testfile
+
+docker inspect voltainer
+
+===
+
+docker run -it --volumes-from=voltainer ubuntu:15.04 /ban/bash
+
+
+===
+
+docker run -it --volumes-from=voltainer ubuntu:15.04 /ban/bash
+
+=================================
+=================================
+=================================
+
+11 networking
+
+apt-get install bridge-utils
+yum install bridge-utils
+
+brctl show docker0
+
+
+
+vi Dockerfile
+
+#Test for networking module
+FROM ubuntu:15.04
+
+MAINTAINER test@example.com
+
+RUN apt-get update \
+&& apt-get install -y iputils-ping traceroute
+
+ENTRYPOINT ["/bin/bash"]
+
+
+
+docker run -it --name=net1 net-img
+docker run -it --name=net2 net-img
+
+CTRL+P+Q
+
+brctl show
+
+
+=====================================
+
+docker port <container_id>
+
+$ docker port railsdev
+1337/tcp -> 0.0.0.0:1337
+3000/tcp -> 0.0.0.0:3000
+8080/tcp -> 0.0.0.0:80
+9000/tcp -> 0.0.0.0:9000
+
+
+=====================================
+src - source
+rcvr - reciever
+ali-src - alias
+
+docker run --name=src -d img
+
+docker run --name=rcvr --link=src:ali-src -it ubuntu:15.04 /bin/bash
+
+
+docker inspect rcvr
+
+docker attach rcvr
+env
+env | grep ALI
+cat /etc/hosts

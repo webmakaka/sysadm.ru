@@ -10,6 +10,8 @@ permalink: /docker/
 
 ___
 
+! Посмотреть, что за PublishAllPorts.  
+
 
 ### 04 Installing and Updating Docker
 
