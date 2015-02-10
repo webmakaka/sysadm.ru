@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docker
+title: Configuring Docker to Communicate Over the Network Users
 permalink: /docker/installing-and-updating-docker/configuring-docker-to-communicate-over-the-network/
 ---
 

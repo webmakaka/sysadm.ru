@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docker
+title: Updating Docker
 permalink: /docker/installing-and-updating-docker/updating-docker/
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docker
+title: Installing Docker on Ubuntu
 permalink: /docker/installing-and-updating-docker/installing-docker-on-ubuntu/
 ---
 

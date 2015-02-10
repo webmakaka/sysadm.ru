@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docker
+title: Granting Docker Control to Non-root Users
 permalink: /docker/installing-and-updating-docker/granting-docker-control-to-non-root-users/
 ---
 

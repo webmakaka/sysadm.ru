@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docker
+title: Playing Around with Our First Docker Container
 permalink: /docker/installing-and-updating-docker/playing-around-with-our-first-docker-dontainer/
 ---
 

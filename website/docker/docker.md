@@ -27,7 +27,7 @@ ___
 05 01 Module Intro  
 05 02 The High Level Picture  
 05 03 The Docker Engine  
-05 04 Docker Images  
+[05 04 Docker Images](/docker/major-docker-components/docker-images/)  
 05 05 Docker Containers  
 05 06 Docker Hub  
 05 07 Wrap-up  
