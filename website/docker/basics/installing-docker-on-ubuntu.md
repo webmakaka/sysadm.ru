@@ -8,8 +8,7 @@ permalink: /docker/basics/installing-docker-on-ubuntu/
 ## Инсталляция Docker в Ubuntu
 
 
-Вариант 1: устанавливаем docker из репо ubuntu.
-___
+**Вариант 1: устанавливаем docker из репо ubuntu.**
 
     $ sudo su
 
@@ -19,9 +18,8 @@ ___
 
     $ docker -v
 
-___
 
-Вариант 2: устанавливаем docker из репо docker.
+**Вариант 2: устанавливаем docker из репо docker.**
 
     (Пока просто пишу без реального ввода команд в консоли)
     (Если кто проверит и исправит или подтвердит, что все ок, будет супер.)
@@ -31,18 +29,18 @@ ___
     # apt-get update
     # apt-get install lxc-docker
 
-    # docker version
+    # docker -v
 
-===
 
-Предоставить пользователю возможность работы с docker
+**Предоставить пользователю права для работы с docker**
 
     $ sudo gpasswd -a <username> docker
 
-// в группе должен появиться этот пользователь  
+в группе docker должен появиться этот пользователь  
 
     $ cat /etc/group
         docker:x:126:username
 
-// Перелогиниваемся  
+перелогиниваемся  
+
     $logout
