@@ -120,13 +120,6 @@ ___
 
 ---
 
-// Удаляем контейнеры
-
-    docker rm  <container_id>
-    docker rm -f <container_id>
-
-
-------------
 
 docker port <container_id>
 
@@ -136,3 +129,23 @@ $ docker port railsdev
     3000/tcp -> 0.0.0.0:3000
     8080/tcp -> 0.0.0.0:80
     9000/tcp -> 0.0.0.0:9000
+
+
+// Удаляем контейнеры
+
+    docker rm  <container_id>
+    docker rm -f <container_id>
+
+
+stop all Docker containers:  
+
+    # docker stop $(docker ps -a -q)
+
+remove all Docker containers:  
+
+    # docker rm $(docker ps -a -q)
+
+remove all Docker images:  
+    # docker rmi $(docker images -q)
+
+    
