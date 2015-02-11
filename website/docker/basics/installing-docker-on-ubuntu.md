@@ -7,7 +7,7 @@ permalink: /docker/basics/installing-docker-on-ubuntu/
 
 ## 04 Installing and Updating Docker
 
-04 02 Installing Docker on Ubuntu
+Installing Docker on Ubuntu
 
 Весия простая, устанавливается docker из пепо ubuntu.
 ___

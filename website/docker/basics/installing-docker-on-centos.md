@@ -7,7 +7,7 @@ permalink: /docker/basics/installing-docker-on-centos/
 
 ## 04 Installing and Updating Docker
 
-04 03 Installing Docker on CentOS
+Installing Docker on CentOS
 
 У меня сейчас нет под рукой машины с centos. Поэтому только команды:
 
