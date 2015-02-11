@@ -11,6 +11,8 @@ permalink: /sitemap/
 
 <br/>
 
+
+###[Видеокурсы для администраторов Linux (без ссылок на скачку)](/linux/video-kursy/)  
 ______
 
 <br/>

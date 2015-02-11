@@ -6,13 +6,14 @@ permalink: /linux/virtual/docker/
 
 
 [Инсталляция Docker в Ubuntu](/linux/virtual/docker/basics/installing-docker-on-ubuntu/)  
-[Инсталляция Docker on CentOS 7](/linux/virtual/docker/basics/installing-docker-on-centos/)  
+[Инсталляция Docker в CentOS 7](/linux/virtual/docker/basics/installing-docker-on-centos/)  
 [Основные команды Docker](/linux/virtual/docker/basics/basic-commands/)  
 [Скопировать image на другой HOST](/linux/virtual/docker/basics/copying-images-to-other-hosts/)  
 [Скопировать image на hub.docker.com и забрать image с него](/linux/virtual/docker/basics/push-and-pull-docker-image-to-hub/)  
 
 
 
-[Основные раскопки Docker пока еще лежат здесь](http://pre.sysadm.ru/linux/virtual/docker/)  
+[Основные раскопки по Docker пока еще лежат здесь](http://pre.sysadm.ru/linux/virtual/docker/)  
+
 
 ! Посмотреть, что за параметр PublishAllPorts.  
