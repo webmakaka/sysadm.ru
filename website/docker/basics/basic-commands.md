@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 05 04 Docker Images
-permalink: /docker/basics/copying-images-to-other-hosts/
+title: basic commands
+permalink: /docker/basics/basic-commands/
 ---
 
 

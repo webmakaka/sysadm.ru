@@ -18,8 +18,8 @@ ___
 ! Посмотреть, что за параметр PublishAllPorts.  
 
 
-[Инсталляция Docker в Ubuntu](/docker/installing-docker-on-ubuntu/)  
-[Инсталляция Docker on CentOS 7](/docker/installing-docker-on-centos/)  
-
-[ Скопировать image на другой HOST](/docker/basicks/copying-images-to-other-hosts/)  
-[ Скопировать image на hub.docker.com и забрать image с него](/docker/basicks/push-and-pull-docker-image-to-hub/)  
+[Инсталляция Docker в Ubuntu](/docker/basics/installing-docker-on-ubuntu/)  
+[Инсталляция Docker on CentOS 7](/docker/basics/installing-docker-on-centos/)  
+[Основные команды Docker](/docker/basics/basic-commands/)  
+[ Скопировать image на другой HOST](/docker/basics/copying-images-to-other-hosts/)  
+[ Скопировать image на hub.docker.com и забрать image с него](/docker/basics/push-and-pull-docker-image-to-hub/)  
