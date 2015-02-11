@@ -5,32 +5,25 @@ permalink: /linux/virtual/docker/basics/copying-images-to-other-hosts/
 ---
 
 
-Работаем на Ubuntu:
+Компьютер 1:
 
-    docker run ubuntu /bin/bash -c "echo 'cool content' > /tmp/cool-file"
+Если нужно перенести контейнер делаем commit, чтобы получить image
 
-    docker ps -a
+    docker commit <container_id> <image_name>
 
-    docker commit <container_id> fridge
+Сохраняем image в файл.
 
-    docker images
-    docker images --tree
+    docker save -o /tmp/<image_name>.tar <image_name>
 
-    dcoker history fridge
+Проверяем, создался ли файл
 
-    docker save -o /tmp/fridge.tar fridge
-
-    ls -lh /tmp/fridge.tar
+    ls -lh /tmp/<image_name>.tar
 
 
-скопировали на centos
+Компьютер 2:
 
-    tar -tf /tmp/fridge.tar
+    tar -tf /tmp/<image_name>.tar
 
-    docker load -i /tmp/fridge.tar
+    docker load -i /tmp/<image_name>.tar
 
     docker images
-
-    docker run -it fridge /bin/bash
-
-    cat /tmp/cool-file
