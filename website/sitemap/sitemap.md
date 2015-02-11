@@ -7,7 +7,7 @@ permalink: /sitemap/
 ## Виртуализация и контейнеры:
 
 
-[docker](/docker/)  
+[docker](/linux/virtual/docker/)  
 
 <br/>
 
