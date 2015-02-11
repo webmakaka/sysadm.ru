@@ -5,10 +5,6 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-centos/
 ---
 
 
-## Инсталляция Docker в CentOS 7.X
-
-
-
 У меня сейчас нет под рукой машины с centos. Поэтому только команды:
 
     # yum install -y docker

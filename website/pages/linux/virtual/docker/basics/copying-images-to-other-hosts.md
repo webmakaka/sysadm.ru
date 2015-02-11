@@ -5,9 +5,6 @@ permalink: /linux/virtual/docker/basics/copying-images-to-other-hosts/
 ---
 
 
-## Копируем Images на другой Host
-
-
 Работаем на Ubuntu:
 
     docker run ubuntu /bin/bash -c "echo 'cool content' > /tmp/cool-file"

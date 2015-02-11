@@ -1,13 +1,11 @@
 ---
 layout: page
-title: basic commands
+title: Основные команды
 permalink: /linux/virtual/docker/basics/basic-commands/
 ---
 
 
-## Основные команды
-
-// Подготовленные image  
+Подготовленные image  
 https://registry.hub.docker.com/  
 
 // Создать свой репо для контейнеров (1 приватный бесплатно + нет ограничений для публичных контейнеров)  

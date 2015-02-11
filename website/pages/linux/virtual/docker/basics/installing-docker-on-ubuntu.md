@@ -5,9 +5,6 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 ---
 
 
-## Инсталляция Docker в Ubuntu
-
-
 **Вариант 1: устанавливаем docker из репо ubuntu.**
 
     $ sudo su

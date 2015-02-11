@@ -5,9 +5,6 @@ permalink: /linux/virtual/docker/basics/push-and-pull-docker-image-to-hub/
 ---
 
 
-## Отправить docker image на hub.docker.com
-
-
 https://hub.docker.com  
 
 
