@@ -63,7 +63,7 @@ ___
 
     docker images fedora
 
-// Запустить shell в контенере  
+// Запустить shell в контейнере  
 
     docker run -it fedora /bin/bash
 
@@ -72,7 +72,7 @@ ___
 cat /var/lib/docker/aufs/diff/<container_id>
 
 
-ls -l /var/lib/docker/containers
+ls -l /var/lib/docker/containers  
 ls -l /var/lib/docker/containers | wc -l
 
 ___
