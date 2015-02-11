@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Installing Docker on CentOS
-permalink: /docker/installing-and-updating-docker/installing-docker-on-centos/
+permalink: /docker/basics/installing-docker-on-centos/
 ---
 
 

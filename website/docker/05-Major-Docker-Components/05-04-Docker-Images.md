@@ -5,75 +5,7 @@ permalink: /docker/major-docker-components/docker-images/
 ---
 
 
-## 05 Major Docker Components
 
-05 04 Docker Images
-
-
-    docker run -it fedora /bin/bash
-
-    // взять из репо последнюю версию федоры
-    docker pull fedora
-
-    // взять все версии федоры
-    docker pull -a fedora
-
-    // получить список скачанных версий
-    docker images fedora
-
-
-    docker pull coreos/etcd
-
-
-    ============================
-
-    containers
-
-    docker run -it ubuntu /bin/bash
-
-    Подключились с контейнеру fedora.
-    Отключились от него командой CTRL + P + Q
-
-
-==================
-
-06 04 Where Images Are Stored
-
-$ docker images
-$ docker pull coreos/apache
-docker images --tree
-
-
-06 05 Copying Images to Other Hosts
-
-
-docker run ubuntu /bin/bash -c "echo 'cool content' > /tmp/cool-file"
-
-docker ps -a
-
-docker commit <container_id> fridge
-
-docker images
-docker images --tree
-
-dcoker history fridge
-
-
-docker save -o /tmp/fridge.tar fridge
-
-ls -lh /tmp/fridge.tar
-
-скопировали на centos
-
-tar -tf /tmp/fridge.tar
-
-docker load -i /tmp/fridge.tar
-
-docker images
-
-docker run -it fridge /bin/bash
-
-cat /tmp/cool-file
 
 ====================================
 
@@ -96,33 +28,6 @@ docker inspect <container_id>
 docker run -it ubuntu:14.4.1 /bin/bash
 CTRL + P + Q
 
-docker stop <container_id>
-
-// Последний стартовавший контейнер.
-docker ps -l
-
-docker attach <container_id>
-
-docker restart <container_id>
-
-=================================
-
-Удаляем контейнеры
-
-ls -l /var/lib/docker/containers
-ls -l /var/lib/docker/containers | wc -l
-docker rm  <container_id>
-
-docker rm -f <container_id>
-
-
-==================================
-
-docker top <container_id>
-
-ps -ef
-
-docker logs <container_id>
 
 
 ====================================
@@ -156,20 +61,6 @@ docker run helloworld:0.1
 
 =============
 
-09
-
-https://registry.hub.docker.com/  
-hub.docker.com
-
-Создали репо
-
-docker images
-docker tag <image_id> nigelpoulton/helloworld:1.0
-doceker push nigelpoulton/helloworld:1.0
-
-doceker pull nigelpoulton/helloworld:1.0
-==========
-
 
 docker run -d -p 5000:5000 registry
 docker images
@@ -185,6 +76,8 @@ docker push debian8.docker.course:5000/priv-test
 docker run -d debian8.docker.course:5000/priv-test
 
 ===============================
+
+________________
 
 Dockerfile2
 
@@ -315,16 +208,6 @@ docker run -it --volumes-from=voltainer ubuntu:15.04 /ban/bash
 docker run -it --volumes-from=voltainer ubuntu:15.04 /ban/bash
 
 =================================
-=================================
-=================================
-
-11 networking
-
-apt-get install bridge-utils
-yum install bridge-utils
-
-brctl show docker0
-
 
 
 vi Dockerfile
@@ -351,13 +234,7 @@ brctl show
 
 =====================================
 
-docker port <container_id>
 
-$ docker port railsdev
-1337/tcp -> 0.0.0.0:1337
-3000/tcp -> 0.0.0.0:3000
-8080/tcp -> 0.0.0.0:80
-9000/tcp -> 0.0.0.0:9000
 
 
 =====================================
