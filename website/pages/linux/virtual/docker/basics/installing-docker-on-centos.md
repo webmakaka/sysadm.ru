@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Installing Docker on CentOS
-permalink: /docker/basics/installing-docker-on-centos/
+title: Инсталляция Docker в CentOS 7.X
+permalink: /linux/virtual/docker/basics/installing-docker-on-centos/
 ---
 
 
-## 04 Installing and Updating Docker
+## Инсталляция Docker в CentOS 7.X
 
-Installing Docker on CentOS
+
 
 У меня сейчас нет под рукой машины с centos. Поэтому только команды:
 

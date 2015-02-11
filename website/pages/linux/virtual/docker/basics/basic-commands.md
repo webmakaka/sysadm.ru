@@ -1,7 +1,7 @@
 ---
 layout: page
 title: basic commands
-permalink: /docker/basics/basic-commands/
+permalink: /linux/virtual/docker/basics/basic-commands/
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Отправить docker image на hub.docker.com
-permalink: /docker/basics/push-and-pull-docker-image-to-hub/
+permalink: /linux/virtual/docker/basics/push-and-pull-docker-image-to-hub/
 ---
 
 

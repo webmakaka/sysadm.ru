@@ -1,11 +1,11 @@
 ---
 layout: page
-title: 05 04 Docker Images
-permalink: /docker/basics/copying-images-to-other-hosts/
+title: Копируем Images на другой Host
+permalink: /linux/virtual/docker/basics/copying-images-to-other-hosts/
 ---
 
 
-## Copying Images to Other Hosts
+## Копируем Images на другой Host
 
 
 Работаем на Ubuntu:
