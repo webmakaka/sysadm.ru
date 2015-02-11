@@ -8,12 +8,13 @@ permalink: /linux/virtual/docker/basics/basic-commands/
 Подготовленные image  
 https://registry.hub.docker.com/  
 
-// Создать свой репо для контейнеров (1 приватный бесплатно + нет ограничений для публичных контейнеров)  
+Создать свой репо для контейнеров (1 приватный бесплатно + нет ограничений для публичных контейнеров)  
 https://hub.docker.com  
 
 ___
 
 $ docker -v  
+
     Docker version 1.4.1, build 5bc2ff8
 
 $ docker version  

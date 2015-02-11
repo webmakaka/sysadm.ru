@@ -4,10 +4,10 @@ title: Карта Сайта
 permalink: /sitemap/
 ---
 
-## Виртуализация и контейнеры:
 
 
-[docker](/linux/virtual/docker/)  
+
+##[Виртуализация и контейнеры](/linux/virtual/)  
 
 <br/>
 
