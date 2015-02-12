@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Докерфайл для разработки rails и node.js приложений в centos 6
-permalink: /linux/virtual/docker/dockerfile-for-development-rails-nodejs-apps-on-centos
+permalink: /linux/virtual/docker/dockerfile-for-development-rails-and-nodejs-apps-on-centos/
 ---
 
     $ vi Dockerfile
