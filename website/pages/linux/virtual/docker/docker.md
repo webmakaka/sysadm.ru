@@ -11,13 +11,22 @@ permalink: /linux/virtual/docker/
 [Скопировать image на другой HOST](/linux/virtual/docker/basics/copying-images-to-other-hosts/)  
 [Скопировать image на hub.docker.com и забрать image с него](/linux/virtual/docker/basics/push-and-pull-docker-image-to-hub/)  
 
+___
 
+<br/>
 
 [Основные раскопки по Docker пока еще лежат здесь](http://pre.sysadm.ru/linux/virtual/docker/)  
-
 
 [Докерфайл для разработки rails и node.js приложений в centos 6](/linux/virtual/docker/dockerfile/)  
 
 
 
 ! Посмотреть, что за параметр PublishAllPorts.  
+
+___
+
+<br/>
+
+**Возможно полезные статьи по docker:**
+
+[Как жить с Docker, или почему лучше с ним, чем без него?](http://habrahabr.ru/post/250469/)  
