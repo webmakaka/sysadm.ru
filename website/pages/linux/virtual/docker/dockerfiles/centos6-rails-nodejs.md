@@ -4,6 +4,9 @@ title: Докерфайл для разработки rails и node.js прил�
 permalink: /linux/virtual/docker/dockerfile/
 ---
 
+
+**Переделываю пока не работает**
+
     $ vi Dockerfile
 
 <br/>
@@ -23,18 +26,22 @@ permalink: /linux/virtual/docker/dockerfile/
     ENV RUBY_VERSION 2.1.4
     ENV RAILS_VERSION 4.1.7
 
-    # ==============================================
-    RUN echo '### ADDITIONAL SUDO USER ###' >> /etc/sudoers
-    ENV echo $DEVELOPER_USERNAME 'ALL=(ALL:ALL) ALL' >> /etc/sudoers
-    RUN echo '############################' >> /etc/sudoers
-    # ==============================================
-
     RUN echo "root:$DOCKER_ROOT_PASSWORD" | chpasswd
 
     RUN yum install -y sudo which unzip tar bzip2 vim wget nc telnet screen tcpdump traceroute bind-utils lsof curl libcurl-devel openssl-devel git make gcc gcc-c++ kernel-devel && \
     yum install -y readline-devel && \
     yum install -y sqlite-devel mysql-devel postgresql-devel && \
     yum clean all
+
+    # ==============================================
+    RUN echo '############################' >> /etc/sudoers
+    RUN echo '### ADDITIONAL SUDO USER ###' >> /etc/sudoers
+    RUN echo $DEVELOPER_USERNAME 'ALL=(ALL:ALL) ALL' >> /etc/sudoers
+    RUN echo '############################' >> /etc/sudoers
+
+    RUN sed -i.gres "s/Defaults    requiretty/#Defaults    requiretty/g" /etc/sudoers
+
+    # ==============================================
 
     # ====== NODE.JS =========================
     RUN curl -sL https://rpm.nodesource.com/setup | bash -
@@ -45,14 +52,14 @@ permalink: /linux/virtual/docker/dockerfile/
     RUN yum install -y git tar gcc && \
         yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel && \
         yum install -y perl-ExtUtils-MakeMaker
-    RUN mkdir -p /opt/git/2.2.1
+    RUN mkdir -p /opt/git/2.3.0
 
     WORKDIR /tmp
     RUN git clone https://github.com/git/git.git
     WORKDIR /tmp/git
 
-    RUN make prefix=/opt/git/2.2.1 all
-    RUN make prefix=/opt/git/2.2.1 install
+    RUN make prefix=/opt/git/2.3.0 all
+    RUN make prefix=/opt/git/2.3.0 install
 
     # RUN yum remove -y git
     # =======================================
@@ -67,12 +74,12 @@ permalink: /linux/virtual/docker/dockerfile/
     # =================================================
 
     RUN whoami
-    USER developer
+    USER $DEVELOPER_USERNAME
     RUN whoami
 
-    WORKDIR /home/developer
+    WORKDIR /home/$DEVELOPER_USERNAME
 
-    ENV HOME /home/developer
+    ENV HOME /home/$DEVELOPER_USERNAME
 
     RUN echo $HOME
 
@@ -116,20 +123,13 @@ permalink: /linux/virtual/docker/dockerfile/
     RUN echo '' >> $HOME/.bash_profile
     RUN echo '#### GIT ##############################' >> $HOME/.bash_profile
 
-    RUN echo 'export GIT_HOME=/opt/git/2.2.1' >> $HOME/.bash_profile
+    RUN echo 'export GIT_HOME=/opt/git/2.3.0' >> $HOME/.bash_profile
     RUN echo 'export PATH=$PATH:$GIT_HOME/bin' >> $HOME/.bash_profile
 
     RUN echo '#### GIT END ##########################' >> $HOME/.bash_profile
     # =======================================
 
-    # OPEN PORT 22 FOR ENABLING SSH
-    # EXPOSE 22
-
-    # OPEN PORT 80 FOR ENABLING HTTP
-    # EXPOSE 80
-
-
-    RUN echo $DEVELOPER_PASSWORD | sudo -S yum remove -y git
+    RUN echo $DEVELOPER_PASSWORD | sudo -S /usr/bin/yum remove -y git
 
     RUN source ~/.bash_profile
 
@@ -146,8 +146,18 @@ permalink: /linux/virtual/docker/dockerfile/
 
 $ docker run -i -t --rm -p 80:8080 -p 3000:3000 -p 9000:9000 -p 1337:1337 --name railsdev -v /rails_projects/demo:/rails_projects/demo -e SECRET_KEY_BASE=test centos6/rais:v01 /bin/bash
 
-    <!--
 
-    -for-development-rails-and-nodejs-apps-on-centos/
+___
 
-    -->
+
+sudo: sorry, you must have a tty to run sudo - ошибка возникает, если вы пытаетесь выполнить команду в скрипте от другого пользователя при помощи sudo. Чтобы исправить, достаточно закомментировать **Default requiretty** в файле  /etc/sudoers.
+
+Для запуска команд под привелигированным пользователем, в файл /etc/sudoers добавляем username ALL=(ALL:ALL) ALL.
+
+
+
+<!--
+
+-for-development-rails-and-nodejs-apps-on-centos/
+
+-->
