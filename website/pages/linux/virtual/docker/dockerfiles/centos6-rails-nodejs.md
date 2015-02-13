@@ -17,22 +17,23 @@ permalink: /linux/virtual/docker/dockerfile/
     # RUN yum -y install epel-release; yum clean all
 
     ENV DOCKER_ROOT_PASSWORD root
-    ENV RAILS_DEVELOPER_USERNAME developer
-    ENV RAILS_DEVELOPER_PASSWORD developer
+    ENV DEVELOPER_USERNAME developer
+    ENV DEVELOPER_PASSWORD developer
 
     ENV RUBY_VERSION 2.1.4
     ENV RAILS_VERSION 4.1.7
+
     # ==============================================
-    ENV echo RAILS_DEVELOPER_USERNAME 'ALL=(ALL:ALL) ALL' >> /etc/sudoers
+    RUN echo '### ADDITIONAL SUDO USER ###' >> /etc/sudoers
+    ENV echo $DEVELOPER_USERNAME 'ALL=(ALL:ALL) ALL' >> /etc/sudoers
+    RUN echo '############################' >> /etc/sudoers
     # ==============================================
 
     RUN echo "root:$DOCKER_ROOT_PASSWORD" | chpasswd
 
-    RUN yum install -y sudo which unzip tar bzip2 vim wget nc telnet screen tcpdump traceroute bind-utils lsof curl libcurl-devel openssl-devel git make gcc gcc-c++ kernel-devel
-
-    RUN yum install -y readline-devel
-
-    RUN yum install -y sqlite-devel mysql-devel postgresql-devel && \
+    RUN yum install -y sudo which unzip tar bzip2 vim wget nc telnet screen tcpdump traceroute bind-utils lsof curl libcurl-devel openssl-devel git make gcc gcc-c++ kernel-devel && \
+    yum install -y readline-devel && \
+    yum install -y sqlite-devel mysql-devel postgresql-devel && \
     yum clean all
 
     # ====== NODE.JS =========================
@@ -41,9 +42,9 @@ permalink: /linux/virtual/docker/dockerfile/
     # =======================================
 
     # ====== GIT 2.X =========================
-    RUN yum install -y git tar gcc
-    RUN yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel
-    RUN yum install -y perl-ExtUtils-MakeMaker
+    RUN yum install -y git tar gcc && \
+        yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel && \
+        yum install -y perl-ExtUtils-MakeMaker
     RUN mkdir -p /opt/git/2.2.1
 
     WORKDIR /tmp
@@ -58,10 +59,10 @@ permalink: /linux/virtual/docker/dockerfile/
 
     RUN mkdir /projects
 
-    RUN useradd $RAILS_DEVELOPER_USERNAME
-    RUN echo "$RAILS_DEVELOPER_USERNAME:$RAILS_DEVELOPER_PASSWORD" | chpasswd
+    RUN useradd $DEVELOPER_USERNAME
+    RUN echo "$DEVELOPER_USERNAME:$DEVELOPER_PASSWORD" | chpasswd
 
-    RUN chown -R $RAILS_DEVELOPER_USERNAME /projects/
+    RUN chown -R $DEVELOPER_USERNAME /projects/
 
     # =================================================
 
@@ -127,6 +128,9 @@ permalink: /linux/virtual/docker/dockerfile/
     # OPEN PORT 80 FOR ENABLING HTTP
     # EXPOSE 80
 
+
+    RUN echo $DEVELOPER_PASSWORD | sudo -S yum remove -y git
+
     RUN source ~/.bash_profile
 
     CMD ["/bin/bash"]
@@ -136,7 +140,11 @@ permalink: /linux/virtual/docker/dockerfile/
 
 Создать image с удалением промежуточных контейнеров в случае успешного билда  
 
-    $ docker build --rm -t centos6/rais:v01 .
+    $ docker build --rm -t centos6/rais:v01 .  
+
+Создать контейнер на базе подготовленного image
+
+$ docker run -i -t --rm -p 80:8080 -p 3000:3000 -p 9000:9000 -p 1337:1337 --name railsdev -v /rails_projects/demo:/rails_projects/demo -e SECRET_KEY_BASE=test centos6/rais:v01 /bin/bash
 
     <!--
 
