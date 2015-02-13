@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Докерфайл для разработки rails и node.js приложений в centos 6
+title: Dockerfile для разработки rails и node.js приложений в centos 6
 permalink: /linux/virtual/docker/dockerfile/
 ---
 

@@ -17,7 +17,7 @@ ___
 
 [Основные раскопки по Docker пока еще лежат здесь](http://pre.sysadm.ru/linux/virtual/docker/)  
 
-[Докерфайл для разработки rails и node.js приложений в centos 6](/linux/virtual/docker/dockerfile/)  
+[Dockerfile для разработки rails и node.js приложений в centos 6](/linux/virtual/docker/dockerfile/)  
 
 
 
