@@ -10,6 +10,7 @@ permalink: /linux/video-kursy/
 
 
 <ul>
+    <li>[Udemy] Learn The Basics of Ethical Hacking and Penetration Testing [2015, ENG</li>
     <li>[Pluralsight] Linux Monitoring and Maintenance (LPIC-2) [6h 34m, 06 Feb 2015, ENG]</li>
     <li>[Pluralsight] Docker Deep Dive [5h 36m, 29 Jan 2015, ENG]</li>
     <li>[Udemy] Learn To Run Linux Servers Part 2 (LPI Level 1-102)</li>
