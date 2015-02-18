@@ -27,3 +27,12 @@ permalink: /linux/video-kursy/
     <li>[Pluralsight] Linux Networking, Service Management, and Security Fundamentals [ENG, 7h 11m, 17 Nov 2014]</li>
     <li>[Pluralsight] Red Hat Enterprise Linux Shell Scripting Fundamentals [ENG, 2h 35m, 01 Oct 2014]</li>
 </ul>
+
+
+___
+
+**Hadoop**
+
+<ul>
+<li>[Udemy] Learn Hadoop, MapReduce and BigData from Scratch [2014, ENG]</li>
+</ul>
