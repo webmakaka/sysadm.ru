@@ -18,9 +18,16 @@ permalink: /linux/video-kursy/
     <li>[Infinite Skills] Red Hat Certified System Administrator - Exam EX200 Training Training Video</li>
     <li>[LinuxCBT] LinuxCBT Ubu12x Edition (Ubuntu 12.04 LTS) [2012, ENG]</li>
     <li>LinuxCBT - OpenLDAPv24x Edition</li>
-    <li>[Pluralsight] Security Enhanced Linux (SELinux) Fundamentals [ENG, 2h 9m, 19 Nov 2014]</li>
     <li>[Pluralsight] Linux Networking, Service Management, and Security Fundamentals [ENG, 7h 11m, 17 Nov 2014]</li>
     <li>[Pluralsight] Red Hat Enterprise Linux Shell Scripting Fundamentals [ENG, 2h 35m, 01 Oct 2014]</li>
+</ul>
+
+___
+
+**Security**
+
+<ul>
+    <li>[Pluralsight] Security Enhanced Linux (SELinux) Fundamentals [ENG, 2h 9m, 19 Nov 2014]</li>
 </ul>
 
 ___
@@ -37,6 +44,8 @@ ___
 **Виртуализация и контейнеры**
 
 <ul>
+    <li>[CloudAcademy] Docker Advanced Concepts</li>
+    <li>[CloudAcademy] Getting started with Docker</li>
     <li>[Pluralsight] Docker Deep Dive [5h 36m, 29 Jan 2015, ENG]</li>
     <li>[LinuxCBT] LinuxCBT KVM Edition [2014, ENG]</li>
     <li>[LinuxCBT] LinuxCBT XenVM Edition [2013, ENG]</li>
