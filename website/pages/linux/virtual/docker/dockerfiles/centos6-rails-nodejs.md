@@ -144,7 +144,7 @@ permalink: /linux/virtual/docker/dockerfile/
 
 Создать контейнер на базе подготовленного image
 
-$ docker run -i -t --rm -p 80:8080 -p 3000:3000 -p 9000:9000 -p 1337:1337 --name railsdev -v /rails_projects/demo:/rails_projects/demo -e SECRET_KEY_BASE=test centos6/rais:v01 /bin/bash
+    $ docker run -i -t --rm -p 80:8080 -p 3000:3000 -p 9000:9000 -p 1337:1337 --name railsdev -v /rails_projects/demo:/rails_projects/demo -e SECRET_KEY_BASE=test centos6/rais:v01 /bin/bash
 
 
 ___
