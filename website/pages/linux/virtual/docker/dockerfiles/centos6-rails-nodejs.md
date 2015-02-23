@@ -72,16 +72,12 @@ permalink: /linux/virtual/docker/dockerfile/
     RUN chown -R $DEVELOPER_USERNAME /projects/
 
     # =================================================
-
-    RUN whoami
+    
     USER $DEVELOPER_USERNAME
-    RUN whoami
 
     WORKDIR /home/$DEVELOPER_USERNAME
 
     ENV HOME /home/$DEVELOPER_USERNAME
-
-    RUN echo $HOME
 
     RUN git clone git://github.com/sstephenson/rbenv.git $HOME/.rbenv
     RUN git clone git://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
