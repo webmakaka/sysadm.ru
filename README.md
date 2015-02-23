@@ -16,3 +16,8 @@ http://sysadm.ru
     git clone --depth=1 https://github.com/sysadm-ru/sysadm-ru.github.io
     cd sysadm-ru.github.io
     jekyll serve --watch  --host 0.0.0.0 --port 8080
+    
+    
+<br/>
+
+Остается в браузере подключиться к localhost
