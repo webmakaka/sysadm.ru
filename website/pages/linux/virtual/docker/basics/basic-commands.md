@@ -146,6 +146,7 @@ remove all Docker containers:
     # docker rm $(docker ps -a -q)
 
 remove all Docker images:  
+
     # docker rmi $(docker images -q)
 
     
