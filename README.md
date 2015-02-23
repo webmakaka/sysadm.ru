@@ -9,6 +9,7 @@ http://sysadm.ru
     doceker pull marley/centos6-for-dev
     docker run -i -t –rm -p 80:8080 –name sysadm-dev marley/centos6-for-dev /bin/bash
 
+<br/>
 
     gem install jekyll  
     cd /projects
