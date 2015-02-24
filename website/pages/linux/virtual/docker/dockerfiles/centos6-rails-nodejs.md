@@ -152,6 +152,12 @@ permalink: /linux/virtual/docker/dockerfile/
 
     source ~/.bash_profile
 
+На хостовой машине: 
+
+    chown -R <username> /projects/demo/ && chmod 660 -R  /projects/demo/
+
+
+
 ___
 
 
