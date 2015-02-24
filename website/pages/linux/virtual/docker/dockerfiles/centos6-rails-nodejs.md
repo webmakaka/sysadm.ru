@@ -4,9 +4,6 @@ title: Dockerfile для разработки rails и node.js приложен�
 permalink: /linux/virtual/docker/dockerfile/
 ---
 
-
-**Переделываю пока не работает**
-
     $ vi Dockerfile
 
 <br/>
