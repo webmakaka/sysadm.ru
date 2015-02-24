@@ -43,8 +43,8 @@ permalink: /linux/virtual/docker/dockerfile/
     # ====== NODE.JS =========================
     RUN curl -sL https://rpm.nodesource.com/setup | bash -
     RUN yum install -y nodejs npm
-    RUN npm install -g nodemon
-    RUN npm install -g bower
+    RUN npm install -g nodemon && \
+        npm install -g bower
     # =======================================
 
     # ====== GIT 2.X =========================
