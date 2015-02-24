@@ -153,7 +153,7 @@ permalink: /linux/virtual/docker/dockerfile/
 
 На хостовой машине: 
 
-    chown -R <username> /projects/demo/ && chmod 660 -R  /projects/demo/
+    chown -R <username> /projects/demo/ && chmod 760 -R  /projects/demo/
 
 
 
