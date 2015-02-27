@@ -13,4 +13,6 @@ permalink: /
 
 ___
 
+<br/>
+
 **Предыдущая версия сайта доступна по адресу <a href="http://prev.sysadm.ru">prev.sysadm.ru</a>** 
