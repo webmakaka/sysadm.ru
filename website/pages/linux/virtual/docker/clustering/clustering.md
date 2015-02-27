@@ -12,7 +12,8 @@ permalink: /linux/virtual/docker/clustering/ubuntu/
     
 2. Set $GOPATH:
 
-    export GOPATH=~/go
+    export GOPATH=~/go  
+    mkdir ~/go
 
 3. Get Swarm:
 
@@ -26,3 +27,30 @@ permalink: /linux/virtual/docker/clustering/ubuntu/
 5. Virify install: 
     
     swarm --version
+
+___
+
+## Building a Swarm Cluster
+
+1. Create cluster:
+
+    swarm create
+    
+2. Join machines: 
+
+   swarm join token://<token> --addr <ip>:<port>
+
+3. Virify joins: 
+
+    swarm list token://<token>
+    
+4. Start Swarm: swarm manage
+
+    token://<token> -H <ip>:<port>
+
+5. Virify cluster:
+
+    docker info
+    
+    
+
