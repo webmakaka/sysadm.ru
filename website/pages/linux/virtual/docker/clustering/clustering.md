@@ -47,9 +47,17 @@ ___
 
     swarm list token://<token>
     
-4. Start Swarm: swarm manage
+4. Start Swarm:
 
-    token://<token> -H <ip>:<port>
+    swarm manage token://<token> -H <ip>:<port>
+
+Для примера:
+
+    swarm manage --help
+    swarm manage token://<token> -H 0.0.0.0:4243 &
+   
+    ps -ef | grep swarm
+
 
 5. Virify cluster:
 
