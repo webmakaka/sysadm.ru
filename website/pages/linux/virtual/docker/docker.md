@@ -20,9 +20,11 @@ ___
 
 [Dockerfile для разработки rails и node.js приложений в centos 6](/linux/virtual/docker/dockerfile/)  
 
+___
 
+<br/>
 
-! Посмотреть, что за параметр PublishAllPorts.  
+[Clustering docker with swarm](/linux/virtual/docker/clustering/ubuntu/)  
 
 ___
 
@@ -45,3 +47,8 @@ ___
 <li><a href="http://habrahabr.ru/post/238069/">Деплой Rails-приложения с помощью Docker</li>
 <li><a href="http://habrahabr.ru/post/243953/">Docker в браузере, или как создать и «расшарить» среду разработки</li>
 </ul>
+
+
+<br/><br/>
+
+! Посмотреть, что за параметр PublishAllPorts.  
