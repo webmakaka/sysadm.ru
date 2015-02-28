@@ -32,13 +32,16 @@ ___
 
 ## Building a Swarm Cluster
 
-1. Create cluster:
+1. Create cluster (создется на одном хосте):
 
     swarm create
+
     
-2. Join machines: 
+2. Join machines (на других хостах добавляем машины в пул): 
 
    swarm join token://<token> --addr <ip>:<port>
+   
+Порт по умолчанию 2375
 
 3. Virify joins: 
 
