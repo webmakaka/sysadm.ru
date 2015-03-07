@@ -11,6 +11,7 @@ http://sysadm.ru
 
 <br/>
 
+    source ~/.bash_profile
     gem install jekyll  
     cd /projects
     git clone --depth=1 https://github.com/sysadm-ru/sysadm-ru.github.io
