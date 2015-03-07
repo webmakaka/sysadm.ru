@@ -10,7 +10,7 @@ permalink: /linux/video-kursy/
 
 
 <ul>
-    <li>[Pluralsight] Linux Monitoring and Maintenance (LPIC-2) [6h 34m, 06 Feb 2015, ENG]</li>
+    <li>[Pluralsight] Linux Monitoring and Maintenance (LPIC-2) [ENG, 6h 34m, 06 Feb 2015]</li>
     <li>[Udemy] Learn To Run Linux Servers Part 2 (LPI Level 1-102)</li>
     <li>[Udemy] Learn To Run Linux Servers From Scratch (LPI Level 1-101)</li>
     <li>[CBT Nuggets] CentOS System Administrator Prep [2014, ENG]</li>
@@ -35,8 +35,8 @@ ___
 **Ethical Hacking**
 
 <ul>
-    <li>[Udemy] Learn The Basics of Ethical Hacking and Penetration Testing [2015, ENG]</li>
-    <li>[CBT Nuggets] EC Council Certified Ethical Hacker v8.0 [2014, ENG]</li>
+    <li>[Udemy] Learn The Basics of Ethical Hacking and Penetration Testing [ENG, 2015]</li>
+    <li>[CBT Nuggets] EC Council Certified Ethical Hacker v8.0 [ENG, 2014]</li>
 </ul>
 
 ___
@@ -46,14 +46,24 @@ ___
 <ul>
     <li>[CloudAcademy] Docker Advanced Concepts</li>
     <li>[CloudAcademy] Getting started with Docker</li>
-    <li>[Pluralsight] Docker Deep Dive [5h 36m, 29 Jan 2015, ENG]</li>
-    <li>[LinuxCBT] LinuxCBT KVM Edition [2014, ENG]</li>
-    <li>[LinuxCBT] LinuxCBT XenVM Edition [2013, ENG]</li>
+    <li>[Pluralsight] Docker Deep Dive [ENG, 5h 36m, 29 Jan 2015]</li>
+    <li>[LinuxCBT] LinuxCBT KVM Edition [ENG, 2013]</li>
+    <li>[LinuxCBT] LinuxCBT XenVM Edition [ENG,2013]</li>
 </ul>
 ___
 
 **Hadoop**
 
 <ul>
-<li>[Udemy] Learn Hadoop, MapReduce and BigData from Scratch [2014, ENG]</li>
+<li>[Udemy] Learn Hadoop, MapReduce and BigData from Scratch [ENG, 2014]</li>
 </ul>
+
+
+___
+
+**Cloud**
+
+<ul>
+<li>[Pluralsigth] Amazon Web Services (AWS) Fundamentals for System Administrators [ENG, 2015]</li>
+</ul>
+
