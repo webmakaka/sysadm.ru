@@ -55,7 +55,7 @@ ___
 **Hadoop**
 
 <ul>
-<li>[Udemy] Learn Hadoop, MapReduce and BigData from Scratch [ENG, 2014]</li>
+    <li>[Udemy] Learn Hadoop, MapReduce and BigData from Scratch [ENG, 2014]</li>
 </ul>
 
 
@@ -64,6 +64,7 @@ ___
 **Cloud**
 
 <ul>
-<li>[Pluralsigth] Amazon Web Services (AWS) Fundamentals for System Administrators [ENG, 2015]</li>
+    <li>[Pluralsigth] Amazon Web Services (AWS) Fundamentals for System Administrators [ENG, 6h 51m, 2015] <a href="http://www.pluralsight.com/courses/aws-system-admin-fundamentals"> Описание курса</a></li>
+    <li>[Udemy] AWS Certified Solutions Architect - Associate 2015 [ENG, 2015] <a href="https://www.udemy.com/aws-certified-solutions-architect-associate-level-2014/"> Описание курса</a></li>
 </ul>
 
