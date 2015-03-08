@@ -5,7 +5,7 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 ---
 
 
-**Вариант 1: устанавливаем docker из репо ubuntu.**
+**Вариант 1: устанавливаем docker из репо ubuntu. (не рекомендую)**
 
     $ sudo su
 
@@ -16,7 +16,7 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
     $ docker -v
 
 
-**Вариант 2: устанавливаем docker из репо docker.**
+**Вариант 2: устанавливаем docker из репо docker. (рекоменую)**
 
     (Пока просто пишу без реального ввода команд в консоли)
     (Если кто проверит и исправит или подтвердит, что все ок, будет супер.)
