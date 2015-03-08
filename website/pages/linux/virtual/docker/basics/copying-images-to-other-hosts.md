@@ -21,6 +21,7 @@ permalink: /linux/virtual/docker/basics/copying-images-to-other-hosts/
 
 
 Компьютер 2:
+(Старые версии docker не умеют импортировать образы и необходимо обновлять. Работает, например с версией docker 1.4)
 
     tar -tf /tmp/<new_image_name>.tar
 
