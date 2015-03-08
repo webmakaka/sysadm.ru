@@ -24,7 +24,7 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
     # echo "deb http://get.docker.com/ubuntu docker main" >> /etc/apt/sources.list.d/docker.list
 
     # apt-get update
-    # apt-get install lxc-docker
+    # apt-get install -y lxc-docker
 
     # docker -v
 
