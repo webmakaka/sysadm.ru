@@ -18,8 +18,6 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 
 **Вариант 2: устанавливаем docker из репо docker. (рекоменую)**
 
-    (Пока просто пишу без реального ввода команд в консоли)
-    (Если кто проверит и исправит или подтвердит, что все ок, будет супер.)
     # wget -qO- https://get.docker.com/gpg | apt-key add -
     # echo "deb http://get.docker.com/ubuntu docker main" >> /etc/apt/sources.list.d/docker.list
 
