@@ -58,18 +58,21 @@ ___
 
     docker pull -a fedora
 
-// получить список скачанных версий  
+// получить список скачанных images  
 
+    docker images
+    docker images --tree
     docker images fedora
+    
 
 // Запустить shell в контейнере  
 
     docker run -it fedora /bin/bash
+    
 
 // Контенеры и имиджи хранятся здесь  
 
 cat /var/lib/docker/aufs/diff/<container_id>
-
 
 ls -l /var/lib/docker/containers  
 ls -l /var/lib/docker/containers | wc -l
@@ -114,11 +117,7 @@ ___
     docker top <container_id>
     docker inspect <container_id>
     docker logs <container_id>
-
-    docker images
-    docker images --tree
-
-
+    
 ---
 
 
@@ -132,24 +131,27 @@ $ docker port my_container
     9000/tcp -> 0.0.0.0:9000
 
 
-// Удаляем контейнеры
+// Удалить контейнер
 
     docker rm  <container_id>
     docker rm -f <container_id>
 
+// узнать IP Контейнера Docker 
+
+    docker inspect --format='{{.NetworkSettings.IPAddress}}' containerId
 
 ___
 
 
-stop all Docker containers:  
+// stop all Docker containers:  
 
     # docker stop $(docker ps -a -q)
 
-remove all Docker containers:  
+// remove all Docker containers:  
 
     # docker rm $(docker ps -a -q)
 
-remove all Docker images:  
+// remove all Docker images:  
 
     # docker rmi $(docker images -q)
 
