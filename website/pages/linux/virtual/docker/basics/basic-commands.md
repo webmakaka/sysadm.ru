@@ -123,7 +123,7 @@ ___
 
 docker port <container_id>
 
-$ docker port railsdev  
+$ docker port my_container  
 
     1337/tcp -> 0.0.0.0:1337
     3000/tcp -> 0.0.0.0:3000
