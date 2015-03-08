@@ -105,6 +105,7 @@ ___
     docker attach <container_id>
 
 // Подключиться еще одним shell
+
     docker exec -it <container_id> bash
 
 ___
