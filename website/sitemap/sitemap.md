@@ -7,8 +7,9 @@ permalink: /sitemap/
 
 
 
-##[Виртуализация и контейнеры](/linux/virtual/)  
+##[Виртуализация и контейнеры](/linux/virtual/)
 
+##[Базы данных](/linux/databases/)  
 ______
 
 <br/>
