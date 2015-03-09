@@ -5,14 +5,18 @@ permalink: /linux/databases/mongodb/
 ---
 
 
-
     # vi /etc/yum.repos.d/mongodb.repo
 
-    [10gen]
-    name=10gen Repository
-    baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64
-    gpgcheck=0
-    enabled=1
+{% highlight text %}
+
+[10gen]
+name=10gen Repository
+baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64
+gpgcheck=0
+enabled=1
+
+{% endhighlight %}
+
 
 
 <br/>
