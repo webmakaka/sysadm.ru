@@ -12,17 +12,14 @@ baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64
 gpgcheck=0
 enabled=1
 
-<!--
-# mkdir -p /data/db
--->
 
-# yum install -y mongo-10gen mongo-10gen-server
+    # yum install -y mongo-10gen mongo-10gen-server
 
 
-# chkconfig mongod on
-# service mongod restart
+    # chkconfig mongod on
+    # service mongod restart
 
-# mongo
+    # mongo
 
 
 
@@ -38,4 +35,18 @@ http://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat-centos-or-fed
 $ mongo --host localhost --port 49153
 use test
 
+___
 
+Конфиг:
+
+vi /etc/mongod.conf
+
+___
+
+
+При разработке и если данные не нужны:
+
+mkdir -p /data/db
+echo 'mongod --nojournal --dbpath=/data/db' > mongod-start
+chmod a+x mongod-start
+./mongod-start
