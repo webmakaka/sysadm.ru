@@ -46,7 +46,7 @@ ___
 
 При разработке и если данные не нужны:
 
-mkdir -p /data/db
-echo 'mongod --nojournal --dbpath=/data/db' > mongod-start
-chmod a+x mongod-start
-./mongod-start
+    mkdir -p /data/db
+    echo 'mongod --nojournal --dbpath=/data/db' > mongod-start
+    chmod a+x mongod-start
+    ./mongod-start
