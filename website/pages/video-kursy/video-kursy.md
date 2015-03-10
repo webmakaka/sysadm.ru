@@ -78,6 +78,7 @@ ___
 **Cloud**
 
 <ul>
+    <li> InfiniteSkills - Securing Cloud Services [ENG, 6h 50m, 2014]<a href="http://www.infiniteskills.com/training/securing-cloud-services.html"> Описание курса</a></li>
     <li>[Pluralsigth] Amazon Web Services (AWS) Fundamentals for System Administrators [ENG, 6h 51m, 2015] <a href="http://www.pluralsight.com/courses/aws-system-admin-fundamentals"> Описание курса</a></li>
     <li>[Udemy] AWS Certified Solutions Architect - Associate 2015 [ENG, 2015] <a href="https://www.udemy.com/aws-certified-solutions-architect-associate-level-2014/"> Описание курса</a></li>
 </ul>
