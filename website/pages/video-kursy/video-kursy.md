@@ -14,6 +14,9 @@ ___
 **Основы**
 
 <ul>
+
+
+    <li>[Pluralsight] Linux Kernel and System Startup (LPIC-2) [ENG, 4h 51m, 10 Mar 2015]</li>
     <li>[Pluralsight] Linux Monitoring and Maintenance (LPIC-2) [ENG, 6h 34m, 06 Feb 2015]</li>
     <li>[Udemy] Learn To Run Linux Servers Part 2 (LPI Level 1-102)</li>
     <li>[Udemy] Learn To Run Linux Servers From Scratch (LPI Level 1-101)</li>
