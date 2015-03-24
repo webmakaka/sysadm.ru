@@ -86,6 +86,10 @@ ___
     <li>[Udemy] AWS Certified Solutions Architect - Associate 2015 [ENG, 2015] <a href="https://www.udemy.com/aws-certified-solutions-architect-associate-level-2014/"> Описание курса</a></li>
 </ul>
 
+___
+
+<br/> 
+
 **Jira**
 
 <ul>
