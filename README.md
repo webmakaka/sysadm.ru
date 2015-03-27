@@ -7,7 +7,7 @@ http://sysadm.ru
 Инсталлируете docker, далее:
 
     docker pull marley/centos6-for-dev
-    docker run -i -t –rm -p 80:8080 –name sysadm-dev marley/centos6-for-dev /bin/bash
+    docker run -i -t –rm -p 80:8080 –-name sysadm-dev marley/centos6-for-dev /bin/bash
 
 <br/>
 
