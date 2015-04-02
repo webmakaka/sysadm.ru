@@ -36,7 +36,6 @@ Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin
 заменить на
 Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
 {% endhighlight %}
-```
 
 **Инсталляция npm**
 
