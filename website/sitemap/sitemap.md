@@ -10,6 +10,9 @@ permalink: /sitemap/
 ##[Виртуализация и контейнеры](/linux/virtual/)
 
 ##[Базы данных](/linux/databases/)  
+
+##[Облачные технологии (Amazon Web Services)](/linux/cloud/aws/)  
+
 ______
 
 <br/>
