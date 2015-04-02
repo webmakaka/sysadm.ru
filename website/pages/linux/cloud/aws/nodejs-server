@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Node.js в облаке AWS
-permalink: /linux/cloud/aws/nodejs-server
+permalink: /linux/cloud/aws/nodejs-server/
 ---
 
 Подключились к серверу.
