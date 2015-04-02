@@ -5,4 +5,4 @@ permalink: /contacts/
 ---
 
 email:  
-!(http://img.fotografii.org/a3333333mail.gif "Marley")
+![Marley](http://img.fotografii.org/a3333333mail.gif "Marley")
