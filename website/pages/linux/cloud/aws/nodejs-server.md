@@ -11,7 +11,7 @@ permalink: /linux/cloud/aws/nodejs-server/
     sudo yum install openssl-devel
     sudo yum install git
     
-    <br/>
+<br/>
     
     cd /tmp/
     git clone git://github.com/joyent/node.git
@@ -20,7 +20,7 @@ permalink: /linux/cloud/aws/nodejs-server/
     make
     sudo make install
     
-    <br/>
+<br/>
     
     sudo su
     vi /etc/sudoers
