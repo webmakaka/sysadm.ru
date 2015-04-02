@@ -12,6 +12,8 @@ permalink: /linux/cloud/aws/nodejs-server/
     sudo yum install git
     
 <br/>
+
+**Инсталляция node.js**
     
     cd /tmp/
     git clone git://github.com/joyent/node.git
@@ -27,11 +29,16 @@ permalink: /linux/cloud/aws/nodejs-server/
 
 
 {% highlight text %}
+
+Нужно добавить в secure_path :/usr/local/bin
+
 Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin
 заменить на
 Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
-{% endhighlight %}s secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+{% endhighlight %}
 ```
+
+**Инсталляция npm**
 
     cd /tmp/
     git clone https://github.com/isaacs/npm.git
