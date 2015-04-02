@@ -43,6 +43,8 @@ Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
     git clone https://github.com/isaacs/npm.git
     cd npm
     sudo make install
+    
+    
 ___
 см:  
 http://iconof.com/blog/how-to-install-setup-node-js-on-amazon-aws-ec2-complete-guide/
