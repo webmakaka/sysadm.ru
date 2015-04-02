@@ -1,6 +1,6 @@
 ---
 layout: page
-title: AWS
+title: Amazon Web Services (AWS)
 permalink: /linux/cloud/aws/
 ---
 
