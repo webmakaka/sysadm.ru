@@ -45,7 +45,7 @@ ___
 <li><a href="http://habrahabr.ru/post/247547/">Создание окружения для веб-разработки на основе Docker (для PHP)</li>
 <li><a href="http://habrahabr.ru/post/246933/">Docker, SkyDNS и SkyDock — быстро и удобно</li>
 <li><a href="http://habrahabr.ru/post/234829/">Оптимизация образов Docker</a></li>
-<li><a href="http://habrahabr.ru/company/infopulse/blog/237737/">Почему вам не нужен sshd в Docker-контейнере</a> (лично мне пока еще нужен! Впрочем после пол года использования стал обходиться и без него.)</li>
+<li><a href="http://habrahabr.ru/company/infopulse/blog/237737/">Почему вам не нужен sshd в Docker-контейнере</a></li>
 <li><a href="http://habrahabr.ru/post/240509/">Docker: запуск графических приложений в контейнерах</li>
 <li><a href="http://habrahabr.ru/post/238069/">Деплой Rails-приложения с помощью Docker</li>
 <li><a href="http://habrahabr.ru/post/243953/">Docker в браузере, или как создать и «расшарить» среду разработки</li>
