@@ -34,6 +34,9 @@ ___
 
 
 <ul>
+
+<li><a href="http://habrahabr.ru/post/253877/">Понимая Docker</li>
+<li><a href="http://habrahabr.ru/post/253999/">Docker и костыли в продакшене</li>
 <li><a href="http://habrahabr.ru/post/250469/">Как жить с Docker, или почему лучше с ним, чем без него?</li>
 <li><a href="http://habrahabr.ru/post/247969/">Docker в продакшене — чему мы научились, запустив более 300 миллионов контейнеров</li>
 <li><a href="http://habrahabr.ru/post/247903/">Docker: интересные особенности базовых образов</li>
