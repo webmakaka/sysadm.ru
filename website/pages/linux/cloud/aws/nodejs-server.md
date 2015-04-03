@@ -66,6 +66,9 @@ require("http").createServer(function(request, response){
     node test_server.js
     curl http://localhost:8080
 
+
+P.S. Express приложение в opsWorks у меня не заработало, хотя я создавал в корне файл server.js с содержимым /bin/www и явными инструкциями для запуска приложения в package.json. Кто умеет, поделитесь информацией.
+
 ___
 см:  
 http://iconof.com/blog/how-to-install-setup-node-js-on-amazon-aws-ec2-complete-guide/
