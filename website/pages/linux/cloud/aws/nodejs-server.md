@@ -51,12 +51,20 @@ Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
     
 **Возможная проверка работы Node.js приложения в облаке AWS**
 
-{% gist parkr/c08ee0f2726fd0e3909d %}
+    node server.js
+
+{% highlight text %}
+
+require("http").createServer(function(request, response){
+  response.writeHeader(200, {"Content-Type": "text/plain"});  
+  response.write("Hello World!");  
+  response.end();
+}).listen(8080);
+
+{% endhighlight %}
 
 
-
-
-    node test_server.js
+    node server.js
     curl http://localhost:8080
 
 
