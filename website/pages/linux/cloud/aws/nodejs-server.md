@@ -8,10 +8,10 @@ permalink: /linux/cloud/aws/nodejs-server/
 
 Подключились к серверу.
 
-    sudo yum update
-    sudo yum install gcc-c++ make
-    sudo yum install openssl-devel
-    sudo yum install git
+    sudo yum update -y 
+    sudo yum install -y gcc-c++ make
+    sudo yum install -y openssl-devel
+    sudo yum install -y git
     
 <br/>
 
