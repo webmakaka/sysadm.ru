@@ -37,6 +37,7 @@ permalink: /linux/cloud/aws/nodejs-server/
 Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin
 заменить на
 Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+
 {% endhighlight %}
 
 **Инсталляция npm**
@@ -52,11 +53,13 @@ Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
 
 
 {% highlight text %}
+
 require("http").createServer(function(request, response){
   response.writeHeader(200, {"Content-Type": "text/plain"});  
   response.write("Hello World!");  
   response.end();
 }).listen(8080);
+
 {% highlight text %}
 
 
