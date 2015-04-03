@@ -51,7 +51,7 @@ Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
     
 **Возможная проверка работы Node.js приложения в облаке AWS**
 
-    node server.js
+    vi server.js
 
 {% highlight text %}
 
@@ -68,8 +68,12 @@ require("http").createServer(function(request, response){
     curl http://localhost:8080
 
 
-P.S. Express приложение в opsWorks у меня не заработало, хотя я создавал в корне файл server.js с содержимым /bin/www и явными инструкциями для запуска приложения в package.json. Кто умеет, поделитесь информацией.
+P.S. Чтобы работали приложения (в том числе сгенерированные с помощью express) в opsWorks, нужно чтобы стартовый скрипт находился в корне каталога приложения и имел имя server.js.  
+При этом стартовать приложение должно на 80 порту. 
+
+Т.е. если приложение сконфигурировано с помощью express. Нужно /bin/www переименовать в ./server.js. Указать порт 80 и в package.json указать server.js в качестве скрипта для старта.
 
 ___
 см:  
-http://iconof.com/blog/how-to-install-setup-node-js-on-amazon-aws-ec2-complete-guide/
+http://iconof.com/blog/how-to-install-setup-node-js-on-amazon-aws-ec2-complete-guide/  
+http://stackoverflow.com/questions/10578249/hosting-nodejs-application-in-ec2
