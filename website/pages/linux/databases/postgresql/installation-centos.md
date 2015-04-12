@@ -4,6 +4,7 @@ title: PostgreSQL инсталляция в Centos 6.X
 permalink: /linux/databases/postgresql/centos/
 ---
 
+Делаю для контенера docker
 
 {% highlight text %}
 
@@ -11,6 +12,22 @@ permalink: /linux/databases/postgresql/centos/
 # chkconfig --levels 35 postgresql on
 
 # service postgresql initdb
+
+
+Config:
+cp /var/lib/pgsql/data/postgresql.conf /var/lib/pgsql/data/postgresql.conf.bkp
+vi /var/lib/pgsql/data/postgresql.conf
+
+listen_addresses = '192.168.1.2'
+port = 5432
+
+
+cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.bkp
+vi /var/lib/pgsql/data/pg_hba.conf
+
+host          all           all           172.17.42.0      255.255.255.0         trust
+
+172.17.42.0 - подсеть присвоенная виртуальному адаптеру docker
 
 # service postgresql restart
 
@@ -23,15 +40,6 @@ CREATE USER scott WITH PASSWORD 'tiger';
 
 GRANT ALL PRIVILEGES ON DATABASE mydatabase to scott;
 
-
-Config:
-vi /var/lib/pgsql/data/postgresql.conf
-
-listen_addresses = '192.168.1.2'
-port = 5432
-
-
-vi /u02/pgdata/pg_hba.conf
 
 {% endhighlight %}
 
