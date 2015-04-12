@@ -15,7 +15,13 @@ permalink: /linux/databases/postgresql/centos/
 # service postgresql restart
 
 # su - postgres
-$ psql
+
+$ createdb mydatabase
+$ psql mydatabase
+
+CREATE USER scott WITH PASSWORD 'tiger';
+
+GRANT ALL PRIVILEGES ON DATABASE mydatabase to scott;
 
 {% endhighlight %}
 
