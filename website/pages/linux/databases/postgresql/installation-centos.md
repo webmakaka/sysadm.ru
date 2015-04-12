@@ -18,3 +18,9 @@ permalink: /linux/databases/postgresql/centos/
 $ psql
 
 {% endhighlight %}
+
+
+
+
+
+http://www.unixmen.com/postgresql-9-4-released-install-centos-7/
