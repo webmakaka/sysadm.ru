@@ -7,15 +7,14 @@ permalink: /linux/databases/postgresql/centos/
 
 {% highlight text %}
 
-sudo aptutude search postgresql
+# yum install -y postgresql-server
+# chkconfig --levels 35 postgresql on
 
-sudo apt-add-repository ppa:pitti/postgresql
-sudo apt-get update -y
-sudo apt-get install -y postgresql-9.2 libpq-dev
+# service postgresql initdb
 
-sudo service postgresql status
+# service postgresql restart
 
-
-sudo su -c psql postgres
+# su - postgres
+$ psql
 
 {% endhighlight %}
