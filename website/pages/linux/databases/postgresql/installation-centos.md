@@ -27,6 +27,5 @@ GRANT ALL PRIVILEGES ON DATABASE mydatabase to scott;
 
 
 
-
-
+Вроде неплохая статья:  
 http://www.unixmen.com/postgresql-9-4-released-install-centos-7/
