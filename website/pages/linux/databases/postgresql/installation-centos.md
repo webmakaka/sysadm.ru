@@ -15,15 +15,19 @@ permalink: /linux/databases/postgresql/centos/
 
 
 Config:
-cp /var/lib/pgsql/data/postgresql.conf /var/lib/pgsql/data/postgresql.conf.bkp
-vi /var/lib/pgsql/data/postgresql.conf
+# cp /var/lib/pgsql/data/postgresql.conf /var/lib/pgsql/data/postgresql.conf.bkp
+# vi /var/lib/pgsql/data/postgresql.conf
 
-listen_addresses = '192.168.1.2'
+listen_addresses = '*'
 port = 5432
 
 
-cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.bkp
-vi /var/lib/pgsql/data/pg_hba.conf
+# cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.bkp
+
+
+# vi /var/lib/pgsql/data/pg_hba.conf
+
+добавляю:  
 
 host          all           all           172.17.42.0      255.255.255.0         trust
 
