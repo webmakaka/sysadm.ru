@@ -67,7 +67,7 @@ ___
 
 // Запустить shell в контейнере  
 
-    docker run -it fedora /bin/bash
+    docker run -it centos:centos6 /bin/bash
     
 
 // Контенеры и имиджи хранятся здесь  
