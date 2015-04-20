@@ -46,6 +46,7 @@ ___
 **Ethical Hacking**
 
 <ul>
+<li style="color:green">[Udemy] IT Security and Ethical Hacking [ENG, ????] <a href="https://www.udemy.com/it-security-and-ethical-hacking/">(Course Description)</></li>
     <li>[Udemy] Learn The Basics of Ethical Hacking and Penetration Testing [ENG, 2015]</li>
     <li>[CBT Nuggets] EC Council Certified Ethical Hacker v8.0 [ENG, 2014]</li>
 </ul>
