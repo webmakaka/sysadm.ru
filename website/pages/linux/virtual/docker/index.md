@@ -16,8 +16,6 @@ ___
 
 <br/>
 
-[Основные раскопки по Docker пока еще лежат здесь](http://pre.sysadm.ru/linux/virtual/docker/)  
-
 [Dockerfile для разработки rails и node.js приложений в centos 6](/linux/virtual/docker/dockerfile/)  
 
 ___
@@ -25,6 +23,10 @@ ___
 <br/>
 
 [Clustering docker with swarm](/linux/virtual/docker/clustering/ubuntu/)  
+
+___
+
+[Основные раскопки по Docker пока еще лежат здесь](http://pre.sysadm.ru/linux/virtual/docker/)  
 
 ___
 
