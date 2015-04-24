@@ -7,11 +7,11 @@ permalink: /sitemap/
 
 
 
-##[Виртуализация и контейнеры](/linux/virtual/)
+###[Виртуализация и контейнеры](/linux/virtual/)
 
-##[Базы данных](/linux/databases/)  
+###[Базы данных](/linux/databases/)  
 
-##[Облачные технологии (Amazon Web Services)](/linux/cloud/aws/)  
+###[Облачные технологии (Amazon Web Services)](/linux/cloud/aws/)  
 
 ______
 
