@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Работа со снапшотами
-permalink: /linux/virtual/virtualbox/
+permalink: /linux/virtual/virtualbox/snapshots/
 ---
 
 
