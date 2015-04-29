@@ -8,6 +8,12 @@ permalink: /linux/webservers/apache/installation/
     # vi /etc/hosts
     192.168.1.202 webserv.local webserv
 
+    # vi /etc/sysconfig/network
+
+    NETWORKING=yes
+    NETWORKING_IPV6=no
+    HOSTNAME=webserv
+
 
     # yum list httpd*
 
