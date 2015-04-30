@@ -299,4 +299,4 @@ __________
 
     # vi /etc/sysconfig/static-routes
 
-    any -net 10.0.2.0 netmask 255.255.255.0 gw 10.0.2.2
+    any -net 10.0.2.0 netmask 255.255.255.0 gw 10.0.2.2 eth0

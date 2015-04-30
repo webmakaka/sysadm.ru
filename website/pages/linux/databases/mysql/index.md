@@ -43,7 +43,7 @@ https://webtatic.com/packages/mysql55/
 mysql  Ver 14.14 Distrib 5.5.38, for Linux (x86_64) using readline 5.1
 
 
-# chkconfig --level 2345 mysqld on 
+# chkconfig --level 2345 mysqld on
 
 // Start MySQL server daemon (mysqld)
 # service mysqld start
@@ -61,7 +61,7 @@ mysql> delete from mysql.user where not (host="localhost" and user="root");
 mysql> DELETE FROM mysql.user WHERE User = '';
 
 
-// Change root database admin password: (note: once this step is complete you’ll need to login with: mysql -p -u root) 
+// Change root database admin password: (note: once this step is complete you’ll need to login with: mysql -p -u root)
 mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root');
 
 
@@ -84,7 +84,7 @@ mysql> create database bugzilla;
 
 mysql> quit;
 
-// Improving local file security 
+// Improving local file security
 # vi /etc/my.cnf
 
 [mysqld] section
@@ -164,7 +164,7 @@ mysql> exit
 
 mysql -u root
 
-use photoalbums 
+use photoalbums
 
 SET autocommit=0 ;
 source /projects/demo/Beginning-Amazon-Web-Services-with-Node.js/setup/photoalbums.sql;
@@ -173,3 +173,24 @@ COMMIT;
 
 -->
 
+### dump
+
+export
+
+    mysqldump -u [username] -p [database_name] > [dumpfilename.sql]
+
+import
+
+    mysql -u [username] -p [database_name] < [dumpfilename.sql]
+
+
+С сжатием:
+
+
+For Export:
+
+    mysqldump -u [user] -p [db_name] | gzip > [filename_to_compress.sql.gz]
+
+For Import:
+
+    gunzip < [compressed_filename.sql.gz]  | mysql -u [user] -p[password] [databasename]
