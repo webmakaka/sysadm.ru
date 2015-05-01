@@ -24,7 +24,7 @@ permalink: /linux/databases/mysql/
 Если нужно установить версию 5.5, а ее нет в репозитории по умолчанию:
 
 rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
-yum install mysql55w mysql55w-server
+yum install -y mysql55w mysql55w-server
 
 Подробнее
 https://webtatic.com/packages/mysql55/
