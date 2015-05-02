@@ -15,14 +15,14 @@ permalink: /linux/databases/postgresql/centos/
 
 
 Config:
-# cp /var/lib/pgsql/data/postgresql.conf /var/lib/pgsql/data/postgresql.conf.bkp
+# cp /var/lib/pgsql/data/postgresql.conf /var/lib/pgsql/data/postgresql.conf.orig
 # vi /var/lib/pgsql/data/postgresql.conf
 
 listen_addresses = '*'
 port = 5432
 
 
-# cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.bkp
+# cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.orig
 
 
 # vi /var/lib/pgsql/data/pg_hba.conf
