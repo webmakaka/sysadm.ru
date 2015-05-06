@@ -10,10 +10,11 @@ permalink: /linux/databases/postgresql/centos/
 
 To the section(s) identified above, you need to append a line (otherwise dependencies might resolve to the postgresql supplied by the base repository):
 
-# vi /etc/yum.repos.d/CentOS-Base.repo
+    # vi /etc/yum.repos.d/CentOS-Base.repo
 
 [base] and [updates]
 
+    exclude=postgresql*
 
 2\. Install PGDG RPM file
 
@@ -28,15 +29,15 @@ To the section(s) identified above, you need to append a line (otherwise depende
 
 4\. Initialize
 
-    service postgresql-9.4 initdb
+    # service postgresql-9.4 initdb
 
 5\. Startup
 
-    chkconfig postgresql-9.4 on
+    # chkconfig postgresql-9.4 on
 
 6\. Control service
 
-    service postgresql-9.4 start
+    # service postgresql-9.4 start
 
 
 https://wiki.postgresql.org/wiki/YUM_Installation
@@ -75,7 +76,7 @@ Config:
 
     host          all           all           172.17.42.0      255.255.255.0         trust
 
-    172.17.42.0 - подсеть присвоенная виртуальному адаптеру docker
+    172.17.42.0 - подсеть из которой можно будет подключаться к серверу PostgreSQL
 
 
     # service postgresql restart
