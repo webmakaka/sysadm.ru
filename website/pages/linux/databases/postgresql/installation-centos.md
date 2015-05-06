@@ -58,19 +58,25 @@ https://wiki.postgresql.org/wiki/YUM_Installation
 Config:
 
     # cp /var/lib/pgsql/data/postgresql.conf /var/lib/pgsql/data/postgresql.conf.orig
+
+<br/>
+
     # vi /var/lib/pgsql/data/postgresql.conf
 
+<br/>
 
     listen_addresses = '*'
     port = 5432
 
-
+<br/>
 
     # cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.orig
 
+<br/>
 
     # vi /var/lib/pgsql/data/pg_hba.conf
 
+<br/>
 
     добавляю:  
 
@@ -78,6 +84,7 @@ Config:
 
     172.17.42.0 - подсеть из которой можно будет подключаться к серверу PostgreSQL
 
+<br/>
 
     # service postgresql restart
 
