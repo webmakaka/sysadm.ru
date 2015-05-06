@@ -80,9 +80,9 @@ Config:
 
     добавляю:  
 
-    host          all           all           172.17.42.0      255.255.255.0         trust
+    host          all           all           192.168.56.0      255.255.255.0         trust
 
-    172.17.42.0 - подсеть из которой можно будет подключаться к серверу PostgreSQL
+    192.168.56.0 - подсеть из которой можно будет подключаться к серверу PostgreSQL
 
 <br/>
 
@@ -100,6 +100,15 @@ Config:
     CREATE USER scott WITH PASSWORD 'tiger';
 
     GRANT ALL PRIVILEGES ON DATABASE mydatabase to scott;
+
+
+// Удалить базу если нужно, можно командой
+
+    $ dropdb mydatabase
+
+// Поменять владельца
+
+    ALTER DATABASE mydatabase OWNER TO scott
 
 
 ___
