@@ -57,7 +57,7 @@ https://wiki.postgresql.org/wiki/YUM_Installation
 
 Config:
 
-    # cp /var/lib/pgsql/data/postgresql.conf /var/lib/pgsql/data/postgresql.conf.orig
+    # cp /var/lib/pgsql/data/postgresql.conf /var/lib/pgsql/data/postgresql.conf.backup
 
 <br/>
 
@@ -70,7 +70,7 @@ Config:
 
 <br/>
 
-    # cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.orig
+    # cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.backup
 
 <br/>
 
@@ -108,8 +108,11 @@ Config:
 
 // Поменять владельца
 
-    ALTER DATABASE mydatabase OWNER TO scott
+    ALTER DATABASE mydatabase OWNER TO scott;
 
+// Проверк удаленного подключения
+
+    $ psql -h 192.168.1.11 -p 5432 -U user -W mydatabase
 
 ___
 
@@ -172,3 +175,56 @@ _______
 
 
 http://softlabpro.blogspot.ru/2011/05/postgresql-restore-9x-backup-in-8x.html
+
+
+
+==============
+
+
+
+    postgres=# \l
+                                       List of databases
+        Name     |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
+    -------------+----------+----------+-------------+-------------+-----------------------
+     paymentgate | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =Tc/postgres         +
+                 |          |          |             |             | postgres=CTc/postgres+
+                 |          |          |             |             | test=CTc/postgres
+     postgres    | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+     template0   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+                 |          |          |             |             | postgres=CTc/postgres
+     template1   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+                 |          |          |             |             | postgres=CTc/postgres
+    (4 rows)
+
+
+
+
+ERROR: could not execute query: ERROR:  must be owner of language plpgsql
+
+    $ psql paymentgate
+    paymentgate=# alter role <user_name> with superuser;
+    ALTER ROLE
+
+
+<!--
+
+REAL
+==========================
+
+
+$ createdb paymentgate
+
+$ psql
+
+# ALTER DATABASE paymentgate OWNER TO test;
+
+postgres=# \l
+
+exit
+
+psql paymentgate
+
+paymentgate=# alter role test with superuser;
+ALTER ROLE
+
+-->
