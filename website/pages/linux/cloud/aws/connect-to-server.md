@@ -13,6 +13,16 @@ permalink: /linux/cloud/aws/connect-to-server/
 
 ___
 
-
 см:  
 http://www.youtube.com/watch?v=Ix5IDuyamuY  
+
+
+
+### Converting a ppk file to a pem file for accessing AWS ec2 instances on Linux
+
+    $ sudo apt-get install putty-tools
+
+    $ puttygen ppkkey.ppk -O private-openssh -o pemkey.pem
+
+
+http://webkul.com/blog/convert-a-ppk-file-to-a-pem-file/
