@@ -22,8 +22,7 @@ permalink: /linux/virtual/virtualbox/export-import/
 
 ### Export виртуальной машины
 
-
-(как вариант создания резервной копии или вариант для для создания копии уже работающей виртуальной машины):
+Может быть использован как вариант создания резервной копии или для создания копии уже работающей виртуальной машины.
 
 Перед выполнением команды export необходимо выключить виртуальную машину или поставить её на паузу:
 
@@ -40,6 +39,9 @@ permalink: /linux/virtual/virtualbox/export-import/
 // Потом можно будет снять с паузы
 
     $ VBoxManage controlvm ${vm} resume
+
+
+### Export виртуальной машины
 
 // Создать каталог для backup
 
@@ -86,11 +88,11 @@ Successfully imported the appliance.
 
 Наверное, следует переименовать импортированную виртуальную машину
 
-    $ VBoxManage modifyvm vm_oel57_oradb112 --name ${vm}
+    $ VBoxManage modifyvm vm_centos_jboss_postgresql_1 --name ${vm}
 
 Определяем каталог для снапшотов
 
-    $ VBoxManage modifyvm ${VM} --snapshotfolder ${VM_HOME}/${vm}/snapshots
+    $ VBoxManage modifyvm ${vm} --snapshotfolder ${VM_HOME}/${vm}/snapshots
 
 Посмотреть еще раз список виртуальных машин в системе и убедиться, что все ОК:
 
