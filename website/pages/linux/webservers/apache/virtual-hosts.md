@@ -5,7 +5,7 @@ permalink: /linux/webservers/apache/virtual-hosts/
 ---
 
 
-    $ cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.orig
+    $ cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.backup
 
 <br/>
 
