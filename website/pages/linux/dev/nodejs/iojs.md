@@ -4,27 +4,29 @@ title: Инсталляция node.js и io.js в centos 6.X
 permalink: /linux/dev/nodejs/iojs/
 ---
 
-## node.js and io.js
-
 
     # curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
 
+<br/>
 
     // install latest stable version node and iojs
     # nvm install iojs
     # nvm install node
 
+<br/>
 
     # nvm current
     # nvm list
     # nvm ls-remote
 
+<br/>
 
     # nvm current
     iojs-v2.2.1
 
-    # nvm use iojs
+<br/>
 
+    # nvm use iojs
     # mvm use node
 
 

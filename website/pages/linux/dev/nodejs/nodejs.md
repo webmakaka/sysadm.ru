@@ -15,8 +15,6 @@ permalink: /linux/dev/nodejs/iojs/nodejs/
     1.4.28
 
 
-=========================================
-
     // устанавливаю глобально менеджер пакетов bower
     # npm install -g bower
 
@@ -24,11 +22,12 @@ permalink: /linux/dev/nodejs/iojs/nodejs/
     1.3.12
 
 
+<br/>
 
     // устанавливаю глобально nodemon
     # npm install -g nodemon
 
-=========================================
+<br/>
 
     # mkdir -p /projects/myproject
 
@@ -39,6 +38,7 @@ permalink: /linux/dev/nodejs/iojs/nodejs/
 
     # su - developer
 
+<br/>
 
     // Определяю куда bower будет копировать пакеты по умолчанию.
 
@@ -47,6 +47,7 @@ permalink: /linux/dev/nodejs/iojs/nodejs/
     	"directory": "public/vendor/lib"
     }
 
+<br/>  
 
     $ cd /projects/myproject/
 
@@ -55,6 +56,8 @@ permalink: /linux/dev/nodejs/iojs/nodejs/
 
     $ npm install express --save
 
+
+<br/>
 
     // angular.js
     $ bower install angular
