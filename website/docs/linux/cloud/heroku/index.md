@@ -38,14 +38,12 @@ permalink: /linux/cloud/heroku/
 
 Подготовка приложения.
 
-    mkdir marley.org
-    cd marley.org
+    $ mkdir marley.org
+    $ cd marley.org
 
 Копирую приложение, в моем случае node.js приложение с bitbucket
 
     $ heroku login
-
-
     $ heroku apps:create marley-org
 
 
@@ -69,22 +67,28 @@ heroku apps:create example
     heroku	https://git.heroku.com/marley-org.git (fetch)
     heroku	https://git.heroku.com/marley-org.git (push)
 
+<br/>
 
     $ heroku config:set NODE_ENV=production
 
     Setting config vars and restarting morning-ridge-6211... done, v3
     NODE_ENV: production
 
+<br/>
 
     $ git push heroku master
 
+<br/>
 
     $ heroku ps:scale web=1
     Scaling dynos... done, now running web at 1:1X.
 
+<br/>
 
     // Если есть браузер, можно запустить его в командной строке
     heroku open
+
+<br/>
 
     // если нет, то из webконсоли heroku
     // в моем случае это
@@ -112,27 +116,22 @@ heroku apps:create example
     CNAME marley.org marley-org.herokuapp.com
 
 
-
-    ==================================================================
-
 Troubleshooting
 
         heroku logs
         heroku restart
 
 
-
-==================================================================
-
-
 ### После долгой паузы, понадобилось подключиться и скопировать файлы с heroku
 
     $ heroku auth:login
 
+<br/>
 
     $ heroku apps
     === My Apps
     marley-org
 
+<br/>
 
     $ heroku git:clone -a marley-org
