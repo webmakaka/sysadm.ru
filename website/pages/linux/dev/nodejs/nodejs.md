@@ -31,6 +31,11 @@ permalink: /linux/dev/nodejs/iojs/nodejs/
 
     # mkdir -p /projects/myproject
 
+<br/>
+
+// Создание пользователя, который будет работать с проектом
+
+
     # useradd developer
 
     # chown -R developer /projects
@@ -40,7 +45,7 @@ permalink: /linux/dev/nodejs/iojs/nodejs/
 
 <br/>
 
-    // Определяю куда bower будет копировать пакеты по умолчанию.
+// Определяю куда bower будет копировать пакеты по умолчанию.
 
     $ vi ~/.bowerrc
     {
@@ -51,16 +56,31 @@ permalink: /linux/dev/nodejs/iojs/nodejs/
 
     $ cd /projects/myproject/
 
+<br/>
+
+//  Инициализация проекта. Описание проекта, будет храниться в файле package.json
 
     $ npm init
 
-    $ npm install express --save
+<br/>
 
+    // Инсталляция фреймворка express (если нужно). С опицей save, в package.json будет добавлена информация о том, что этот фреймворк требуется для приложения.
+    $ npm install --save express
+
+
+    // Установить все зависимости проекта, которые описаны в файле package.json
+    $ npm install   
 
 <br/>
 
-    // angular.js
-    $ bower install angular
+    // Инсталляция с помощью bower. С опцией save, данные будут записаны в файл bower.json
+
 
     // twitter bootstrap
-    $ bower install bootstrap
+    $ bower install --save bootstrap
+
+    // jquery  
+    $ bower install --save jquery
+
+    // angular.js
+    $ bower install --save angular  
