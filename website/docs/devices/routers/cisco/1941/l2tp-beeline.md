@@ -267,10 +267,20 @@ GigabitEthernet0/1         192.168.1.1     YES manual up                    up
 <strong>cisco-router-1941(config-if)# <code>ip mtu 1460</code></strong>
 </pre>
 
+<!--
+
+adjust-mss было 1420
+
+PPS Поменял брас на "новый" 78.107.1.246 (tp.internet.beeline.ru), вернул ip tcp adjust-mss 1420 вроде проблема пропала: т.е. тормоза загрузки некоторых страниц, невозможность браузера открыть URL, те же проблемы но в iTunes на Mac OS X/App Store iOS
+
+
+
+-->
 
 <pre>
-<strong>cisco-router-1941(config-if)# <code>ip tcp adjust-mss 1420</code></strong>
+<strong>cisco-router-1941(config-if)# <code>ip tcp adjust-mss 1460</code></strong>
 </pre>
+
 
 <br/>
 
@@ -283,7 +293,7 @@ GigabitEthernet0/1         192.168.1.1     YES manual up                    up
 
 <br/>
 
--- Если дать команду no peer neighbor-route, то перестанет работать механизм ipcp, т.е. не будут автоматически прописаны маршрут по-умолчанию, нужно будет их прописать самостоятельно. Узнать можно, например, посмотрев на компьютере, подключенным к сети напрямую, получившим эти маршруты. Или где-то на сайте билайна.
+-- Если дать команду no peer neighbor-route, то перестанет работать механизм ipcp, т.е. не будут автоматически прописаны маршруты по-умолчанию, нужно будет их прописать самостоятельно. Узнать можно, например, посмотрев на компьютере, подключенному к сети напрямую, получившим эти маршруты. Или где-то на сайте билайна.
 
 
 (не выполняю)  
@@ -474,3 +484,14 @@ S        213.234.192.8 [1/0] via 10.111.0.1
 <strong>Почитать:</strong><br/><br/>
 http://homenet.beeline.ru/index.php?showtopic=206930&st=0<br/>
 http://habrahabr.ru/post/136342/<br/>
+
+
+
+<!--
+
+Мне кажется у вас просто не хватает маршрутов. Как минимум двух основных:
+ip forward-protocol nd
+ip route 0.0.0.0 0.0.0.0 Virtual-PPP1
+ip route 85.21.0.241 255.255.255.255 dhcp
+
+-->
