@@ -20,7 +20,7 @@ MD5 Checksum:	1c7c1b1ba2bb4f04cb081f069e8f5523
 <strong>UPD: с этим ios возникли проблемы!!!</strong>
 При попытке выполнить команду ip nat inside / outside роутер перезагружался, на флеше появлялись краш дампы.
 
-Со следующими ios у меня были <a href="crashinfo-example.php">краши</a>:
+Со следующими ios у меня были <a href="http://localhost/devices/routers/cisco/1941/crash-dump-example/">краши</a>:
 c1900-universalk9-mz.SPA.154-1.T.bin
 c1900-universalk9-mz.SPA.153-3.M.bin
 

@@ -259,7 +259,7 @@ GigabitEthernet0/1         192.168.1.1     YES manual up                    up
 
 
 <pre>
-<strong>cisco-router-1941(config-if)# <code>description WAN; Corbina internet</code></strong>
+<strong>cisco-router-1941(config-if)# <code>description WAN; Beeline ISP</code></strong>
 </pre>
 
 
@@ -358,7 +358,7 @@ Virtual-PPP1               95.31.31.8      YES IPCP   up                    up
 -- Проверили локалку
 
 <pre>
-<strong>cisco-router-1941# <code>ping beeline.ru</code></strong>
+<strong>cisco-router-1941# <code> ping beeline.ru</code></strong>
 </pre>
 
 
@@ -378,7 +378,7 @@ Success rate is 100 percent (5/5), round-trip min/avg/max = 1/3/4 ms
 -- Проверили Интернет
 
 <pre>
-<strong>cisco-router-1941# <code>ping ya.ru source Virtual-PPP1</code></strong>
+<strong>cisco-router-1941# <code> ping ya.ru source Virtual-PPP1</code></strong>
 </pre>
 
 
@@ -413,19 +413,22 @@ cisco-router-1941(config)# interface Virtual-PPP1
 cisco-router-1941(config-if)# ip nat outside
 
 
-cisco-router-1941(config-if)# ip nat inside source list 1 interface GigabitEthernet0/0 overload
 cisco-router-1941(config-if)# ip nat inside source list 1 interface Virtual-PPP1 overload
+
+
+-- вот эту команду, наверное выполнять не нужно.
+cisco-router-1941(config-if)# ip nat inside source list 1 interface GigabitEthernet0/0 overload
 
 </pre>
 
 
 <pre>
 
-cisco-router-1941#ping beeline.ru source GigabitEthernet0/1
+cisco-router-1941# ping beeline.ru source GigabitEthernet0/1
 
-cisco-router-1941#ping ya.ru source Virtual-PPP1
+cisco-router-1941# ping ya.ru source Virtual-PPP1
 
-cisco-router-1941#ping ya.ru source GigabitEthernet0/1
+cisco-router-1941# ping ya.ru source GigabitEthernet0/1
 
 
 -- ping с маршрутизатора с интерфейса GigabitEthernet0/0 не проходит
@@ -436,7 +439,7 @@ cisco-router-1941#ping ya.ru
 
 <pre>
 
-cisco-router-1941#show ip route
+cisco-router-1941# show ip route
 
 Gateway of last resort is 10.111.0.1 to network 0.0.0.0
 

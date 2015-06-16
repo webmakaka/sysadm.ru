@@ -42,3 +42,6 @@ https://supportforums.cisco.com/thread/2036850
 что для моего роутера, необходима лицензия "data license"
 
 </pre>
+
+
+Далее делал, как <a href="/devices/routers/cisco/1941/cisco-licensing/">здесь</a>
