@@ -17,6 +17,12 @@ permalink: /sitemap/
 
 ______
 
+
+<br/>
+
+###[Cisco Router 1941 в домашней сети Beeline](/devices/routers/cisco/1941/)  
+______
+
 <br/>
 
 ###[Видеокурсы для администраторов Linux (без ссылок на скачку)](/linux/video-kursy/)  
