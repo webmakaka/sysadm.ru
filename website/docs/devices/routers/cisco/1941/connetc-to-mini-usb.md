@@ -12,7 +12,7 @@ permalink: /devices/routers/cisco/1941/connetc-to-mini-usb/
 <br/>
 
 <div align="center">
-	<img src="cicso-mini-usb-console-cable.jpg" border="0" alt="cicso mini usb console cable">
+	<img src="https://raw.githubusercontent.com/sysadm-ru/sysadm-ru.github.io/master/website/docs/devices/routers/cisco/1941/cicso-mini-usb-console-cable.jpg" border="0" alt="cicso mini usb console cable">
 </div>
 
 <br/>
