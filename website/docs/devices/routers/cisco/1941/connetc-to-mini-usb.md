@@ -20,7 +20,6 @@ permalink: /devices/routers/cisco/1941/connetc-to-mini-usb/
 
 <pre>
 
-=====================================================
 ВНИМАНИЕ !!!
 
 Перед тем как работать с новыми Cisco надо помнить, что изначально они идут со стандартным паролем для первого входа:
@@ -36,25 +35,29 @@ permalink: /devices/routers/cisco/1941/connetc-to-mini-usb/
 
 (Если не ошибаюсь, я перезагружал роутер и вводит в консоли какие-то команды, которые легко гуглятся на хабре, вроде сброс пароля на циске. После этого прошло значительное время, поэтому совсем не помню, что за команды я вводил.)
 
-=====================================================
+
+</pre>
+
+	# apt-get install -y screen
+
+<br/>
+
+	# lsusb
+	Bus 009 Device 003: ID 05a6:0009 Cisco Systems, Inc.
+
+<br/>
+
+	# ls /dev/*ACM0*
+	/dev/ttyACM0
+
+<br/>
+
+	# screen /dev/ttyACM0 9600
 
 
-
-# apt-get install -y screen
-
-# lsusb
-****
-Bus 009 Device 003: ID 05a6:0009 Cisco Systems, Inc.
+<pre>
 
 
-# ls /dev/*ACM0*
-/dev/ttyACM0
-
-
-# screen /dev/ttyACM0 9600
-
-
-======================================================
 Подключаюсь под учетной записью root, под учетной записью обычного пользователя получаю сообщение об ошибке:
 Sorry, could not find a PTY.
 
@@ -93,93 +96,114 @@ Would you like to enter the initial configuration dialog? [yes/no]: no
 Router>
 
 
-======================================================
+</pre>
 
-<strong>Собственно настройка</strong>
+### Собственно настройк
 
 
-Router> enable
-Router# configure terminal
-Router(config)# no logging console
+	Router> enable
+	Router# configure terminal
+	Router(config)# no logging console
 
-Router(config)# hostname cisco-router-1941
-cisco-router-1941(config)# ip domain-name marley.local
+<br/>
 
-cisco-router-1941(config)# ip default-gateway 192.168.1.1
-cisco-router-1941(config)# ip name-server 192.168.1.1
-cisco-router-1941(config)# ip domain lookup
+	Router(config)# hostname cisco-router-1941
+	cisco-router-1941(config)# ip domain-name marley.local
+
+<br/>
+
+	cisco-router-1941(config)# ip default-gateway 192.168.1.1
+	cisco-router-1941(config)# ip name-server 192.168.1.1
+	cisco-router-1941(config)# ip domain lookup
 
 <!--
 int loopback 0
 cisco-router-1941(config-if)# ip address 192.168.1.100 255.255.255.0
 
-
 -->
 
-cisco-router-1941(config)# interface GigabitEthernet0/0
-cisco-router-1941(config-if)# ip address 192.168.1.100 255.255.255.0
-cisco-router-1941(config-if)# no shutdown
+<br/>
+
+	cisco-router-1941(config)# interface GigabitEthernet0/0
+	cisco-router-1941(config-if)# ip address 192.168.1.100 255.255.255.0
+	cisco-router-1941(config-if)# no shutdown
 
 
-cisco-router-1941(config-if)# interface GigabitEthernet0/1
-cisco-router-1941(config-if)# ip address 192.168.2.100 255.255.255.0
-cisco-router-1941(config-if)# no shutdown
+<br/>
 
-cisco-router-1941(config-if)# end
+	cisco-router-1941(config-if)# interface GigabitEthernet0/1
+	cisco-router-1941(config-if)# ip address 192.168.2.100 255.255.255.0
+	cisco-router-1941(config-if)# no shutdown
 
-cisco-router-1941# show ip interface brief
-Interface                  IP-Address      OK? Method Status                Protocol
-Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down
-GigabitEthernet0/0         192.168.1.100   YES NVRAM  up                    up
-GigabitEthernet0/1         192.168.2.100   YES NVRAM  up                    up
+<br/>
+
+	cisco-router-1941(config-if)# end
+
+<br/>
+
+	cisco-router-1941# show ip interface brief
+	Interface                  IP-Address      OK? Method Status                Protocol
+	Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down
+	GigabitEthernet0/0         192.168.1.100   YES NVRAM  up                    up
+	GigabitEthernet0/1         192.168.2.100   YES NVRAM  up                    up
 
 
 
-<strong>Настройка подключения по telnet</strong>
+### Настройка подключения по telnet
 
-cisco-router-1941# conf t
+	cisco-router-1941# conf t
 
-cisco-router-1941(config)#service password-encryption
+<br/>
 
-cisco-router(config)# line vty 0 4
-cisco-router-1941(config-line)# password your_password
-cisco-router-1941(config-line)# enable secret your_password
+	cisco-router-1941(config)#service password-encryption
 
-// чтобы работало ctrl + c
-cisco-router-1941(config-line)# escape-character 3
+<br/>
+
+	cisco-router(config)# line vty 0 4
+	cisco-router-1941(config-line)# password your_password
+	cisco-router-1941(config-line)# enable secret your_password
+
+<br/>
+
+	// чтобы работало ctrl + c
+	cisco-router-1941(config-line)# escape-character 3
 
 <!--
 Router(config)# line con 0
 Router(config-line)# escape-character 3
 -->
 
-cisco-router(config-line)# login
-cisco-router(config)# end
+<br/>
+
+	cisco-router(config-line)# login
+	cisco-router(config)# end
 
 
 
-<strong>Проверка возможности подключиться по telnet к маршрутизатору Cisco 1941 в консоли Ubuntu:</strong>
-$ telnet 192.168.1.100
-Trying 192.168.1.100...
-Connected to 192.168.1.100.
-Escape character is '^]'.
+### Проверка возможности подключиться по telnet к маршрутизатору Cisco 1941 в консоли Ubuntu:
+
+	$ telnet 192.168.1.100
+	Trying 192.168.1.100...
+	Connected to 192.168.1.100.
+	Escape character is '^]'.
 
 
-User Access Verification
+	User Access Verification
 
-Password:
-cisco-router-1941>enable
-Password:
-cisco-router-1941#
+	Password:
+	cisco-router-1941>enable
+	Password:
+	cisco-router-1941#
 
 
-<strong>Сохраняю конфиг:</strong>
 
-cisco-router-1941# copy running-config startup-config
-Destination filename [startup-config]? startup-config
-Building configuration...
-[OK]
-cisco-router-1941#
+Сохраняю конфиг:
+
+	cisco-router-1941# copy running-config startup-config
+	Destination filename [startup-config]? startup-config
+	Building configuration...
+	[OK]
+	cisco-router-1941#
 
 
 
