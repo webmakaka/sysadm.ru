@@ -18,14 +18,14 @@ permalink: /devices/routers/cisco/1941/connetc-to-mini-usb/
 <br/>
 <br/>
 
-<pre>
+
 
 ВНИМАНИЕ !!!
 
 Перед тем как работать с новыми Cisco надо помнить, что изначально они идут со стандартным паролем для первого входа:
 
-Логин:cisco
-Пароль:cisco
+Логин:cisco  
+Пароль:cisco  
 
 Если после первого входа, вы не укажете новый логин и пароль командой username User privilage 15 password Pass, либо не удалите команду login в настройках консоли,  то произойдет маленькая неприятность - стандартного пароля уже не будет, нового вы не создали, а маршрутизатор спрашивает пароль, даже не зная с чем его сравнивать.
 
@@ -36,7 +36,6 @@ permalink: /devices/routers/cisco/1941/connetc-to-mini-usb/
 (Если не ошибаюсь, я перезагружал роутер и вводит в консоли какие-то команды, которые легко гуглятся на хабре, вроде сброс пароля на циске. После этого прошло значительное время, поэтому совсем не помню, что за команды я вводил.)
 
 
-</pre>
 
 	# apt-get install -y screen
 
@@ -55,50 +54,56 @@ permalink: /devices/routers/cisco/1941/connetc-to-mini-usb/
 	# screen /dev/ttyACM0 9600
 
 
-<pre>
-
+<br/>
 
 Подключаюсь под учетной записью root, под учетной записью обычного пользователя получаю сообщение об ошибке:
 Sorry, could not find a PTY.
 
+
 Иногда в консоли появляется всякий мусор, приходится откючать и включать usb кабель заново.
-======================================================
+
 
 Не удавалось подключиться с помощью telnet к маршрутизатору.
 
+
 Проблема решилась сбросом всех настроек.
+
+
+<br/>
 
 Для этого выполнил команды:
 
-<strong>cisco-router-1941>enable</strong>
+	cisco-router-1941>enable
 
-<strong>cisco-router#erase startup-config</strong>
-Erasing the nvram filesystem will remove all configuration files! Continue? [confirm]y[OK]
-Erase of nvram: complete
-<strong>cisco-router#reload</strong>
-Proceed with reload? [confirm]y
+<br/>
 
-******
+	cisco-router#erase startup-config
+	Erasing the nvram filesystem will remove all configuration files! Continue? [confirm]y[OK]
+	Erase of nvram: complete
+	<strong>cisco-router#reload</strong>
+	Proceed with reload? [confirm]y
 
-Cisco CISCO1941/K9 (revision 1.0) with 491520K/32768K bytes of memory.
-Processor board ID FGL162612RB
-2 Gigabit Ethernet interfaces
-1 terminal line
-DRAM configuration is 64 bits wide with parity disabled.
-255K bytes of non-volatile configuration memory.
-250880K bytes of ATA System CompactFlash 0 (Read/Write)
+	******
 
-%Error opening tftp://192.168.1.1/network-confg (Timed out)
+	Cisco CISCO1941/K9 (revision 1.0) with 491520K/32768K bytes of memory.
+	Processor board ID FGL162612RB
+	2 Gigabit Ethernet interfaces
+	1 terminal line
+	DRAM configuration is 64 bits wide with parity disabled.
+	255K bytes of non-volatile configuration memory.
+	250880K bytes of ATA System CompactFlash 0 (Read/Write)
 
-         --- System Configuration Dialog ---
+	%Error opening tftp://192.168.1.1/network-confg (Timed out)
 
-Would you like to enter the initial configuration dialog? [yes/no]: no
-Router>
+	         --- System Configuration Dialog ---
+
+	Would you like to enter the initial configuration dialog? [yes/no]: no
+	Router>
 
 
-</pre>
+<br/>
 
-### Собственно настройк
+### Собственно настройки
 
 
 	Router> enable
@@ -148,6 +153,7 @@ cisco-router-1941(config-if)# ip address 192.168.1.100 255.255.255.0
 	GigabitEthernet0/1         192.168.2.100   YES NVRAM  up                    up
 
 
+<br/>
 
 ### Настройка подключения по telnet
 
@@ -207,8 +213,9 @@ Router(config-line)# escape-character 3
 
 
 
+<br/>
 
 
-http://www.cisco1900router.com/full-overview-of-cisco-1941-k9-router-cisco-1941-sec-k9-router.html
-http://www.cisco.com/en/US/docs/routers/access/1900/hardware/installation/guide/19pwrup.html
+http://www.cisco1900router.com/full-overview-of-cisco-1941-k9-router-cisco-1941-sec-k9-router.html  
+http://www.cisco.com/en/US/docs/routers/access/1900/hardware/installation/guide/19pwrup.html  
 http://www.networkworld.com/community/node/22066
