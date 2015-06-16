@@ -70,6 +70,15 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 
 <br/>
 
+-- To enable the Domain Name System (DNS) server on a router
+
+<pre>
+<strong>cisco-router-1941(config)# <code>ip dns server </code></strong>
+</pre>
+
+
+<br/>
+
 -- удаляю прописанные ранее dns сервер и шлюз по умолчанию
 
 <pre>
