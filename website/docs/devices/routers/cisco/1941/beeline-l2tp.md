@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cisco Router 1941 попытка настроить подключение к сети Билайн по l2tp
+title: Cisco Router 1941 настройка работы интернета в Билайн по l2tp
 permalink: /devices/routers/cisco/1941/beeline-l2tp/
 ---
 
@@ -11,7 +11,7 @@ permalink: /devices/routers/cisco/1941/beeline-l2tp/
 
 <br/>
 
-Исправления и замечания приветствуются. Нахуй никого не посылаю.
+Исправления и замечания приветствуются.
 
 <br/>
 <br/>
@@ -47,6 +47,13 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 <strong>cisco-router-1941# <code>conf t</code></strong>
 </pre>
 
+
+-- To enable the Domain Name System (DNS) server on a router
+
+<pre>
+<strong>cisco-router-1941(config)# <code>ip dns server </code></strong>
+</pre>
+
 <pre>
 <strong>cisco-router-1941(config)# <code>ip name-server 85.21.192.3</code></strong>
 </pre>
@@ -67,14 +74,6 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 <strong>cisco-router-1941(config)# <code>ntp server ru.pool.ntp.org</code></strong>
 </pre>
 
-
-<br/>
-
--- To enable the Domain Name System (DNS) server on a router
-
-<pre>
-<strong>cisco-router-1941(config)# <code>ip dns server </code></strong>
-</pre>
 
 
 <br/>
@@ -109,7 +108,7 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 </pre>
 
 <pre>
-<strong>cisco-router-1941(config)# <code>description ISP</code></strong>
+<strong>cisco-router-1941(config)# <code>description ISP-External-Local</code></strong>
 </pre>
 
 
@@ -137,7 +136,7 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 
 
 <pre>
-<strong>cisco-router-1941(config)# <code>description Localnet</code></strong>
+<strong>cisco-router-1941(config)# <code>description Internal-NetWork</code></strong>
 </pre>
 
 
@@ -147,11 +146,11 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 
 
 <pre>
-<strong># <code>exit</code></strong>
+<strong>cisco-router-1941(config-if)# <code>exit</code></strong>
 </pre>
 
 <pre>
-<strong># <code>exit</code></strong>
+<strong>cisco-router-1941(config)# <code>exit</code></strong>
 </pre>
 
 <br/>
@@ -239,7 +238,7 @@ GigabitEthernet0/1         192.168.1.1     YES manual up                    up
 
 
 <pre>
-<strong>cisco-router-1941(config-pw-class)# <code>end</code></strong>
+<strong>cisco-router-1941(config-pw-class)#  <code>end</code></strong>
 </pre>
 
 
@@ -259,7 +258,7 @@ GigabitEthernet0/1         192.168.1.1     YES manual up                    up
 
 
 <pre>
-<strong>cisco-router-1941(config-if)# <code>description WAN; Beeline ISP</code></strong>
+<strong>cisco-router-1941(config-if)# <code>description ISP-External-Internet</code></strong>
 </pre>
 
 
@@ -278,7 +277,7 @@ PPS Поменял брас на "новый" 78.107.1.246 (tp.internet.beeline.
 -->
 
 <pre>
-<strong>cisco-router-1941(config-if)# <code>ip tcp adjust-mss 1460</code></strong>
+<strong>cisco-router-1941(config-if)# <code>ip tcp adjust-mss 1420</code></strong>
 </pre>
 
 
@@ -295,9 +294,9 @@ PPS Поменял брас на "новый" 78.107.1.246 (tp.internet.beeline.
 
 -- Если дать команду no peer neighbor-route, то перестанет работать механизм ipcp, т.е. не будут автоматически прописаны маршруты по-умолчанию, нужно будет их прописать самостоятельно. Узнать можно, например, посмотрев на компьютере, подключенному к сети напрямую, получившим эти маршруты. Или где-то на сайте билайна.
 
-
-(не выполняю)  
--- cisco-router-1941(config-if)# no peer neighbor-route
+<pre>
+<strong>cisco-router-1941(config-if)# <code>no peer neighbor-route</code></strong>
+</pre>
 
 
 <pre>
@@ -327,7 +326,7 @@ PPS Поменял брас на "новый" 78.107.1.246 (tp.internet.beeline.
 </pre>
 
 
--- Бля, ну почему нельзя ввести какое-нибудь dns имя вместо IP?
+-- Ну почему нельзя ввести какое-нибудь dns имя вместо IP?
 
 <br/>
 -- cisco-router-1941(config-if)# pseudowire &lt;l2tp server&gt; 10 pw-class PW-L2TP-GigabitEthernet0/0
@@ -410,9 +409,6 @@ Success rate is 100 percent (5/5), round-trip min/avg/max = 4/19/80 ms
 <pre>
 
 cisco-router-1941# conf t
-cisco-router-1941# access-list 1 permit 192.168.1.0 0.0.0.255
-
-
 cisco-router-1941(config)# interface GigabitEthernet0/1
 cisco-router-1941(config-if)# ip nat inside
 
@@ -422,6 +418,55 @@ cisco-router-1941(config-if)# ip nat outside
 cisco-router-1941(config)# interface Virtual-PPP1
 cisco-router-1941(config-if)# ip nat outside
 
+cisco-router-1941(config-if)#exit
+
+<!--
+cisco-router-1941# conf t
+cisco-router-1941# access-list 1 permit 192.168.1.0 0.0.0.255
+
+cisco-router-1941(config-if)# ip nat inside source list 1 interface Virtual-PPP1 overload
+
+-->
+
+-- Листы доступа
+
+<pre>
+
+cisco-router-1941# conf t
+cisco-router-1941# access-list 1 permit 192.168.1.0 0.0.0.255
+
+</pre>
+
+
+
+upd.1
+
+cisco-router-1941(config)# ip access-list extended nat
+cisco-router-1941(config-ext-nacl)# deny ip any host 85.21.0.241
+cisco-router-1941(config-ext-nacl)# permit ip 192.168.1.0 0.0.0.255 any
+cisco-router-1941(config-ext-nacl)# exit
+
+
+
+cisco-router-1941(config)# route-map public permit 10
+cisco-router-1941(config-route-map)# match ip address nat
+cisco-router-1941(config-route-map)# match interface Virtual-PPP1
+cisco-router-1941(config-route-map)# exit
+
+
+cisco-router-1941(config)# route-map local permit 10
+cisco-router-1941(config-route-map)# match ip address nat
+cisco-router-1941(config-route-map)# match interface GigabitEthernet0/0
+cisco-router-1941(config-route-map)# exit
+
+
+
+
+cisco-router-1941(config)# ip nat inside source route-map local interface GigabitEthernet0/0
+cisco-router-1941(config)# ip nat inside source route-map public interface Virtual-PPP1 overload
+
+
+<!--
 
 cisco-router-1941(config-if)# ip nat inside source list 1 interface Virtual-PPP1 overload
 
@@ -429,22 +474,16 @@ cisco-router-1941(config-if)# ip nat inside source list 1 interface Virtual-PPP1
 -- вот эту команду, наверное выполнять не нужно.
 cisco-router-1941(config-if)# ip nat inside source list 1 interface GigabitEthernet0/0 overload
 
+-->
+
+
+cisco-router-1941(config)#ip forward-protocol nd
+cisco-router-1941(config)#ip route 0.0.0.0 0.0.0.0 Virtual-PPP1
+cisco-router-1941(config)#ip route 85.21.0.241 255.255.255.255 dhcp
+
+
 </pre>
 
-
-<pre>
-
-cisco-router-1941# ping beeline.ru source GigabitEthernet0/1
-
-cisco-router-1941# ping ya.ru source Virtual-PPP1
-
-cisco-router-1941# ping ya.ru source GigabitEthernet0/1
-
-
--- ping с маршрутизатора с интерфейса GigabitEthernet0/0 не проходит
-cisco-router-1941#ping ya.ru
-
-</pre>
 
 
 <pre>
@@ -480,18 +519,6 @@ S        213.234.192.8 [1/0] via 10.111.0.1
 </pre>
 
 
-
 <strong>Почитать:</strong><br/><br/>
 http://homenet.beeline.ru/index.php?showtopic=206930&st=0<br/>
 http://habrahabr.ru/post/136342/<br/>
-
-
-
-<!--
-
-Мне кажется у вас просто не хватает маршрутов. Как минимум двух основных:
-ip forward-protocol nd
-ip route 0.0.0.0 0.0.0.0 Virtual-PPP1
-ip route 85.21.0.241 255.255.255.255 dhcp
-
--->

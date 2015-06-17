@@ -20,6 +20,7 @@ permalink: /devices/routers/cisco/1941/beeline-general/
 
 
 
+base_config.txt
 
 
     version 12.4
@@ -218,4 +219,4 @@ permalink: /devices/routers/cisco/1941/beeline-general/
 
 
 
-http://homenet.beeline.ru/index.php?showtopic=206930&st=30&p=1063801518&#entry1063801518 
+http://homenet.beeline.ru/index.php?showtopic=206930&st=30&p=1063801518&#entry1063801518

@@ -20,7 +20,7 @@ permalink: /devices/routers/cisco/1941/
 
 <a href="/devices/routers/cisco/1941/basics-commands/">Cisco Router 1941 Basics Commands</a>  
 
-
+<a href="/devices/routers/cisco/1941/debugging/">Cisco Router 1941 включение и выключение debugging</a>
 
 <br/>
 
@@ -33,11 +33,10 @@ permalink: /devices/routers/cisco/1941/
 
 <a href="/devices/routers/cisco/1941/beeline-l2tp-first-problem/">Cisco Router 1941 проблемы с подключением к сети Билайн по l2tp</a> (Необходима лицензия data license имеем ipbase)
 
-<a href="/devices/routers/cisco/1941/beeline-l2tp/">Cisco Router 1941 попытка настроить подключение к сети Билайн по l2tp</a>
+<a href="/devices/routers/cisco/1941/beeline-l2tp/">Cisco Router 1941 настройка работы интернета в Билайн по l2tp</a>
 
-<a href="/devices/routers/cisco/1941/beeline-port-forwarding/">Проброс порта в локальную сеть Билайн</a> (чего-то не работает)
+<a href="/devices/routers/cisco/1941/beeline-port-forwarding/">Cisco Router 1941 Проброс порта в локальную сеть Билайн</a> (WebServer)
 
-<a href="/devices/routers/cisco/1941/debugging/">Cisco Router 1941 включение и выключение debugging</a>
 
 <br/>
 

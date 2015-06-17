@@ -12,6 +12,16 @@ permalink: /devices/routers/cisco/1941/beeline-port-forwarding/
     cisco-router-1941> en
     cisco-router-1941# conf t
 
--- Все запросы от внешних клиентов на IP адрес 192.168.1.100 с портом 80 должны перенаправляться на IP адрес 192.168.2.20 с портом 80
+-- Все запросы от внешних клиентов на IP адрес 95.31.31.8 с портом 80 должны перенаправляться на IP адрес 192.168.1.201 с портом 80
+
+<!--
 
     cisco-router-1941(config)# ip nat inside source static tcp 95.31.31.8 80 192.168.1.201 80 extendable
+
+-->
+
+    cisco-router-1941(config)# ip nat inside source static tcp 192.168.1.201 80 95.31.31.8 80 extendable
+
+
+
+http://www.cisco.com/c/en/us/support/docs/long-reach-ethernet-lre-digital-subscriber-line-xdsl/asymmetric-digital-subscriber-line-adsl/12905-827spat.html
