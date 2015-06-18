@@ -272,8 +272,6 @@ adjust-mss было 1420
 
 PPS Поменял брас на "новый" 78.107.1.246 (tp.internet.beeline.ru), вернул ip tcp adjust-mss 1420 вроде проблема пропала: т.е. тормоза загрузки некоторых страниц, невозможность браузера открыть URL, те же проблемы но в iTunes на Mac OS X/App Store iOS
 
-
-
 -->
 
 <pre>
@@ -420,6 +418,8 @@ cisco-router-1941(config-if)# ip nat outside
 
 cisco-router-1941(config-if)#exit
 
+</pre>
+
 <!--
 cisco-router-1941# conf t
 cisco-router-1941# access-list 1 permit 192.168.1.0 0.0.0.255
@@ -432,39 +432,25 @@ cisco-router-1941(config-if)# ip nat inside source list 1 interface Virtual-PPP1
 
 <pre>
 
-cisco-router-1941# conf t
-cisco-router-1941# access-list 1 permit 192.168.1.0 0.0.0.255
-
-</pre>
-
-
-
-upd.1
-
 cisco-router-1941(config)# ip access-list extended nat
 cisco-router-1941(config-ext-nacl)# deny ip any host 85.21.0.241
 cisco-router-1941(config-ext-nacl)# permit ip 192.168.1.0 0.0.0.255 any
 cisco-router-1941(config-ext-nacl)# exit
-
-
 
 cisco-router-1941(config)# route-map public permit 10
 cisco-router-1941(config-route-map)# match ip address nat
 cisco-router-1941(config-route-map)# match interface Virtual-PPP1
 cisco-router-1941(config-route-map)# exit
 
-
 cisco-router-1941(config)# route-map local permit 10
 cisco-router-1941(config-route-map)# match ip address nat
 cisco-router-1941(config-route-map)# match interface GigabitEthernet0/0
 cisco-router-1941(config-route-map)# exit
 
-
-
-
 cisco-router-1941(config)# ip nat inside source route-map local interface GigabitEthernet0/0
 cisco-router-1941(config)# ip nat inside source route-map public interface Virtual-PPP1 overload
 
+</pre>
 
 <!--
 
@@ -476,6 +462,7 @@ cisco-router-1941(config-if)# ip nat inside source list 1 interface GigabitEther
 
 -->
 
+<pre>
 
 cisco-router-1941(config)#ip forward-protocol nd
 cisco-router-1941(config)#ip route 0.0.0.0 0.0.0.0 Virtual-PPP1
