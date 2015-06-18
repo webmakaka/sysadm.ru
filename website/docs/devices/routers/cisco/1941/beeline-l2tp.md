@@ -27,10 +27,10 @@ permalink: /devices/routers/cisco/1941/beeline-l2tp/
 
 <br/>
 
-### Предварительная настройка сети:
+### Базовая настройка роутера:
 
 
-Мой ios: c1900-universalk9-mz.SPA.152-4.M2.bin<br/>
+IOS: c1900-universalk9-mz.SPA.152-4.M2.bin<br/>
 Последние версии ios крашились при попытке настроить NAT.
 <br/><br/>
 
@@ -88,7 +88,9 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 </pre>
 
 
--- Предварительная настройка сети
+<br/>
+
+### Предварительная настройка интерфейсов
 
 
 -- GigabitEthernet0/0
@@ -460,6 +462,8 @@ cisco-router-1941(config-if)# ip nat inside source list 1 interface Virtual-PPP1
 cisco-router-1941(config-if)# ip nat inside source list 1 interface GigabitEthernet0/0 overload
 
 -->
+
+### Обязательные маршруты
 
 <pre>
 
