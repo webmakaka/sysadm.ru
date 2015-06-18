@@ -22,6 +22,12 @@ permalink: /devices/routers/cisco/1941/
 
 <a href="/devices/routers/cisco/1941/debugging/">Cisco Router 1941 включение и выключение debugging</a>
 
+<a href="/devices/routers/cisco/1941/device-hardware/">Cisco Router 1941 данные о железе</a>  
+
+<a href="/devices/routers/cisco/1941/backup-configs-to-linux-by-scp/">Cisco Router 1941 backup конфигов на Linux с помощью scp</a> 
+
+
+
 <br/>
 
 ### Работа роутера Cisco Router 1941 в сети Биллайн

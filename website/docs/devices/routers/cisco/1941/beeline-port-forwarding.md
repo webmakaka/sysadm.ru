@@ -25,3 +25,17 @@ permalink: /devices/routers/cisco/1941/beeline-port-forwarding/
 
 
 http://www.cisco.com/c/en/us/support/docs/long-reach-ethernet-lre-digital-subscriber-line-xdsl/asymmetric-digital-subscriber-line-adsl/12905-827spat.html
+
+
+
+
+<!--
+
+http://subnets.ru/forum/viewtopic.php?f=14&t=394
+
+interface Loopback0
+ip address 95.31.31.8 255.255.255.255
+ip nat outside
+ip virtual-reassembly
+
+-->
