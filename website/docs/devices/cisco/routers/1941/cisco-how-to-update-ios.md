@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cisco Router 1941 обновление IOS
-permalink: /devices/routers/cisco/1941/cisco-how-to-update-ios/
+permalink: /devices/cisco/routers/1941/cisco-how-to-update-ios/
 ---
 
 

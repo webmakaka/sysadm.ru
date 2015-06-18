@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cisco Router 1941 настройка работы интернета в Билайн по l2tp
-permalink: /devices/routers/cisco/1941/beeline-l2tp/
+permalink: /devices/cisco/routers/1941/beeline-l2tp/
 ---
 
 <br/>

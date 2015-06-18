@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cisco Router 1941 Basics Commands
-permalink: /devices/routers/cisco/1941/basics-commands/
+permalink: /devices/cisco/routers/1941/basics-commands/
 ---
 
 

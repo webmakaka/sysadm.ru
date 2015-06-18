@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cisco Routers in the Beeline ISP
-permalink: /devices/routers/cisco/1941/beeline-general/
+permalink: /devices/cisco/routers/1941/beeline-general/
 ---
 
 

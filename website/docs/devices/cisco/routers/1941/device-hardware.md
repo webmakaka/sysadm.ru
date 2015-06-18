@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cisco Router 1941 данные о железе
-permalink: /devices/routers/cisco/1941/device-hardware/
+permalink: /devices/cisco/routers/1941/device-hardware/
 ---
 
     # sh version

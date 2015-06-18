@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cisco Router 1941 Crash Dump Example
-permalink: /devices/routers/cisco/1941/crash-dump-example/
+permalink: /devices/cisco/routers/1941/crash-dump-example/
 ---
 
 <pre>

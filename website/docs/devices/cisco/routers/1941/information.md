@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Техническая информация на сайте провайдера по подключеню
-permalink: /devices/routers/cisco/1941/info/
+permalink: /devices/cisco/routers/1941/info/
 ---
 
 

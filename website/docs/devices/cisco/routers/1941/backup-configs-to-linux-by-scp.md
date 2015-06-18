@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cisco Router 1941 backup конфигов на Linux с помощью scp
-permalink: /devices/routers/cisco/1941/backup-configs-to-linux-by-scp/
+permalink: /devices/cisco/routers/1941/backup-configs-to-linux-by-scp/
 ---
 
 cisco-router-1941#conf t

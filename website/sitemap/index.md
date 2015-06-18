@@ -20,7 +20,7 @@ ______
 
 <br/>
 
-###[Cisco Router 1941 в домашней сети Beeline](/devices/routers/cisco/1941/)  
+###[Cisco: Switches and Routers](/devices/cisco/routers/)  
 ______
 
 <br/>
