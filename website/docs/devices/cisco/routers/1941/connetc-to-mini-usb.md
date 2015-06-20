@@ -2,6 +2,7 @@
 layout: page
 title: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
 permalink: /devices/cisco/routers/1941/connetc-to-mini-usb/
+rel_url: /website/docs
 ---
 
 
@@ -11,20 +12,20 @@ permalink: /devices/cisco/routers/1941/connetc-to-mini-usb/
 <br/>
 <br/>
 
+
+
 <div align="center">
 
-	<img src="{% asset_path cicso-mini-usb-console-cable.jpg %}" alt="Cisco console cable" />
+
+	<img src="{{ page.rel_url }}/devices/cisco/routers/1941/cicso-mini-usb-console-cable.jpg" border="0" alt="cicso mini usb console cable">
+
 
 </div>
 
 <br/>
 <br/>
 
-<!--
 
-<img src="https://raw.githubusercontent.com/sysadm-ru/sysadm-ru.github.io/master/website/docs/devices/routers/cisco/1941/cicso-mini-usb-console-cable.jpg" border="0" alt="cicso mini usb console cable">
-
--->
 
 ВНИМАНИЕ !!!
 
