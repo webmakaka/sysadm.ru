@@ -110,7 +110,7 @@ Config:
 
     ALTER DATABASE mydatabase OWNER TO scott;
 
-// Проверк удаленного подключения
+// Проверка удаленного подключения
 
     $ psql -h 192.168.1.11 -p 5432 -U user -W mydatabase
 
