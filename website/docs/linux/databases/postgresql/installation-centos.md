@@ -8,11 +8,11 @@ permalink: /linux/databases/postgresql/centos/
 
 1\. Configure your YUM repository
 
-To the section(s) identified above, you need to append a line (otherwise dependencies might resolve to the postgresql supplied by the base repository):
+Для начала нужно указать в репозиториях [base] и [updates], что из-них следует исключить пакеты для postgresql:
 
     # vi /etc/yum.repos.d/CentOS-Base.repo
 
-[base] and [updates]
+Для [base] и [updates]
 
     exclude=postgresql*
 
@@ -53,7 +53,7 @@ https://wiki.postgresql.org/wiki/YUM_Installation
     # service postgresql initdb
 
 
-### Настройка конфигов
+### Настройка конфигов (расположение зависит от выбранной версии postgresql)
 
 Config:
 
@@ -102,7 +102,7 @@ Config:
     GRANT ALL PRIVILEGES ON DATABASE mydatabase to scott;
 
 
-// Удалить базу если нужно, можно командой
+// Удалить базу (если нужно), можно командой
 
     $ dropdb mydatabase
 
@@ -122,22 +122,6 @@ http://odba.ru/showthread.php?t=465
 
 Вроде неплохая статья:  
 http://www.unixmen.com/postgresql-9-4-released-install-centos-7/
-
-______
-
-Ошибка:
-
-    pg_restore: [archiver] unsupported version (1.12) in file header
-
-Проверяем:
-
-    pg_restore --version
-    pg_restore (PostgreSQL) 8.4.20
-
-Нужна версия 9 и выше.
-
-    $ pg_restore --version
-    pg_restore (PostgreSQL) 9.4.1
 
 
 ______
@@ -165,9 +149,26 @@ Dump Можно преобразовать в sql (Нужно уточнить �
     $ psql database -f dump.sql
 
 
-_______
+______
 
-Ошибка:
+### Ошибка 1:
+
+    pg_restore: [archiver] unsupported version (1.12) in file header
+
+Проверяем:
+
+    pg_restore --version
+    pg_restore (PostgreSQL) 8.4.20
+
+Нужна версия 9 и выше.
+
+    $ pg_restore --version
+    pg_restore (PostgreSQL) 9.4.1
+___
+
+
+### Ошибка 2:
+
 [archiver (db)] could not execute query: ERROR:  language "plpgsql" does not exist
 
     $ psql mydatabase
@@ -178,9 +179,18 @@ http://softlabpro.blogspot.ru/2011/05/postgresql-restore-9x-backup-in-8x.html
 
 
 
-==============
+
+### Ошибка 3:
 
 
+ERROR: could not execute query: ERROR:  must be owner of language plpgsql
+
+    $ psql paymentgate
+    paymentgate=# alter role <user_name> with superuser;
+    ALTER ROLE
+
+
+Убедиться, что owner выставлен правильно.
 
     postgres=# \l
                                        List of databases
@@ -195,15 +205,6 @@ http://softlabpro.blogspot.ru/2011/05/postgresql-restore-9x-backup-in-8x.html
      template1   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
                  |          |          |             |             | postgres=CTc/postgres
     (4 rows)
-
-
-
-
-ERROR: could not execute query: ERROR:  must be owner of language plpgsql
-
-    $ psql paymentgate
-    paymentgate=# alter role <user_name> with superuser;
-    ALTER ROLE
 
 
 <!--
