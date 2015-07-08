@@ -17,8 +17,11 @@ ___
 
     # su - vmadm
 
+<br/>
+
     $ vm=vm_oel57_oradb112
 
+<br/>
 
     $ VBoxManage createvm \
     --name ${vm} \
@@ -31,13 +34,13 @@ ___
 
 Выбираю материнскую пату с более современным чипсетом . По умолчанию piix3
 
-$ VBoxManage modifyvm ${vm}  --chipset ich9
+    $ VBoxManage modifyvm ${vm}  --chipset ich9
 
 
 ### Устанавливаю процессор:
 
 
-    $ VBoxManage modifyvm ${vm}  --cpus 2
+    $ VBoxManage modifyvm ${vm} --cpus 2
 
 
 ### Устанавливаем планку оперативной памяти:
@@ -53,6 +56,8 @@ $ VBoxManage modifyvm ${vm}  --chipset ich9
 
     $ cd ${VM_HOME}/${vm}/${vm}
 
+<br/>
+
     $ VBoxManage createhd \
     --filename ${vm}_dsk1.vdi \
     --size 40960 \
@@ -66,7 +71,6 @@ $ VBoxManage modifyvm ${vm}  --chipset ich9
     --variant Standard
 
     $ VBoxManage createhd \
-
     --filename ${vm}_dsk3.vdi \
     --size 40960 \
     --format VDI \

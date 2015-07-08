@@ -137,6 +137,8 @@ vboxnet0 - виртуальный адаптер хостовой машины.
 
     $ VBoxManage hostonlyif create
 
+<br/>
+
     $ vboxmanage list hostonlyifs
     Name:            vboxnet0
     GUID:            786f6276-656e-4074-8000-0a0027000000
@@ -191,7 +193,7 @@ vboxnet0 - виртуальный адаптер хостовой машины.
     --vrde on \
     --vrdemulticon on \
     --vrdeauthtype null \
-    --vrdeaddress 192.168.35.49 \
+    --vrdeaddress 192.168.1.5 \
     --vrdeport 3389
 
 Здесь мы указываем:  
@@ -209,12 +211,13 @@ vboxnet0 - виртуальный адаптер хостовой машины.
     $ VBoxManage showvminfo ${vm}
 
 
+<br/>
 
 ## ВИРТУАЛЬНАЯ МАШИНА ГОТОВА ДЛЯ ИНСТАЛЛЯЦИИ ОПЕРАЦИОННОЙ СИСТЕМЫ
 
+<br/>
 
 ### Стартуем виртуальную машину с возможностью подключения по RDP:
-
 
 
     $ VBoxHeadless --startvm ${vm} &
