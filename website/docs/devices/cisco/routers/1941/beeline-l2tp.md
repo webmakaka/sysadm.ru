@@ -463,6 +463,7 @@ cisco-router-1941(config-if)# ip nat inside source list 1 interface GigabitEther
 
 -->
 
+<br/>
 ### Обязательные маршруты
 
 <pre>
