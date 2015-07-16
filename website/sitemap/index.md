@@ -4,6 +4,7 @@ title: Карта Сайта
 permalink: /sitemap/
 ---
 
+###[Незапоминаемые команды в принципе](/linux/commands/) 
 
 ###[Node.js и Io.js](/linux/dev/nodejs/)
 
