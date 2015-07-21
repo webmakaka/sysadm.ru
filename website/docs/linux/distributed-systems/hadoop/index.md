@@ -4,6 +4,12 @@ title: Hadoop
 permalink: /linux/distributed-systems/hadoop/
 ---
 
+По курсу:
+
+### [O'Reilly Media] Hadoop Fundamentals for Data Scientists Training Video [2015, ENG]
+
+Незаметно присоединяйтесь к разбору видео.
+
 Почему никто с нуля не ставить?
 Уже несколько видео встречаю, чде работают уже с готовыми виртуалками.
 
