@@ -25,3 +25,9 @@ mod_security
 <br/>
 
 UPD: Предлагаю совместно покопать курс Distributed Systems in One Lesson, если он конечно практический.
+Но он оказался теоретическим. Так, что придется копать самостоятельно. Но зато хотя бы стало поняно в какую сторону смотреть.
+
+
+<div align="center">
+	<img src="/website/tasks/Distributed_Systems.png" alt="Oracle DBA" border="0" />
+</div>
