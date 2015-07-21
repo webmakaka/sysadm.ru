@@ -4,9 +4,21 @@ title: Карта Сайта
 permalink: /sitemap/
 ---
 
-###[Незапоминаемые команды в принципе](/linux/commands/) 
+
+###[Cisco: Switches and Routers](/devices/cisco/routers/)
+
+______
+
+<br/>
+
+
+###[Незапоминаемые команды в принципе](/linux/commands/)
 
 ###[Node.js и Io.js](/linux/dev/nodejs/)
+
+______
+
+<br/>
 
 ###[Вебсервера](/linux/webservers/apache/)
 
@@ -14,14 +26,15 @@ permalink: /sitemap/
 
 ###[Виртуализация и контейнеры](/linux/virtual/)
 
-###[Cloud: Облачные технологии](/linux/cloud/)  
+
+
 
 ______
 
 
-<br/>
+###[Cloud: Облачные технологии (Amazon, Heroku)](/linux/cloud/)  
 
-###[Cisco: Switches and Routers](/devices/cisco/routers/)  
+###[Distributed Systems (BigData, Hadoop, etc.)](/linux/distributed-systems/)  
 ______
 
 <br/>
