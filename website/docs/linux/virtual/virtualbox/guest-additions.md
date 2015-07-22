@@ -27,8 +27,8 @@ http://download.virtualbox.org/virtualbox/4.3.30/VBoxGuestAdditions_4.3.30.iso
 
     # wget http://download.virtualbox.org/virtualbox/4.3.30/VBoxGuestAdditions_4.3.30.iso
 
-// Возможно имеется более простой способ извлечения данных без монтирования iso
 
+<br/>
 
 
     # apt-get install p7zip-full
