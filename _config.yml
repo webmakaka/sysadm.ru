@@ -1,8 +1,7 @@
 # Site settings
 title: sysadm.ru
 
-description: > # this means to ignore newlines until "baseurl:"
-  Системное администрирование, Linux, Базы данных
+description: > Системное администрирование, Linux, Базы данных, Виртуализация, Cisco
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sysadm.ru" # the base hostname & protocol for your site
 
