@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Создание виртуальной машины virtula box для курса по hadoop
+title: Создание виртуальной машины virtual box для курса по hadoop
 permalink: /linux/distributed-systems/hadoop/crate-virtual-mashine-virtual-box-for-hadoop-course/
 ---
 
