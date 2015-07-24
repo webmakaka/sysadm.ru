@@ -93,13 +93,6 @@ permalink: /linux/distributed-systems/hadoop/crate-virtual-mashine-virtual-box-f
 
     $ remmina
 
-<br/>
 
-    user: student  
-    password: password
 
-<br/>
-
-Я залогинился как Hadoop Analyst
-
-Ставлю Guest Additions
+Далее установил Guest Additions. 
