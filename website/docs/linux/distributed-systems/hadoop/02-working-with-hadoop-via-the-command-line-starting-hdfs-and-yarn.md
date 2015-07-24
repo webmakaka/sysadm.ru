@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Working with Hadoop via the Command Line Starting HDFS and Yarn
-permalink: /linux/distributed-systems/hadoop/working-with-hadoop-via-the-command-line-starting-hdfs-and-yarn/
+permalink: /linux/distributed-systems/hadoop/starting-hdfs-and-yarn/
 ---
 
 

@@ -31,4 +31,6 @@ https://www.dropbox.com/s/eg80qsitun7txu1/hfpd3.vmdk.gz?dl=0
 
 
 
-[Working with Hadoop via the Command Line: Starting HDFS and Yarn](/linux/distributed-systems/hadoop/working-with-hadoop-via-the-command-line-starting-hdfs-and-yarn/)
+[Working with Hadoop via the Command Line: Starting HDFS and Yarn](/linux/distributed-systems/hadoop/starting-hdfs-and-yarn/)
+
+[Working with Hadoop via the Command Line: Loading Data into HDFS](/linux/distributed-systems/hadoop/loading-data-into-hdfs/)
