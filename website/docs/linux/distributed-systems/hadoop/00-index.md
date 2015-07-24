@@ -31,7 +31,7 @@ https://www.dropbox.com/s/eg80qsitun7txu1/hfpd3.vmdk.gz?dl=0
 В файле <code>~/.bash_aliases</code> алиасы на некоторые команды.
 
 
-###[Создание виртуальной машины virtula box для курса по hadoop](/linux/distributed-systems/hadoop/crate-virtual-mashine-virtual-box-for-hadoop-course/)
+[Создание виртуальной машины virtula box для курса по hadoop](/linux/distributed-systems/hadoop/crate-virtual-mashine-virtual-box-for-hadoop-course/)
 
 [Working with Hadoop via the Command Line: Starting HDFS and Yarn](/linux/distributed-systems/hadoop/starting-hdfs-and-yarn/)
 

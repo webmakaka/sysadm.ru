@@ -95,4 +95,7 @@ permalink: /linux/distributed-systems/hadoop/crate-virtual-mashine-virtual-box-f
 
 
 
-Далее установил Guest Additions. 
+Далее установил Guest Additions.
+
+
+Рекомендую сделать точку отката. Сам не сделал, пришлось заново все ставить.
