@@ -1,14 +1,19 @@
 ---
 layout: page
-title: Working with Hadoop via the Command Line Loading Data into HDFS
+title: Loading Data into HDFS
 permalink: /linux/distributed-systems/hadoop/loading-data-into-hdfs/
 ---
 
+user hadoop
+
     $ hdfs namenode -format
+
+Re-format filesystem in Storage Directory /var/app/hadoop/data/dfs/name [Y]
+
     $ exit
 
 
-<br/>
+user student
 
     $ cd ~
     $ wget http://norvig.com/ngrams/shakespeare.txt ~/
