@@ -34,7 +34,7 @@ ______
 
 ###[Cloud: Облачные технологии (Amazon, Heroku)](/linux/cloud/)  
 
-###[Distributed Systems (BigData, Hadoop, etc.)](/linux/distributed-systems/)  
+###[Distributed Systems (BigData, Hadoop, Hive, etc.)](/linux/distributed-systems/)  
 ______
 
 <br/>

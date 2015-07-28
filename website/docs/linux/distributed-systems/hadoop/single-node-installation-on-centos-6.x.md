@@ -6,11 +6,22 @@ permalink: /linux/distributed-systems/hadoop/single-node-installation-on-centos-
 
 Имеем виртуальную машину Centos, c IP 192.168.1.11
 
-### Hadoop Installation
-
+<br/>
 
 > Java должна быть установлена
 
+<br/>
+
+### Делаем возможность подключиться к localhost по SSH без пароля
+
+	$ ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
+	$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+	$ chmod 0700 ~/.ssh/authorized_keys
+
+<br/>
+
+
+### Hadoop Installation
 
 	# yum install -y \
 	openssh-clients
@@ -61,13 +72,6 @@ permalink: /linux/distributed-systems/hadoop/single-node-installation-on-centos-
 
 <br/>
 
-### Логин по SSH без пароля
-
-	$ ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
-	$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
-	$ chmod 0700 ~/.ssh/authorized_keys
-
-<br/>
 
 ### Настройка конфигов
 
@@ -89,11 +93,7 @@ permalink: /linux/distributed-systems/hadoop/single-node-installation-on-centos-
 
 <br/>
 
-	<configuration>
-
-	</configuration>
-
-меняю на
+	***
 
 	<configuration>
 	    <property>
@@ -113,11 +113,7 @@ permalink: /linux/distributed-systems/hadoop/single-node-installation-on-centos-
 
 <br/>
 
-	<configuration>
-
-	</configuration>
-
-меняю на
+	***
 
 	<configuration>
 	    <property>
@@ -135,18 +131,16 @@ permalink: /linux/distributed-systems/hadoop/single-node-installation-on-centos-
 	</configuration>
 
 
+! Нужно посмотреть, возможно, что параметр должен называться dfs.datanode.data.dir 
+
+
 <br/>
 
 	$ vi /opt/hadoop/2.7.1/etc/hadoop/yarn-site.xml
 
 <br/>
 
-	<configuration>
-
-	</configuration>
-
-меняю на
-
+	***
 
 	<configuration>
 	    <property>
