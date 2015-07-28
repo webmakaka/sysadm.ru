@@ -1,39 +1,35 @@
 ---
 layout: page
-title: Hadoop Single Node Installation
-permalink: /linux/distributed-systems/hadoop/single-node-installation/
+title: Hadoop Single Node Installation on Centos 6.X
+permalink: /linux/distributed-systems/hadoop/single-node-installation-on-centos-6/
 ---
 
+Имеем виртуальную машину Centos, c IP 192.168.1.11
+
 ### Hadoop Installation
-
-
-	# yum install -y \
-	openssh-clients
 
 
 > Java должна быть установлена
 
 
-	# cd /tmp
+	# yum install -y \
+	openssh-clients
 
+<br/>
+
+	# cd /tmp
     # wget http://apache.claz.org/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz
 
 <br/>
 
     # tar -xvzpf hadoop-2.7.1.tar.gz
-
     # mkdir -p /opt/hadoop/2.7.1
-
     # mv hadoop-2.7.1/* /opt/hadoop/2.7.1/
 
-
-
-username - that user will work with hadoop
+<br/>
 
     # useradd hadoop
-
 	# passwd hadoop
-
 	# chown -R hadoop /opt/hadoop/
 
 <br/>
@@ -49,9 +45,9 @@ username - that user will work with hadoop
 
 	#### HADOOP 2.7.1 #######################
 
-		export HADOOP_HOME=/opt/hadoop/2.7.1
-		export PATH=$PATH:$HADOOP_HOME/bin
-        export PATH=$PATH:$HADOOP_HOME/sbin
+	export HADOOP_HOME=/opt/hadoop/2.7.1
+	export PATH=$PATH:$HADOOP_HOME/bin
+	export PATH=$PATH:$HADOOP_HOME/sbin
 
 	#### HADOOP 2.7.1 #######################
 
@@ -59,15 +55,11 @@ username - that user will work with hadoop
 
      $ source ~/.bash_profile
 
-
-Let try to check result:
-
 <br/>
 
 	$ hadoop version
 
-<br/><br/>
-
+<br/>
 
 ### Логин по SSH без пароля
 
@@ -75,6 +67,7 @@ Let try to check result:
 	$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 	$ chmod 0700 ~/.ssh/authorized_keys
 
+<br/>
 
 ### Настройка конфигов
 
@@ -126,20 +119,20 @@ Let try to check result:
 
 меняю на
 
-<configuration>
-    <property>
-        <name>dfs.replication</name>
-        <value>1</value>
-    </property>
-	<property>
-		<name>dfs.namenode.name.dir</name>
-		<value>file:/home/hadoop/hadoop_data/hdfs/namenode</value>
-	</property>
-	<property>
-		<name>dfs.datanode.name.dir</name>
-		<value>file:/home/hadoop/hadoop_data/hdfs/datanode</value>
-	</property>
-</configuration>
+	<configuration>
+	    <property>
+	        <name>dfs.replication</name>
+	        <value>1</value>
+	    </property>
+		<property>
+			<name>dfs.namenode.name.dir</name>
+			<value>file:/home/hadoop/hadoop_data/hdfs/namenode</value>
+		</property>
+		<property>
+			<name>dfs.datanode.name.dir</name>
+			<value>file:/home/hadoop/hadoop_data/hdfs/datanode</value>
+		</property>
+	</configuration>
 
 
 <br/>
@@ -182,9 +175,9 @@ Let try to check result:
 	</configuration>
 
 
+<br/>
 
-### Проверка
-
+### Запуск демонов
 
 	$ hadoop namenode -format
 	$ hadoop-daemon.sh start datanode
@@ -214,7 +207,6 @@ Let try to check result:
 
 <br/>
 
-
 	$ mr-jobhistory-daemon.sh start historyserver
 
 <br/>
@@ -228,7 +220,9 @@ Let try to check result:
 	9817 ResourceManager
 
 
-**Можно подключиться браузером**
+<br/>
+
+### Можно подключиться браузером
 
 Summary
 
@@ -242,6 +236,9 @@ job history
 
 	http://192.168.1.11:19888
 
+
+
+<br/><br/><br/><br/>
 
 
 Links:

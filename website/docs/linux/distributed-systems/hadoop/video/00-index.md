@@ -1,22 +1,11 @@
 ---
 layout: page
 title: Hadoop
-permalink: /linux/distributed-systems/hadoop/
+permalink: /linux/distributed-systems/hadoop/video-course/
 ---
-
-
-###[Hadoop Single Node Installation](/linux/distributed-systems/hadoop/single-node-installation/)
-
-
-
-Далее пока по курсу:
 
 ### [O'Reilly Media] Hadoop Fundamentals for Data Scientists Training Video [2015, ENG]
 
-Можно подключиться к разбору материалов из видео.
-
-Почему никто с нуля Hadoop не ставит?
-Уже несколько видео встречаю, где работают уже с готовыми виртуалками.
 
 Виртуальная машина:
 
@@ -49,3 +38,7 @@ https://github.com/bbengfort/hadoop-fundamentals
 
 
 [Working with Hadoop via the Command Line: Running a MapReduce Job](/linux/distributed-systems/hadoop/running-a-mapreduce-job/)
+
+
+Дальше поплыл.
+Пока нужно разобраться как настраивать самостоятельно в single и cluster конфигурациях.
