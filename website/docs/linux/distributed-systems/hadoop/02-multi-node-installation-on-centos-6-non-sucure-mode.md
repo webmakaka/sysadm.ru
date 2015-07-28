@@ -46,13 +46,15 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 <br/>
 
 
-### Делаем возможность подключиться к localhost по SSH без пароля
+### Делаем возможность подключиться к localhost по SSH без пароля (hadoopmaster1, hadoopslave1, hadoopslave2, hadoopslave3)
 
 	$ ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
 	$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 	$ chmod 0700 ~/.ssh/authorized_keys
 	$ ssh localhost
 
+
+### Делаем возможность подключиться к узлам по SSH без пароля между (hadoopmaster1 и hadoopslave1, hadoopslave2, hadoopslave3)
 
 	hadoopslave1
 
@@ -61,9 +63,7 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 	hadoopmaster1
 
 	$ cat /tmp/id_dsa_slave1.pub >> ~/.ssh/authorized_keys
-
 	$ scp ~/.ssh/id_dsa.pub hadoop@hadoopslave1:/tmp/id_dsa_master1.pub
-
 
 	hadoopslave1
 
@@ -92,7 +92,6 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 
 	=====
 
-
 	hadoopslave3
 
 	$ scp ~/.ssh/id_dsa.pub hadoop@hadoopmaster1:/tmp/id_dsa_slave3.pub
@@ -108,7 +107,6 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 	$ cat /tmp/id_dsa_master1.pub >> ~/.ssh/authorized_keys
 	$ ssh hadoopmaster1
 	$ ssh hadoopslave3
-
 
 
 <br/>
