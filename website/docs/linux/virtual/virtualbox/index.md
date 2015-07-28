@@ -20,4 +20,6 @@ permalink: /linux/virtual/virtualbox/
 
 [Export и Import виртуальных машин VirtualBox](/linux/virtual/virtualbox/export-import/)
 
+[Клонирование виртуальных машин VirtualBox в командной строке](/linux/virtual/virtualbox/clone/)
+
 [Замена виртуального диска VirtualBox в командной строке](/linux/virtual/virtualbox/replace-disk/)

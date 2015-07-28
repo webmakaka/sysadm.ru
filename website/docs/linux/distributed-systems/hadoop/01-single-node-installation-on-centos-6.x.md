@@ -9,6 +9,9 @@ permalink: /linux/distributed-systems/hadoop/single-node-installation-on-centos-
 <br/>
 
 > Java должна быть установлена
+> http://javadev.org/java_basics/installation/jdk/8/linux/centos/6/x86_x64/
+
+
 
 <br/>
 
@@ -131,7 +134,7 @@ permalink: /linux/distributed-systems/hadoop/single-node-installation-on-centos-
 	</configuration>
 
 
-! Нужно посмотреть, возможно, что параметр должен называться dfs.datanode.data.dir 
+! Нужно посмотреть, возможно, что параметр должен называться dfs.datanode.data.dir
 
 
 <br/>
@@ -167,7 +170,6 @@ permalink: /linux/distributed-systems/hadoop/single-node-installation-on-centos-
 	        <value>yarn</value>
 	    </property>
 	</configuration>
-
 
 <br/>
 
