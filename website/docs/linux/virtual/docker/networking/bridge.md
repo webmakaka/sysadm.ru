@@ -7,8 +7,12 @@ permalink: /linux/virtual/docker/networking/ubuntu-bridge/
 
     sudo apt-get install bridge-utils
 
+<br/>
+
     sudo service docker stop
     sudo ip link set dev docker0 down
+
+<br/>
 
     sudo brctl delbr docke0
     sudo brctl addbr bridge0
@@ -16,8 +20,14 @@ permalink: /linux/virtual/docker/networking/ubuntu-bridge/
     sudo ip link set dev bridge0 up
 
 
-vi /etc/default
+<br/>
+
+    vi /etc/default
+
+<br/>
 
     DOCKER_OPTS=" -b=bridge0"
+
+<br/>
 
     sudo service docker start
