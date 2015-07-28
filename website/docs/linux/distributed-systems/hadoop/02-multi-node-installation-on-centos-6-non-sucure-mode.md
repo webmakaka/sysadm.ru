@@ -53,6 +53,7 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 	$ chmod 0700 ~/.ssh/authorized_keys
 	$ ssh localhost
 
+<br/>
 
 ### Делаем возможность подключиться к узлам по SSH без пароля между (hadoopmaster1 и hadoopslave1, hadoopslave2, hadoopslave3)
 
