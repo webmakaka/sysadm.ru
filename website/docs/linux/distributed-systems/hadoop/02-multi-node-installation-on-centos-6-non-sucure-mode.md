@@ -54,18 +54,18 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 	$ ssh localhost
 
 
-	Slave 1
+	hadoopslave1
 
 	$ scp ~/.ssh/id_dsa.pub hadoop@hadoopmaster1:/tmp/id_dsa_slave1.pub
 
-	Master 1
+	hadoopmaster1
 
 	$ cat /tmp/id_dsa_slave1.pub >> ~/.ssh/authorized_keys
 
 	$ scp ~/.ssh/id_dsa.pub hadoop@hadoopslave1:/tmp/id_dsa_master1.pub
 
 
-	Slave 1
+	hadoopslave1
 
 	$ cat /tmp/id_dsa_master1.pub >> ~/.ssh/authorized_keys
 	$ ssh hadoopmaster1
@@ -74,17 +74,17 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 
 	=====
 
-	Slave 2
+	hadoopslave2
 
 	$ scp ~/.ssh/id_dsa.pub hadoop@hadoopmaster1:/tmp/id_dsa_slave2.pub
 
-	Master 1
+	hadoopmaster1
 
 	$ cat /tmp/id_dsa_slave2.pub >> ~/.ssh/authorized_keys
 	$ scp ~/.ssh/id_dsa.pub hadoop@hadoopslave2:/tmp/id_dsa_master1.pub
 
 
-	Slave 2
+	hadoopslave2
 
 	$ cat /tmp/id_dsa_master1.pub >> ~/.ssh/authorized_keys
 	$ ssh hadoopmaster1
@@ -93,17 +93,17 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 	=====
 
 
-	Slave 3
+	hadoopslave3
 
 	$ scp ~/.ssh/id_dsa.pub hadoop@hadoopmaster1:/tmp/id_dsa_slave3.pub
 
-	Master 1
+	hadoopmaster1
 
 	$ cat /tmp/id_dsa_slave3.pub >> ~/.ssh/authorized_keys
 	$ scp ~/.ssh/id_dsa.pub hadoop@hadoopslave3:/tmp/id_dsa_master1.pub
 
 
-	Slave 3
+	hadoopslave3
 
 	$ cat /tmp/id_dsa_master1.pub >> ~/.ssh/authorized_keys
 	$ ssh hadoopmaster1
@@ -111,8 +111,9 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 
 
 
+<br/>
 
-### Master
+### hadoopmaster1
 
 
 	$ mkdir -p ~/hadoop_data/hdfs/namenode
@@ -138,8 +139,9 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 
 
 
+<br/>
 
-### Slaves
+### hadoopslave1, hadoopslave2, hadoopslave3
 
 
 	$ mkdir -p ~/hadoop_data/hdfs/datanode
@@ -166,7 +168,7 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 
 <br/>
 
-### На всех компьютерах, работающих в кластере
+### На всех компьютерах, работающих в кластере (hadoopmaster1, hadoopslave1, hadoopslave2, hadoopslave3)
 
 
 	$ vi /opt/hadoop/2.7.1/etc/hadoop/core-site.xml
@@ -222,6 +224,8 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 
 <br/>
 
+	***
+
 	<configuration>
 	    <property>
 	        <name>mapreduce.framework.name</name>
@@ -245,10 +249,10 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 	hadoopslave3
 
 
+<br/>
 
-### Запуск
+### Запуск на hadoopmaster1
 
-На Master
 
 	$ hadoop namenode -format
 
@@ -260,8 +264,9 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 	2169 NameNode
 	1599 ResourceManager
 
+<br/>
 
-### Slave
+### hadoopslave1, hadoopslave2, hadoopslave3
 
 	$ jps
 	1552 NodeManager
@@ -269,6 +274,7 @@ permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6
 	1739 Jps
 
 
+<br/>
 
 ### Можно подключиться браузером и проверить, сколько нод в кластере.
 
