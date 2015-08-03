@@ -11,13 +11,13 @@ permalink: /ubuntu/drivers/nvidia/
 Зато стало работать.
 
 
-	sudo add-apt-repository ppa:xorg-edgers/ppa -y
-	sudo apt-get update
-	sudo apt-get install nvidia-current
+	$ sudo add-apt-repository ppa:xorg-edgers/ppa -y
+	$ sudo apt-get update
+	$ sudo apt-get install nvidia-current
 
 <br/>
 
-	software-properties-gtk
+	$ software-properties-gtk
 
 <br/>
 
