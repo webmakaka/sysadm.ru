@@ -11,9 +11,6 @@ ______
 
 <br/>
 
-
-###[Незапоминаемые команды в принципе](/linux/commands/)
-
 ###[Node.js и Io.js](/linux/dev/nodejs/)
 
 ______
@@ -36,6 +33,15 @@ ______
 
 ###[Distributed Systems (BigData, Hadoop, Hive, etc.)](/linux/distributed-systems/)  
 ______
+
+
+# Разное:
+
+###[Незапоминаемые команды в принципе](/linux/commands/)
+
+
+###[Установить в ubuntu родные nvidia драйвера вместо opensource](/ubuntu/drivers/nvidia/)
+
 
 <br/>
 
