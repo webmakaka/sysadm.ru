@@ -19,6 +19,7 @@ permalink: /ubuntu/drivers/nvidia/
 
 	software-properties-gtk
 
+<br/>
 
 Остается выбрать проприетарщину и перезагрузиться.
 
@@ -45,6 +46,10 @@ permalink: /ubuntu/drivers/nvidia/
 Kernel driver in use: nvidia
 
 
+<br/>
+
+### Получить доп информацию при необходимости
+
 
 	$ lsmod | grep nvidia
 	nvidia              10744943  53
@@ -58,5 +63,7 @@ Kernel driver in use: nvidia
 	nvidia_331_updates
 
 
+<br/><br/><br/>
 
+Links:  
 http://www.binarytides.com/install-nvidia-drivers-ubuntu-14-04/
