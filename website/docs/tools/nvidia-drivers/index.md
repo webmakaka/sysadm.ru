@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Установить в ubuntu родные nvidia драйвера вместо opensource
+title: Установить в ubuntu nvidia драйвера вместо opensource
 permalink: /ubuntu/drivers/nvidia/
 ---
 
@@ -10,7 +10,8 @@ permalink: /ubuntu/drivers/nvidia/
 
 Пришлось установить драйвера с закрытым исходным кодом.
 
-Ошибка после этого пропала.
+Ошибка после этого пропала.  
+Изображение стало немного мягче.
 
 
 	$ sudo add-apt-repository ppa:xorg-edgers/ppa -y

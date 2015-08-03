@@ -15,7 +15,7 @@ ______
 
 <br/>
 
-# Администрирование серверов
+# Администрирование серверов:
 
 ###[Вебсервера](/linux/webservers/apache/)
 
@@ -51,7 +51,7 @@ ______
 ###[Незапоминаемые команды в принципе](/linux/commands/)
 
 
-###[Установить в ubuntu родные nvidia драйвера вместо opensource](/ubuntu/drivers/nvidia/)
+###[Установить в ubuntu nvidia драйвера вместо opensource](/ubuntu/drivers/nvidia/)
 
 ______
 
