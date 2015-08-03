@@ -5,17 +5,17 @@ permalink: /sitemap/
 ---
 
 
+<br/>
+
+# Устройства:
+
 ###[Cisco: Switches and Routers](/devices/cisco/routers/)
 
 ______
 
 <br/>
 
-###[Node.js и Io.js](/linux/dev/nodejs/)
-
-______
-
-<br/>
+# Администрирование серверов
 
 ###[Вебсервера](/linux/webservers/apache/)
 
@@ -33,6 +33,15 @@ ______
 ###[Cloud: Облачные технологии (Amazon, Heroku)](/linux/cloud/)  
 
 ###[Distributed Systems (BigData, Hadoop, Hive, etc.)](/linux/distributed-systems/)  
+
+______
+
+<br/>
+
+# Программирование:
+
+###[Node.js и Io.js](/linux/dev/nodejs/)
+
 ______
 
 <br/>
@@ -44,12 +53,14 @@ ______
 
 ###[Установить в ubuntu родные nvidia драйвера вместо opensource](/ubuntu/drivers/nvidia/)
 
+______
 
 <br/>
 
 # Видеокурсы:
 
 ###[Видеокурсы для администраторов Linux (без ссылок на скачку)](/linux/video-kursy/)  
+
 ______
 
 <br/>
