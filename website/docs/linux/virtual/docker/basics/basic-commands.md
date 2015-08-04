@@ -63,12 +63,12 @@ ___
     docker images
     docker images --tree
     docker images fedora
-    
+
 
 // Запустить shell в контейнере  
 
     docker run -it centos:centos6 /bin/bash
-    
+
 
 // Контенеры и имиджи хранятся здесь  
 
@@ -107,7 +107,7 @@ ___
 
     docker attach <container_id>
 
-// Подключиться еще одним shell
+// Подключиться еще одной сессией к контейнеру
 
     docker exec -it <container_id> bash
 
@@ -117,13 +117,16 @@ ___
     docker top <container_id>
     docker inspect <container_id>
     docker logs <container_id>
-    
+
 ---
 
+// Показать какие порты локальной машины соответствуют портам контейнера
 
-docker port <container_id>
+    $ docker port <container_id>
 
-$ docker port my_container  
+Пример
+
+    $ docker port my_container  
 
     1337/tcp -> 0.0.0.0:1337
     3000/tcp -> 0.0.0.0:3000
@@ -131,16 +134,20 @@ $ docker port my_container
     9000/tcp -> 0.0.0.0:9000
 
 
+
+// узнать IP Контейнера Docker
+
+    docker inspect --format='{{.NetworkSettings.IPAddress}}' containerId
+
+
+<br/>
+
+### Остановка и удаление
+
 // Удалить контейнер
 
     docker rm  <container_id>
     docker rm -f <container_id>
-
-// узнать IP Контейнера Docker 
-
-    docker inspect --format='{{.NetworkSettings.IPAddress}}' containerId
-
-___
 
 
 // stop all Docker containers:  
@@ -154,5 +161,3 @@ ___
 // remove all Docker images:  
 
     # docker rmi $(docker images -q)
-
-    

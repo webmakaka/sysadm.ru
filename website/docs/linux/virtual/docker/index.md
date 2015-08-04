@@ -4,28 +4,52 @@ title: Docker
 permalink: /linux/virtual/docker/
 ---
 
-[Основные раскопки по Docker пока еще лежат здесь](http://prev.sysadm.ru/linux/virtual/docker/)  
+
+[Основные команды Docker](/linux/virtual/docker/basics/basic-commands/)  
+
+
+<br/>
+
+### Docker Installation
 
 
 [Инсталляция Docker в Ubuntu](/linux/virtual/docker/basics/installing-docker-on-ubuntu/)  
 [Инсталляция Docker в CentOS 7](/linux/virtual/docker/basics/installing-docker-on-centos/)  
-[Основные команды Docker](/linux/virtual/docker/basics/basic-commands/)  
-[Базовая настройка сети для Docker с использованием моста в Ubuntu](/linux/virtual/docker/networking/ubuntu-bridge/)  
-Настройка сети, чтобы было как и на остальных виртуалках, см. на старом сайте.
 
+
+
+<br/>
+
+### Docker NetWorking
+
+[Базовая настройка сети для Docker с использованием моста в Ubuntu (из видеокурса)](/linux/virtual/docker/networking/ubuntu-bridge/)  
+[Задание параметров сетевых интерфейсов docker в Ubuntu (IP, gateway, etc.)](/linux/virtual/docker/networking/ubuntu-bridge/bridge-my-version/)  
+
+
+<br/>
+
+### Docker Linking Containers
+
+[Пример линковки контейнеров для их совместной работы](/linux/virtual/docker/linking-containers/)  
+
+
+
+<br/>
+
+### Docker Работа с image
 
 [Скопировать image на другой HOST](/linux/virtual/docker/basics/copying-images-to-other-hosts/)  
 [Скопировать image на hub.docker.com и забрать image с него](/linux/virtual/docker/basics/push-and-pull-docker-image-to-hub/)  
 
-___
-
 <br/>
+
+### Dockerfile
 
 [Мой Dockerfile для разработки rails и node.js приложений в centos 6](/linux/virtual/docker/dockerfile/)  
 
-___
-
 <br/>
+
+### Docker Clustering
 
 [Clustering docker with swarm](/linux/virtual/docker/clustering/ubuntu/)  
 

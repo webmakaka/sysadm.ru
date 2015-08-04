@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Установить в ubuntu nvidia драйвера вместо opensource
+title: Установить в ubuntu nvidia драйверов вместо opensource
 permalink: /ubuntu/drivers/nvidia/
 ---
 

@@ -51,7 +51,7 @@ ______
 ###[Незапоминаемые команды в принципе](/linux/commands/)
 
 
-###[Установить в ubuntu nvidia драйвера вместо opensource](/ubuntu/drivers/nvidia/)
+###[Установить в ubuntu nvidia драйверов вместо opensource](/ubuntu/drivers/nvidia/)
 
 ______
 
