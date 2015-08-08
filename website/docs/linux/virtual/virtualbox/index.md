@@ -12,6 +12,7 @@ permalink: /linux/virtual/virtualbox/
 [Инсталляция VirtualBox в командной строке в RedHat/Centos](/linux/virtual/virtualbox/installation/centos/6/)
 
 
+<br/>
 
 ### Создание виртуальных машин
 
@@ -20,11 +21,14 @@ permalink: /linux/virtual/virtualbox/
 [Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux](/linux/virtual/virtualbox/vm/oracle-linux-6/) Bridget Network
 
 
+<br/>
 
 ### Инсталляция Guest Additions
 
 [Инсталляция Guest Additions в Ubuntu Linux в командной строке](/linux/virtual/virtualbox/guest-additions-installation-in-command-line/)
 
+
+<br/>
 
 ### Основные задачи по работе с виртуальными машинами
 
