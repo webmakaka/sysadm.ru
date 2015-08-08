@@ -51,7 +51,7 @@ ______
 ###[Незапоминаемые команды в принципе](/linux/commands/)
 
 
-###[Установить в ubuntu nvidia драйверов вместо opensource](/ubuntu/drivers/nvidia/)
+###[Установить в ubuntu nvidia драйвера вместо opensource](/ubuntu/drivers/nvidia/)
 
 ______
 
@@ -69,7 +69,7 @@ ______
 
 ###[Симулятор системного администратора](/website/games/sysadm.swf)  
 
-###[Doom](/website/games/doom.swf) (что-то стал тормозить, в linux по крайней мере)  
+###[Doom](/website/games/doom.swf) (что-то стал тормозить, по крайней мере  в linux)  
 ______
 
 <br/>
