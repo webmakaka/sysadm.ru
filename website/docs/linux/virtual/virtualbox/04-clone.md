@@ -5,7 +5,6 @@ permalink: /linux/virtual/virtualbox/clone/
 ---
 
 
-
     $ vboxmanage clonevm <source-machine-name> --name <target-machine-name> --register
 
 
