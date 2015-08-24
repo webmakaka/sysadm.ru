@@ -5,7 +5,7 @@ permalink: /linux/virtual/virtualbox/
 ---
 
 
-### Инсталляция VirtualBox
+### Инсталляция VirtualBox 4.X
 
 [Инсталляция VirtualBox в командной строке в Ubuntu](/linux/virtual/virtualbox/installation/ubuntu/14.04/)
 
