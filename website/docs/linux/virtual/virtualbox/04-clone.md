@@ -5,6 +5,12 @@ permalink: /linux/virtual/virtualbox/clone/
 ---
 
 
+Указываем место куда клонировать виртуальную машину. Вместо ${VM_HOME} укажите каталог, гуда следует клонировать.
+
+    $ VBoxManage setproperty machinefolder ${VM_HOME}
+
+<br/>
+
     $ vboxmanage clonevm <source-machine-name> --name <target-machine-name> --register
 
 
