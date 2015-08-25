@@ -15,3 +15,5 @@ permalink: /linux/clusters/
 ###[OCFS2 filesystem](http://odba.ru/showthread.php?t=433)
 
 ###[Pacemaker](http://odba.ru//showthread.php?t=527)
+
+###[Lustre](http://odba.ru/showthread.php?t=431)

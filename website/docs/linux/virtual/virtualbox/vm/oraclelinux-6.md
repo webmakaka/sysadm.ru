@@ -45,7 +45,7 @@ ___
 ### Устанавливаем планку оперативной памяти:
 
 
-    $ VBoxManage modifyvm ${vm} --memory 2048
+    $ VBoxManage modifyvm ${vm} --memory 4608
 
 
 ### Создание и подключение жестких дисков:
