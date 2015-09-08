@@ -4,6 +4,15 @@ title: Развлечения
 permalink: /entertainment/youtube/
 ---
 
+
+### Роскомнадзор заблокировал 11 порно-сайтов
+
+
+По решению Крыловского районного суда Краснодарского края внесены в Единый реестр запрещенной информации и направлены для ограничения доступа операторами связи 11 интернет-ресурсов порнографического содержания
+
+
+<br/><br/>
+
 <div align="center">
 
 <iframe width="960" height="720" src="https://www.youtube.com/embed/LTJvdGcb7Fs" frameborder="0" allowfullscreen></iframe>
