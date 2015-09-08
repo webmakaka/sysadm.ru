@@ -6,7 +6,7 @@ permalink: /entertainment/youtube/
 
 <div align="center">
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/LTJvdGcb7Fs" frameborder="0" allowfullscreen></iframe>
+<iframe width="960" height="720" src="https://www.youtube.com/embed/LTJvdGcb7Fs" frameborder="0" allowfullscreen></iframe>
 
 </div>
 
