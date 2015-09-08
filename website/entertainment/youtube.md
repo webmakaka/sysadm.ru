@@ -7,6 +7,8 @@ permalink: /entertainment/youtube/
 
 ### Роскомнадзор заблокировал 11 порно-сайтов
 
+Роскомнадзор заблокирует сразу 136 порносайтов, ограничить доступ к которым предписал Апастовский районный суд
+
 
 По решению Крыловского районного суда Краснодарского края внесены в Единый реестр запрещенной информации и направлены для ограничения доступа операторами связи 11 интернет-ресурсов порнографического содержания
 
@@ -19,6 +21,9 @@ permalink: /entertainment/youtube/
 
 </div>
 
+<br/>
+
+**The Internet Is For Porn**
 
     KATE
     The internet is really really great
@@ -38,6 +43,8 @@ permalink: /entertainment/youtube/
 
     TREKKIE
     For porn!
+
+    KATE
     I browse all day and night
 
     TREKKIE
@@ -86,6 +93,8 @@ permalink: /entertainment/youtube/
     TREKKIE
     Me no talkie
 
+
+
     KATE
     Good
     I’m glad we have this new technology
@@ -111,6 +120,7 @@ permalink: /entertainment/youtube/
 
     TREKKIE
     FOR PORN!!
+
 
 
     Trekkie!
