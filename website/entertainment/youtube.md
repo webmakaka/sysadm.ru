@@ -22,96 +22,131 @@ permalink: /entertainment/youtube/
 
     KATE
     The internet is really really great
+
     TREKKIE MONSTER
     For porn
+
     KATE
     I’ve got a fast connection so i don’t have to wait
+
     TREKKIE
     For porn
+
     KATE
     Huh?
     There's always some new site,
+
     TREKKIE
     For porn!
     I browse all day and night
+
     TREKKIE
     For porn!
+
     KATE
     It's like i’m surfing at the speed of light
+
     TREKKIE
     For porn!
+
     KATE
     Trekkie!
 
     TREKKIE
     The internet is for porn
+
     KATE
     Trekkie!
+
     TREKKIE
     The internet is for porn,
+
     KATE
     What are you doing!?
+
     TREKKIE
     Why you think the net was born?
     Porn porn porn
 
     KATE
     Treee—kkie!
+
     TREKKIE
     Oh hello kate monster
+
     KATE
     You are ruining my song
+
     TREKKIE
     Oh me sorry, me no mean to
+
     KATE
     Well if you wouldnt mind please being quiet for a minute so i can finish?
+
     TREKKIE
     Me no talkie
+
     KATE
     Good
-
     I’m glad we have this new technology
+
     TREKKIE
     For porn
+
     KATE
     Which gives us untold opportunity
+
     TREKKIE
     For por—oops, sorry
+
     KATE
     Right from you own desktop
+
     TREKKIE
     For ---
+
     KATE
     You can research browse and shop
     Until you’ve had enough and your ready to stop
+
     TREKKIE
     FOR PORN!!
 
 
     Trekkie!
+
     TREKKIE
     The internet is for porn!
+
     KATE
     Noooo
+
     TREKKIE
     The internet if for porn!
+
     KATE
     Trekkie
+
     TREKKIE
     Me up all night honking me horn to porn, porn, porn!
 
     KATE
     That’s gross you’re a pervert
+
     TREKKIE
     Ah, sticks and stones Kate monster
+
     KATE
     NO really, your a pervert
     Normal people don’t sit at home and look
     At porn on the internet
+
     TREKKIE
     Ohhhh?
+
     KATE
     What?!
+
     TREKKIE
     You have no idea
     Ready normal people?
@@ -122,17 +157,23 @@ permalink: /entertainment/youtube/
     TREKKIE
     Let me hear it!
 
+
     TREKKIE AND GUYS
     The internet is for porn!
+
     PRINCETON
     Sorry kate
+
     TREKKIE AND GUYS
     The internet is for porn!
+
     PRINCETON
     I masturbate!
+
     TREKKIE AND GUYS
     All these guys unzip their flies
     For porn, porn, porn!
+
 
     KATE
     The internet is not for porn!!
@@ -175,28 +216,39 @@ permalink: /entertainment/youtube/
 
     KATE
     EEEWWWWW!
+
     TREKKIE AND GUYS
     The internet is for porn!
+
     KATE
     Gross!
+
     TREKKIE AND GUYS
     The internet is for porn!
+
     KATE
     I hate porn
+
     TREKKIE AND GUYS
-    Grab your di*k and double click
+    Grab your dick and double click
+
     KATE
     I hate you men!
+
     TREKKIE AND GUYS
     For porn, porn, porn!
     (harmonizing) porn, porn, porn, porn
+
     KATE
     I’m leaving!
+
     TREKKIE AND GUYS
     Porn, porn, porn, porn
     porn, porn, porn, porn
+
     KATE
     I hate the internet!
+
     TREKKIE AND GUYS
     Porn, porn, porn, porn
 
