@@ -44,4 +44,4 @@ https://supportforums.cisco.com/thread/2036850
 </pre>
 
 
-Далее делал, как <a href="/devices/routers/cisco/1941/cisco-licensing/">здесь</a>
+Далее делал, как <a href="/devices/cisco/routers/1941/cisco-licensing/">здесь</a>
