@@ -9,7 +9,7 @@ permalink: /linux/video-kursy/
 
 ___
 
-<br/> 
+<br/>
 
 **Основы**
 
@@ -31,7 +31,7 @@ ___
 
 ___
 
-<br/> 
+<br/>
 
 **Security**
 
@@ -41,19 +41,19 @@ ___
 
 ___
 
-<br/> 
+<br/>
 
 **Ethical Hacking**
 
 <ul>
-<li style="color:green">[Udemy] IT Security and Ethical Hacking [ENG, 26 Hours, ????] <a href="https://www.udemy.com/it-security-and-ethical-hacking/">(Course Description)</a></li>
+<li style="color:green">[Udemy] IT Security and Ethical Hacking [ENG, 26 Hours, ????] <a href="https://www.udemy.com/it-security-and-ethical-hacking/" rel="nofollow">(Course Description)</a></li>
     <li>[Udemy] Learn The Basics of Ethical Hacking and Penetration Testing [ENG, 2015]</li>
     <li>[CBT Nuggets] EC Council Certified Ethical Hacker v8.0 [ENG, 2014]</li>
 </ul>
 
 ___
 
-<br/> 
+<br/>
 
 **Виртуализация и контейнеры**
 
@@ -66,7 +66,7 @@ ___
 </ul>
 ___
 
-<br/> 
+<br/>
 
 **Hadoop**
 
@@ -77,19 +77,19 @@ ___
 
 ___
 
-<br/> 
+<br/>
 
 **Cloud**
 
 <ul>
-    <li>[InfiniteSkills] Securing Cloud Services [ENG, 6h 50m, 2014]<a href="http://www.infiniteskills.com/training/securing-cloud-services.html"> Описание курса</a></li>
-    <li>[Pluralsigth] Amazon Web Services (AWS) Fundamentals for System Administrators [ENG, 6h 51m, 2015] <a href="http://www.pluralsight.com/courses/aws-system-admin-fundamentals"> Описание курса</a></li>
-    <li>[Udemy] AWS Certified Solutions Architect - Associate 2015 [ENG, 2015] <a href="https://www.udemy.com/aws-certified-solutions-architect-associate-level-2014/"> Описание курса</a></li>
+    <li>[InfiniteSkills] Securing Cloud Services [ENG, 6h 50m, 2014]<a href="http://www.infiniteskills.com/training/securing-cloud-services.html" rel="nofollow"> Описание курса</a></li>
+    <li>[Pluralsigth] Amazon Web Services (AWS) Fundamentals for System Administrators [ENG, 6h 51m, 2015] <a href="http://www.pluralsight.com/courses/aws-system-admin-fundamentals" rel="nofollow"> Описание курса</a></li>
+    <li>[Udemy] AWS Certified Solutions Architect - Associate 2015 [ENG, 2015] <a href="https://www.udemy.com/aws-certified-solutions-architect-associate-level-2014/" rel="nofollow"> Описание курса</a></li>
 </ul>
 
 ___
 
-<br/> 
+<br/>
 
 **Jira**
 

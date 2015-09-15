@@ -137,9 +137,9 @@ ___
 
 // узнать IP контейнера Docker
 
-<pre>
-$ docker inspect --format='{{.NetworkSettings.IPAddress}}' containerId
-</pre>
+<code>
+    $ docker inspect --format='{{.NetworkSettings.IPAddress}}' containerId
+</code>
 
 <br/>
 
