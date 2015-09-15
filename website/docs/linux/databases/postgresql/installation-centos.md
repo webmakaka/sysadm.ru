@@ -57,7 +57,7 @@ https://wiki.postgresql.org/wiki/YUM_Installation
 
 Config:
 
-    # cp /var/lib/pgsql/data/postgresql.conf /var/lib/pgsql/data/postgresql.conf.backup
+    # cp /var/lib/pgsql/data/postgresql.conf /var/lib/pgsql/data/postgresql.conf.backup.$(date +%Y-%m-%d)
 
 <br/>
 
@@ -70,7 +70,7 @@ Config:
 
 <br/>
 
-    # cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.backup
+    # cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.backup.$(date +%Y-%m-%d)
 
 <br/>
 

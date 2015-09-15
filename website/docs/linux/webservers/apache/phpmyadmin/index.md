@@ -85,7 +85,7 @@ date.timezone => no value => no value
 
 **********
 
-# cp /etc/php.ini /etc/php.ini.orig
+# cp /etc/php.ini /etc/php.ini.orig.$(date +%Y-%m-%d)
 # vi /etc/php.ini
 
 date.timezone = Europe/Moscow
