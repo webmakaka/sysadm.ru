@@ -51,7 +51,9 @@ permalink: /linux/virtual/docker/basics/move-docker-files/
 **И еще 1 вариант - задаять явно этот злоебучий файл**
 
 
-# vi /lib/systemd/system/docker.service
+    # vi /lib/systemd/system/docker.service
+
+<br/>
 
     ...
     [Service]
