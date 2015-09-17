@@ -35,8 +35,40 @@ permalink: /linux/virtual/docker/basics/move-docker-files/
 
 Дописываем
 
-    DOCKER_OPTS="-g /mnt/dsk2/docker"
+    DOCKER_OPTS="-g /mnt/dsk1/docker"
 
 <br/>
 
     # service docker start
+
+
+<br/><br/>
+
+Если не заработает, есть еще 1 конфиг файл. Хз какой из них правильный.
+Может быть и этот /etc/default/docker.io
+
+
+**И еще 1 вариант - задаять явно этот злоебучий файл**
+
+
+# vi /lib/systemd/system/docker.service
+
+    ...
+    [Service]
+    ExecStart=/usr/bin/docker -d -H fd:// $DOCKER_OPTS
+    ...
+    EnvironmentFile=-/etc/default/docker
+    ...
+
+<br/>
+
+    # ps auxwww | grep docker
+    root     23246  0.1  0.0 258492 13032 ?        Ssl  11:51   0:00 /usr/bin/docker -d -g /mnt/dsk1/docker
+    root     23450  0.0  0.0  17156   936 pts/14   S+   11:55   0:00 grep --color=auto docker
+
+
+<br/>
+
+
+Если используется systemd:  
+http://stackoverflow.com/questions/30127580/docker-opts-in-etc-default-docker-ignored
