@@ -5,19 +5,14 @@ permalink: /linux/editors/
 ---
 
 
-<h1>Atom</h1>
+# Atom
 
 Вообщем по всему интернету пиарят именно этот редактор как самый охуенный.<br/>
 Да у меня он сейчас используется он и gedit как основные средства редактирования кода.<br/>
 Разрабатывался для пользователей mac, но умельцы заставили его работать и под ubuntu linux. Как дела обстоят с другими Linux дистрибутивами не знаю.
 
-<br/><br/>
 
 Вообщем, кого не устраивает gedit, советую попробовать. Подстветка парных тегов работает.
-
-<br/><br/>
-
-<pre>
 
     $ sudo add-apt-repository ppa:webupd8team/atom
     $ sudo apt-get update
@@ -26,10 +21,7 @@ permalink: /linux/editors/
 Подробнее:
 http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
 
-
-
-
-==========================
+<br/>
 
 ### Замена tab 4 символами пробела
 
@@ -90,14 +82,11 @@ CTRL + T и начать набирать название файла в про�
 
 
 <br/><br/>
-<hr/>
-<br/><br/>
 
-<h1>Brackets</h1>
+# Brackets
 
 http://brackets.io/
 
-<br/><br/>
 
 Я бы, наверное постоянно использовал его
 (так как атом мне кажется несколько тормознутым),
@@ -107,24 +96,22 @@ http://brackets.io/
 
 
 <br/><br/>
-<hr/>
-<br/><br/>
 
-<h1>scite</h1>
-<pre>
+# scite
+
 
 Инсталляция:
 
-$ sudo apt-get install scite
-$ sudo apt-get install lua5.1
+    $ sudo apt-get install scite
+    $ sudo apt-get install lua5.1
 
 
-$ cd /tmp/
+    $ cd /tmp/
 
-$ wget http://prev.sysadm.ru/linux/editors/ubuntu/scite/scite_conf.zip
+    $ wget http://prev.sysadm.ru/linux/editors/ubuntu/scite/scite_conf.zip
 
-$ unzip scite_conf.zip
-$ cd scite_conf/
+    $ unzip scite_conf.zip
+    $ cd scite_conf/
 
-$ cp ./home/user/* ~/
-$ sudo cp -R ./usr/* /usr/
+    $ cp ./home/user/* ~/
+    $ sudo cp -R ./usr/* /usr/
