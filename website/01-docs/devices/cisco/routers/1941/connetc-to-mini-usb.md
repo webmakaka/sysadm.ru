@@ -17,7 +17,7 @@ rel_url: /website/docs
 <div align="center">
 
 
-	<img src="{{ page.rel_url }}/devices/cisco/routers/1941/cicso-mini-usb-console-cable.jpg" border="0" alt="cicso mini usb console cable">
+	<img src="http://files.sysadm.ru/devices/cisco/routers/1941/cicso-mini-usb-console-cable.jpg" border="0" alt="cicso mini usb console cable">
 
 
 </div>
