@@ -76,6 +76,11 @@ ___
     ./mongod-start
 
 
+
+<br/>
+
+### GUI Клиент для подключения к MongoDB в Ubuntu - RoboMongo:
+
 <br/>
 
 ### Ошибки:
