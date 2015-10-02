@@ -5,7 +5,32 @@ permalink: /linux/databases/mongodb/
 ---
 
 
-    # vi /etc/yum.repos.d/mongodb.repo
+### Mongo 3.X
+
+    # vi /etc/yum.repos.d/mongodb-3x.repo
+
+<br/>
+
+    [MongoDB]
+    name=MongoDB Repository
+    baseurl=http://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
+    gpgcheck=0
+    enabled=1
+
+<br/>
+
+    # yum install -y mongodb-org
+
+    # chkconfig mongod on
+    # service mongod restart
+
+    # mongo --version
+
+<br/>
+
+### Mongo 2.X
+
+    # vi /etc/yum.repos.d/mongodb-2x.repo
 
 {% highlight text %}
 
@@ -51,8 +76,24 @@ ___
     ./mongod-start
 
 
-____
+<br/>
+
+### Ошибки:
+
+Решил как обычно подключиться к базе mongodb на облачном хостинге mongolab:
+
+    $ mongo ds027744.mongolab.com:27744/comevents -u user1 -p user1
+
+    MongoDB shell version: 2.6.11
+    connecting to: ds027744.mongolab.com:27744/comevents
+    2015-10-02T20:21:11.912+0000 Error: 18 { ok: 0.0, errmsg: "auth failed", code: 18 } at src/mongo/shell/db.js:1292
+    exception: login failed
 
 
-    https://github.com/rsajob/docs/wiki/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-MongoDb-%D0%BD%D0%B0-CentOS
-    http://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat-centos-or-fedora-linux/
+    # mongo ds027744.mongolab.com:27744/comevents -u user1 -p user1
+
+Вообщем обновили на mongolab версию базы и клиент не хочет цепляться к более новой версии базы. Требуется его обновление. Я работал на тестовом окружении и просто переставил 3-ю версию, после чего заработало.
+
+    # mongo ds027744.mongolab.com:27744/comevents -u user1 -p user1
+    MongoDB shell version: 3.0.6
+    connecting to: ds027744.mongolab.com:27744/comevents
