@@ -9,13 +9,13 @@ permalink: /job/
 
 Если вдруг понадобится на временный проект, человек с навыками которыми, распологаю я. Дайте знать.
 
-Компетенция: Сервера Linux (Debian, RedHat), Windwos, Solaris
-Базы данных: Oracle, MySQL, PostgreSQL, MongoDB, MSSQL
-Веб сервера: Apache HTTPD, Nginx
-Сервера приложений: Apache Tomcat, Weblogic, Glassfish, Jboss
-Виртуализация и контейнеры: LXC, Docker, VirtualBox, Xen, KVM, VmWare
+Компетенция: Сервера Linux (Debian, RedHat), Windwos, Solaris  
+Базы данных: Oracle, MySQL, PostgreSQL, MongoDB, MSSQL  
+Веб сервера: Apache HTTPD, Nginx  
+Сервера приложений: Apache Tomcat, Weblogic, Glassfish, Jboss  
+Виртуализация и контейнеры: LXC, Docker, VirtualBox, Xen, KVM, VmWare  
 
-Языки программирования: Java (Oracle ADF Framework, Spring), PL/SQL, JavaScript (для Node.js и Angular.js)
+Языки программирования: Java EE (Oracle ADF Framework, Spring), PL/SQL, JavaScript (для Node.js и Angular.js)  
 
 Текущее местоположение Москва.  
 Готов ездить в командировки практически куда угодно.
