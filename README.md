@@ -1,8 +1,7 @@
-# sysadm-ru.github.io
+# Исходники сайта sysadm.ru
 
-http://sysadm.ru
 
-Как скопировать и запустить sysadm.ru на свой хост с использованием docker контейнера:
+Скопировать и запустить sysadm.ru на свой хост с использованием docker контейнера:
 
 Инсталлируете docker, далее:
 
@@ -15,10 +14,10 @@ http://sysadm.ru
     cd /projects
     git clone --depth=1 https://github.com/sysadm-ru/sysadm-ru.github.io
     cd sysadm-ru.github.io
-    gem install jekyll 
+    gem install jekyll
     jekyll serve --watch  --host 0.0.0.0 --port 8080
-    
-    
+
+
 <br/>
 
 Остается в браузере подключиться к localhost
