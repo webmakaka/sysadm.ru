@@ -19,16 +19,23 @@ permalink: /job/
 <strong>Сервера приложений</strong>: Java (Apache Tomcat, Weblogic, Glassfish, Jboss), Unicorn (Ruby on Rails), Node.js сервер  
 <strong>Виртуализация и контейнеры</strong>: LXC, Docker, VirtualBox, Xen, KVM, VmWare  
 
-Языки программирования: Java EE (Oracle ADF Framework, Spring), PL/SQL, JavaScript (для Node.js и Angular.js)  
+<strong>Языки программирования</strong>: Java EE (Oracle ADF Framework, Spring), PL/SQL, JavaScript (для Node.js и Angular.js)  
 
 <strong>Текущее местоположение</strong>: Москва  
 Готов ездить в командировки практически куда угодно.  
 
 <br/>
 
-### Зарплатные ожидания:
+### Зарплатные ожидания на задачи по администрированию:
 
-<strong>Зарплатные ожидания</strong>: 10$ за час работы.
+10$ за час работы.
+
+
+<br/>
+
+### Зарплатные ожидания на задачи по программированию:
+
+15$ за час работы.
 
 email:  
 ![Marley](http://img.fotografii.org/a3333333mail.gif "Marley")
