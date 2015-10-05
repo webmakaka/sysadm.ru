@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Предложить работу
+title: Работа для системного администратора Linux
 permalink: /job/
 ---
 
@@ -9,16 +9,26 @@ permalink: /job/
 
 Если вдруг понадобится на временный проект, человек с навыками которыми, распологаю я. Дайте знать.
 
-Компетенция: Сервера Linux (Debian, RedHat), Windwos, Solaris  
-Базы данных: Oracle, MySQL, PostgreSQL, MongoDB, MSSQL  
-Веб сервера: Apache HTTPD, Nginx  
-Сервера приложений: Apache Tomcat, Weblogic, Glassfish, Jboss  
-Виртуализация и контейнеры: LXC, Docker, VirtualBox, Xen, KVM, VmWare  
+<br/>
+
+### Компетенция:
+
+<strong>Сервера</strong>: Linux (Debian, RedHat), Windwos, Solaris  
+<strong>Базы данных</strong>: Oracle, MySQL, PostgreSQL, MongoDB, MSSQL  
+<strong>Веб сервера</strong>: Apache HTTPD, Nginx  
+<strong>Сервера приложений</strong>: Java (Apache Tomcat, Weblogic, Glassfish, Jboss), Unicorn (Ruby on Rails), Node.js сервер  
+<strong>Виртуализация и контейнеры</strong>: LXC, Docker, VirtualBox, Xen, KVM, VmWare  
 
 Языки программирования: Java EE (Oracle ADF Framework, Spring), PL/SQL, JavaScript (для Node.js и Angular.js)  
 
-Текущее местоположение Москва.  
-Готов ездить в командировки практически куда угодно.
+<strong>Текущее местоположение</strong>: Москва  
+Готов ездить в командировки практически куда угодно.  
+
+<br/>
+
+### Зарплатные ожидания:
+
+<strong>Зарплатные ожидания</strong>: 10$ за час работы.
 
 email:  
 ![Marley](http://img.fotografii.org/a3333333mail.gif "Marley")
