@@ -18,4 +18,4 @@ ___
 
 <br/>
 
-**Предыдущая версия сайта доступна по адресу <a href="http://prev.sysadm.ru">prev.sysadm.ru</a>**
+**Предыдущая версия сайта доступна по адресу <a href="http://prev.sysadm.ru" rel="nofollow">prev.sysadm.ru</a>**
