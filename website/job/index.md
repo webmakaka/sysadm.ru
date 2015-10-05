@@ -19,7 +19,7 @@ permalink: /job/
 <strong>Сервера приложений</strong>: Java (Apache Tomcat, Weblogic, Glassfish, Jboss), Unicorn (Ruby on Rails), Node.js сервер  
 <strong>Виртуализация и контейнеры</strong>: LXC, Docker, VirtualBox, Xen, KVM, VmWare  
 
-<strong>Языки программирования</strong>: Java EE (Oracle ADF Framework, Spring), PL/SQL, JavaScript (для Node.js и Angular.js)  
+<strong>Языки программирования</strong>: Java EE (Oracle ADF Framework, Spring), PL/SQL, JavaScript (для Node.js и Angular.js), Python, PHP  
 
 <strong>Текущее местоположение</strong>: Москва  
 Готов ездить в командировки практически куда угодно.  
