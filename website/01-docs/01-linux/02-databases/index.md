@@ -14,3 +14,4 @@ permalink: /linux/databases/
 **Нереляционные**
 
 [MongoDB](/linux/databases/mongodb/)
+[Cassandra](/linux/databases/cassandra/centos/6.7/)
