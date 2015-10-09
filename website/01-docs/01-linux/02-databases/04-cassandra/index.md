@@ -18,7 +18,9 @@ JDK 7.25 и выше должно быть установлено. (впроче
 http://javadev.org/install/jdk/7/linux/centos/6/x64/
 
 
-# vi /etc/yum.repos.d/datastax.repo
+    # vi /etc/yum.repos.d/datastax.repo
+
+<br/>
 
     [datastax]
     name = DataStax Repo for Apache Cassandra
@@ -38,19 +40,20 @@ http://javadev.org/install/jdk/7/linux/centos/6/x64/
 
 <br/>
 
+    # chkconfig cassandra on
     # service cassandra start
 
 <br/>
 
 ### Пробуем
 
-Да под рутом, под обычным пользователем ошибки.
+Выполняю команду под рутом, под обычным пользователем ошибки.
 
     # cassandra
 
 <br/>
 
-    # cqlsh
+    $ cqlsh
 
 <br/>
 

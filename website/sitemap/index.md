@@ -7,14 +7,6 @@ permalink: /sitemap/
 
 <br/>
 
-# Устройства:
-
-###[Cisco: Switches and Routers](/devices/cisco/routers/)
-
-______
-
-<br/>
-
 # Администрирование серверов:
 
 ###[Вебсервера](/linux/webservers/apache/)
@@ -46,6 +38,13 @@ ______
 
 ###[Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/editors/)
 
+______
+
+<br/>
+
+# Устройства:
+
+###[Cisco: Switches and Routers](/devices/cisco/routers/)
 
 
 ______
