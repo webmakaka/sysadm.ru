@@ -6,8 +6,8 @@ permalink: /linux/databases/
 
 **Реляционные**
 
-[PostgreSQL](/linux/databases/postgresql/)  
 [MySQL](/linux/databases/mysql/)  
+[PostgreSQL](/linux/databases/postgresql/)  
 [Oracle](http://oracle-dba.ru/database/installation/)  
 
 
