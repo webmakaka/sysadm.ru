@@ -30,17 +30,12 @@ permalink: /linux/databases/mysql/
     // Start MySQL server daemon (mysqld)
     # service mysqld start
 
-<br/>
-
-    // Login as root database admin to MySQL server:
-    # mysql -u root
-
 
 <br/>
 
-### Инсталляция более поздних версий базы из пакетов
+### Инсталляция более поздних версий базы из пакетов (не из официального репо)
 
-Если нужно установить версию 5.5, а ее нет в репозитории по умолчанию:
+Если нужно установить версию 5.5, а ее нет в репозитории по умолчанию, можно сделать следующее:
 
     # rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
     # yum install -y mysql55w mysql55w-server
@@ -55,6 +50,30 @@ https://webtatic.com/packages/mysql55/
 ### Конфигурирование после инсталляции
 
 
+    // Login as root database admin to MySQL server:
+    # mysql -u root
+
+
+<br/>
+
+    // Change root database admin password: (note: once this step is complete you’ll need to login with: mysql -p -u root)
+    mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root');
+
+<br/>
+
+    // Add a MySQL database:
+    mysql> create database mydatabase;
+
+<br/>
+
+    mysql> quit;
+
+
+<br/>
+
+### Дополнительно для большей безопасности можно настроить следующее:
+
+<br/>
 
     // Delete ALL users who are not root:
     mysql> delete from mysql.user where not (host="localhost" and user="root");
@@ -66,32 +85,18 @@ https://webtatic.com/packages/mysql55/
 
 <br/>
 
-    // Change root database admin password: (note: once this step is complete you’ll need to login with: mysql -p -u root)
-    mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root');
-
-<br/>
-
     // Change root username to something less guessable for higher security.
     mysql> update mysql.user set user="sysdba" where user="root";
 
 <br/>
 
     // Add a new user with database admin privs for all databases:
-    mysql> GRANT ALL PRIVILEGES ON *.* TO 'dba'@'localhost' IDENTIFIED BY 'mypass' WITH GRANT OPTION;
+    mysql> GRANT ALL PRIVILEGES ON *.* TO 'sysdba'@'localhost' IDENTIFIED BY 'mypass' WITH GRANT OPTION;
 
 <br/>
 
     // Add a new user with database admin privs for a specific database, in this case the database is called “bugzilla”: (note: The ‘bugzilla’ database must first be added, see below.)
     mysql> GRANT ALL PRIVILEGES ON bugzilla.* TO 'dba'@'localhost' IDENTIFIED BY 'mypass';
-
-<br/>
-
-    // Add a MySQL database:
-    mysql> create database bugzilla;
-
-<br/>
-
-    mysql> quit;
 
 <br/>
 
@@ -125,8 +130,19 @@ https://webtatic.com/packages/mysql55/
 
 ### Команды для работы с базой данных MySQL
 
-    // Подключиться к базе
-    # mysql --user=dba --password=mypass
+Подключиться к базе из командной строки
+
+    # mysql --user=dba --password=mypass mydatabase
+
+Узнать текущего пользователя:
+
+    mysql> SELECT USER();
+
+
+Узнать текущую базу данных:
+
+    mysql> SELECT DATABASE();
+
 
 <br/>
 
@@ -152,7 +168,7 @@ http://centoshelp.org/servers/database/installing-configuring-mysql-server/
 
 ### Удаленный доступ пользователя root с правами суперпользователя.
 (Например, для разработки)
-==========================================
+
 
 -- Толи баг, толи фича, но GRANT ALL PRIVILEGES не работает в версии mysql55. Приходилось подключаться к базе phpmyadmin и задавать набор прав в ручную. При этом приходилось с нимать галочку из одной возможности суперпользователя. В версии, что из стандартного репозитория, все ок.
 
