@@ -42,14 +42,14 @@ Password: password<br/>
 
 
 <div align="center">
-	<img src="/website/docs/mmc/net1.PNG" alt="Net Transport" border="0" />
+	<img src="http://files.sysadm.ru/etc/net1.PNG" alt="Net Transport" border="0" />
 </div>
 
 
 <br/><br/>
 
 <div align="center">
-	<img src="/website/docs/mmc/net2.PNG" alt="Net Transport" border="0" />
+	<img src="http://files.sysadm.ru/etc/net2.PNG" alt="Net Transport" border="0" />
 </div>
 
 <br/><br/>
@@ -75,13 +75,13 @@ Password: password<br/>
 <br/><br/>
 
 <div align="center">
-	<img src="/website/docs/mmc/NetTransport_01.png" alt="Net Transport" border="0" />
+	<img src="http://files.sysadm.ru/etc/NetTransport_01.png" alt="Net Transport" border="0" />
 </div>
 
 <br/><br/>
 
 <div align="center">
-	<img src="/website/docs/mmc/NetTransport_02.png" alt="Net Transport" border="0" />
+	<img src="http://files.sysadm.ru/etc/NetTransport_02.png" alt="Net Transport" border="0" />
 </div>
 
 <br/><br/>

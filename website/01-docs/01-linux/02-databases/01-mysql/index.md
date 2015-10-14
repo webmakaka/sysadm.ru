@@ -9,6 +9,8 @@ permalink: /linux/databases/mysql/
 ## Инсталляция MySQL на Centos 6.5 из пакетов
 
 
+Посмотреть, че там в репо лежит:
+
     # yum search mysql
 
 <br/>

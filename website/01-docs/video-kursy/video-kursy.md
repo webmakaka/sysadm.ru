@@ -33,22 +33,20 @@ ___
 
 <br/>
 
-**Security**
+**Monitoring**
 
 <ul>
-    <li>[Pluralsight] Security Enhanced Linux (SELinux) Fundamentals [ENG, 2h 9m, 19 Nov 2014]</li>
+    <li>[Packt Publishing] Zabbix Network Monitoring Essentials [2013, ENG]</li>
 </ul>
 
 ___
 
 <br/>
 
-**Ethical Hacking**
+**Security**
 
 <ul>
-<li style="color:green">[Udemy] IT Security and Ethical Hacking [ENG, 26 Hours, ????] <a href="https://www.udemy.com/it-security-and-ethical-hacking/" rel="nofollow">(Course Description)</a></li>
-    <li>[Udemy] Learn The Basics of Ethical Hacking and Penetration Testing [ENG, 2015]</li>
-    <li>[CBT Nuggets] EC Council Certified Ethical Hacker v8.0 [ENG, 2014]</li>
+    <li>[Pluralsight] Security Enhanced Linux (SELinux) Fundamentals [ENG, 2h 9m, 19 Nov 2014]</li>
 </ul>
 
 ___
@@ -64,6 +62,20 @@ ___
     <li>[LinuxCBT] LinuxCBT KVM Edition [ENG, 2013]</li>
     <li>[LinuxCBT] LinuxCBT XenVM Edition [ENG,2013]</li>
 </ul>
+
+___
+
+<br/>
+
+**Ethical Hacking**
+
+<ul>
+<li style="color:green">[Udemy] IT Security and Ethical Hacking [ENG, 26 Hours, ????] <a href="https://www.udemy.com/it-security-and-ethical-hacking/" rel="nofollow">(Course Description)</a></li>
+    <li>[Udemy] Learn The Basics of Ethical Hacking and Penetration Testing [ENG, 2015]</li>
+    <li>[CBT Nuggets] EC Council Certified Ethical Hacker v8.0 [ENG, 2014]</li>
+</ul>
+
+
 ___
 
 <br/>
