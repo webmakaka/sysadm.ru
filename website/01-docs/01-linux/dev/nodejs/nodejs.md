@@ -83,4 +83,33 @@ permalink: /linux/dev/nodejs/iojs/nodejs/
     $ bower install --save jquery
 
     // angular.js
-    $ bower install --save angular  
+    $ bower install --save angular
+
+
+<br/>
+
+### Обновление Node.js на Centos 6.X
+
+
+    # node -v
+    v0.10.40
+
+    # npm cache clean -f
+    # npm install -g n
+
+    # ln -sf /usr/local/n/versions/node/<VERSION>/bin/node /usr/bin/node
+
+    # node -v
+    v4.2.1
+
+<br/>
+
+### Обновление NPM на Centos 6.X
+
+    # npm -v
+    2.14.7
+
+    # npm install npm -g
+
+    # npm -v
+    3.3.8
