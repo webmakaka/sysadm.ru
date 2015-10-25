@@ -58,6 +58,8 @@ ______
 
 ###[Установить в ubuntu nvidia драйвера вместо opensource](/ubuntu/drivers/nvidia/)
 
+
+###[Unable to locate package *****.so.*](/ubuntu/Install-package-for-missing-libraries/)
 ______
 
 <br/>
