@@ -78,7 +78,6 @@ ______
 
 ###[Doom](/website/games/doom.swf) (что-то стал тормозить, по крайней мере  в linux)  
 
-###[YouTube Ролики](/entertainment/youtube/)
 ______
 
 <br/>
