@@ -85,17 +85,12 @@ permalink: /linux/dev/git/
 <br/>
 
     $ git --version
-    
-
-<br/><br/>
 
 
 
 <br/><br/>
-<hr/>
-<br/><br/>
 
-<strong>Установка git в Ubuntu Linux из исходников</strong>
+### Установка git в Ubuntu Linux из исходников
 
 
 

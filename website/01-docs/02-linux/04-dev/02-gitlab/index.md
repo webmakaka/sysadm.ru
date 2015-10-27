@@ -1,21 +1,20 @@
 ---
 layout: page
-title: Инсталляция GITLAB в Centos 6.X (для Идиотов вроде Меня)
+title: Инсталляция GITLAB в Centos 6.X
 permalink: /linux/dev/centos/6/gitlab/installation/
 ---
 
 
 Потом зашел на сайт официальной документации: http://doc.gitlab.com/ce/install/installation.html и о чудо нашел такое предложение: " If you want to install on RHEL/CentOS we recommend using the Omnibus packages."
 
-<br/><br/>
+
 
 И попал на эту страницу: https://about.gitlab.com/downloads/ выбрал тут CentOS 6.
 
-<br/>
+
 
 И легко в несколько команд поставил GitLab сервер:
 
-<br/>
 
     # yum install postfix
 
@@ -35,7 +34,6 @@ permalink: /linux/dev/centos/6/gitlab/installation/
 
     # gitlab-ctl reconfigure
 
-<br/><br/>
 
 Данный пакет представляет из себя сценарий Chef'a, который все ставит и настраивает в автоматическом режиме.
 

@@ -4,7 +4,7 @@ title: Ruby on Rails
 permalink: /linux/dev/ruby-on-rails/
 ---
 
-<strong>rbenv</strong>
+### rbenv
 
     # yum install -y \
     which \
@@ -19,7 +19,7 @@ permalink: /linux/dev/ruby-on-rails/
     # git config --global color.ui true
 
 
-1) Создал пользователя developer.
+Создаю пользователя developer.
 
     # useradd \
     -d /home/developer \
@@ -39,8 +39,7 @@ permalink: /linux/dev/ruby-on-rails/
 
     # su - developer
 
-=======================
-
+<br/>
 
     $ cd ~/
     $ git clone git://github.com/sstephenson/rbenv.git .rbenv
@@ -74,18 +73,10 @@ permalink: /linux/dev/ruby-on-rails/
     $ ruby -v
 
 
-============================================================
-============================================================
 
-    Setup Ruby On Rails on
-    Ubuntu 14.10 Utopic Unicorn
+<br/>
 
-https://gorails.com/setup/ubuntu/14.10
-
-============================================================
-============================================================
-
-<strong>RubyGems</strong>
+### RubyGems
 
     $ gem -v
     2.4.5.1
@@ -100,9 +91,10 @@ https://gorails.com/setup/ubuntu/14.10
     $ gem update --system
 
 
-============================================================
 
-<strong>Rails</strong>
+<br/>
+
+### Rails
 
     $ echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
@@ -120,9 +112,9 @@ https://gorails.com/setup/ubuntu/14.10
     $ rails -v
 
 
-==========================================================
+<br/>
 
-<strong>MySQL</strong>
+### MySQL
 
     # yum install -y mysql-devel mysql mysql-server
 
@@ -132,7 +124,9 @@ https://gorails.com/setup/ubuntu/14.10
 
 -----
 
-<strong>Sqlite</strong>
+<br/>
+
+### Sqlite
 
 
 -- В Centos 6.5
@@ -143,9 +137,10 @@ https://gorails.com/setup/ubuntu/14.10
 
     # apt-get install libsqlite3-dev
 
-==========================================================
 
-<strong>CREATING a PROJECT</strong>
+<br/>
+
+### CREATING a PROJECT
 
     $ cd /rails_projects
 
@@ -172,10 +167,10 @@ https://gorails.com/setup/ubuntu/14.10
 Оставили только rails и mysql2 / sqlite3
 
 
-==========================================================
 
+<br/>
 
-<strong>rails console</strong>
+### rails console
 
     # yum install readline-devel
 
@@ -187,7 +182,8 @@ https://gorails.com/setup/ubuntu/14.10
 
     $ bundle install
 
-==========================================================
+
+<br/>
 
     $ vi ./config/database.yml
 
@@ -195,19 +191,19 @@ https://gorails.com/setup/ubuntu/14.10
 Комментируем название базы если имеется.
 database: #myApp1_development
 
-============================================================
 
-<strong>WebServer (WEBrick)</strong>
+<br/>
+
+### WebServer (WEBrick)
 
     $ rails server
 
 http://192.168.1.21:3000/
 
-============================================================
-============================================================
 
+<br/>
 
-<strong>Generatin a Controller and View</strong>
+### Generatin a Controller and View</strong>
 
 
     $ rails generate controller demo index
@@ -228,3 +224,10 @@ http://192.168.1.21:3000/
 
 
 http://192.168.1.21:3000/demo/index
+
+
+<br/>
+
+### Setup Ruby On Rails on Ubuntu 14.10 Utopic Unicorn
+
+https://gorails.com/setup/ubuntu/14.10
