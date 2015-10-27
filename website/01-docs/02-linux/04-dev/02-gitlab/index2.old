@@ -1,0 +1,300 @@
+---
+layout: page
+title: Инсталляция GITLAB в Centos 6.X (для Идиотов вроде Меня)
+permalink: /linux/dev/centos/6/gitlab/installation/
+---
+
+
+Потом зашел на сайт официальной документации: http://doc.gitlab.com/ce/install/installation.html и о чудо нашел такое предложение: " If you want to install on RHEL/CentOS we recommend using the Omnibus packages."
+
+
+
+И попал на эту страницу: https://about.gitlab.com/downloads/ выбрал тут CentOS 6.
+
+И легко в несколько команд поставил GitLab сервер:
+# wget https://downloads-packages.s3.amazonaws.com/centos-6.5/gitlab-7.0.0_omnibus-1.el6.x86_64.rpm
+# yum install postfix
+# rpm -i gitlab-7.0.0_omnibus-1.el6.x86_64.rpm
+
+# vim /etc/gitlab/gitlab.rb
+Тут я указал свой домен: external_url 'http://asidorov.name'
+
+И запустил реконфиг:
+# gitlab-ctl reconfigure
+
+Данный пакет представляет из себя сценарий Chef'a, который все ставит и настраивает в автоматическом режиме.
+После чего я сразу смог попасть в работающий GitLab по адресу: http://asidorov.name/
+
+Первоначальные реквизиты доступа:
+Пользователь: root
+Пароль: 5iveL!fe
+
+После чего вам предложат сразу задать пароль для root'a. После изменения данного пароля вы сможете авторизироваться в системе GitLab.
+Проблема в таком решении, что ты не выбираешь например какую базу использовать, как будет общаться nginx и unicorn (Unix сокеты или TCP порты).
+
+Оно ставит и настраивает автоматически: nginx, postgresql, redis, unicorn, sidekiq.
+Очень удобно и просто. Спасибо огромное разработчикам за такую простоту.
+
+
+
+
+
+
+https://about.gitlab.com/downloads/#centos6
+
+
+    yum install curl openssh-server postfix cronie lokkit
+    service postfix start
+    chkconfig postfix on
+    lokkit -s http -s ssh
+
+
+
+    curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+    yum install gitlab-ce
+
+
+
+
+
+
+
+
+
+
+# ПОКА НИЧЕГО НЕ РАБОТАЕТ
+
+
+https://github.com/gitlabhq/gitlab-recipes/blob/master/install/centos/README.md
+
+    # sed -i.bkp.$(date +%Y-%m-%d) -e "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
+
+    # service iptables stop
+    # chkconfig iptables off
+
+
+
+    Install the required tools for GitLab
+
+    # yum update -y
+    # yum groupinstall -y 'Development Tools'
+    # yum install -y readline readline-devel ncurses-devel gdbm-devel glibc-devel tcl-devel openssl-devel curl-devel expat-devel db4-devel byacc sqlite-devel libyaml libyaml-devel libffi libffi-devel libxml2 libxml2-devel libxslt libxslt-devel libicu libicu-devel system-config-firewall-tui redis sudo wget crontabs logwatch logrotate perl-Time-HiRes git cmake libcom_err-devel.i686 libcom_err-devel.x86_64 nodejs
+
+
+    Установка git из исходников.
+
+
+
+    Ruby
+
+
+
+PostgreSQL
+
+
+su - postgres
+export PATH=$PATH:/usr/pgsql-9.3/bin/
+psql -d template1
+
+psql (9.4.3)
+Type "help" for help.
+template1=# CREATE USER git CREATEDB;
+CREATE ROLE
+template1=# CREATE DATABASE gitlabhq_production OWNER git;
+CREATE DATABASE
+template1=# \q
+exit # exit uid=postgres, return to root
+
+
+
+
+
+
+
+Attempt to log in to Postgres as the git user:
+
+
+
+Ensure you are using the right settings in your /var/lib/pgsql/9.3/data/pg_hba.conf to not get ident issues (you can use trust over ident):
+
+host    all             all             127.0.0.1/32            trust
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Инсталляция GITLAB в Centos 6.X
+
+https://about.gitlab.com/downloads/#centos6
+
+### 1. Install and configure the necessary dependencies
+
+    # yum install curl openssh-server postfix cronie lokkit
+    # service postfix start
+    # chkconfig postfix on
+    # lokkit -s http -s ssh
+
+
+### 2. Add the GitLab package server and install the package
+
+    # curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+    # yum install gitlab-ce
+
+
+
+    https://packages.gitlab.com/gitlab/gitlab-ce
+
+
+=====================
+
+https://github.com/gitlabhq/gitlab-recipes/blob/master/install/centos/README.md
+
+    # yum install -y wget
+
+
+
+    wget -O /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6 https://www.fedoraproject.org/static/0608B895.txt
+    rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+
+    rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+
+
+    wget -O /etc/yum.repos.d/PUIAS_6_computational.repo https://gitlab.com/gitlab-org/gitlab-recipes/raw/master/install/centos/PUIAS_6_computational.repo
+
+
+    wget -O /etc/pki/rpm-gpg/RPM-GPG-KEY-puias http://springdale.math.ias.edu/data/puias/6/x86_64/os/RPM-GPG-KEY-puias
+
+    rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-puias
+
+    yum-config-manager --enable epel --enable PUIAS_6_computational
+
+
+    yum -y update
+    yum -y groupinstall 'Development Tools'
+    yum -y install readline readline-devel ncurses-devel gdbm-devel glibc-devel tcl-devel openssl-devel curl-devel expat-devel db4-devel byacc sqlite-devel libyaml libyaml-devel libffi libffi-devel libxml2 libxml2-devel libxslt libxslt-devel libicu libicu-devel system-config-firewall-tui redis sudo wget crontabs logwatch logrotate perl-Time-HiRes git cmake libcom_err-devel.i686 libcom_err-devel.x86_64 nodejs
+
+
+    yum -y install postfix
+
+
+    # yum install -y git
+
+    # yum install zlib-devel perl-CPAN gettext curl-devel expat-devel gettext-devel openssl-devel
+
+
+### Ruby Installation
+
+
+# System Users
+
+
+Configure the database user and password:
+
+su - postgres
+export PATH=$PATH:/usr/pgsql-9.3/bin/
+psql -d template1
+
+psql (9.4.3)
+Type "help" for help.
+template1=# CREATE USER git CREATEDB;
+CREATE ROLE
+template1=# CREATE DATABASE gitlabhq_production OWNER git;
+CREATE DATABASE
+template1=# \q
+exit # exit uid=postgres, return to root
+Test the connection as the gitlab (uid=git) user. You should be root to begin this test:
+
+whoami
+Attempt to log in to Postgres as the git user:
+
+sudo -u git psql -d gitlabhq_production
+
+
+
+
+
+
+
+
+
+
+
+
+
+Test the connection as the gitlab (uid=git) user. You should be root to begin this test:
+
+whoami
+Attempt to log in to Postgres as the git user:
+
+sudo -u git psql -d gitlabhq_production
+If you see the following:
+
+gitlabhq_production=>
+your password has been accepted successfully and you can type \q to quit.
+
+Ensure you are using the right settings in your /var/lib/pgsql/9.3/data/pg_hba.conf to not get ident issues (you can use trust over ident):
+
+host    all             all             127.0.0.1/32            trust
+Check the official documentation for more information on authentication methods.
+
+
+adduser --system --shell /bin/bash --comment 'GitLab' --create-home --home-dir /home/git/ git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=================================
+
+Install mail server
+
+Postfix
+
+Git
+
+2. Ruby
+3. System Users
+4. Database (4.1 PostgreSQL (recommended))
+
+
+
+6. GitLab
+
+7. Nginx

@@ -34,7 +34,13 @@ ______
 
 # Программирование:
 
-###[Node.js и Io.js](/linux/dev/nodejs/)
+###[GIT](/linux/dev/git/)
+
+###[GITLAB](/linux/dev/centos/6/gitlab/installation/)
+
+###[Node.js](/linux/dev/nodejs/)
+
+###[Ruby on Rails](/linux/dev/ruby-on-rails/)
 
 ###[Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/editors/)
 

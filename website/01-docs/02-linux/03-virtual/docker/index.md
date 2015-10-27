@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docker
+title: Docker в Linux
 permalink: /linux/virtual/docker/
 ---
 
@@ -68,6 +68,13 @@ permalink: /linux/virtual/docker/
 ### Docker Clustering
 
 [Clustering docker with swarm](/linux/virtual/docker/clustering/ubuntu/)  
+
+
+<br/>
+
+### Docker в Windows
+
+[В 10 пока не работает](/windows/virtual/docker/)
 
 ___
 
