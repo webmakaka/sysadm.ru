@@ -93,7 +93,6 @@ permalink: /linux/dev/git/
 ### Установка git в Ubuntu Linux из исходников
 
 
-
     $ sudo apt-get install -y git
     $ git --version
     $ cd /tmp
@@ -147,3 +146,49 @@ permalink: /linux/dev/git/
 
     $ git --version
     git version 1.8.3.1.437.g0dbd812
+
+
+
+<br/>
+
+### Некоторые команды:
+
+Задать логин и эл.почту. Обязательно необходимо для коммитов.
+
+    $ git config --global user.name "your_username"
+    $ git config --global user.email "your_email"
+
+
+Цвет в git
+
+    $ git config --global color.ui true
+
+
+Не отслеживать изменения chmod
+
+    $ git config core.fileMode false
+
+
+Посмотреть конфиг
+
+    $ git config --list
+    $ git config user.name
+    $ git config user.email
+
+
+Показывать текущую ветку (branch) в консоли:
+
+    $ curl -o ~/.git-prompt.sh \
+    https://raw.githubusercontent.com/gi.../git-prompt.sh
+
+    $ source ~/.git-prompt.sh
+
+    $ export PS1='[\W] git:$(__git_ps1 "(%s)") '
+
+или
+
+    $ export PS1='\W$(__git_ps1 "(%s)") > '
+
+или
+
+    $ export PS1='Geoff[\W]$(__git_ps1 "(%s)"): '

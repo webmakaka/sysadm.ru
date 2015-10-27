@@ -4,7 +4,7 @@ title: Ruby on Rails
 permalink: /linux/dev/ruby-on-rails/
 ---
 
-### rbenv
+### С использованием rbenv
 
     # yum install -y \
     which \
@@ -13,10 +13,6 @@ permalink: /linux/dev/ruby-on-rails/
     openssl-devel \
     git \
     gcc
-
-<br/>
-
-    # git config --global color.ui true
 
 
 Создаю пользователя developer.
@@ -203,7 +199,7 @@ http://192.168.1.21:3000/
 
 <br/>
 
-### Generatin a Controller and View</strong>
+### Generatin a Controller and View
 
 
     $ rails generate controller demo index
