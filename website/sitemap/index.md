@@ -36,8 +36,6 @@ ______
 
 ###[GIT](/linux/dev/git/)
 
-###[GITLAB](/linux/dev/centos/6/gitlab/installation/)
-
 ###[Node.js](/linux/dev/nodejs/)
 
 ###[Ruby on Rails](/linux/dev/ruby-on-rails/)

@@ -1,12 +1,11 @@
 ---
 layout: page
-title: Инсталляция GITLAB в Centos 6.X
-permalink: /linux/dev/centos/6/gitlab/installation/
+title: Инсталляция GITLAB в centos 6 из пакетов
+permalink: /linux/dev/git/gitlab/centos/6/
 ---
 
 
 Потом зашел на сайт официальной документации: http://doc.gitlab.com/ce/install/installation.html и о чудо нашел такое предложение: " If you want to install on RHEL/CentOS we recommend using the Omnibus packages."
-
 
 
 И попал на эту страницу: https://about.gitlab.com/downloads/ выбрал тут CentOS 6.

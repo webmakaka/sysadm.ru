@@ -1,12 +1,11 @@
 ---
 layout: page
-title: Git из исходников
-permalink: /linux/dev/git/
+title: Инсталляция GIT в centos 6.x из исходников
+permalink: /linux/dev/git/installation/centos/6/
 ---
 
 
-
-<h3>Git из исходников в centos 6.X</h3>
+### Инсталляция GIT в centos 6.x из исходников
 
 
 Если git из стандартных репозиториев не устраивает. Например не пушит на github.
