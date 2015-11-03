@@ -64,6 +64,8 @@ ______
 
 
 ###[Unable to locate package *****.so.*](/ubuntu/Install-package-for-missing-libraries/)
+
+###[Шаги после установки ubuntu заново](/linux/ubuntu/after-installation/)
 ______
 
 <br/>
