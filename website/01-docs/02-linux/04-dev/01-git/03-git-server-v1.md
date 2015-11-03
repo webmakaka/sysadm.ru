@@ -4,9 +4,6 @@ title: Создание сервера GIT в centos 6
 permalink: /linux/dev/git/git-server/centos/6/ver1/
 ---
 
-Делаю на 1 виртуальной машите.
-
-
 # Server
 
     # yum install -y git
@@ -56,6 +53,7 @@ permalink: /linux/dev/git/git-server/centos/6/ver1/
     $ cd projects
     $ git clone https://github.com/marley-html/minimal-design
     $ cd minimal-design
+    $ rm -rf .git
     $ git init
     $ git add --all
     $ git commit -m "initial commit"
