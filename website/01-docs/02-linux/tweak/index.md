@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Шаги после инсталляции новой Ubuntu (для себя)
+title: Шаги после инсталляции Ubuntu (для себя)
 permalink: /linux/ubuntu/after-installation/
 ---
 
-
-# Шаги после инсталляции новой Ubuntu (для себя)
 
 
     $ sudo su -
