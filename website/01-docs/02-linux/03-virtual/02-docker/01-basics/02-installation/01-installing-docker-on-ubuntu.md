@@ -7,7 +7,7 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 
 **Вариант 1: устанавливаем docker из репо ubuntu. (не рекомендую)**
 
-    $ sudo su
+    $ sudo su -
 
     # apt-get update
     # apt-get install -y docker.io
@@ -36,6 +36,6 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
     $ cat /etc/group
         docker:x:126:username
 
-перелогиниваемся  
+перелогиниваемся, иначе не будет работать
 
-    $logout
+    $ logout

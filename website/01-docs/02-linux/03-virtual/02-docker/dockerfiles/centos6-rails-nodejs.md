@@ -71,7 +71,7 @@ permalink: /linux/virtual/docker/dockerfile/
     RUN chown -R $DEVELOPER_USERNAME /projects/
 
     # =================================================
-    
+
     USER $DEVELOPER_USERNAME
 
     WORKDIR /home/$DEVELOPER_USERNAME
@@ -139,12 +139,12 @@ permalink: /linux/virtual/docker/dockerfile/
 
 Создать контейнер на базе подготовленного image
 
-    $ docker run -i -t -p 80:8080 --name dev -v /projects/demo:/projects/demo centos6/rais:v01 /bin/bash
-    
+    $ docker run -i -t -p 80:8080 --name dev -v /projects:/projects centos6/rais:v01 /bin/bash
+
 В моем случае, я еще добавлю параметров.  
 
-    $ docker run -i -t -p 80:8080 -p 3000:3000 -p 9000:9000 -p 1337:1337 --name dev -v /projects/demo:/projects/demo -e SECRET_KEY_BASE=test centos6/rais:v01 /bin/bash
-    
+    $ docker run -i -t -p 80:8080 -p 3000:3000 -p 9000:9000 -p 1337:1337 --name dev -v /projects:/projects -e SECRET_KEY_BASE=test centos6/rais:v01 /bin/bash
+
 -p порт на хост машине, будет соответствовать порту в контейнере.  
 -v позволяет смонтировать каталог файловой системы вместе с контейнером docker, чтобы можно было кодить на хост машине а запускать в контейнере.  
 
@@ -152,9 +152,9 @@ permalink: /linux/virtual/docker/dockerfile/
 
     source ~/.bash_profile
 
-На хостовой машине: 
+На хостовой машине:
 
-    chown -R <username> /projects/demo/ && chmod 777 -R  /projects/demo/
+    chown -R <username> /projects/ && chmod 777 -R  /projects/
 
 
 
