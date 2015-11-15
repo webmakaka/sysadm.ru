@@ -10,6 +10,8 @@ permalink: /linux/databases/mongodb/
     # vi /etc/yum.repos.d/mongodb-3x.repo
 
 <br/>
+Добавляем
+<br/>
 
     [MongoDB]
     name=MongoDB Repository
@@ -54,14 +56,17 @@ enabled=1
     # mongo
 
 
-Конфиг:  
+### Конфиг
+
 /etc/mongod.conf
 
 
-____
 
+### Подключиться к MongoDB
 
-Подключиться к MongoDB
+    $ mongo
+
+При необходимости с параметрами
 
     $ mongo --host localhost --port 49153
 
@@ -79,7 +84,7 @@ ___
 
 <br/>
 
-### GUI Клиент для подключения к MongoDB в Ubuntu - RoboMongo:
+### GUI Клиент для подключения к MongoDB в Ubuntu - RoboMongo
 
 <br/>
 
