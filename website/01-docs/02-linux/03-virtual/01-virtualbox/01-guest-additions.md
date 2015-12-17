@@ -25,18 +25,35 @@ http://download.virtualbox.org/virtualbox/4.3.30/VBoxGuestAdditions_4.3.30.iso
 
     # cd /tmp
 
-    # wget http://download.virtualbox.org/virtualbox/4.3.30/VBoxGuestAdditions_4.3.30.iso
+    # wget http://download.virtualbox.org/virtualbox/5.0.10/VBoxGuestAdditions_5.0.10.iso
 
 
 <br/>
 
+### Ubuntu
 
     # apt-get install p7zip-full
 
-    # 7z x ./VBoxGuestAdditions_4.3.30.iso -o./VBoxGuestAdditions_4.3.30/
+    # 7z x ./VBoxGuestAdditions_5.0.10.iso -o./VBoxGuestAdditions_5.0.10/
+
+<br/>
+
+### Centos x64
+
+    # wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+
+    # rpm -ivh rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+
+    # yum install -y p7zip
+
+    # 7za x ./VBoxGuestAdditions_5.0.10.iso -o./VBoxGuestAdditions_5.0.10/
+
+<br/>
+
+### Продолжаем
 
 
-    # cd VBoxGuestAdditions_4.3.30/
+    # cd VBoxGuestAdditions_5.0.10/
 
     # chmod +x ./VBoxLinuxAdditions.run
 

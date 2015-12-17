@@ -41,16 +41,19 @@ permalink: /linux/dev/git/installation/centos/6/
 <br/>
 
     # cd git/
+<!--
     $ cat GIT-VERSION-FILE
+-->
+
 
 <br/>
 
-    # mkdir -p /opt/git/2.6.0
+    # mkdir -p /opt/git/2.7.0
 
 <br/>
 
-    # make prefix=/opt/git/2.6.0 all
-    # make prefix=/opt/git/2.6.0 install
+    # make prefix=/opt/git/2.7.0 all
+    # make prefix=/opt/git/2.7.0 install
 
 <br/>
 
@@ -58,7 +61,7 @@ permalink: /linux/dev/git/installation/centos/6/
 
 <br/>
 
-    $ /opt/git/2.6.0/bin/git --version
+    $ /opt/git/2.7.0/bin/git --version
 
 <br/>
 
@@ -72,7 +75,7 @@ permalink: /linux/dev/git/installation/centos/6/
 
     #### GIT ##############################
 
-        export GIT_HOME=/opt/git/2.6.2
+        export GIT_HOME=/opt/git/2.7.0
         export PATH=$PATH:$GIT_HOME/bin
 
     #### GIT ##############################
