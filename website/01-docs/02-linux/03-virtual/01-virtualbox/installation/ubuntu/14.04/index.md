@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Инсталляция VirtualBox в командной строке в Ubuntu
+title: Инсталляция VirtualBox 5.X в командной строке в Ubuntu
 permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 ---
 
@@ -28,11 +28,11 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 
 <br/>
 
-    # apt-cache search virtualbox-4*
+    # apt-cache search virtualbox*
 
 <br/>
 
-    # apt-get install -y virtualbox-4.3
+    # apt-get install -y virtualbox-5.0
 
 
 Создаем группу администраторов виртуальных машин:
@@ -85,9 +85,6 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
         export VM_HOME=$HOME/machines
         export VM_BACKUPS=${VM_HOME}/backups
 
-        # Distrib folder
-        export VM_DISTRIB=/mnt/dsk2/distrib/iso
-
     ############################################
 
 
@@ -98,11 +95,12 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 <br/>
 
     $ vboxmanage --version
-    4.3.14r95030
+    5.0.10r104061
+
 
 <br/>
 
-### Установка пакетов расширения
+### Установка пакетов расширения (USB, Remote Console, etc)
 
     $ VBoxManage list extpacks
     Extension Packs: 0
@@ -114,22 +112,21 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 <br/>
 
     # cd /tmp/
-    # wget http://download.virtualbox.org/virtualbox/4.3.10/Oracle_VM_VirtualBox_Extension_Pack-4.3.10.vbox-extpack
+    # wget http://download.virtualbox.org/virtualbox/5.0.10/Oracle_VM_VirtualBox_Extension_Pack-5.0.10.vbox-extpack
 
 <br/>
 
-    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.3.10.vbox-extpack
+    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.0.10.vbox-extpack
 
 <br/>
 
     # VBoxManage list extpacks
-
     Extension Packs: 1
     Pack no. 0:   Oracle VM VirtualBox Extension Pack
-    Version:      4.3.10
-    Revision:     93012
-    Edition:
-    Description:  USB 2.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM with E1000 support.
+    Version:      5.0.10
+    Revision:     104061
+    Edition:      
+    Description:  USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption.
     VRDE Module:  VBoxVRDP
     Usable:       true
     Why unusable:

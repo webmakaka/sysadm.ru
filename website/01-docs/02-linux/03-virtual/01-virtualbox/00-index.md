@@ -4,10 +4,13 @@ title: Virtual Box
 permalink: /linux/virtual/virtualbox/
 ---
 
+### Инсталляция VirtualBox 5.X
+
+[Инсталляция VirtualBox 5.X в командной строке в Ubuntu](/linux/virtual/virtualbox/installation/ubuntu/14.04/)
+
 
 ### Инсталляция VirtualBox 4.X
 
-[Инсталляция VirtualBox в командной строке в Ubuntu](/linux/virtual/virtualbox/installation/ubuntu/14.04/)
 
 [Инсталляция VirtualBox в командной строке в RedHat/Centos](/linux/virtual/virtualbox/installation/centos/6/)
 
