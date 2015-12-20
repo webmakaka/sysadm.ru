@@ -4,10 +4,6 @@ title: Программирование в Linux
 permalink: /linux/dev/web/
 ---
 
-<br/>
-
-# Программирование в Linux:
-
 ###[Node.js](/linux/dev/nodejs/)
 
 ###[Ruby on Rails](/linux/dev/ruby-on-rails/)
