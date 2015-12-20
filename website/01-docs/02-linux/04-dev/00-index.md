@@ -1,6 +1,7 @@
+---
 layout: page
 title: Программирование в Linux
-permalink: /linux/dev/
+permalink: /linux/dev/web/
 ---
 
 <br/>
