@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Инсталляция Ruby on Rails в Ubuntu
-permalink: /linux/dev/ruby-on-rails/installation/ubuntu/14.04/
+title: Инсталляция Ruby on Rails в Centos 6.X
+permalink: /linux/dev/ruby-on-rails/installation/centos/6.X/
 ---
 
-### Инсталляция Ruby on Rails в Ubuntu
+### Инсталляция Ruby on Rails в Centos
 
 Пишу то к чему пришел. Из разных вариантов инсталляции, данный мне видится более предпочтительным. Впрочем я не особо занимаюсь этой технологией.
 

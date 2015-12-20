@@ -16,6 +16,8 @@ permalink: /sitemap/
 ###[Виртуализация и контейнеры](/linux/virtual/)
 
 
+
+
 ______
 
 <br/>
@@ -48,7 +50,13 @@ ______
 
 ###[Cisco: Switches and Routers](/devices/cisco/routers/)
 
+______
 
+<br/>
+
+# Комплектующие:
+
+###[Подключаем диск 8TB в Centos 6.X](/devices/hdd/seagate/8tb/)
 ______
 
 <br/>

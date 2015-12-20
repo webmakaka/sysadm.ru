@@ -7,10 +7,8 @@ permalink: /linux/dev/ruby-on-rails/
 
 <br/>
 
-# Программирование в Linux на Ruby on Rails:
 
-
-###[Инсталляция Ruby on Rails в Ubuntu](/linux/dev/ruby-on-rails/installation/ubuntu/14.04/)
+###[Инсталляция Ruby on Rails в Centos 6.X](/linux/dev/ruby-on-rails/installation/centos/6.X/)
 
 ###[Сервера приложений для Ruby on Rails проектов](/linux/dev/ruby-on-rails/app-servers/)
 
