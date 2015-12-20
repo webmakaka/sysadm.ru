@@ -36,9 +36,7 @@ ______
 
 ###[GIT](/linux/dev/git/)
 
-###[Node.js](/linux/dev/nodejs/)
-
-###[Ruby on Rails](/linux/dev/ruby-on-rails/)
+###[Программирование для Web](/linux/dev/)
 
 ###[Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/editors/)
 
