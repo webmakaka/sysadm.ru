@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Программирование в Linux
-permalink: /linux/dev/web/
+permalink: /linux/dev/
 ---
 
 ###[Node.js](/linux/dev/nodejs/)

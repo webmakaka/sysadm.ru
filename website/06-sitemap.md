@@ -38,7 +38,7 @@ ______
 
 ###[GIT](/linux/dev/git/)
 
-###[Программирование для Web](/linux/dev/web/)
+###[Программирование для Web](/linux/dev/)
 
 ###[Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/editors/)
 
