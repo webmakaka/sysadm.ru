@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Инсталляция GIT в centos 6.x из исходников
+title: Некоторые команды GIT
 permalink: /linux/dev/git/commands/
 ---
 
