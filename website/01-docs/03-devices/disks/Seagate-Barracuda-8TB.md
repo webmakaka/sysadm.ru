@@ -79,6 +79,28 @@ Number  Start   End     Size    File system  Name     Flags
 
     # mkfs.ext4 /dev/sdc1
 
+
+<br>
+
+Далее несколько шагов по памяти. Т.к. сразу не записал.
+
+  # blkid /dev/sdc1
+  /dev/sdd1: UUID="8e53f2c6-0c0c-4db5-89ed-4935d89c11de" TYPE="ext4"
+
+
+Записываю, куда следует монтировать диск
+
+  # vi /etc/fstab
+
+Добавляю.
+
+  # 8 TB
+  UUID=8e53f2c6-0c0c-4db5-89ed-4935d89c11de /mnt/dsk4 ext4 defaults 0 0
+
+
+Далее уже команды как вводил в консоль.
+
+
 <br/>
 
     # mount /mnt/dsk4
@@ -87,7 +109,7 @@ Number  Start   End     Size    File system  Name     Flags
 
     # df -h
     ***
-    /dev/sdd1             7.2T   51M  6.8T   1% /mnt/dsk4
+    /dev/sdc1             7.2T   51M  6.8T   1% /mnt/dsk4
     ***
 
 
@@ -98,8 +120,8 @@ Number  Start   End     Size    File system  Name     Flags
 
 Отменяем резервирование 5% для суперпользователя следующей командой.
 
-    # tune2fs /dev/sdd1 -m 0
+    # tune2fs /dev/sdc1 -m 0
 
 После этого:
 
-    /dev/sdd1             7.2T   51M  7.2T   1% /mnt/dsk4
+    /dev/sdc1             7.2T   51M  7.2T   1% /mnt/dsk4
