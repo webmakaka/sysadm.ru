@@ -22,7 +22,7 @@ permalink: /linux/virtual/docker/basics/upgrade-docker-on-ubuntu/
 
 Удаляем
 
-    # apt-get purge lxc-docker*
+    # apt-get purge -y lxc-docker*
 
 
 
