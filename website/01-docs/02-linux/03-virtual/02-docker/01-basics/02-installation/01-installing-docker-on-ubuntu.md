@@ -40,6 +40,7 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 
     $ logout
 
+Или даже можно сделать reboot.
 
 <br/>
 
@@ -57,5 +58,11 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 
     DOCKER_OPTS="-g /mnt/dsk0/docker"
 
+<br/>
 
     # service docker restart
+
+<br/>
+
+    # ps auxwww | grep docker
+    root     19334  0.2  0.1 207696 30472 ?        Ssl  21:22   0:00 /usr/bin/docker
