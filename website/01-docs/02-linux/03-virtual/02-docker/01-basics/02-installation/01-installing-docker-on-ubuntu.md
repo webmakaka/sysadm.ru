@@ -49,8 +49,6 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 
 (Просто не хочу, хранить редко используемые docker файлы на системном, да еще и SSD диске)
 
-Пока просто попытка. Не знаю точно заработает или нет.
-
     # mkdir -p /mnt/dsk0/docker
     # chown -R <username> /mnt/dsk0/docker
 
