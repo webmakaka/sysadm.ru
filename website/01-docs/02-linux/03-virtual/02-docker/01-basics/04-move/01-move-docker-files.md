@@ -21,6 +21,8 @@ permalink: /linux/virtual/docker/basics/move-docker-files/
 
 <br/>
 
+### Вариант который использую сейчас
+
 
     # service docker stop
 
@@ -44,13 +46,13 @@ permalink: /linux/virtual/docker/basics/move-docker-files/
 
 <br/><br/>
 
-Если не заработает, есть еще 1 конфиг файл. Хз какой из них правильный.<br/>
-Может быть и этот /etc/default/docker.io
+Если не заработает, есть еще 1 конфиг файл.   
+Может он заработает /etc/default/docker.io
 
 
-<br/><br/>
+<br/>
 
-**И еще 1 вариант - задать явно этот злоебучий файл**
+### И еще 1 вариант - задать явно, какой файл с конфигом использовать
 
 
     # vi /lib/systemd/system/docker.service
