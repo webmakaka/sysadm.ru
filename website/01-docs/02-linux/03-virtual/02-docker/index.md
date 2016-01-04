@@ -13,7 +13,7 @@ permalink: /linux/virtual/docker/
 ### Docker Installation
 
 
-[Инсталляция Docker в Ubuntu](/linux/virtual/docker/basics/installing-docker-on-ubuntu/)  
+[Инсталляция Docker в Ubuntu 14.04](/linux/virtual/docker/basics/installing-docker-on-ubuntu/)  
 [Инсталляция Docker в CentOS 7](/linux/virtual/docker/basics/installing-docker-on-centos/)  
 
 
