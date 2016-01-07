@@ -95,7 +95,7 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 <br/>
 
     $ vboxmanage --version
-    5.0.10r104061
+    5.0.12r104815
 
 
 <br/>
@@ -112,19 +112,19 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 <br/>
 
     # cd /tmp/
-    # wget http://download.virtualbox.org/virtualbox/5.0.10/Oracle_VM_VirtualBox_Extension_Pack-5.0.10.vbox-extpack
+    # wget http://download.virtualbox.org/virtualbox/5.0.12/Oracle_VM_VirtualBox_Extension_Pack-5.0.12.vbox-extpack
 
 <br/>
 
-    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.0.10.vbox-extpack
+    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.0.12.vbox-extpack
 
 <br/>
 
     # VBoxManage list extpacks
     Extension Packs: 1
     Pack no. 0:   Oracle VM VirtualBox Extension Pack
-    Version:      5.0.10
-    Revision:     104061
+    Version:      5.0.12
+    Revision:     104815
     Edition:      
     Description:  USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption.
     VRDE Module:  VBoxVRDP

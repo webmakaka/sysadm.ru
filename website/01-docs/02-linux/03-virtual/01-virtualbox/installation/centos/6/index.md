@@ -36,7 +36,7 @@ permalink: /linux/virtual/virtualbox/installation/centos/6/
 
 <br/>
 
-### Инсталляция Extensin Pack
+### Инсталляция Extension Pack
 
     # cd /tmp/
     # wget http://download.virtualbox.org/virtualbox/4.3.4/Oracle_VM_VirtualBox_Extension_Pack-4.3.4.vbox-extpack
