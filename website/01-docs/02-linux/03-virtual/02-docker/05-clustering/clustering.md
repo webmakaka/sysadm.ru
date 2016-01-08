@@ -4,6 +4,15 @@ title: Native Docker Clustering with swarm
 permalink: /linux/virtual/docker/clustering/ubuntu/
 ---
 
+По материлам видеокурса.
+
+
+[pluralsight] First Look: Native Docker Clustering [2015, ENG]
+
+Как-то я не до конца разобрал.
+
+
+
 Нужна версия docker >= 1,4
 
 1.install GO:
@@ -28,7 +37,8 @@ permalink: /linux/virtual/docker/clustering/ubuntu/
 
     swarm --version
 
-___
+
+<br/>
 
 ## Building a Swarm Cluster
 
