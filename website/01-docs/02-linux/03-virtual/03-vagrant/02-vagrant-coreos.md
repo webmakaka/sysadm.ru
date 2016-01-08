@@ -1,8 +1,13 @@
 ---
 layout: page
-title: Vagrant в Linux
-permalink: /linux/virtual/vagrant/
+title: Vagrant и кластреры Coreos
+permalink: /linux/virtual/vagrant/coreos-clusters/
 ---
+
+
+### Vagrant и CoreOS
+
+
 
 Смотрю видео курс
 [O'Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
@@ -11,22 +16,6 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/
 
 
 VirtualBox и Git должны быть установлены.
-
-
-Инсталляция Vagrant
-
-    # cd /tmp
-    # wget https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
-
-    # dpkg -i vagrant_1.8.1_x86_64.deb
-
-    $ vagrant -v
-    Vagrant 1.8.1
-
-
-<br/>
-
-### Vagrant и CoreOS
 
 
 https://github.com/coreos/coreos-vagrant/
@@ -38,7 +27,6 @@ https://github.com/coreos/coreos-vagrant/
     $ cd coreos-vagrant/
 
     $ mv config.rb.sample config.rb
-    $ mv user-data.sample user-data
 
     $ atom .
 
