@@ -133,8 +133,8 @@ https://github.com/coreos/coreos-vagrant/
 
 <br/>
 
-   # systemctl status helloworld.service
-   ● helloworld.service - Hello World Service
+    # systemctl status helloworld.service
+    ● helloworld.service - Hello World Service
       Loaded: loaded (/etc/systemd/system/helloworld.service; enabled; vendor preset: disabled)
       Active: active (running) since Thu 2016-01-07 22:36:17 UTC; 10s ago
      Process: 1430 ExecStartPre=/usr/bin/docker pull busybox (code=exited, status=0/SUCCESS)
@@ -146,40 +146,40 @@ https://github.com/coreos/coreos-vagrant/
       CGroup: /system.slice/helloworld.service
               └─1449 /usr/bin/docker run --name hello-world busybox /bin/sh -c w...
 
-   Jan 07 22:36:19 core-01 docker[1449]: Hello World
-   Jan 07 22:36:20 core-01 docker[1449]: Hello World
-   Jan 07 22:36:21 core-01 docker[1449]: Hello World
-   Jan 07 22:36:22 core-01 docker[1449]: Hello World
-   Jan 07 22:36:23 core-01 docker[1449]: Hello World
-   Jan 07 22:36:24 core-01 docker[1449]: Hello World
-   Jan 07 22:36:25 core-01 docker[1449]: Hello World
-   Jan 07 22:36:26 core-01 docker[1449]: Hello World
-   Jan 07 22:36:27 core-01 docker[1449]: Hello World
-   Jan 07 22:36:28 core-01 docker[1449]: Hello World
+    Jan 07 22:36:19 core-01 docker[1449]: Hello World
+    Jan 07 22:36:20 core-01 docker[1449]: Hello World
+    Jan 07 22:36:21 core-01 docker[1449]: Hello World
+    Jan 07 22:36:22 core-01 docker[1449]: Hello World
+    Jan 07 22:36:23 core-01 docker[1449]: Hello World
+    Jan 07 22:36:24 core-01 docker[1449]: Hello World
+    Jan 07 22:36:25 core-01 docker[1449]: Hello World
+    Jan 07 22:36:26 core-01 docker[1449]: Hello World
+    Jan 07 22:36:27 core-01 docker[1449]: Hello World
+    Jan 07 22:36:28 core-01 docker[1449]: Hello World
 
 <br/>
 
-   # journalctl -f -u helloworld.service
-   -- Logs begin at Thu 2016-01-07 22:17:07 UTC. --
-   Jan 07 22:37:20 core-01 docker[1449]: Hello World
-   Jan 07 22:37:21 core-01 docker[1449]: Hello World
-   Jan 07 22:37:22 core-01 docker[1449]: Hello World
-   Jan 07 22:37:23 core-01 docker[1449]: Hello World
-   Jan 07 22:37:24 core-01 docker[1449]: Hello World
-   Jan 07 22:37:25 core-01 docker[1449]: Hello World
+    # journalctl -f -u helloworld.service
+    -- Logs begin at Thu 2016-01-07 22:17:07 UTC. --
+    Jan 07 22:37:20 core-01 docker[1449]: Hello World
+    Jan 07 22:37:21 core-01 docker[1449]: Hello World
+    Jan 07 22:37:22 core-01 docker[1449]: Hello World
+    Jan 07 22:37:23 core-01 docker[1449]: Hello World
+    Jan 07 22:37:24 core-01 docker[1449]: Hello World
+    Jan 07 22:37:25 core-01 docker[1449]: Hello World
 
 
 
 <br/>
 
-   # systemctl stop helloworld.service
+    # systemctl stop helloworld.service
 
 
 
  <br/>
  <br/>
 
-# vi /etc/systemd/system/helloworld2@.service
+    # vi /etc/systemd/system/helloworld2@.service
 
 
     [Unit]
