@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Vagrant и кластреры Coreos
+title: Vagrant и CoreOS
 permalink: /linux/virtual/vagrant/coreos-clusters/
 ---
 
