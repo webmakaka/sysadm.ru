@@ -4,6 +4,11 @@ title: Native Docker Clustering with swarm
 permalink: /linux/virtual/docker/clustering/ubuntu/
 ---
 
+
+Official Repository:  
+https://hub.docker.com/_/swarm/
+
+
 По материлам видеокурса.
 
 

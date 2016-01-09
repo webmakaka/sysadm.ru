@@ -7,21 +7,6 @@ permalink: /linux/virtual/vagrant/coreos-clusters/
 
 ### Vagrant и CoreOS
 
-
-
-Смотрю видео курс
-[O'Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
-
-https://github.com/rosskukulinski/Introduction_To_CoreOS/
-
-
-VirtualBox и Git должны быть установлены.
-
-
-https://github.com/coreos/coreos-vagrant/
-
-
-
     $ git clone https://github.com/coreos/coreos-vagrant/
 
     $ cd coreos-vagrant/

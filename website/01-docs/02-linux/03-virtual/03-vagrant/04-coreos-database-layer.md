@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Пытаюсь поднять кластер из балансера, app сервера и баз данных
-permalink: /linux/virtual/vagrant/cloud-environment/
+title: DataBase Layer
+permalink: /linux/virtual/vagrant/coreos-database-layer/
 ---
 
 
@@ -15,8 +15,7 @@ permalink: /linux/virtual/vagrant/cloud-environment/
 core-01
 
 
-
- **rethinkdb-announce@.service**
+ **$ vi rethinkdb-announce@.service**
 
     [Unit]
     Description=Announce RethinkDB %i service
@@ -30,7 +29,7 @@ core-01
     X-Conflicts=rethinkdb-announce@*.service
 
 
- **rethinkdb@.service**
+ **$ vi rethinkdb@.service**
 
     [Unit]
     Description=RethinkDB %i service
@@ -104,11 +103,3 @@ core-01
 
     http://172.17.8.101:8080/#servers
     http://172.17.8.103:8080/#servers
-
-
-
-
-### Application Layer (Node.js) 3000 port
-
-
-### Load balancing layer (nginx, haproxy) 80 port

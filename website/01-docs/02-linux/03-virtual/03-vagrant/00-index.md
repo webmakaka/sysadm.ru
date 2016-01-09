@@ -8,8 +8,28 @@ permalink: /linux/virtual/vagrant/
 
 [Инсталляция Vargant в Ubuntu 14.04](/linux/virtual/vagrant/installation/ubuntu-14-04/)  
 
+
+
+Смотрю видео курс
+[O'Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
+
+
+https://github.com/coreos/coreos-vagrant/
+
+https://github.com/rosskukulinski/Introduction_To_CoreOS/
+
+
+VirtualBox и Git должны быть установлены.
+
+
+
 [Vagrant и CoreOS](/linux/virtual/vagrant/coreos-clusters/)  
 
 [Приступаю к изучению](/linux/virtual/vagrant/service-example/)  
 
-[Пытаюсь поднять кластер из балансера, app сервера и баз данных](/linux/virtual/vagrant/cloud-environment/)  
+[DataBase Layer](/linux/virtual/vagrant/coreos-database-layer/)  
+
+
+[Application Layer](/linux/virtual/vagrant/coreos-application-layer/)
+
+[Load balancing layer with NGINX](/linux/virtual/vagrant/coreos-load-balancing-layer-with-nginx/)
