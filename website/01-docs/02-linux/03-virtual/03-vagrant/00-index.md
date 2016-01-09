@@ -32,4 +32,6 @@ VirtualBox и Git должны быть установлены.
 
 [Application Layer](/linux/virtual/vagrant/coreos-application-layer/)
 
-[Load balancing layer with NGINX](/linux/virtual/vagrant/coreos-load-balancing-layer-with-nginx/)
+[Load balancing with NGINX](/linux/virtual/vagrant/load-balancing-with-nginx/)
+
+[Load balancing with HAPROXY & CONFD](/linux/virtual/vagrant/load-balancing-with-haproxy-and-confd/)
