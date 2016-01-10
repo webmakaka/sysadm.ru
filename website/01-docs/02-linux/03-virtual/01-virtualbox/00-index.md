@@ -42,3 +42,11 @@ permalink: /linux/virtual/virtualbox/
 [Клонирование виртуальных машин VirtualBox в командной строке](/linux/virtual/virtualbox/clone/)
 
 [Замена виртуального диска VirtualBox в командной строке](/linux/virtual/virtualbox/replace-disk/)
+
+
+
+<br/>
+
+### Other
+
+[Running CoreOS on VirtualBox](/linux/virtual/virtualbox/coreos-installation/)

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Transcend MP330 8GB USB MP3 Player работает в режиме только для чтения
+title: Transcend 8GB USB MP3 Player работает в режиме только для чтения
 permalink: /devices/usb-flash/transcend/8gb/player/
 ---
 

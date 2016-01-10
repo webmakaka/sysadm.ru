@@ -4,10 +4,14 @@ title: Docker в Linux
 permalink: /linux/virtual/docker/
 ---
 
+Вроде как, в качестве хостовой машины для docker контейнеров отлично подойдет CoreOS. Желающих прокачать скилы по работе с Docker, предлагаю присмотреться и к этому дистрибутиву. Желающие копать совместно, присоединяйтесь.
+
+<br/>
+
+### Docker
+
 
 [Основные команды Docker](/linux/virtual/docker/basics/basic-commands/)  
-
-
 <br/>
 
 ### Docker Installation
@@ -16,11 +20,9 @@ permalink: /linux/virtual/docker/
 [Инсталляция Docker в Ubuntu 14.04](/linux/virtual/docker/basics/installing-docker-on-ubuntu/)  
 [Инсталляция Docker в CentOS 7](/linux/virtual/docker/basics/installing-docker-on-centos/)  
 
-
 <br/>
 
 ### Docker Update | Upgrade
-
 
 [Upgrade Docker в Ubuntu](/linux/virtual/docker/basics/upgrade-docker-on-ubuntu/)  
 
@@ -31,7 +33,6 @@ permalink: /linux/virtual/docker/
 
 
 [Переместить файлы Docker](/linux/virtual/docker/basics/move-docker-files/)  
-
 
 
 <br/>
@@ -80,7 +81,7 @@ ___
 
 <br/>
 
-**Возможно полезные статьи по docker:**
+**Возможно, полезные статьи по docker:**
 
 
 <ul>
