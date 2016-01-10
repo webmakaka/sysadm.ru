@@ -16,35 +16,33 @@ core-01
 
 <br/>
 
+    [Unit]
+    Description=Nginx Proxy
 
+    Requires=docker.service
+    After=docker.service
+    After=etcd2.service
+    Requires=etcd2.service
 
-[Unit]
-Description=Nginx Proxy
+    [Service]
+    EnvironmentFile=/etc/environment
+    User=core
 
-Requires=docker.service
-After=docker.service
-After=etcd2.service
-Requires=etcd2.service
+    Restart=always
+    TimeoutStartSec=0
+    ExecStartPre=-/usr/bin/docker kill %p-%i
+    ExecStartPre=-/usr/bin/docker rm %p-%i
+    ExecStartPre=-/usr/bin/etcdctl mkdir /services/todo
+    ExecStartPre=-/usr/bin/docker pull rosskukulinski/nginx-proxy
+    ExecStart=/usr/bin/docker run --name %p-%i \
+          -h %H \
+          -p ${COREOS_PUBLIC_IP}:80:80 \
+          rosskukulinski/nginx-proxy
+    ExecStop=-/usr/bin/docker kill %p-%i
+    ExecStop=-/usr/bin/docker rm %p-%i
 
-[Service]
-EnvironmentFile=/etc/environment
-User=core
-
-Restart=always
-TimeoutStartSec=0
-ExecStartPre=-/usr/bin/docker kill %p-%i
-ExecStartPre=-/usr/bin/docker rm %p-%i
-ExecStartPre=-/usr/bin/etcdctl mkdir /services/todo
-ExecStartPre=-/usr/bin/docker pull rosskukulinski/nginx-proxy
-ExecStart=/usr/bin/docker run --name %p-%i \
-      -h %H \
-      -p ${COREOS_PUBLIC_IP}:80:80 \
-      rosskukulinski/nginx-proxy
-ExecStop=-/usr/bin/docker kill %p-%i
-ExecStop=-/usr/bin/docker rm %p-%i
-
-[X-Fleet]
-Global=true
+    [X-Fleet]
+    Global=true
 
 <br/>
 
