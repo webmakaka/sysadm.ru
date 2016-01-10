@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Vagrant и CoreOS
-permalink: /linux/virtual/vagrant/coreos-clusters/
+permalink: /linux/virtual/coreos/coreos-clusters/
 ---
 
 

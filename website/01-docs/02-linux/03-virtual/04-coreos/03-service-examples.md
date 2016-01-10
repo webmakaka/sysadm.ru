@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Приступаю к изучению
-permalink: /linux/virtual/vagrant/service-example/
+permalink: /linux/virtual/coreos/service-example/
 ---
 
 

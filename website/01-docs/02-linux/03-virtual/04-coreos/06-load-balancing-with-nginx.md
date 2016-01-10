@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Load balancing with NGINX
-permalink: /linux/virtual/vagrant/load-balancing-with-nginx/
+permalink: /linux/virtual/coreos/load-balancing-with-nginx/
 ---
 
 

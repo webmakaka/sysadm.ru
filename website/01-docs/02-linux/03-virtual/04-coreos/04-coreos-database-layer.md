@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DataBase Layer
-permalink: /linux/virtual/vagrant/coreos-database-layer/
+permalink: /linux/virtual/coreos/coreos-database-layer/
 ---
 
 
