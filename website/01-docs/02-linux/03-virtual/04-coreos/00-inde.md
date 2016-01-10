@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Замена виртуального диска VirtualBox в командной строке
-permalink: /linux/virtual/virtualbox/coreos-installation/
+permalink: /linux/virtual/coreos/
 ---
 
 [Running CoreOS on VirtualBox](https://coreos.com/os/docs/774.0.0/booting-on-virtualbox.html)

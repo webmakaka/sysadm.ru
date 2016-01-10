@@ -9,3 +9,12 @@ permalink: /linux/virtual/
 ###[docker](/linux/virtual/docker/)
 
 ###[vagrant](/linux/virtual/vagrant/)
+
+
+
+
+<br/>
+
+### CoreOS (хостоваря операционная система для docker контейнеров)
+
+[Начинаем покаться](/linux/virtual/coreos/)
