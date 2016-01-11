@@ -168,7 +168,7 @@ http://centoshelp.org/servers/database/installing-configuring-mysql-server/
 
 <br/>
 
-### Удаленный доступ пользователя root с правами суперпользователя.
+### Удаленный доступ к базе root'ом с правами суперпользователя.
 (Например, для разработки)
 
 
