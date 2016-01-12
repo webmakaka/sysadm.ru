@@ -90,7 +90,7 @@ ______
 
 ###[Симулятор системного администратора](/website/games/sysadm.swf)  
 
-###[Doom](/website/games/doom.swf) (что-то стал тормозить, по крайней мере  в linux)  
+###[Doom](/website/games/doom.swf)
 
 ______
 
