@@ -90,7 +90,7 @@ ______
 
 ###[Симулятор системного администратора](/website/games/sysadm.swf)  
 
-###[Doom](/website/games/doom.swf)
+###[Doom](/website/games/doom.swf) (Ударживай Z, для Strafing)  
 
 ______
 
