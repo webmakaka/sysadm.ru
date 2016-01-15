@@ -30,7 +30,7 @@ https://github.com/bbengfort/hadoop-fundamentals
 
 <br/><br/>
 
-[Создание виртуальной машины virtual box для курса по hadoop](/linux/distributed-systems/hadoop/crate-virtual-mashine-virtual-box-for-hadoop-course/)
+[Создание виртуальной машины virtual box для курса по hadoop](/linux/distributed-systems/hadoop/crate-virtual-machine-virtual-box-for-hadoop-course/)
 
 [Working with Hadoop via the Command Line: Starting HDFS and Yarn](/linux/distributed-systems/hadoop/starting-hdfs-and-yarn/)
 

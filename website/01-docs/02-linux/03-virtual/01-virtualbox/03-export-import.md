@@ -17,7 +17,7 @@ permalink: /linux/virtual/virtualbox/export-import/
 При необходимости, нужно задать переменные:
 
     $ vboxmanage list vms
-    $ vm=<mashine_name>
+    $ vm=<machine_name>
 
 
 ### Export виртуальной машины
@@ -74,7 +74,7 @@ permalink: /linux/virtual/virtualbox/export-import/
 
     $ cd ${VM_BACKUPS}
 
-    $ cd <mashine>
+    $ cd <machine>
 
     $ VBoxManage import ./vm_oel57_oradb112.ovf
 
