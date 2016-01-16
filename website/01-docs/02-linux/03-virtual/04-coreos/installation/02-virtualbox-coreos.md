@@ -22,7 +22,9 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
     $ ./create-coreos-vdi -V stable -d ./templates
 
 
-Далее я попробовал запустить. Операционная система стартовала и попросила пароль. Стало понятно, что пароли вроде root/root, core/core не подходят и нужно копать дальше.
+Далее я попробовал запустить. Операционная система стартовала и попросила пароль.
+
+Стало понятно, что пароли вроде root/root, core/core не подходят и нужно копать дальше.
 
 <br/>
 
@@ -48,11 +50,11 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
 
 ### Запускаем виртуальную машину ViertualBox с CoreOS
 
-Вообщем. Я vdi диск подключил как жесткий диск. Iso как CD-ROM.
+Vdi диск подключил как жесткий диск. Iso как CD-ROM.
 
 По DHCP у меня IP адреса не раздаются, а хост машина подключена к роутеру по кабелю.
 
-Вообщем добавляю 1 сетевой адаптер типа Bridge и сообщаю, что он должен работать с локальным eh0.
+Добавляю 1 сетевой адаптер типа Bridge и сообщаю, что он должен работать с локальным eh0.
 
 Запускаю виртуальную машину.
 
@@ -69,15 +71,20 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
     CoreOS stable (835.9.0)
 
 
-Docker уже работает.
+Docker уже установлен.
 Мне пока больше ничего и не нужно.
 
-    $ docker ps
-    CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+    $ docker -v
+    Docker version 1.8.3, build cedd534-dirty
 
 
 Так. Интернет пока в CoreOS не заработал.
-Локальная сеть доступна. Значит нужно просто отключить NAT адаптер. (Или настроить руками маршрутизацию).
+Локальная сеть доступна. Значит нужно просто настроить.
+
+
+<br/>
+
+### Настройка сети в CoreOS
 
     $ sudo su -
 
@@ -111,6 +118,8 @@ Docker уже работает.
     64 bytes from ya.ru (93.158.134.3): icmp_seq=1 ttl=55 time=4.37 ms
     64 bytes from ya.ru (93.158.134.3): icmp_seq=2 ttl=55 time=2.39 ms
 
+
+<br/><br/>
 
 Материалы:  
 
