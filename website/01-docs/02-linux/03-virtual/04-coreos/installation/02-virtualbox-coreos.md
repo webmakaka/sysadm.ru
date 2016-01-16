@@ -5,7 +5,7 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
 ---
 
 
-[Running CoreOS on VirtualBox](https://coreos.com/os/docs/774.0.0/booting-on-virtualbox.html)
+
 
 <br/>
 
@@ -50,9 +50,9 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
 
 Вообщем. Я vdi диск подключил как жесткий диск. Iso как CD-ROM.
 
-По DHCP у меня IP адреса не раздаются, а хост машина подключена к роутеру по кабелю. Пока не знаю, имеет ли это какое-то значение или нет. Наверное нет, т.к. сам virtualBox для виртуальной машины будет выступать в качестве DHCP сервера (я так думаю).  
+По DHCP у меня IP адреса не раздаются, а хост машина подключена к роутеру по кабелю.
 
-Вообщем добавляю еще 1 сетевой адаптер типа Bridge и коннекчу его к своему локальному eh0.
+Вообщем добавляю 1 сетевой адаптер типа Bridge и сообщаю, что он должен работать с локальным eh0.
 
 Запускаю виртуальную машину.
 
@@ -61,7 +61,7 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
 
 Остается с хостовой машины подключиться по SSH к гостевой.
 
-**Внимание!!! Чтобы узнать по какому IP подключаться. Нужно в окне приглашения, где нужно ввести login, нужно несколько раз нажать на [Enter]. Появится окно, в котором будет написано к какому IP подлючаться**
+**Внимание!!! Чтобы узнать по какому IP подключаться. Нужно в окне приглашения (где нужно ввести login) несколько раз нажать на [Enter]. Появится окно, в котором будет написано, к какому IP подлючаться**
 
 
     $ ssh core@192.168.1.250
@@ -76,5 +76,44 @@ Docker уже работает.
     CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 
 
-Так. Интернет пока в CoreOS не заработал.  
-Будем посмотреть.
+Так. Интернет пока в CoreOS не заработал.
+Локальная сеть доступна. Значит нужно просто отключить NAT адаптер. (Или настроить руками маршрутизацию).
+
+    $ sudo su -
+
+    # vi /etc/systemd/network/static.network
+
+<br/>
+
+    [Match]
+    Name=enp0s8
+
+    [Network]
+    Address=192.168.1.11/24
+    Gateway=192.168.1.1
+    DNS=192.168.1.1
+
+
+<br/>
+
+    # systemctl restart systemd-networkd
+
+Не помогло, пришлось рестартовать.
+
+<br/><br/>
+
+    $ ssh core@192.168.1.11
+
+<br/>
+
+    core@my_vm01 ~ $ ping ya.ru
+    PING ya.ru (93.158.134.3) 56(84) bytes of data.
+    64 bytes from ya.ru (93.158.134.3): icmp_seq=1 ttl=55 time=4.37 ms
+    64 bytes from ya.ru (93.158.134.3): icmp_seq=2 ttl=55 time=2.39 ms
+
+
+Материалы:  
+
+[Running CoreOS on VirtualBox](https://coreos.com/os/docs/774.0.0/booting-on-virtualbox.html)
+
+[Network Configuration with networkd](https://coreos.com/os/docs/latest/network-config-with-networkd.html)
