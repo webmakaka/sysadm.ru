@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Инсталляция CoreOS
-permalink: /linux/virtual/coreos/installation/
+title: Инсталляция CoreOS в virtualBox
+permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
 ---
 
 

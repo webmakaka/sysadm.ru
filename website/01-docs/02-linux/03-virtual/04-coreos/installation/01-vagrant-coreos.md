@@ -1,8 +1,11 @@
 ---
 layout: page
-title: Vagrant и CoreOS
-permalink: /linux/virtual/coreos/vagrant-coreos/
+title: Инсталляция CoreOS с помощью Vargrant
+permalink: /linux/virtual/coreos/installation/vagrant-coreos/
 ---
+
+
+VirtualBox и Git должны быть установлены.
 
 
 ### Vagrant и CoreOS

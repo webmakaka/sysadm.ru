@@ -5,10 +5,16 @@ permalink: /linux/virtual/coreos/
 ---
 
 
-[Инсталляция CoreOS](/linux/virtual/coreos/installation/)
+### Инсталляция
+
+[Vagrant и CoreOS](/linux/virtual/coreos/installation/vagrant-coreos/)  
+
+[VirtualBox и CoreOS](/linux/virtual/coreos/installation/virtualbox-coreos/)
 
 
 
+
+<br/><br/>
 
 Смотрю видео курс
 [O'Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
@@ -21,10 +27,10 @@ https://github.com/coreos/coreos-vagrant/
 https://github.com/rosskukulinski/Introduction_To_CoreOS/
 
 
-VirtualBox и Git должны быть установлены.
 
 
-[Vagrant и CoreOS](/linux/virtual/coreos/vagrant-coreos/)  
+
+
 
 [Приступаю к изучению](/linux/virtual/coreos/service-example/)  
 
