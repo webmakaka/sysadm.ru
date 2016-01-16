@@ -24,7 +24,7 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/
 VirtualBox и Git должны быть установлены.
 
 
-[Vagrant и CoreOS](/linux/virtual/coreos/coreos-clusters/)  
+[Vagrant и CoreOS](/linux/virtual/coreos/vagrant-coreos/)  
 
 [Приступаю к изучению](/linux/virtual/coreos/service-example/)  
 

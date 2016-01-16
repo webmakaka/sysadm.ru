@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Vagrant и CoreOS
-permalink: /linux/virtual/coreos/coreos-clusters/
+permalink: /linux/virtual/coreos/vagrant-coreos/
 ---
 
 
@@ -14,17 +14,25 @@ permalink: /linux/virtual/coreos/coreos-clusters/
     $ mv config.rb.sample config.rb
     $ mv user-data.sample user-data
 
-    $ atom .
 
 <br/>
 
-    config.rb
+    $ vi config.rb
 
-    # $num_instances=1
     $num_instances=3
 
-    #$update_channel='alpha'
     $update_channel='stable'
+
+<br/>
+
+Генерируем  
+https://discovery.etcd.io/new
+
+<br/>
+
+    $ vi user-data
+
+    discovery: https://discovery.etcd.io/29fb47f99d2b8ee4d10d0ce49f350a0f
 
 
 <br/>
@@ -53,12 +61,6 @@ permalink: /linux/virtual/coreos/coreos-clusters/
     5127495f...	172.17.8.102	-
     e20b10bc...	172.17.8.101	-
 
-
-Возможно, что нужно будет сгенерировать ключ и вставить его в user-data.
-
-https://discovery.etcd.io/new
-
-discovery: https://discovery.etcd.io/29fb47f99d2b8ee4d10d0ce49f350a0f
 
 <br/>
 
