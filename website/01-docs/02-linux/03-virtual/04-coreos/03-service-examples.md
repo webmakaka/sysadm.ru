@@ -123,12 +123,12 @@ permalink: /linux/virtual/coreos/service-example/
 
 <br/>
 
-   # journalctl -f -u helloworld2@1.service
-   -- Logs begin at Thu 2016-01-07 22:17:07 UTC. --
-   Jan 07 22:46:30 core-01 docker[1756]: Hello from helloworld2-1 running on core-01
-   Jan 07 22:46:31 core-01 docker[1756]: Hello from helloworld2-1 running on core-01
-   Jan 07 22:46:32 core-01 docker[1756]: Hello from helloworld2-1 running on core-01
-   Jan 07 22:46:33 core-01 docker[1756]: Hello from helloworld2-1 running on core-0
+    # journalctl -f -u helloworld2@1.service
+    -- Logs begin at Thu 2016-01-07 22:17:07 UTC. --
+    Jan 07 22:46:30 core-01 docker[1756]: Hello from helloworld2-1 running on core-01
+    Jan 07 22:46:31 core-01 docker[1756]: Hello from helloworld2-1 running on core-01
+    Jan 07 22:46:32 core-01 docker[1756]: Hello from helloworld2-1 running on core-01
+    Jan 07 22:46:33 core-01 docker[1756]: Hello from helloworld2-1 running on core-0
 
 <br/>
 

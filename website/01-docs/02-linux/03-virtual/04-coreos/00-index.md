@@ -11,10 +11,18 @@ permalink: /linux/virtual/coreos/
 
 [VirtualBox и CoreOS](/linux/virtual/coreos/installation/virtualbox-coreos/)
 
-[С помощью Iso диска](/linux/virtual/coreos/installation/iso-disk/)
+[С помощью ISO диска](/linux/virtual/coreos/installation/iso-disk/)
 
 
 <br/><br/>
+
+### Команды
+
+[Команды (пока разбираемся)](/linux/virtual/coreos/commands/)  
+[cloud-config (пока разбираемся)](/linux/virtual/coreos/cloud-config/)
+
+<br/><br/>
+
 
 Смотрю видео курс
 [O'Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
