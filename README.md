@@ -8,7 +8,7 @@
     $ docker pull marley/centos6-for-dev
     $ docker run -i -t -p 80:8080 marley/centos6-for-dev /bin/bash
 
-<br/>
+Далее уже в контейнере docker:
 
     $ source ~/.bash_profile
     $ cd /projects

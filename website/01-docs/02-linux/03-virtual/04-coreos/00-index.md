@@ -29,6 +29,14 @@ permalink: /linux/virtual/coreos/
 
 <br/><br/>
 
+Видео:
+
+http://www.youtube.com/watch?v=wxUxtflalE4
+
+https://github.com/sysadm-ru/production-docker-ha-architecture
+
+
+<br/><br/>
 
 Смотрю видео курс
 [O'Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]

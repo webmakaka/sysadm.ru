@@ -10,7 +10,7 @@ VirtualBox и Git должны быть установлены.
 
 ### Vagrant и CoreOS
 
-    $ git clone https://github.com/coreos/coreos-vagrant/
+`$ git clone https://github.com/coreos/coreos-vagrant/`
 
     $ cd coreos-vagrant/
 
