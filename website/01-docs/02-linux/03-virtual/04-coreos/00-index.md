@@ -13,6 +13,12 @@ permalink: /linux/virtual/coreos/
 
 [С помощью ISO диска](/linux/virtual/coreos/installation/iso-disk/)
 
+<br/>
+
+### Network
+
+[Настройка сетевых адаптеров в CoreOS](/linux/virtual/coreos/network/)
+
 
 <br/><br/>
 
