@@ -32,6 +32,29 @@ permalink: /linux/virtual/coreos/commands/
 <br/>
 
 
+$ sudo systemctl status etcd
+● etcd.service - etcd
+   Loaded: loaded (/usr/lib64/systemd/system/etcd.service; static; vendor preset: disabled)
+   Active: active (running) since Sun 2016-01-17 12:37:31 UTC; 11s ago
+ Main PID: 31689 (etcd)
+   Memory: 9.2M
+      CPU: 47ms
+   CGroup: /system.slice/etcd.service
+           └─31689 /usr/bin/etcd
+
+Jan 17 12:37:31 my_vm01 systemd[1]: Started etcd.
+Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.455 INFO      |...er
+Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.462 INFO      |...1]
+Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.463 INFO      |...1]
+Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.463 INFO      |...de
+Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.464 INFO      |...'.
+Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.465 INFO      |...'.
+Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.465 INFO      |...'.
+Hint: Some lines were ellipsized, use -l to show in full.
+
+
+<br/>
+
     $ ss -lnt
     State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              
     LISTEN     0      128          *:5355                     *:*                  
@@ -58,17 +81,42 @@ permalink: /linux/virtual/coreos/commands/
 
 
 
+
+
+
+
 <br/>
+
+### etcdctl
+
+    $ etcdctl ls /coreos.com
+    Error:  client: etcd cluster is unavailable or misconfigured
+    error #0: dial tcp 127.0.0.1:4001: connection refused
+    error #1: dial tcp 127.0.0.1:2379: connection refused
+
+
+<br/>
+
+### fleetctl
+
+    $ fleetctl list-units
+
+    $ fleetctl list-machines
+
+    $ fleetctl list-unit-files
+
+    $ fleetctl unload todo@.service
+
+    $ fleetctl submit todo*
+
+    $ fleetctl start todo@{1..3}
+
+    $ fleetctl destroy todo-sk@1.service
+
+    $ fleetctl journal -f --lines=50 rethinkdb@1
+
+<br/>
+
+### journalctl
 
     $ journalctl --unit etcd.service --no-pager
-
-<br/>
-
-
-    core@my_vm01 ~ $ fleetctl list-machines
-    Error retrieving list of active machines: googleapi: Error 503: fleet server unable to communicate with etcd
-
-<br/>
-
-    core@my_vm01 ~ $ fleetctl list-units
-    Error retrieving list of units from repository: googleapi: Error 503: fleet server unable to communicate with etcd

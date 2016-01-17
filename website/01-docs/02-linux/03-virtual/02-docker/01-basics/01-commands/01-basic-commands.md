@@ -162,3 +162,49 @@ ___
 // remove all Docker images:  
 
     # docker rmi $(docker images -q)
+
+
+<br/>
+
+### Получить информацию о слоях image
+
+    $ docker history <image_name>
+    $ docker history --no-trunc <image_name>
+
+
+Возможно, более наглядно.
+
+https://github.com/CenturyLinkLabs/dockerfile-from-image
+
+
+Хочу понять каким образом был сделан docker image у автора курса по CoreOS
+
+    $ docker pull rosskukulinski/rethinkdb:2.1.0_beta1
+
+<br/>
+
+    $ docker run -v /var/run/docker.sock:/var/run/docker.sock   centurylink/dockerfile-from-image rosskukulinski/rethinkdb:2.1.0_beta1
+    ADD file:085531d120d9b9b09174b936e2ecac25dda1f3029cfbc24751529c0c24a8e3d0 in /
+    CMD ["/bin/bash"]
+    MAINTAINER Stuart P. Bentley <stuart@testtrack4.com>
+    RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 1614552E5765227AEC39EFCFA7E00EF33A8F2399
+    RUN echo "deb http://download.rethinkdb.com/apt jessie main" > /etc/apt/sources.list.d/rethinkdb.list
+    RUN apt-get update
+    RUN apt-get -yqq install build-essential protobuf-compiler python libprotobuf-dev libcurl4-openssl-dev libboost-all-dev libncurses5-dev libjemalloc-dev wget
+    ADD tarsum+sha256:9fa9e6a402710827733f45452cb37b43a2b8d2949e9800d8937a78377d04e619 in /src/rethinkdb_2.1.0.deb
+    RUN dpkg -i /src/rethinkdb_2.1.0.deb
+    RUN apt-get -yqqf install
+    VOLUME [/data]
+    WORKDIR /data
+    CMD ["rethinkdb" "--bind" "all"]
+    EXPOSE 28015/tcp 29015/tcp 8080/tcp
+
+
+
+<br/>
+
+### Интересует (не особо актуально, но всеже) как зашифровать имидж для веб сервера
+
+Например, передать его другому человеку, который все, что бы мог - запустить его у себя. Для того, чтобы он выполнял роль, одного из нод общего кластера.
+
+Если будет кому интересно потестировать, я бы обменялся такими контейнерами, скажем с каким нибудь одностраничным сайтом. Например, тем, что есть в курсе по CoreOS. Там и база, и сервер приложений и балансировщик нагрузки. Сначала просто настроить, а потом уже и с шифрованием.

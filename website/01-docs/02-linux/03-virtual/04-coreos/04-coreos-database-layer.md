@@ -14,8 +14,11 @@ permalink: /linux/virtual/coreos/coreos-database-layer/
 
 core-01
 
+<br/>
 
- **$ vi rethinkdb-announce@.service**
+    $ vi rethinkdb-announce@.service
+
+<br/>
 
     [Unit]
     Description=Announce RethinkDB %i service
@@ -28,8 +31,11 @@ core-01
     [X-Fleet]
     X-Conflicts=rethinkdb-announce@*.service
 
+<br/>
 
- **$ vi rethinkdb@.service**
+    $ vi rethinkdb@.service
+
+<br/>
 
     [Unit]
     Description=RethinkDB %i service
@@ -47,11 +53,11 @@ core-01
      -p ${COREOS_PUBLIC_IPV4}:8080:8080                        \
      -p ${COREOS_PUBLIC_IPV4}:28015:28015                      \
      -p ${COREOS_PUBLIC_IPV4}:29015:29015                      \
-     rosskukulinski/rethinkdb:2.1.0_beta1 rethinkdb --bind all                  \
+     rosskukulinski/rethinkdb:2.1.0_beta1 rethinkdb --bind all \
      --canonical-address ${COREOS_PUBLIC_IPV4}                 \
-     $(/usr/bin/etcdctl ls /services/rethinkdb |                \
-         xargs -I {} /usr/bin/etcdctl get {} |                  \
-         sed s/^/"--join "/ | sed s/$/":29015"/ |               \
+     $(/usr/bin/etcdctl ls /services/rethinkdb |               \
+         xargs -I {} /usr/bin/etcdctl get {} |                 \
+         sed s/^/"--join "/ | sed s/$/":29015"/ |              \
          tr "\n" " ")'
 
     ExecStop=/usr/bin/docker stop rethinkdb-%i
@@ -95,9 +101,6 @@ core-01
     rethinkdb-announce@2.service	b7d947a2.../172.17.8.103	active	running
     rethinkdb@1.service		8d3af21c.../172.17.8.101	active	running
     rethinkdb@2.service		b7d947a2.../172.17.8.103	active	running
-
-
-
 
 <br/>
 
