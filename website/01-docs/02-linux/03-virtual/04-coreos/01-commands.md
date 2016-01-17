@@ -89,6 +89,10 @@ Hint: Some lines were ellipsized, use -l to show in full.
 
 ### etcdctl
 
+    $ etcdctl ls
+
+    $ etcdctl ls --recursive
+
     $ etcdctl ls /coreos.com
     Error:  client: etcd cluster is unavailable or misconfigured
     error #0: dial tcp 127.0.0.1:4001: connection refused
@@ -99,9 +103,10 @@ Hint: Some lines were ellipsized, use -l to show in full.
 
 ### fleetctl
 
-    $ fleetctl list-units
 
     $ fleetctl list-machines
+
+    $ fleetctl list-units
 
     $ fleetctl list-unit-files
 
@@ -114,6 +119,10 @@ Hint: Some lines were ellipsized, use -l to show in full.
     $ fleetctl destroy todo-sk@1.service
 
     $ fleetctl journal -f --lines=50 rethinkdb@1
+
+    $ fleetctl ssh rethinkdb@1
+
+
 
 <br/>
 
