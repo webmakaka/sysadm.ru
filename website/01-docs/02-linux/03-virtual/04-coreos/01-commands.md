@@ -32,25 +32,25 @@ permalink: /linux/virtual/coreos/commands/
 <br/>
 
 
-$ sudo systemctl status etcd
-● etcd.service - etcd
-   Loaded: loaded (/usr/lib64/systemd/system/etcd.service; static; vendor preset: disabled)
-   Active: active (running) since Sun 2016-01-17 12:37:31 UTC; 11s ago
- Main PID: 31689 (etcd)
-   Memory: 9.2M
-      CPU: 47ms
-   CGroup: /system.slice/etcd.service
-           └─31689 /usr/bin/etcd
+    $ sudo systemctl status etcd
+    ● etcd.service - etcd
+       Loaded: loaded (/usr/lib64/systemd/system/etcd.service; static; vendor preset: disabled)
+       Active: active (running) since Sun 2016-01-17 12:37:31 UTC; 11s ago
+     Main PID: 31689 (etcd)
+       Memory: 9.2M
+          CPU: 47ms
+       CGroup: /system.slice/etcd.service
+               └─31689 /usr/bin/etcd
 
-Jan 17 12:37:31 my_vm01 systemd[1]: Started etcd.
-Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.455 INFO      |...er
-Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.462 INFO      |...1]
-Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.463 INFO      |...1]
-Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.463 INFO      |...de
-Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.464 INFO      |...'.
-Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.465 INFO      |...'.
-Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.465 INFO      |...'.
-Hint: Some lines were ellipsized, use -l to show in full.
+    Jan 17 12:37:31 my_vm01 systemd[1]: Started etcd.
+    Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.455 INFO      |...er
+    Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.462 INFO      |...1]
+    Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.463 INFO      |...1]
+    Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.463 INFO      |...de
+    Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.464 INFO      |...'.
+    Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.465 INFO      |...'.
+    Jan 17 12:37:32 my_vm01 etcd[31689]: [etcd] Jan 17 12:37:32.465 INFO      |...'.
+    Hint: Some lines were ellipsized, use -l to show in full.
 
 
 <br/>

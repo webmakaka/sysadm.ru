@@ -29,6 +29,11 @@ permalink: /linux/virtual/coreos/
 
 <br/><br/>
 
+Kubernetes - более продвинутый аналог fleet
+
+<br/><br/>
+
+
 Видео:
 
 http://www.youtube.com/watch?v=wxUxtflalE4
