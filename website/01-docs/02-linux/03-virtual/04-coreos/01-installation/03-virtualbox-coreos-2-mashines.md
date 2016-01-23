@@ -5,6 +5,9 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos-2-mashines/
 ---
 
 
+## Инсталляция CoreOS на 2х виртуальных машинах virtualBox
+
+
 <br/>
 
 ### Подготовка виртуального жесткого диска virtualbox с coreos
@@ -47,22 +50,22 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos-2-mashines/
 
     $ mv create-basic-configdrive coreos1-config-drive
 
-https://discovery.etcd.io/new?size=2
+https://discovery.etcd.io/new?size=3
+
 
 Генерирую ключ
 
 Получилось
-https://discovery.etcd.io/ff227745e30d8020b638d1032a91e1fa
-
-При обращении к этому адресу
-
-
-    {"action":"get","node":{"key":"/_etcd/registry/ff227745e30d8020b638d1032a91e1fa","dir":true,"modifiedIndex":981887305,"createdIndex":981887305}}
+https://discovery.etcd.io/126282ce7e06b79eae0d6e1d78c9c73c
 
 
 <br/>
 
     $ vi coreos1-config-drive
+
+Устанавливаю значение для параметра DEFAULT_ETCD_PEER_URLS
+
+    DEFAULT_ETCD_PEER_URLS="http://192.168.1.11:2380"
 
 <br/>
 
@@ -97,12 +100,21 @@ https://discovery.etcd.io/ff227745e30d8020b638d1032a91e1fa
 
     $ vi coreos2-config-drive
 
+
+Устанавливаю значение для параметра DEFAULT_ETCD_PEER_URLS
+
+    DEFAULT_ETCD_PEER_URLS="http://192.168.1.12:2380"
+
+и сетевой адаптер:
+
     Address=192.168.1.12/24
 
 <br/>
 
-    $ ./coreos1-config-drive -H coreos1 -S ~/.ssh/id_rsa.pub -d https://discovery.etcd.io/ff227745e30d8020b638d1032a91e1fa
-    $ ./coreos2-config-drive -H coreos2 -S ~/.ssh/id_rsa.pub -d https://discovery.etcd.io/ff227745e30d8020b638d1032a91e1fa
+Возможно, что и DEFAULT_ETCD_PEER_URLS можно задать таким способом, но у меня не получилось.
+
+    $ ./coreos1-config-drive -H coreos1 -S ~/.ssh/id_rsa.pub -d https://discovery.etcd.io/126282ce7e06b79eae0d6e1d78c9c73c
+    $ ./coreos2-config-drive -H coreos2 -S ~/.ssh/id_rsa.pub -d https://discovery.etcd.io/126282ce7e06b79eae0d6e1d78c9c73c
 
 
 <br/>
@@ -116,21 +128,18 @@ Vdi диск подключаю как жесткий диск. ISO как CD-RO
 Запускаю виртуальные машины.
 
 
+Можно к ним теперь подключиться:
+
     $ ssh core@192.168.1.11
     $ ssh core@192.168.1.12
 
 
 При обращении по адресу:
 
-https://discovery.etcd.io/ff227745e30d8020b638d1032a91e1fa
+https://discovery.etcd.io/126282ce7e06b79eae0d6e1d78c9c73c
 
 
-получаю
+получаю 2 ноды.
 
 
-    {"action":"get","node":{"key":"/_etcd/registry/ff227745e30d8020b638d1032a91e1fa","dir":true,"nodes":[{"key":"/_etcd/registry/ff227745e30d8020b638d1032a91e1fa/69c92e7f1ea3c1b3","value":"coreos1=http://:2380","modifiedIndex":981895808,"createdIndex":981895808}],"modifiedIndex":981887305,"createdIndex":981887305}}
-
-
-Ожидал, что будет представлено 2 узла. Но чего-то пока только один.
-
-Будем копать.
+    {"action":"get","node":{"key":"/_etcd/registry/126282ce7e06b79eae0d6e1d78c9c73c","dir":true,"nodes":[{"key":"/_etcd/registry/126282ce7e06b79eae0d6e1d78c9c73c/19a1d9a8d00f060b","value":"coreos1=http://192.168.1.11:2380","modifiedIndex":982060787,"createdIndex":982060787},{"key":"/_etcd/registry/126282ce7e06b79eae0d6e1d78c9c73c/aa4049b9a55f7765","value":"coreos2=http://192.168.1.12:2380","modifiedIndex":982061040,"createdIndex":982061040}],"modifiedIndex":982059692,"createdIndex":982059692}}

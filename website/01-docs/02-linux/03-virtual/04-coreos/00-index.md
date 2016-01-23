@@ -11,7 +11,7 @@ permalink: /linux/virtual/coreos/
 
 [VirtualBox и CoreOS](/linux/virtual/coreos/installation/virtualbox-coreos/)
 
-[Инсталляция CoreOS на 2х виртуальных машинах virtualBox (не заработало пока)](/linux/virtual/coreos/installation/virtualbox-coreos-2-mashines/)
+[Инсталляция CoreOS на 2х виртуальных машинах virtualBox)](/linux/virtual/coreos/installation/virtualbox-coreos-2-mashines/)
 
 [С помощью ISO диска](/linux/virtual/coreos/installation/iso-disk/)
 
@@ -93,12 +93,9 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/
 <ul>
 
 <li><a href="https://habrahabr.ru/post/244585/" rel="nofollow">CoreOS — Linux для минималистичных кластеров. Коротко</a></li>
+
 <li><a href="https://www.digitalocean.com/community/tutorial_series/getting-started-with-coreos-2" rel="nofollow">Getting Started with CoreOS</a></li>
 
-
-href="http://www.currah.ca/tech/2015/10/08/kubernetes-coreos.html" rel="nofollow">CoreOS w/ Kubernetes Install Guide for VirtualBox</a></li>
-
-
-
+<li><a href="http://www.currah.ca/tech/2015/10/08/kubernetes-coreos.html" rel="nofollow">CoreOS w/ Kubernetes Install Guide for VirtualBox</a></li>
 
 </ul>
