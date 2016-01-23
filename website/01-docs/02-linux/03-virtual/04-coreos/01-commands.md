@@ -108,9 +108,17 @@ permalink: /linux/virtual/coreos/commands/
 
     $ fleetctl unload todo@.service
 
+
+    $ fleetctl submit hello.service
+    $ fleetctl load hello.service
+    $ fleetctl start hello.service
+
+<!--
     $ fleetctl submit todo*
 
     $ fleetctl start todo@{1..3}
+
+    -->
 
     $ fleetctl destroy todo-sk@1.service
 

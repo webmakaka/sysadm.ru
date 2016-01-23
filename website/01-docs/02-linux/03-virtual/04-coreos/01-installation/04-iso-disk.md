@@ -6,7 +6,7 @@ permalink: /linux/virtual/coreos/installation/iso-disk/
 
 Когда буду ставить на хостовую машину. Опишу.
 
-
+https://deis.com/blog/2015/coreos-on-virtualbox
 https://coreos.com/os/docs/latest/installing-to-disk.html
 https://coreos.com/os/docs/latest/booting-with-iso.html
 http://www.youtube.com/watch?v=yiWa0KFJDfI
