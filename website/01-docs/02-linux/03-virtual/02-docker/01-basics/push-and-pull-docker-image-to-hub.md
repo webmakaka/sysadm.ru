@@ -5,10 +5,11 @@ permalink: /linux/virtual/docker/basics/push-and-pull-docker-image-to-hub/
 ---
 
 
-https://hub.docker.com  
+<br/>
 
+### Отправить docker image на hub.docker.com
 
-Создали репо на сайте
+Создали репо на hub.docker.com
 
 Если нужно сделать из контейнера image, сначала нужно выполнить эту команду.
 
@@ -30,9 +31,10 @@ https://hub.docker.com
 
     doceker push <your_docker_hub_login>/<image_name>
 
-==========
 
-Забрать image с ренее созданного репо.
+<br/>
+
+### Забрать image с ренее созданного репо.
 
     doceker pull <your_docker_hub_login>/<image_name>
 

@@ -20,6 +20,10 @@ permalink: /linux/virtual/docker/
 [Инсталляция Docker в Ubuntu 14.04](/linux/virtual/docker/basics/installing-docker-on-ubuntu/)  
 [Инсталляция Docker в CentOS 7](/linux/virtual/docker/basics/installing-docker-on-centos/)  
 
+[Инсталляция Docker-Compose в Ubuntu 14.04 (организовать работу нескольких контейнеров)](/linux/virtual/docker/basics/installing-docker-compose-on-ubuntu/)  
+
+
+
 <br/>
 
 ### Docker Update | Upgrade
@@ -46,6 +50,10 @@ permalink: /linux/virtual/docker/
 <br/>
 
 ### Docker Linking Containers
+
+
+Если я все правильно понимаю. То лучше использовать docker-compose для этих целей. (Когда начинал изучать, еще вроде не было никаких compose'ов)
+
 
 [Пример линковки контейнеров для их совместной работы](/linux/virtual/docker/linking-containers/)  
 
@@ -85,6 +93,8 @@ ___
 
 
 <ul>
+
+<li><a href="http://dou.ua/lenta/articles/docker/" rel="nofollow">Виртуализация процесса разработки, часть 1: Docker</a></li>
 
 <li><a href="http://habrahabr.ru/post/253877/" rel="nofollow">Понимая Docker</a></li>
 <li><a href="http://habrahabr.ru/post/253999/" rel="nofollow">Docker и костыли в продакшене</a></li>
