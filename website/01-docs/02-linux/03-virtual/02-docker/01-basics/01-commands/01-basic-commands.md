@@ -5,9 +5,6 @@ permalink: /linux/virtual/docker/basics/basic-commands/
 ---
 
 
-Подготовленные image  
-https://registry.hub.docker.com/  
-
 Создать свой репо для контейнеров (1 приватный бесплатно + нет ограничений для публичных контейнеров)  
 https://hub.docker.com  
 

@@ -11,6 +11,8 @@ permalink: /linux/virtual/coreos/
 
 [VirtualBox и CoreOS](/linux/virtual/coreos/installation/virtualbox-coreos/)
 
+[Инсталляция CoreOS на 2х виртуальных машинах virtualBox (не заработало пока)](/linux/virtual/coreos/installation/virtualbox-coreos-2-mashines/)
+
 [С помощью ISO диска](/linux/virtual/coreos/installation/iso-disk/)
 
 <br/>
@@ -29,7 +31,10 @@ permalink: /linux/virtual/coreos/
 
 <br/><br/>
 
-Kubernetes - более продвинутый аналог fleet
+fleet - a distributed init system  
+Kubernetes - более продвинутый аналог fleet  
+
+flannel is a virtual network that gives a subnet to each host for use with container runtimes.
 
 <br/><br/>
 

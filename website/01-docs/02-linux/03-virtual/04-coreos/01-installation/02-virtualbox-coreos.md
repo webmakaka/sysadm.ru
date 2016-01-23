@@ -23,7 +23,7 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
 
     $ ./create-coreos-vdi -V stable -d .
 
-Лучше сразу расширить место на диске, чтобы можно было побольше всяких имиджей накачать. По умолчанию совсем мало.
+Лучше сразу расширить место на диске, чтобы можно было побольше всяких имиджей накачать. По умолчанию диск на 698M.
 
     $ VBoxManage modifyhd coreos_production_835.9.0.vdi --resize 20480
 
@@ -48,7 +48,7 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
 
 Далее я добавляю настройки для сети. Имеет смысл, если нет DHCP сервера, который выдаст виртуальной машине какой-нибудь IP адрес. Если такой сервер есть, то можно и не далать этого. Или даже лучше не делать.
 
-Главное правильно задать в конфиге имя сетевого адаптера enp0s8.
+Главное правильно задать в конфиге имя сетевого адаптера enp0s3.
 
     $ vi create-basic-configdrive
 
@@ -64,7 +64,7 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
       runtime: true
       content: |
         [Match]
-        Name=enp0s8
+        Name=enp0s3
 
         [Network]
         DNS=192.168.1.1

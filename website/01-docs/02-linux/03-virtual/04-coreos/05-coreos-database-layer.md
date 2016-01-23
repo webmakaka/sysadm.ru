@@ -85,11 +85,16 @@ core-01
     $ fleetctl start rethinkdb@2 rethinkdb-announce@2
 
 
+
+
 <br/>
 
     // лог
     $ fleetctl journal -f --lines=50 rethinkdb@1
     $ fleetctl journal -f --lines=50 rethinkdb@2
+
+    $ fleetctl journal -f --lines=50 ethinkdb-announce@1
+    $ fleetctl journal -f --lines=50 ethinkdb-announce@2
 
 <br/>
 

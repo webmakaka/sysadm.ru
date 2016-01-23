@@ -55,15 +55,6 @@ permalink: /linux/virtual/coreos/commands/
 
 <br/>
 
-    $ ss -lnt
-    State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              
-    LISTEN     0      128          *:5355                     *:*                  
-    LISTEN     0      128         :::5355                    :::*                  
-    LISTEN     0      128         :::22                      :::*                  
-
-
-<br/>
-
     $ systemctl status etcd2
     ● etcd2.service - etcd2
        Loaded: loaded (/usr/lib64/systemd/system/etcd2.service; disabled; vendor preset: disabled)
@@ -80,8 +71,13 @@ permalink: /linux/virtual/coreos/commands/
     Hint: Some lines were ellipsized, use -l to show in full.
 
 
+<br/>
 
-
+    $ ss -lnt
+    State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              
+    LISTEN     0      128          *:5355                     *:*                  
+    LISTEN     0      128         :::5355                    :::*                  
+    LISTEN     0      128         :::22                      :::*                  
 
 
 
