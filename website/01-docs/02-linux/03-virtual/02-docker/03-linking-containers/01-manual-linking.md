@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Пример линковки контейнеров для их совместной работы
-permalink: /linux/virtual/docker/linking-containers/
+permalink: /linux/virtual/docker/linking-containers/manual-linking/
 ---
 
 

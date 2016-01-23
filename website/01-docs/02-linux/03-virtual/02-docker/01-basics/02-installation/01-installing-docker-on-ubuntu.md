@@ -15,8 +15,13 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 
     # docker -v
 
+**Вариант 2:**
 
-**Вариант 2: устанавливаем docker из репо ubuntu. (не рекомендую)**
+    $ sudo -i
+    # echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+    # curl -sSL https://get.docker.com/ | sh
+
+**Вариант 3: устанавливаем docker из репо ubuntu. (не рекомендую)**
 
     $ sudo su -
 

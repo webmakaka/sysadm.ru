@@ -55,8 +55,9 @@ permalink: /linux/virtual/docker/
 Если я все правильно понимаю. То лучше использовать docker-compose для этих целей. (Когда начинал изучать, еще вроде не было никаких compose'ов)
 
 
-[Пример линковки контейнеров для их совместной работы](/linux/virtual/docker/linking-containers/)  
+[Пример линковки контейнеров для их совместной работы](/linux/virtual/docker/linking-containers/manual-linking/)  
 
+[С помощью Docker Compose](/linux/virtual/docker/linking-containers/docker-compose/)
 
 
 <br/>
