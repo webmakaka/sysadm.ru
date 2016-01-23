@@ -65,7 +65,7 @@ ___
     docker images fedora
 
 
-// Запустить shell в контейнере  
+// Запустить интерактивно контейнер и в контейнере shell
 
     docker run -it centos:centos6 /bin/bash
 

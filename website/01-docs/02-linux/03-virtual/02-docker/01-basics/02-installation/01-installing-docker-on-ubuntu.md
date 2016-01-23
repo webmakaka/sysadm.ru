@@ -63,4 +63,4 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 <br/>
 
     # ps auxwww | grep docker
-    root     19334  0.2  0.1 207696 30472 ?        Ssl  21:22   0:00 /usr/bin/docker
+    root      2476  0.0  0.1 274324 29896 ?        Ssl  10:10   0:00 /usr/bin/docker daemon -g /mnt/dsk0/docker
