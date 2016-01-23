@@ -5,9 +5,6 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos-2-mashines/
 ---
 
 
-## Инсталляция CoreOS на 2х виртуальных машинах virtualBox
-
-
 <br/>
 
 ### Подготовка виртуального жесткого диска virtualbox с coreos
