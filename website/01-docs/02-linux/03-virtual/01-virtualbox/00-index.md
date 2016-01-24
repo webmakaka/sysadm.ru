@@ -42,3 +42,12 @@ permalink: /linux/virtual/virtualbox/
 [Клонирование виртуальных машин VirtualBox в командной строке](/linux/virtual/virtualbox/clone/)
 
 [Замена виртуального диска VirtualBox в командной строке](/linux/virtual/virtualbox/replace-disk/)
+
+
+
+<br/>
+
+### Подготовленные образы VirtualBox с Linux
+
+
+[osboxes](http://www.osboxes.org/virtualbox-images/)
