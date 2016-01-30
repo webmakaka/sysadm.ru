@@ -5,6 +5,8 @@ permalink: /linux/ubuntu/get-info-about-hdd/
 ---
 
 
+# Советую внимательно смотреть на название диска и его разделы.
+
 
     # apt-get install -y smartmontools
 
@@ -207,3 +209,102 @@ permalink: /linux/ubuntu/get-info-about-hdd/
     Selective self-test flags (0x0):
       After scanning selected spans, do NOT read-scan remainder of disk.
     If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+
+
+<br/><br/>
+
+Если верить, написанному в интернете:
+
+
+    1    Raw_Read_Error_Rate
+
+    VALUE это текущее значение (остаток здоровья)
+    THRESH - это значение при котором умрет
+
+
+<br/><br/>
+
+
+### Попытка исключения использования бэд блоков файловой системой,
+
+
+Я в этом также разбираюсь, как свинья в апельсинах!
+
+
+    # dd if=/dev/zero of=/dev/sdb
+    dd: writing to ‘/dev/sdb’: Input/output error
+    1871049+0 records in
+    1871048+0 records out
+    957976576 bytes (958 MB) copied, 8600,9 s, 111 kB/s
+
+<br/>
+
+
+    # fdisk /dev/sdb
+    Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
+    Building a new DOS disklabel with disk identifier 0x3ee07305.
+    Changes will remain in memory only, until you decide to write them.
+    After that, of course, the previous content won't be recoverable.
+
+    Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
+
+    The device presents a logical sector size that is smaller than
+    the physical sector size. Aligning to a physical sector (or optimal
+    I/O) size boundary is recommended, or performance may be impacted.
+
+    Command (m for help): n
+    Partition type:
+       p   primary (0 primary, 0 extended, 4 free)
+       e   extended
+    Select (default p): p
+    Partition number (1-4, default 1): 1
+    First sector (2048-3907029167, default 2048):
+    Using default value 2048
+    Last sector, +sectors or +size{K,M,G} (2048-3907029167, default 3907029167):
+    Using default value 3907029167
+
+    Command (m for help):
+    Command (m for help): w
+    The partition table has been altered!
+
+
+<br/>
+
+    # mkfs.ext4 /dev/sdb1
+    mke2fs 1.42.9 (4-Feb-2014)
+    Filesystem label=
+    OS type: Linux
+    Block size=4096 (log=2)
+    Fragment size=4096 (log=2)
+    Stride=0 blocks, Stripe width=0 blocks
+    122101760 inodes, 488378390 blocks
+    24418919 blocks (5.00%) reserved for the super user
+    First data block=0
+    Maximum filesystem blocks=4294967296
+    14905 block groups
+    32768 blocks per group, 32768 fragments per group
+    8192 inodes per group
+    Superblock backups stored on blocks:
+    	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+    	4096000, 7962624, 11239424, 20480000, 23887872, 71663616, 78675968,
+    	102400000, 214990848
+
+    Allocating group tables: done                            
+    Writing inode tables: done                            
+    Creating journal (32768 blocks): done
+    Writing superblocks and filesystem accounting information:            
+
+    done
+
+
+<br/>
+
+Хотя на таком диске ничего уже хранить важного я бы не стал. С него можно, например, торренты раздавать.
+
+    # badblocks -s /dev/sdb1 > /tmp/badblock.txt
+
+
+Пометка бэд блоков (в дальнейшем помеченные блоки будут игнорироваться):
+
+    # e2fsck -ct /tmp/badblock.txt /dev/sdb1
