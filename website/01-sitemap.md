@@ -58,9 +58,17 @@ ______
 
 ###[Подключаем диск 8TB в Centos 6.X](/devices/hdd/seagate/8tb/)
 
+
+______
+
+<br/>
+
+# Ремонт:
+
+
 ###[Transcend 8GB USB MP3 Player работает в режиме только для чтения](/devices/usb-flash/transcend/8gb/player/)
 
-###[Получить информацию о жестком диске в ubuntu](/linux/ubuntu/get-info-about-hdd/)
+###[Попытка исключения использования бэд блоков файловой системой в ubuntu ](/linux/ubuntu/get-info-about-hdd/)
 
 ______
 

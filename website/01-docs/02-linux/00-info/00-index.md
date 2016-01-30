@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Получить информацию о жестком диске в ubuntu
+title: Попытка исключения использования бэд блоков файловой системой в ubuntu 
 permalink: /linux/ubuntu/get-info-about-hdd/
 ---
 
@@ -214,8 +214,7 @@ permalink: /linux/ubuntu/get-info-about-hdd/
 
 <br/><br/>
 
-Если верить, написанному в интернете:
-
+Если верить написанному в интернете:
 
     1    Raw_Read_Error_Rate
 
