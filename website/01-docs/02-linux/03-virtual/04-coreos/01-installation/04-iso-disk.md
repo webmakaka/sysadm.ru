@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Инсталляция CoreOS в virtualBox
+title: Инсталляция CoreOS на хост с помощью ISO диска
 permalink: /linux/virtual/coreos/installation/iso-disk/
 ---
 
@@ -31,7 +31,7 @@ permalink: /linux/virtual/coreos/installation/iso-disk/
 <script src="http://gist-it.appspot.com/https://github.com/sysadm-ru/coreos-cloud-config/blob/master/cloud-config.yaml">
 </script>
 
-С названием сетевых интерфейсов пока не разобрался как они задаются. Поэтому несколько раз переделывал все шаги, пока не угадал нужный.
+С названием сетевых интерфейсов пока не разобрался как они задаются. Поэтому несколько раз переделывал все шаги, пока не угадал нужный. (На компьютере, котором устанавливаал coreos, было несколько сетевых карт)
 
 Вообще, у кого настроен DHCP, тому имеет смысл выпилить блок с явным указанием настроек сети.
 
