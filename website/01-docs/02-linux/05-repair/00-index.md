@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Попытка исключения использования бэд блоков файловой системой в ubuntu 
+title: Попытка исключения использования бэд блоков файловой системой в ubuntu
 permalink: /linux/ubuntu/get-info-about-hdd/
 ---
 
@@ -222,6 +222,13 @@ permalink: /linux/ubuntu/get-info-about-hdd/
     THRESH - это значение при котором умрет
 
 
+<br/>
+
+
+Почитать, если что:
+
+https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
+
 <br/><br/>
 
 
@@ -238,6 +245,13 @@ permalink: /linux/ubuntu/get-info-about-hdd/
     1871049+0 records in
     1871048+0 records out
     957976576 bytes (958 MB) copied, 8600,9 s, 111 kB/s
+
+
+Лучше запускать, чтобы было видно прогресс.
+
+    # apt-get install -y pv
+
+    # dd if=/dev/zero | pv | dd of=/dev/sdb
 
 <br/>
 
