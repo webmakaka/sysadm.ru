@@ -8,13 +8,15 @@ permalink: /linux/virtual/coreos/installation/iso-disk/
 ### Первая попытка поставить на хост
 
 
-Я сначала на хост поставил ubuntu, чтобы мне было проще. Ну там, чтобы конфиги редактировать, удаленно подключиться и т.д.
+На хосте стартовал ubuntu с USB флешки в режиме для ознакомления.
 
-На хосте у меня уже сгенерирован публичный ключ, который нужно передать coreos.
+На рабочей станции, с которой планирую подключаться к серверу сгенерирова публичный ключ. Его потом нужно прописать в конфиге.
 
 
-Подключаюсь к ubuntu, которую я заменю coreos.
 
+<br/>
+
+### На Ubuntu
 
     # cd /tmp
 
@@ -22,26 +24,14 @@ permalink: /linux/virtual/coreos/installation/iso-disk/
     # chmod +x coreos-install
 
 
-    #  vi cloud-config.yaml
+<br/>
 
-#cloud-config
-ssh_authorized_keys:
-  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxOLyClFAUMRsdq73JsVgU5SnvOgEDXBKCy8g9Y/cMYKTiKfd3Zd2+jrdyDOLx8x/jIy8eKjFrthSomsqM8epf1JxPhtPQ0SEF/uIN87gr/PFINOnEmFc246kZfa8i015/b8piB9pSTmg9ND6i66yNNocBq/o4Sqb1zEEKuyDkn7wudmoMv+n2EXwzpoWn2QCJ4KjDSzpC6hoR+/cka1xM+rl+sPlU+G1kqgmdya7iwnyQg2e5SgxKJFK+ewvubX9gVTfzpUeo55L3yyftDd4a5JlUkCf9vJwJLH7r8OlLviqi8qr8v0lzm4AGjd6aZsQizFFYL5ZxpMLrNmGc3pyN
+### Подготавливю минимальный конфиг
 
-coreos:
-    etcd:
-      name: "core-01"
-    units:
-    - name: 00-eth0.network
-      runtime: true
-      content: |
-        [Match]
-        Name=eth1
+<script src="http://gist-it.appspot.com/https://github.com/sysadm-ru/coreos-cloud-config/blob/master/cloud-config.yaml">
+</script>
 
-        [Network]
-        DNS=192.168.1.1
-        Address=192.168.1.200/24
-        Gateway=192.168.1.1
+С названием сетевых интерфейсов пока не разобрался как они задаются. Поэтому несколько раз переделывал все шаги, пока не угадал нужный.
 
 
 
@@ -49,10 +39,26 @@ coreos:
 https://coreos.com/validate/
 
 
+// Скачиваю конфиг приведенный выше. Разумеется, в него нужно подставить свой rsa ключ
 
-    # wget https://github.com/sysadm-ru/coreos-cloud-config/blob/master/cloud-config.yaml
+    # wget https://raw.githubusercontent.com/sysadm-ru/coreos-cloud-config/master/cloud-config.yaml
+
+// Запускаю инсталляцию
+
     # ./coreos-install -d /dev/sda -C stable -c ./cloud-config.yaml
 
+
+<br/>
+
+### Подключаюсь по SSH к хосту с CoreOS
+
+    $ ssh core@192.168.1.200
+    CoreOS stable (835.11.0)
+    core@localhost ~ $
+
+
+<br/>
+<br/>
 
 
 Может быть полезным:  
