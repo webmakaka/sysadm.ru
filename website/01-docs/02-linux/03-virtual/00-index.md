@@ -4,11 +4,11 @@ title: Виртуализация и контейнеры
 permalink: /linux/virtual/
 ---
 
-###[virtual box](/linux/virtual/virtualbox/)
+### [virtual box](/linux/virtual/virtualbox/)
 
-###[docker](/linux/virtual/docker/)
+### [docker](/linux/virtual/docker/)
 
-###[vagrant](/linux/virtual/vagrant/)
+### [vagrant](/linux/virtual/vagrant/)
 
 
 
