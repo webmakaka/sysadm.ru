@@ -66,6 +66,13 @@ https://coreos.com/validate/
 <br/>
 
 
+Сloud config можно отредактировать, внеся правки в файл.
+
+    # vi /var/lib/coreos-install/user_data
+
+    
+
+
 Может быть полезным:  
 
 https://deis.com/blog/2015/coreos-on-virtualbox  
