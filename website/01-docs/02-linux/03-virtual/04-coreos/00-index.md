@@ -15,6 +15,8 @@ permalink: /linux/virtual/coreos/
 
 [Инсталляция CoreOS на хост с помощью ISO диска](/linux/virtual/coreos/installation/iso-disk/)
 
+[Инсталляция Docker Compose на CoreOS](/linux/virtual/coreos/installation/docker-compose/)
+
 <br/>
 
 ### Network

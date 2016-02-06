@@ -9,7 +9,7 @@ permalink: /sitemap/
 
 # Администрирование серверов:
 
-### [Вебсервера](/linux/webservers/apache/)
+### [Вебсервера](/linux/webservers/)
 
 ### [Базы данных](/linux/databases/)  
 

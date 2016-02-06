@@ -7,6 +7,8 @@ permalink: /linux/virtual/docker/
 Вроде как, в качестве хостовой машины для docker контейнеров отлично подойдет CoreOS. Желающих прокачать скилы по работе с Docker, предлагаю присмотреться и к этому дистрибутиву. Желающие копать совместно, присоединяйтесь.
 
 
+<br/><br/>
+
 Подготовленные image  
 https://hub.docker.com/explore/
 
@@ -45,7 +47,7 @@ https://hub.docker.com/explore/
 
 <br/>
 
-### Docker NetWorking
+### Docker NetWorking (Не особо и нужно. Но возможность такая есть)
 
 [Базовая настройка сети для Docker с использованием моста в Ubuntu (из видеокурса)](/linux/virtual/docker/networking/ubuntu-bridge/)  
 [Задание параметров сетевых интерфейсов docker в Ubuntu (IP, gateway, etc.)](/linux/virtual/docker/networking/ubuntu-bridge/bridge-my-version/)  
@@ -89,6 +91,10 @@ https://hub.docker.com/explore/
 ### Docker в Windows
 
 [В 10 пока не работает](/windows/virtual/docker/)
+
+
+
+
 
 ___
 
