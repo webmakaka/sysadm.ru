@@ -47,19 +47,19 @@ ___
 
 
 
-// взять из репо последнюю версию федоры  
+// взять из репо последнюю версию debian  
 
-    docker pull fedora
+    docker pull debian
 
-// взять все версии федоры  
+// взять все версии debian  
 
-    docker pull -a fedora
+    docker pull -a debian
 
 // получить список скачанных images  
 
     docker images
     docker images --tree
-    docker images fedora
+    docker images debian
 
 
 // Запустить интерактивно контейнер и в контейнере shell
