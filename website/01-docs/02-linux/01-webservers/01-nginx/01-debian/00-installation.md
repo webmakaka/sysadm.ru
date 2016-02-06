@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Инсталляция Nginx Httpd сервер на Debian из пакетов
+title: Инсталляция Nginx сервер на Debian из пакетов
 permalink: /linux/webservers/nginx/debian/installation/
 ---
 
-### Инсталляция Nginx Httpd сервер на Debian из пакетов
+### Инсталляция Nginx сервер на Debian из пакетов
 
 
     # vi /etc/hosts
@@ -38,7 +38,7 @@ permalink: /linux/webservers/nginx/debian/installation/
     Accept-Ranges: bytes
 
 
-### Настройка
+### Настройка конфигов
 
     # cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
 
@@ -50,6 +50,7 @@ permalink: /linux/webservers/nginx/debian/installation/
     # vi /etc/nginx/sites-available/sysadm.ru.config
 
     server {
+        listen     *:8080;
         server_name sysadm.ru;
         access_log /var/log/nginx/sysadm.ru/access.log;
         error_log /var/log/nginx/sysadm.ru/error.log;
@@ -64,13 +65,16 @@ permalink: /linux/webservers/nginx/debian/installation/
 <br/>
 
 
-### Link your virtual host to /etc/nginx/sites-enabled
+### Добавление сайта во включенные
 
     # cd /etc/nginx/sites-enabled/
     # ln -s /etc/nginx/sites-available/sysadm.ru.config
     # service nginx restart
 
+
 <br/>
+
+### Проверка
 
     # vi /projects/sysadm.ru/index.html
 
