@@ -4,15 +4,15 @@ title: Git в Linux
 permalink: /linux/dev/git/
 ---
 
-###[Инсталляция GIT в centos 6.x из исходников](/linux/dev/git/installation/centos/6/)
+### [Инсталляция GIT в centos 6.x из исходников](/linux/dev/git/installation/centos/6/)
 
-###[Некоторые команды GIT](/linux/dev/git/commands/)
+### [Некоторые команды GIT](/linux/dev/git/commands/)
 
-###[Создание сервера GIT в centos 6 с единственным пользователем git](/linux/dev/git/git-server/centos/6/ver1/)
+### [Создание сервера GIT в centos 6 с единственным пользователем git](/linux/dev/git/git-server/centos/6/ver1/)
 
-###[Создание сервера GIT в centos 6 с несколькими пользователями](/linux/dev/git/git-server/centos/6/ver2/)
+### [Создание сервера GIT в centos 6 с несколькими пользователями](/linux/dev/git/git-server/centos/6/ver2/)
 
-###[Инсталляция GITLAB в centos 6 из пакетов](/linux/dev/git/gitlab/centos/6/)
+### [Инсталляция GITLAB в centos 6 из пакетов](/linux/dev/git/gitlab/centos/6/)
 
 <br/>
 
