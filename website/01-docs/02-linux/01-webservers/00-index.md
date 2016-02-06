@@ -6,7 +6,7 @@ permalink: /linux/webservers/
 
 ### Nginx
 
-[Apache](/linux/webservers/nginx/)  
+[Nginx](/linux/webservers/nginx/)  
 
 
 ### Apache

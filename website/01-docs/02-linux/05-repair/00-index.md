@@ -322,4 +322,4 @@ https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
 
 Пометка бэд блоков (в дальнейшем помеченные блоки будут игнорироваться):
 
-    # e2fsck -ct /tmp/badblock.txt /dev/sdb1
+    # e2fsck -l /tmp/badblock.txt /dev/sdb1
