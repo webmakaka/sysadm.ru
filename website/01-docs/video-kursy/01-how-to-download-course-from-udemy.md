@@ -1,12 +1,9 @@
 ---
 layout: page
-title: Видеокурсы для администраторов Linux
+title: Как скачать видеокурс с Udemy
 permalink: /linux/video-courses/how-to-download-course-from-udemy/
 ---
 
-
-
-### Как скачать видеокурс с Udemy
 
 
 Любой курс можно скачать с Udemy с помощью udemy-dl, правда без дополнительных материалов, только видео.
