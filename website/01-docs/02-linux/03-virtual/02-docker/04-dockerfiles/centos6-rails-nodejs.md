@@ -143,7 +143,7 @@ permalink: /linux/virtual/docker/dockerfile/
 
 В моем случае, я еще добавлю параметров.  
 
-    $ docker run -i -t -p 80:8080 -p 3000:3000 -p 9000:9000 -p 1337:1337 --name dev -v /projects:/projects -e SECRET_KEY_BASE=test centos6/rais:v01 /bin/bash
+    $ docker run -i -t -p 80:8080 -p 3000:3000 -p 9000:9000 -p 1337:1337 --name dev -v /mnt/dsk0/projects:/projects -e SECRET_KEY_BASE=test centos6/rais:v01 /bin/bash
 
 -p порт на хост машине, будет соответствовать порту в контейнере.  
 -v позволяет смонтировать каталог файловой системы вместе с контейнером docker, чтобы можно было кодить на хост машине а запускать в контейнере.  
