@@ -43,5 +43,5 @@ $ udemy-dl https://www.udemy.com/oracle-e-business-suite-r12-a...tions-dba/learn
 
 Воспользоваться free preview можно всего 1 раз для аккаунта для каждого курса.
 
-Есть пример с видео для Windows пользователей:
-YouTube: 6wgykHNp6vQ
+
+Работает на начало февраля 2016.
