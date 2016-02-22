@@ -10,3 +10,8 @@ permalink: /linux/dev/nodejs/
 
 
 io.js нужно выпилить!
+
+
+### How to Install Node.js In Ubuntu 15.10
+
+[Brad Traversy, YouTube](https://www.youtube.com/watch?v=AcUfdajsKg8)  
