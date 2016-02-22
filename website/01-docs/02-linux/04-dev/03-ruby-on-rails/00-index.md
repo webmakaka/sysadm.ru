@@ -8,8 +8,8 @@ permalink: /linux/dev/ruby-on-rails/
 <br/>
 
 
-###[Инсталляция Ruby on Rails в Centos 6.X](/linux/dev/ruby-on-rails/installation/centos/6.X/)
+### [Инсталляция Ruby on Rails в Centos 6.X](/linux/dev/ruby-on-rails/installation/centos/6.X/)
 
-###[Сервера приложений для Ruby on Rails проектов](/linux/dev/ruby-on-rails/app-servers/)
+### [Сервера приложений для Ruby on Rails проектов](/linux/dev/ruby-on-rails/app-servers/)
 
-###[Какая-то херня осталась от предыдущих копаний](/linux/dev/ruby-on-rails/additionals/)
+### [Какая-то херня осталась от предыдущих копаний](/linux/dev/ruby-on-rails/additionals/)
