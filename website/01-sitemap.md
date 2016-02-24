@@ -70,6 +70,8 @@ ______
 
 ### [Попытка исключения использования бэд блоков файловой системой в ubuntu ](/linux/ubuntu/get-info-about-hdd/)
 
+### [Samsung Galaxy S4 mini - не работает GPS](/devices/mobile/galaxy-s4-mini/gps-not-working/)
+
 ______
 
 <br/>
