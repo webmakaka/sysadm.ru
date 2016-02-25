@@ -15,5 +15,9 @@ permalink: /devices/wireless/asus-usb-n13-wireless-usb-adapter/
 Если есть способы поправить, напишите в ЛС.
 
 
+Тема на линуксоруме:  
+http://linuxforum.ru/topic/35746
+
+P.S. Сонег Мудаг.
 
 tags: ASUS USB-N13 Wireless USB Adapter плохо работает | не работает в linux
