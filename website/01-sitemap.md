@@ -72,6 +72,7 @@ ______
 
 ### [Samsung Galaxy S4 mini - не работает GPS](/devices/mobile/galaxy-s4-mini/gps-not-working/)
 
+### [Адаптер WiFi 802.11n ASUS USB-N13 Wireless USB Adapter, до 300Мбит/с](/devices/wireless/asus-usb-n13-wireless-usb-adapter/)
 ______
 
 <br/>
