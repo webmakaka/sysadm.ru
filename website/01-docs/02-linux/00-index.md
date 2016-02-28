@@ -4,11 +4,8 @@ title: Linux
 permalink: /linux/
 ---
 
-### Iso образы с Ubuntu и всякие ее модификации:  
 
-http://cdimage.ubuntu.com/
-
-
+### [Iso образы с Ubuntu и всякими ее модификациями](http://cdimage.ubuntu.com/)
 
 ### [Создание USB флешки с Centos 6.5 в Ubuntu](/linux/make-usb-flash/)
 
