@@ -85,25 +85,22 @@ Number  Start   End     Size    File system  Name     Flags
 Получаю UUID диска.
 
 
-  # blkid /dev/sdc1
-  /dev/sdc1: UUID="8e53f2c6-0c0c-4db5-89ed-4935d89c11de" TYPE="ext4"
+    # blkid /dev/sdc1
+    /dev/sdc1: UUID="8e53f2c6-0c0c-4db5-89ed-4935d89c11de" TYPE="ext4"
 
 
 Добавляю запись в fstab, чтобы после перезагрузки раздел диска автоматически смонтировался в файловой системе.
 
-  # vi /etc/fstab
+    # vi /etc/fstab
 
 
 Собственно запись
 
-  # 8 TB
-  UUID=8e53f2c6-0c0c-4db5-89ed-4935d89c11de /mnt/dsk4 ext4 defaults 0 0
+    # 8 TB
+    UUID=8e53f2c6-0c0c-4db5-89ed-4935d89c11de /mnt/dsk4 ext4 defaults 0 0
 
 
 Далее уже команды как вводил в консоль.
-
-
-<br/>
 
     # mount /mnt/dsk4
 
