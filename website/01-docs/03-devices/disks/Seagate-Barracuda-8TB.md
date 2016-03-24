@@ -96,7 +96,7 @@ Number  Start   End     Size    File system  Name     Flags
 
 Собственно запись
 
-    # 8 TB
+    # 8 TB HDD
     UUID=8e53f2c6-0c0c-4db5-89ed-4935d89c11de /mnt/dsk4 ext4 defaults 0 0
 
 

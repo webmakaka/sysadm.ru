@@ -5,6 +5,9 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 ---
 
 
+
+### Инсталляция
+
 **Вариант 1: устанавливаем docker из репо docker (рекоменую)**
 
     # wget -qO- https://get.docker.com/gpg | apt-key add -
@@ -26,6 +29,9 @@ permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
 
     $ docker -v
 
+<br/>
+
+### Настройка
 
 **Предоставить пользователю права для работы с docker**
 
