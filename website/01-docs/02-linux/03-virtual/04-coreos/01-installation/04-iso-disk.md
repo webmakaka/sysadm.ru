@@ -10,14 +10,22 @@ permalink: /linux/virtual/coreos/installation/iso-disk/
 
 На хосте стартовал ubuntu с USB флешки в режиме для ознакомления.
 
-На рабочей станции, с которой планирую подключаться к серверу сгенерирова публичный ключ. Его потом нужно прописать в конфиге.
+На рабочей станции, с которой планирую подключаться к серверу сгенерировал публичный ключ. Его потом нужно прописать в конфиге.
 
+    $ ssh-keygen -t rsa
+
+На все вопросы [Enter]
+
+Че там сгенерировалось:
+
+    $ cat ~/.ssh/id_rsa.pub
 
 
 <br/>
 
 ### На Ubuntu
 
+    $ sudo su -
     # cd /tmp
 
     # wget https://raw.githubusercontent.com/coreos/init/master/bin/coreos-install
@@ -31,6 +39,7 @@ permalink: /linux/virtual/coreos/installation/iso-disk/
 <script src="http://gist-it.appspot.com/https://github.com/sysadm-ru/coreos-cloud-config/blob/master/cloud-config.yaml">
 </script>
 
+
 <br/>
 
 С названием сетевых интерфейсов пока не разобрался как они задаются. Поэтому несколько раз переделывал все шаги, пока не нашел подходящий.
@@ -38,13 +47,23 @@ permalink: /linux/virtual/coreos/installation/iso-disk/
 Тем у кого настроен DHCP, имеет смысл выпилить блок с явным указанием настроек сети.
 
 
-Проверка валидности конфига:  
+<br/>
+
+### Проверяю его валидность
+
 https://coreos.com/validate/
+
+
+
+<br/>
+
+### Поехали ставить уже
 
 
 // Скачиваю конфиг приведенный выше. Разумеется, в него нужно подставить свой rsa ключ.
 
     # wget https://raw.githubusercontent.com/sysadm-ru/coreos-cloud-config/master/cloud-config.yaml
+
 
 // Запускаю инсталляцию
 
@@ -52,6 +71,7 @@ https://coreos.com/validate/
 
 
 Установка успешно завершается.
+
 
 <br/>
 
@@ -65,15 +85,18 @@ https://coreos.com/validate/
 <br/>
 <br/>
 
+### Возможно, полезная информация
 
-Сloud config можно отредактировать, внеся правки в файл.
+
+Сloud config можно отредактировать после установки, внеся правки в файл.
 
     # vi /var/lib/coreos-install/user_data
 
-    
 
+<br/>
+<br/>
 
-Может быть полезным:  
+### Линки на почитать
 
 https://deis.com/blog/2015/coreos-on-virtualbox  
 https://coreos.com/os/docs/latest/installing-to-disk.html  
