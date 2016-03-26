@@ -16,7 +16,7 @@ permalink: /linux/
 
 ## Ubuntu
 
-### [Создание USB флешки с Centos 6.5 в Ubuntu](/linux/make-usb-flash/)
+### [Создание USB флешки с Centos в Ubuntu](/linux/make-usb-flash/)
 
 ### [Шаги после инсталляции Ubuntu](/linux/ubuntu/after-installation/)
 
