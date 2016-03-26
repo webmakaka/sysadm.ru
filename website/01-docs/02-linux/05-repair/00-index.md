@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Попытка исключения использования бэд блоков файловой системой в ubuntu
+title: Попытка исключения использования бэд блоков файловой системой в Ubuntu
 permalink: /linux/ubuntu/get-info-about-hdd/
 ---
 
@@ -232,7 +232,7 @@ https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
 <br/><br/>
 
 
-### Попытка исключения использования бэд блоков файловой системой.
+### Может DD сможет забить диск нулями? И вдруг окажется, что никаких критических ошибок на диске на самом деле нет?
 
 
 Хотя на таком диске ничего уже хранить важного я бы не стал. С него можно, например, торренты раздавать, хранить индийские фильмы.
@@ -255,6 +255,11 @@ https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
 
 <br/>
 
+Вообщем команда dd только подтвердила, что диску не хорошо. Впринципе, она ничем и не помогла.
+
+
+
+### Попытка исключения использования бэд блоков файловой системой
 
     # fdisk /dev/sdb
     Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
@@ -317,9 +322,9 @@ https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
 
 Создаем список бедблоков:
 
-    # badblocks -s /dev/sdb1 > /tmp/badblock.txt
+    # badblocks -s /dev/sdb1 > /tmp/badblocks.txt
 
 
 Пометка бэд блоков (в дальнейшем помеченные блоки будут игнорироваться):
 
-    # e2fsck -l /tmp/badblock.txt /dev/sdb1
+    # e2fsck -l /tmp/badblocks.txt /dev/sdb1

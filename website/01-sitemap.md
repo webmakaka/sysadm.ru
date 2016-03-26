@@ -73,7 +73,7 @@ ______
 
 ### [Transcend 8GB USB MP3 Player работает в режиме только для чтения](/devices/usb-flash/transcend/8gb/player/)
 
-### [Попытка исключения использования бэд блоков файловой системой в ubuntu ](/linux/ubuntu/get-info-about-hdd/)
+### [Попытка исключения использования бэд блоков файловой системой в Ubuntu ](/linux/ubuntu/get-info-about-hdd/)
 
 ### [Samsung Galaxy S4 mini - не работает GPS](/devices/mobile/galaxy-s4-mini/gps-not-working/)
 
