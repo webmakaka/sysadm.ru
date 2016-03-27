@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Инсталляция CoreOS на хост с помощью ISO диска
-permalink: /linux/virtual/coreos/installation/iso-disk/
+title: Инсталляция CoreOS на хостовую машину
+permalink: /linux/virtual/coreos/installation/on-host-mashine/
 ---
 
 
@@ -28,6 +28,8 @@ permalink: /linux/virtual/coreos/installation/iso-disk/
     $ sudo su -
     # cd /tmp
 
+Товарищи из CoreOS подготовили следующий скрипт для инсталляции.
+
     # wget https://raw.githubusercontent.com/coreos/init/master/bin/coreos-install
     # chmod +x coreos-install
 
@@ -42,7 +44,7 @@ permalink: /linux/virtual/coreos/installation/iso-disk/
 
 <br/>
 
-С названием сетевых интерфейсов пока не разобрался как они задаются. Поэтому несколько раз переделывал все шаги, пока не нашел подходящий. Если покопаться в интернете, то можно найти совершенно разные варианты задания имет сетевых.  В компьютере установлено 2 сетевых. Почему enp4s1, пока хз.
+С названием сетевых интерфейсов пока не разобрался как они задаются. Поэтому несколько раз переделывал все шаги, пока не нашел подходящий. Если покопаться в интернете, то можно найти совершенно разные варианты задания имен сетевых интерфейсов.  В компьютере установлено 2, почему enp4s1, пока хз.
 
 Тем у кого настроен DHCP, имеет смысл выпилить блок с явным указанием настроек сети.
 
