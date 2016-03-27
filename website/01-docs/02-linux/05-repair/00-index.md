@@ -322,9 +322,9 @@ https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
 
 Создаем список бедблоков:
 
-    # badblocks -s /dev/sdb1 > /tmp/badblocks.txt
+    # badblocks -s /dev/sdb1 > ~/badblocks_sdb1.txt
 
 
 Пометка бэд блоков (в дальнейшем помеченные блоки будут игнорироваться):
 
-    # e2fsck -l /tmp/badblocks.txt /dev/sdb1
+    # e2fsck -l ~/badblocks_sdb1.txt /dev/sdb1
