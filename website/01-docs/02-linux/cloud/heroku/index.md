@@ -96,15 +96,17 @@ heroku apps:create example
 
 
 
+<br/>
+
 ### Добавление домена на хостинг heroku
 
 **Теперь, чтобы привязать домен к аккаунту требуется предоставить данные с редитки. Раньше можно было и без**
 
 
-После того, как Heroku получил мою карточку. Он стал клянчить деньги. Говорит, мол ресурс стал популярным. Но я то знаю, что пиздит.
+После того, как Heroku получил мою карточку. Он стал клянчить деньги. Говорит, мол ресурс стал популярным. Но я то знаю, что это не совсем так, или даже совсем не так.
 
-    heroku domains:add marley.org
-    heroku domains:add www.marley.org
+    $ heroku domains:add marley.org
+    $ heroku domains:add www.marley.org
 
 <br/>
 
@@ -126,6 +128,8 @@ Troubleshooting
         heroku restart
 
 
+<br/>
+
 ### После долгой паузы, понадобилось подключиться и скопировать файлы с heroku
 
     $ heroku auth:login
@@ -139,3 +143,44 @@ Troubleshooting
 <br/>
 
     $ heroku git:clone -a marley-org
+
+
+
+<br/>
+
+### После долгой паузы, понадобилось подключиться и обновить node.js приложение в Heroku
+
+    $ heroku auth:login
+
+<br/>
+
+    $ heroku apps
+    === My Apps
+    marley-org
+
+
+<br/>
+
+    $ cd ./marley.org
+
+<br/>
+
+
+    $ heroku config:set --app marley-org
+
+
+<br/>
+
+    $ git remote add heroku https://git.heroku.com/marley-org.git
+
+<br/>
+
+    $ git push heroku master
+
+<br/>
+
+    $ heroku config:set NODE_ENV=production
+
+<br/>
+
+    $ heroku ps:scale web=1
