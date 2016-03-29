@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Незапоминаемые команды в принципе
-permalink: /linux/commands/
+permalink: /linux/basics/commands/
 ---
 
 
