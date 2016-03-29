@@ -10,7 +10,7 @@ permalink: /sitemap/
 
 # Linux:
 
-### [Какие-то базовые вещи](/linux/)
+### [Базовые вещи](/linux/basics/)
 
 
 <br/>

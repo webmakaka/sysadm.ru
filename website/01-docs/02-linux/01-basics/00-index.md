@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Linux
-permalink: /linux/
+title: Базовые вещи
+permalink: /linux/basics/
 ---
 
 
@@ -28,3 +28,5 @@ permalink: /linux/
 ## Centos
 
 ### [Centos 7 нужные мне для работы пакеты](/linux/basics/centos/7/steps-after-installation/)
+
+### [Centos 7 монтирование hdd](/linux/basics/centos/7/mount-hdd-disks/)

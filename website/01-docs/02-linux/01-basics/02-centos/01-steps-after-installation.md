@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Centos 7 нужные мне для работы пакеты
-permalink: /linux/centos/7/
+permalink: /linux/basics/centos/7/steps-after-installation/
 ---
 
 // vim
