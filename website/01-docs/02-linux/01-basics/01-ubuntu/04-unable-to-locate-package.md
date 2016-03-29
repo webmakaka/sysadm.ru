@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Ubuntu Unable to locate package 
-permalink: /ubuntu/Install-package-for-missing-libraries/
+title: Ubuntu Unable to locate package
+permalink: /linux/basics/ubuntu/Install-package-for-missing-libraries/
 ---
 
 E: Unable to locate package libstdc++.so.6 (FOR example)

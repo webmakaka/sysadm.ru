@@ -7,8 +7,6 @@ permalink: /linux/
 
 ### [ISO образы с Linux](/linux/distrib/)
 
-### [Unable to locate package *****.so.*](/ubuntu/Install-package-for-missing-libraries/)
-
 ### [Незапоминаемые команды в принципе](/linux/commands/)
 
 
@@ -16,15 +14,17 @@ permalink: /linux/
 
 ## Ubuntu
 
-### [Создание USB флешки с Centos в Ubuntu](/linux/make-usb-flash/)
+### [Шаги после инсталляции Ubuntu](/linux/basics/ubuntu/steps-after-installation/)
 
-### [Шаги после инсталляции Ubuntu](/linux/ubuntu/after-installation/)
+### [Создание USB флешки с Centos в Ubuntu](/linux/basics/ubuntu/make-usb-flash/)
 
-### [Установить в Ubuntu nvidia драйвера вместо opensource](/ubuntu/drivers/nvidia/)
+### [Установить в Ubuntu nvidia драйвера вместо opensource](/linux/basics/ubuntu/drivers/nvidia/)
+
+### [Unable to locate package *****.so.*](/linux/basics/ubuntu/Install-package-for-missing-libraries/)
 
 
 <br/>
 
 ## Centos
 
-### [Centos 7 нужные мне для работы пакеты](/linux/centos/7/)
+### [Centos 7 нужные мне для работы пакеты](/linux/basics/centos/7/steps-after-installation/)

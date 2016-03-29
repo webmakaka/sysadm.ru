@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Создание USB флешки с Centos в Ubuntu
-permalink: /linux/make-usb-flash/
+permalink: /linux/basics/ubuntu/make-usb-flash/
 ---
 <br/>
 
