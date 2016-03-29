@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Centos 7 нужные мне для работы пакеты
+title: Centos 7 монтирование hdd
 permalink: /linux/basics/centos/7/mount-hdd-disks/
 ---
 
