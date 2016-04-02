@@ -32,7 +32,6 @@ permalink: /linux/webservers/nginx/1.8/debian/jessie/proxy/
         listen     80;
         server_name sysadm.ru;
 
-        ## send request back to apache1 ##
         location / {
          proxy_pass  http://webserver;
          proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
