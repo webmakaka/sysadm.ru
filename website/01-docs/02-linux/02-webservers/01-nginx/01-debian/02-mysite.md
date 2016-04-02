@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Настройка работы своего сайта: Nginx, PHP
+title: Настройка работы своего сайта Nginx, PHP
 permalink: /linux/webservers/nginx/debian/mysite/
 ---
 

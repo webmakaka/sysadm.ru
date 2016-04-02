@@ -10,7 +10,7 @@ permalink: /linux/webservers/nginx/
 
 [Инсталляция PHP и настройка для работы с Nginx](/linux/webservers/nginx/debian/php/)  
 
-[Настройка работы своего сайта: Nginx, PHP](/linux/webservers/nginx/debian/mysite/)  
+[Настройка работы своего сайта Nginx, PHP](/linux/webservers/nginx/debian/mysite/)  
 
 <br/>
 
