@@ -15,9 +15,8 @@ permalink: /linux/webservers/nginx/
 
 [Настройка работы своего сайта Nginx, PHP](/linux/webservers/nginx/1.8/debian/jessie/mysite/)  
 
-<!--
 [Настройка Nginx как proxy сервера](/linux/webservers/nginx/1.8/debian/jessie/proxy/)  
--->
+
 
 
 <br/>
