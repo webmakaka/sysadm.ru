@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Настройка работы своего сайта Nginx, PHP
-permalink: /linux/webservers/nginx/debian/mysite/
+title: Настройка работы своего сайта Nginx 1.8, PHP
+permalink: /linux/webservers/nginx/1.8/debian/mysite/
 ---
 
 
@@ -15,9 +15,14 @@ permalink: /linux/webservers/nginx/debian/mysite/
 
     127.0.0.1 sysadm.ru
 
+
+
+<!--
 <br/>
 
     # cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
+
+    -->
 
 <br/>
 
@@ -26,7 +31,12 @@ permalink: /linux/webservers/nginx/debian/mysite/
 
 <br/>
 
-    # vi /etc/nginx/sites-available/sysadm.ru.config
+    # cd /etc/nginx/conf.d/
+    # rm *
+
+<br/>
+
+    # vi /etc/nginx/conf.d/sysadm.ru.config
 
     server {
         listen     *:8080;
@@ -53,15 +63,22 @@ permalink: /linux/webservers/nginx/debian/mysite/
 <br/>
 
 
+<!--
 ### Добавление сайта во включенные
 
     # cd /etc/nginx/sites-enabled/
+
+
 
 Мне не нужен default
 
     # rm default
 
     # ln -s /etc/nginx/sites-available/sysadm.ru.config
+
+
+-->
+
     # service nginx restart
 
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Nginx как web сервер из пакетов в Centos 7
-permalink: /linux/webservers/nginx/centos/7/webserver/
+permalink: /linux/webservers/nginx/1.8/centos/7/webserver/
 ---
 
 
