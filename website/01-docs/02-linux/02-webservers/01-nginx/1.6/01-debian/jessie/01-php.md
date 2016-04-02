@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Инсталляция PHP и настройка для работы с Nginx 1.8
-permalink: /linux/webservers/nginx/1.8/debian/php/
+title: Инсталляция PHP и настройка для работы с Nginx 1.6
+permalink: /linux/webservers/nginx/1.6/debian/jessie/php/
 ---
 
 ### Инсталляция PHP и настройка для работы с Nginx 1.6
@@ -29,12 +29,12 @@ permalink: /linux/webservers/nginx/1.8/debian/php/
 
 <br/>
 
-    # cd /usr/share/nginx/html
+    # cd /var/www/html
 
 <br/>
 
 
-    # rm *
+    # rm index.nginx-debian.html
     # vi index.php
 
     <?php phpinfo(); ?>
@@ -42,13 +42,12 @@ permalink: /linux/webservers/nginx/1.8/debian/php/
 
 <br/>
 
-    # cd /etc/nginx/conf.d
-    # cp default.conf default.conf.orig
+    # cd /etc/nginx/sites-available/
 
 
 <br/>
 
-    # vi default.conf
+    # vi default
 
 
 <br/>

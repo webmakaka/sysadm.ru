@@ -4,32 +4,31 @@ title: Nginx сервер
 permalink: /linux/webservers/nginx/
 ---
 
-## Nginx Debian
+## Nginx Debian Jessie
 
 
 ### Nginx 1.8.X
 
-[Инсталляция Nginx сервера на Debian из пакетов](/linux/webservers/nginx/1.8/debian/installation/)  
+[Инсталляция Nginx сервера на Debian из пакетов](/linux/webservers/nginx/1.8/debian/jessie/installation/)  
+
+[Инсталляция PHP и настройка для работы с Nginx](/linux/webservers/nginx/1.8/debian/jessie/php/)  
+
+[Настройка работы своего сайта Nginx, PHP](/linux/webservers/nginx/1.8/debian/jessie/mysite/)  
 
 <!--
-
-[Инсталляция PHP и настройка для работы с Nginx](/linux/webservers/nginx/1.8/debian/php/)  
-
-[Настройка работы своего сайта Nginx, PHP](/linux/webservers/nginx/1.8/debian/mysite/)  
-
-[Настройка Nginx как proxy сервера](/linux/webservers/nginx/debian/proxy/)  
-
+[Настройка Nginx как proxy сервера](/linux/webservers/nginx/1.8/debian/jessie/proxy/)  
 -->
+
 
 <br/>
 
 ### Nginx 1.6.X
 
-[Инсталляция Nginx сервера на Debian из пакетов](/linux/webservers/nginx/1.6/debian/installation/)  
+[Инсталляция Nginx сервера на Debian из пакетов](/linux/webservers/nginx/1.6/debian/jessie/installation/)  
 
-[Инсталляция PHP и настройка для работы с Nginx](/linux/webservers/nginx/1.6/debian/php/)  
+[Инсталляция PHP и настройка для работы с Nginx](/linux/webservers/nginx/1.6/debian/jessie/php/)  
 
-[Настройка работы своего сайта Nginx, PHP](/linux/webservers/nginx/1.6/debian/mysite/)  
+[Настройка работы своего сайта Nginx, PHP](/linux/webservers/nginx/1.6/debian/jessie/mysite/)  
 
 
 <br/>

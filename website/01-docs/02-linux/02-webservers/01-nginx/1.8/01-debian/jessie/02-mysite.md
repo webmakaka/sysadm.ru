@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Настройка работы своего сайта Nginx 1.6, PHP
-permalink: /linux/webservers/nginx/1.6/debian/mysite/
+title: Настройка работы своего сайта Nginx 1.8, PHP
+permalink: /linux/webservers/nginx/1.8/debian/jessie/mysite/
 ---
 
 
 ### Настройка конфигов
 
-Пусть при обращении по url обращается к ломальному сайту.  
+Пусть при обращении по url обращается к локальному сайту.  
 Добавляю в hosts.
 
 
@@ -15,9 +15,14 @@ permalink: /linux/webservers/nginx/1.6/debian/mysite/
 
     127.0.0.1 sysadm.ru
 
+
+
+<!--
 <br/>
 
     # cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
+
+    -->
 
 <br/>
 
@@ -26,10 +31,15 @@ permalink: /linux/webservers/nginx/1.6/debian/mysite/
 
 <br/>
 
-    # vi /etc/nginx/sites-available/sysadm.ru.config
+    # cd /etc/nginx/conf.d/
+    # rm *
+
+<br/>
+
+    # vi /etc/nginx/conf.d/sysadm.ru.conf
 
     server {
-        listen     *:8080;
+        listen     8080;
         server_name sysadm.ru;
         access_log /projects/sysadm.ru/logs/access.log;
         error_log /projects/sysadm.ru/logs/error.log;
@@ -53,15 +63,22 @@ permalink: /linux/webservers/nginx/1.6/debian/mysite/
 <br/>
 
 
+<!--
 ### Добавление сайта во включенные
 
     # cd /etc/nginx/sites-enabled/
+
+
 
 Мне не нужен default
 
     # rm default
 
     # ln -s /etc/nginx/sites-available/sysadm.ru.config
+
+
+-->
+
     # service nginx restart
 
 
