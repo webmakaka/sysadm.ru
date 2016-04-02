@@ -46,25 +46,31 @@ $ docker info
 ___
 
 
+// поискать в репо что-нибуть  
+
+    $ docker search centos
+
 
 // взять из репо последнюю версию debian  
 
-    docker pull debian
+    $ docker pull debian
 
 // взять все версии debian  
 
-    docker pull -a debian
+    $ docker pull -a debian
 
 // получить список скачанных images  
 
-    docker images
-    docker images --tree
-    docker images debian
+    $ docker images
+    $ docker images --tree
+    $ docker images debian
 
 
 // Запустить интерактивно контейнер и в контейнере shell
 
-    docker run -it centos:centos6 /bin/bash
+    $ docker run -it centos:centos6 /bin/bash
+
+    $ docker run -it debian
 
 
 // Контенеры и имиджи хранятся здесь  

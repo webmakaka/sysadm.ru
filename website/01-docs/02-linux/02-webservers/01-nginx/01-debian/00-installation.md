@@ -1,21 +1,17 @@
 ---
 layout: page
-title: Инсталляция Nginx сервер на Debian из пакетов
+title: Инсталляция Nginx сервера на Debian из пакетов
 permalink: /linux/webservers/nginx/debian/installation/
 ---
 
 ### Инсталляция Nginx сервер на Debian из пакетов
 
 
-    # vi /etc/hosts
-
-    127.0.0.1 sysadm.ru
-
 
 <br/>
 
-    # apt-get update
-    # apt-get install -y vim curl
+    # apt-get update -y && apt-get upgrade -y
+    # apt-get install -y vim curl links
     # apt-get install -y nginx
 
 
@@ -26,19 +22,32 @@ permalink: /linux/webservers/nginx/debian/installation/
 
 <br/>
 
-    # curl -I http://localhost:80  
+    # curl -I http://localhost
     HTTP/1.1 200 OK
     Server: nginx/1.6.2
-    Date: Sat, 06 Feb 2016 15:30:54 GMT
+    Date: Sat, 02 Apr 2016 11:20:19 GMT
     Content-Type: text/html
     Content-Length: 867
-    Last-Modified: Sat, 06 Feb 2016 13:34:31 GMT
+    Last-Modified: Sat, 02 Apr 2016 11:18:48 GMT
     Connection: keep-alive
-    ETag: "56b5f667-363"
+    ETag: "56ffaa98-363"
     Accept-Ranges: bytes
+
+<br/>   
+
+    # links http://localhost
 
 
 ### Настройка конфигов
+
+
+    # vi /etc/hosts
+
+    127.0.0.1 sysadm.ru
+
+
+
+
 
     # cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
 
