@@ -38,6 +38,8 @@ permalink: /linux/webservers/nginx/1.8/debian/jessie/mysite/
 
     # vi /etc/nginx/conf.d/sysadm.ru.conf
 
+<br/>
+
     server {
         listen     8080;
         server_name sysadm.ru;

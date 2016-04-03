@@ -24,6 +24,8 @@ permalink: /linux/webservers/nginx/1.8/debian/jessie/proxy/
 
     # vi /etc/nginx/conf.d/sysadm.ru.conf
 
+<br/>
+
     upstream webserver  {
           server webserver:8080; #Webserver
     }

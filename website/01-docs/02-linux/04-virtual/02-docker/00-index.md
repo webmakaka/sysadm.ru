@@ -66,6 +66,8 @@ https://hub.docker.com/explore/
 
 Если я все правильно понимаю. То лучше использовать docker-compose для этих целей. (Когда начинал изучать, еще вроде не было никаких compose'ов). Для работы с docker-compose нужные версии docker 1.8 и выше (опять же вроде).
 
+Docker compose я пока пользоваться не умею.
+
 
 [Пример линковки контейнеров для их совместной работы](/linux/virtual/docker/linking-containers/manual-linking/)  
 
@@ -87,7 +89,7 @@ https://hub.docker.com/explore/
 
 <br/>
 
-### Docker Clustering
+### Docker Clustering (нужно заново начинать разбираться)
 
 [Clustering docker with swarm](/linux/virtual/docker/clustering/ubuntu/)  
 
@@ -99,7 +101,11 @@ https://hub.docker.com/explore/
 [В 10 пока не работает](/windows/virtual/docker/)
 
 
+<br/>
 
+### Docker практические задачи
+
+[Перенос форума в контейнеры Docker (В работе)](/linux/virtual/docker/odba/)
 
 
 ___

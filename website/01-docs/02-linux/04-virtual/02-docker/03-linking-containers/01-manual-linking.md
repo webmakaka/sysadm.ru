@@ -32,6 +32,8 @@ permalink: /linux/virtual/docker/linking-containers/manual-linking/
     $ docker run -t -i --name mysql_server 96200d183cc5
 
 
+    96200d183cc5  - сгенерированный id созданного имиджа.
+
 <br/>
 
 ### Создаем контейнер с клиентом
