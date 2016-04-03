@@ -66,12 +66,14 @@ https://hub.docker.com/explore/
 
 Если я все правильно понимаю. То лучше использовать docker-compose для этих целей. (Когда начинал изучать, еще вроде не было никаких compose'ов). Для работы с docker-compose нужные версии docker 1.8 и выше (опять же вроде).
 
-Docker compose я пока пользоваться не умею.
-
 
 [Пример линковки контейнеров для их совместной работы](/linux/virtual/docker/linking-containers/manual-linking/)  
 
 [С помощью Docker Compose](/linux/virtual/docker/linking-containers/docker-compose/)
+
+
+Docker compose, как оказалось, я пока пользоваться не умею.  
+http://www.youtube.com/watch?v=gtoT0By8yh4
 
 
 <br/>

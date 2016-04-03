@@ -159,10 +159,9 @@ http://sysadm.ru/linux/webservers/nginx/1.8/debian/jessie/installation/
 Подключился к phpmyadmin.
 
 
-Все пошел футбол смотреть.
 Продолжу, наверное на следующих выходных.
 
 
-Хотелось бы с использованием docker composer
+Хотелось бы с использованием docker compose
 
 И еще мне не нравится, что я под рутом стартую сервер.
