@@ -15,8 +15,12 @@ permalink: /linux/virtual/docker/
 
 <br/><br/>
 
-Подготовленные image  
+[Подготовленные image]  
 https://hub.docker.com/explore/
+
+
+[YouTube Playlist]  
+http://www.youtube.com/playlist?list=PLkA60AVN3hh_6cAz8TUGtkYbJSL2bdZ4h
 
 <br/>
 
@@ -71,9 +75,6 @@ https://hub.docker.com/explore/
 
 [С помощью Docker Compose](/linux/virtual/docker/linking-containers/docker-compose/)
 
-
-Docker compose, как оказалось, я пока пользоваться не умею.  
-http://www.youtube.com/watch?v=gtoT0By8yh4
 
 
 <br/>

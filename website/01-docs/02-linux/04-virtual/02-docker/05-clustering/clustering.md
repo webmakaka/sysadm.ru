@@ -9,6 +9,10 @@ Official Repository:
 https://hub.docker.com/_/swarm/
 
 
+Видющки:  
+http://www.youtube.com/playlist?list=PLkA60AVN3hh8lmRdhPKzsNJvZxJ8dpj4t
+
+
 По материлам видеокурса.
 
 
