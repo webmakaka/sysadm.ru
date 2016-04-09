@@ -9,6 +9,10 @@ permalink: /linux/virtual/docker/networking/ubuntu-bridge/
 
 <br/>
 
+    sudo brctl show docke0
+
+<br/>
+
     sudo service docker stop
     sudo ip link set dev docker0 down
 

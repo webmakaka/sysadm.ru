@@ -6,12 +6,12 @@ permalink: /linux/virtual/docker/
 
 Вроде как, в качестве хостовой машины для docker контейнеров отлично подойдет CoreOS. Желающих прокачать скилы по работе с Docker, предлагаю присмотреться и к этому дистрибутиву. Желающие копать совместно, присоединяйтесь.
 
+
+<br/><br/>
+Здесь собираются материалы по работе с docker, начиная с версии 1.1. Материалы постепенно обновляются по мере необходимости обращения к ним.
 <br/><br/>
 
-
 <strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd!</strong>
-
-
 
 <br/><br/>
 
@@ -22,10 +22,16 @@ https://hub.docker.com/explore/
 [YouTube Playlist]  
 http://www.youtube.com/playlist?list=PLkA60AVN3hh_6cAz8TUGtkYbJSL2bdZ4h
 
-<br/>
+
+[Docker Tutorial]  
+https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
+
+<br/><br/>
+
 
 ### Docker
 
+[Имидж и контейнер, в чем собственно разница?](/linux/virtual/docker/basics/images-and-containers/)  
 
 [Основные команды Docker](/linux/virtual/docker/basics/basic-commands/)  
 <br/>
@@ -96,6 +102,19 @@ http://www.youtube.com/playlist?list=PLkA60AVN3hh_6cAz8TUGtkYbJSL2bdZ4h
 
 [Clustering docker with swarm](/linux/virtual/docker/clustering/ubuntu/)  
 
+
+<br/>
+
+### Информация о запущенных контейнерах
+
+[SYSDIG](/linux/virtual/docker/sysdig/)  
+
+
+<br/>
+
+### Docker Mashine
+
+[Docker Mashine](/linux/virtual/docker/mashine/)  
 
 <br/>
 

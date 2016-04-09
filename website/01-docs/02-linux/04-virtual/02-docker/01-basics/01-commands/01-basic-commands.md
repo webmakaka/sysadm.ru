@@ -12,36 +12,50 @@ ___
 
 $ docker -v  
 
-    Docker version 1.4.1, build 5bc2ff8
+    Docker version 1.9.1, build a34a1d5
 
 $ docker version  
 
-    Client version: 1.4.1
-    Client API version: 1.16
-    Go version (client): go1.3.3
-    Git commit (client): 5bc2ff8
-    OS/Arch (client): linux/amd64
-    Server version: 1.4.1
-    Server API version: 1.16
-    Go version (server): go1.3.3
-    Git commit (server): 5bc2ff8
+    Client:
+     Version:      1.9.1
+     API version:  1.21
+     Go version:   go1.4.2
+     Git commit:   a34a1d5
+     Built:        Fri Nov 20 13:12:04 UTC 2015
+     OS/Arch:      linux/amd64
+
+    Server:
+     Version:      1.9.1
+     API version:  1.21
+     Go version:   go1.4.2
+     Git commit:   a34a1d5
+     Built:        Fri Nov 20 13:12:04 UTC 2015
+     OS/Arch:      linux/amd64
+
 
 
 $ docker info
 
-    Containers: 1
-    Images: 125
+    Containers: 3
+    Images: 87
+    Server Version: 1.9.1
     Storage Driver: aufs
-     Root Dir: /var/lib/docker/aufs
-     Dirs: 127
+     Root Dir: /mnt/dsk1/docker/aufs
+     Backing Filesystem: extfs
+     Dirs: 93
+     Dirperm1 Supported: true
     Execution Driver: native-0.2
-    Kernel Version: 3.13.0-45-generic
-    Operating System: Ubuntu 14.04.1 LTS
+    Logging Driver: json-file
+    Kernel Version: 3.19.0-42-generic
+    Operating System: Ubuntu 14.04.3 LTS
     CPUs: 8
     Total Memory: 23.54 GiB
     Name: workstation
-    ID: 7OQQ:XF7B:TC2S:4UWQ:R4JB:VC3K:Q6TA:5ROP:SUAC:WLJ5:Y7YA:GFAG
+    ID: O6JG:4MOF:M526:3PJV:FQHZ:3ERJ:P7KW:U3VN:D6AZ:C46E:SSH3:IADV
+    Username: marley
+    Registry: https://index.docker.io/v1/
     WARNING: No swap limit support
+
 
 ___
 
@@ -66,19 +80,36 @@ ___
     $ docker images debian
 
 
+// Запустить контейнер и отправить 30 пингов до гугла
+
+    $ docker run -d ubuntu /bin/bash -c "ping 8.8.8.8 -c 30"
+
 // Запустить интерактивно контейнер и в контейнере shell
 
-    $ docker run -it centos:centos6 /bin/bash
+    $ docker run -i -t centos:centos6 /bin/bash
 
-    $ docker run -it debian
+
+
+<br/>
+
+    -d - Detached mode (зупустится в фоне)
+
+<br/>    
+
+    $ docker run -i -t -d debian
+
+
+Задать имя, иначе она будет выбрано самостоятельно  
+
+    $ docker run -i -t -d debian --name myDebianServ
 
 
 // Контенеры и имиджи хранятся здесь  
 
-cat /var/lib/docker/aufs/diff/<container_id>
+    $ cat /var/lib/docker/aufs/diff/<container_id>
 
-ls -l /var/lib/docker/containers  
-ls -l /var/lib/docker/containers | wc -l
+    $ ls -l /var/lib/docker/containers  
+    $ ls -l /var/lib/docker/containers | wc -l
 
 ___
 
@@ -94,32 +125,40 @@ ___
 
 // Последний стартовавший контейнер.  
 
-    docker ps -l
+    $ docker ps -l
 
 
 // Старт стоп
 
-    docker start <container_id>
-    docker stop <container_id>
-    docker restart <container_id>
+    $ docker start <container_id>
+    $ docker stop <container_id>
+    $ docker kill <container_id>
+    $ docker restart <container_id>
+
+
+// Сколько жрет ресурсов
+
+    $ docker stats <container_id>
+    $ docker top <container_id> -ef
 
 // Отключиться от контейнера docker без его остановки:
+
     CTRL + P + Q
 
 // Подключиться  
 
-    docker attach <container_id>
+    $ docker attach <container_id>
 
 // Подключиться еще одной сессией к контейнеру
 
-    docker exec -it <container_id> bash
+    $ docker exec -it <container_id> bash
 
 ___
 
 
-    docker top <container_id>
-    docker inspect <container_id>
-    docker logs <container_id>
+    $ docker top <container_id>
+    $ docker inspect <container_id>
+    $ docker logs <container_id>
 
 ---
 
@@ -150,8 +189,8 @@ ___
 
 // Удалить контейнер
 
-    docker rm  <container_id>
-    docker rm -f <container_id>
+    $ docker rm  <container_id>
+    $ docker rm -f <container_id>
 
 
 // stop all Docker containers:  

@@ -135,7 +135,17 @@ permalink: /linux/virtual/docker/dockerfile/
 
 Создать image с удалением промежуточных контейнеров в случае успешного билда  
 
-    $ docker build --rm -t centos6/rais:v01 .  
+    $ docker build --rm -t centos6/rais:v01 .
+
+    -t - tag (название создаваемого image)
+    . -  Брать Dockerfile в текущем каталоге
+
+<br/>
+
+    Теперь стало возможным указать название docerfile.
+    -f myDockerFile
+
+
 
 Создать контейнер на базе подготовленного image
 

@@ -103,3 +103,30 @@ http://alexecollins.com/docker-linking-containers/
 
 
 https://docs.docker.com/userguide/dockerlinks/#docker-container-linking
+
+
+
+<!--
+
+<br/>
+
+###
+
+
+    src - source
+    rcvr - reciever
+    ali-src - alias
+
+    docker run --name=src -d img
+
+    docker run --name=rcvr --link=src:ali-src -it ubuntu:15.04 /bin/bash
+
+
+    docker inspect rcvr
+
+    docker attach rcvr
+    env
+    env | grep ALI
+    cat /etc/hosts
+
+-->
