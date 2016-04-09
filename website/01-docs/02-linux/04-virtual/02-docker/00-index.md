@@ -100,7 +100,7 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 ### Docker Clustering (нужно заново начинать разбираться)
 
-[Clustering docker with swarm](/linux/virtual/docker/clustering/ubuntu/)  
+[Clustering docker with swarm](/linux/virtual/docker/swarm/)  
 
 
 <br/>
