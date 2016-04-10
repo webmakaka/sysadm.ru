@@ -23,3 +23,9 @@ permalink: /linux/webservers/
 ### Zend Framework 2 - Installing in Windows
 
 [Brad Traversy, YouTube](http://www.youtube.com/watch?v=NJVS5yt5fHw)  
+
+
+
+### HAproxy
+
+[HAproxy configuration and Load balancing, YouTube](https://www.youtube.com/watch?v=L6U0PcESQ4Y)
