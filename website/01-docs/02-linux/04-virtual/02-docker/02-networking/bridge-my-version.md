@@ -5,6 +5,28 @@ permalink: /linux/virtual/docker/networking/ubuntu-bridge/bridge-my-version/
 ---
 
 
+
+
+<br/>
+
+
+Сейчас, они что-то там пилят, но пока все сырое.
+
+
+https://github.com/docker/libnetwork/blob/master/docs/overlay.md
+
+https://github.com/docker/libnetwork
+
+
+Можно посмотреть видео из плейлиста, приведенное на первой странице.
+И поискать consul.
+
+
+<br/>
+
+
+### Как делал я (когда только приступил изучать и мне очень не хватало отсутствие у контейнеров ip адресации)
+
 Может есть вариант и попроще.
 
     $ sudo service docker.io status

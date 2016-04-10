@@ -65,7 +65,7 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 ### Docker NetWorking (Не особо и нужно. Но возможность такая есть)
 
-[Базовая настройка сети для Docker с использованием моста в Ubuntu (из видеокурса)](/linux/virtual/docker/networking/ubuntu-bridge/)  
+[Настройка моста для работы с Docker в Ubuntu](/linux/virtual/docker/networking/ubuntu-bridge/)  
 [Задание параметров сетевых интерфейсов docker в Ubuntu (IP, gateway, etc.)](/linux/virtual/docker/networking/ubuntu-bridge/bridge-my-version/)  
 
 
@@ -74,7 +74,8 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 ### Docker Linking Containers
 
 
-Если я все правильно понимаю. То лучше использовать docker-compose для этих целей. (Когда начинал изучать, еще вроде не было никаких compose'ов). Для работы с docker-compose нужные версии docker 1.8 и выше (опять же вроде).
+Если я все правильно понимаю. То лучше использовать docker-compose для этих целей.
+Для работы с docker-compose нужные версии docker 1.8 и выше (опять же вроде).
 
 
 [Пример линковки контейнеров для их совместной работы](/linux/virtual/docker/linking-containers/manual-linking/)  

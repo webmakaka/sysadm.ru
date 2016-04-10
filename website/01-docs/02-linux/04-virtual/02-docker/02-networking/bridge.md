@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Базовая настройка сети для Docker с использованием моста в Ubuntu
+title: Настройка моста для работы с Docker в Ubuntu
 permalink: /linux/virtual/docker/networking/ubuntu-bridge/
 ---
+
 
 
     sudo apt-get install bridge-utils
