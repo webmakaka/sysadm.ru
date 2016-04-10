@@ -13,7 +13,7 @@ https://hub.docker.com/_/mysql/
 
 <br/>
 
-    $ docker run --name mysql_server -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
+    $ docker run --name mysql_server -e MYSQL_ROOT_PASSWORD=P@SSW0RD -d mysql
 
 <br/>
 
@@ -29,6 +29,8 @@ https://hub.docker.com/_/mysql/
 
 
     $ cd ~/
+
+<br/>
 
     $ vi mysql_serv.yml
 
