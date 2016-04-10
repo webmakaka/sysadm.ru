@@ -9,7 +9,7 @@ permalink: /linux/virtual/docker/
 
 <br/><br/>
 Здесь собираются материалы по работе с docker, начиная с версии 1.1. Материалы постепенно обновляются по мере необходимости обращения к ним.
-Если копаете, можете помочь с обновлением и добавлением знаний. 
+Если копаете, можете помочь с обновлением и добавлением знаний.
 <br/><br/>
 
 <strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd!</strong>
@@ -75,8 +75,8 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 ### Docker Linking Containers
 
 
-Если я все правильно понимаю. То лучше использовать docker-compose для этих целей.
-Для работы с docker-compose нужные версии docker 1.8 и выше (опять же вроде).
+Если я все правильно понимаю, то лучше использовать docker-compose для этих целей.
+Для работы с docker-compose нужные версии docker 1.8 и выше.
 
 
 [Пример линковки контейнеров для их совместной работы](/linux/virtual/docker/linking-containers/manual-linking/)  
@@ -92,11 +92,13 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 [Скопировать image на другой HOST](/linux/virtual/docker/basics/copying-images-to-other-hosts/)  
 [Скопировать image на hub.docker.com и забрать image с него](/linux/virtual/docker/basics/push-and-pull-docker-image-to-hub/)  
 
+
 <br/>
 
-### Dockerfile
+### Работа с официальными и не только контейнерами
 
-[Мой Dockerfile для разработки rails и node.js приложений в centos 6](/linux/virtual/docker/dockerfile/)  
+[Работа с официальным mysql Docker контейнером](/linux/virtual/docker/official/containers/mysql/)  
+
 
 <br/>
 
@@ -130,6 +132,12 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 ### Docker практические задачи
 
 [Перенос форума в контейнеры Docker (В работе)](/linux/virtual/docker/odba/)
+
+<br/>
+
+### Dockerfile
+
+[Мой Dockerfile для разработки rails и node.js приложений в centos 6](/linux/virtual/docker/dockerfile/)  
 
 
 ___

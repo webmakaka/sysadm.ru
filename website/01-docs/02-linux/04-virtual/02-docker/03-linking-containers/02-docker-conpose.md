@@ -15,20 +15,6 @@ permalink: /linux/virtual/docker/linking-containers/docker-compose/
 
 <br/>
 
-
-
-
-
-
-
-    $ docker-compose up --no-deps -d postgres
-
-    $ docker-compose ps
-
-
-
-
-
     $ docker pull tomcat
 
     $ docker history tomcat | grep -i expose

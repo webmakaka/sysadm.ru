@@ -22,7 +22,7 @@ permalink: /linux/virtual/docker/odba/
 
 -->
 
-Раз мы используем docker, то я пожалуй возьму уже подготовленное окружение для mysql.
+Раз мы используем docker, то я пожалуй возьму уже подготовленное окружение для mysql. Web Server собиру сам.
 
 
     $ docker pull debian
@@ -30,7 +30,7 @@ permalink: /linux/virtual/docker/odba/
 
 <br/>
 
-
+<!--
     $ docker run --name mysql_server -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
 
 <br/>
@@ -43,9 +43,12 @@ permalink: /linux/virtual/docker/odba/
 
     $ docker stop mysql_server
 
+
+-->
+
 <br/>
 
-### Nginx c PHP я подниму сам и сделаю image
+### Nginx c PHP я поднимаю сам и делаю image
 
 
     $ docker run -it --name nginx_server -d debian
@@ -72,39 +75,90 @@ http://sysadm.ru/linux/webservers/nginx/1.8/debian/jessie/installation/
 
 
 
-<!--
+<br/>
 
-===================================================
+### Вариант линковски с помощью Docker compose
 
 
+    $ cd ~/
 
-    $ vi docker-compose.yml
+    $ vi my_web_serv.yml
 
 <br/>
+
+
 
     web_server:
-     image: marley/nginx_server
-     ports:
-        - "80:8080"
-     links:
-        - mysql_server       
+      container_name: nginx_serv
+      image: marley/nginx_server:1
+      command: nginx -g 'daemon off;'
+      ports:
+         - "8080:8080"
+      links:
+         - mysql_server       
 
     mysql_server:
+      container_name: mysql_serv
       image: mysql:latest
       environment:
-        MYSQL_ROOT_PASSWORD: "my-secret-pw"
+         - MYSQL_ROOT_PASSWORD=P@SSW0RD
+
 
 <br/>
 
 
-    $ docker-compose up --no-deps -d web_server
+    $ docker-compose -f my_web_serv.yml up -d web_server
+
+<br/>
+
+    $ docker-compose -f my_web_serv.yml ps
+       Name                Command             State           Ports          
+    -------------------------------------------------------------------------
+    mysql_serv   docker-entrypoint.sh mysqld   Up      3306/tcp               
+    nginx_serv   nginx -g daemon off;          Up      0.0.0.0:8080->8080/tcp
 
 
--->
+<br/>
+
+    $ docker ps
+    CONTAINER ID        IMAGE                   COMMAND                  CREATED              STATUS              PORTS                    NAMES
+    778b1b3b6c58        marley/nginx_server:1   "nginx -g 'daemon off"   About a minute ago   Up 59 seconds       0.0.0.0:8080->8080/tcp   nginx_serv
+    72e78734dd63        mysql:latest            "docker-entrypoint.sh"   About a minute ago   Up About a minute   3306/tcp                 mysql_serv
+
+
+
+
+При необходимости:
+
+    $ docker-compose -f my_web_serv.yml stop
+
+    $ docker-compose -f my_web_serv.yml rm
+
+
+
+Можно с хоста попробовать подключиться к вебсерверу:  
+
+http://localhost:8080/
+
+(502 Bad Gateway)
+
+
+<br/>
+
+### Вариант линковски без Docker compose
 
 
     $ docker run -t -i --name web_server -p 80:8080 --link mysql_server:mysql_server marley/nginx_server:1
 
+
+<br/>
+
+
+### Работа внутри контейнера:
+
+
+    $ docker exec -it nginx_serv bash
+    $ service php5-fpm restart
 
     # cd /projects/odba.ru/public
     # rm *
@@ -118,31 +172,44 @@ http://sysadm.ru/linux/webservers/nginx/1.8/debian/jessie/installation/
 
 Поэтому:
 
-    # wget https://files.phpmyadmin.net/phpMyAdmin/4.5.0.2/phpMyAdmin-4.5.0.2-all-languages.tar.bz2
     # apt-get install -y tar bzip2
 
+    # wget https://files.phpmyadmin.net/phpMyAdmin/4.5.0.2/phpMyAdmin-4.5.0.2-all-languages.tar.bz2
     # tar -jxf phpMyAdmin-4.5.0.2-all-languages.tar.bz2
+
+    # rm phpMyAdmin-4.5.0.2-all-languages.tar.bz2
+    # mv phpMyAdmin-4.5.0.2-all-languages phpmyadmin
+    # cd phpmyadmin
 
 <br/>
 
     # env
     MYSQL_SERVER_ENV_MYSQL_VERSION=5.7.11-1debian8
-    HOSTNAME=43a5f7002bec
+    HOSTNAME=56f762e4adb6
     MYSQL_SERVER_ENV_MYSQL_MAJOR=5.7
-    TERM=xterm
+    MYSQL_SERV_PORT_3306_TCP_ADDR=172.17.0.2
     MYSQL_SERVER_PORT_3306_TCP=tcp://172.17.0.2:3306
+    MYSQL_SERV_PORT=tcp://172.17.0.2:3306
     MYSQL_SERVER_PORT_3306_TCP_PORT=3306
     MYSQL_SERVER_PORT=tcp://172.17.0.2:3306
+    MYSQL_SERV_ENV_MYSQL_MAJOR=5.7
+    MYSQL_SERV_PORT_3306_TCP_PORT=3306
     MYSQL_SERVER_PORT_3306_TCP_ADDR=172.17.0.2
+    MYSQL_SERV_ENV_MYSQL_VERSION=5.7.11-1debian8
     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-    PWD=/projects/odba.ru/public
-    MYSQL_SERVER_ENV_MYSQL_ROOT_PASSWORD=my-secret-pw
+    MYSQL_SERV_PORT_3306_TCP_PROTO=tcp
+    PWD=/projects/odba.ru/public/phpmyadmin
+    MYSQL_SERVER_ENV_MYSQL_ROOT_PASSWORD="P@SSW0RD"
+    MYSQL_SERV_PORT_3306_TCP=tcp://172.17.0.2:3306
     SHLVL=1
     HOME=/root
-    MYSQL_SERVER_NAME=/web_server/mysql_server
+    MYSQL_SERV_NAME=/nginx_serv/mysql_serv
+    MYSQL_SERVER_NAME=/nginx_serv/mysql_server
+    MYSQL_SERV_ENV_MYSQL_ROOT_PASSWORD="P@SSW0RD"
     MYSQL_SERVER_PORT_3306_TCP_PROTO=tcp
     _=/usr/bin/env
-    OLDPWD=/projects/odba.ru/public/setup/frames
+    OLDPWD=/projects/odba.ru/public
+
 
 
 <br/>
@@ -158,10 +225,9 @@ http://sysadm.ru/linux/webservers/nginx/1.8/debian/jessie/installation/
 
 Подключился к phpmyadmin.
 
+http://localhost:8080/phpmyadmin/
 
-Продолжу, наверное на следующих выходных.
 
+Пароль, нужно набирать с кавычками. Т.е. "P@SSW0RD"
 
-Хотелось бы с использованием docker compose
-
-И еще мне не нравится, что я под рутом стартую сервер.
+Все подключился к консоли phpmyadmin
