@@ -11,9 +11,9 @@ permalink: /linux/virtual/coreos/
 
 [VirtualBox и CoreOS](/linux/virtual/coreos/installation/virtualbox-coreos/)
 
-[Инсталляция CoreOS на 2х виртуальных машинах virtualBox](/linux/virtual/coreos/installation/virtualbox-coreos-2-mashines/)
+[Инсталляция CoreOS на 2х виртуальных машинах virtualBox](/linux/virtual/coreos/installation/virtualbox-coreos-2-machines/)
 
-[Инсталляция CoreOS на хостовую машину](/linux/virtual/coreos/installation/on-host-mashine/)
+[Инсталляция CoreOS на хостовую машину](/linux/virtual/coreos/installation/on-host-machine/)
 
 [Инсталляция Docker Compose на CoreOS](/linux/virtual/coreos/installation/docker-compose/)
 

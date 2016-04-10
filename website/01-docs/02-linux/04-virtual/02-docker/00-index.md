@@ -116,9 +116,9 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 <br/>
 
-### Docker Mashine
+### Docker Machine
 
-[Docker Mashine](/linux/virtual/docker/mashine/)  
+[Docker Machine](/linux/virtual/docker/machine/)  
 
 <br/>
 

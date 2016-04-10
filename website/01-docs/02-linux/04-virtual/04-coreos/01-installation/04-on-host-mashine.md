@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция CoreOS на хостовую машину
-permalink: /linux/virtual/coreos/installation/on-host-mashine/
+permalink: /linux/virtual/coreos/installation/on-host-machine/
 ---
 
 
