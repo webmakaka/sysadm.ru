@@ -29,7 +29,9 @@ permalink: /linux/virtual/virtualbox/decrease-disk-space/
 Когда выполнил такие операции, виртуальная машина стала занимать не 8 ГБ а 3 ГБ.
 
 
-2) vboxmanage modifyhd vm_oel62_oracle112_dsk1.vdi compact
+2) Выполняю действия по уменьшению диска
+
+    vboxmanage modifyhd vm_oel62_oracle112_dsk1.vdi compact
 
 
 В результате мне пришлось сконвертировать vmdk в vdi.
