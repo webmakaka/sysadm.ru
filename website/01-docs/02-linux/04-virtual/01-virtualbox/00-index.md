@@ -43,11 +43,12 @@ permalink: /linux/virtual/virtualbox/
 
 [Замена виртуального диска VirtualBox в командной строке](/linux/virtual/virtualbox/replace-disk/)
 
+[Уменьшить размер ранимаемого виртуальной машиной дискового пространства](/linux/virtual/virtualbox/decrease-disk-space/)
 
+[Конвертировать wmdk в vdi](/linux/virtual/virtualbox/convert-vmdk-vdi/)
 
 <br/>
 
 ### Подготовленные образы VirtualBox с Linux
 
-
-[osboxes](http://www.osboxes.org/virtualbox-images/)
+<a href="http://www.osboxes.org/virtualbox-images/" rel="nofollow">osboxes</a>

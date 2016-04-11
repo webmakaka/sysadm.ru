@@ -4,7 +4,7 @@ title: Замена виртуального диска VirtualBox в коман
 permalink: /linux/virtual/virtualbox/replace-disk/
 ---
 
-Нужно заменить видртуальной машины hfpd3.vmdk
+Нужно заменить диск виртуальной машины hfpd3.vmdk
 Тупо заменить диск не получилось.
 
 
