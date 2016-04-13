@@ -61,3 +61,5 @@ permalink: /devices/cisco/routers/1941/
 <a href="https://gist.github.com/sysadm-ru/ced2e08bfac0ef55aa96"> Cisco 1841 (version 12.4)</a>
 
 <a href="https://gist.github.com/sysadm-ru/0c9889febf255569dc21">Cisco Router 1921/к9 (version 15.3)</a>
+
+<a href="https://gist.github.com/sysadm-ru/cbdef23bdf6b0b3249b93ca524b67a86#file-cisco-nme-xd-48es-2s-p">Cisco NME-XD-48ES-2S-P</a>
