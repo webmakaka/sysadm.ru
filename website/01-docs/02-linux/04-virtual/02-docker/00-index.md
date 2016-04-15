@@ -140,6 +140,14 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 [Мой Dockerfile для разработки rails и node.js приложений в centos 6](/linux/virtual/docker/dockerfile/)  
 
 
+<br/>
+
+### Примеры работы с Docker
+
+Pluralsight - Docker for Web Developers
+
+[06. Building Custom Images with Dockerfile](/linux/virtual/docker/video-course/)
+
 ___
 
 <br/>
