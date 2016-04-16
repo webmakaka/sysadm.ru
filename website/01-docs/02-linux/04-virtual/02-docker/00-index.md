@@ -34,16 +34,15 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 [Имидж и контейнер, в чем собственно разница?](/linux/virtual/docker/basics/images-and-containers/)  
 
-[Основные команды Docker](/linux/virtual/docker/basics/basic-commands/)  
+[Основные команды Docker](/linux/virtual/docker/basics/basic-commands/)
+
 <br/>
 
 ### Docker Installation
 
 
-[Инсталляция Docker в Ubuntu 14.04](/linux/virtual/docker/basics/installing-docker-on-ubuntu/)  
-[Инсталляция Docker в CentOS 7](/linux/virtual/docker/basics/installing-docker-on-centos/)  
-
-[Инсталляция Docker-Compose в Ubuntu 14.04 (организовать работу нескольких контейнеров)](/linux/virtual/docker/basics/installing-docker-compose-on-ubuntu/)  
+[Инсталляция Docker в Ubuntu 14.04](/linux/virtual/docker/installation/ubuntu/)  
+[Инсталляция Docker в CentOS 7](/linux/virtual/docker/installation/centos/)  
 
 
 
@@ -56,10 +55,10 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 <br/>
 
-### Переместить файлы Docker
+### Docker Tools
 
-
-[Переместить файлы Docker](/linux/virtual/docker/basics/move-docker-files/)  
+[Инсталляция Docker-Compose в Ubuntu 14.04 (организовать совместную работу нескольких контейнеров)](/linux/virtual/docker/toosl/docker-compose/installation/)  
+[Docker Machine](/linux/virtual/docker/docker-machine/)  
 
 
 <br/>
@@ -114,11 +113,6 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 [SYSDIG](/linux/virtual/docker/sysdig/)  
 
 
-<br/>
-
-### Docker Machine
-
-[Docker Machine](/linux/virtual/docker/machine/)  
 
 <br/>
 
@@ -131,6 +125,7 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 ### Docker практические задачи
 
+[Переместить файлы Docker](/linux/virtual/docker/basics/move-docker-files/)  
 [Перенос форума в контейнеры Docker (В работе)](/linux/virtual/docker/odba/)
 
 <br/>
@@ -142,7 +137,7 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 <br/>
 
-### Примеры работы с Docker
+### Примеры конфигов работы с Docker
 
 [Pluralsight - Docker for Web Developers](https://github.com/sysadm-ru/Docker-for-Web-Developers)
 

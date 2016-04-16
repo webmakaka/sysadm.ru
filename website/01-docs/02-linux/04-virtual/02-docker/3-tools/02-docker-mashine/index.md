@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Docker Machine
-permalink: /linux/virtual/docker/machine/
+permalink: /linux/virtual/docker/docker-machine/
 ---
 
 https://docs.docker.com/machine/install-machine/

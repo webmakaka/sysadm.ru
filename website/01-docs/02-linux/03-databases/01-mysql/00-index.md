@@ -26,6 +26,4 @@ permalink: /linux/databases/mysql/
 
 
 
-
-
-[Dump](/linux/databases/mysql/dump/)
+[mysqldump](/linux/databases/mysql/mysqldump/)

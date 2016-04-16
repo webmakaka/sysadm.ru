@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Docker в Ubuntu 14.04
-permalink: /linux/virtual/docker/basics/installing-docker-on-ubuntu/
+permalink: /linux/virtual/docker/installation/ubuntu/
 ---
 
 
