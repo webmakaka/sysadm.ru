@@ -17,6 +17,7 @@ permalink: /linux/virtual/coreos/
 
 [Инсталляция Docker Compose на CoreOS](/linux/virtual/coreos/installation/docker-compose/)
 
+
 <br/>
 
 ### Network

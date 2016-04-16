@@ -7,6 +7,9 @@ permalink: /linux/basics/
 
 ### [ISO образы с Linux](/linux/basics/distrib/)
 
+
+### [Архиваторы](/linux/basics/archives/)
+
 ### [Незапоминаемые команды в принципе](/linux/basics/commands/)
 
 ### [Информацию по имеющемуся оборудованию](/linux/basics/hardware-info/)

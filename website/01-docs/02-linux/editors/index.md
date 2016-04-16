@@ -71,8 +71,8 @@ https://atom.io/packages/tabs-to-spaces
 
 Atom Beautify - позволит одной командой сделать код более читаемым. Актуально в первую очередь для уже сконвертированного java script кода.
 
-jshint - подсказка по ошибкам в javascrpt
-
+jshint - подсказка по ошибкам в javascrpt  
+autosave - автосохранение
 
 <br/>
 

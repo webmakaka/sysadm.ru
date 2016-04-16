@@ -172,13 +172,11 @@ http://localhost:8080/
 
 Поэтому:
 
-    # apt-get install -y tar bzip2
 
-    # wget https://files.phpmyadmin.net/phpMyAdmin/4.5.0.2/phpMyAdmin-4.5.0.2-all-languages.tar.bz2
-    # tar -jxf phpMyAdmin-4.5.0.2-all-languages.tar.bz2
-
-    # rm phpMyAdmin-4.5.0.2-all-languages.tar.bz2
-    # mv phpMyAdmin-4.5.0.2-all-languages phpmyadmin
+    # wget https://files.phpmyadmin.net/phpMyAdmin/4.6.0/phpMyAdmin-4.6.0-all-languages.7z
+    # 7z x ./phpMyAdmin-4.6.0-all-languages.7z
+    # rm phpMyAdmin-4.6.0-all-languages.7z
+    # mv phpMyAdmin-4.6.0-all-languages phpmyadmin
     # cd phpmyadmin
 
 <br/>
@@ -221,6 +219,23 @@ http://localhost:8080/
     # vi config.inc.php
 
 Прописываю вместо localhost ip сервера из environment.
+
+
+    # vi /etc/php5/fpm/php.ini
+
+    post_max_size = 50M
+    upload_max_filesize = 50M
+
+
+Ошибка при импорте
+
+    # cd /etc/nginx/conf.d/
+    # vi odba.ru.conf
+
+
+    server {
+        ***
+        client_max_body_size 50m;
 
 
 Подключился к phpmyadmin.
