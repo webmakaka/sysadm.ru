@@ -75,7 +75,7 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 ### Docker Linking Containers
 
 
-Если я все правильно понимаю, то лучше использовать docker-compose для этих целей.
+Лучше использовать docker-compose для линковки контейнеров.
 Для работы с docker-compose нужные версии docker 1.8 и выше.
 
 

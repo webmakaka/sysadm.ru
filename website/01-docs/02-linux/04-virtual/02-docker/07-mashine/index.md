@@ -7,7 +7,10 @@ permalink: /linux/virtual/docker/machine/
 https://docs.docker.com/machine/install-machine/
 
 
-Я пока не разобрался зачем это
+Я пока до конца не разобрался, для чего нужена Docker Machine.
+Если все правильно понимаю, то для запуска virtualbox виртуалок. Docker выступает в качестве прослойки.
+
+Наверное это актуально для WIndows а не для Linux пользователей.
 
 
     $ curl -L https://github.com/docker/machine/releases/download/v0.6.0/docker-machine-`uname -s`-`uname -m` > /usr/local/bin/docker-machine && \
