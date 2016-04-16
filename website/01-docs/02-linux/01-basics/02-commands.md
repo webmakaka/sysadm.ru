@@ -10,46 +10,9 @@ permalink: /linux/basics/commands/
 
     $ ls -s | sort -n
 
-
 Отсортировать каталоги по размеру:
 
     # du | sort -nr | cut -f2- | xargs du -hs
-
-
-Создать архив zip:
-
-    for i in $(find ./logs/ -name "*") ;do zip ./weblogic_logs.zip $i; done
-
-
-Создать tar.gz:
-
-    tar -cvzpf FileName.tar.gz ./file_dir
-
-Извлечь tar.gz:
-
-    tar -xvzpf FileName.tar.gz ./
-
-Если:
-tar: .: Not found in archive
-
-Можно попробовать:
-
-    tar -xzvf dynagen-0.11.0.tar.gz
-
-
-Извлечь tar.bz2:
-
-    tar jxf FileName.tar.bz2
-
-
-Извлечь tar:
-
-    tar xvf FileName.tar -C ./
-
-
-Извлечь .tgz:
-
-    tar xf FileName.tgz -C ./
 
 
 Найти рекурсивно файлы размером более 100 Мб
