@@ -144,9 +144,7 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 ### Примеры работы с Docker
 
-Pluralsight - Docker for Web Developers
-
-[06. Building Custom Images with Dockerfile](/linux/virtual/docker/video-course/)
+[Pluralsight - Docker for Web Developers](https://github.com/sysadm-ru/Docker-for-Web-Developers)
 
 ___
 
