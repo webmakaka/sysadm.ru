@@ -5,7 +5,6 @@ permalink: /linux/virtual/coreos/commands/
 ---
 
 
-
     $ systemctl status docker
     ● docker.service - Docker Application Container Engine
        Loaded: loaded (/usr/lib64/systemd/system/docker.service; disabled; vendor preset: disabled)

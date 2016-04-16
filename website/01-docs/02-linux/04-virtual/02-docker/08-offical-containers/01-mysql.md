@@ -50,7 +50,7 @@ https://hub.docker.com/_/mysql/
 Другие варианты:
 
     - MYSQL_ROOT_PASSWORD=P@SSW0RD
-    - MYSQL_RANDOM_ROOT_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD=yes
 
 
 Если задать пароль, то лично мне пришлось его вводить с кавычками. Т.е. "P@SSW0RD"

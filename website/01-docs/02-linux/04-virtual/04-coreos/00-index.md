@@ -24,6 +24,14 @@ permalink: /linux/virtual/coreos/
 [Настройка сетевых адаптеров в CoreOS](/linux/virtual/coreos/network/)
 
 
+
+<br/>
+
+### Update | Upgrade
+
+[update](/linux/virtual/coreos/update/)
+
+
 <br/><br/>
 
 ### Команды

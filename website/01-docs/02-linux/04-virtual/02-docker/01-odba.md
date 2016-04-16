@@ -71,7 +71,7 @@ http://sysadm.ru/linux/webservers/nginx/1.8/debian/jessie/installation/
 
 Теперь, при желании, можно забрать командой:
 
-    $ docker pull marley/nginx_server
+    $ docker pull marley/nginx_server:1
 
 
 
