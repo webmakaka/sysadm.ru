@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Centos 7 монтирование hdd
-permalink: /linux/basics/centos/7/mount-hdd-disks/
+title: Монтирование hdd
+permalink: /linux/basics/mount-hdd-disks/
 ---
 
 
