@@ -17,7 +17,7 @@ permalink: /linux/basics/ubuntu/steps-after-installation/
 // ДОП ПО
 
     # apt-get install -y ubuntu-restricted-extras
-    # apt-get install -y vim openssh-server traceroute
+    # apt-get install -y vim openssh-server traceroute git
 
 <br/>
 
@@ -76,6 +76,9 @@ menu:minimize,maximize,close
 
     + russian
 
+<br/>
+
+    Не нашел в 16.04
 
 
     Region and Languages
@@ -84,7 +87,6 @@ menu:minimize,maximize,close
 
     + russian
 
-
     + Switch
 
 
@@ -92,33 +94,30 @@ menu:minimize,maximize,close
     Loayouts Russian
     Option
 
-    ----------
+
+<br/>
+
+
+  System tools - System Settings --> Brightness & Lock
+
+  Turn screen off when inactive for: 1 hour
+  Lock screen after: 3o min
+
+
+<br/>
+
 
     background:
     #548080 - Workstation
     #B8C195 - Ноутбук
 
 
-    В терминале
-    Edit --> Keyboard shorkut
-    снять первые 2 галочки
-
-    Edit --> Profile Preferences --> Colors
-
-    снять галочку --> Use colors from system theme
-
-
-    система параметры
-    System tools - System Settings --> Brightness & Lock
-
-    Turn screen off when inactive for: 1 hour
-    Lock screen after: 3o min
-
-
+<br/>
 
     System Settings -> Keyboard --> Shortcuts
 
-    system -- logout disabled
+    system --> logout --> disabled
+
 
     Добавить в Custom shortcuts
 
@@ -126,3 +125,19 @@ menu:minimize,maximize,close
     Command: gnome-system-monitor
 
     Ctrl + Alt + Delete
+
+
+<br/>
+
+### Terminal
+
+    Edit --> Profile Preferences --> Colors
+
+    снять галочку --> Use colors from system theme
+
+
+
+### Дополнительное ПО
+
+    atom
+    chrome
