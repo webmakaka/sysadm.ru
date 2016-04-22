@@ -121,14 +121,6 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 [SYSDIG](/linux/virtual/docker/sysdig/)  
 
 
-
-<br/>
-
-### Docker в Windows
-
-[В 10 пока не работает](/windows/virtual/docker/)
-
-
 <br/>
 
 ### Docker практические задачи
