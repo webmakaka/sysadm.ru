@@ -5,4 +5,4 @@ permalink: /windows/
 ---
 
 
-### [Виртуализация и контейнеры](/linux/virtual/)
+### [Виртуализация и контейнеры](/windows/virtual/)

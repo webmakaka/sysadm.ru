@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Виртуализация и контейнеры
-permalink: /windows/
+permalink: /windows/virtual/
 ---
 
 
