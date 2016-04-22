@@ -4,6 +4,13 @@ title: Карта Сайта
 permalink: /sitemap/
 ---
 
+
+<br/>
+
+# Windows:
+
+### [Windows](/windows/)
+
 <br/>
 
 # Linux:
