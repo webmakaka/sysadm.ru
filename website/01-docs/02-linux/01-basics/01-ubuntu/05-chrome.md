@@ -19,7 +19,7 @@ permalink: /linux/basics/ubuntu/chrome/
 
 ### Отключение рекламы, кнопок соц.сетей, отслеживания
 
-	https://adblockplus.org/
+https://adblockplus.org/
 
 
 В настройках:
