@@ -7,12 +7,16 @@ permalink: /linux/editors/
 
 # Atom
 
-Вообщем по всему интернету пиарят именно этот редактор как самый охуенный.<br/>
-Да у меня он сейчас используется он и gedit как основные средства редактирования кода.<br/>
-Разрабатывался для пользователей mac, но умельцы заставили его работать и под ubuntu linux. Как дела обстоят с другими Linux дистрибутивами не знаю.
+Вообщем по всему интернету пиарят именно этот редактор как самый охуенный.
+
+Да у меня он сейчас используется он и gedit как основные средства редактирования текста.
+
+Разрабатывался для пользователей mac, но сейчас работает и в Windows и Linux. На Ubuntu работает давно, как дела обстоят с другими Linux дистрибутивами не знаю.
 
 
 Вообщем, кого не устраивает gedit, советую попробовать. Подстветка парных тегов работает.
+
+### Инсталляция Atom в Ubuntu
 
     $ sudo add-apt-repository -y ppa:webupd8team/atom
     $ sudo apt-get update -y
@@ -21,37 +25,47 @@ permalink: /linux/editors/
 Подробнее:
 http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
 
+
+
 <br/>
 
-### Замена tab 4 символами пробела
+### Настройка Atom
 
-Возможно, в новых версиях, уже не нужно этого делать.
+Edit --> Preferences
 
-Чтобы заменять tab на space (символы табуляции символами пробела):
-
-    $ apm install tabs-to-spaces
-
-И, наверное имеет смысл в настройках указать, что 1 tab - 4 символа пробела.
-
+    Show invisibles: true
+    Tab Length: 4
 
     Infisible space: .
     Soft Tab: yes
     Tab type: Soft
+
+
+<!--
+
+    $ apm install tabs-to-spaces
     tabs-to-spaces:untabify
 
-Подробнее:
-https://atom.io/packages/tabs-to-spaces
+    Подробнее:
+    https://atom.io/packages/tabs-to-spaces
+
+-->
+
 
 
 <br/>
 
 ### Сделать парные теги более заметными:
 
-    cd /home/user_name/.atom
-    cp styles.less styles.less.bkp
+    $ cd ~/.atom/
+    $ cp styles.less styles.less.bkp
 
 Заменяем, можно целиком файл.
 
+
+    $ vi styles.less
+
+<br/>
 
     editor, atom-text-editor::shadow {
 
@@ -68,6 +82,9 @@ https://atom.io/packages/tabs-to-spaces
 <br/>
 
 ### Дополнительные пакеты для удобства работы:
+
+
+Edit --> Preferences --> Install
 
 Atom Beautify - позволит одной командой сделать код более читаемым. Актуально в первую очередь для уже сконвертированного java script кода.
 
