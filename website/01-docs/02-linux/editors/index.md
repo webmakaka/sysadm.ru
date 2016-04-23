@@ -14,9 +14,9 @@ permalink: /linux/editors/
 
 Вообщем, кого не устраивает gedit, советую попробовать. Подстветка парных тегов работает.
 
-    $ sudo add-apt-repository ppa:webupd8team/atom
-    $ sudo apt-get update
-    $ sudo apt-get install atom
+    $ sudo add-apt-repository -y ppa:webupd8team/atom
+    $ sudo apt-get update -y
+    $ sudo apt-get install -y atom
 
 Подробнее:
 http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html

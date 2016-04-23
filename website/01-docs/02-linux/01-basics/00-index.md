@@ -7,7 +7,6 @@ permalink: /linux/basics/
 
 ### [ISO образы с Linux](/linux/basics/distrib/)
 
-
 ### [Архиваторы](/linux/basics/archives/)
 
 ### [Незапоминаемые команды в принципе](/linux/basics/commands/)
@@ -22,6 +21,8 @@ permalink: /linux/basics/
 ## Ubuntu
 
 ### [Шаги после инсталляции Ubuntu](/linux/basics/ubuntu/steps-after-installation/)
+
+### [Инсталляция Google Chrome](/linux/basics/ubuntu/chrome/)
 
 ### [Создание USB флешки с Centos в Ubuntu](/linux/basics/ubuntu/make-usb-flash/)
 

@@ -4,7 +4,14 @@ title: Шаги после инсталляции Ubuntu (для себя)
 permalink: /linux/basics/ubuntu/steps-after-installation/
 ---
 
+Я уже попробовал 16.04 и вернулся на 14.04 release 04.
 
+В 16.04 у меня сбрасывались настройки для второго монитора, мышка ходила как-то странно, были проблемы с переключением клавиатуры. Индикатор раскладки при ее переключении не переключался. Отсутствовал Ubuntu Market (или как он там называется). Компьютер несколько раз выклюался.
+
+Вообщем, пусть пока дорабатывают, может попробую когда появится release 2 или будет какая необходимость в 16.04.
+
+
+### Обновление
 
     $ sudo su -
     # apt-get update && apt-get upgrade -y
@@ -17,9 +24,20 @@ permalink: /linux/basics/ubuntu/steps-after-installation/
 // ДОП ПО
 
     # apt-get install -y ubuntu-restricted-extras
-    # apt-get install -y vim openssh-server traceroute git
 
 <br/>
+
+    # apt-get install -y
+    vim \
+    openssh-server \
+    traceroute \
+    git \
+    vlc
+
+
+<br/>
+
+### Gnome Panel
 
     # apt-get install -y gnome-panel
 
@@ -36,9 +54,11 @@ gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize
 
     # reboot
 
-Перезагружаемся в gnome (Metacity)
+Перезагружаемся, при старте выбираем - gnome (Metacity)
 
-Кнопки:
+<br/>
+
+Кнопки (я люблю когда они справа):
 
     right :
     $ gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
@@ -69,14 +89,35 @@ menu:minimize,maximize,close
 -->
 
 
+<br/>
 
-
+### Раскладка клавиатуры и язык
 
     Applications --> System Tools --> System Settings --> Keyboard --> Text Entry
 
     + russian
+    + Swithc to next source: Alt+ShiftL
+
 
 <br/>
+
+### Shortcuts
+
+
+    System Settings -> Keyboard --> Shortcuts
+
+    System --> logout --> disabled
+
+
+    Добавить в Custom shortcuts
+
+    Name: system-monitor
+    Command: gnome-system-monitor
+
+    ПО: Ctrl + Alt + Delete
+
+
+<!-- <br/>
 
     Не нашел в 16.04
 
@@ -94,8 +135,11 @@ menu:minimize,maximize,close
     Loayouts Russian
     Option
 
+-->
 
 <br/>
+
+### Отключение экрана
 
 
   System tools - System Settings --> Brightness & Lock
@@ -104,40 +148,40 @@ menu:minimize,maximize,close
   Lock screen after: 3o min
 
 
+
 <br/>
 
+### Фон
 
     background:
+
     #548080 - Workstation
     #B8C195 - Ноутбук
 
 
 <br/>
 
-    System Settings -> Keyboard --> Shortcuts
-
-    system --> logout --> disabled
+### Terminal
 
 
-    Добавить в Custom shortcuts
+  Edit --> Keyboard shortcuts
 
-    Name: system-monitor
-    Command: gnome-system-monitor
+Отключаю:
 
-    Ctrl + Alt + Delete
-
+    Enable menu access keys
+    Enable the menu shortcut key
 
 <br/>
-
-### Terminal
 
     Edit --> Profile Preferences --> Colors
 
     снять галочку --> Use colors from system theme
 
+    Экран белый, шрифт черный.
+
 
 
 ### Дополнительное ПО
 
-    atom
-    chrome
+[atom](/linux/editors/)  
+[chrome](/linux/basics/ubuntu/chrome/)
