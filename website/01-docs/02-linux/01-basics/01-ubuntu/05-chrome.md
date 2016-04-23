@@ -17,6 +17,13 @@ permalink: /linux/basics/ubuntu/chrome/
 
 <br/>
 
+### Дополнительные Плагины
+
+Data Saver
+
+
+<br/>
+
 ### Отключение рекламы, кнопок соц.сетей, отслеживания
 
 https://adblockplus.org/
