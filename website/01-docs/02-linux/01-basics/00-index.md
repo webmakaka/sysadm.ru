@@ -15,6 +15,8 @@ permalink: /linux/basics/
 
 ### [Монтирование hdd](/linux/basics/mount-hdd-disks/)
 
+### [Upgrade BIOS в linux](/linux/basics/bios-upgrade/)
+
 
 <br/>
 

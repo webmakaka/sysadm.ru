@@ -5,12 +5,21 @@ permalink: /linux/basics/hardware-info/
 ---
 
 
+### Архитектура
+
     $ dpkg --print-architecture
     amd64
 
 
+### Версия BIOS
+
+    # dmidecode -s bios-version
+    1402   
+
+
 <br/>
 
+### Остальное:
 
 
     # dmidecode -t memory
