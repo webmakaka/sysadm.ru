@@ -50,17 +50,16 @@ permalink: /linux/virtual/docker/installation/ubuntu/
 
 <br/>
 
-
 ### Определяю каталог для хранения контейнеров и имиджей.
 
 (Просто не хочу, хранить редко используемые docker файлы на системном, да еще и SSD диске)
 
-    # mkdir -p /mnt/dsk0/docker
-    # chown -R <username> /mnt/dsk0/docker
+    # mkdir -p /mnt/dsk1/docker
+    # chown -R <username> /mnt/dsk1/docker
 
     # vi /etc/default/docker
 
-    DOCKER_OPTS="-g /mnt/dsk0/docker"
+    DOCKER_OPTS="-g /mnt/dsk1/docker"
 
 <br/>
 
@@ -69,4 +68,4 @@ permalink: /linux/virtual/docker/installation/ubuntu/
 <br/>
 
     # ps auxwww | grep docker
-    root      2476  0.0  0.1 274324 29896 ?        Ssl  10:10   0:00 /usr/bin/docker daemon -g /mnt/dsk0/docker
+    root      2476  0.0  0.1 274324 29896 ?        Ssl  10:10   0:00 /usr/bin/docker daemon -g /mnt/dsk1/docker
