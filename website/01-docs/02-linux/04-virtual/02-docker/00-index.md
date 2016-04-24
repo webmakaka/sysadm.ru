@@ -134,6 +134,8 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 [Мой Dockerfile для разработки rails и node.js приложений в centos 6](/linux/virtual/docker/dockerfile/)  
 
+[Dockerfile из проекта angular.js v2 для создания контейнера для nodejs ](/linux/virtual/docker/dockerfile/nodejs/)  
+
 
 <br/>
 
