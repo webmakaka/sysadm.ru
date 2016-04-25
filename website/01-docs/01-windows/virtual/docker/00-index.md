@@ -15,7 +15,8 @@ Offtopic:
 Ищите на трекерах. Например, я брал на даркосе.
 
 
-<ul>
-    <li>[Инсталляция Docker в Windows](/windows/virtual/docker/installation/)</li>
-    <li>[Практический пример запуска приложения в docker](/windows/virtual/docker/run-container/)</li>
-</ul>
+<br/>
+
+[Инсталляция Docker в Windows](/windows/virtual/docker/installation/)
+
+[Практический пример запуска приложения в docker](/windows/virtual/docker/run-container/)
