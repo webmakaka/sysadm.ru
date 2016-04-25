@@ -23,13 +23,12 @@ Get Started with Docker for Windows
 https://docs.docker.com/windows/
 
 
-1) Устанавливаю Docker Toolbox
+1) Устанавливаю Docker Toolbox  
 https://www.docker.com/products/docker-toolbox
 
-2) Запускаю через консоль Docker QuickStart Terminal
+2) Запускаю через консоль для поиска: Docker QuickStart Terminal
 
 3) Проверяю (от нечего делать):
-
 
     $ docker pull hello-world
     Using default tag: latest
@@ -124,3 +123,16 @@ https://www.docker.com/products/docker-toolbox
 
 Так, что какая-то проблема на стороне Winwos 10 или в скрипте явно прописаны параметры доступа к приложению.
 Это у меня пока такие мысли.
+
+Проблема из-за того, что нужно как-то подключаться не к локалхосту а к ip адресу виртуальной машины virtualbox, в которой и работает docker.
+Впрочем и так тоже не заработало.
+
+Копаем дальше.
+
+О слава яйцам, нашел следующую строку в документации:
+
+    Because the Docker daemon uses Linux-specific kernel features, you can’t run Docker natively in Windows. Instead, you must use docker-machine to create and attach to a Docker VM on your machine.
+
+Вообщем нужно юзать docker-machine вместо docker.
+
+Не ссы, ща разберемся!
