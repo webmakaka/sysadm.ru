@@ -4,6 +4,7 @@ title: Простенький Dockerfile для nodejs
 permalink: /linux/virtual/docker/dockerfile/nodejs/nodejs-simple/
 ---
 
+Dockerfile
 
     FROM node:latest
 
@@ -20,3 +21,12 @@ permalink: /linux/virtual/docker/dockerfile/nodejs/nodejs-simple/
     EXPOSE $PORT
 
     ENTRYPOINT ["npm", "start"]
+
+
+<br/>
+
+    $ docker build -f Dockerfile -t marley/node .
+
+<br/>
+
+    $ docker run -d -p 8080:3000 marley/node
