@@ -17,6 +17,17 @@ Offtopic:
 
 <br/>
 
+
+<div align="center">
+
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/RDVlAyec8fI" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+<br/>
+
 [Инсталляция Docker в Windows](/windows/virtual/docker/installation/)
 
 [Практический пример запуска приложения в docker](/windows/virtual/docker/run-container/)
+
+[Запустить docker контейнер и выполнить команду npm start](/windows/virtual/docker/run-container-v2/)
