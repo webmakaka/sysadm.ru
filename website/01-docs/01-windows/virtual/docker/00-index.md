@@ -31,3 +31,7 @@ Offtopic:
 [Практический пример запуска приложения в docker](/windows/virtual/docker/run-container/)
 
 [Запустить docker контейнер и выполнить команду npm start](/windows/virtual/docker/run-container-v2/)
+
+
+Как стартануть asp.net приложение в docker контейнере, смотрите в курсе, название которого написано выше.
+А примеры, можно взять с [гитхаба](https://github.com/sysadm-ru/Docker-for-Web-Developers/network).
