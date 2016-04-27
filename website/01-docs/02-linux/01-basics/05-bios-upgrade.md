@@ -544,9 +544,10 @@ permalink: /linux/basics/bios-upgrade/
     Restoring PCI config space for 00:01:0 reg 0x6d
 
 
+Далее зашел в биос и сбросил все параметры на значения по умолчанию.
+
 Все прошилось, но мне к сожалению это никак не помогло.
 
-Для работы, мне пришлось зайти в BIOS и откатить все параметры на значения по умолчанию.
 
 Supported hardware:  
 https://www.flashrom.org/Supported_hardware
