@@ -32,6 +32,8 @@ permalink: /linux/basics/
 
 ### [Unable to locate package *****.so.*](/linux/basics/ubuntu/Install-package-for-missing-libraries/)
 
+### [Настройка статической адресации сетевых интерфейсов в ubuntu server 16.04](/linux/basics/ubuntu/static-networking/)
+
 
 <br/>
 
