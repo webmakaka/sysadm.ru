@@ -7,16 +7,18 @@ permalink: /sitemap/
 
 <br/>
 
-# Windows:
 
-### [Windows](/windows/)
+<div align="center">
 
-<br/>
+<table>
+    <tr>
+        <td><h1/> [Windows](/windows/) </h1></td>
+        <td><h1> [Linux](/linux/) </h1></td>
+    </tr>
 
-# Linux:
+</table>
 
-### [Linux](/linux/)
-
+</div>
 
 ______
 
