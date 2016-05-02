@@ -86,10 +86,53 @@ Edit --> Preferences
 
 Edit --> Preferences --> Install
 
+autosave - автосохранение (пакет инсталлируется по умолчанию, нужно его включить)
+
 Atom Beautify - позволит одной командой сделать код более читаемым. Актуально в первую очередь для уже сконвертированного java script кода.
 
 jshint - подсказка по ошибкам в javascrpt  
-autosave - автосохранение
+
+atom-typescript
+
+
+<br/><br/>
+
+**Top 5 Packages: Atom Code Editor**
+
+<br/><br/>
+
+<div align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DmKNDxlNLoE" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<br/><br/>
+
+
+    # 5 - 8 votes
+    The Designer
+    i like atom too and my favorite package is emmet https://github.com/emmetio/emmet-atom
+
+    # 4 - 13 votes
+    Rodrigo Lima Batista
+    https://atom.io/packages/terminal-plus - Terminal-Plus. Love it. Not perfect or too popular but it is awesome.
+
+    # 3 - 16 votes
+    Lucas
+    I really like Atom. I installed Minimap so it looks like Sublime Text ^^
+
+    # 2 - 18 votes
+    Windowface
+    Travis, have you ever used Brackets code editor? I've been using it for a while now and love it
+
+    # 0 - honorable mention
+    Romain Lepert
+    This atom package just makes my life better
+    https://atom.io/packages/doge
+
+    # 1 - 21 votes
+    Dennis Vlaanderen
+    https://atom.io/packages/atom-bootstrap4
+
 
 <br/>
 
