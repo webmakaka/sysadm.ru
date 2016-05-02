@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HardWare
+title: Работа с железками в linux
 permalink: /linux/hardware/
 ---
 
