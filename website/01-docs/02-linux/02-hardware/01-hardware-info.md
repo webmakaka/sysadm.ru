@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Информацию по имеющемуся оборудованию
+title: Команды для получения информации по оборудованию в linux
 permalink: /linux/hardware/info/
 ---
 

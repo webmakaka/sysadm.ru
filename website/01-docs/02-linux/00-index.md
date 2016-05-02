@@ -11,7 +11,7 @@ permalink: /linux/
 
 # Hardware:
 
-### [Hardware](/linux/hardware/)
+### [Настройка железок в linux](/linux/hardware/)
 
 
 <br/>
