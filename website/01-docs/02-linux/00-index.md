@@ -11,7 +11,7 @@ permalink: /linux/
 
 # Hardware:
 
-### [Вебсервера](/linux/webservers/)
+### [Hardware](/linux/hardware/)
 
 
 <br/>
