@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Монтирование hdd
-permalink: /linux/basics/mount-hdd-disks/
+permalink: /linux/hardware/hdd/mount-disks/
 ---
 
 

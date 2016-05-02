@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Информацию по имеющемуся оборудованию
-permalink: /linux/basics/hardware-info/
+permalink: /linux/hardware/info/
 ---
 
 

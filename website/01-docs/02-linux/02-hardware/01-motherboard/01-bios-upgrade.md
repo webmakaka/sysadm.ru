@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Upgrade BIOS в linux
-permalink: /linux/basics/bios-upgrade/
+permalink: /linux/hardware/motherboard/bios-upgrade/
 ---
 
 Мне понадобилось обновить BIOS на стром компьютере.

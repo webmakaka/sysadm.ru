@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Transcend 8GB USB MP3 Player работает в режиме только для чтения
-permalink: /devices/usb-flash/transcend/8gb/player/
+permalink: /linux/hardware/hdd/transcend-usb-flash-read-only/
 ---
 
 Девайс так себе.

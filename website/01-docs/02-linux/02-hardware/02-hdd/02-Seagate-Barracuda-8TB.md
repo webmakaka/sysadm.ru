@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Подключаем диск 8TB в Centos 6.X
-permalink: /devices/hdd/seagate/8tb/
+permalink: /linux/hardware/hdd/seagate/8tb/
 ---
 
 Вообщем я вставил диск Seagate Barracuda на 8TB. И по старой доброй привычке создал раздел, отформатировал начал работать.

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Установить в ubuntu nvidia драйвера вместо opensource
-permalink: /linux/basics/ubuntu/drivers/nvidia/
+permalink: /linux/hardware/videocard/ubuntu/drivers/nvidia/
 ---
 
 У меня после обновлений в ubuntu возникли проблемы с опенсорсными драйверами.

@@ -27,14 +27,6 @@ ______
 
 ### [Cisco: Switches and Routers](/devices/cisco/routers/)
 
-______
-
-<br/>
-
-# Комплектующие:
-
-### [Подключаем диск 8TB в Centos 6.X](/devices/hdd/seagate/8tb/)
-
 
 ______
 
@@ -42,10 +34,6 @@ ______
 
 # Ремонт:
 
-
-### [Transcend 8GB USB MP3 Player работает в режиме только для чтения](/devices/usb-flash/transcend/8gb/player/)
-
-### [Попытка исключения использования бэд блоков файловой системой в Ubuntu ](/linux/ubuntu/get-info-about-hdd/)
 
 ### [Samsung Galaxy S4 mini - не работает GPS](/devices/mobile/galaxy-s4-mini/gps-not-working/)
 

@@ -11,12 +11,6 @@ permalink: /linux/basics/
 
 ### [Незапоминаемые команды в принципе](/linux/basics/commands/)
 
-### [Информацию по имеющемуся оборудованию](/linux/basics/hardware-info/)
-
-### [Монтирование hdd](/linux/basics/mount-hdd-disks/)
-
-### [Upgrade BIOS в linux](/linux/basics/bios-upgrade/)
-
 
 <br/>
 
@@ -28,11 +22,7 @@ permalink: /linux/basics/
 
 ### [Создание USB флешки с Centos в Ubuntu](/linux/basics/ubuntu/make-usb-flash/)
 
-### [Установить в Ubuntu nvidia драйвера вместо opensource](/linux/basics/ubuntu/drivers/nvidia/)
-
 ### [Unable to locate package *****.so.*](/linux/basics/ubuntu/Install-package-for-missing-libraries/)
-
-### [Настройка статической адресации сетевых интерфейсов в ubuntu server 16.04](/linux/basics/ubuntu/static-networking/)
 
 
 <br/>
@@ -40,3 +30,11 @@ permalink: /linux/basics/
 ## Centos
 
 ### [Centos 7 нужные мне для работы пакеты](/linux/basics/centos/7/steps-after-installation/)
+
+
+
+<br/>
+
+## NetWork
+
+### [Настройка статической адресации сетевых интерфейсов в ubuntu server 16.04](/linux/basics/ubuntu/static-networking/)

@@ -9,6 +9,13 @@ permalink: /linux/
 
 <br/>
 
+# Hardware:
+
+### [Вебсервера](/linux/webservers/)
+
+
+<br/>
+
 # Администрирование серверов:
 
 ### [Вебсервера](/linux/webservers/)
