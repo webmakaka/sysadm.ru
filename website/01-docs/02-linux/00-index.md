@@ -4,12 +4,6 @@ title: Linux
 permalink: /linux/
 ---
 
-
-
-<br/>
-
-# Linux:
-
 ### [Базовые вещи](/linux/basics/)
 
 

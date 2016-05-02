@@ -15,7 +15,6 @@ permalink: /sitemap/
         <td><h1/><a href="/windows/">Windows</a></h1></td>
         <td><h1><a href="/linux/">Linux</a></h1></td>
     </tr>
-
 </table>
 
 </div>

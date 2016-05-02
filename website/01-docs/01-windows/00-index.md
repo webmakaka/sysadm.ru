@@ -5,11 +5,6 @@ permalink: /windows/
 ---
 
 
-
-<br/>
-
-# Windows:
-
 ### [Базовые вещи](/windows/basics/)
 
 
