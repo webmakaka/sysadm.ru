@@ -7,6 +7,4 @@ permalink: /linux/video-courses/
 
 ### [Как скачать видеокурс с Udemy](/linux/video-courses/how-to-download-course-from-udemy/)  
 
-### [Как скачать запись пройденного курса в обучающем центре Специалист](/mmc/specialist/)  
-
 ### [Видеокурсы для администраторов Linux](/linux/video-kursy/video-courses-for-linux-admins/)
