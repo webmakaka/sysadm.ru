@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Практический пример запуска приложения в docker
+title: Практический пример запуска приложения в docker под Windows
 permalink: /windows/virtual/docker/run-container/
 ---
 
 
 <br/>
 
-### Практический пример запуска приложения в docker
+### Практический пример запуска приложения в docker под Windows
 
 Пусть это будет контейнер от проекта по обучению Angularjs 2 от поискового гиганта.
 

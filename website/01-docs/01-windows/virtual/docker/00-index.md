@@ -28,7 +28,7 @@ Offtopic:
 
 [Инсталляция Docker в Windows](/windows/virtual/docker/installation/)
 
-[Практический пример запуска приложения в docker](/windows/virtual/docker/run-container/)
+[Практический пример запуска приложения в docker под Windows](/windows/virtual/docker/run-container/)
 
 [Запустить docker контейнер и выполнить команду npm start](/windows/virtual/docker/run-container-v2/)
 
