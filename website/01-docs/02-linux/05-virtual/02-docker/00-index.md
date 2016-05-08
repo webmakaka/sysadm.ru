@@ -65,8 +65,8 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 ### Docker Tools
 
-[Инсталляция Docker-Compose в Ubuntu 14.04 (организовать совместную работу нескольких контейнеров)](/linux/virtual/docker/toosl/docker-compose/installation/)  
-[Docker Machine](/linux/virtual/docker/docker-machine/)  
+Docker-Compose  
+[Docker Machine (для запуска контейнеров в virtualbox, обычно в windows)](/linux/virtual/docker/docker-machine/)  
 
 
 <br/>
@@ -88,6 +88,8 @@ https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 [Пример линковки контейнеров для их совместной работы](/linux/virtual/docker/linking-containers/manual-linking/)  
 
+
+[Docker-Compose (Инсталляция Docker-Compose в Ubuntu 14.04) ](/linux/virtual/docker/toosl/docker-compose/installation/)  
 [С помощью Docker Compose](/linux/virtual/docker/linking-containers/docker-compose/)
 
 
