@@ -6,13 +6,13 @@ permalink: /windows/virtual/docker/errors/
 
 ### Error checking context: 'can't stat '\\?\C:\Users\UserName\AppData\Local\Application Data''.
 
-Создание контейнера с помощью windows консоли docker - Docker Quick Start Terminal
+Создаю контейнер из Dockerfile с помощью windows консоли docker - Docker Quick Start Terminal.
 
 
     $ pwd
     /c/Users/UserName
 
-<br/>
+Ошибка:
 
     $ docker build -t <container_name> .
     Error checking context: 'can't stat '\\?\C:\Users\UserName\AppData\Local\Application Data''.
