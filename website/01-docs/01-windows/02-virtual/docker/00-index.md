@@ -35,3 +35,6 @@ Offtopic:
 
 Как стартануть asp.net приложение в docker контейнере, смотрите в курсе, название которого написано выше.
 А примеры, можно взять с [гитхаба](https://github.com/sysadm-ru/Docker-for-Web-Developers/network).
+
+
+[Ошибки при работе с Docker в Windows](/windows/virtual/docker/errors/)
