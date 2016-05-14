@@ -101,7 +101,7 @@ ___
 
 Задать имя, иначе она будет выбрано самостоятельно  
 
-    $ docker run -i -t -d debian --name myDebianServ
+    $ docker run -i -t -d  --name myDebianServ debian
 
 
 // Контенеры и имиджи хранятся здесь  
