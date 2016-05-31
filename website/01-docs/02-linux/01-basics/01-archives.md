@@ -66,3 +66,13 @@ tar: .: Not found in archive
 Извлечь .tgz:
 
     tar xf FileName.tgz -C ./
+
+
+
+<br/>
+
+### .rar
+
+Извлечь .rar:
+
+    $ unrar e archiveName.rar
