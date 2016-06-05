@@ -44,6 +44,8 @@ ______
 
 ### [GIT](/linux/dev/git/)
 
+### [JAVA](http://javadev.org/jdk/installation/)
+
 ### [Программирование для Web](/linux/dev/)
 
 ### [Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/editors/)

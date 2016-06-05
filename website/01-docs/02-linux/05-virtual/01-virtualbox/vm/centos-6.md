@@ -68,12 +68,25 @@ ___
     $ VBoxManage modifyvm ${vm} --floppy disabled --audio none
 
 
+
+<br/>
+
 ### Подключаю контроллер жестких дисков (SAS):
 
 
     $ VBoxManage storagectl ${vm} \
     --add sas \
-    --name "SAS Controller"
+    --name "SAS Controller" \
+    --controller LSILogicSAS
+
+
+Если понадобится удалить:
+
+    $ VBoxManage storagectl ${vm} --name "SAS Controller" --remove
+
+
+
+
 
 
 ### Создание и подключение жестких дисков:
@@ -103,6 +116,8 @@ ___
 
 
 
+<br/>
+
 ### Подключаю IDE контроллер к которому будет позднее подключен DVD-ROM:
 
 
@@ -121,6 +136,27 @@ ___
     --type dvddrive \
     --medium  ~/ISO/CentOS-6.6-x86_64-bin-DVD1to2/CentOS-6.6-x86_64-bin-DVD1.iso
 
+
+
+<br/>
+
+### Определяем порядок устройств, с которых будет произведена попытка стартовать систему:
+
+
+    $ VBoxManage modifyvm ${vm} \
+    --boot1 disk \
+    --boot2 dvd
+
+
+### Определяем каталог для снапшотов:
+
+
+    $ VBoxManage modifyvm ${vm} \
+    --snapshotfolder ${VM_HOME}/${vm}/snapshots
+
+
+
+<br/>
 
 ### Подключение сетевых интерфейсов:
 
@@ -176,22 +212,6 @@ vboxnet0 - виртуальный адаптер хостовой машины.
 
 
 <br/>
-
-### Определяем порядок устройств, с которых будет произведена попытка стартовать систему:
-
-
-    $ VBoxManage modifyvm ${vm} \
-    --boot1 disk \
-    --boot2 dvd
-
-
-### Определяем каталог для снапшотов:
-
-
-    $ VBoxManage modifyvm ${vm} \
-    --snapshotfolder ${VM_HOME}/${vm}/snapshots
-
-
 
 ### Предоставим возможность подключения к машине по RDP:
 
@@ -249,6 +269,8 @@ vboxnet0 - виртуальный адаптер хостовой машины.
 
 Если работаете в linux, подключиться к виртуальной машине можно например, с помощью remmina, rdesktop
 
+    $ sudo apt-get install -y rdesktop
+
     $ rdesktop \
     -r sound:local \
     -k common  \
@@ -268,6 +290,14 @@ http://manpages.ubuntu.com/manpages/lucid/man1/rdesktop.1.html
 
 В Windows для этого вполне подойдет Remote Desktop Connecton (mstsc.exe)
 
+<br/>
+
+Далее я обычно нажимаю tab [Enter] и дописываю linux text [Enter]
+
+
+<br/>
+
+### Могут понадобиться следующие команды:
 
 Извлечь DVD диск можно командой
 
@@ -282,8 +312,8 @@ Reset виртуальной машины
     $ VBoxManage controlvm ${vm} poweroff
 
 
-__________
 
+<br/>
 
 ### Постинсталляционные донастройки после инсталляции операционной системы
 

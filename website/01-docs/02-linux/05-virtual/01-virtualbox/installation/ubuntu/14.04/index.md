@@ -8,7 +8,7 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 
 
     $ sudo su -
-    # cp /etc/apt/sources.list /etc/apt/sources.list.bkp
+    # cp /etc/apt/sources.list /etc/apt/sources.list.orig
 
 <br/>
 
@@ -24,13 +24,15 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 
 <br/>
 
-    # apt-get update
+    # apt-get update -y
 
 <br/>
 
     # apt-cache search virtualbox*
 
 <br/>
+
+Последняя 5.0 ее и ставлю
 
     # apt-get install -y virtualbox-5.0
 
@@ -67,8 +69,10 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 
 <br/>
 
-    #
+    ###############################
+    # USER DEFINED
     . ~/.bash_profile
+    ###############################
 
 
 Отредактируйте файл ~/.bash_profile
@@ -83,7 +87,6 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
     #### VirtualBox Parameters
 
         export VM_HOME=$HOME/machines
-        export VM_BACKUPS=${VM_HOME}/backups
 
     ############################################
 
@@ -95,7 +98,7 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 <br/>
 
     $ vboxmanage --version
-    5.0.12r104815
+    5.0.20r106931
 
 
 <br/>
@@ -112,19 +115,19 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 <br/>
 
     # cd /tmp/
-    # wget http://download.virtualbox.org/virtualbox/5.0.12/Oracle_VM_VirtualBox_Extension_Pack-5.0.12.vbox-extpack
+    # wget http://download.virtualbox.org/virtualbox/5.0.20/Oracle_VM_VirtualBox_Extension_Pack-5.0.20.vbox-extpack
 
 <br/>
 
-    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.0.12.vbox-extpack
+    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.0.20.vbox-extpack
 
 <br/>
 
     # VBoxManage list extpacks
     Extension Packs: 1
     Pack no. 0:   Oracle VM VirtualBox Extension Pack
-    Version:      5.0.12
-    Revision:     104815
+    Version:      5.0.20
+    Revision:     106931
     Edition:      
     Description:  USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption.
     VRDE Module:  VBoxVRDP

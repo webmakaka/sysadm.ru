@@ -9,6 +9,8 @@ permalink: /linux/databases/mysql/
 <br/>
 
 
+[Инсталляция MySQL на Centos 7 из пакетов](/linux/databases/mysql/installation/centos7/)
+
 [Инсталляция MySQL на Centos 6.5 из пакетов](/linux/databases/mysql/installation/)
 
 [Конфигурирование пользователей после инсталляции](/linux/databases/mysql/users/)

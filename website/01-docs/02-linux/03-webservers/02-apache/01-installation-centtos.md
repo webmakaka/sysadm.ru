@@ -29,6 +29,7 @@ permalink: /linux/webservers/apache/installation/
     # service httpd start
 
 
+
 FIREWALL
 
     # cp /etc/sysconfig/iptables /etc/sysconfig/iptables.bkp
