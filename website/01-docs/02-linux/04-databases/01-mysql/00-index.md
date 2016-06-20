@@ -5,7 +5,7 @@ permalink: /linux/databases/mysql/
 ---
 
 
-### MySQL
+## MySQL
 
 <br/>
 
@@ -25,7 +25,7 @@ permalink: /linux/databases/mysql/
 
 <br/>
 
-### Логи MySQL
+## Логи MySQL
 
     $ tail /var/log/mysqld.log
 

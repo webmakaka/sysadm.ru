@@ -32,7 +32,7 @@ permalink: /linux/databases/mysql/installation/
 
 <br/><br/>
 
-### [Вариант 2] Из репо mysql:
+### [Вариант 2] Из репо MySQL:
 
 Первый раз делаю этим способом!
 Сначала поставил версию из репо по умолчанию. Потом программа, которая должна работать с базой, сказала, что с таким старьем она встречаться не хочет, ей бы чего помоложе.
@@ -102,7 +102,7 @@ https://repo.mysql.com/yum/
     # grep 'temporary password' /var/log/mysqld.log
     2016-06-20T11:48:16.167483Z 1 [Note] A temporary password is generated for root@localhost: 6SS6G:ila35!
 
-Поменять это (настолько назойлива, что не закрывается и по ctrl + D):
+Поменять пароль можно командой (тулза настолько назойлива, что не закрывается ни по ctrl + C, ни по ctrl + D). Но я бы так делать не рекомендовал:
 
     # mysql_secure_installation
 
