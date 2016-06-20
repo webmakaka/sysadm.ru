@@ -112,7 +112,7 @@ permalink: /linux/databases/mysql/installation/centos7/
 
 <br/><br/>
 
-    # SET GLOBAL validate_password_length = 5;
+    # SET GLOBAL validate_password_length = 4;
     # SET GLOBAL validate_password_number_count = 0;
     # SET GLOBAL validate_password_mixed_case_count = 0;
     # SET GLOBAL validate_password_special_char_count = 0;

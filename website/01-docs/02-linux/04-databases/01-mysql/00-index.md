@@ -20,6 +20,15 @@ permalink: /linux/databases/mysql/
 [Improving local file security](/linux/databases/mysql/installation/security/)
 
 
+
+
+<br/>
+
+### Логи MySQL
+
+    $ tail /var/log/mysqld.log
+
+
 <br/>
 
 ### Команды для работы с базой данных MySQL
