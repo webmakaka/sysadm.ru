@@ -4,7 +4,6 @@ title: Инсталляция Google Chrome в Ubuntu
 permalink: /linux/basics/ubuntu/chrome/
 ---
 
-
 ### Инсталляция Chrome в Ubuntu
 
 Данный способ работает в: 12.04, 14.04, 16.04

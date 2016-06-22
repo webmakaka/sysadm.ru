@@ -4,9 +4,11 @@ title: Windows
 permalink: /windows/
 ---
 
+## Windows
+
+<br/>
 
 ### [Базовые вещи](/windows/basics/)
-
 
 <br/>
 

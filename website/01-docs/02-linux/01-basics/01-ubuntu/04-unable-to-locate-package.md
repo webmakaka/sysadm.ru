@@ -4,6 +4,8 @@ title: Ubuntu Unable to locate package
 permalink: /linux/basics/ubuntu/Install-package-for-missing-libraries/
 ---
 
+### Ubuntu Unable to locate package
+
 E: Unable to locate package libstdc++.so.6 (FOR example)
 
 

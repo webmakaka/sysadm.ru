@@ -114,3 +114,42 @@ permalink: /linux/dev/nodejs/installation/centos/
 
     # npm -v
     3.3.8
+
+
+<!--
+
+<br/>
+
+    $ cd myproject/
+    $ git clone https://github.com/oracle-jet/work-better-jet
+    $ cd work-better-jet/
+
+<br/>
+
+    $ vi app.js
+
+<br/>
+
+    var http = require('http'),
+        fs = require('fs');
+
+
+    fs.readFile('./index.html', function (err, html) {
+        if (err) {
+            throw err;
+        }       
+        http.createServer(function(request, response) {  
+            response.writeHeader(200, {"Content-Type": "text/html"});  
+            response.write(html);  
+            response.end();  
+        }).listen(8000);
+    });
+
+
+<br/>
+
+
+http://192.168.56.2:8000/
+
+
+-->

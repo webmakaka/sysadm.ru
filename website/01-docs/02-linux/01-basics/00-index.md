@@ -4,6 +4,7 @@ title: Базовые вещи
 permalink: /linux/basics/
 ---
 
+### Базовые вещи
 
 ### [ISO образы с Linux](/linux/basics/distrib/)
 

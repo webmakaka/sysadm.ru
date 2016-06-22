@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Архиваторы
+title: Архиваторы в Linux
 permalink: /linux/basics/archives/
 ---
+
+### Архиваторы в Linux
 
 <br/>
 
