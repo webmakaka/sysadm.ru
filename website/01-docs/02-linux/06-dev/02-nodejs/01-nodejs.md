@@ -91,17 +91,19 @@ permalink: /linux/dev/nodejs/installation/centos/
 
 ### Обновление Node.js на Centos 6.X
 
-
     # node -v
     v0.10.40
 
     # npm cache clean -f
     # npm install -g n
 
+    # /usr/lib/node_modules/n/bin/n latest
+
     # ln -sf /usr/local/n/versions/node/<VERSION>/bin/node /usr/bin/node
 
     # node -v
-    v4.2.1
+    v6.2.2
+
 
 <br/>
 
@@ -110,10 +112,11 @@ permalink: /linux/dev/nodejs/installation/centos/
     # npm -v
     2.14.7
 
-    # npm install npm -g
+    # npm install -g npm
 
     # npm -v
-    3.3.8
+    3.10.2
+
 
 
 <!--
