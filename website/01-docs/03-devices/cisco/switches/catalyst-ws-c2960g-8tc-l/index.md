@@ -4,6 +4,13 @@ title: Cisco Switch Catalyst-WS-C2960G-8TC-L
 permalink: /devices/cisco/switches/catalyst-ws-c2960g-8tc-l/
 ---
 
+
+<br/>
+
+### Cisco Switch Catalyst-WS-C2960G-8TC-L
+
+
+
 <a href="http://files.sysadm.ru/devices/cisco/switches/catalyst-ws-c2960g-8tc-l/Catalyst_2960_Switch_GSG_8port.pdf">pdf с документацией</a>
 
 <br/>

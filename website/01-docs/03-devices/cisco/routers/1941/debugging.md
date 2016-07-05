@@ -5,7 +5,9 @@ permalink: /devices/cisco/routers/1941/debugging/
 ---
 
 
-### Возможно, для анализа проблем авторизации поможет debug
+### Cisco Router 1941 включение и выключение debugging
+
+Возможно, для анализа проблем авторизации поможет debug
 
 <br/>
 

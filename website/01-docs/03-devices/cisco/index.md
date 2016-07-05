@@ -4,6 +4,8 @@ title: Cisco Devices
 permalink: /devices/cisco/routers/
 ---
 
+## Cisco Devices
+
 ### Routers:
 
 <a href="/devices/cisco/routers/1941/">Cisco Router 1941</a>  

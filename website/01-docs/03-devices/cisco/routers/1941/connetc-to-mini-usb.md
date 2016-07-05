@@ -2,10 +2,9 @@
 layout: page
 title: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
 permalink: /devices/cisco/routers/1941/connetc-to-mini-usb/
-rel_url: /website/docs
 ---
 
-
+### Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
 
 Подключил Cisco с помощью голубого консольного кабеля, что шел в комплекте с устройством. (К интерфейсам RJ-45 ничего не подключал.) к компьютеру.
 
