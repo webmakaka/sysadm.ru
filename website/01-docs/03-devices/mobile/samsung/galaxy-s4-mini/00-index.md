@@ -4,6 +4,8 @@ title: Samsung Galaxy S4 mini - не работает GPS
 permalink: /devices/mobile/galaxy-s4-mini/gps-not-working/
 ---
 
+### Samsung Galaxy S4 mini - не работает GPS
+
 Просто не рекомендую покупать телефон Samsung Galaxy S4 mini.
 
 В нем, должным образом GPS или A-GPS модуль не работает.

@@ -4,6 +4,7 @@ title: Cisco Router 1941 Basics Commands
 permalink: /devices/cisco/routers/1941/basics-commands/
 ---
 
+### Cisco Router 1941 Basics Commands
 
     show ip route
 

@@ -4,6 +4,8 @@ title: Cisco Router 1941 проблемы с подключением к сет�
 permalink: /devices/cisco/routers/1941/beeline-l2tp-first-problem/
 ---
 
+### Cisco Router 1941 проблемы с подключением к сети Билайн по l2tp
+
 
 <pre>
 

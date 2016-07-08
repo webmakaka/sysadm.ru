@@ -4,6 +4,14 @@ title: Cisco Router 1941
 permalink: /devices/cisco/routers/1941/
 ---
 
+<br/>
+
+### Cisco Router 1941
+
+
+    -- Узнать uptime
+    sh ver | s uptime
+
 
 <a href="/devices/cisco/routers/1941/connetc-to-mini-usb/">Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64</a>
 

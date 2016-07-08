@@ -4,6 +4,9 @@ title: Cisco Router 1941 данные о железе
 permalink: /devices/cisco/routers/1941/device-hardware/
 ---
 
+
+### Cisco Router 1941 данные о железе
+
     # sh version
 
 
