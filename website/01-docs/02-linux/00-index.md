@@ -61,3 +61,14 @@ ______
 # 1C:
 
 ### [1С:Предприятие 8.3 + PostgreSQL 9.4 на базе Debian 8 «Jessie»](http://nixway.org/how-to/1c-predpriyatie-8-3+postgresql-na-baze-debian-8-jessie/)
+
+
+
+
+______
+
+<br/>
+
+# Документация:
+
+### [Документация](/linux/docs/pdf/)
