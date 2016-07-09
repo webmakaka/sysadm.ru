@@ -25,7 +25,6 @@ permalink: /devices/cisco/routers/1941/
 
 <a href="/devices/cisco/routers/1941/crash-dump-example/">Cisco Router 1941 Crash Dump Example</a>  
 
-
 <a href="/devices/cisco/routers/1941/basics-commands/">Cisco Router 1941 Basics Commands</a>  
 
 <a href="/devices/cisco/routers/1941/debugging/">Cisco Router 1941 включение и выключение debugging</a>
