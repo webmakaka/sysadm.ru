@@ -12,10 +12,6 @@ permalink: /linux/basics/centos/6/steps-after-installation/
     # yum update -y
     # yum upgrade -y
 
-    # yum repolist
-
-    # yum update -y
-
     # yum install -y \
     vim \
     wget  \
@@ -36,9 +32,14 @@ permalink: /linux/basics/centos/6/steps-after-installation/
 
     В bind-utils лежит nslookup
 
+<br/>
+
+<!--
 
     # vi ~/.bash_profile
     alias vi="vim"
+
+-->
 
     # yum install -y ntp
     # chkconfig --level 345 ntpd on
@@ -53,6 +54,8 @@ permalink: /linux/basics/centos/6/steps-after-installation/
 
     # cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bkp
 
+<br/>
+
     # vi /etc/ssh/sshd_config
 
     #UseDNS yes
@@ -63,5 +66,6 @@ permalink: /linux/basics/centos/6/steps-after-installation/
     меняем на
     GSSAPIAuthentication no
 
+<br/>
 
     #  service sshd restart
