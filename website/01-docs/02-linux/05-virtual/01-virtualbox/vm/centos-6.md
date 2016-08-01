@@ -4,6 +4,9 @@ title: Создание виртуальной машины VirtualBox с Centos
 permalink: /linux/virtual/virtualbox/vm/centos-6/
 ---
 
+
+### Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
+
 Имеем ноутбук, подключенный по WI-FI.
 На него нужно установить виртуальную машину с Centos.
 Доступа к управлению WI-FI точкой доступа нет.

@@ -4,6 +4,8 @@ title: Virtual Box
 permalink: /linux/virtual/virtualbox/
 ---
 
+## Virtual Box
+
 ### Инсталляция VirtualBox 5.X
 
 [Инсталляция VirtualBox 5.X в командной строке в Ubuntu](/linux/virtual/virtualbox/installation/ubuntu/14.04/)
@@ -46,6 +48,14 @@ permalink: /linux/virtual/virtualbox/
 [Уменьшить размер ранимаемого виртуальной машиной дискового пространства](/linux/virtual/virtualbox/decrease-disk-space/)
 
 [Конвертировать wmdk в vdi](/linux/virtual/virtualbox/convert-vmdk-vdi/)
+
+
+<br/>
+
+### Настройка сети:
+
+[Настройка сети в Centos 6, когда используется несколько адаптеров](/linux/virtual/virtualbox/networking/)
+
 
 <br/>
 

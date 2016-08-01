@@ -30,6 +30,16 @@ permalink: /linux/basics/
 
 ## Centos
 
+### 6.X
+
+### [Пакеты которые нужно установить после установки чистой операционнй системы для комфортной работы](/linux/basics/centos/6/steps-after-installation/)
+
+
+### [Настройка сети](/linux/basics/centos/6/network-setup/)
+
+
+### 7.X
+
 ### [Centos 7 нужные мне для работы пакеты](/linux/basics/centos/7/steps-after-installation/)
 
 

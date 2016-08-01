@@ -4,6 +4,9 @@ title: Export и Import виртуальных машин VirtualBox
 permalink: /linux/virtual/virtualbox/export-import/
 ---
 
+
+### Export и Import виртуальных машин VirtualBox
+
 ### Предварительные шаги
 
 Необходимо, чтобы переменные vm, VM_HOME и VM_BACKUPS были заданы.
