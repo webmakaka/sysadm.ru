@@ -17,6 +17,13 @@ permalink: /linux/virtual/virtualbox/
 [Инсталляция VirtualBox в командной строке в RedHat/Centos](/linux/virtual/virtualbox/installation/centos/6/)
 
 
+
+<br/>
+
+### Регистрация виртуальной машины
+
+[Регистрация виртуальной машины](/linux/virtual/virtualbox/register/)
+
 <br/>
 
 ### Создание виртуальных машин
