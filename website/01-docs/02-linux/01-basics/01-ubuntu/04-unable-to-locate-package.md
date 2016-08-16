@@ -16,3 +16,6 @@ E: Unable to locate package libstdc++.so.6 (FOR example)
 
 Подробнее:  
 http://askubuntu.com/questions/409821/install-package-for-missing-libraries
+
+
+В RedHat дистрибутивах, можно поискать на rpmfind.net
