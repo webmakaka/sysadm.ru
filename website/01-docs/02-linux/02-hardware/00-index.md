@@ -43,4 +43,4 @@ permalink: /linux/hardware/
 
 ### Wi-Fi адаптер
 
-[Мудацкий Realtek опять не работает в Ubuntu](/linux/hardware/wi-fi/ubuntu/Realtek/)
+[Мудацкий Realtek опять не работает в Ubuntu](/linux/hardware/wi-fi/ubuntu/realtek/)

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Мудацкий Realtek опять не работает в Ubuntu
-permalink: /linux/hardware/
+permalink: /linux/hardware/wi-fi/ubuntu/realtek/
 ---
 
 ### Мудацкий Realtek опять не работает в Ubuntu
