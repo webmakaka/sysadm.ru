@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Linux Документация
+title: Linux Книги и обучающие материалы
 permalink: /linux/docs/pdf/
 ---
 
-## Linux Документация
+## Linux Книги и обучающие материалы
 
 
 ### [Advanced Bash-Scripting Guide Углубленное изучение искусства написания сценариев командной оболочки](https://github.com/sysadm-ru/files.sysadm.ru/blob/gh-pages/pdf/Advancec_Bash_Scripting_%20Guide.pdf)
