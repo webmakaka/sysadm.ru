@@ -5,6 +5,8 @@ permalink: /linux/hardware/hdd/mount-disks/
 ---
 
 
+### Монтирование hdd
+
     # ls /dev/sd*
     /dev/sda   /dev/sdb   /dev/sdb2  /dev/sdb4
     /dev/sda1  /dev/sdb1  /dev/sdb3  /dev/sdb5
