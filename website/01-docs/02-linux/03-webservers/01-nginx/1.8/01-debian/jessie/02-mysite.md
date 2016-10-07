@@ -4,6 +4,7 @@ title: Настройка работы своего сайта Nginx 1.8, PHP
 permalink: /linux/webservers/nginx/1.8/debian/jessie/mysite/
 ---
 
+### Настройка работы своего сайта Nginx 1.8, PHP
 
 ### Настройка конфигов
 

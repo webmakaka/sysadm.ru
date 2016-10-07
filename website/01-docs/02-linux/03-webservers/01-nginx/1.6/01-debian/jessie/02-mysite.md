@@ -4,6 +4,7 @@ title: Настройка работы своего сайта Nginx 1.6, PHP
 permalink: /linux/webservers/nginx/1.6/debian/jessie/mysite/
 ---
 
+### Настройка работы своего сайта Nginx 1.6, PHP
 
 ### Настройка конфигов
 

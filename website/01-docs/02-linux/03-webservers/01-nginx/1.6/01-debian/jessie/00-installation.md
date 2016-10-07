@@ -4,8 +4,7 @@ title: Инсталляция Nginx 1.6 сервера на Debian из паке
 permalink: /linux/webservers/nginx/1.6/debian/jessie/installation/
 ---
 
-### Инсталляция Nginx сервер на Debian из пакетов
-
+### Инсталляция Nginx 1.6 сервера на Debian из пакетов
 
 
 <br/>
