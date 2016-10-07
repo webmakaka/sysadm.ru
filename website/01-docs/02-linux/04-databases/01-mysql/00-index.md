@@ -14,7 +14,7 @@ permalink: /linux/databases/mysql/
 
 [Инсталляция MySQL на Centos 6.5 из пакетов](/linux/databases/mysql/installation/)
 
-[Конфигурирование пользователей после инсталляции](/linux/databases/mysql/users/)
+[Конфигурирование пользователей после инсталляции](/linux/databases/mysql/installation/users/)
 
 [Удаленный доступ к базе root'ом с правами суперпользователя](/linux/databases/mysql/root-connection/)
 

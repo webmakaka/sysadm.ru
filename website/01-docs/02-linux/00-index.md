@@ -46,7 +46,7 @@ ______
 
 ### [GIT](/linux/dev/git/)
 
-### [JAVA](http://javadev.org/jdk/installation/)
+### [JAVA](//javadev.org/development-tools/jdk/installation/)
 
 ### [Программирование для Web](/linux/dev/)
 
