@@ -30,6 +30,7 @@ P.S. На момент регистрации этого домена мной, 
 
 <br/><br/>
 
+[![Join the chat at https://gitter.im/sysadm-ru/Lobby](https://badges.gitter.im/sysadm-ru/Lobby.svg)](https://gitter.im/sysadm-ru/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/sysadm-ru/sysadm.ru.svg?branch=gh-pages)](https://travis-ci.org/sysadm-ru/sysadm.ru) 
 
 <br/><br/>
 

@@ -7,7 +7,6 @@ permalink: /linux/webservers/nginx/1.8/debian/jessie/installation/
 ### Инсталляция Nginx 1.8 сервер на Debian из пакетов
 
 
-
 <br/>
 
     # apt-get update -y && apt-get upgrade -y

@@ -83,7 +83,7 @@ ps -ef | grep java | grep "netcracker/config" | sed 's/^[a-zA-Z]\{1,\}[[:space:]
 
 
 <div align="center">
-	<img src="http://mtaalamu.ru/uploads/images/00/00/14/2012/05/30/1ecddd.png" border="0">
+	<img src="http://mtaalamu.ru/uploads/images/00/00/14/2012/05/30/1ecddd.png" alt="mtaalamu" border="0">
 </div>
 
 
