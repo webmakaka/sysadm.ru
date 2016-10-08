@@ -1,7 +1,7 @@
 # Site settings
 title: sysadm.ru
 
-description: Системное администрирование, Linux, Базы данных, Виртуализация, Cisco
+description: Системное администрирование, Linux, Базы данных, Виртуализация и контейнеры, Cisco
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sysadm.ru" # the base hostname & protocol for your site
 
