@@ -1,5 +1,6 @@
 # Исходники сайта [sysadm.ru](http://sysadm.ru)
 
+[![Build Status](https://travis-ci.org/sysadm-ru/sysadm.ru.svg?branch=gh-pages)](https://travis-ci.org/sysadm-ru/sysadm.ru)
 
 Скопировать и запустить sysadm.ru на свой хост с использованием docker контейнера:
 
