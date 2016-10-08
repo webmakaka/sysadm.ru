@@ -31,8 +31,8 @@ P.S. На момент регистрации этого домена мной, 
 <br/><br/>
 
 
-<a href="https://gitter.im/sysadm-ru/Lobby" rel="nofollow"><img src="https://badges.gitter.im/sysadm-ru/Lobby.svg"></a>
-<a href="https://travis-ci.org/sysadm-ru/sysadm.ru.svg?branch=gh-pages" rel="nofollow"><img src="https://travis-ci.org/sysadm-ru/sysadm.ru.svg?branch=gh-pages"></a>
+<a href="https://gitter.im/sysadm-ru/Lobby" rel="nofollow"><img src="https://badges.gitter.im/sysadm-ru/Lobby.svg" alt="sysadm chat"></a>
+<a href="https://travis-ci.org/sysadm-ru/sysadm.ru.svg?branch=gh-pages" rel="nofollow"><img src="https://travis-ci.org/sysadm-ru/sysadm.ru.svg?branch=gh-pages" alt="sysadm build"></a>
 
 
 
