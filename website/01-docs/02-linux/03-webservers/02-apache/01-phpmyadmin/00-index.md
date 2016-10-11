@@ -19,9 +19,9 @@ permalink: /linux/webservers/apache/phpmyadmin/
     PHP Fatal error:  Call to undefined function mb_detect_encoding()
 
 
+<br/>
 
     # yum install -y php-mbstring
-
     # service httpd restart
 
 
