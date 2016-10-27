@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Видеокурсы для администраторов Linux
+title: Видеокурсы для админов
 permalink: /linux/video-courses/
 ---
 
+### Видеокурсы для админов
 
-### [Как скачать видеокурс с Udemy](/linux/video-courses/how-to-download-course-from-udemy/)  
+[Видеокурсы для администраторов Linux ](/linux/video-kursy/video-courses-for-linux-admins/) (без ссылок на скачку, но вы сами сможете все найти и скачать/купить)  
 
-### [Видеокурсы для администраторов Linux](/linux/video-kursy/video-courses-for-linux-admins/)
+
+[Видеокурсы для администраторов на русском языке ](/linux/video-kursy/video-courses-for-linux-admins/)
