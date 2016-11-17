@@ -33,7 +33,7 @@ P.S. На момент регистрации этого домена мной, 
 <br/>
 
 <div align="center">
-    <img src="bender.jpg" border="0" alt="Злобный робот bender">
+    <img src="//files.sysadm.ru/img/bender.jpg" border="0" alt="Злобный робот bender">
 </div>
 
 <br/>
