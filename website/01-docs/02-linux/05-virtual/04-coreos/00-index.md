@@ -98,7 +98,7 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/
 
 <br/><br/>
 
-**Возможно, полезные статьи по docker:**
+**Возможно, полезные статьи по CoreOS:**
 
 
 <ul>

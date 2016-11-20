@@ -9,7 +9,7 @@ permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
 
 ### Подготовка виртуального жесткого диска virtualbox с coreos
 
-Создаю каталог, где будет все это добро хранится.
+Создаю каталог, где будет все это добро храниться.
 
     $ mkdir -p /mnt/dsk0/machines/coreos/
 

@@ -17,9 +17,8 @@ permalink: /linux/virtual/
 
 
 
-
 <br/>
 
-### CoreOS (хостоваря операционная система для docker контейнеров)
+### CoreOS (хостовая операционная система для docker контейнеров)
 
 [Начинаем разбираться](/linux/virtual/coreos/)

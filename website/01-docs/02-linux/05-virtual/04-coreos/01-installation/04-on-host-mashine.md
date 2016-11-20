@@ -4,6 +4,7 @@ title: Инсталляция CoreOS на хостовую машину
 permalink: /linux/virtual/coreos/installation/on-host-machine/
 ---
 
+### Инсталляция CoreOS на хостовую машину
 
 На хосте стартовал ubuntu с USB флешки в режиме для ознакомления.
 

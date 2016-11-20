@@ -7,7 +7,6 @@ permalink: /linux/virtual/coreos/installation/docker-compose/
 
 ### Инсталляция Docker Compose на CoreOS
 
-
     $ sudo su -
 
     # mkdir -p /opt/bin
