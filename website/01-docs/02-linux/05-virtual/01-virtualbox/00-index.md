@@ -4,7 +4,7 @@ title: Virtual Box
 permalink: /linux/virtual/virtualbox/
 ---
 
-## Virtual Box
+# Virtual Box
 
 ### Инсталляция VirtualBox 5.X
 

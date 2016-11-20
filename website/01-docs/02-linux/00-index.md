@@ -4,7 +4,7 @@ title: Linux
 permalink: /linux/
 ---
 
-## Linux
+# Linux
 
 ### [Базовые вещи](/linux/basics/)
 
@@ -24,7 +24,9 @@ permalink: /linux/
 
 ### [Базы данных](/linux/databases/)  
 
-### [Виртуализация и контейнеры](/linux/virtual/)
+### [Виртуализация](/linux/virtual/)
+
+### [Контейнеры](/linux/containers/)
 
 ______
 

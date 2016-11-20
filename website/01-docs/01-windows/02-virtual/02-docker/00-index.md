@@ -7,7 +7,7 @@ permalink: /windows/virtual/docker/
 ### Docker в Windows
 
 Offtopic:  
-[Docker в Linux](/linux/virtual/docker/)
+[Docker в Linux](/linux/containers/docker/)
 
 
 ### Это просто пиздец, товарищи! В версии 1.11.1 под windows не работает редактор vi и vim. Да нахуй он тогда нужен этот ваш Docker под Windows!
