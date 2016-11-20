@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Introduction to CoreOS Training Video
-permalink: /linux/containers/coreos/02_Introduction_to_CoreOS Training_Video/
+permalink: /linux/containers/coreos/Introduction_to_CoreOS/
 ---
 
 
@@ -25,6 +25,13 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/
     2) Инсталляция VirtualBox
     3) Инсталляция Git
 
+
+
+<br/>
+
+[Launching A Development CoreOS Cluster](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/)
+
+<br/>
 
 
 [Приступаю к изучению](/linux/containers/coreos/service-example/)  

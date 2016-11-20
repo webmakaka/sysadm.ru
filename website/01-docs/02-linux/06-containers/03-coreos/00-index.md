@@ -64,7 +64,7 @@ flannel is a virtual network that gives a subnet to each host for use with conta
 ### [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
 
 <ul>
-    <li><a href="/linux/containers/coreos/02_Introduction_to_CoreOS Training_Video/">[O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]</a></li>
+    <li><a href="/linux/containers/coreos/Introduction_to_CoreOS/">[O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]</a></li>
 </ul>
 
 
