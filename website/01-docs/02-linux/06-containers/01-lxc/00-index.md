@@ -35,8 +35,6 @@ Centos
 <br/><br/>
 
 
-<br/><br/>
-
 Полезные статьи по LXC<br/>
 http://vasilisc.com/lxc-1-0-blog-post-series
 

@@ -9,8 +9,8 @@ permalink: /linux/virtual/
 
 <br/>
 
-### [virtual box](/linux/virtual/virtualbox/)
+### [Virtual Box](/linux/virtual/virtualbox/)
 
 ### [KVM на Centos 6](/linux/virtual/kvm/)
 
-### [vagrant](/linux/virtual/vagrant/)
+### [Vagrant](/linux/virtual/vagrant/)
