@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CoreOS команды
-permalink: /linux/virtual/coreos/commands/
+permalink: /linux/containers/coreos/commands/
 ---
 
 

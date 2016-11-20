@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CoreOS
-permalink: /linux/virtual/coreos/
+permalink: /linux/containers/coreos/
 ---
 
 
@@ -9,33 +9,33 @@ permalink: /linux/virtual/coreos/
 
 ### Инсталляция
 
-[Vagrant и CoreOS](/linux/virtual/coreos/installation/vagrant-coreos/)  
+[Vagrant и CoreOS](/linux/containers/coreos/installation/vagrant-coreos/)  
 
-[VirtualBox и CoreOS](/linux/virtual/coreos/installation/virtualbox-coreos/)
+[VirtualBox и CoreOS](/linux/containers/coreos/installation/virtualbox-coreos/)
 
-[Инсталляция CoreOS на 2х виртуальных машинах virtualBox](/linux/virtual/coreos/installation/virtualbox-coreos-2-machines/)
+[Инсталляция CoreOS на 2х виртуальных машинах virtualBox](/linux/containers/coreos/installation/virtualbox-coreos-2-machines/)
 
-[Инсталляция CoreOS на хостовую машину](/linux/virtual/coreos/installation/on-host-machine/)
+[Инсталляция CoreOS на хостовую машину](/linux/containers/coreos/installation/on-host-machine/)
 
-[Инсталляция Docker Compose на CoreOS](/linux/virtual/coreos/installation/docker-compose/)
+[Инсталляция Docker Compose на CoreOS](/linux/containers/coreos/installation/docker-compose/)
 
 
 ### Network
 
-[Настройка сетевых адаптеров в CoreOS](/linux/virtual/coreos/network/)
+[Настройка сетевых адаптеров в CoreOS](/linux/containers/coreos/network/)
 
 
 ### Update | Upgrade
 
-[update](/linux/virtual/coreos/update/)
+[update](/linux/containers/coreos/update/)
 
 
 <br/>
 
 ### Команды
 
-[Команды (пока разбираемся)](/linux/virtual/coreos/commands/)  
-[cloud-config (пока разбираемся)](/linux/virtual/coreos/cloud-config/)
+[Команды (пока разбираемся)](/linux/containers/coreos/commands/)  
+[cloud-config (пока разбираемся)](/linux/containers/coreos/cloud-config/)
 
 <br/><br/>
 
@@ -78,16 +78,16 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/
 
 
 
-[Приступаю к изучению](/linux/virtual/coreos/service-example/)  
+[Приступаю к изучению](/linux/containers/coreos/service-example/)  
 
-[DataBase Layer](/linux/virtual/coreos/coreos-database-layer/)  
+[DataBase Layer](/linux/containers/coreos/coreos-database-layer/)  
 
 
-[Application Layer](/linux/virtual/coreos/coreos-application-layer/)
+[Application Layer](/linux/containers/coreos/coreos-application-layer/)
 
-[Load balancing with NGINX](/linux/virtual/coreos/load-balancing-with-nginx/)
+[Load balancing with NGINX](/linux/containers/coreos/load-balancing-with-nginx/)
 
-[Load balancing with HAPROXY & CONFD](/linux/virtual/coreos/load-balancing-with-haproxy-and-confd/)
+[Load balancing with HAPROXY & CONFD](/linux/containers/coreos/load-balancing-with-haproxy-and-confd/)
 
 
 

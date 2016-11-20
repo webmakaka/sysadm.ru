@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Настройка сетевых адаптеров в CoreOS
-permalink: /linux/virtual/coreos/network/
+permalink: /linux/containers/coreos/network/
 ---
 
 

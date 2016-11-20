@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция CoreOS в virtualBox
-permalink: /linux/virtual/coreos/installation/virtualbox-coreos/
+permalink: /linux/containers/coreos/installation/virtualbox-coreos/
 ---
 
 

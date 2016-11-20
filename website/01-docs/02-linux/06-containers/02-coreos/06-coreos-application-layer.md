@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Application Layer
-permalink: /linux/virtual/coreos/coreos-application-layer/
+permalink: /linux/containers/coreos/coreos-application-layer/
 ---
 
 

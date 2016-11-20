@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция CoreOS с помощью Vargrant
-permalink: /linux/virtual/coreos/installation/vagrant-coreos/
+permalink: /linux/containers/coreos/installation/vagrant-coreos/
 ---
 
 

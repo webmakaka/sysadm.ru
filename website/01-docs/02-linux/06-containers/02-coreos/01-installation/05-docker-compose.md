@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Docker Compose на CoreOS
-permalink: /linux/virtual/coreos/installation/docker-compose/
+permalink: /linux/containers/coreos/installation/docker-compose/
 ---
 
 

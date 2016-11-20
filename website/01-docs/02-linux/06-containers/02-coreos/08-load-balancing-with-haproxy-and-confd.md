@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Load balancing with HAPROXY & CONFD
-permalink: /linux/virtual/coreos/load-balancing-with-haproxy-and-confd/
+permalink: /linux/containers/coreos/load-balancing-with-haproxy-and-confd/
 ---
 
 

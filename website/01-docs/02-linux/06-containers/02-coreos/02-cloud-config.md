@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CoreOS cloud-config
-permalink: /linux/virtual/coreos/cloud-config/
+permalink: /linux/containers/coreos/cloud-config/
 ---
 
 

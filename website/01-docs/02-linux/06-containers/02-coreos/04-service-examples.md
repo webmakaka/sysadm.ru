@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Приступаю к изучению
-permalink: /linux/virtual/coreos/service-example/
+permalink: /linux/containers/coreos/service-example/
 ---
 
 

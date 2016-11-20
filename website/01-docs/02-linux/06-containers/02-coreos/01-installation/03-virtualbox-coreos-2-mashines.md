@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция CoreOS на 2х виртуальных машинах virtualBox
-permalink: /linux/virtual/coreos/installation/virtualbox-coreos-2-machines/
+permalink: /linux/containers/coreos/installation/virtualbox-coreos-2-machines/
 ---
 
 

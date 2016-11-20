@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DataBase Layer
-permalink: /linux/virtual/coreos/coreos-database-layer/
+permalink: /linux/containers/coreos/coreos-database-layer/
 ---
 
 
