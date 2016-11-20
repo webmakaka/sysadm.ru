@@ -23,7 +23,7 @@ permalink: /linux/hardware/motherboard/bios-upgrade/
 
 В стандартном списке репо не было flashrom.
 
-Вообщем я поставил, следующим способом.
+В общем я поставил, следующим способом.
 
     # add-apt-repository ppa:flashrom-developers/flashrom-daily
     # apt-get update

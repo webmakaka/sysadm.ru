@@ -36,7 +36,7 @@ cisco-router-1941(config-l2tp-class)#protocol l2tpv2 corbina
 
 
 
-Вообщем таких команд нет!
+В общем таких команд нет!
 
 Нашел в интернете информацию,
 https://supportforums.cisco.com/thread/2036850
