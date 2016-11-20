@@ -12,6 +12,7 @@ VirtualBox и Git должны быть установлены.
 
 ### Vagrant и CoreOS
 
+    $ cd /tmp/
     $ git clone https://github.com/coreos/coreos-vagrant/
 
     $ cd coreos-vagrant/
@@ -19,10 +20,16 @@ VirtualBox и Git должны быть установлены.
     $ mv config.rb.sample config.rb
     $ mv user-data.sample user-data
 
+<br/>
+
+    $ cp config.rb config.rb.orig
+    $ cp user-data user-data.orig
 
 <br/>
 
     $ vi config.rb
+
+Разкомментировать и установить:
 
     $num_instances=3
 

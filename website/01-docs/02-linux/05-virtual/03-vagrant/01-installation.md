@@ -7,20 +7,21 @@ permalink: /linux/virtual/vagrant/installation/ubuntu-14-04/
 
 # Инсталляция Vargant в Ubuntu 14.04
 
-Пока docker выглядит для меня намного предпочтительней. Правда как оказалось, с помощью vagrant можно создавать множество docker контейнеров.
 
+DOWNLOAD VAGRANT:  
+https://www.vagrantup.com/downloads.html
 
 <br/>
 
 ### Инсталляция Vagrant
 
     # cd /tmp
-    # wget https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
+    # wget https://releases.hashicorp.com/vagrant/1.8.7/vagrant_1.8.7_x86_64.deb
 
-    # dpkg -i vagrant_1.8.1_x86_64.deb
+    # dpkg -i vagrant_1.8.7_x86_64.deb
 
     $ vagrant -v
-    Vagrant 1.8.1
+    Vagrant 1.8.7
 
 
 <br/>
@@ -52,8 +53,3 @@ https://atlas.hashicorp.com/boxes/search
 
     //
     $ vagrant destroy
-
-
-Рекомендуется к просмотру:  
-
-[tutsplus.com] Easy Rails Development Environment With Vagrant [2015, ENG]
