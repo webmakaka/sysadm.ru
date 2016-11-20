@@ -9,6 +9,7 @@ permalink: /linux/containers/
 
 <br/>
 
+### [Linux Containers (LXC)](/linux/containers/lxc/)
 ### [docker](/linux/containers/docker/)
 
 
