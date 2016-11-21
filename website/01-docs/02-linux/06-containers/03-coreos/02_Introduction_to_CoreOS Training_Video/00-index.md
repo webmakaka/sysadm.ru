@@ -34,7 +34,6 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/
 <br/>
 
 
-[Приступаю к изучению](/linux/containers/coreos/service-example/)  
 
 [DataBase Layer](/linux/containers/coreos/coreos-database-layer/)  
 
