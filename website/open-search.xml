@@ -1,0 +1,10 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+ <ShortName>sysadm.ru</ShortName>
+ <Description>Use Google to search sysadm.ru</Description>
+ <Tags>sysadm.ru</Tags>
+ <Url type="text/html"
+      template="http://www.google.com/search?as_sitesearch=sysadm.ru&amp;q={searchTerms}&amp;start={indexOffset}"/>
+</OpenSearchDescription>
