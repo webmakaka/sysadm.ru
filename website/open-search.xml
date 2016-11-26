@@ -11,5 +11,5 @@ permalink: /open-search.xml
  <Description>Use Google to search sysadm.ru</Description>
  <Tags>sysadm.ru</Tags>
  <Url type="text/html"
-      template="http://www.google.com/search?as_sitesearch=sysadm.ru&amp;q={searchTerms}&amp;start={indexOffset}"/>
+      template="http://www.google.com/search?as_sitesearch=sysadm.ru&amp;start={indexOffset}&amp;q={searchTerms}"/>
 </OpenSearchDescription>
