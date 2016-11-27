@@ -78,3 +78,10 @@ https://discovery.etcd.io/new
 
     // Если будет нужно выключить
     $ vagrant destroy
+
+
+
+<br/>
+
+
+    $ ssh-add ~/.vagrant.d/insecure_private_key

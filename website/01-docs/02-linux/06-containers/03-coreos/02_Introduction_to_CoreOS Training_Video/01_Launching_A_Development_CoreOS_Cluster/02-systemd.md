@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction to CoreOS Training Video
+title: systemd
 permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/systemd/
 ---
 
@@ -15,9 +15,6 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
 ### Пример 1:
 
     core-01 system # vi helloworld.service
-
-
-
 
 <br/>
 
@@ -84,6 +81,3 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
     # docker ps
 
     # systemctl stop helloworld2@{1..4}.service
-
-
-    

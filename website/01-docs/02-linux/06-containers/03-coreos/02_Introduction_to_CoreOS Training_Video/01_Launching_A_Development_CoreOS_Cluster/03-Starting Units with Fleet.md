@@ -20,12 +20,24 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
 
 <br/>
 
+    $ fleetctl list-machines  
+    MACHINE		IP		METADATA
+    3408f7ab...	172.17.8.103	-
+    b2ca4512...	172.17.8.101	-
+    db577263...	172.17.8.102	-
+
+
+<br/>
+
     $ fleetctl list-unit-files
+    UNIT	HASH	DSTATE	STATE	TARGET
+
 
 <br/>
 
     $ fleetctl list-units
-    UNIT	HASH	DSTATE	STATE	TARGET
+    UNIT	MACHINE	ACTIVE	SUB
+
 
 
 <br/>
@@ -53,128 +65,101 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
 
 <br/>
 
-    $ fleetctl list-unit-files          
+    $ fleetctl list-unit-files
     UNIT			HASH	DSTATE		STATE		TARGET
     hellofleet.service	9b0408f	inactive	inactive	-
+
 
 <br/>
 
     $ fleetctl load hellofleet
-    Unit hellofleet.service loaded on 48777333.../172.17.8.103
+    Unit hellofleet.service loaded on 3408f7ab.../172.17.8.103
 
 
 <br/>
 
     $ fleetctl list-units     
     UNIT			MACHINE				ACTIVE		SUB
-    hellofleet.service	48777333.../172.17.8.103	inactive	dead
+    hellofleet.service	3408f7ab.../172.17.8.103	inactive	dead
+
 
 <br/>
 
 
     $ fleetctl start hellofleet
-    Unit hellofleet.service launched on 48777333.../172.17.8.103
+    Unit hellofleet.service launched on 3408f7ab.../172.17.8.103
 
 <br/>
 
     $ fleetctl list-units
     UNIT			MACHINE				ACTIVE	SUB
-    hellofleet.service	48777333.../172.17.8.103	active	running
+    hellofleet.service	3408f7ab.../172.17.8.103	active	running
+
 
 <br/>
 
     $ fleetctl status hellofleet
+    The authenticity of host '172.17.8.103' can't be established.
+    ECDSA key fingerprint is c2:8e:3f:50:c5:20:db:7a:6d:91:4b:73:fc:a8:f8:41.
+    Are you sure you want to continue connecting (yes/no)? yes
+    Warning: Permanently added '172.17.8.103' (ECDSA) to the list of known hosts.
     ● hellofleet.service - Hello Fleet Service
-       Loaded: loaded (/run/fleet/units/hellofleet.service; linked-runtime; vendor preset: disabled)
-       Active: active (running) since Thu 2016-01-07 23:03:26 UTC; 1min 16s ago
-      Process: 1357 ExecStartPre=/usr/bin/docker pull busybox (code=exited, status=0/SUCCESS)
-      Process: 1350 ExecStartPre=/usr/bin/docker rm hello-fleet (code=exited, status=1/FAILURE)
-      Process: 1295 ExecStartPre=/usr/bin/docker kill hello-fleet (code=exited, status=1/FAILURE)
-     Main PID: 1382 (docker)
-       Memory: 11.3M
-          CPU: 155ms
+       Loaded: loaded (/run/fleet/units/hellofleet.service; linked-runtime; vendor p
+       Active: active (running) since Sun 2016-11-27 01:09:16 UTC; 1min 2s ago
+      Process: 1392 ExecStartPre=/usr/bin/docker pull busybox (code=exited, status=0
+      Process: 1387 ExecStartPre=/usr/bin/docker rm hello-fleet (code=exited, status
+      Process: 1292 ExecStartPre=/usr/bin/docker kill hello-fleet (code=exited, stat
+     Main PID: 1405 (docker)
+        Tasks: 7
+       Memory: 24.4M
+          CPU: 127ms
        CGroup: /system.slice/hellofleet.service
-               └─1382 /usr/bin/docker run --name hello-fleet busybox /bin/sh -c while true; do echo Hello Fleet; sleep 1; done
+               └─1405 /usr/bin/docker run --name hello-fleet busybox /bin/sh -c whil
 
-    Jan 07 23:04:33 core-03 docker[1382]: Hello Fleet
-    Jan 07 23:04:34 core-03 docker[1382]: Hello Fleet
-    Jan 07 23:04:35 core-03 docker[1382]: Hello Fleet
-    Jan 07 23:04:36 core-03 docker[1382]: Hello Fleet
-    Jan 07 23:04:37 core-03 docker[1382]: Hello Fleet
-    Jan 07 23:04:38 core-03 docker[1382]: Hello Fleet
-    Jan 07 23:04:39 core-03 docker[1382]: Hello Fleet
-    Jan 07 23:04:40 core-03 docker[1382]: Hello Fleet
-    Jan 07 23:04:41 core-03 docker[1382]: Hello Fleet
-    Jan 07 23:04:42 core-03 docker[1382]: Hello Fleet
+    Nov 27 01:10:09 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:10:10 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:10:11 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:10:12 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:10:13 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:10:14 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:10:15 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:10:16 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:10:17 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:10:18 core-03 docker[1405]: Hello Fleet
 
 
+<br/>
+
+    $ fleetctl journal hellofleet
+    -- Logs begin at Mon 2016-11-21 19:43:59 UTC, end at Sun 2016-11-27 01:11:39 UTC. --
+    Nov 27 01:11:30 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:11:31 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:11:32 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:11:33 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:11:34 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:11:35 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:11:36 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:11:37 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:11:38 core-03 docker[1405]: Hello Fleet
+    Nov 27 01:11:39 core-03 docker[1405]: Hello Fleet
+
+
+<br/>
+
+    $ fleetctl journal -f hellofleet
+
+<br/>
 
     $ fleetctl stop hellofleet.service
 
 
+<br/>
+
 
     $ fleetctl list-units     
     UNIT			MACHINE				ACTIVE	SUB
-    hellofleet.service	48777333.../172.17.8.103	failed	failed
+    hellofleet.service	3408f7ab.../172.17.8.103	failed	failed
+
+<br/>
 
     $ fleetctl destroy hellofleet.service
-
-<br/>
-
-### Global Service
-
-https://github.com/rosskukulinski/Introduction_To_CoreOS/blob/master/Chapter%204/global_units/global.service
-
-
-<br/>
-
-### Dockerized Node.js Application
-
-
-https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204/Dockerized_App
-
-
-    $ docker run --rm -ti -p 3000:3000 -e INSTANCE=instance1 rosskukulinski/nodeapp1
-
-
-    $ docker inspect --format='' containerId
-
-    $ curl 172.17.0.2:3000
-    Hello from instance1 running on c2108d6d0bf6
-
-
-    $ fleetctl start nodeapp@.service
-    $ fleetctl start nodeapp-v2@{1..2}
-
-
-<br/>
-
-### Interacting with ETCD
-
-    $ etcdctl mkdir /my_data
-    $ etcdctl ls / --recursive
-
-    $ etcdctl mk /my_data/key myvalue
-myvalue
-
-    $ etcdctl get /my_data/key       
-    myvalue
-
-    $ etcdctl update /my_data/key myNewValue
-
-    $ etcdctl set /my_data/key2 mykey2
-
-    $ etcdctl set /my_data/expiring_key byebye --ttl 5
-
-
-<br/>
-
-### TOOLBOX
-
-    $ vi .toolboxrc
-
-    TOOLBOX_DOCKER_IMAGE=debian
-    TOOLBOX_DOCKER_TAG=jessie
-    TOOLBOX_DOCKER_USER=root
-
-    $ toolbox
