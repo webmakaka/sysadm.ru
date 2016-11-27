@@ -8,17 +8,9 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
 
 
-<br/><br/>
-
-Смотрю видео курс
-[O'Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
-
-
-https://coreos.com/os/docs/latest/booting-on-vagrant.html
+https://github.com/rosskukulinski/Introduction_To_CoreOS/
 
 https://github.com/coreos/coreos-vagrant/
-
-https://github.com/rosskukulinski/Introduction_To_CoreOS/
 
 
     1) Инсталляция Vagrant
@@ -26,15 +18,12 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/
     3) Инсталляция Git
 
 
-
 <br/>
 
 [01. Launching A Development CoreOS Cluster](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/)
 
-[02. Deploying A DatabaseBacked Web Application](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/)
+[02. Deploying A DatabaseBacked Web Application](/linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/)
 
-
-05.
 
 <br/>
 
