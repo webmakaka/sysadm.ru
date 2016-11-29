@@ -8,6 +8,33 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster
 
 
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/app1.png" border="0" alt="cluster">
+</div>
+
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/app2.png" border="0" alt="cluster">
+</div>
+
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/app3.png" border="0" alt="cluster">
+</div>
+
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/app4.png" border="0" alt="cluster">
+</div>
+
+<br/>
+
+
 
 [01 Install Dependencies And Boot Your First Cluster](/linux/containers/coreos/installation/vagrant-coreos/)  
 
@@ -17,12 +44,10 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
 
 [04 Global Units](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/Global_Units/)
 
-
 [05 Dockerized Service](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/Dockerized_Service/)
 
 [06 etcd And etcdctl](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/etcd_And_etcdctl/)
 
 [07 Troubleshooting CoreOS Services](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/Troubleshooting_CoreOS_Services/)
-
 
 [08 Toolbox](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/Toolbox/)
