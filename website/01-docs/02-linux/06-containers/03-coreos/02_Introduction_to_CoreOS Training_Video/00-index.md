@@ -40,9 +40,7 @@ https://github.com/coreos/coreos-vagrant/
 
 <br/>
 
-
-
-[DataBase Layer](/linux/containers/coreos/coreos-database-layer/)  
+<br/>
 
 
 [Application Layer](/linux/containers/coreos/coreos-application-layer/)
