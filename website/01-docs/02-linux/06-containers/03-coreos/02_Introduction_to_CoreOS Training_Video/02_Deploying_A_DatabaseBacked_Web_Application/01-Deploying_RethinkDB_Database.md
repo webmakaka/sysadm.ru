@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Service Discovery With etcd
+title: Deploying RethinkDB Database
 permalink: /linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Deploying_RethinkDB_Database/
 ---
 

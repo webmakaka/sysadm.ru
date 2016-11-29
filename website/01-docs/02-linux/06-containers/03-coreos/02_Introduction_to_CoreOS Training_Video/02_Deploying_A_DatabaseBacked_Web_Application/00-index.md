@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Deploying A DatabaseBacked Web Application
-permalink: /linux/containers/coreos/Introduction_to_CoreOS//
+permalink: /linux/containers/coreos/Introduction_to_CoreOS/
 ---
 
 
