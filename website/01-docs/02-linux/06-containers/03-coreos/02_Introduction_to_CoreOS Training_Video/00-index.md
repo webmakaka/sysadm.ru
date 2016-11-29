@@ -35,7 +35,7 @@ https://github.com/coreos/coreos-vagrant/
 
 [01. Launching A Development CoreOS Cluster](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/)
 
-[02. Deploying A DatabaseBacked Web Application](/linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/)
+[02. Deploying A DatabaseBacked Web Application](/linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Deploying_A_DatabaseBacked_Web_Application/)
 
 
 <br/>
