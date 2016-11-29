@@ -8,6 +8,19 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
 
 
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/app1.png" border="0" alt="cluster">
+</div>
+
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/app2.png" border="0" alt="cluster">
+</div>
+
+<br/>
+
+
 https://github.com/rosskukulinski/Introduction_To_CoreOS/
 
 https://github.com/coreos/coreos-vagrant/

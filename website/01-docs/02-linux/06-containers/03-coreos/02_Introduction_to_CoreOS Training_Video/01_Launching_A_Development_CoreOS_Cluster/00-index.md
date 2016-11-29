@@ -10,31 +10,6 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/containers/coreos/app1.png" border="0" alt="cluster">
-</div>
-
-<br/>
-
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/containers/coreos/app2.png" border="0" alt="cluster">
-</div>
-
-<br/>
-
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/containers/coreos/app3.png" border="0" alt="cluster">
-</div>
-
-<br/>
-
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/containers/coreos/app4.png" border="0" alt="cluster">
-</div>
-
-<br/>
-
-
 
 [01 Install Dependencies And Boot Your First Cluster](/linux/containers/coreos/installation/vagrant-coreos/)  
 
