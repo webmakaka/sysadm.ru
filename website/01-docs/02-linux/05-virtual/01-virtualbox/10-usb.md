@@ -42,7 +42,14 @@ permalink: /linux/virtual/virtualbox/usb/
 
     $ VBoxManage modifyvm ${vm} --usb on --usbehci on
 
+
+<br/>
+
     $ VBoxManage list usbhost
+    Host USB Devices:
+
+    <none>
+
 
 <br/>
 
