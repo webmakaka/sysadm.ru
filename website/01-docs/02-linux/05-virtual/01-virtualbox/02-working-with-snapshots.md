@@ -4,7 +4,7 @@ title: Работа со снапшотами
 permalink: /linux/virtual/virtualbox/snapshots/
 ---
 
-### Работа со снапшотами
+# Работа со снапшотами
 
 ### Создание снапшотов:
 

@@ -4,7 +4,7 @@ title: Создание виртуальной машины VirtualBox с Oracle
 permalink: /linux/virtual/virtualbox/vm/oracle-linux-6/
 ---
 
-### Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux для инсталляции базы данных Oracle
+# Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux для инсталляции базы данных Oracle
 
 Имеем компьютер, подключенный к свичу по ethernet.
 На него нужно установить виртуальную машину с Oracle Linux, приблизительно похожий на сервер для этой базы.

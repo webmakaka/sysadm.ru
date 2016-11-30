@@ -5,7 +5,7 @@ permalink: /linux/virtual/virtualbox/export-import/
 ---
 
 
-### Export и Import виртуальных машин VirtualBox
+# Export и Import виртуальных машин VirtualBox
 
 ### Предварительные шаги
 

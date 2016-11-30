@@ -5,7 +5,7 @@ permalink: /linux/virtual/virtualbox/convert-vmdk-vdi/
 ---
 
 
-### Конвертировать wmdk в vdi
+# Конвертировать wmdk в vdi
 
 wmdk - vmware   
 vdi - virtualbox  

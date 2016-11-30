@@ -5,9 +5,7 @@ permalink: /linux/virtual/virtualbox/guest-additions-installation-in-command-lin
 ---
 
 
-
-
-###  Инсталляция Guest Additions в Ubuntu Linux в командной строке
+# Инсталляция Guest Additions в Ubuntu Linux в командной строке
 
 
 Пакет Guest Additions как минимум нужен для того, чтобы мышка по экрану нормально перемещалась, работала copy+paste и может быть что-то еще. Нужно ли устанавливать guest additions, если предстоит работать только в командной строке, не скажу, не знаю.

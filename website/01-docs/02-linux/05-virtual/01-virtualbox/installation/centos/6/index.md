@@ -4,7 +4,7 @@ title: Инсталляция VirtualBox в командной строке в R
 permalink: /linux/virtual/virtualbox/installation/centos/6/
 ---
 
-<br/>
+# Инсталляция VirtualBox в командной строке в RedHat/Centos
 
     # yum repolist
     # yum update -y
