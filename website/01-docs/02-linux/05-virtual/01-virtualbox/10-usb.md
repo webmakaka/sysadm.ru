@@ -143,6 +143,3 @@ permalink: /linux/virtual/virtualbox/usb/
 // Удалить usb устройство
 
     $ VBoxManage usbfilter remove 0  --target $vm
-
-
-</pre>
