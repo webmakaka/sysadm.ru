@@ -66,6 +66,13 @@ permalink: /linux/virtual/virtualbox/
 
 <br/>
 
+### Подключение USB устройств:
+
+[Подключение USB устройств](/linux/virtual/virtualbox/usb/)
+
+
+<br/>
+
 ### Подготовленные образы VirtualBox с Linux
 
 <a href="http://www.osboxes.org/virtualbox-images/" rel="nofollow">osboxes</a>
