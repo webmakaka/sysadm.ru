@@ -8,7 +8,9 @@ permalink: /linux/virtual/virtualbox/usb/
 # VirtialBox Подключение USB устройств
 
 
-Работал с USB устройствами на виртуальной машине не очень много. Похоже, каждый раз для подключения usb устройства приходится удалять предыдущее значение и указывать новое (если меняется устройство).
+<br/>
+
+Работал с USB устройствами на виртуальной машине не очень много. Похоже, каждый раз для подключения usb устройства приходится удалять в консоли предыдущее значение и указывать новое (если меняется устройство).
 
 
 // Проверяю, установлен ли Extension Pack
@@ -34,9 +36,11 @@ permalink: /linux/virtual/virtualbox/usb/
     Why unusable:
 
 
+<br/>
+
 // Включаю
 
-    $ VBoxManage modifyvm $vm --usb on --usbehci on
+    $ VBoxManage modifyvm ${vm} --usb on --usbehci on
 
     $ VBoxManage list usbhost
 
@@ -103,7 +107,7 @@ permalink: /linux/virtual/virtualbox/usb/
 
     $ VBoxManage \
     usbfilter add 0 \
-    --target $vm \
+    --target ${vm} \
     --name usbstick \
     --vendorid 18D1 \
     --productid 4EE1
@@ -114,7 +118,7 @@ permalink: /linux/virtual/virtualbox/usb/
 
     $ VBoxHeadless --startvm ${vm}
 
-    $ VBoxManage showvminfo $vm
+    $ VBoxManage showvminfo ${vm}
 
 <br/>
 
@@ -142,4 +146,4 @@ permalink: /linux/virtual/virtualbox/usb/
 
 // Удалить usb устройство
 
-    $ VBoxManage usbfilter remove 0  --target $vm
+    $ VBoxManage usbfilter remove 0  --target ${vm}
