@@ -149,3 +149,9 @@ core-01
     http://172.17.8.101/
     http://172.17.8.102/
     http://172.17.8.103/
+
+
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/app7.png" border="0" alt="coreos cluster">
+</div>   

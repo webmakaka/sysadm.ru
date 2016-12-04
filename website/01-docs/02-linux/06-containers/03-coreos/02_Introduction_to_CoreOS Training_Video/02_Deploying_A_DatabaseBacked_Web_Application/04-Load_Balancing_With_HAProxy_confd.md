@@ -8,6 +8,22 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseB
 # Load balancing with HAPROXY & CONFD
 
 
+Имеем:
+
+    $ fleetctl list-units
+    UNIT				MACHINE				ACTIVE	SUB
+    rethinkdb-announce@1.service	3408f7ab.../172.17.8.103	active	running
+    rethinkdb-announce@2.service	b2ca4512.../172.17.8.101	active	running
+    rethinkdb@1.service		3408f7ab.../172.17.8.103	active	running
+    rethinkdb@2.service		b2ca4512.../172.17.8.101	active	running
+    todo-sk@1.service		3408f7ab.../172.17.8.103	active	running
+    todo-sk@2.service		db577263.../172.17.8.102	active	running
+    todo-sk@3.service		b2ca4512.../172.17.8.101	active	running
+    todo@1.service			3408f7ab.../172.17.8.103	active	running
+    todo@2.service			db577263.../172.17.8.102	active	running
+    todo@3.service			b2ca4512.../172.17.8.101	active	running
+
+
 <br/>
 
  **$ vi haproxy.service**
@@ -48,6 +64,11 @@ Global=true
 {% endhighlight %}
 
 
+Сразу меняю
+
+    rosskukulinski/haproxy-proxy на serg1i/haproxy-proxy
+
+
 <br/>
 
     $ fleetctl submit haproxy.service
@@ -56,6 +77,25 @@ Global=true
 <br/>
 
     $ fleetctl list-units
+    UNIT				MACHINE				ACTIVE	SUB
+    haproxy.service			3408f7ab.../172.17.8.103	active	running
+    haproxy.service			b2ca4512.../172.17.8.101	active	running
+    haproxy.service			db577263.../172.17.8.102	active	running
+    rethinkdb-announce@1.service	3408f7ab.../172.17.8.103	active	running
+    rethinkdb-announce@2.service	b2ca4512.../172.17.8.101	active	running
+    rethinkdb@1.service		3408f7ab.../172.17.8.103	active	running
+    rethinkdb@2.service		b2ca4512.../172.17.8.101	active	running
+    todo-sk@1.service		3408f7ab.../172.17.8.103	active	running
+    todo-sk@2.service		db577263.../172.17.8.102	active	running
+    todo-sk@3.service		b2ca4512.../172.17.8.101	active	running
+    todo@1.service			3408f7ab.../172.17.8.103	active	running
+    todo@2.service			db577263.../172.17.8.102	active	running
+    todo@3.service			b2ca4512.../172.17.8.101	active	running
+
+
+<br/>
+
+    $ journalctl -f --lines=50 -u haproxy
 
 <br/>
 
@@ -64,6 +104,4 @@ Global=true
     http://172.17.8.103/
 
 
-
-    docker pull rosskukulinski/haproxy-proxy
-    docker pull serg1i/haproxy-proxy
+Все работает!
