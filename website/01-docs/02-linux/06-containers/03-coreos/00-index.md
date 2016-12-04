@@ -78,6 +78,11 @@ Kubernetes - более продвинутый аналог fleet
 
 flannel is a virtual network that gives a subnet to each host for use with container runtimes.
 
+
+confd:  
+https://github.com/kelseyhightower/confd
+
+
 <br/><br/>
 
 
@@ -96,6 +101,17 @@ http://www.youtube.com/watch?v=wxUxtflalE4
 
 https://github.com/sysadm-ru/production-docker-ha-architecture
 
+
+
+
+
+<br/>
+<br/>
+
+### Команды
+
+[Команды (пока разбираемся)](/linux/containers/coreos/commands/)  
+[cloud-config (пока разбираемся)](/linux/containers/coreos/cloud-config/)
 
 
 

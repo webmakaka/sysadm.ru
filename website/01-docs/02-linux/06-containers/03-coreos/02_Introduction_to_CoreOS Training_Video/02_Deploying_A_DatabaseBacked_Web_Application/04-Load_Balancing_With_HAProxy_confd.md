@@ -26,6 +26,11 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseB
 
 <br/>
 
+Я заменил оригинальные image, своими. Они отличаются только IP адресом.
+С оригинальным у меня не заработало.
+
+<br/>
+
  **$ vi haproxy.service**
 
 
@@ -50,11 +55,11 @@ TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill %p-%i
 ExecStartPre=-/usr/bin/docker rm %p-%i
 ExecStartPre=-/usr/bin/etcdctl mkdir /services/todo
-ExecStartPre=-/usr/bin/docker pull rosskukulinski/haproxy-proxy
+ExecStartPre=-/usr/bin/docker pull marley/coreos-haproxy
 ExecStart=/usr/bin/docker run --name %p-%i \
       -h %H \
       -p ${COREOS_PUBLIC_IP}:80:80 \
-      rosskukulinski/haproxy-proxy
+      marley/coreos-haproxy
 ExecStop=-/usr/bin/docker kill %p-%i
 ExecStop=-/usr/bin/docker rm %p-%i
 
@@ -62,11 +67,6 @@ ExecStop=-/usr/bin/docker rm %p-%i
 Global=true
 
 {% endhighlight %}
-
-
-Сразу меняю
-
-    rosskukulinski/haproxy-proxy на serg1i/haproxy-proxy
 
 
 <br/>
@@ -105,3 +105,10 @@ Global=true
 
 
 Все работает!
+
+
+Если нужно остановить и выгрузить все, что касается сервиса:
+
+    $ fleetctl stop haproxy.service
+    $ fleetctl unload haproxy.service
+    $ fleetctl destroy haproxy.service
