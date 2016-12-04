@@ -25,7 +25,10 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseB
 [01 Deploying RethinkDB Database](/linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Deploying_RethinkDB_Database/)  
 
 
-[02 Load balancing with NGINX](/linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Load_Balancing_With_NGINX_confd/)  
+[02 Deploying RethinkDB Database](/linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Deploying_RethinkDB_Database/)
 
 
-[03 Load balancing with HAPROXY & CONFD](/linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Deploying_RethinkDB_Database/)
+[03 Deploying Web Application](/linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Deploying_Web_Application/)  
+
+
+[04 Load balancing with HAPROXY & CONFD](/linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Deploying_RethinkDB_Database/)

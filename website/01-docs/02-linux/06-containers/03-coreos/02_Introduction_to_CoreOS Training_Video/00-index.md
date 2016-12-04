@@ -39,15 +39,6 @@ https://github.com/coreos/coreos-vagrant/
 
 
 <br/>
-
-<br/>
-
-
-[Application Layer](/linux/containers/coreos/coreos-application-layer/)
-
-
-
-
 <br/>
 
 ### Команды
