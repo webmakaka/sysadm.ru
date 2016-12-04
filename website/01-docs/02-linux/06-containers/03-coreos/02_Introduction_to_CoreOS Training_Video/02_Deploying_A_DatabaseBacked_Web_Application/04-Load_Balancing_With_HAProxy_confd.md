@@ -8,13 +8,6 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseB
 # Load balancing with HAPROXY & CONFD
 
 
-core-01
-
-
-    $ fleetctl stop nginx.service
-    $ fleetctl unload nginx.service
-
-
 <br/>
 
  **$ vi haproxy.service**
@@ -69,3 +62,8 @@ Global=true
     http://172.17.8.101/
     http://172.17.8.102/
     http://172.17.8.103/
+
+
+
+    docker pull rosskukulinski/haproxy-proxy
+    docker pull serg1i/haproxy-proxy

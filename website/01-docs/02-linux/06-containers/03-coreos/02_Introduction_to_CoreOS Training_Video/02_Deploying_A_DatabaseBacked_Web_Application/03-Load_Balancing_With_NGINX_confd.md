@@ -81,6 +81,71 @@ Global=true
 
 <br/>
 
+
+    $ journalctl -f --lines -u nginx
+    -- Logs begin at Mon 2016-11-21 19:42:58 UTC. --
+    Dec 04 09:55:00 core-01 docker[27815]: 2016-12-04T09:55:00Z core-01 confd[9851]: FATAL cannot connect to etcd cluster: 172.17.42.1:4001
+    Dec 04 09:55:00 core-01 docker[27815]: [nginx] waiting for confd to create initial nginx configuration.
+    Dec 04 09:55:05 core-01 docker[27815]: 2016-12-04T09:55:05Z core-01 confd[9856]: INFO Backend set to etcd
+    Dec 04 09:55:05 core-01 docker[27815]: 2016-12-04T09:55:05Z core-01 confd[9856]: INFO Starting confd
+    Dec 04 09:55:05 core-01 docker[27815]: 2016-12-04T09:55:05Z core-01 confd[9856]: INFO Backend nodes set to 172.17.42.1:4001
+    Dec 04 09:55:06 core-01 docker[27815]: 2016-12-04T09:55:06Z core-01 confd[9856]: FATAL cannot connect to etcd cluster: 172.17.42.1:4001
+    Dec 04 09:55:06 core-01 docker[27815]: [nginx] waiting for confd to create initial nginx configuration.
+    Dec 04 09:55:11 core-01 docker[27815]: 2016-12-04T09:55:11Z core-01 confd[9861]: INFO Backend set to etcd
+    Dec 04 09:55:11 core-01 docker[27815]: 2016-12-04T09:55:11Z core-01 confd[9861]: INFO Starting confd
+    Dec 04 09:55:11 core-01 docker[27815]: 2016-12-04T09:55:11Z core-01 confd[9861]: INFO Backend nodes set to 172.17.42.1:4001
+    Dec 04 09:55:14 core-01 docker[27815]: 2016-12-04T09:55:14Z core-01 confd[9861]: FATAL cannot connect to etcd cluster: 172.17.42.1:4001
+    Dec 04 09:55:14 core-01 docker[27815]: [nginx] waiting for confd to create initial nginx configuration.
+    Dec 04 09:55:19 core-01 docker[27815]: 2016-12-04T09:55:19Z core-01 confd[9866]: INFO Backend set to etcd
+    Dec 04 09:55:19 core-01 docker[27815]: 2016-12-04T09:55:19Z core-01 confd[9866]: INFO Starting confd
+    Dec 04 09:55:19 core-01 docker[27815]: 2016-12-04T09:55:19Z core-01 confd[9866]: INFO Backend nodes set to 172.17.42.1:4001
+    Dec 04 09:55:20 core-01 docker[27815]: 2016-12-04T09:55:20Z core-01 confd[9866]: FATAL cannot connect to etcd cluster: 172.17.42.1:4001
+    Dec 04 09:55:20 core-01 docker[27815]: [nginx] waiting for confd to create initial nginx configuration.
+
+
+<br/>
+
+Ничего не заработало!
+
+
+<br/>
+
+core-01
+
+
+    $ fleetctl stop nginx.service
+    $ fleetctl unload nginx.service
+    $ fleetctl destroy nginx.service
+
+
+<br/>
+
+Скорее всего, автор курса написал неправильно IP адрес.
+Нужно вместо:
+
+
+172.17.42.1 указать 172.17.8.101
+
+
+Лень (пока) переделывать, какой-то чувак уже все сделал и достаточно заменить:
+
+    pull rosskukulinski/nginx-proxy
+
+на
+
+    pull serg1i/nginx-proxy
+
+<br/>
+
+и повторить:
+
+
+<br/>
+
+После этого, у меня работает на 3-х машинах:
+
+<br/>
+
     http://172.17.8.101/
     http://172.17.8.102/
     http://172.17.8.103/
