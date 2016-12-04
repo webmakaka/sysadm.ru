@@ -45,11 +45,6 @@ https://github.com/coreos/coreos-vagrant/
 
 [Application Layer](/linux/containers/coreos/coreos-application-layer/)
 
-[Load balancing with NGINX](/linux/containers/coreos/load-balancing-with-nginx/)
-
-[Load balancing with HAPROXY & CONFD](/linux/containers/coreos/load-balancing-with-haproxy-and-confd/)
-
-
 
 
 

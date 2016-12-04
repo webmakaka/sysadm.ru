@@ -18,20 +18,6 @@ permalink: /linux/containers/coreos/commands/
 
 <br/>
 
-### fleetctl
-
-
-    $ fleetctl unload todo@.service
-    $ fleetctl load hello.service
-
-    $ fleetctl journal -f --lines=50 rethinkdb@1
-
-    $ fleetctl ssh rethinkdb@1
-
-
-
-<br/>
-
 ### journalctl
 
     $ journalctl --unit etcd.service --no-pager

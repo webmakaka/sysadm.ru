@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Load balancing with NGINX
-permalink: /linux/containers/coreos/load-balancing-with-nginx/
+permalink: /linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Load_Balancing_With_NGINX_confd/
 ---
 
 
-### Load balancing with NGINX
+# Load balancing with NGINX
 
 
 core-01

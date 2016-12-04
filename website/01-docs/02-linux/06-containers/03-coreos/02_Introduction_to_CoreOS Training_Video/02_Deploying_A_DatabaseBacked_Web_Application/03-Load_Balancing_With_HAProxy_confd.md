@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Load balancing with HAPROXY & CONFD
-permalink: /linux/containers/coreos/load-balancing-with-haproxy-and-confd/
+permalink: /linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Load_Balancing_With_HAProxy_confd/
 ---
 
 
-### Load balancing with HAPROXY & CONFD
+# Load balancing with HAPROXY & CONFD
 
 
 core-01

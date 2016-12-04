@@ -72,7 +72,11 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
 
 <br/>
 
-    $ fleetctl load hellofleet
+    $ fleetctl cat hellofleet.service
+
+<br/>
+
+    $ fleetctl load hellofleet.service
     Unit hellofleet.service loaded on 3408f7ab.../172.17.8.103
 
 
@@ -159,6 +163,13 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
     $ fleetctl list-units     
     UNIT			MACHINE				ACTIVE	SUB
     hellofleet.service	3408f7ab.../172.17.8.103	failed	failed
+
+
+
+<br/>
+
+    $ fleetctl unload hellofleet.service
+
 
 <br/>
 

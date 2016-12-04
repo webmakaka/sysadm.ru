@@ -171,9 +171,11 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
 
     $ fleetctl list-unit-files        
 
+<br/>
 
     $ fleetctl start nodeapp-v2@{1..2}.service
 
+<br/>
 
     $ fleetctl list-units      
     UNIT			MACHINE				ACTIVE		SUB
@@ -193,8 +195,7 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
 
     $ fleetctl destroy nodeapp-v2@.service nodeapp-v2@{1..2}
     $ fleetctl submit nodeapp-v2\@.service
-    $ fleetctl start nodeapp-v2@{1..2}.service
-    $ fleetctl list-units   
+    $ fleetctl start nodeapp-v2@{1..2}.service   
 
 
 <br/>
@@ -211,5 +212,6 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
     Hello from 1 running on core-02
 
 <br/>
+
     $ curl 172.17.8.103:3001
     Hello from 2 running on core-03
