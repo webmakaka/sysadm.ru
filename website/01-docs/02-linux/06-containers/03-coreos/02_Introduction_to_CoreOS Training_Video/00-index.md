@@ -47,7 +47,7 @@ https://github.com/coreos/coreos-vagrant/
 [02. Deploying A DatabaseBacked Web Application](/linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Deploying_A_DatabaseBacked_Web_Application/)
 
 
-06. CoreOS In Production
+06. CoreOS In Production (DiginalOcean, Monitoring, Logging)
 
 07. Advanced Topics
 
