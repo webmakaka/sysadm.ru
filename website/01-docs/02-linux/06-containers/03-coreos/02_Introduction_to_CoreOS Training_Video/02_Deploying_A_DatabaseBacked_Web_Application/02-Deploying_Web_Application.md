@@ -43,6 +43,11 @@ core-01
 
 <br/>
 
+Я заменил оригинальные image, своими. Они отличаются пока только IP адресом.
+С оригинальным у меня не заработало.
+
+
+<br/>
 
  **$ vi todo@.service**
 
@@ -64,17 +69,18 @@ Restart=always
 TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill %p-%i
 ExecStartPre=-/usr/bin/docker rm %p-%i
-ExecStartPre=/usr/bin/docker pull rosskukulinski/angular-todo-rethinkdb
+ExecStartPre=/usr/bin/docker pull marley/coreos-todo-angular-express
 ExecStart=/usr/bin/docker run --name %p-%i \
-   -h %H \
-   -p ${COREOS_PUBLIC_IPV4}:3000:3000 \
-   -e INSTANCE=%p-%i \
-   rosskukulinski/angular-todo-rethinkdb
+      -h %H \
+      -p ${COREOS_PUBLIC_IPV4}:3000:3000 \
+      -e INSTANCE=%p-%i \
+      marley/coreos-todo-angular-express
 ExecStop=-/usr/bin/docker kill %p-%i
 ExecStop=-/usr/bin/docker rm %p-%i
 
 [X-Fleet]
 Conflicts=todo@*.service
+
 
 {% endhighlight %}
 
@@ -126,11 +132,7 @@ MachineOf=todo@%i.service
 
 <br/>
 
-
-    // $ fleetctl start todo@1 todo-sk@1
-
     $ fleetctl start todo@{1..3} todo-sk@{1..3}
-
 
 
 <br/>
@@ -141,123 +143,19 @@ MachineOf=todo@%i.service
     rethinkdb-announce@2.service	b2ca4512.../172.17.8.101	active	running
     rethinkdb@1.service		3408f7ab.../172.17.8.103	active	running
     rethinkdb@2.service		b2ca4512.../172.17.8.101	active	running
-    todo-sk@1.service		b2ca4512.../172.17.8.101	failed	failed
-    todo-sk@2.service		db577263.../172.17.8.102	failed	failed
-    todo-sk@3.service		3408f7ab.../172.17.8.103	failed	failed
-    todo@1.service			b2ca4512.../172.17.8.101	failed	failed
-    todo@2.service			db577263.../172.17.8.102	failed	failed
-    todo@3.service			3408f7ab.../172.17.8.103	failed	failed
+    todo-sk@1.service		db577263.../172.17.8.102	active	running
+    todo-sk@2.service		b2ca4512.../172.17.8.101	active	running
+    todo-sk@3.service		3408f7ab.../172.17.8.103	active	running
+    todo@1.service			db577263.../172.17.8.102	active	running
+    todo@2.service			b2ca4512.../172.17.8.101	active	running
+    todo@3.service			3408f7ab.../172.17.8.103	active	running
 
 
-
-<br/>
-
-    // $ fleetctl unload todo@{1..3} todo-sk@{1..3}
-
-
-<br/>
-
-    // $ fleetctl list-unit-files
-
-
-<br/>
-
-    // $ fleetctl destroy todo@{1..3}.service
-    // $ fleetctl destroy todo-sk@{1..3}.service
 
 <br/>
 
     $ fleetctl journal -f --lines=50 todo@1
-
-
-<br/>
-
-Поймал ошибку, которую не знаю как исправить.
-
-
-    Dec 04 01:31:36 core-01 docker[14455]: /src/config.js:14
-    Dec 04 01:31:36 core-01 docker[14455]: var nodes = rethinks.body.node.nodes;
-    Dec 04 01:31:36 core-01 docker[14455]:                          ^
-    Dec 04 01:31:36 core-01 docker[14455]: TypeError: Cannot read property 'node' of undefined
-    Dec 04 01:31:36 core-01 docker[14455]:     at Object.<anonymous> (/src/config.js:14:26)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Module._compile (module.js:426:26)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Object.Module._extensions..js (module.js:444:10)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Module.load (module.js:351:32)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Function.Module._load (module.js:306:12)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Module.require (module.js:361:17)
-    Dec 04 01:31:36 core-01 docker[14455]:     at require (module.js:380:17)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Object.<anonymous> (/src/app.js:6:14)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Module._compile (module.js:426:26)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Object.Module._extensions..js (module.js:444:10)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Module.load (module.js:351:32)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Function.Module._load (module.js:306:12)
-    Dec 04 01:31:36 core-01 docker[14455]:     at Function.Module.runMain (module.js:467:10)
-    Dec 04 01:31:36 core-01 docker[14455]:     at startup (node.js:117:18)
-    Dec 04 01:31:36 core-01 docker[14455]:     at node.js:946:3
-    Dec 04 01:31:36 core-01 systemd[1]: todo@1.service: Main process exited, code=exited, status=1/FAILURE
-    Dec 04 01:31:37 core-01 systemd[1]: Stopped ToDo Service.
-    Dec 04 01:31:37 core-01 systemd[1]: todo@1.service: Unit entered failed state.
-    Dec 04 01:31:37 core-01 systemd[1]: todo@1.service: Failed with result 'exit-code'.
-
-
-<br/>
-
-
-Проблема возникает из-за неправильного выполнения команды:
-
-    var rethinks = etcd.getSync("/services/rethinkdb", {recursive: true})
-
-<br/>
-
-rethinks получает:
-
-    { err: { [Error: All servers returned error] errors: [ [Object] ], retries: 0 },
-      body: undefined,
-      headers: undefined }
-
-
-И далее не может получить список узлов.
-
-
-    $ sudo su -
-    # find / -name app.js
-    # vi /var/lib/docker/overlay/bbd29be9551b20e7330c1d65c613e82f089565b9021f8fe80a28677318fc3be5/root/src/config.js
-
-
-На каждом узле поменять в 1 месте.
-
-
-    // var nodes = rethinks.body.node.nodes;
-    // nodes.forEach(function (node){
-    //   console.log('Available rethinkdb server on', node.value);
-    // });
-    // var rethink = nodes[0].value;
-
-    var rethink = "172.17.8.101";
-
-
-<br/>
-
-
-
-    $ fleetctl stop todo@{1..3} todo-sk@{1..3}
-    $ fleetctl start todo@{1..3} todo-sk@{1..3}
-
-
-<br/>
-
-    $ fleetctl list-units
-    UNIT				MACHINE				ACTIVE	SUB
-    rethinkdb-announce@1.service	3408f7ab.../172.17.8.103	active	running
-    rethinkdb-announce@2.service	b2ca4512.../172.17.8.101	active	running
-    rethinkdb@1.service		3408f7ab.../172.17.8.103	active	running
-    rethinkdb@2.service		b2ca4512.../172.17.8.101	active	running
-    todo-sk@1.service		3408f7ab.../172.17.8.103	active	running
-    todo-sk@2.service		db577263.../172.17.8.102	active	running
-    todo-sk@3.service		b2ca4512.../172.17.8.101	active	running
-    todo@1.service			3408f7ab.../172.17.8.103	active	running
-    todo@2.service			db577263.../172.17.8.102	active	running
-    todo@3.service			b2ca4512.../172.17.8.101	active	running
+    $ fleetctl journal -f --lines=50 todo-sk@1
 
 
 <br/>
@@ -307,3 +205,22 @@ rethinks получает:
 <div align="center">
     <img src="//files.sysadm.ru/img/linux/containers/coreos/app6.png" border="0" alt="coreos cluster">
 </div>    
+
+
+
+<br/>
+
+Если нужно все остановить и почистить:
+
+    $ fleetctl stop todo@{1..3} todo-sk@{1..3}
+    $ fleetctl unload todo@{1..3} todo-sk@{1..3}
+
+    $ fleetctl destroy todo@.service
+    $ fleetctl destroy todo@1.service
+    $ fleetctl destroy todo@2.service
+    $ fleetctl destroy todo@3.service
+
+    $ fleetctl destroy todo-sk@.service
+    $ fleetctl destroy todo-sk@1.service
+    $ fleetctl destroy todo-sk@2.service
+    $ fleetctl destroy todo-sk@3.service
