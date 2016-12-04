@@ -22,7 +22,7 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
 
 <br/>
 
-    $  etcdctl ls / --recursive
+    $ etcdctl ls / --recursive
     /coreos.com
     /coreos.com/network
     /coreos.com/network/config

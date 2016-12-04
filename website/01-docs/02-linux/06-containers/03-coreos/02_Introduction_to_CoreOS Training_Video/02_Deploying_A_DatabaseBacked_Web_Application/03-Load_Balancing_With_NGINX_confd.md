@@ -63,6 +63,21 @@ Global=true
 <br/>
 
     $ fleetctl list-units
+    UNIT				MACHINE				ACTIVE	SUB
+    nginx.service			3408f7ab.../172.17.8.103	active	running
+    nginx.service			b2ca4512.../172.17.8.101	active	running
+    nginx.service			db577263.../172.17.8.102	active	running
+    rethinkdb-announce@1.service	3408f7ab.../172.17.8.103	active	running
+    rethinkdb-announce@2.service	b2ca4512.../172.17.8.101	active	running
+    rethinkdb@1.service		3408f7ab.../172.17.8.103	active	running
+    rethinkdb@2.service		b2ca4512.../172.17.8.101	active	running
+    todo-sk@1.service		3408f7ab.../172.17.8.103	active	running
+    todo-sk@2.service		db577263.../172.17.8.102	active	running
+    todo-sk@3.service		b2ca4512.../172.17.8.101	active	running
+    todo@1.service			3408f7ab.../172.17.8.103	active	running
+    todo@2.service			db577263.../172.17.8.102	active	running
+    todo@3.service			b2ca4512.../172.17.8.101	active	running
+
 
 <br/>
 
