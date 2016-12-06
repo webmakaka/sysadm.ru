@@ -74,12 +74,12 @@ TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill rethinkdb-%i
 ExecStartPre=-/usr/bin/docker rm rethinkdb-%i
 ExecStartPre=-/usr/bin/mkdir -p /home/core/docker-volumes/rethinkdb
-ExecStartPre=/usr/bin/docker pull rosskukulinski/rethinkdb:2.1.0_beta1
+ExecStartPre=/usr/bin/docker pull marley/coreos-rethinkdb:latest
 ExecStart=/bin/sh -c '/usr/bin/docker run --name rethinkdb-%i   \
  -p ${COREOS_PUBLIC_IPV4}:8080:8080                        \
  -p ${COREOS_PUBLIC_IPV4}:28015:28015                      \
  -p ${COREOS_PUBLIC_IPV4}:29015:29015                      \
- rosskukulinski/rethinkdb:2.1.0_beta1 rethinkdb --bind all \
+ marley/coreos-rethinkdb:latest rethinkdb --bind all \
  --canonical-address ${COREOS_PUBLIC_IPV4}                 \
  $(/usr/bin/etcdctl ls /services/rethinkdb |               \
      xargs -I {} /usr/bin/etcdctl get {} |                 \
