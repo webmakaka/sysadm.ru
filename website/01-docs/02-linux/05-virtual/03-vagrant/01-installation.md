@@ -54,6 +54,8 @@ https://atlas.hashicorp.com/boxes/search
     //
     $ vagrant destroy
 
+    // Destroy without confirmation
+    $ vagrant destroy -f
 
 
 <br/>

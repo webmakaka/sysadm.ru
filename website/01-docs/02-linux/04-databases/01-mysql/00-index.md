@@ -5,7 +5,7 @@ permalink: /linux/databases/mysql/
 ---
 
 
-## MySQL
+# MySQL
 
 <br/>
 

@@ -76,7 +76,7 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
 
 Kubernetes - более продвинутый аналог fleet  
 
-flannel is a virtual network that gives a subnet to each host for use with container runtimes.
+flannel - виртуальная сеть, которая предоставляет подсеть, чтобы контейнеры могли между собой обмениваться пакетами. (я так перевел / понял)
 
 
 confd:  

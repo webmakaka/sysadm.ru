@@ -30,40 +30,39 @@ Centos
 
 
 
-<br/><br/>
+<br/>
 <hr>
-<br/><br/>
+<br/>
 
 
 Полезные статьи по LXC<br/>
 http://vasilisc.com/lxc-1-0-blog-post-series
 
-<br/><br/>
+
 
 lxc — нативные контейнеры Linux<br/>
 http://habrahabr.ru/post/74808/
 
-<br/><br/>
+
 
 Наш опыт тестирования LXC (Linux Containers) на примере Debian Wheezy<br/>
 http://habrahabr.ru/company/centosadmin/blog/202482/
 
 
-<br/><br/>
+
 
 Создание LXC-контейнеров с общей файловой базой<br/>
 http://habrahabr.ru/post/181247/
 
 
-<br/><br/>
+<br/>
 <hr>
-<br/><br/>
+<br/>
 
 
 Скрипт бэкапа виртуальных машин в libvirt с удалённого сервера<br/>
 http://linux.weirded.ru/2013/04/libvirt.html
 
 
-<br/><br/>
 Exploring LXC Networking<br/>
 http://containerops.org/2013/11/19/lxc-networking/

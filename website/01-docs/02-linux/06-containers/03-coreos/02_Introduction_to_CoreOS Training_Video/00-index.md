@@ -49,6 +49,45 @@ https://github.com/coreos/coreos-vagrant/
 
 06\. CoreOS In Production (DiginalOcean, Monitoring, Logging)
 
-07\. Advanced Topics
+07\. Advanced Topics (IPtables, ETCD Security)
 
-08\. Kubernetes
+08\. Kubernetes (Пока ничего не понятно, или почти ничего)
+
+
+
+1) Создали 1 coreOS с конфигом из master.yml и 2 с конфигом из minion.yml.  
+В minion.yml заменили IP адрес.
+
+    ./kubectl get nodes
+    ./kubectl get services
+
+    cluster-info
+
+
+    ./kubectl create -f pod-nginx.yml
+
+    ./kubectl get pods
+
+    ./kubectl describe pod nginx
+
+    ./kubectl logs nginx nginx
+
+    fleetctl --tunnel=IP list-machines
+
+    ./kubectl delete pod nginx
+
+    curl IP:80
+
+    ===================
+
+    Create replication controller
+
+    ./kubectl create -f nginx-rc.yml
+
+    ./kubectl get replicatincontrollers
+
+
+    kubectl describe replicatincontrollers nginx-rc
+
+
+    ./kubectl get pods
