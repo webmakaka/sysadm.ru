@@ -21,3 +21,10 @@ permalink: /linux/containers/
 ### CoreOS (хостовая операционная система для docker контейнеров)
 
 [Начинаем разбираться](/linux/containers/coreos/)
+
+
+<br/>
+
+### kubernetes
+
+[Начинаем разбираться](/linux/containers/kubernetes/)
