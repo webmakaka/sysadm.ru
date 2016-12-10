@@ -25,6 +25,6 @@ permalink: /linux/containers/
 
 <br/>
 
-### kubernetes
+### Kubernetes
 
 [Начинаем разбираться](/linux/containers/kubernetes/)

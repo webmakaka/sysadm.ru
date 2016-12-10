@@ -12,17 +12,18 @@ Offtopic:
 
 <br/>
 
-### Он сказал поехали и запил водой
+### Offtopic:
 
-Вроде как, в качестве хостовой машины для docker контейнеров отлично подойдет CoreOS. Желающих прокачать скилы по работе с Docker, предлагаю присмотреться и к этому дистрибутиву. Желающие копать совместно, присоединяйтесь.
+В качестве хостовой машины для docker контейнеров вполне подойдет CoreOS. Желающих прокачать скилы по работе с Docker, предлагаю присмотреться к этому linux. Желающие копать совместно, присоединяйтесь.
 
 
 Здесь собираются материалы по работе с docker, начиная с версии 1.1. Материалы постепенно обновляются по мере необходимости обращения к ним.
-Если копаете, можете помочь с обновлением и добавлением знаний.
+Некоторые вещи обновлять не успеваю, т.к. docker развивается достаточно быстро.
 
-<br/><br/>
+Если копаете, можете помочь с обновлением и добавлением своих знаний.
 
-<strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd!</strong>
+
+<strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd! По крайней мере на момент попытки запуска мной!</strong>
 
 <br/><br/>
 
@@ -169,20 +170,22 @@ ___
 
 <ul>
 
-<li><a href="http://dou.ua/lenta/articles/docker/" rel="nofollow">Виртуализация процесса разработки, часть 1: Docker</a></li>
+    <li><a href="http://rus-linux.net/MyLDP/vm/docker/docker-tutorial.html" rel="nofollow">Docker – руководство для начинающих</a></li>
 
-<li><a href="http://habrahabr.ru/post/253877/" rel="nofollow">Понимая Docker</a></li>
-<li><a href="http://habrahabr.ru/post/253999/" rel="nofollow">Docker и костыли в продакшене</a></li>
-<li><a href="http://habrahabr.ru/post/250469/" rel="nofollow">Как жить с Docker, или почему лучше с ним, чем без него?</a></li>
-<li><a href="http://habrahabr.ru/post/247969/" rel="nofollow">Docker в продакшене — чему мы научились, запустив более 300 миллионов контейнеров</a></li>
-<li><a href="http://habrahabr.ru/post/247903/" rel="nofollow">Docker: интересные особенности базовых образов</a></li>
+    <li><a href="http://dou.ua/lenta/articles/docker/" rel="nofollow">Виртуализация процесса разработки, часть 1: Docker</a></li>
+
+    <li><a href="http://habrahabr.ru/post/253877/" rel="nofollow">Понимая Docker</a></li>
+    <li><a href="http://habrahabr.ru/post/253999/" rel="nofollow">Docker и костыли в продакшене</a></li>
+    <li><a href="http://habrahabr.ru/post/250469/" rel="nofollow">Как жить с Docker, или почему лучше с ним, чем без него?</a></li>
+    <li><a href="http://habrahabr.ru/post/247969/" rel="nofollow">Docker в продакшене — чему мы научились, запустив более 300 миллионов контейнеров</a></li>
+    <li><a href="http://habrahabr.ru/post/247903/" rel="nofollow">Docker: интересные особенности базовых образов</a></li>
 
 
-<li><a href="http://habrahabr.ru/post/247547/" rel="nofollow">Создание окружения для веб-разработки на основе Docker (для PHP)</a></li>
-<li><a href="http://habrahabr.ru/post/246933/" rel="nofollow">Docker, SkyDNS и SkyDock — быстро и удобно</a></li>
-<li><a href="http://habrahabr.ru/post/234829/" rel="nofollow">Оптимизация образов Docker</a></li>
-<li><a href="http://habrahabr.ru/company/infopulse/blog/237737/" rel="nofollow">Почему вам не нужен sshd в Docker-контейнере</a></li>
-<li><a href="http://habrahabr.ru/post/240509/" rel="nofollow">Docker: запуск графических приложений в контейнерах</a></li>
-<li><a href="http://habrahabr.ru/post/238069/" rel="nofollow">Деплой Rails-приложения с помощью Docker</a></li>
-<li><a href="http://habrahabr.ru/post/243953/" rel="nofollow">Docker в браузере, или как создать и «расшарить» среду разработки</a></li>
+    <li><a href="http://habrahabr.ru/post/247547/" rel="nofollow">Создание окружения для веб-разработки на основе Docker (для PHP)</a></li>
+    <li><a href="http://habrahabr.ru/post/246933/" rel="nofollow">Docker, SkyDNS и SkyDock — быстро и удобно</a></li>
+    <li><a href="http://habrahabr.ru/post/234829/" rel="nofollow">Оптимизация образов Docker</a></li>
+    <li><a href="http://habrahabr.ru/company/infopulse/blog/237737/" rel="nofollow">Почему вам не нужен sshd в Docker-контейнере</a></li>
+    <li><a href="http://habrahabr.ru/post/240509/" rel="nofollow">Docker: запуск графических приложений в контейнерах</a></li>
+    <li><a href="http://habrahabr.ru/post/238069/" rel="nofollow">Деплой Rails-приложения с помощью Docker</a></li>
+    <li><a href="http://habrahabr.ru/post/243953/" rel="nofollow">Docker в браузере, или как создать и «расшарить» среду разработки</a></li>
 </ul>

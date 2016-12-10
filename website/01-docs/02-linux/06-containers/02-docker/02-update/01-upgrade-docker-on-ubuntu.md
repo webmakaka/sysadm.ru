@@ -5,12 +5,12 @@ permalink: /linux/containers/docker/basics/upgrade-docker-on-ubuntu/
 ---
 
 
+# Upgrade Docker в Ubuntu
+
     # docker -v
     Docker version 1.4.1, build 5bc2ff8
 
-
 <br/>
-
 
     # apt-cache search docker
     ***
