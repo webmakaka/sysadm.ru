@@ -101,7 +101,7 @@ Docker-Compose
 
 
 [Docker-Compose (Инсталляция Docker-Compose в Ubuntu 14.04) ](/linux/containers/docker/toosl/docker-compose/installation/)  
-[С помощью Docker Compose](/linux/containers/docker/linking-containers/docker-compose/)
+[Линковка Docker контейнеров с помощью Docker Compose](/linux/containers/docker/linking-containers/docker-compose/)
 
 
 
@@ -109,7 +109,7 @@ Docker-Compose
 
 ### Docker Работа с image
 
-[Скопировать image на другой HOST](/linux/containers/docker/basics/copying-images-to-other-hosts/)  
+[Скопировать Docker Images на другой Host](/linux/containers/docker/basics/copying-images-to-other-hosts/)  
 [Скопировать image на hub.docker.com и забрать image с него](/linux/containers/docker/basics/push-and-pull-docker-image-to-hub/)  
 
 
@@ -131,7 +131,7 @@ Docker-Compose
 
 ### Информация о запущенных контейнерах
 
-[SYSDIG](/linux/containers/docker/sysdig/)  
+[Получить информацию о запущенных Docker контейнерах c помощью sysdig](/linux/containers/docker/sysdig/)  
 
 
 <br/>

@@ -5,9 +5,7 @@ permalink: /linux/containers/docker/networking/ubuntu-bridge/bridge-my-version/
 ---
 
 
-
-
-<br/>
+# Задание параметров сетевых интерфейсов docker в Ubuntu (IP, gateway, etc.)
 
 
 Сейчас, они что-то там пилят, но пока все сырое.

@@ -4,6 +4,8 @@ title: Переместить файлы Docker в другой каталог
 permalink: /linux/containers/docker/basics/move-docker-files/
 ---
 
+# Переместить файлы Docker в другой каталог
+
 Разожрался докер, пожрал все ресурсы, да еще и на системном разделе
 
     # du -hx --max-depth=1 /var/lib/docker/ | sort -h

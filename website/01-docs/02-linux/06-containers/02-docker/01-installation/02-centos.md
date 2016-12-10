@@ -5,7 +5,7 @@ permalink: /linux/containers/docker/installation/centos/
 ---
 
 
-## Инсталляция Docker в CentOS
+# Инсталляция Docker в CentOS
 
 
 ### Инсталляция с помощью repo

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Информация о запущенных контейнерах
+title: Получить информацию о запущенных Docker контейнерах c помощью sysdig
 permalink: /linux/containers/docker/sysdig/
 ---
 
 
-### sysdig
+# Получить информацию о запущенных Docker контейнерах c помощью sysdig
 
 Инсталляция:
 

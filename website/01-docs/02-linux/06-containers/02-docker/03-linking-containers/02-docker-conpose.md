@@ -1,9 +1,10 @@
 ---
 layout: page
-title: С помощью Docker Compose
+title: Линковка Docker контейнеров с помощью Docker Compose
 permalink: /linux/containers/docker/linking-containers/docker-compose/
 ---
 
+# Линковка Docker контейнеров с помощью Docker Compose
 
 С помощью Docker Compose создаем файл YML с инструкциями о том, какие контейнеры запускать и как линковать их между собой.
 

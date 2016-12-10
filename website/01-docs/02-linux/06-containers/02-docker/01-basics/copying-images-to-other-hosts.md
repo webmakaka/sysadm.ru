@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Копируем Images на другой Host
+title: Скопировать Docker Images на другой Host
 permalink: /linux/containers/docker/basics/copying-images-to-other-hosts/
 ---
+
+# Скопировать Docker Images на другой Host
 
 
 Компьютер 1:

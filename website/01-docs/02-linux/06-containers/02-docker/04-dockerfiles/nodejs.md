@@ -4,6 +4,7 @@ title: Dockerfile из проекта angular.js v2 для создания ко
 permalink: /linux/containers/docker/dockerfile/nodejs/
 ---
 
+# Dockerfile из проекта angular.js v2 для создания контейнера для nodejs
 
 Dockerfile из проекта angular.js v2 для создания контейнера для nodejs
 https://github.com/angular/quickstart

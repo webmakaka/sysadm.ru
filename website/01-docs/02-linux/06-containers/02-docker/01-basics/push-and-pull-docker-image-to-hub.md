@@ -5,9 +5,8 @@ permalink: /linux/containers/docker/basics/push-and-pull-docker-image-to-hub/
 ---
 
 
-<br/>
 
-### Отправить docker image на hub.docker.com
+# Отправить docker image на hub.docker.com
 
 Создали репо на hub.docker.com
 

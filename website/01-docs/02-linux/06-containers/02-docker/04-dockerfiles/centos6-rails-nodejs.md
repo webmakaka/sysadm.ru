@@ -4,6 +4,8 @@ title: Dockerfile для разработки rails и node.js приложен�
 permalink: /linux/containers/docker/dockerfile/
 ---
 
+# Dockerfile для разработки rails и node.js приложений в centos 6
+
     $ vi Dockerfile
 
 <br/>

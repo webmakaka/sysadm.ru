@@ -4,6 +4,7 @@ title: Пример линковки контейнеров для их совм
 permalink: /linux/containers/docker/linking-containers/manual-linking/
 ---
 
+# Пример линковки контейнеров для их совместной работы
 
 <strong>Создаем контейнер с сервером</strong>
 

@@ -4,6 +4,8 @@ title: Простенький Dockerfile для nodejs
 permalink: /linux/containers/docker/dockerfile/nodejs/nodejs-simple/
 ---
 
+# Простенький Dockerfile для nodejs
+
 Dockerfile
 
     FROM node:latest
