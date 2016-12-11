@@ -9,9 +9,7 @@ permalink: /linux/containers/docker/installation/ubuntu/
 # Инсталляция Docker в Ubuntu 14.04
 
 
-**Вариант 1 устанавливаем docker из хз чего репо, но зато с более новой версией.**  
-Если версия не критична, то лучше инсталлировать вариантом, что приведен ниже.
-
+**Вариант 1 устанавливаем docker из репо docker (рекоменую)**  
 
     $ sudo su -
 
@@ -47,7 +45,7 @@ If you are installing docker engine on Ubuntu Xenial, Wily or Trusty, it’s rec
 
 
 
-<br/>
+<!-- <br/>
 
 **Вариант 2: устанавливаем docker из репо docker (рекоменую)**
 
@@ -71,12 +69,12 @@ If you are installing docker engine on Ubuntu Xenial, Wily or Trusty, it’s rec
     # apt-get install -y docker.io
     # service docker.io status
 
-    $ docker -v
+    $ docker -v -->
 
 
 <br/>
 
-**Вариант 4: Из исходников, что лежат на github (я не разобрался и у меня не заработало!!!)**
+**Вариант 2: Из исходников, что лежат на github (я не разобрался и у меня не заработало!!!)**
 
 
     $ sudo apt-get install make git
@@ -154,7 +152,7 @@ If you are installing docker engine on Ubuntu Xenial, Wily or Trusty, it’s rec
 <br/>
 <br/>
 
-http://gianlucaciocci.com/2016/08/25/Installing-and-Upgrading-Docker-on-Ubuntu/
+https://docs.docker.com/engine/installation/linux/ubuntulinux/
 
 
 Из исхдных кодов:  
