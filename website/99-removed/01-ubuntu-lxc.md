@@ -12,4 +12,4 @@ permalink: /linux/virtual/lxc/ubuntu-lxc.php
 После переезда на новый движок.  
 Статья переехала.
 
-Вот она <a href="http://sysadm.ru/linux/containers/lxc/ubuntu-lxc/"></a>
+Вот она <a href="http://sysadm.ru/linux/containers/lxc/ubuntu-lxc/">она</a>

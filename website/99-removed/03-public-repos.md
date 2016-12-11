@@ -11,4 +11,4 @@ permalink: /linux/red-hat-public-repositories.php
 После переезда на новый движок.  
 Статья осталась на старом сайте.
 
-Вот она <a href="http://prev.sysadm.ru/linux/red-hat-public-repositories.php"></a>
+Вот  <a href="http://prev.sysadm.ru/linux/red-hat-public-repositories.php">она</a>

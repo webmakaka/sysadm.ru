@@ -11,4 +11,4 @@ permalink: /linux/virtual/kvm/
 После переезда на новый движок.  
 Статья переехала.
 
-Вот она <a href="http://sysadm.ru/linux/virtual/kvm/"></a>
+Вот  <a href="http://sysadm.ru/linux/virtual/kvm/">она</a>
