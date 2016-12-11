@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Настройка DHCP сервера для передачи статических маршрутов клиентам
-permalink: /hardware/home_webserver/
+permalink: /linux/centos/6/dhcp/
 ---
 
 
