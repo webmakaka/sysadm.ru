@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Публичные репозитории для RedHat / Centos дистрибутивов
-permalink: /linux/red-hat-public-repositories
+permalink: /linux/red-hat-public-repositories/
 ---
 
 

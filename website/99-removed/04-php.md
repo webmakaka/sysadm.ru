@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция PHP в Centos 6.5 из пакетов и небольшая настройка
-permalink: /linux/webservers/apache/centos/6/installation/php.php
+permalink: /linux/webservers/apache/centos/6/installation/
 ---
 
 

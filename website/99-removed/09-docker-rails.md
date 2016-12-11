@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Попытка создать свой Docker контейнер с помощью DockerFile на чистом Centos 6.7
-permalink: /linux/virtual/docker/dockerfiles/centos6-rails.php
+permalink: /linux/virtual/docker/dockerfiles/centos6-rails/
 ---
 
 
