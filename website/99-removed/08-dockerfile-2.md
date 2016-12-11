@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Dockerfile как правильный способ подготовки образов для Docker
-permalink: linux/virtual/docker/centos/6.5/dockerfile.php
+permalink: linux/virtual/docker/centos/6.5/dockerfile/
 ---
 
 

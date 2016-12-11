@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Dockerfile как правильный способ подготовки образов для Docker
-permalink: linux/virtual/docker/centos/6.5/dockerfile.php
+title: Попытка создать свой Docker контейнер с помощью DockerFile на чистом Centos 6.7
+permalink: http://sysadm.ru/linux/virtual/docker/dockerfiles/centos6-rails/
 ---
 
 
-# Dockerfile как правильный способ подготовки образов для Docker
+# Попытка создать свой Docker контейнер с помощью DockerFile на чистом Centos 6.7
 
 
 После переезда на новый движок.  
