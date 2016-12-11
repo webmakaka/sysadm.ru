@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ubuntu: Linux Containers (lxc)
-permalink: /linux/virtual/lxc/ubuntu-lxc.php
+permalink: /linux/virtual/lxc/ubuntu-lxc
 ---
 
 

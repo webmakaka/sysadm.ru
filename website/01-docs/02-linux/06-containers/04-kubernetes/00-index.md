@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kubernetes
-permalink: /hardware/home_webserver/
+permalink: /linux/containers/kubernetes/
 ---
 
 
