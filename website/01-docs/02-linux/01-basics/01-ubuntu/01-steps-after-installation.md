@@ -29,7 +29,7 @@ permalink: /linux/basics/ubuntu/steps-after-installation/
 
 <br/>
 
-    # apt-get install -y
+    # apt-get install -y \
     vim \
     openssh-server \
     traceroute \

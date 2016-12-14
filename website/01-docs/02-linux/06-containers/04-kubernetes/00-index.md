@@ -7,6 +7,8 @@ permalink: /linux/containers/kubernetes/
 
 # Kubernetes (НИЧЕГО НЕ РАБОТАЕТ!)
 
+
+
 https://www.youtube.com/watch?v=9uDivcfCdUA
 
 
@@ -16,12 +18,9 @@ http://containertutorials.com/get_started_kubernetes/index.html
     $ sudo su -
 
     # apt-get update
-    # apt-get install -y ssh curl docker.io python python3
+    # apt-get install -y ssh curl traceroute docker.io python python3
 
 
-
-<!-- // ХЗ нужно инсталлировать etcd или нет!!!
-    # sudo apt-get install -y etcd -->
 
 
 
@@ -45,6 +44,9 @@ http://containertutorials.com/get_started_kubernetes/index.html
 
 
     # wget https://github.com/GoogleCloudPlatform/kubernetes/releases/download/v1.0.1/kubernetes.tar.gz
+
+
+    <!-- https://github.com/kubernetes/kubernetes/archive/release-1.5.zip -->
 
     # tar -xvf kubernetes.tar.gz
     # cd kubernetes/cluster/ubuntu
@@ -200,3 +202,8 @@ https://github.com/kubernetes/kubernetes/blob/master/docs/devel/local-cluster/do
     $ kubectl run nginx --image=nginx --port=80
 
     ничего
+
+
+=======================
+
+http://kubernetes.io/docs/getting-started-guides/minikube/
