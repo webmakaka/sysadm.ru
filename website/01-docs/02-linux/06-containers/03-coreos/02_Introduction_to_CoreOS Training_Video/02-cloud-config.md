@@ -4,7 +4,7 @@ title: CoreOS cloud-config
 permalink: /linux/containers/coreos/cloud-config/
 ---
 
-
+# CoreOS cloud-config
 
     #cloud-config
 
