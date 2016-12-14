@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Конфигурирование пользователей после инсталляции
+title: MySQL - Конфигурирование пользователей после инсталляции
 permalink: /linux/databases/mysql/installation/users/
 ---
 
 
 <br/>
 
-### Конфигурирование пользователей после инсталляции
+# MySQL - Конфигурирование пользователей после инсталляции
 
 
     // Login as root database admin to MySQL server:
