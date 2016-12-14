@@ -60,6 +60,8 @@ https://atlas.hashicorp.com/boxes/search
 
 <br/>
 
+### Ошибка
+
 
     $ vagrant ssh core-01 -- -A
     A Vagrant environment or target machine is required to run this
@@ -68,6 +70,8 @@ https://atlas.hashicorp.com/boxes/search
     this command on. A final option is to change to a directory with a
     Vagrantfile and to try again.
 
+
+<br/>
 
     marley@workstation:/projects/sysadm.ru$ vagrant global-status
     id       name    provider   state   directory                           
@@ -83,6 +87,7 @@ https://atlas.hashicorp.com/boxes/search
     with Vagrant commands from any directory. For example:
     "vagrant destroy 1a2b3c4d"
 
+<br/>
 
     $ vagrant ssh d2681b6
     Last login: Sat Dec  3 22:16:56 UTC 2016 from 10.0.2.2 on pts/0

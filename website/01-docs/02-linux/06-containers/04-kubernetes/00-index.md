@@ -1,11 +1,130 @@
 ---
 layout: page
-title: Kubernetes
+title: Kubernetes (НИЧЕГО НЕ РАБОТАЕТ!)
 permalink: /linux/containers/kubernetes/
 ---
 
 
-# Kubernetes
+# Kubernetes (НИЧЕГО НЕ РАБОТАЕТ!)
+
+https://www.youtube.com/watch?v=9uDivcfCdUA
+
+
+http://containertutorials.com/get_started_kubernetes/index.html
+
+
+    $ sudo su -
+
+    # apt-get update
+    # apt-get install -y ssh curl docker.io python python3
+
+
+
+<!-- // ХЗ нужно инсталлировать etcd или нет!!!
+    # sudo apt-get install -y etcd -->
+
+
+
+    # ssh-keygen -t rsa
+
+     [Enter]
+
+     # cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
+
+
+
+     // Может так???
+     $ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+
+     $ ssh root@127.0.0.1
+
+
+     # cd /opt/
+
+
+
+    # wget https://github.com/GoogleCloudPlatform/kubernetes/releases/download/v1.0.1/kubernetes.tar.gz
+
+    # tar -xvf kubernetes.tar.gz
+    # cd kubernetes/cluster/ubuntu
+
+    # ./build.sh
+
+    # ls binaries
+
+
+    # cd ../ubuntu
+    # cp config-default.sh config-default.sh.orig
+
+    # vi config-default.sh
+
+    export nodes="root@127.0.0.1"
+    export roles="ai"
+    export NUM_MINIONS=${NUM_MINIONS:-1}
+
+    # cd ../
+
+
+//********************
+
+    # etcd --version
+    etcd Version: 2.0.12
+    Git SHA: 5686c33
+    Go Version: go1.4.2
+    Go OS/Arch: linux/amd64
+
+    # systemctl start etcd
+    # systemctl status etcd
+
+//********************
+
+
+    # cd /opt/kubernetes/cluster/
+    # KUBERNETES_PROVIDER=ubuntu ./kube-up.sh
+
+
+    error: couldn't read version from server: Get http://127.0.0.1:8080/api: dial tcp 127.0.0.1:8080: connection refused
+
+    Waiting for 1 ready nodes. 0 ready nodes, 0 registered. Retrying.
+    error: couldn't read version from server: Get http://127.0.0.1:8080/api: dial tcp 127.0.0.1:8080: connection refused
+
+    Waiting for 1 ready nodes. 0 ready nodes, 0 registered. Retrying.
+    error: couldn't read version from server: Get http://127.0.0.1:8080/api: dial tcp 127.0.0.1:8080: connection refused
+
+    Waiting for 1 ready nodes. 0 ready nodes, 0 registered. Retrying.
+    error: couldn't read version from server: Get http://127.0.0.1:8080/api: dial tcp 127.0.0.1:8080: connection refused
+
+    Waiting for 1 ready nodes. 0 ready nodes, 0 registered. Retrying.
+
+
+
+// -------------------------------
+
+
+
+
+    $ export PATH=$PATH:/opt/kubernetes/cluster/ubuntu/binaries
+
+    $ kubectl get nodes
+    error: couldn't read version from server: Get http://localhost:8080/api: dial tcp 127.0.0.1:8080: connection refused
+
+
+
+
+        # export PATH=$PATH:/opt/bin
+
+
+<br/>
+
+### Что дальше не заработало:
+
+
+
+
+<br/>
+
+### И это тоже не работает!:
 
 
 <div align="center">
