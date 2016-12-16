@@ -6,9 +6,11 @@ permalink: /entertainment/hardware/
 
 ### Entertainment HardWare
 
-В общем я на сайте маркет яндекс нашел описание старой материнской платы, которая по счасливому обстоятельству оказалась у меня.
+В общем я на сайте маркет яндекс нашел описание старой материнской платы, которая по счастливому обстоятельству оказалась у меня.
 
 Под описанием, было вот это видео. Я стал подписчиком данного ютуб канала. Автор видеороликов ремонтирует технику, которую он нашел на помойке, а потом продает на Авито. Да он специально лазает по помойкам в поисках электроники и его ролики, в отличие от большинства современных фильмов, не всегда заканчиваются счастливым финалом.
+
+Сам автор использует ник Тразнистор.
 
 
 Шутка в комментариях:
@@ -23,7 +25,7 @@ permalink: /entertainment/hardware/
 
 <div align="center">
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/1HstcmFOe-k" frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/1HstcmFOe-k" frameborder="0" allowfullscreen></iframe>
 
 </div>
 
@@ -35,6 +37,6 @@ permalink: /entertainment/hardware/
 
 <div align="center">
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/kWQ_ns_BrmY" frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/kWQ_ns_BrmY" frameborder="0" allowfullscreen></iframe>
 
 </div>
