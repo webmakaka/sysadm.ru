@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Kubernetes > Второе знакомство
+title: Kubernetes > Второе знакомство (пока ничего не работает)
 permalink: /linux/containers/kubernetes/second-look/
 ---
 
 
-# Kubernetes > Второе знакомство
+# Kubernetes > Второе знакомство (пока ничего не работает)
 
 
 <div align="center">
@@ -14,10 +14,18 @@ permalink: /linux/containers/kubernetes/second-look/
 
 </div>
 
-1) Run etcd
-2) Run the master
-3) Run the service proxy
 
+https://github.com/kubernetes/kubernetes/blob/master/docs/devel/local-cluster/docker.md
+
+
+<br/>
+
+    1) Run etcd
+    2) Run the master
+    3) Run the service proxy
+
+
+<br/>
 
     # curl -sSL "https://storage.googleapis.com/kubernetes-release/release/{{page.version}}.0/bin/linux/amd64/kubectl" > /usr/bin/kubectl
 
@@ -29,7 +37,7 @@ permalink: /linux/containers/kubernetes/second-look/
     $ kubectl config use-context test-doc
 
 
-https://github.com/kubernetes/kubernetes/blob/master/docs/devel/local-cluster/docker.md
+
 
 
     # mkdir -p /var/lib/kubelet
