@@ -8,7 +8,7 @@ permalink: /linux/containers/kubernetes/
 # Kubernetes
 
 
-[Первое знакомство](/linux/containers/coreos/installation/vagrant-coreos/)  
+[Первое знакомство](/linux/containers/kubernetes/first-look/)  
 
 
 [Второе знакомство](/linux/containers/kubernetes/second-look/)  

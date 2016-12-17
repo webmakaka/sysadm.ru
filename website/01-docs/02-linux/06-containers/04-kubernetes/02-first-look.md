@@ -1,12 +1,14 @@
 ---
 layout: page
 title: Kubernetes > Первое знакомство
-permalink: /linux/containers/kubernetes/
+permalink: /linux/containers/kubernetes/first-look/
 ---
 
 
 # Kubernetes > Первое знакомство
 
+
+<br/>
 
 <div align="center">
 
@@ -30,11 +32,13 @@ http://containertutorials.com/get_started_kubernetes/index.html
     Release:	14.04
     Codename:	trusty
 
+<br/>
 
     $ sudo su -
 
     # apt-get update && apt-get install -y ssh curl links traceroute docker.io python
 
+<br/>
 
     # ssh-keygen -t rsa
 
@@ -47,6 +51,8 @@ http://containertutorials.com/get_started_kubernetes/index.html
      # ssh root@127.0.0.1
 
 
+<br/>
+
      # mkdir -p /opt/kubernetes/1.0.1
 
      # cd /tmp/
@@ -57,6 +63,8 @@ http://containertutorials.com/get_started_kubernetes/index.html
     # tar -xvf kubernetes.tar.gz
     # cd kubernetes/
     # mv * /opt/kubernetes/1.0.1/
+
+<br/>
 
     # cd /opt/kubernetes/1.0.1/cluster/ubuntu/
     # ./build.sh
@@ -83,8 +91,7 @@ http://containertutorials.com/get_started_kubernetes/index.html
     # KUBERNETES_PROVIDER=ubuntu ./kube-up.sh
 
 
-
-// -------------------------------
+<br/>
 
 
     $ export PATH=$PATH:/opt/kubernetes/1.0.1/cluster/ubuntu/binaries/
@@ -94,10 +101,14 @@ http://containertutorials.com/get_started_kubernetes/index.html
     127.0.0.1   kubernetes.io/hostname=127.0.0.1   Ready
 
 
+<br/>
+
     # cd /opt/kubernetes/1.0.1/cluster/
     # kubectl create -f addons/kube-ui/kube-ui-rc.yaml --namespace=kube-system
     # kubectl create -f addons/kube-ui/kube-ui-svc.yaml --namespace=kube-system
 
+
+<br/>
 
 # Create a Wordpress pod example
 
@@ -129,7 +140,7 @@ http://containertutorials.com/get_started_kubernetes/index.html
 
     # links 127.0.0.1:81
 
-
+<br/>
 
 # Deleting the Kubernetes Cluster
 
