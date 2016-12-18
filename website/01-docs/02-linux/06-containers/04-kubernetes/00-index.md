@@ -15,5 +15,5 @@ permalink: /linux/containers/kubernetes/
 
 
 
-### tutorials
+### Tutorials
 http://kubernetes.io/docs/tutorials/

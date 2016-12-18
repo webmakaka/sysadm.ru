@@ -4,7 +4,7 @@ title: Мудацкий Realtek опять не работает в Ubuntu
 permalink: /linux/hardware/wi-fi/ubuntu/realtek/
 ---
 
-### Мудацкий Realtek опять не работает в Ubuntu
+# Мудацкий Realtek опять не работает в Ubuntu
 
 
 Смысл в том, что нужно самостоятельно скомпилить драйвер и загрузить его руками.

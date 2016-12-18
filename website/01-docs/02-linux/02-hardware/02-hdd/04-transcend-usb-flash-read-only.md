@@ -5,7 +5,7 @@ permalink: /linux/hardware/hdd/transcend-usb-flash-read-only/
 ---
 
 
-### Transcend 8GB USB MP3 Player работает в режиме только для чтения
+# Transcend 8GB USB MP3 Player работает в режиме только для чтения
 
 Девайс так себе.
 Если вытаскивать из USB - иногда виснет.

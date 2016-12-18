@@ -5,7 +5,7 @@ permalink: /linux/hardware/videocard/ubuntu/drivers/nvidia/
 ---
 
 
-### Установить в ubuntu nvidia драйвера вместо opensource
+# Установить в ubuntu nvidia драйвера вместо opensource
 
 У меня после обновлений в ubuntu возникли проблемы с опенсорсными драйверами.
 

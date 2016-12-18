@@ -4,7 +4,7 @@ title: Работа с железками в linux
 permalink: /linux/hardware/
 ---
 
-### Работа с железками в linux
+# Работа с железками в linux
 
 
 ### Информация по имеющемуся оборудованию
@@ -21,7 +21,7 @@ permalink: /linux/hardware/
 
 <br/>
 
-### HDD и другие блочные устройства
+### HDD / SSD и другие блочные устройства
 
 [Монтирование hdd](/linux/hardware/hdd/mount-disks/)
 
@@ -30,6 +30,8 @@ permalink: /linux/hardware/
 [Попытка исключения использования бэд блоков файловой системой в Ubuntu ](/linux/hardware/hdd/bad-blocks/)
 
 [Transcend 8GB USB MP3 Player работает в режиме только для чтения](/linux/hardware/hdd/transcend-usb-flash-read-only/)
+
+[Ошибка при попытке установить Ubuntu на внешний жесткий диск](/linux/hardware/hdd/partition-may-lead-to-very-poor-performance/)
 
 
 <br/>

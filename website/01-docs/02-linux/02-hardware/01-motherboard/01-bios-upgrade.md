@@ -4,7 +4,7 @@ title: Upgrade BIOS в linux
 permalink: /linux/hardware/motherboard/bios-upgrade/
 ---
 
-### Upgrade BIOS в linux
+# Upgrade BIOS в linux
 
 Мне понадобилось обновить BIOS на стром компьютере.
 Простого способа прошить, выбрать Azeru или как он там называется не было.
