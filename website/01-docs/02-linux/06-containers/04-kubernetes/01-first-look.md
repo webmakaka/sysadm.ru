@@ -7,6 +7,9 @@ permalink: /linux/containers/kubernetes/first-look/
 
 # Kubernetes > Первое знакомство
 
+<br/>
+
+### Используемые материалы
 
 <br/>
 
@@ -25,8 +28,11 @@ http://containertutorials.com/get_started_kubernetes/index.html
 <hr/>
 <br/>
 
-Я работаю на ubuntu 14.04.
-В версии 16.04 это работать не будет. Systemd и все такое.
+### Подготовка окружения к инсталляции kubernetes
+
+Я работаю на ubuntu 14.04.  
+В версии 16.04 это работать не будет.
+Systemd и все такое. Точнее, для 16.04 предется делать как-то по-другому.
 
 
     $  lsb_release -a
@@ -44,6 +50,8 @@ http://containertutorials.com/get_started_kubernetes/index.html
 
 <br/>
 
+Генерируем ключи и обеспечиваем доступ по ssh без пароля.
+
     # ssh-keygen -t rsa
 
      [Enter]
@@ -52,10 +60,14 @@ http://containertutorials.com/get_started_kubernetes/index.html
 
 <br/>
 
+Проверка:
+
      # ssh root@127.0.0.1
 
 
 <br/>
+
+### Установка kubernetes
 
     # mkdir -p /opt/kubernetes/1.0.1
 
@@ -63,6 +75,8 @@ http://containertutorials.com/get_started_kubernetes/index.html
 
     # wget https://github.com/GoogleCloudPlatform/kubernetes/releases/download/v1.0.1/kubernetes.tar.gz
 
+
+<br/>
 
     # tar -xvf kubernetes.tar.gz
     # cd kubernetes/
@@ -119,7 +133,7 @@ http://containertutorials.com/get_started_kubernetes/index.html
 
 <br/>
 
-# Create a Wordpress pod example
+### Create a Wordpress pod example
 
     # kubectl run wordpress --image=tutum/wordpress --port=80 --hostport=81
     CONTROLLER   CONTAINER(S)   IMAGE(S)          SELECTOR        REPLICAS
@@ -145,12 +159,12 @@ http://containertutorials.com/get_started_kubernetes/index.html
     cd2046d54887        gcr.io/google_containers/kube-ui:v1.1   "/kube-ui"          2 minutes ago        Up 2 minutes                             k8s_kube-ui.301383b8_kube-ui-v1-r9jk8_kube-system_6d42b567-c4a6-11e6-b9e8-0800277e8445_5e4dfa46   
     d5954eb132de        gcr.io/google_containers/pause:0.8.0    "/pause"            3 minutes ago        Up 3 minutes                             k8s_POD.3b46e8b9_kube-ui-v1-r9jk8_kube-system_6d42b567-c4a6-11e6-b9e8-0800277e8445_e19896e6
 
-
+<br/>
 
     # links 127.0.0.1:81
 
 <br/>
 
-# Deleting the Kubernetes Cluster
+### Deleting the Kubernetes Cluster
 
     # KUBERNETES_PROVIDER=ubuntu ./kube-down.sh

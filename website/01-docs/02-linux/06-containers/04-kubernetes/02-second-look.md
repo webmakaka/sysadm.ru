@@ -7,6 +7,10 @@ permalink: /linux/containers/kubernetes/second-look/
 
 # Kubernetes > Второе знакомство
 
+<br/>
+
+### Используемые материалы
+
 
 Видео устарело!
 
@@ -25,6 +29,9 @@ https://github.com/kubernetes/kubernetes/blob/master/docs/devel/local-cluster/do
 <hr/>
 <br/>
 
+
+### Подготовка окружения к инсталляции kubernetes
+
     $  lsb_release -a
     No LSB modules are available.
     Distributor ID:	Ubuntu
@@ -35,6 +42,7 @@ https://github.com/kubernetes/kubernetes/blob/master/docs/devel/local-cluster/do
 
 <br/>
 
+    // Инсталляция docker описана в соответствующем разделе
     1) Устанавливаю docker >= 1.11
 
 
@@ -45,6 +53,11 @@ https://github.com/kubernetes/kubernetes/blob/master/docs/devel/local-cluster/do
     # mount --make-shared /var/lib/kubelet
 
 <br/>
+
+
+<br/>
+
+### Установка kubernetes
 
     // current stable version of Kubernetes
 
