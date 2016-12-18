@@ -6,20 +6,24 @@ permalink: /linux/hardware/hdd/partition-may-lead-to-very-poor-performance/
 
 # Ошибка при попытке установить Ubuntu на внешний жесткий диск
 
-### The partition /dev/sdb1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance
+### The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance
 
 <br/>
 
 <div align="center">
-	<img src="//files.sysadm.ru/img/linux/hardware/hdd/partition-may-lead-to-very-poor-performance.jpg" alt="The partition /dev/sdb1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance" border="0" />
+	<img src="//files.sysadm.ru/img/linux/hardware/hdd/partition-may-lead-to-very-poor-performance.jpg" alt="The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance" border="0" />
 </div>
 
 
 <br/>
 
+Появился внешний жесткий диск, точнее карточка m2. Решил попробовать на нее поставить Ubuntu и при необходимости запускать операционную систему с нее.
+
+При попытке создать разделы на ней появилась ошибка, которая не позволила создать разделы и продолжить установку.
+
+Решение проблемы следующее:
 
 Загрузился в Ubuntu, установил gparted. С помощью gparted создал разделы следующим образом.
-
 
 
     After booting into live LL, open GParted.
