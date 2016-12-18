@@ -17,16 +17,12 @@ permalink: /linux/containers/kubernetes/second-look/
 </div>
 
 <br/>
-
+По материалам:  
 https://github.com/kubernetes/kubernetes/blob/master/docs/devel/local-cluster/docker.md
 
 
 <br/>
-
-    1) Run etcd
-    2) Run the master
-    3) Run the service proxy
-
+<hr/>
 <br/>
 
     $  lsb_release -a
@@ -62,11 +58,11 @@ https://github.com/kubernetes/kubernetes/blob/master/docs/devel/local-cluster/do
 <br/>
 
 
-    export ARCH=amd64
+    # export ARCH=amd64
 
 <br/>
 
-    docker run -d \
+    # docker run -d \
         --volume=/sys:/sys:rw \
         --volume=/var/lib/docker/:/var/lib/docker:rw \
         --volume=/var/lib/kubelet/:/var/lib/kubelet:rw,shared \

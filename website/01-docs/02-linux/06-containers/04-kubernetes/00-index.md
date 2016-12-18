@@ -12,3 +12,8 @@ permalink: /linux/containers/kubernetes/
 
 
 [Второе знакомство](/linux/containers/kubernetes/second-look/)  
+
+
+
+### tutorials
+http://kubernetes.io/docs/tutorials/

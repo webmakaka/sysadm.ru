@@ -18,8 +18,12 @@ permalink: /linux/containers/kubernetes/first-look/
 
 <br/>
 
+По материалам:  
 http://containertutorials.com/get_started_kubernetes/index.html
 
+<br/>
+<hr/>
+<br/>
 
 Я работаю на ubuntu 14.04.
 В версии 16.04 это работать не будет. Systemd и все такое.
@@ -46,18 +50,18 @@ http://containertutorials.com/get_started_kubernetes/index.html
 
      # cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
-
+<br/>
 
      # ssh root@127.0.0.1
 
 
 <br/>
 
-     # mkdir -p /opt/kubernetes/1.0.1
+    # mkdir -p /opt/kubernetes/1.0.1
 
-     # cd /tmp/
+    # cd /tmp/
 
-     # wget https://github.com/GoogleCloudPlatform/kubernetes/releases/download/v1.0.1/kubernetes.tar.gz
+    # wget https://github.com/GoogleCloudPlatform/kubernetes/releases/download/v1.0.1/kubernetes.tar.gz
 
 
     # tar -xvf kubernetes.tar.gz
@@ -72,10 +76,15 @@ http://containertutorials.com/get_started_kubernetes/index.html
     # ls binaries
     kubectl  master  minion
 
+<br/>
 
     # cp config-default.sh config-default.sh.orig
 
+<br/>
+
     # vi config-default.sh
+
+заменить параметры на следующие:
 
     export nodes="root@127.0.0.1"
     export roles="ai"
