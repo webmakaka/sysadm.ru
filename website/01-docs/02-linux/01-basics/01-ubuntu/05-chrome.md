@@ -4,7 +4,7 @@ title: Инсталляция Google Chrome в Ubuntu
 permalink: /linux/basics/ubuntu/chrome/
 ---
 
-### Инсталляция Chrome в Ubuntu
+# Инсталляция Chrome в Ubuntu
 
 Данный способ работает в: 12.04, 14.04, 16.04
 
@@ -32,3 +32,7 @@ https://adblockplus.org/
 
     + ruAdList+EasyList
     - Allow some non-intrusive advertising
+
+
+Статья как лучше настроить:  
+https://adblockplus.org/tutorials#tracking

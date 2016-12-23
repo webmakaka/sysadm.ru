@@ -4,7 +4,7 @@ title: Шаги после инсталляции Ubuntu (для себя)
 permalink: /linux/basics/ubuntu/steps-after-installation/
 ---
 
-### Шаги после инсталляции Ubuntu (для себя)
+# Шаги после инсталляции Ubuntu (для себя)
 
 Я уже попробовал 16.04 и вернулся на 14.04 release 04.
 
