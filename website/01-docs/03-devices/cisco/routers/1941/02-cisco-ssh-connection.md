@@ -4,7 +4,7 @@ title: Cisco Router 1941 настройка SSH
 permalink: /devices/cisco/routers/1941/cisco-ssh-connection/
 ---
 
-### Cisco Router 1941 настройка SSH
+# Cisco Router 1941 настройка SSH
 
 <pre>
 cisco-router-1941>en

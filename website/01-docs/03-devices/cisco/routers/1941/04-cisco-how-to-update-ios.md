@@ -4,7 +4,7 @@ title: Cisco Router 1941 обновление IOS
 permalink: /devices/cisco/routers/1941/cisco-how-to-update-ios/
 ---
 
-### Cisco Router 1941 обновление IOS
+# Cisco Router 1941 обновление IOS
 
 <pre>
 

@@ -7,7 +7,7 @@ permalink: /devices/cisco/switches/catalyst-ws-c2960g-8tc-l/
 
 <br/>
 
-### Cisco Switch Catalyst-WS-C2960G-8TC-L
+# Cisco Switch Catalyst-WS-C2960G-8TC-L
 
 
 

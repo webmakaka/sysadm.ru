@@ -4,7 +4,7 @@ title: Cisco Devices
 permalink: /devices/cisco/routers/
 ---
 
-## Cisco Devices
+# Cisco Devices
 
 ### Routers:
 
