@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Видеокурсы для администраторов Linux
+title: Платные видеокурсы для администраторов Linux
 permalink: /linux/video-kursy/video-courses-for-linux-admins/
 ---
 
-### Видеокурсы для администраторов Linux
+# Платные видеокурсы для администраторов Linux
 
 <br/>
 
