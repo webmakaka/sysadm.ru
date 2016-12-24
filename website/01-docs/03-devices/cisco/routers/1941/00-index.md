@@ -35,12 +35,38 @@ permalink: /devices/cisco/routers/1941/
 
 <br/>
 
-### Работа роутера Cisco Router 1941 в домашней сети Биллайн
+### Работа роутера Cisco Router 1941 в домашней сети Билайн
 
+В общем поменялся способ подключения. Я не буду удалять написанное ранее, может когда еще понадобится.
+
+Сейчас можно получить публичный ip адрес на интерфейсе от провайдера без всяких брасов, настроек l2tp и т.д. Достаточно авторизоваться на сайте:
+
+    https://login.beeline.ru/
+
+Чтобы получить свой ip адрес. По крайней мере так теперь работает в Москве.
+
+
+    #show ip interface brief
+    Interface                  IP-Address      OK? Method Status                Protocol
+    Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down    
+    GigabitEthernet0/0         95.31.31.8      YES DHCP   up                    up      
+    GigabitEthernet0/1         192.168.1.1     YES NVRAM  up                    up      
+    NVI0                       unassigned      YES unset  administratively down down    
+    Virtual-PPP1               unassigned      YES IPCP   administratively down down    
+
+
+Virtual-PPP1 - отключен  
+GigabitEthernet0/0 - присвоен мой статический IP. Как было раньше, можно посмотреть в архивных записях.
+
+Но пока все работает плохо. Сеть постоянно падает. Нужно перенастраивать а сейчас это делать не очень хочется.
+
+Пока поставлю старенький и глючный zuxel.
+
+
+**Архив:**
 
 
 <a href="/devices/cisco/routers/1941/info/">Техническая информация на сайте провайдера по подключеню</a>  
-
 
 <a href="/devices/cisco/routers/1941/beeline-l2tp-first-problem/">Cisco Router 1941 проблемы с подключением к сети Билайн по l2tp</a> (Необходима лицензия data license имеем ipbase)
 
