@@ -16,13 +16,13 @@ permalink: /devices/cisco/routers/1941/beeline-l2tp/
 
 <div align="center" style="border-width: 4px; padding: 10px; border-style: inset; border-color: red; ">
 
-Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее здесь <a href="/devices/cisco/routers/1941/beeline/"></a>
+Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее здесь <a href="//sysadm.ru/devices/cisco/routers/1941/beeline/"></a>
 
 </div>
 
 <br/>
 
-Исправления и замечания приветствуются.
+**Исправления и замечания приветствуются.**
 
 <br/>
 <br/>
