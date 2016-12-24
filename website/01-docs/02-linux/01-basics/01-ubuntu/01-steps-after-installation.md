@@ -12,6 +12,10 @@ permalink: /linux/basics/ubuntu/steps-after-installation/
 
 В общем, пусть пока дорабатывают, может попробую когда появится release 2 или будет какая необходимость в 16.04.
 
+P.S.: В релизе 16.04.01 - ничего из этого не пофиксили.
+
+
+<br/>
 
 ### Обновление
 
@@ -99,6 +103,15 @@ menu:minimize,maximize,close
 
     + russian
     + Swithc to next source: Alt+ShiftL
+
+<br/>
+
+    Applications --> System Tools --> System Settings --> Language Support --> Region Formats
+
+<br/>
+
+<img src="//files.sysadm.ru/img/linux/basics/ubuntu/steps-after-installation/regional-formats.png" alt="Ubuntu Region Formats">
+
 
 
 <br/>
