@@ -7,7 +7,7 @@ permalink: /linux/video-courses/
 ### Видеокурсы для админов
 
 
-[Видеокурсы для администраторов Linux на русском языке беспалтно ](/linux/video-courses/rus/) (YouTube)
+[Видеокурсы для администраторов Linux на русском языке беспалтно ](/linux/video-courses/youtube/rus/) (YouTube)
 
 [Видеокурсы для администраторов Linux на английском языке беспалтно](/linux/video-courses/youtube/eng/) (YouTube)
 

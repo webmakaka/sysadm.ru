@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Видеокурсы для администраторов Linux на русском языке беспалтно
-permalink: /linux/video-courses/youtube/
+permalink: /linux/video-courses/youtube/rus/
 ---
 
 # Видеокурсы для администраторов Linux на русском языке беспалтно
