@@ -25,7 +25,7 @@ ______
 
 # Сетевые устройства:
 
-### [Cisco: Switches and Routers](/devices/cisco/routers/)
+### [Cisco: Switches and Routers](/devices/cisco/)
 
 
 ______
