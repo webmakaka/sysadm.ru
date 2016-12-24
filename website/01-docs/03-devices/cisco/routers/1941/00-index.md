@@ -4,8 +4,6 @@ title: Cisco Router 1941
 permalink: /devices/cisco/routers/1941/
 ---
 
-<br/>
-
 # Cisco Router 1941
 
 
