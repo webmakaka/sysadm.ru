@@ -44,6 +44,6 @@ permalink: /devices/cisco/routers/1941/
 
 <br/>
 
-### Работа роутера Cisco Router 1941 в домашней сети Билайн
+### Cisco Router 1941 в домашней сети Билайн
 
-<a href="/devices/cisco/routers/1941/beeline/">Работа роутера Cisco Router 1941 в домашней сети Билайн</a>
+<a href="/devices/cisco/routers/1941/beeline/">Cisco Router 1941 в домашней сети Билайн</a>
