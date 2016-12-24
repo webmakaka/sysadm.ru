@@ -17,6 +17,7 @@ MD5 Checksum:	1c7c1b1ba2bb4f04cb081f069e8f5523
 
 
 ========
+
 <strong>UPD: с этим ios возникли проблемы!!!</strong>
 При попытке выполнить команду ip nat inside / outside роутер перезагружался, на флеше появлялись краш дампы.
 
@@ -80,8 +81,6 @@ DRAM configuration is 64 bits wide with parity disabled.
 250880K bytes of ATA System CompactFlash 0 (Read/Write)
 
 
-
-
 =============
 
 
@@ -109,133 +108,135 @@ c1900-universalk9-mz.SPA.154-1.T.bin
 
 Некоторые флешки определяются, но не форматируются. Особенно новые. Перед использованием необходимо их отформатировать в операционной системе.
 
-cisco-router-1941#format usbflash0:
-Format operation may take a while. Continue? [confirm]y
-Format operation will destroy all data in "usbflash0:".  Continue? [confirm]y
-Format: All system sectors written. OK...
+    cisco-router-1941#format usbflash0:
+    Format operation may take a while. Continue? [confirm]y
+    Format operation will destroy all data in "usbflash0:".  Continue? [confirm]y
+    Format: All system sectors written. OK...
 
-Format: Total sectors in formatted partition: 15508928
-Format: Total bytes in formatted partition: 7940571136
-Format: Operation completed successfully.
+    Format: Total sectors in formatted partition: 15508928
+    Format: Total bytes in formatted partition: 7940571136
+    Format: Operation completed successfully.
 
-Format of usbflash0: complete
+    Format of usbflash0: complete
 
 
 =====
 
 
-cisco-router-1941#show file system
-File Systems:
+    cisco-router-1941#show file system
+    File Systems:
 
-       Size(b)       Free(b)      Type  Flags  Prefixes
-             -             -    opaque     rw   archive:
-             -             -    opaque     rw   system:
-             -             -    opaque     rw   tmpsys:
-             -             -    opaque     rw   null:
-             -             -   network     rw   tftp:
-*    256487424     196145152      disk     rw   flash0: flash:#
-             -             -      disk     rw   flash1:
-        262136        250790     nvram     rw   nvram:
-             -             -    opaque     wo   syslog:
-             -             -    opaque     rw   xmodem:
-             -             -    opaque     rw   ymodem:
-             -             -   network     rw   rcp:
-             -             -   network     rw   http:
-             -             -   network     rw   ftp:
-             -             -   network     rw   scp:
-             -             -    opaque     ro   tar:
-             -             -   network     rw   https:
-             -             -    opaque     ro   cns:
-    7925055488    7925018624  usbflash     rw   usbflash0:
-
-
+           Size(b)       Free(b)      Type  Flags  Prefixes
+                 -             -    opaque     rw   archive:
+                 -             -    opaque     rw   system:
+                 -             -    opaque     rw   tmpsys:
+                 -             -    opaque     rw   null:
+                 -             -   network     rw   tftp:
+    *    256487424     196145152      disk     rw   flash0: flash:#
+                 -             -      disk     rw   flash1:
+            262136        250790     nvram     rw   nvram:
+                 -             -    opaque     wo   syslog:
+                 -             -    opaque     rw   xmodem:
+                 -             -    opaque     rw   ymodem:
+                 -             -   network     rw   rcp:
+                 -             -   network     rw   http:
+                 -             -   network     rw   ftp:
+                 -             -   network     rw   scp:
+                 -             -    opaque     ro   tar:
+                 -             -   network     rw   https:
+                 -             -    opaque     ro   cns:
+        7925055488    7925018624  usbflash     rw   usbflash0:
 
 
-==============
-
-
-cisco-router-1941#dir flash:
-Directory of flash0:/
-
-    1  -rw-    55088360  Jun 28 2012 23:19:58 +00:00  c1900-universalk9-mz.SPA.151-4.M4.bin
-    2  -rw-        2903  Jun 28 2012 23:27:34 +00:00  cpconfig-19xx.cfg
-    3  -rw-     3000320  Jun 28 2012 23:27:48 +00:00  cpexpress.tar
-    4  -rw-        1038  Jun 28 2012 23:27:58 +00:00  home.shtml
-    5  -rw-      122880  Jun 28 2012 23:28:08 +00:00  home.tar
-    6  -rw-     1697952  Jun 28 2012 23:28:22 +00:00  securedesktop-ios-3.1.1.45-k9.pkg
-    7  -rw-      415956  Jun 28 2012 23:28:36 +00:00  sslclient-win-1.1.4.176.pkg
-
-256487424 bytes total (196145152 bytes free)
 
 
 ==============
 
-cisco-router-1941# copy flash:c1900-universalk9-mz.SPA.151-4.M4.bin usbflash0: [Enter]
-cisco-router-1941# copy flash:cpconfig-19xx.cfg usbflash0: [Enter]
-cisco-router-1941# copy flash:cpexpress.tar usbflash0: [Enter]
-cisco-router-1941# copy flash:home.shtml usbflash0: [Enter]
-cisco-router-1941# copy flash:home.tar usbflash0: [Enter]
-cisco-router-1941# copy flash:securedesktop-ios-3.1.1.45-k9.pkg usbflash0: [Enter]
-cisco-router-1941# copy flash:sslclient-win-1.1.4.176.pkg usbflash0: [Enter]
+
+    cisco-router-1941#dir flash:
+    Directory of flash0:/
+
+        1  -rw-    55088360  Jun 28 2012 23:19:58 +00:00  c1900-universalk9-mz.SPA.151-4.M4.bin
+        2  -rw-        2903  Jun 28 2012 23:27:34 +00:00  cpconfig-19xx.cfg
+        3  -rw-     3000320  Jun 28 2012 23:27:48 +00:00  cpexpress.tar
+        4  -rw-        1038  Jun 28 2012 23:27:58 +00:00  home.shtml
+        5  -rw-      122880  Jun 28 2012 23:28:08 +00:00  home.tar
+        6  -rw-     1697952  Jun 28 2012 23:28:22 +00:00  securedesktop-ios-3.1.1.45-k9.pkg
+        7  -rw-      415956  Jun 28 2012 23:28:36 +00:00  sslclient-win-1.1.4.176.pkg
+
+    256487424 bytes total (196145152 bytes free)
 
 
 ==============
 
-cisco-router-1941#dir usbflash0:
-Directory of usbflash0:/
+    cisco-router-1941# copy flash:c1900-universalk9-mz.SPA.151-4.M4.bin usbflash0: [Enter]
+    cisco-router-1941# copy flash:cpconfig-19xx.cfg usbflash0: [Enter]
+    cisco-router-1941# copy flash:cpexpress.tar usbflash0: [Enter]
+    cisco-router-1941# copy flash:home.shtml usbflash0: [Enter]
+    cisco-router-1941# copy flash:home.tar usbflash0: [Enter]
+    cisco-router-1941# copy flash:securedesktop-ios-3.1.1.45-k9.pkg usbflash0: [Enter]
+    cisco-router-1941# copy flash:sslclient-win-1.1.4.176.pkg usbflash0: [Enter]
 
-    2  -rw-    55088360  Jan 13 2014 20:49:08 +00:00  c1900-universalk9-mz.SPA.151-4.M4.bin
-    3  -rw-        2903  Jan 13 2014 20:54:24 +00:00  cpconfig-19xx.cfg
-    4  -rw-     3000320  Jan 13 2014 20:54:36 +00:00  cpexpress.tar
-    5  -rw-        1038  Jan 13 2014 20:54:44 +00:00  home.shtml
-    6  -rw-      122880  Jan 13 2014 20:54:54 +00:00  home.tar
-    7  -rw-     1697952  Jan 13 2014 20:55:04 +00:00  securedesktop-ios-3.1.1.45-k9.pkg
-    8  -rw-      415956  Jan 13 2014 20:55:14 +00:00  sslclient-win-1.1.4.176.pkg
 
-7925055488 bytes total (7864676352 bytes free)
+==============
+
+    cisco-router-1941#dir usbflash0:
+    Directory of usbflash0:/
+
+        2  -rw-    55088360  Jan 13 2014 20:49:08 +00:00  c1900-universalk9-mz.SPA.151-4.M4.bin
+        3  -rw-        2903  Jan 13 2014 20:54:24 +00:00  cpconfig-19xx.cfg
+        4  -rw-     3000320  Jan 13 2014 20:54:36 +00:00  cpexpress.tar
+        5  -rw-        1038  Jan 13 2014 20:54:44 +00:00  home.shtml
+        6  -rw-      122880  Jan 13 2014 20:54:54 +00:00  home.tar
+        7  -rw-     1697952  Jan 13 2014 20:55:04 +00:00  securedesktop-ios-3.1.1.45-k9.pkg
+        8  -rw-      415956  Jan 13 2014 20:55:14 +00:00  sslclient-win-1.1.4.176.pkg
+
+    7925055488 bytes total (7864676352 bytes free)
 
 
 =========================
 
 // Если нужно, что-то удалить с flash
-#del flash:/c1900-universalk9-mz.spa.153-3.m.bi
+
+    #del flash:/c1900-universalk9-mz.spa.153-3.m.bi
+
 =========================
 
 
-cisco-router-1941# copy usbflash0:c1900-universalk9-mz.SPA.154-1.T.bin flash: [Enter]
+    cisco-router-1941# copy usbflash0:c1900-universalk9-mz.SPA.154-1.T.bin flash: [Enter]
 
 =========================
 =========================
 
 // Проверяем md5 скопированного ios
-cisco-router-1941#verify /md5 flash0:/c1900-universalk9-mz.SPA.154-1.T.bin 1c7c1b1ba2bb4f04cb081f069e8f5523
 
-MD5 of flash0:/c1900-universalk9-mz.SPA.154-1.T.bin Done!
-Verified (flash0:/c1900-universalk9-mz.SPA.154-1.T.bin) = 1c7c1b1ba2bb4f04cb081f069e8f5523
+    cisco-router-1941#verify /md5 flash0:/c1900-universalk9-mz.SPA.154-1.T.bin 1c7c1b1ba2bb4f04cb081f069e8f5523
+
+    MD5 of flash0:/c1900-universalk9-mz.SPA.154-1.T.bin Done!
+    Verified (flash0:/c1900-universalk9-mz.SPA.154-1.T.bin) = 1c7c1b1ba2bb4f04cb081f069e8f5523
 
 
 =========================
 
-cisco-router-1941# conf t
-cisco-router-1941(config)# boot system flash c1900-universalk9-mz.SPA.154-1.T.bin
+    cisco-router-1941# conf t
+    cisco-router-1941(config)# boot system flash c1900-universalk9-mz.SPA.154-1.T.bin
 
-cisco-router-1941(config)# end
+    cisco-router-1941(config)# end
 
-cisco-router-1941# copy running-config startup-config
-Destination filename [startup-config]? startup-config
-Warning: Attempting to overwrite an NVRAM configuration previously written
-by a different version of the system image.
-Overwrite the previous NVRAM configuration?[confirm]
-Building configuration...
-[OK]
-
-
-cisco-router-1941#reload
-Proceed with reload? [confirm]Connection to 192.168.1.100 closed by remote host.
-Connection to 192.168.1.100 closed.
+    cisco-router-1941# copy running-config startup-config
+    Destination filename [startup-config]? startup-config
+    Warning: Attempting to overwrite an NVRAM configuration previously written
+    by a different version of the system image.
+    Overwrite the previous NVRAM configuration?[confirm]
+    Building configuration...
+    [OK]
 
 
-==========================
+    cisco-router-1941#reload
+    Proceed with reload? [confirm]Connection to 192.168.1.100 closed by remote host.
+    Connection to 192.168.1.100 closed.
+
+
 =========================
 
 cisco-router-1941>en

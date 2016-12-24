@@ -190,7 +190,7 @@ Router(config-line)# escape-character 3
 	cisco-router(config-line)# login
 	cisco-router(config)# end
 
-
+<br/>
 
 ### Проверка возможности подключиться по telnet к маршрутизатору Cisco 1941 в консоли Ubuntu:
 

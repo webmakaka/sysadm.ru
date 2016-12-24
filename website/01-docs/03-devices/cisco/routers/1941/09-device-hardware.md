@@ -10,7 +10,7 @@ permalink: /devices/cisco/routers/1941/device-hardware/
     # sh version
 
 
-    объем оперативной памяти - выводится в виде двух чисел: объема процессорной памяти (491520K) и памяти ввода-вывода (32768K). Общий размер RAM равен сумме этих двух (512M);
+Объем оперативной памяти - выводится в виде двух чисел: объема процессорной памяти (491520K) и памяти ввода-вывода (32768K). Общий размер RAM равен сумме этих двух (512M);
 
 
 
@@ -41,9 +41,14 @@ permalink: /devices/cisco/routers/1941/device-hardware/
 
 
 
-    router#show processes
-    router#show processes cpu
-    router#show processes memory
 
-    #show memory
-    #show memory summary
+<br/>
+
+    router# show processes
+    router# show processes cpu
+    router# show processes memory
+
+<br/>
+
+    # show memory
+    # show memory summary

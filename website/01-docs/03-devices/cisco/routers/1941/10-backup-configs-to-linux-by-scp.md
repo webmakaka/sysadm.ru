@@ -7,9 +7,9 @@ permalink: /devices/cisco/routers/1941/backup-configs-to-linux-by-scp/
 
 # Cisco Router 1941 backup конфигов на Linux с помощью scp
 
-cisco-router-1941#conf t
-cisco-router-1941(config)#ip scp server enable
-cisco-router-1941(config)#exit
+    cisco-router-1941#conf t
+    cisco-router-1941(config)#ip scp server enable
+    cisco-router-1941(config)#exit
 
 
 <br/>
@@ -49,6 +49,7 @@ cisco-router-1941(config)#exit
 
 На вопросы отвечать Enter а не Y
 
+<br/>
 
 ### Backup Running Config by SCP
 
@@ -60,5 +61,6 @@ cisco-router-1941(config)#exit
         1  -rw-        3264                    <no date>  running-config
         3  dr-x           0                    <no date>  vfiles
 
+<br/>
 
-        cisco-router-1941# copy system:/running-config scp://marley@192.168.1.5://home/marley/Documents/running-config
+    cisco-router-1941# copy system:/running-config scp://marley@192.168.1.5://home/marley/Documents/running-config
