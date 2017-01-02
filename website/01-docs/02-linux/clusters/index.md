@@ -4,16 +4,18 @@ title: Cloud
 permalink: /linux/clusters/
 ---
 
-###[DRBD](http://odba.ru/showthread.php?t=474)  
+# Cloud
 
-###[DRBD 4 node cluster](http://odba.ru/showthread.php?t=525)
+### [DRBD](http://odba.ru/showthread.php?t=474)  
 
-###[heartbeat](http://odba.ru/showthread.php?t=418)
+### [DRBD 4 node cluster](http://odba.ru/showthread.php?t=525)
 
-###[GFS filesystem](http://odba.ru/showthread.php?t=456)
+### [heartbeat](http://odba.ru/showthread.php?t=418)
 
-###[OCFS2 filesystem](http://odba.ru/showthread.php?t=433)
+### [GFS filesystem](http://odba.ru/showthread.php?t=456)
 
-###[Pacemaker](http://odba.ru/showthread.php?t=527)
+### [OCFS2 filesystem](http://odba.ru/showthread.php?t=433)
 
-###[Lustre](http://odba.ru/showthread.php?t=431)
+### [Pacemaker](http://odba.ru/showthread.php?t=527)
+
+### [Lustre](http://odba.ru/showthread.php?t=431)
