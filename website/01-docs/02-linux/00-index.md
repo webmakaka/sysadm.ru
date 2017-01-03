@@ -20,7 +20,7 @@ permalink: /linux/
 
 # Администрирование серверов:
 
-### [Вебсервера](/linux/webservers/)
+### [Web Servers](/linux/webservers/)
 
 ### [Базы данных](/linux/databases/)  
 

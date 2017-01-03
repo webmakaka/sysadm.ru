@@ -4,6 +4,7 @@ title: Инсталляция Apache Httpd сервер на Centos 6.6 из п�
 permalink: /linux/webservers/apache/installation/
 ---
 
+# Инсталляция Apache Httpd сервер на Centos 6.6 из пакетов
 
     # vi /etc/hosts
     192.168.1.202 webserv.local webserv

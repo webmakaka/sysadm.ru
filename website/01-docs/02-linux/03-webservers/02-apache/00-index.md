@@ -5,7 +5,7 @@ permalink: /linux/webservers/apache/
 ---
 
 
-### Apache Centos
+# Apache Centos
 
 [Инсталляция Apache Httpd сервер на Centos 6.6 из пакетов](/linux/webservers/apache/installation/)  
 

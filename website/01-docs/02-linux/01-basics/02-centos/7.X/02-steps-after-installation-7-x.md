@@ -4,7 +4,7 @@ title: Centos 7 нужные мне для работы пакеты
 permalink: /linux/basics/centos/7/steps-after-installation/
 ---
 
-### Centos 7 нужные мне для работы пакеты
+# Centos 7 нужные мне для работы пакеты
 
 
 // vim

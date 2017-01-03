@@ -4,6 +4,8 @@ title: PostgreSQL инсталляция в Ubuntu
 permalink: /linux/databases/postgresql/ubuntu/
 ---
 
+# PostgreSQL инсталляция в Ubuntu
+
 
 {% highlight text %}
 

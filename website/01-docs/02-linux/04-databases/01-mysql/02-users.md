@@ -5,8 +5,6 @@ permalink: /linux/databases/mysql/installation/users/
 ---
 
 
-<br/>
-
 # MySQL - Конфигурирование пользователей после инсталляции
 
 

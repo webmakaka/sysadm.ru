@@ -4,6 +4,7 @@ title: Настройка виртуальных хостов
 permalink: /linux/webservers/apache/virtual-hosts/
 ---
 
+# Настройка виртуальных хостов
 
     $ cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.backup.$(date +%Y-%m-%d)
 

@@ -4,6 +4,7 @@ title: MongoDB инсталляция в Centos 6.X
 permalink: /linux/databases/mongodb/
 ---
 
+# MongoDB инсталляция в Centos 6.X
 
 ### Mongo 3.X
 

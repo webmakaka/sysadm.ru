@@ -4,7 +4,7 @@ title: mysqldump
 permalink: /linux/databases/mysql/mysqldump/
 ---
 
-<br/>
+# mysqldump
 
     // backup с локального компьютера
     # mysqldump --all-databases --user=dba --password=mypass -A > mysql_backup.dmp

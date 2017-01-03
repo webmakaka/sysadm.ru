@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Веб сервера
+title: Web Servers
 permalink: /linux/webservers/
 ---
+
+# Web Servers
 
 ### Nginx
 

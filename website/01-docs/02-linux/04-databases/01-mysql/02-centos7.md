@@ -6,7 +6,7 @@ permalink: /linux/databases/mysql/installation/centos7/
 
 
 
-## Инсталляция MySQL на Centos 7 из пакетов
+# Инсталляция MySQL на Centos 7 из пакетов
 
 
     # cd /tmp/

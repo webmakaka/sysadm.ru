@@ -4,7 +4,7 @@ title: Инсталляция PHP на Centos 6.6 из пакетов
 permalink: /linux/webservers/apache/php/
 ---
 
-=================
+# Инсталляция PHP на Centos 6.6 из пакетов
 
 Если нужно установить php 5.5 и выше из пакетов:
 http://snippets.khromov.se/update-php-5-5-from-remi-repo-on-centos-6/

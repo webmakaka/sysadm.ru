@@ -4,7 +4,7 @@ title: Nginx сервер
 permalink: /linux/webservers/nginx/
 ---
 
-## Nginx Debian Jessie
+# Nginx Debian Jessie
 
 
 ### Nginx 1.8.X

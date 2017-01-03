@@ -4,9 +4,7 @@ title: Improving local file security
 permalink: /linux/databases/mysql/installation/security/
 ---
 
-<br/>
-
-### Improving local file security
+# Improving local file security
 
 
     # vi /etc/my.cnf

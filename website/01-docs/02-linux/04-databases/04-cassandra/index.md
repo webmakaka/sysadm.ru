@@ -4,6 +4,9 @@ title: Инсталляция Apache Cassandra (DataStax Community Edition) в C
 permalink: /linux/databases/cassandra/centos/6.7/
 ---
 
+
+# Инсталляция Apache Cassandra (DataStax Community Edition) в Centos 6.7
+
 ## Устанавливаю первый раз!
 
 http://www.planetcassandra.org/cassandra/

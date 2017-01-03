@@ -4,7 +4,7 @@ title: PostgreSQL инсталляция в Linux
 permalink: /linux/databases/postgresql/
 ---
 
-### PostgreSQL
+# PostgreSQL
 
 [Ubuntu](/linux/databases/postgresql/ubuntu/)  
 [Centos](/linux/databases/postgresql/centos/)  

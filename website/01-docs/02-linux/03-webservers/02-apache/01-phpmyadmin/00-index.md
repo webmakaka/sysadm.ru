@@ -6,7 +6,7 @@ permalink: /linux/webservers/apache/phpmyadmin/
 
 
 
-### Php MyAdmin показывает белый экран, без какого либо кода.
+# Php MyAdmin показывает белый экран, без какого либо кода.
 
 
     # cat /dev/null > /var/log/httpd/error_log

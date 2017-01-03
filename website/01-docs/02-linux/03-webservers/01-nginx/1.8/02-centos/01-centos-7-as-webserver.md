@@ -5,7 +5,7 @@ permalink: /linux/webservers/nginx/1.8/centos/7/webserver/
 ---
 
 
-### Инсталляция Nginx как web сервер из пакетов в Centos 7
+# Инсталляция Nginx как web сервер из пакетов в Centos 7
 
 
     # yum update -y

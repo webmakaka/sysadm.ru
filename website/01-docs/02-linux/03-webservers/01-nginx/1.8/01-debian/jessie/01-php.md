@@ -4,7 +4,7 @@ title: Инсталляция PHP и настройка для работы с N
 permalink: /linux/webservers/nginx/1.8/debian/jessie/php/
 ---
 
-### Инсталляция PHP и настройка для работы с Nginx 1.8
+# Инсталляция PHP и настройка для работы с Nginx 1.8
 
 
     # apt-cache search php5

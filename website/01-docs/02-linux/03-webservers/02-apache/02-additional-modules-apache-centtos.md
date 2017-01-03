@@ -4,6 +4,8 @@ title: Apache Httpd сервер модули mod_ssl, mod_security, mod_python 
 permalink: /linux/webservers/apache/mods/
 ---
 
+# Apache Httpd сервер модули mod_ssl, mod_security, mod_python (Centos 6.6)
+
 Понадобилось установить для Apache следующие модули: mod_ssl, mod_security, mod_python
 
     # cd /tmp

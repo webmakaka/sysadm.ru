@@ -5,7 +5,7 @@ permalink: /linux/basics/centos/6/network-setup/
 ---
 
 
-### Настройка сети в centos 6
+# Настройка сети в centos 6
 
     # vi /etc/sysconfig/network-scripts/ifcfg-eth0
 

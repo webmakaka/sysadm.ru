@@ -4,6 +4,8 @@ title: PostgreSQL инсталляция в Centos 6.X
 permalink: /linux/databases/postgresql/centos/
 ---
 
+# PostgreSQL инсталляция в Centos 6.X
+
 ### Для версии 9
 
 1\. Configure your YUM repository
