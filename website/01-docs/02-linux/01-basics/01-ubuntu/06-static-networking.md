@@ -4,7 +4,7 @@ title: Настройка статической адресации сетевы
 permalink: /linux/basics/ubuntu/static-networking/
 ---
 
-### Настройка статической адресации сетевых интерфейсов в ubuntu server 16.04
+# Настройка статической адресации сетевых интерфейсов в ubuntu server 16.04
 
 
     # apt-get remove resolvconf

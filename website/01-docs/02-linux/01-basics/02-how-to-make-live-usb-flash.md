@@ -1,12 +1,11 @@
 ---
 layout: page
-title: Создание USB флешки с Centos в Ubuntu
-permalink: /linux/basics/ubuntu/make-usb-flash/
+title: Создание загрузочной USB флешки в Linux
+permalink: /linux/basics/how-to-make-live-usb-flash/
 ---
 <br/>
 
-### Создание USB флешки с Centos в Ubuntu
-
+# Создание загрузочной USB флешки в Linux
 
 
 Как оказалось, в убунту записать образ Centos с помощью "Startup Disk Creator" нельзя. Не помню, вроде раньше было можно?
@@ -21,3 +20,8 @@ permalink: /linux/basics/ubuntu/make-usb-flash/
 **Главное не перепутать диск!**
 
     # dd if=./CentOS-7-x86_64-DVD-1511.iso of=/dev/sdf
+
+
+**С дебианом тоже работает**
+
+    # dd if=./debian-8.6.0-amd64-DVD-1.iso of=/dev/sdg

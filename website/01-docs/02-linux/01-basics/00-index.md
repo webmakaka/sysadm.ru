@@ -12,6 +12,8 @@ permalink: /linux/basics/
 
 ### [Незапоминаемые команды в принципе](/linux/basics/commands/)
 
+### [Создание загрузочной USB флешки в Linux](/linux/basics/how-to-make-live-usb-flash/)
+
 
 <br/>
 
@@ -21,7 +23,6 @@ permalink: /linux/basics/
 
 ### [Инсталляция Google Chrome](/linux/basics/ubuntu/chrome/)
 
-### [Создание USB флешки с Centos в Ubuntu](/linux/basics/ubuntu/make-usb-flash/)
 
 ### [Unable to locate package *****.so.*](/linux/basics/ubuntu/Install-package-for-missing-libraries/)
 

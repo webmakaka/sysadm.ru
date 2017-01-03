@@ -4,7 +4,7 @@ title: Архиваторы в Linux
 permalink: /linux/basics/archives/
 ---
 
-### Архиваторы в Linux
+# Архиваторы в Linux
 
 <br/>
 
