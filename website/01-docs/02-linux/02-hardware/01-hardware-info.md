@@ -45,8 +45,9 @@ permalink: /linux/hardware/info/
     # lshw -class network
 
 
+<br/>
 
-// Данные по жестким дискам
+### Данные по жестким дискам
 
     # hdparm -I  /dev/sdb
 
@@ -54,18 +55,24 @@ permalink: /linux/hardware/info/
 
     # lshw -class disk -class storage
 
-// Видеокарта
+
+<br/>
+
+### Видеокарта
 
     /usr/bin/lspci | grep VGA
 
 
-// Данные по всему
+<br/>
+
+### Данные по всему
 
     # lshw
 
 // Видео
 
     #  lshw -c video
+
 
 <br/>
 
