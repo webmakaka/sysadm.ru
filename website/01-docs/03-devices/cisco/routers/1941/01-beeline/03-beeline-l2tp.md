@@ -9,11 +9,6 @@ permalink: /devices/cisco/routers/1941/beeline-l2tp/
 <br/>
 
 
-## Доку писал НУБ, который Cisco профессионально не занимается и не занимался никогда!
-
-<br/>
-
-
 <div align="center" style="border-width: 4px; padding: 10px; border-style: inset; border-color: red; ">
 
 Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее <a href="/devices/cisco/routers/1941/beeline/">здесь</a>
