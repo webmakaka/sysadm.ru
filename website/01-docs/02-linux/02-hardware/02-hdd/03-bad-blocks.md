@@ -220,16 +220,25 @@ permalink: /linux/hardware/hdd/bad-blocks/
 
     1    Raw_Read_Error_Rate
 
-    VALUE это текущее значение (остаток здоровья)
-    THRESH - это значение при котором умрет
+* VALUE это текущее значение (остаток здоровья)
+* WORST - худшее количество здоровья за все время.
+* THRESH - это значение при котором диск можно считать покойником.
 
 
 <br/>
 
+TYPE - тип атрибута:
 
-Почитать, если что:
+* Pre-fail - критический атрибут.
+* Old_age - некритический атрибут.
 
-https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
+
+<br/>
+
+**Почитать, если что:**
+
+https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html  
+https://unix.community/resources/47/
 
 
 <br/>

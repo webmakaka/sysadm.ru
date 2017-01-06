@@ -31,3 +31,8 @@ permalink: /linux/webservers/
 ### HAproxy
 
 [HAproxy configuration and Load balancing, YouTube](https://www.youtube.com/watch?v=L6U0PcESQ4Y)
+
+
+### Бесплатные сертификаты для сайта
+
+[Бесплатные сертификаты для сайта](/linux/webservers/cert-for-free/)
