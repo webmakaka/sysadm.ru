@@ -114,6 +114,6 @@ Docker уже установлен.
 
 <br/><br/>
 
-Материалы:  
+**Материалы:**
 
-[Running CoreOS on VirtualBox](https://coreos.com/os/docs/774.0.0/booting-on-virtualbox.html)
+<a href="https://coreos.com/os/docs/latest/booting-on-virtualbox.html" rel="nofollow">Running CoreOS on VirtualBox</a>
