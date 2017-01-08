@@ -10,9 +10,9 @@ permalink: /linux/editors/
 
 Бесплатный редактор. По всему интернету пиарят именно этот редактор как самый оху@#$%ый. Денег не просит.
 
-У меня сейчас используется он и gedit. Если совсем что-то простое - скопировать в буфер, то gedit. Если понабирать текст - atom, впрочем я его использую и для программирования на javascript.
+У меня сейчас используется он и gedit. Если совсем что-то простое - скопировать в буфер, то gedit. Если понабирать текст - atom, впрочем я его использую и для программирования на JavaScript.
 
-Разрабатывался для пользователей mac, но сейчас работает и в Windows и Linux. Мне видится Atom - бесплатная альтернатива Sublime Text.
+Разрабатывался для пользователей mac, но сейчас работает и в Windows и в Linux. Мне видится Atom - может выступать и как бесплатная альтернатива Sublime Text.
 
 На Ubuntu atom давно, как дела обстоят с другими Linux дистрибутивами не знаю.
 
@@ -20,6 +20,8 @@ permalink: /linux/editors/
 
 
 В общем, кого не устраивает gedit, советую попробовать. Подстветка парных тегов работает.
+
+<br/>
 
 ### Инсталляция Atom в Ubuntu
 
@@ -31,42 +33,20 @@ permalink: /linux/editors/
 http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
 
 
-
 <br/>
 
 ### Настройка Atom
 
-Edit --> Preferences
-
-    Show invisibles: true
-    Tab Length: 4
-
-    Infisible space: .
-    Soft Tab: yes
-    Tab type: Soft
-
-
-<!--
-
-    $ apm install tabs-to-spaces
-    tabs-to-spaces:untabify
-
-    Подробнее:
-    https://atom.io/packages/tabs-to-spaces
-
--->
-
-
-
 <br/>
 
-### Сделать парные теги более заметными:
+**Сделать парные теги более заметными:**
+
+Я не знаю как пришел к этому конфигу, но можно сделать и получше:
 
     $ cd ~/.atom/
     $ cp styles.less styles.less.bkp
 
 Заменяем, можно целиком файл.
-
 
     $ vi styles.less
 
@@ -86,7 +66,7 @@ Edit --> Preferences
 
 <br/>
 
-### Дополнительные пакеты для удобства работы:
+**Дополнительные пакеты для удобства работы:**
 
 
 Edit --> Preferences --> Install
@@ -99,52 +79,32 @@ jshint - подсказка по ошибкам в javascrpt
 
 atom-typescript
 
+<br/>
 
-<br/><br/>
+**Возможно также полезные настройки**
 
-**Top 5 Packages: Atom Code Editor**
+Но ноже быть сейчас это уже неактуально!
 
-<br/><br/>
+Edit --> Preferences
 
-<div align="center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/DmKNDxlNLoE" frameborder="0" allowfullscreen></iframe>
-</div>
+    Show invisibles: true
+    Tab Length: 4
 
-<br/><br/>
-
-
-    # 5 - 8 votes
-    The Designer
-    i like atom too and my favorite package is emmet https://github.com/emmetio/emmet-atom
-
-    # 4 - 13 votes
-    Rodrigo Lima Batista
-    https://atom.io/packages/terminal-plus - Terminal-Plus. Love it. Not perfect or too popular but it is awesome.
-
-    # 3 - 16 votes
-    Lucas
-    I really like Atom. I installed Minimap so it looks like Sublime Text ^^
-
-    # 2 - 18 votes
-    Windowface
-    Travis, have you ever used Brackets code editor? I've been using it for a while now and love it
-
-    # 0 - honorable mention
-    Romain Lepert
-    This atom package just makes my life better
-    https://atom.io/packages/doge
-
-    # 1 - 21 votes
-    Dennis Vlaanderen
-    https://atom.io/packages/atom-bootstrap4
+    Infisible space: .
+    Soft Tab: yes
+    Tab type: Soft
 
 
 <br/>
 
-### Быстро найти файл по имени:
+**Быстро найти файл по имени:**
 
 CTRL + T и начать набирать название файла в проекте.
 
+
+<br/>
+
+<a href="//jsdev.org/env/atom/install-atom-on-ubuntu-14-04/"><strong>Еще больше материалов по Atom от меня</strong></a>
 
 
 <br/><br/>
