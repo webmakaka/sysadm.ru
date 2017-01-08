@@ -26,7 +26,7 @@ permalink: /linux/
 
 # Linux Networks:
 
-### [Linux Networks)](/linux/networks/)
+### [Linux Networks](/linux/networks/)
 
 <br/>
 
