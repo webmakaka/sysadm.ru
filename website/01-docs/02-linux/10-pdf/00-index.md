@@ -13,4 +13,4 @@ permalink: /linux/docs/pdf/
 
 ### [iptables: правила хорошего тона](https://github.com/sysadm-ru/files.sysadm.ru/blob/gh-pages/pdf/iptables.pdf)
 
-http://linuxforum.ru/topic/40051
+http://archive.li/2fgYy
