@@ -18,6 +18,12 @@ permalink: /linux/
 
 <br/>
 
+# VPN:
+
+### [Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)](/linux/centos/6/vpn/xl2tp/beeline/)
+
+<br/>
+
 # Администрирование серверов:
 
 ### [Web Servers](/linux/webservers/)
