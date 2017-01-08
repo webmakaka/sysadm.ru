@@ -5,8 +5,14 @@ permalink: /linux/centos/6/vpn/xl2tp/beeline/
 ---
 
 
+# Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)
 
-<br/><br/>
+
+<br/>
+<strong>Offtopic:</strong>
+<br/>
+
+
 <p style="padding:10px; border:thin solid black;">
 Нашел в сети статью о настройке <strong><a href="http://habrahabr.ru/post/128599/">VPN-сервер в стиле how-to (pptpd+mysql+radius) на CentOS6</a></strong>. Как оказалось, я совсем не шарю в этих технологиях. Хотелось бы в них разобраться и подготовить более качественные и подробные инструкции как это сделать. Буду надеяться, что кто-нибудь подключится к исследованию такого рода задач, усложнив решение использованием IPSEC, передачей маршрутов клиенту, настройкой правил локальной маршрутизации в зависимости от того, поднято ли VPN соединение или нет (+ возможно еще то, чего я не знаю, а должен). Будут желающие помочь, welcome.
 
@@ -26,7 +32,7 @@ VPN - L2TP
 <br/><br/>
 
 
-# Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)
+
 
 
 <br/>
@@ -34,10 +40,19 @@ VPN - L2TP
 
 <div align="center" style="border-width: 4px; padding: 10px; border-style: inset; border-color: red; ">
 
-Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее <a href="/devices/cisco/routers/1941/beeline/">здесь</a>
+Многое поменялось. Теперь для подключения к провайдеру не нуно настраивать l2tp. Смотри подробнее <a href="/devices/cisco/routers/1941/beeline/">здесь</a>
+
+<br/>
+<br/>
+
+Удалять не буду, может когда еще понадобится настроить для какой-нибудь другой задачи!
 
 </div>
 
+
+<br/>
+
+### Начало
 
 Имеем компьютер с 2-я сетевыми картами.
 
@@ -46,7 +61,7 @@ VPN - L2TP
 eth0 - внешняя сеть<br/>
 eth1 - внутренняя сеть
 
-<br/><br/>
+<br/>
 
 <!--
 Делаем из него маршрутизатор, который должен работать в локальной сети Билайн. <br/>
@@ -56,11 +71,8 @@ eth1 - внутренняя сеть
 Для доступа в интернет, необходимо авторизоваться на сервере провайдера. Для этого создается виртуальный интерфейс ppp, устанавливается ПО для авторизации.
 
 
-<br/><br/>
-
 <strong>UPD 1:</strong> появилось ощущение, что слишком много раз приходится сообщать login пользователя в конфигах! (Не странно, т.к. конфиги собирались из уже готовых примеров в интернете.) По хорошему, нужно это исправить.
 
-<br/><br/>
 
 <strong>UPD 2:</strong> Брас (или как он там правильно называется) tp.corbina.net,
 который верой и правдой служил долгие коды (а тот который рекомендовали сотрудники биллайна не работал как нужно) в последнее время (2014 год.) стал работать
@@ -69,12 +81,9 @@ eth1 - внутренняя сеть
 Вообщем, чтобы не было ни единого разрыва, нужно правильно выбрать сервер для авторизации. Поменял брас, стало намного лучше.
 
 
-<br/><br/>
-<hr/>
-<br/><br/>
+<br/>
 
-
-<h2>Настройка интерфейса, подключенного к биллайн</h3>
+### Настройка интерфейса, подключенного к биллайн
 
 <br/>
 
@@ -112,19 +121,20 @@ tp.internet.beeline.ru has address 85.21.0.50
 </pre>
 
 
-<br/><br/>
+<br/>
 
-<h2>Инсталляция необходимого ПО</h3>
+### Инсталляция необходимого ПО
 
 <br/>
+
 Добавляю EPEL репозиторий, т.к. в стандартном не нашел.
-<br/><br/>
 
-## EPEL Repository<br/>
-## RHEL/CentOS 6 64-Bit ##
+<br/>
 
-<br/><br/>
+    ## EPEL Repository<br/>
+    ## RHEL/CentOS 6 64-Bit ##
 
+<br/>
 
 <pre class="blue_border">
 <strong class="userinput"># <code>rpm -ivh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm</code></strong>
@@ -166,9 +176,9 @@ tp.internet.beeline.ru has address 85.21.0.50
 </pre>
 
 
-<br/><br/>
-<strong>Настройка</strong>
-<br/><br/>
+### Настройка
+
+<br/>
 
 <pre class="blue_border">
 <strong class="userinput"># <code>cp /etc/xl2tpd/xl2tpd.conf /etc/xl2tpd/xl2tpd.conf.bkp</code></strong>
@@ -203,8 +213,6 @@ flow bit = no</code>
 </pre>
 
 
-<br/><br/>
-
 <pre class="blue_border">
 <strong class="userinput"># <code>cp /etc/ppp/options.xl2tpd /etc/ppp/options.xl2tpd.bkp</code></strong>
 </pre>
@@ -238,9 +246,6 @@ refuse-pap
 unit 0</code>
 </pre>
 
-
-<br/><br/>
-
 <pre class="blue_border">
 <strong class="userinput"># <code>cp /etc/ppp/chap-secrets /etc/ppp/chap-secrets.bkp</code></strong>
 </pre>
@@ -254,18 +259,14 @@ unit 0</code>
 <code>имя_пользователя * пароль *</code>
 </pre>
 
-<br/><br/>
 
 <pre class="blue_border">
 <strong class="userinput"># <code>service xl2tpd start</code></strong>
 </pre>
 
 
-<br/><br/>
+**Ждем получения ip адреса (по разному от сразу до 3-х минут).**
 
-Ждем получения ip адреса (по разному от сразу до 3-х минут).
-
-<br/><br/>
 <pre class="blue_border">
 <strong class="userinput"># <code>less /var/log/messages</code></strong>
 </pre>
@@ -275,9 +276,8 @@ unit 0</code>
 Jan  5 21:00:07 gateway pppd[7958]: remote IP address 85.21.0.243</code>
 </pre>
 
-<br/><br/>
-Появляется интерфейс ppp0
-<br/><br/>
+
+**Появляется интерфейс ppp0**
 
 <pre class="blue_border">
 <strong class="userinput"># <code>ifconfig ppp</code></strong>
@@ -294,9 +294,8 @@ Jan  5 21:00:07 gateway pppd[7958]: remote IP address 85.21.0.243</code>
 </pre>
 
 
-<br/><br/>
-Таблица маршрутизации выглядит следующим образом.
-<br/><br/>
+
+**Таблица маршрутизации выглядит следующим образом**
 
 <pre class="blue_border">
 <strong class="userinput"># <code>route -n</code></strong>
@@ -342,9 +341,7 @@ default         10.111.0.1      0.0.0.0         UG    0      0        0 eth0</co
 -->
 
 
-<br/><br/>
-Получаю данные о присвоенном Default Gateway
-<br/>
+**Получаю данные о присвоенном Default Gateway**
 
 <pre class="blue_border">
 <strong class="userinput"># <code>eth0_gw=`/sbin/route -n | awk '/^0.0.0.0/ {print $2}'`</code></strong>
@@ -359,9 +356,7 @@ default         10.111.0.1      0.0.0.0         UG    0      0        0 eth0</co
 </pre>
 
 
-<br/><br/>
-Получаю данные о присвоенном нам сервере авторизации L2TP
-<br/>
+**Получаю данные о присвоенном нам сервере авторизации L2TP**
 
 <pre class="blue_border">
 <strong class="userinput"># <code>vpn_server=`/sbin/route -n | awk '/ppp0/ {print $1}'`</code></strong>
@@ -380,7 +375,7 @@ default         10.111.0.1      0.0.0.0         UG    0      0        0 eth0</co
 
 <pre>
 
-Возможно, что предварительно нужно прописать маршруты до корбиновских dns и до l2pt сервера.
+Возможно, что предварительно нужно прописать маршруты до билайновских dns и до l2pt сервера.
 Последний раз когда настраивал, прокатило и без них.
 
 route add -host 85.21.192.3 gw $eth0_gw
@@ -404,11 +399,9 @@ route add -host 85.21.192.5 gw $eth0_gw
 </pre>
 
 
-<br/><br/>
 Вот что получилось. (Поднят ppp интерфейс и по умолчанию пакеты отправляются ему).<br/>
 При этом маршрут до L2TP сервера должен быть прописан. (Иначе, сервер не знает где ему авторизовываться,
 интерфейс ppp падает, все перестает работать).
-<br/><br/>
 
 
 <pre class="blue_border">
@@ -428,9 +421,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 </pre>
 
 
-<br/><br/>
-Пинг пошел.
-<br/><br/>
+**Пинг пошел**
 
 
 <pre class="blue_border">
@@ -444,30 +435,24 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 </pre>
 
 <br/><br/>
-Остается только настроить <a href="../../../../nat/index.html">NAT</a>.
+Остается только настроить <a href="https://sysadm.ru/linux/centos/nat/index.html">NAT</a>.
 <br/><br/>
 
 -----------------------------------------------------
 
-
-
-<br/><br/>
 Моя задача потренироваться была выполнена.<br/>
 Автоматизировать процесс изменения маршрутов в зависимости от того, поднят ли ppp интерфейс не пытался.<br/>
 В списке "почитать" первая ссылка, там все это описывается.<br/>
 
 
-<br/><br/>
-<hr/>
-<br/><br/>
-
 
 <pre>
 
-Мое предположение, в биллайне куча серверов авторизации.
+Мое предположение, в билайне куча серверов авторизации.
 Некоторые из них выдают маршруты, некоторые нет.
 
 Если нужно добавить статические маршруты, можно это сделать в файле:
+
 # vi /etc/sysconfig/network-scripts/route-eth0
 
 10.0.0.0/8 via 10.111.0.1
@@ -488,13 +473,8 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 85.21.192.5 via 10.111.0.1
 </pre>
 
-<br/><br/>
 
 <strong>Если кто напишет, как доделать, исправить, сделать лучше, чтобы было все по феншую, пишите я внесу исправления.</strong>
-
-<br/><br/>
-<hr/>
-<br/><br/>
 
 
 <!--
@@ -610,13 +590,11 @@ Jan  5 17:11:04 gateway pppd[1522]: Failed to open /dev/pts/2: No such file or d
 
 
 
-// Если на клиенте не все сайты открываются, а на сервере все ок. (Например yandex и google открываются, а множество других нет, хотя и нормально пингуются). Проблемы скорее всего в настройкам MTU.
+Если на клиенте не все сайты открываются, а на сервере все ок. (Например yandex и google открываются, а множество других нет, хотя и нормально пингуются). Проблемы скорее всего в настройкам MTU.
 
-<br/><br/>
 
 Следует создать правило в iptables
 
-<br/><br/>
 
 
 <pre class="blue_border">
@@ -628,13 +606,8 @@ Jan  5 17:11:04 gateway pppd[1522]: Failed to open /dev/pts/2: No such file or d
 Подробности здесь:<br/>
 http://www.opennet.ru/base/net/pppoe_mtu.txt.html
 
-<br/><br/>
 </pre>
 
-
-<br/><br/>
-<hr/>
-<br/><br/>
 
 Возможно, что здесь лучше описано решение точно такой же задачи:<br/>
 http://linuxdata.ru/questions/q48.html
@@ -664,7 +637,6 @@ http://archlinux.org.ru/forum/topic/7000/<br/>
 http://www.linux.org.ru/forum/general/9315021<br/>
 http://linuxoid.in/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BA_ISP_%22Corbina%22_%28%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%29#.D0.9D.D0.B0.D1.81.D1.82.D1.80.D0.BE.D0.B9.D0.BA.D0.B0_.D1.80.D0.BE.D1.83.D1.82.D0.B8.D0.BD.D0.B3.D0.B0
 
-<br/><br/>
 
 Нужно посмотреть для Centos 7 (пока не смотрел)<br/>
 http://homenet.beeline.ru/index.php?showtopic=320882
