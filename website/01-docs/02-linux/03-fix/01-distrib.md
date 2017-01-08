@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ISO образы с Linux
-permalink: /linux/basics/distrib/
+permalink: /linux/fix/distrib/
 ---
 
 # ISO образы с Linux

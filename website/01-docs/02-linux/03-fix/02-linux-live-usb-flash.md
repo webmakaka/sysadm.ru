@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Создание загрузочной USB флешки в Linux
-permalink: /linux/basics/how-to-make-live-usb-flash/
+permalink: /linux/fix/linux-live-usb-flash/
 ---
 
 # Создание загрузочной USB флешки в Linux

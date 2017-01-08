@@ -1,30 +1,24 @@
 ---
 layout: page
-title: Linux
+title: Мелкий ремонт
 permalink: /linux/fix/
 ---
 
 # Мелкий ремонт
 
+# Переустановка операционной системы:
 
-### [ISO образы с Linux](/linux/basics/distrib/)
+### [ISO образы с Linux](/linux/fix/distrib/)
 
-### [Создание загрузочной USB флешки в Linux](/linux/basics/how-to-make-live-usb-flash/)
+### [Создание загрузочной USB флешки в Linux](/linux/fix/linux-live-usb-flash/)
 
-### [Шаги после инсталляции Ubuntu](/linux/basics/ubuntu/steps-after-installation/)
-
-<br/>
-
-## Centos
-
-### 6.X
-
-### [Пакеты которые нужно установить после установки чистой операционнй системы для комфортной работы](/linux/basics/centos/6/steps-after-installation/)
+### [Шаги после инсталляции Ubuntu](/linux/fix/ubuntu/steps-after-installation-ubuntu/)
 
 
-### 7.X
+### [Пакеты которые нужно установить после установки чистой операционнй системы для комфортной работы в Centos 6](/linux/fix/centos/6/steps-after-installation-centos-6x/)
 
-### [Centos 7 нужные мне для работы пакеты](/linux/basics/centos/7/steps-after-installation/)
+
+### [Centos 7 нужные мне для работы пакеты](/linux/fix/centos/6/steps-after-installation-centos-7x/)
 
 
 <br/>

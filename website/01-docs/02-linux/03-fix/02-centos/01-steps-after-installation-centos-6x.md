@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Пакеты которые нужно установить после установки чистой операционнй системы для комфортной работы
-permalink: /linux/basics/centos/6/steps-after-installation/
+permalink: /linux/fix/centos/6/steps-after-installation-centos-6x/
 ---
 
 

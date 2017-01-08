@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Шаги после инсталляции Ubuntu (для себя)
-permalink: /linux/basics/ubuntu/steps-after-installation/
+permalink: /linux/fix/ubuntu/steps-after-installation-ubuntu/
 ---
 
 # Шаги после инсталляции Ubuntu (для себя)
