@@ -19,21 +19,8 @@ permalink: /linux/centos/6/vpn/xl2tp/beeline/
 <br/><br/>
 Если я все правильно понимаю, схема приблизительно похожа на ту, что создают у себя провайдеры. <br/>
 Возможно, что такая схема подключения будет интересна админам, у которых пользователи должны работать удаленно.
-<br/><br/>
 
-Операционная система сервера и клиента - Centos 6.5<br/>
-VPN - L2TP
-
-<br/><br/>
-Начало <a href="http://prev.sysadm.ru/linux/centos/6/vpn/l2tp/">здесь</a>
 </p>
-
-
-<br/><br/>
-
-
-
-
 
 <br/>
 
@@ -42,7 +29,6 @@ VPN - L2TP
 
 Многое поменялось. Теперь для подключения к провайдеру не нуно настраивать l2tp. Смотри подробнее <a href="/devices/cisco/routers/1941/beeline/">здесь</a>
 
-<br/>
 <br/>
 
 Удалять не буду, может когда еще понадобится настроить для какой-нибудь другой задачи!
@@ -167,8 +153,6 @@ tp.internet.beeline.ru has address 85.21.0.50
 <pre class="blue_border">
 <strong class="userinput"># <code>yum install -y xl2tpd</code></strong>
 </pre>
-
-
 
 
 <pre class="blue_border">
@@ -606,21 +590,12 @@ Jan  5 17:11:04 gateway pppd[1522]: Failed to open /dev/pts/2: No such file or d
 Подробности здесь:<br/>
 http://www.opennet.ru/base/net/pppoe_mtu.txt.html
 
-</pre>
-
 
 Возможно, что здесь лучше описано решение точно такой же задачи:<br/>
 http://linuxdata.ru/questions/q48.html
 
-<br/><br/>
-
 Резервная копия:<br/>
 https://archive.today/jSvQG
-
-<br/><br/>
-<hr/>
-<br/><br/>
-
 
 <strong>Почитать:</strong>
 <br/><br/>
