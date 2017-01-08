@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Настройка статической адресации сетевых интерфейсов в ubuntu server 16.04
-permalink: /linux/basics/ubuntu/static-networking/
+permalink: /linux/networks/ubuntu/
 ---
 
 # Настройка статической адресации сетевых интерфейсов в ubuntu server 16.04

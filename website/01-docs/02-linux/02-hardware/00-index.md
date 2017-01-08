@@ -39,10 +39,3 @@ permalink: /linux/hardware/
 ### VideoCard
 
 [Установить в Ubuntu nvidia драйвера вместо opensource](/linux/hardware/videocard/ubuntu/drivers/nvidia/)
-
-
-<br/>
-
-### Wi-Fi адаптер
-
-[Мудацкий Realtek опять не работает в Ubuntu](/linux/hardware/wi-fi/ubuntu/realtek/)

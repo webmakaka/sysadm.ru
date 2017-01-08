@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Настройка сети в centos 6
-permalink: /linux/basics/centos/6/network-setup/
+permalink: /linux/networks/centos/6/
 ---
 
 
@@ -61,6 +61,7 @@ permalink: /linux/basics/centos/6/network-setup/
     $ ssh root@192.168.1.11
 
 
+<br/>
 
 ### Продолжаем настраивать параметры сетевого окружения
 

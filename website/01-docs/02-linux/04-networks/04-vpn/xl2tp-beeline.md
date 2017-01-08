@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)
-permalink: /linux/centos/6/vpn/xl2tp/beeline/
+permalink: /linux/networks/vpn/xl2tp/centos/6/
 ---
 
 
