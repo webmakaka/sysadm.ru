@@ -36,7 +36,7 @@ permalink: /windows/containers/docker/run-container/
 
 Навсяк, запощу его сюда:
 
-{% highlight bash linenos %}
+{% highlight Bash shell scripts linenos %}
 
 # To build and run with Docker:
 #
