@@ -41,3 +41,16 @@ https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/qu
     $ docker pull microsoft/nanoserver
     $ docker run -it microsoft/nanoserver cmd
     $ powershell.exe Add-Content C:\helloworld.ps1 'Write-Host "Hello World"'
+
+Оказывается, там есть какие-то переключатели между Windows и Linux контейнерами, Все это добро работает пока в режиме беты. Если что, можно полистать материалы следующего блога.
+
+
+<br/>
+
+<div align="center">
+	<img src="//stefanscherer.github.io/content/images/2016/09/docker-for-windows-switch.gif" alt="Run Linux and Windows Containers on Windows 10" border="0" />
+</div>
+
+<br/>
+
+https://stefanscherer.github.io/run-linux-and-windows-containers-on-windows-10/
