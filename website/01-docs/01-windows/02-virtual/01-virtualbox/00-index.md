@@ -12,5 +12,5 @@ permalink: /windows/virtual/virtualbox/
 
 
 <ul>
-    <li><a href="/windows/containers/docker/errors/error-checking-context/">Windows 10: Failed to open/create the internal network 'HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter'</a></li>
+    <li><a href="/windows/virtual/virtualbox/errors/">Ошибки Virtualbox в Windows</a></li>
 </ul>

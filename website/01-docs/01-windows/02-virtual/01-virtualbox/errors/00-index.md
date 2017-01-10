@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ошибки Virtualbox в Windows
-permalink: /windows/virtual/virtualbox/errors/failed-to-open-create-the-internal-network/
+permalink: /windows/virtual/virtualbox/errors/
 ---
 
 # Ошибки Virtualbox в Windows

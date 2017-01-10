@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Контейнеры в Windows
-permalink: /windows/virtual/
+permalink: /windows/containers/
 ---
 
 # Контейнеры в Windows

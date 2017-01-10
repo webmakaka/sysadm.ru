@@ -4,7 +4,7 @@ title: Docker в Windows
 permalink: /windows/containers/docker/
 ---
 
-# Docker в Windows первое знакомство
+# Docker в Windows
 
 
 <br/>
