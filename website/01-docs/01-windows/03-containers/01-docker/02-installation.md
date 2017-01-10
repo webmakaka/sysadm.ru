@@ -1,12 +1,10 @@
 ---
 layout: page
 title: Инсталляция Docker в Windows
-permalink: /windows/virtual/docker/installation/
+permalink: /windows/containers/docker/installation/
 ---
 
-<br/>
-
-### Поехали ставить Docker в Windows
+# Инсталляция Docker в Windows
 
 Get Started with Docker for Windows  
 https://docs.docker.com/windows/

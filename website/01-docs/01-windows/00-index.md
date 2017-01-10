@@ -10,4 +10,6 @@ permalink: /windows/
 
 ### [Базовые вещи](/windows/basics/)
 
-### [Виртуализация и контейнеры](/windows/virtual/)
+### [Виртуализация](/windows/virtual/)
+
+### [Контейнеры](/windows/containers/)

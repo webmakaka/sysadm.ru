@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Ошибки при работе с Docker в Windows
-permalink: /windows/virtual/docker/errors/
+title: Ошибки при работе с Docker в Windows - Error checking context
+permalink: /windows/containers/docker/errors/error-checking-context/
 ---
 
-### Error checking context: 'can't stat '\\?\C:\Users\UserName\AppData\Local\Application Data''.
+# Ошибки при работе с Docker в Windows -  Error checking context: 'can't stat '\\?\C:\Users\UserName\AppData\Local\Application Data''.
 
 Создаю контейнер из Dockerfile с помощью windows консоли docker - Docker Quick Start Terminal.
 

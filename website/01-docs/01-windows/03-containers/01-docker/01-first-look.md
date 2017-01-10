@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Docker в Windows
-permalink: /windows/virtual/docker/
+title: Docker в Windows первое знакомство
+permalink: /windows/containers/docker/first-look/
 ---
 
-### Docker в Windows
+# Docker в Windows первое знакомство
 
 Offtopic:  
 [Docker в Linux](/linux/containers/docker/)
@@ -32,18 +32,3 @@ Docker в Windows - это таже виртуализация и не дает 
     <iframe width="853" height="480" src="https://www.youtube.com/embed/RDVlAyec8fI" frameborder="0" allowfullscreen></iframe>
 
 </div>
-
-<br/>
-
-[Инсталляция Docker в Windows](/windows/virtual/docker/installation/)
-
-[Практический пример запуска приложения в docker под Windows](/windows/virtual/docker/run-container/)
-
-[Запустить docker контейнер и выполнить команду npm start](/windows/virtual/docker/run-container-v2/)
-
-
-Как стартануть asp.net приложение в docker контейнере, смотрите в курсе, название которого написано выше.
-А примеры, можно взять с [гитхаба](https://github.com/sysadm-ru/Docker-for-Web-Developers/network).
-
-
-[Ошибки при работе с Docker в Windows](/windows/virtual/docker/errors/)
