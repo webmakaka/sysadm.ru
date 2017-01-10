@@ -12,17 +12,19 @@ permalink: /windows/containers/docker/errors/error-checking-context/
     $ pwd
     /c/Users/UserName
 
-Ошибка:
+**Ошибка:**
 
     $ docker build -t <container_name> .
     Error checking context: 'can't stat '\\?\C:\Users\UserName\AppData\Local\Application Data''.
 
-Решение:
+**Решение:**
 
     $ mkdir 1
     $ mv Dockerfile ./1
     $ cd 1/
     $ docker build -t <container_name> .
+
+<br/>
 
     $ docker build -t ubuntu .
     Sending build context to Docker daemon  2.56 kB
