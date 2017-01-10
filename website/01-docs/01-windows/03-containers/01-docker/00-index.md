@@ -17,17 +17,27 @@ permalink: /windows/containers/docker/
 
 [Запустить docker контейнер и выполнить команду npm start](/windows/containers/docker/run-container-v2/)
 
+[Запустить asp.net приложение в docker контейнере](/windows/containers/docker/run-asp-net-app-in-docker/)
 
-Как стартануть asp.net приложение в docker контейнере, смотрите в курсе [PLURALSIGHT.COM, DAN WAHLIN] DOCKER FOR WEB DEVELOPERS [2016, ENG].
 
-У кого нет денег и кто не брезгает качать с трекеров, ищите. Они там есть.
-Я брал на darkos.club.
-
-А так как мудаки с которыми работает pluralsight, забанили мой репо с исходниками (один из репо), я не вообще не рекомендую покупать что-либо от pluralsight.
-
- [гитхаб](https://github.com/sysadm-ru/Docker-for-Web-Developers/).
 
 
 <br/>
 
+### Ошибки:
+
 [Ошибки при работе с Docker в Windows](/windows/containers/docker/errors/)
+
+
+<br/>
+
+### Еще есть какой-то nanoserver от Microsoft.
+
+
+https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10
+
+Но он у меня не запустился из коробки, а читать всю статью лень!
+
+    $ docker pull microsoft/nanoserver
+    $ docker run -it microsoft/nanoserver cmd
+    $ powershell.exe Add-Content C:\helloworld.ps1 'Write-Host "Hello World"'

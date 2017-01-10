@@ -21,6 +21,7 @@ permalink: /windows/containers/docker/errors/error-checking-context/
 
     $ mkdir 1
     $ mv Dockerfile ./1
+    $ cd 1/
     $ docker build -t <container_name> .
 
     $ docker build -t ubuntu .
