@@ -30,6 +30,40 @@ permalink: /windows/containers/docker/run-container/
 
 <br/>
 
+**Блин, они выпилили dockerfile из репо! Если, что смотри другой бранч, там он есть. Или даже, смотри https://github.com/ui-router/quickstart-ng2/blob/master/Dockerfile**
+
+<br/>
+
+Навсяк, запощу его сюда:
+
+{% highlight bash linenos %}
+
+# To build and run with Docker:
+#
+#  $ docker build -t ng2-quickstart .
+#  $ docker run -it --rm -p 3000:3000 -p 3001:3001 ng2-quickstart
+#
+FROM node:latest
+
+RUN mkdir -p /quickstart /home/nodejs && \
+    groupadd -r nodejs && \
+    useradd -r -g nodejs -d /home/nodejs -s /sbin/nologin nodejs && \
+    chown -R nodejs:nodejs /home/nodejs
+
+WORKDIR /quickstart
+COPY package.json typings.json /quickstart/
+RUN npm install --unsafe-perm=true
+
+COPY . /quickstart
+RUN chown -R nodejs:nodejs /quickstart
+USER nodejs
+
+CMD npm start
+
+{% endhighlight %}
+
+<br/>
+
     $ cd myApp/
 
  <br/>
