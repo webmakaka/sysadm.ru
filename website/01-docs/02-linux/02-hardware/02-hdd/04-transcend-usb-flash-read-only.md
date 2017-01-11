@@ -28,8 +28,17 @@ permalink: /linux/hardware/hdd/transcend-usb-flash-read-only/
 
     # dd if=/dev/zero of=/dev/sde
 
+Лучше запускать, чтобы было видно прогресс.
+
+    # apt-get install -y pv
+    # dd if=/dev/zero | pv | dd of=/dev/sde
+
+
 И забивается нулями флешка, часов за 6.
 
+<br/>
+
+### Остается создать раздел с нужной файловой системой.
 
     # fdisk /dev/sde
     Note: sector size is 1024 (not 512)
