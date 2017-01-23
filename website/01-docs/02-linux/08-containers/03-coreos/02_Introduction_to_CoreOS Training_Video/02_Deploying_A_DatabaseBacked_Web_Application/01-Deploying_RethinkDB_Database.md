@@ -14,8 +14,12 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseB
 
 
     $ cd ~/coreos-vagrant
+
+<br/>
+
     $ vi config.rb
 
+Прописываем:
 
     $forwarded_ports = {80 => 8000, 3000 => 3000, 8080 => 8080 }
 

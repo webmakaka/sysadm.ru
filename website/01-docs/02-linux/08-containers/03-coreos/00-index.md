@@ -7,6 +7,8 @@ permalink: /linux/containers/coreos/
 
 # CoreOS
 
+<br/>
+
 ### Инсталляция
 
 [Vagrant и CoreOS](/linux/containers/coreos/installation/vagrant-coreos/)  
@@ -19,28 +21,37 @@ permalink: /linux/containers/coreos/
 
 [Инсталляция Docker Compose на CoreOS](/linux/containers/coreos/installation/docker-compose/)
 
+<br/>
 
 ### Network
 
 [Настройка сетевых адаптеров в CoreOS](/linux/containers/coreos/network/)
 
 
+<br/>
+
 ### Update | Upgrade
 
 [update](/linux/containers/coreos/update/)
 
+
+<br/>
 
 ### Using Cloud-Config
 
 https://coreos.com/os/docs/latest/cloud-config.html
 
 
+<br/>
+
 ### Clustering Guide
 
 https://coreos.com/etcd/docs/latest/clustering.html
 
 
-<br/><br/>
+<br/>
+
+### Терминология
 
 Etcd — распределенное Key-Value хранилище, которое запускается на каждой машине кластера CoreOS и обеспечивает общий доступ практически ко всем данным в масштабе всего кластера. Внутри etcd хранятся настройки служб, их текущие состояние, конфигурация самого кластера и т.д. Etcd позволяет хранить данные иерархически (хранилище древовидно), подписываться на изменения ключей или целых директорий, задавать для ключей и директорий ключей значения TTL (фактически, «экспирить» их), атомарно изменять или удалять ключи, упорядоченно хранить их (что позволяет реализовывать своеобразные очереди). Поскольку конфигурация сервисов, запущенных в масштабе кластера, хранится в etcd, узнать о запуске и остановке того или иного сервиса можно просто подписавшись на изменения соответствующих ключей в хранилище.
 
@@ -83,13 +94,23 @@ confd:
 https://github.com/kelseyhightower/confd
 
 
-<br/><br/>
+<br/>
 
 
 ### [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
 
 <ul>
     <li><a href="/linux/containers/coreos/Introduction_to_CoreOS/">[O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]</a></li>
+</ul>
+
+
+<br/>
+
+
+### [] Getting Started with CoreOS [29 Nov 2016, ENG]
+
+<ul>
+    <li><a href="/linux/containers/coreos/Getting_Started_with_CoreOS/">Getting Started with CoreOS [29 Nov 2016, ENG]</a></li>
 </ul>
 
 
