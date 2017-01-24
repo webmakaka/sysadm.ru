@@ -107,7 +107,7 @@ https://github.com/kelseyhightower/confd
 <br/>
 
 
-### [] Getting Started with CoreOS [29 Nov 2016, ENG]
+### Getting Started with CoreOS [29 Nov 2016, ENG]
 
 <ul>
     <li><a href="/linux/containers/coreos/Getting_Started_with_CoreOS/">Getting Started with CoreOS [29 Nov 2016, ENG]</a></li>
