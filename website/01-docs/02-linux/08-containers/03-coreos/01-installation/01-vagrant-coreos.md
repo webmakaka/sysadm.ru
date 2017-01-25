@@ -76,7 +76,7 @@ https://discovery.etcd.io/new
 
 <br/>
 
-    // Если будет нужно выключить
+    // Если будет нужно уничтожить
     $ vagrant destroy
 
 

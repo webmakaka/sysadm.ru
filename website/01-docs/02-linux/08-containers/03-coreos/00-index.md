@@ -74,9 +74,34 @@ Etcd - похоже на Consul и ZooKeeper. (Лично я ничего из �
 
 <br/>
 
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/getting_started_with_coreos/pic1.png" border="0" alt="coreos cluster">
+</div>
+
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/getting_started_with_coreos/pic2.png" border="0" alt="coreos cluster">
+</div>
+
+<br/>
+
 
 
 Fleet — (коротко и упрощенно - distributed systemd) это «надстройка» над systemd, которая переносит управление службами с локальной машины на уровень кластера. Fleet хранит конфигурацию служб в виде юнитов systemd (в etcd), автоматически доставляет ее на локальные машины, запускает, перезапускает (при необходимости), останавливает службы на машинах кластера. Fleet умеет планировать запуск служб исходя из загруженности конкретных машин кластера. Ему можно сказать, что конкретную службу нужно запускать только на определенных машинах и т.д.
+
+
+
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/getting_started_with_coreos/pic3.png" border="0" alt="fleetctl">
+</div>
+
+<br/>
+
 
     fleetctl list-machines
     fleetctl start redis.service
@@ -116,7 +141,7 @@ https://github.com/kelseyhightower/confd
 
 <br/>
 
-Еще неплохое видео:
+### Еще неплохое видео по coreos:
 
 http://www.youtube.com/watch?v=wxUxtflalE4
 
