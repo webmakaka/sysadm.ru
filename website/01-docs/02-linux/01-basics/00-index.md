@@ -19,3 +19,6 @@ permalink: /linux/basics/
 ### [Инсталляция Google Chrome](/linux/basics/ubuntu/chrome/)
 
 ### [Unable to locate package *****.so.*](/linux/basics/ubuntu/Install-package-for-missing-libraries/)
+
+
+### [Команды запуска сервисов systemd (systemctl)](/linux/basics/systemctl/)

@@ -57,13 +57,20 @@ Etcd — распределенное Key-Value хранилище, которо
 
 Etcd - похоже на Consul и ZooKeeper. (Лично я ничего из этого пока не знаю).
 
-    etcdctl set /message Hello
-    etcdctl get /message
-    etcdctl mkdir /foo-service
-    etcdctl set /foo-service/container1 localhost:1111
-    etcdctl ls /foo-service
-    etcdctl set /foo "Expiring Soon" --ttl 20
-    etcdctl watch /foo-service --recursive
+    $ etcdctl set /message Hello
+    $ etcdctl get /message
+    $ etcdctl mkdir /foo-service
+    $ etcdctl set /foo-service/container1 localhost:1111
+    $ etcdctl ls /foo-service
+    $ etcdctl set /foo "Expiring Soon" --ttl 20
+    $ etcdctl watch /foo-service --recursive
+
+    $ etcdctl cluster-health
+    member 29dac19a68d1b860 is healthy: got healthy result from http://172.17.8.101:2379
+    member b5e1282b428f7211 is healthy: got healthy result from http://172.17.8.103:2379
+    member ecd0a5d052505a2f is healthy: got healthy result from http://172.17.8.102:2379
+    cluster is healthy
+
 
 
 <br/>
@@ -109,15 +116,47 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
     fleetctl --tunnel=10.2.1.1 list-machines
 
 
+<br/>
+
+
+    $ fleetctl list-machines
+    MACHINE		IP		METADATA
+    20fd3ecb...	172.17.8.102	-
+    89e20c71...	172.17.8.103	-
+    d8ed170f...	172.17.8.101	-
+
+<br/>
+
+    $ fleetctl list-units   
+    UNIT	MACHINE	ACTIVE	SUB
+
+
+    $ ssh-add ~/.vagrant.d/insecure_private_key
+
+    $ fleetctl --tunnel 127.0.0.1:2222 list-machines
+
+
+    $ FLEETCTL_TUNNEL="127.0.0.1:2222"
+
+    $ fleetctl list-machines
+
+
+<br/>
 
 Kubernetes - более продвинутый аналог fleet  
+
+
+### Flannel
 
 flannel - виртуальная сеть, которая предоставляет подсеть, чтобы контейнеры могли между собой обмениваться пакетами. (я так перевел / понял)
 
 
-confd:  
-https://github.com/kelseyhightower/confd
+<br/>
 
+### journalctl
+
+    # journalctl -u hello.service
+    # journalctl -f -u hello.service
 
 <br/>
 
@@ -159,6 +198,9 @@ https://github.com/sysadm-ru/production-docker-ha-architecture
 [Команды (пока разбираемся)](/linux/containers/coreos/commands/)  
 [cloud-config (пока разбираемся)](/linux/containers/coreos/cloud-config/)
 
+
+confd:  
+https://github.com/kelseyhightower/confd
 
 
 <br/><br/>

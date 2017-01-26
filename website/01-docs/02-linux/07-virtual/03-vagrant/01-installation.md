@@ -96,3 +96,72 @@ https://atlas.hashicorp.com/boxes/search
       helloworld.service
       todo-sk@1.service
       todo@1.service
+
+
+
+<br/>      
+
+### Еще команды:
+
+      $ vagrant status
+      Current machine states:
+
+      core-01                   running (virtualbox)
+      core-02                   running (virtualbox)
+      core-03                   running (virtualbox)
+
+  <br/>
+
+      $ vagrant ssh-config
+      Host core-01
+        HostName 127.0.0.1
+        User core
+        Port 2222
+        UserKnownHostsFile /dev/null
+        StrictHostKeyChecking no
+        PasswordAuthentication no
+        IdentityFile /home/marley/.vagrant.d/insecure_private_key
+        IdentitiesOnly yes
+        LogLevel FATAL
+        ForwardAgent yes
+
+      Host core-02
+        HostName 127.0.0.1
+        User core
+        Port 2203
+        UserKnownHostsFile /dev/null
+        StrictHostKeyChecking no
+        PasswordAuthentication no
+        IdentityFile /home/marley/.vagrant.d/insecure_private_key
+        IdentitiesOnly yes
+        LogLevel FATAL
+        ForwardAgent yes
+
+      Host core-03
+        HostName 127.0.0.1
+        User core
+        Port 2207
+        UserKnownHostsFile /dev/null
+        StrictHostKeyChecking no
+        PasswordAuthentication no
+        IdentityFile /home/marley/.vagrant.d/insecure_private_key
+        IdentitiesOnly yes
+        LogLevel FATAL
+        ForwardAgent yes
+
+
+  <br/>
+
+
+
+
+    $ ssh-add ~/.vagrant.d/insecure_private_key
+    Identity added: /home/marley/.vagrant.d/insecure_private_key (/home/marley/.vagrant.d/insecure_private_key)
+
+
+    $ ssh -p 2222 -i ~/.vagrant.d/insecure_private_key
+
+
+  <br/>
+
+      $ ssh core-01

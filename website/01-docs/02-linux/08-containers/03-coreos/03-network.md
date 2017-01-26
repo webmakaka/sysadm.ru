@@ -5,9 +5,7 @@ permalink: /linux/containers/coreos/network/
 ---
 
 
-<br/>
-
-### Настройка сети в CoreOS
+# Настройка сети в CoreOS
 
     $ sudo su -
 
