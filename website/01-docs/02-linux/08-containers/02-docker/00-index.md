@@ -39,11 +39,11 @@ http://www.youtube.com/playlist?list=PLkA60AVN3hh_6cAz8TUGtkYbJSL2bdZ4h
 https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 
-[Docker Registry] (облачный сервис для хранения контейнеров)  
+[Docker Registry (Network Storage For Focker Images)] (облачный сервис для хранения контейнеров)  
 https://hub.docker.com  
 https://quay.io
 
-Можно создать свой. (Насколько я понял):  
+Можно создать свой Registry:  
 https://docs.docker.com/registry/
 
 <br/><br/>
@@ -76,7 +76,7 @@ https://docs.docker.com/registry/
 
 ### Docker Tools
 
-Docker-Compose  
+Docker-Compose (для совместной работы контейнеров)  
 [Docker Machine (для запуска контейнеров в virtualbox, обычно в windows)](/linux/containers/docker/docker-machine/)  
 
 
