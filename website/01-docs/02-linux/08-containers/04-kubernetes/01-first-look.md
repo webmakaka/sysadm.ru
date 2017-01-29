@@ -35,6 +35,8 @@ http://containertutorials.com/get_started_kubernetes/index.html
 Systemd и все такое. Точнее, для 16.04 предется делать как-то по-другому.
 
 
+<br/>
+
     $  lsb_release -a
     No LSB modules are available.
     Distributor ID:	Ubuntu
@@ -54,7 +56,7 @@ Systemd и все такое. Точнее, для 16.04 предется дел
 
     # ssh-keygen -t rsa
 
-     [Enter]
+[Enter]
 
      # cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
@@ -86,6 +88,8 @@ Systemd и все такое. Точнее, для 16.04 предется дел
 
     # cd /opt/kubernetes/1.0.1/cluster/ubuntu/
     # ./build.sh
+
+<br/>
 
     # ls binaries
     kubectl  master  minion
@@ -135,15 +139,20 @@ Systemd и все такое. Точнее, для 16.04 предется дел
 
 ### Create a Wordpress pod example
 
+<br/>
+
     # kubectl run wordpress --image=tutum/wordpress --port=80 --hostport=81
     CONTROLLER   CONTAINER(S)   IMAGE(S)          SELECTOR        REPLICAS
     wordpress    wordpress      tutum/wordpress   run=wordpress   1
 
+<br/>
 
     # kubectl get pods
     NAME              READY     REASON    RESTARTS   AGE
     wordpress-iqi15   1/1       Running   0          57s
 
+
+<br/>
 
     // replication controller
 
@@ -151,6 +160,8 @@ Systemd и все такое. Точнее, для 16.04 предется дел
     CONTROLLER   CONTAINER(S)   IMAGE(S)          SELECTOR        REPLICAS
     wordpress    wordpress      tutum/wordpress   run=wordpress   1
 
+
+<br/>
 
     # docker ps
     CONTAINER ID        IMAGE                                   COMMAND             CREATED              STATUS              PORTS                NAMES

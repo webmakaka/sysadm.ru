@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Kubernetes > Второе знакомство
-permalink: /linux/containers/kubernetes/second-look/
+title: Kubernetes > Устанавливаем локальный кластер
+permalink: /linux/containers/kubernetes/local-cluster/
 ---
 
 
-# Kubernetes > Второе знакомство
+# Kubernetes > Устанавливаем локальный кластер
 
 <br/>
 

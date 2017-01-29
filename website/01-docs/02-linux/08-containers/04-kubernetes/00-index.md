@@ -26,12 +26,22 @@ Kubernetes converts a set of computers into one big one.
 
 <br/>
 
-[Первое знакомство](/linux/containers/kubernetes/first-look/)  
+### Первые попытки установить и запустить локально
+
+[Kubernetes > Первое знакомство](/linux/containers/kubernetes/first-look/)  
 
 
-[Второе знакомство](/linux/containers/kubernetes/second-look/)  
+[Kubernetes > Устанавливаем локальный кластер](/linux/containers/kubernetes/local-cluster/)  
 
 
+<br/>
 
-### Tutorials
+### [O'Reilly] Building Microservice Systems with Docker and Kubernetes [2016, ENG]
+
+[Kubernetes > Building Microservice Systems with Docker and Kubernetes](/linux/containers/kubernetes/Building_Microservice_Systems_with_Docker_and_Kubernetes/)
+
+<br/>
+
+### Tutorials  
+
 http://kubernetes.io/docs/tutorials/

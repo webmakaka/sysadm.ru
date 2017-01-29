@@ -1,28 +1,20 @@
 ---
 layout: page
 title: Native Docker Clustering with swarm
-permalink: /linux/containers/docker/swarm/
+permalink: /linux/containers/docker/swarm/old/
 ---
 
 # Native Docker Clustering with swarm
 
-https://docs.docker.com/swarm/
 
-
-Official Repository:  
-https://hub.docker.com/_/swarm/
-
-
-Видющки:  
+Видюшки:  
 http://www.youtube.com/playlist?list=PLkA60AVN3hh8lmRdhPKzsNJvZxJ8dpj4t
 
 
 
 <br/>
 
-
-
-### Пример из видео, что на первой странице о Docker
+### Пример из видео
 
 
     $ docker-machine create --driver virtualbox dev1
@@ -38,7 +30,7 @@ http://www.youtube.com/playlist?list=PLkA60AVN3hh8lmRdhPKzsNJvZxJ8dpj4t
 
 <br/>
 
-Create a Cluster
+### Create a Cluster
 
     $ sid=$(docker run swarm create)
 
@@ -46,7 +38,9 @@ Create a Cluster
     d3af6d950956757646273019a8792b53
 
 
-Create the Swarm Manager
+<br/>
+
+### Create the Swarm Manager
 
     $ docker-machine create -d virtualbox --swarm --swarm-master --swarm-discovery token://$sid swarm-master
 
@@ -67,7 +61,7 @@ Create the Swarm Manager
 <br/>
 
 
-Create Swarm Nodes
+### Create Swarm Nodes
 
 <br/>
 
@@ -234,7 +228,6 @@ Running Docker Instances with Swarm (explain Spead vs Binpack
     07a6c7bde575        ubuntu              "/bin/bash"         11 seconds ago      Up 8 seconds                            swarm-master/eng2
     5c64c2a5621c        ubuntu              "/bin/bash"         32 seconds ago      Up 30 seconds                           swarm-node-03/eng1
     f0c59feb6763        ubuntu              "/bin/bash"         2 minutes ago       Up 2 minutes                            swarm-node-02/engmgr
-
 
 
 <br/>

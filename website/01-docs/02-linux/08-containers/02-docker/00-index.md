@@ -23,7 +23,7 @@ Offtopic:
 Если копаете, можете помочь с обновлением и добавлением своих знаний.
 
 
-<strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd! По крайней мере на момент попытки запуска мной!</strong>
+<strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd! По крайней мере на момент попытки запуска мной! Сейчас в основном использую Debian</strong>
 
 <br/><br/>
 
@@ -39,7 +39,7 @@ http://www.youtube.com/playlist?list=PLkA60AVN3hh_6cAz8TUGtkYbJSL2bdZ4h
 https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
 
 
-[Docker Registry (Network Storage For Focker Images)] (облачный сервис для хранения контейнеров)  
+[Docker Registry (Network Storage For Docker Images)] (облачный сервис для хранения контейнеров)  
 https://hub.docker.com  
 https://quay.io
 
@@ -94,7 +94,7 @@ Docker-Compose (для совместной работы контейнеров)
 
 
 Лучше использовать docker-compose для линковки контейнеров.
-Для работы с docker-compose нужные версии docker 1.8 и выше.
+Для работы с docker-compose нужные версии docker >= 1.8.
 
 
 [Пример линковки контейнеров для их совместной работы](/linux/containers/docker/linking-containers/manual-linking/)  
