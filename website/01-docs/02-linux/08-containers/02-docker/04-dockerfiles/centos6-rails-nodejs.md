@@ -6,6 +6,13 @@ permalink: /linux/containers/docker/dockerfile/
 
 # Dockerfile для разработки rails и node.js приложений в centos 6
 
+
+В настоящее время, для разработки node.js приложения, я использую контейнеры, которые подготовили разработчики node.js. Если интересно как это запустить, смотрите на jsdev.org
+
+На ruby on rails уже года 2 как ничего не делал.
+
+<br/>
+
     $ vi Dockerfile
 
 <br/>

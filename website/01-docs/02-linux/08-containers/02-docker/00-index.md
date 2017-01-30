@@ -44,7 +44,8 @@ https://hub.docker.com
 https://quay.io
 
 Можно создать свой Registry:  
-https://docs.docker.com/registry/
+https://docs.docker.com/registry/  
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
 
 <br/><br/>
 
@@ -122,13 +123,6 @@ Docker-Compose (для совместной работы контейнеров)
 
 <br/>
 
-### Docker Clustering (нужно заново начинать разбираться)
-
-[Clustering docker with swarm](/linux/containers/docker/swarm/)  
-
-
-<br/>
-
 ### Информация о запущенных контейнерах
 
 [Получить информацию о запущенных Docker контейнерах c помощью sysdig](/linux/containers/docker/sysdig/)  
@@ -141,16 +135,29 @@ Docker-Compose (для совместной работы контейнеров)
 [Переместить файлы Docker](/linux/containers/docker/basics/move-docker-files/)  
 [Перенос форума в контейнеры Docker (В работе)](/linux/containers/docker/odba/)
 
+
+<br/>
+
+### Docker Clustering
+
+[Native Docker Clustering with swarm](/linux/containers/docker/swarm/)  
+
+**Alternatives:**
+
+- Kubernetes
+- Mesosphere
+- Apache Mesos
+
 <br/>
 
 ### Dockerfile
 
-[Мой Dockerfile для разработки rails и node.js приложений в centos 6](/linux/containers/docker/dockerfile/)  
-
+[Мой Dockerfile для разработки rails и node.js приложений в centos 6 (сейчас уже так бы не делал)](/linux/containers/docker/dockerfile/)  
 
 [Простенький Dockerfile для nodejs ](/linux/containers/docker/dockerfile/nodejs/nodejs-simple/)  
 
 [Dockerfile из проекта angular.js v2 для создания контейнера для nodejs ](/linux/containers/docker/dockerfile/nodejs/)  
+
 
 
 
