@@ -9,12 +9,8 @@ permalink: /linux/containers/docker/swarm/
 https://docs.docker.com/swarm/
 
 
-Official Repository:  
+**Official Repository:**  
 https://hub.docker.com/_/swarm/
-
-
-Видюшки:  
-http://www.youtube.com/playlist?list=PLkA60AVN3hh8lmRdhPKzsNJvZxJ8dpj4t
 
 
 <br/>

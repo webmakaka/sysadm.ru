@@ -6,12 +6,6 @@ permalink: /linux/containers/docker/swarm/old/
 
 # Native Docker Clustering with swarm
 
-
-Видюшки:  
-http://www.youtube.com/playlist?list=PLkA60AVN3hh8lmRdhPKzsNJvZxJ8dpj4t
-
-
-
 <br/>
 
 ### Пример из видео
