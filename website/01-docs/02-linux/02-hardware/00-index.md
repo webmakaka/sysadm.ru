@@ -23,15 +23,7 @@ permalink: /linux/hardware/
 
 ### HDD / SSD и другие блочные устройства
 
-[Монтирование hdd](/linux/hardware/hdd/mount-disks/)
-
-[Подключаем диск 8TB в Centos 6.X](/linux/hardware/hdd/seagate/8tb/)
-
-[Попытка исключения использования бэд блоков файловой системой в Ubuntu ](/linux/hardware/hdd/bad-blocks/)
-
-[Transcend 8GB USB MP3 Player работает в режиме только для чтения](/linux/hardware/hdd/transcend-usb-flash-read-only/)
-
-[Ошибка при попытке установить Ubuntu на внешний жесткий диск](/linux/hardware/hdd/partition-may-lead-to-very-poor-performance/)
+[HDD / SSD и другие блочные устройства в Linux](/linux/hardware/hdd/)
 
 
 <br/>
