@@ -11,6 +11,9 @@ permalink: /linux/hardware/hdd/SMART_status_bad_backup_and_replace/
 Но было непонятно о каком диске идеть речь.
 Когда в компьютере 5 дисков и более, не так сразу и разберешься, с какого диска нужно спасать данные.
 
+<br/>
+
+    # apt-get install -y smartmontools
 
 <br/>
 
