@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Native Docker Clustering
+title: Docker Swarm > Native Docker Clustering [2016, ENG]
 permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/
 ---
 
