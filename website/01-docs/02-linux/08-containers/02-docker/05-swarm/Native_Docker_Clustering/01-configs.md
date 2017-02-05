@@ -25,9 +25,11 @@ https://github.com/progrium/busybox
 
 **Dockerfile (progrium/consul)**
 
+Возможно, тоже обновленный вариант:  
+https://github.com/gliderlabs/docker-consul
 
-Походу вот такой dockerfile, но у меня он не собрался, т.к. минимум ссылки на консул протухли.
 
+Походу вот такой dockerfile используется, но у меня он не собрался.
 
     FROM 		progrium/busybox
     MAINTAINER 	Jeff Lindsay <progrium@gmail.com>
