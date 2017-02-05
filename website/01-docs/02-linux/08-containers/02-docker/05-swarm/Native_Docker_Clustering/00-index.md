@@ -30,7 +30,7 @@ https://hub.docker.com/r/progrium/consul/
 <br/>
 
 
-**Dockerfile**
+**Dockerfile (progrium/consul)**
 
     FROM 		progrium/busybox
     MAINTAINER 	Jeff Lindsay <progrium@gmail.com>
@@ -62,10 +62,16 @@ https://hub.docker.com/r/progrium/consul/
     CMD []
 
 
-
 <br/>
 <br/>
 
+**Dockerfile (gliderlabs/registrator) хз, не искал**
+
+**Dockerfile (progrium/busybox) хз, не искал**
+
+
+<br/>
+<br/>
 
 <ul>
     <li>

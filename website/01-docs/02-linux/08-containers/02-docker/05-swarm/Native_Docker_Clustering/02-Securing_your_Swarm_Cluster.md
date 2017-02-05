@@ -23,12 +23,6 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 
 <br/>
 
-    <!-- **core 07**
-
-    $ vagrant ssh core-07
-
-    $ sudo su - -->
-
     # openssl genrsa -out ca-key.pem 2048
 
     # openssl req -config /usr/lib/ssl/openssl.cnf -new -key ca-key.pem -x509 -days 1825 -out ca-cert.pem
@@ -186,16 +180,22 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 
 ### START NEW CONSUL SERVERS
 
-	MANAGER1
+<br/>
+
+MANAGER1
 
 	# docker -H tcp://manager1:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -d -h consul1 --name consul1 -v /mnt:/data     -p 10.0.1.5:8300:8300     -p 10.0.1.5:8301:8301     -p 10.0.1.5:8301:8301/udp     -p 10.0.1.5:8302:8302     -p 10.0.1.5:8302:8302/udp     -p 10.0.1.5:8400:8400     -p 10.0.1.5:8500:8500     -p 172.17.0.1:53:53/udp     progrium/consul -server -advertise 10.0.1.5 -join 10.0.2.5
 
 
-	MANAGER2
+<br/>
+
+MANAGER2
 
 	# docker -H tcp://manager2:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -d -h consul2 --name consul2 -v /mnt:/data     -p 10.0.2.5:8300:8300     -p 10.0.2.5:8301:8301     -p 10.0.2.5:8301:8301/udp     -p 10.0.2.5:8302:8302     -p 10.0.2.5:8302:8302/udp     -p 10.0.2.5:8400:8400     -p 10.0.2.5:8500:8500     -p 172.17.0.1:53:53/udp     progrium/consul -server -advertise 10.0.1.5 -join 10.0.1.5
 
-	MANAGER3
+<br/>
+
+MANAGER3
 
 	# docker -H tcp://manager3:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -d -h consul3 --name consul3 -v /mnt:/data     -p 10.0.3.5:8300:8300     -p 10.0.3.5:8301:8301     -p 10.0.3.5:8301:8301/udp     -p 10.0.3.5:8302:8302     -p 10.0.3.5:8302:8302/udp     -p 10.0.3.5:8400:8400     -p 10.0.3.5:8500:8500     -p 172.17.0.1:53:53/udp     progrium/consul -server -advertise 10.0.1.5 -join 10.0.1.5
 
@@ -207,78 +207,98 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 
 ### START CONSUL CLIENTS
 
-	NODE1
+<br/>
 
-		# docker -H tcp://node1:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -d -h consul-agt1 --name consul-agt1 \
-		-p 8300:8300 \
-		-p 8301:8301 -p 8301:8301/udp \
-		-p 8302:8302 -p 8302:8302/udp \
-		-p 8400:8400 \
-		-p 8500:8500 \
-		-p 8600:8600/udp \
-		progrium/consul -rejoin -advertise 10.0.4.5 -join 10.0.1.5
+NODE1
 
-	NODE2
+	# docker -H tcp://node1:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -d -h consul-agt1 --name consul-agt1 \
+	-p 8300:8300 \
+	-p 8301:8301 -p 8301:8301/udp \
+	-p 8302:8302 -p 8302:8302/udp \
+	-p 8400:8400 \
+	-p 8500:8500 \
+	-p 8600:8600/udp \
+	progrium/consul -rejoin -advertise 10.0.4.5 -join 10.0.1.5
 
-		# docker -H tcp://node2:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -d -h consul-agt2 --name consul-agt2 \
-		-p 8300:8300 \
-		-p 8301:8301 -p 8301:8301/udp \
-		-p 8302:8302 -p 8302:8302/udp \
-		-p 8400:8400 \
-		-p 8500:8500 \
-		-p 8600:8600/udp \
-		progrium/consul -rejoin -advertise 10.0.5.5 -join 10.0.1.5
 
-	NODE3
+<br/>
 
-		# docker -H tcp://node3:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -d -h consul-agt3 --name consul-agt3 \
-		-p 8300:8300 \
-		-p 8301:8301 -p 8301:8301/udp \
-		-p 8302:8302 -p 8302:8302/udp \
-		-p 8400:8400 \
-		-p 8500:8500 \
-		-p 8600:8600/udp \
-		progrium/consul -rejoin -advertise 10.0.6.5 -join 10.0.1.5
+NODE2
+
+	# docker -H tcp://node2:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -d -h consul-agt2 --name consul-agt2 \
+	-p 8300:8300 \
+	-p 8301:8301 -p 8301:8301/udp \
+	-p 8302:8302 -p 8302:8302/udp \
+	-p 8400:8400 \
+	-p 8500:8500 \
+	-p 8600:8600/udp \
+	progrium/consul -rejoin -advertise 10.0.5.5 -join 10.0.1.5
+
+<br/>
+
+NODE3
+
+	# docker -H tcp://node3:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -d -h consul-agt3 --name consul-agt3 \
+	-p 8300:8300 \
+	-p 8301:8301 -p 8301:8301/udp \
+	-p 8302:8302 -p 8302:8302/udp \
+	-p 8400:8400 \
+	-p 8500:8500 \
+	-p 8600:8600/udp \
+	progrium/consul -rejoin -advertise 10.0.6.5 -join 10.0.1.5
 
 
 <br/>
 
 ### START SWARM MANAGERS
 
-	MNAGER1
+<br/>
 
-		# docker -H tcp://manager1:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -h mgr1 --name mgr1 -d -p 3376:2376 -v /home/ubuntu/.docker:/certs:ro swarm manage --tlsverify --tlscacert=/certs/ca.pem --tlscert=/certs/cert.pem --tlskey=/certs/key.pem --host=0.0.0.0:2376 --replication --advertise 10.0.1.5:2376 consul://10.0.1.5:8500/
+MNAGER1
 
-	MANAGER2
+	# docker -H tcp://manager1:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -h mgr1 --name mgr1 -d -p 3376:2376 -v /home/ubuntu/.docker:/certs:ro swarm manage --tlsverify --tlscacert=/certs/ca.pem --tlscert=/certs/cert.pem --tlskey=/certs/key.pem --host=0.0.0.0:2376 --replication --advertise 10.0.1.5:2376 consul://10.0.1.5:8500/
 
-		# docker -H tcp://manager2:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -h mgr2 --name mgr2 -d -p 3376:2376 -v /home/ubuntu/.docker:/certs:ro swarm manage --tlsverify --tlscacert=/certs/ca.pem --tlscert=/certs/cert.pem --tlskey=/certs/key.pem --host=0.0.0.0:2376 --replication --advertise 10.0.2.5:2376 consul://10.0.2.5:8500/
+<br/>
 
-	MANAGER3
+MANAGER2
 
-		# docker -H tcp://manager3:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -h mgr3 --name mgr3 -d -p 3376:2376 -v /home/ubuntu/.docker:/certs:ro swarm manage --tlsverify --tlscacert=/certs/ca.pem --tlscert=/certs/cert.pem --tlskey=/certs/key.pem --host=0.0.0.0:2376 --replication --advertise 10.0.3.5:2376 consul://10.0.3.5:8500/
+	# docker -H tcp://manager2:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -h mgr2 --name mgr2 -d -p 3376:2376 -v /home/ubuntu/.docker:/certs:ro swarm manage --tlsverify --tlscacert=/certs/ca.pem --tlscert=/certs/cert.pem --tlskey=/certs/key.pem --host=0.0.0.0:2376 --replication --advertise 10.0.2.5:2376 consul://10.0.2.5:8500/
+
+
+<br/>
+
+MANAGER3
+
+	# docker -H tcp://manager3:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run --restart=unless-stopped -h mgr3 --name mgr3 -d -p 3376:2376 -v /home/ubuntu/.docker:/certs:ro swarm manage --tlsverify --tlscacert=/certs/ca.pem --tlscert=/certs/cert.pem --tlskey=/certs/key.pem --host=0.0.0.0:2376 --replication --advertise 10.0.3.5:2376 consul://10.0.3.5:8500/
 
 <br/>
 
 ### START SWARM JOIN CONTAIENRS ON EACH NODE
 
-	NODE1
+<br/>
 
-		# docker -H tcp://node1:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run -d -h join --name join swarm join --advertise=10.0.4.5:2376 consul://10.0.4.5:8500/
+NODE1
 
-	NODE2
+	# docker -H tcp://node1:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run -d -h join --name join swarm join --advertise=10.0.4.5:2376 consul://10.0.4.5:8500/
 
-		# docker -H tcp://node2:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run -d -h join --name join swarm join --advertise=10.0.5.5:2376 consul://10.0.5.5:8500/
+<br/>
 
-	NODE3
+NODE2
 
-		# docker -H tcp://node3:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run -d -h join --name join swarm join --advertise=10.0.6.5:2376 consul://10.0.6.5:8500/
+	# docker -H tcp://node2:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run -d -h join --name join swarm join --advertise=10.0.5.5:2376 consul://10.0.5.5:8500/
+
+<br/>
+
+NODE3
+
+	# docker -H tcp://node3:2376 --tlsverify --tlscacert=/home/ubuntu/.docker/ca.pem --tlscert=/home/ubuntu/.docker/cert.pem --tlskey=/home/ubuntu/.docker/key.pem run -d -h join --name join swarm join --advertise=10.0.6.5:2376 consul://10.0.6.5:8500/
 
 
 
 <br/>
 
 
-    **client**
+**Client**
 
     $ export DOCKER_HOST=manager1:3376
     $ docker version
@@ -291,3 +311,37 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 
     $ docker version
     (получаем данные о клиенте и сервере)
+
+
+<br/>
+
+### Filtering and Scheduling
+
+    $ docker run -dit ubuntu /bin/bash
+    $ docker run -dit ubuntu /bin/bash
+    $ docker run -dit ubuntu /bin/bash
+
+    $ docker ps
+
+    $ for i in {1..30}; do /bin/bash -c "docker run -dit ubuntu /bin/bash"; done
+
+
+
+<br/>
+
+**Scheduling with RAM Reservations**
+
+    $ docker run -d -m 900m nginx
+    $ docker run -d -m 900m nginx
+
+    $ docker info
+
+
+<br/>
+
+**Affinity Filters**
+
+    $ docker run -d --name c1 nginx
+    $ docker run -d --name c2 -e affinity:container==c1 nginx
+
+    $ docker run -d --name c3 -e affinity:container!=c1 nginx

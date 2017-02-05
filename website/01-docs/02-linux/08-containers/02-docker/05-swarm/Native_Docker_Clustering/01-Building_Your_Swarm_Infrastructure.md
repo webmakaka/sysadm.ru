@@ -21,7 +21,6 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Building_Your
 https://github.com/sysadm-ru/Native-Docker-Clustering
 
 
-
 <br/>
 
     $ vagrant up
@@ -31,17 +30,10 @@ https://github.com/sysadm-ru/Native-Docker-Clustering
 
 **Инсталляция python 2 в coreos**
 
-
 https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-coreos.sh
-
 
 172.17.0.1 - ip адрес docker интерфейса на хостовой машине.
 
-10.0.2.5 - NAT от VirtualBox. Трудозатратно поменять этот адрес. (по крайней мере длям меня сейчас).
-
-Поэтому одна машина с адресом 10.0.2.5 - работать не будет. Ну или настроит можно как-то с помощью File --> Preferences --> Network --> Добавить с нужным адресом. Потом в настройкам виртуальной машины выбрать не Nat а NatLocal или как-то так.
-
-В любом случае у меня не заработало, т.к. при изменении, vagran перестает работать с виртуальрной машиной по ssh. (Или как-то так).
 
 <br/>
 
@@ -50,65 +42,72 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
 
 <br/>
 
+**CORE 01**
+
     $ vagrant ssh core-01
 
     $ docker run --restart=unless-stopped -d -h consul1 --name consul1 -v /mnt:/data \
-    -p 10.0.1.5:8300:8300 \
-    -p 10.0.1.5:8301:8301 \
-    -p 10.0.1.5:8301:8301/udp \
-    -p 10.0.1.5:8302:8302 \
-    -p 10.0.1.5:8302:8302/udp \
-    -p 10.0.1.5:8400:8400 \
-    -p 10.0.1.5:8500:8500 \
+    -p 10.0.11.5:8300:8300 \
+    -p 10.0.11.5:8301:8301 \
+    -p 10.0.11.5:8301:8301/udp \
+    -p 10.0.11.5:8302:8302 \
+    -p 10.0.11.5:8302:8302/udp \
+    -p 10.0.11.5:8400:8400 \
+    -p 10.0.11.5:8500:8500 \
     -p 172.17.0.1:53:53/udp \
-    progrium/consul -server -advertise 10.0.1.5 -bootstrap-expect 3
+    progrium/consul -server -advertise 10.0.11.5 -bootstrap-expect 3
 
 
 <br/>
 
+**CORE 02**
 
     $ vagrant ssh core-02
 
     $ docker run --restart=unless-stopped -d -h consul2 --name consul2 -v /mnt:/data  \
-    -p 10.0.2.5:8300:8300 \
-    -p 10.0.2.5:8301:8301 \
-    -p 10.0.2.5:8301:8301/udp \
-    -p 10.0.2.5:8302:8302 \
-    -p 10.0.2.5:8302:8302/udp \
-    -p 10.0.2.5:8400:8400 \
-    -p 10.0.2.5:8500:8500 \
+    -p 10.0.12.5:8300:8300 \
+    -p 10.0.12.5:8301:8301 \
+    -p 10.0.12.5:8301:8301/udp \
+    -p 10.0.12.5:8302:8302 \
+    -p 10.0.12.5:8302:8302/udp \
+    -p 10.0.12.5:8400:8400 \
+    -p 10.0.12.5:8500:8500 \
     -p 172.17.0.1:53:53/udp \
-    progrium/consul -server -advertise 10.0.2.5 -join 10.0.1.5
+    progrium/consul -server -advertise 10.0.12.5 -join 10.0.11.5
 
 
 <br/>
 
+**CORE 03**
 
     $ vagrant ssh core-03
 
     $ docker run --restart=unless-stopped -d -h consul3 --name consul3 -v /mnt:/data  \
-    -p 10.0.3.5:8300:8300 \
-    -p 10.0.3.5:8301:8301 \
-    -p 10.0.3.5:8301:8301/udp \
-    -p 10.0.3.5:8302:8302 \
-    -p 10.0.3.5:8302:8302/udp \
-    -p 10.0.3.5:8400:8400 \
-    -p 10.0.3.5:8500:8500 \
+    -p 10.0.13.5:8300:8300 \
+    -p 10.0.13.5:8301:8301 \
+    -p 10.0.13.5:8301:8301/udp \
+    -p 10.0.13.5:8302:8302 \
+    -p 10.0.13.5:8302:8302/udp \
+    -p 10.0.13.5:8400:8400 \
+    -p 10.0.13.5:8500:8500 \
     -p 172.17.0.1:53:53/udp \
-    progrium/consul -server -advertise 10.0.3.5 -join 10.0.1.5
+    progrium/consul -server -advertise 10.0.13.5 -join 10.0.11.5
 
 <br/>
+
+**CORE 01**
+
 <br/>
 
-    core@core-01 ~ $ docker exec -it consul1 bash
+    $ docker exec -it consul1 bash
 
 <br/>
 
     bash-4.3# consul members
-    Node     Address        Status  Type    Build  Protocol  DC
-    consul1  10.0.1.5:8301  alive   server  0.5.2  2         dc1
-    consul2  10.0.2.5:8301  alive   server  0.5.2  2         dc1
-    consul3  10.0.3.5:8301  alive   server  0.5.2  2         dc1
+    Node     Address         Status  Type    Build  Protocol  DC
+    consul1  10.0.11.5:8301  alive   server  0.5.2  2         dc1
+    consul2  10.0.12.5:8301  alive   server  0.5.2  2         dc1
+    consul3  10.0.13.5:8301  alive   server  0.5.2  2         dc1
 
 
 
@@ -119,17 +118,17 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
 
     **core 01**
 
-    $ docker run --restart=unless-stopped -h mgr1 --name mgr1 -d -p 3375:2375 swarm manage --replication --advertise 10.0.1.5:3375 consul://10.0.1.5:8500/
+    $ docker run --restart=unless-stopped -h mgr1 --name mgr1 -d -p 3375:2375 swarm manage --replication --advertise 10.0.11.5:3375 consul://10.0.11.5:8500/
 
 
     **core 02**
 
-    $ docker run --restart=unless-stopped -h mgr2 --name mgr2 -d -p 3375:2375 swarm manage --replication --advertise 10.0.2.5:3375 consul://10.0.2.5:8500/
+    $ docker run --restart=unless-stopped -h mgr2 --name mgr2 -d -p 3375:2375 swarm manage --replication --advertise 10.0.12.5:3375 consul://10.0.12.5:8500/
 
 
     **core 03**
 
-    $ docker run --restart=unless-stopped -h mgr3 --name mgr3 -d -p 3375:2375 swarm manage --replication --advertise 10.0.3.5:3375 consul://10.0.3.5:8500/
+    $ docker run --restart=unless-stopped -h mgr3 --name mgr3 -d -p 3375:2375 swarm manage --replication --advertise 10.0.13.5:3375 consul://10.0.13.5:8500/
 
 
 <br/>
@@ -159,7 +158,7 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
     -p 8400:8400 \
     -p 8500:8500 \
     -p 8600:8600/udp \
-    progrium/consul -rejoin -advertise 10.0.4.5 -join 10.0.1.5
+    progrium/consul -rejoin -advertise 10.0.14.5 -join 10.0.11.5
 
 
 <br/>
@@ -175,7 +174,7 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
     -p 8400:8400 \
     -p 8500:8500 \
     -p 8600:8600/udp \
-    progrium/consul -rejoin -advertise 10.0.5.5 -join 10.0.1.5
+    progrium/consul -rejoin -advertise 10.0.15.5 -join 10.0.11.5
 
 
 <br/>
@@ -191,7 +190,7 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
     -p 8400:8400 \
     -p 8500:8500 \
     -p 8600:8600/udp \
-    progrium/consul -rejoin -advertise 10.0.6.5 -join 10.0.1.5
+    progrium/consul -rejoin -advertise 10.0.16.5 -join 10.0.11.5
 
 
 <br/>
@@ -201,59 +200,67 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
 
     **core 04**
 
-    $ docker run -d swarm join --advertise=10.0.4.5:2375 consul://10.0.4.5:8500/
+    $ docker run -d swarm join --advertise=10.0.14.5:2375 consul://10.0.14.5:8500/
 
 
     **core 05**
 
-    $ docker run -d swarm join --advertise=10.0.5.5:2375 consul://10.0.5.5:8500/
+    $ docker run -d swarm join --advertise=10.0.15.5:2375 consul://10.0.15.5:8500/
 
 
     **core 06**
 
-    $ docker run -d swarm join --advertise=10.0.6.5:2375 consul://10.0.6.5:8500/
+    $ docker run -d swarm join --advertise=10.0.16.5:2375 consul://10.0.16.5:8500/
 
 <br/>
 
-    # consul members
-    Node         Address        Status  Type    Build  Protocol  DC
-    consul-agt3  10.0.6.5:8301  alive   client  0.5.2  2         dc1
-    consul1      10.0.1.5:8301  alive   server  0.5.2  2         dc1
-    consul3      10.0.3.5:8301  alive   server  0.5.2  2         dc1
-    consul2      10.0.2.5:8301  failed  server  0.5.2  2         dc1
-    consul-agt1  10.0.4.5:8301  alive   client  0.5.2  2         dc1
-    consul-agt2  10.0.5.5:8301  alive   client  0.5.2  2         dc1
+**CORE 01**
+
+<br/>
+
+    $ docker exec -it consul1 bash
+
+<br/>
+
+    bash-4.3# consul members
+    Node         Address         Status  Type    Build  Protocol  DC
+    consul-agt1  10.0.14.5:8301  alive   client  0.5.2  2         dc1
+    consul-agt2  10.0.15.5:8301  alive   client  0.5.2  2         dc1
+    consul-agt3  10.0.16.5:8301  alive   client  0.5.2  2         dc1
+    consul1      10.0.11.5:8301  alive   server  0.5.2  2         dc1
+    consul2      10.0.12.5:8301  alive   server  0.5.2  2         dc1
+    consul3      10.0.13.5:8301  alive   server  0.5.2  2         dc1
 
 
 
 <br/>
 
-    $ curl http://10.0.3.5:8500/v1/catalog/nodes | python -m json.tool
+    $ curl http://10.0.13.5:8500/v1/catalog/nodes | python -m json.tool
 
 
     [
         {
-            "Address": "10.0.4.5",
+            "Address": "10.0.14.5",
             "Node": "consul-agt1"
         },
         {
-            "Address": "10.0.5.5",
+            "Address": "10.0.15.5",
             "Node": "consul-agt2"
         },
         {
-            "Address": "10.0.6.5",
+            "Address": "10.0.16.5",
             "Node": "consul-agt3"
         },
         {
-            "Address": "10.0.1.5",
+            "Address": "10.0.11.5",
             "Node": "consul1"
         },
         {
-            "Address": "10.0.2.5",
+            "Address": "10.0.12.5",
             "Node": "consul2"
         },
         {
-            "Address": "10.0.3.5",
+            "Address": "10.0.13.5",
             "Node": "consul3"
         }
     ]
@@ -261,14 +268,14 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
 
 <br/>
 
-    На всех:
+**На всех:**
 
-    $ docker run -d --name registrator -h registrator -v /var/run/docker.sock:/tmp/docker.sock gliderlabs/registrator:latest consul://10.0.1.5:8500
+    $ docker run -d --name registrator -h registrator -v /var/run/docker.sock:/tmp/docker.sock gliderlabs/registrator:latest consul://10.0.11.5:8500
 
 
 <br/>
 
-    $ curl http://10.0.3.5:8500/v1/catalog/services | python -m json.tool
+    $ curl http://10.0.13.5:8500/v1/catalog/services | python -m json.tool
 
 
     {
@@ -292,13 +299,14 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
     }
 
 
+
 <br/>
 
-    $ curl http://10.0.3.5:8500/v1/catalog/service/swarm | python -m json.tool
+    $ curl http://10.0.13.5:8500/v1/catalog/service/swarm | python -m json.tool
 
     [
         {
-            "Address": "10.0.1.5",
+            "Address": "10.0.11.5",
             "Node": "consul1",
             "ServiceAddress": "",
             "ServiceID": "registrator:mgr1:2375",
@@ -307,7 +315,7 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
             "ServiceTags": null
         },
         {
-            "Address": "10.0.1.5",
+            "Address": "10.0.11.5",
             "Node": "consul1",
             "ServiceAddress": "",
             "ServiceID": "registrator:mgr2:2375",
@@ -316,7 +324,7 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
             "ServiceTags": null
         },
         {
-            "Address": "10.0.1.5",
+            "Address": "10.0.11.5",
             "Node": "consul1",
             "ServiceAddress": "",
             "ServiceID": "registrator:mgr3:2375",
@@ -328,17 +336,18 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
 
 
 
+
 <br/>
 
-    core 04
+**CORE 04**
 
     $ docker run -d --name web1 -p 80:80 nginx
 
 <br/>
 
-    $ curl http://10.0.3.5:8500/v1/catalog/services | python -m json.tool
+**CORE 01**
 
-        должен появиться nginx
+    $ curl http://10.0.13.5:8500/v1/catalog/services | python -m json.tool
 
     {
         "consul": [],
@@ -362,4 +371,13 @@ https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-core
     }
 
 
-Пока хз что да как но работает.
+Чего сделали? Чего добились? ХЗ  
+Чего с этим дерьмом делать то?
+
+Наверное нужно настроить security, потом подключиться клиентом к ноде менеджеру и тогда будет все работать.
+
+<br/>
+
+    $ docker run swarm list consul://10.0.11.5
+    2017/02/05 06:36:23 Get http://10.0.11.5/v1/kv/docker/swarm/nodes?consistent=: dial tcp 10.0.11.5:80: getsockopt: connection refused
+    time="2017-02-05T06:36:23Z" level=info msg="Initializing discovery without TLS"

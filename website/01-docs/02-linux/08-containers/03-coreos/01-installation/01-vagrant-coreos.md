@@ -5,7 +5,7 @@ permalink: /linux/containers/coreos/installation/vagrant-coreos/
 ---
 
 
-### Инсталляция CoreOS с помощью Vargrant
+# Инсталляция CoreOS с помощью Vargrant
 
 VirtualBox и Git должны быть установлены.
 

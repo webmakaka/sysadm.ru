@@ -24,5 +24,3 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
 [06 etcd And etcdctl](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/etcd_And_etcdctl/)
 
 [07 Troubleshooting CoreOS Services](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/Troubleshooting_CoreOS_Services/)
-
-[08 Toolbox](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/Toolbox/)

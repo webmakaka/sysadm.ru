@@ -13,6 +13,14 @@ https://docs.docker.com/swarm/
 https://hub.docker.com/_/swarm/
 
 
+
+<br/>
+
+### Docker Swarm первый взгляд (на смомом деле нет)
+
+[здесь](/linux/containers/docker/swarm/first-look/)
+
+
 <br/>
 
 ### Docker Swarm: Native Docker Clustering [2016, ENG]
@@ -21,6 +29,6 @@ https://hub.docker.com/_/swarm/
 
 <br/>
 
-### Какие-то старые записи по Docker Swarm (нужно разобрать как-нибудь)
+### Какие-то старые записи по Docker Swarm (скорее всего устаревшие)
 
 [здесь](/linux/containers/docker/swarm/old/)

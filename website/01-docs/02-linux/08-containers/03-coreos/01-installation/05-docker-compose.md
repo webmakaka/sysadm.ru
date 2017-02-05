@@ -5,7 +5,7 @@ permalink: /linux/containers/coreos/installation/docker-compose/
 ---
 
 
-### Инсталляция Docker Compose на CoreOS
+# Инсталляция Docker Compose на CoreOS
 
     $ sudo su -
 

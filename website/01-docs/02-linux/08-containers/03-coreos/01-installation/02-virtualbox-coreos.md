@@ -5,9 +5,7 @@ permalink: /linux/containers/coreos/installation/virtualbox-coreos/
 ---
 
 
-<br/>
-
-### Подготовка виртуального жесткого диска virtualbox с coreos
+# Подготовка виртуального жесткого диска virtualbox с coreos
 
 Создаю каталог, где будет все это добро храниться.
 

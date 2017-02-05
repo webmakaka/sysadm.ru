@@ -21,6 +21,11 @@ permalink: /linux/containers/coreos/
 
 [Инсталляция Docker Compose на CoreOS](/linux/containers/coreos/installation/docker-compose/)
 
+
+[Инсталляция Python на CoreOS](https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-coreos.sh)
+
+[TOOLBOX](/linux/containers/coreos/toolbox/)
+
 <br/>
 
 ### Network
