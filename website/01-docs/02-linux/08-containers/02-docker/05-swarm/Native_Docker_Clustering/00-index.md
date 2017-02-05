@@ -6,6 +6,13 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/
 
 # Docker Swarm: Native Docker Clustering [2016, ENG]
 
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/docker/swarm/native-docker-clustering/pic1.png" border="0" alt="Native Docker Clustering">
+</div>
+
+<br/>
 
 https://github.com/progrium/busybox
 

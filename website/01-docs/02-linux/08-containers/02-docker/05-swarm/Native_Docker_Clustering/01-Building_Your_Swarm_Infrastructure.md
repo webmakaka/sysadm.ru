@@ -7,6 +7,14 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Building_Your
 # Docker Swarm: Native Docker Clustering [2016, ENG] > Module 4: Building your Swarm Infrastructure
 
 
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/docker/swarm/native-docker-clustering/pic2.png" border="0" alt="Native Docker Clustering">
+</div>
+
+<br/>
+
 
 **Файлы для старта виртуальных машин с coreos**
 
@@ -23,8 +31,17 @@ https://github.com/sysadm-ru/Native-Docker-Clustering
 
 **Инсталляция python 2 в coreos**
 
-https://raw.githubusercontent.com/ziozzang/python-on-coreos/master/install-python-on-coreos.sh
 
+https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-coreos.sh
+
+
+172.17.0.1 - ip адрес docker интерфейса на хостовой машине.
+
+10.0.2.5 - NAT от VirtualBox. Трудозатратно поменять этот адрес. (по крайней мере длям меня сейчас).
+
+Поэтому одна машина с адресом 10.0.2.5 - работать не будет. Ну или настроит можно как-то с помощью File --> Preferences --> Network --> Добавить с нужным адресом. Потом в настройкам виртуальной машины выбрать не Nat а NatLocal или как-то так.
+
+В любом случае у меня не заработало, т.к. при изменении, vagran перестает работать с виртуальрной машиной по ssh. (Или как-то так).
 
 <br/>
 
