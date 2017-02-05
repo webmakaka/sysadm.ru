@@ -13,13 +13,6 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Building_Your
     <img src="//files.sysadm.ru/img/linux/containers/docker/swarm/native-docker-clustering/pic2.png" border="0" alt="Native Docker Clustering">
 </div>
 
-<br/>
-
-
-**Файлы для старта виртуальных машин с coreos**
-
-https://github.com/sysadm-ru/Native-Docker-Clustering
-
 
 <br/>
 

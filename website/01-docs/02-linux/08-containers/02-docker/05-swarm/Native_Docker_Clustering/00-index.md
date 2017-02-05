@@ -8,87 +8,39 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/
 
 <br/>
 
+Вот такую схему собираем:
+
+<br/>
+
 <div align="center">
     <img src="//files.sysadm.ru/img/linux/containers/docker/swarm/native-docker-clustering/pic1.png" border="0" alt="Native Docker Clustering">
 </div>
 
 <br/>
 
-https://github.com/progrium/busybox
 
-https://hub.docker.com/r/progrium/consul/
-
-
-
-
-**Dockerfile (gliderlabs/registrator)**
-
-https://github.com/gliderlabs/registrator
-
-
-
-**Dockerfile (progrium/busybox)**
-
-https://github.com/progrium/busybox
-
+В курсе используется consul. Исходники контейнеров можно попытаться восстоздать. В курсе они не приводятся.
 
 <br/>
 
 
-**Dockerfile (progrium/consul)**
+Я использую vagrant для старта сразу нескольких виртуальных машин virtualbox с coreos внутри.
 
 
-Походу вот такой dockerfile, но у меня он не собрался, т.к. минимум ссылки на консул протухли.
+**Файлы для старта виртуальных машин с coreos**
 
-
-    FROM 		progrium/busybox
-    MAINTAINER 	Jeff Lindsay <progrium@gmail.com>
-
-    ADD https://dl.bintray.com/mitchellh/consul/0.4.0_linux_amd64.zip /tmp/consul.zip
-    RUN cd /bin && unzip /tmp/consul.zip && chmod +x /bin/consul && rm /tmp/consul.zip
-
-    ADD https://dl.bintray.com/mitchellh/consul/0.4.0_web_ui.zip /tmp/webui.zip
-    RUN cd /tmp && unzip /tmp/webui.zip && mv dist /ui && rm /tmp/webui.zip
-
-    ADD https://get.docker.io/builds/Linux/x86_64/docker-1.2.0 /bin/docker
-    RUN chmod +x /bin/docker
-
-    RUN opkg-install curl bash
-
-    ADD ./config /config/
-    ONBUILD ADD ./config /config/
-
-    ADD ./start /bin/start
-    ADD ./check-http /bin/check-http
-    ADD ./check-cmd /bin/check-cmd
-
-    EXPOSE 8300 8301 8301/udp 8302 8302/udp 8400 8500 53/udp
-    VOLUME ["/data"]
-
-    ENV SHELL /bin/bash
-
-    ENTRYPOINT ["/bin/start"]
-    CMD []
+https://github.com/sysadm-ru/Native-Docker-Clustering
 
 <br/>
 
-Можно заменить:
+Шаг по настройке security не звершил. Без этого шага ничего не работает. Содрежимое контейнеров и как они работают, пока не разобрался.
 
-    https://releases.hashicorp.com/consul/0.7.3/consul_0.7.3_linux_amd64.zip
-
-    https://releases.hashicorp.com/consul/0.7.3/consul_0.7.3_web_ui.zip
-
-    RUN cd /tmp && mkdir dist && unzip /tmp/webui.zip -d dist && mv dist /ui && rm /tmp/webui.zip
-
-    https://get.docker.com/builds/Linux/x86_64/docker-1.10.3
-
-    Но вот, что за config, start, check-http, heck-cmd можно посмотреть внутри контейнера progrium/consul.
-
-
-<br/>
 <br/>
 
 <ul>
+    <li>
+        <a href="/linux/containers/docker/swarm/Native_Docker_Clustering/configs/">Configs</a>
+    </li>
     <li>
         <a href="/linux/containers/docker/swarm/Native_Docker_Clustering/Building_Your_Swarm_Infrastructure/">Module 4: Building your Swarm Infrastructure</a>
     </li>

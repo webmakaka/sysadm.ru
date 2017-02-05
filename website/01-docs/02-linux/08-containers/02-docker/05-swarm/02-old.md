@@ -1,16 +1,15 @@
 ---
 layout: page
-title: First Look Native Docker Clustering [2015, ENG]
+title: Какие-то старые записи по Docker Swarm (устаревшие, позде будут выпилены)
 permalink: /linux/containers/docker/swarm/old/
 ---
 
-# First Look: Native Docker Clustering [2015, ENG]
+# Какие-то старые записи по Docker Swarm (устаревшие, позде будут выпилены)
 
+
+### strategy
 
 **strategy random**
-
-убили swarm процесс
-
 
     swarm manage token://<token> -H 0.0.0.0:4243 --strategy random &
 

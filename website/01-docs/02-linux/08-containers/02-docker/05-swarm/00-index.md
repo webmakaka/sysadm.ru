@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Native Docker Clustering with swarm
+title: Docker Swarm
 permalink: /linux/containers/docker/swarm/
 ---
 
-# Native Docker Clustering with swarm
+# Docker Swarm
 
 https://docs.docker.com/swarm/
 
@@ -29,6 +29,6 @@ https://hub.docker.com/_/swarm/
 
 <br/>
 
-### Какие-то старые записи по Docker Swarm (скорее всего устаревшие)
+### Какие-то старые записи по Docker Swarm (устаревшие, позде будут выпилены)
 
 [здесь](/linux/containers/docker/swarm/old/)
