@@ -140,7 +140,7 @@ Docker-Compose (для совместной работы контейнеров)
 
 ### Docker Clustering
 
-[Native Docker Clustering with swarm](/linux/containers/docker/swarm/)  
+[Docker Swarm](/linux/containers/docker/swarm/)  
 
 **Alternatives:**
 
@@ -152,21 +152,14 @@ Docker-Compose (для совместной работы контейнеров)
 
 ### Dockerfile
 
-[Мой Dockerfile для разработки rails и node.js приложений в centos 6 (сейчас уже так бы не делал)](/linux/containers/docker/dockerfile/)  
-
-[Простенький Dockerfile для nodejs ](/linux/containers/docker/dockerfile/nodejs/nodejs-simple/)  
-
-[Dockerfile из проекта angular.js v2 для создания контейнера для nodejs ](/linux/containers/docker/dockerfile/nodejs/)  
-
-
-
+[здесь)](/linux/containers/docker/dockerfile/)  
 
 
 <br/>
 
 ### Примеры конфигов работы с Docker
 
-[Pluralsight - Docker for Web Developers](https://github.com/sysadm-ru/Docker-for-Web-Developers)
+[Docker for Web Developers (видеокурс)](https://github.com/sysadm-ru/Docker-for-Web-Developers)
 
 ___
 

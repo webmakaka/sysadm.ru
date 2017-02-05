@@ -1,11 +1,10 @@
 ---
 layout: page
 title: Docker Swarm первый взгляд
-permalink: /linux/containers/docker/swarm/old/
+permalink: /linux/containers/docker/swarm/first-look/
 ---
 
 # Docker Swarm первый взгляд
-
 
 https://docs.docker.com/engine/swarm/swarm-tutorial/
 
@@ -85,9 +84,13 @@ https://github.com/sysadm-ru/Native-Docker-Clustering
     $ docker service create --replicas 1 --name helloworld alpine ping docker.com
     cm8hegviha1ip8kp6wq4nqa9o
 
+<br/>
+
     $ docker service ls
     ID            NAME        REPLICAS  IMAGE   COMMAND
     cm8hegviha1i  helloworld  1/1       alpine  ping docker.com
+
+<br/>
 
     $ docker service inspect --pretty helloworld
     ID:		cm8hegviha1ip8kp6wq4nqa9o
@@ -103,16 +106,18 @@ https://github.com/sysadm-ru/Native-Docker-Clustering
      Args:		ping docker.com
     Resources:
 
+<br/>
 
 
     $ docker service ps helloworld
     ID                         NAME          IMAGE   NODE     DESIRED STATE  CURRENT STATE          ERROR
     04nksqarbn1vx3e5sqmfl5h1d  helloworld.1  alpine  core-01  Running        Running 2 minutes ago  
 
-
+<br/>
 
     $ docker service scale helloworld=5
 
+<br/>
 
     $ docker service ps helloworld
     ID                         NAME          IMAGE   NODE     DESIRED STATE  CURRENT STATE           ERROR

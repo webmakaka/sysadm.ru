@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Dockerfile для разработки rails и node.js приложений в centos 6
-permalink: /linux/containers/docker/dockerfile/
+permalink: /linux/containers/docker/dockerfile/my-dockerfile-for-rails-and-nodejs/
 ---
 
 # Dockerfile для разработки rails и node.js приложений в centos 6
@@ -140,7 +140,7 @@ permalink: /linux/containers/docker/dockerfile/
     CMD ["/bin/bash"]
 
 
-
+<br/>
 
 Создать image с удалением промежуточных контейнеров в случае успешного билда  
 

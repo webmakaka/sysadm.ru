@@ -16,21 +16,30 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/
 
 https://github.com/progrium/busybox
 
-
 https://hub.docker.com/r/progrium/consul/
 
 
-Походу вот такой dockerfile, но у меня он не собрался, т.к. минимум ссылки на консул протухли.
 
 
-<br/>
+**Dockerfile (gliderlabs/registrator)**
 
-    $ vi Dockerfile
+https://github.com/gliderlabs/registrator
+
+
+
+**Dockerfile (progrium/busybox)**
+
+https://github.com/progrium/busybox
+
 
 <br/>
 
 
 **Dockerfile (progrium/consul)**
+
+
+Походу вот такой dockerfile, но у меня он не собрался, т.к. минимум ссылки на консул протухли.
+
 
     FROM 		progrium/busybox
     MAINTAINER 	Jeff Lindsay <progrium@gmail.com>
@@ -61,13 +70,19 @@ https://hub.docker.com/r/progrium/consul/
     ENTRYPOINT ["/bin/start"]
     CMD []
 
-
-<br/>
 <br/>
 
-**Dockerfile (gliderlabs/registrator) хз, не искал**
+Можно заменить:
 
-**Dockerfile (progrium/busybox) хз, не искал**
+    https://releases.hashicorp.com/consul/0.7.3/consul_0.7.3_linux_amd64.zip
+
+    https://releases.hashicorp.com/consul/0.7.3/consul_0.7.3_web_ui.zip
+
+    RUN cd /tmp && mkdir dist && unzip /tmp/webui.zip -d dist && mv dist /ui && rm /tmp/webui.zip
+
+    https://get.docker.com/builds/Linux/x86_64/docker-1.10.3
+
+    Но вот, что за config, start, check-http, heck-cmd можно посмотреть внутри контейнера progrium/consul.
 
 
 <br/>

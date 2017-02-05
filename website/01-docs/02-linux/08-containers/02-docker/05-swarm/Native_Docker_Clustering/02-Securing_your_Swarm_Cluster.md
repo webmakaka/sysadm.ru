@@ -18,6 +18,14 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 
 Я пока не собираюсь глубоко разбираться в security. Тут и до security непоняного много.
 
+Да похоже хрен там, без секьюрити вообще ничего работать не будет.
+
+Нужно добавить еще 2 ноды.
+
+1 - центр сертификации  
+2 - клиент
+
+<br/>
 
 ### CREATE CA
 
@@ -26,7 +34,6 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
     # openssl genrsa -out ca-key.pem 2048
 
     # openssl req -config /usr/lib/ssl/openssl.cnf -new -key ca-key.pem -x509 -days 1825 -out ca-cert.pem
-
 
 
 <br/>
@@ -64,6 +71,7 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 	# openssl x509 -req -days 365 -in node3.csr -CA ca-cert.pem -CAkey ca-key.pem -CAcreateserial -out node3-cert.pem -extfile extfile.cnf
 
 
+<br/>
 
 ### CREATE CLIENT KEYS
 
@@ -90,6 +98,8 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
     # scp ./ca-cert.pem ubuntu@manager1:/home/ubuntu/.docker/ca.pem
 
 
+<br/>
+
 **Manager1**
 
     scp -i eu-west-1-key.pem ./ca-cert.pem ubuntu@manager1:/home/ubuntu/.docker/ca.pem
@@ -98,6 +108,8 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 
 	scp -i eu-west-1-key.pem ./manager1-key.pem ubuntu@manager1:/home/ubuntu/.docker/key.pem
 
+
+<br/>
 
 **Manager2**
 
@@ -109,6 +121,8 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 	scp -i eu-west-1-key.pem ./manager2-key.pem ubuntu@manager2:/home/ubuntu/.docker/key.pem
 
 
+<br/>
+
 **Manager3**    
 
 	scp -i eu-west-1-key.pem ./ca-cert.pem ubuntu@manager3:/home/ubuntu/.docker/ca.pem
@@ -117,6 +131,8 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 
 	scp -i eu-west-1-key.pem ./manager3-key.pem ubuntu@manager3:/home/ubuntu/.docker/key.pem
 
+
+<br/>
 
 **Node1**      
 
@@ -127,6 +143,8 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 	scp -i eu-west-1-key.pem ./node1-key.pem ubuntu@node1:/home/ubuntu/.docker/key.pem
 
 
+<br/>
+
 **Node2**      
 
 	scp -i eu-west-1-key.pem ./ca-cert.pem ubuntu@node2:/home/ubuntu/.docker/ca.pem
@@ -136,6 +154,8 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 	scp -i eu-west-1-key.pem ./node2-key.pem ubuntu@node2:/home/ubuntu/.docker/key.pem
 
 
+<br/>
+
 **Node3**  
 
     scp -i eu-west-1-key.pem ./ca-cert.pem ubuntu@node3:/home/ubuntu/.docker/ca.pem
@@ -144,6 +164,8 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 
 	scp -i eu-west-1-key.pem ./node3-key.pem ubuntu@node3:/home/ubuntu/.docker/key.pem
 
+
+<br/>
 
 **Client**
 
