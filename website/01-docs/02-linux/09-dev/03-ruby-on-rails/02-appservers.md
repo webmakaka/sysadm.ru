@@ -5,8 +5,6 @@ permalink: /linux/dev/ruby-on-rails/app-servers/
 ---
 
 
-<br/>
-
 # Сервера приложений для Ruby on Rails проектов:
 
 

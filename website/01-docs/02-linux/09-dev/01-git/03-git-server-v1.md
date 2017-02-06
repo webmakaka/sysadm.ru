@@ -4,7 +4,9 @@ title: Создание сервера GIT в centos 6
 permalink: /linux/dev/git/git-server/centos/6/ver1/
 ---
 
-# Server
+# Создание сервера GIT в centos 6
+
+### Server
 
     # yum install -y git
 

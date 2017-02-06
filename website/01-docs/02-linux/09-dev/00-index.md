@@ -1,12 +1,17 @@
 ---
 layout: page
-title: Программирование в Linux для Web
+title: Программирование в Linux
 permalink: /linux/dev/
 ---
 
+# Программирование в Linux
 
-### Программирование в Linux для Web
+### [Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/editors/)
 
-### [Node.js](/linux/dev/nodejs/)
+### [GIT](/linux/dev/git/)
 
-### [Ruby on Rails](/linux/dev/ruby-on-rails/)
+### [JAVA](//javadev.org/development-tools/jdk/installation/)
+
+### [Программирование в Linux на GO](/linux/dev/go/)
+
+### [Программирование для Web (Ruby on Rails, Node.JS)](/linux/dev/web/)

@@ -4,7 +4,7 @@ title: Инсталляция Ruby on Rails в Centos 6.X
 permalink: /linux/dev/ruby-on-rails/installation/centos/6.X/
 ---
 
-### Инсталляция Ruby on Rails в Centos
+# Инсталляция Ruby on Rails в Centos
 
 Пишу то к чему пришел. Из разных вариантов инсталляции, данный мне видится более предпочтительным. Впрочем я не особо занимаюсь этой технологией.
 

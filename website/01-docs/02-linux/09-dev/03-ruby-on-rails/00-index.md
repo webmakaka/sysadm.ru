@@ -5,7 +5,7 @@ permalink: /linux/dev/ruby-on-rails/
 ---
 
 
-<br/>
+# Программирование в Linux на Ruby on Rails
 
 
 ### [Инсталляция Ruby on Rails в Centos 6.X](/linux/dev/ruby-on-rails/installation/centos/6.X/)

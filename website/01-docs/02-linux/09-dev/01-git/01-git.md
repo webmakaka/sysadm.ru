@@ -5,7 +5,7 @@ permalink: /linux/dev/git/installation/centos/6/
 ---
 
 
-### Инсталляция GIT в centos 6.x из исходников
+# Инсталляция GIT в centos 6.x из исходников
 
 
 Если git из стандартных репозиториев не устраивает. Например не пушит на github.

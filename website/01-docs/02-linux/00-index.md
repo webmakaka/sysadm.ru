@@ -58,13 +58,7 @@ ______
 
 # Программирование:
 
-### [GIT](/linux/dev/git/)
 
-### [JAVA](//javadev.org/development-tools/jdk/installation/)
-
-### [Программирование для Web](/linux/dev/)
-
-### [Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/editors/)
 
 
 

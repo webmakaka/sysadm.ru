@@ -5,7 +5,7 @@ permalink: /linux/dev/ruby-on-rails/additionals/
 ---
 
 
-<br/>
+# Какая-то херня осталась от предыдущих копаний
 
 
 ### MySQL
