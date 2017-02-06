@@ -85,6 +85,9 @@ Docker-Compose (для совместной работы контейнеров)
 
 ### Docker NetWorking (Не особо и нужно. Но возможность такая есть)
 
+https://docs.docker.com/engine/userguide/networking/
+
+
 [Настройка моста для работы с Docker в Ubuntu](/linux/containers/docker/networking/ubuntu-bridge/)  
 [Задание параметров сетевых интерфейсов docker в Ubuntu (IP, gateway, etc.)](/linux/containers/docker/networking/ubuntu-bridge/bridge-my-version/)  
 
@@ -99,7 +102,6 @@ Docker-Compose (для совместной работы контейнеров)
 
 
 [Пример линковки контейнеров для их совместной работы](/linux/containers/docker/linking-containers/manual-linking/)  
-
 
 [Docker-Compose (Инсталляция Docker-Compose в Ubuntu 14.04) ](/linux/containers/docker/toosl/docker-compose/installation/)  
 [Линковка Docker контейнеров с помощью Docker Compose](/linux/containers/docker/linking-containers/docker-compose/)
