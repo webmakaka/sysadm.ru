@@ -96,3 +96,12 @@ permalink: /linux/dev/git/commands/
 ###  Отменить сделанные изменения (все данные потеряются)
 
     $ git reset --hard
+
+
+<br/>
+
+###  Добавить изменения в мастер ветку
+
+    $ git checkout master
+    $ git merge my_new_branch
+    $ git branch -D my_new_branch
