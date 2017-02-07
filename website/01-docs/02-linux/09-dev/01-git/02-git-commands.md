@@ -10,7 +10,7 @@ permalink: /linux/dev/git/commands/
 // Задать парамеры идентификации git
 
     $ git config my_nick_name
-    $ git config user.email "my_email@sysadm.ru"
+    $ git config user.email "my_email@myEmail.ru"
 
 
 <br/>
@@ -18,7 +18,7 @@ permalink: /linux/dev/git/commands/
 // Задать парамеры идентификации git глобально (лучше использовать локально, когда много git проектов с разными пользователями)
 
     $ git config --global my_nick_name
-    $ git config --global user.email "my_email@sysadm.ru"
+    $ git config --global user.email "my_email@myEmail.ru"
 
 
 <br/>
