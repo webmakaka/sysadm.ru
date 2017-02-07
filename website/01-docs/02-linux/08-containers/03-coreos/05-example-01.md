@@ -149,6 +149,8 @@ https://discovery.etcd.io/new?size=6
 
     $ curl 10.0.11.5:8080
 
+Все ок. получил контент от сервера баз данных.
+
 
 <br/>
 
@@ -191,7 +193,7 @@ https://discovery.etcd.io/new?size=6
 
     $ docker login
 
-Ранее в веб интерфейсе созданю репо.
+Ранее в веб интерфейсе создано репо.
 
     $ docker push marley/coreos-app
 
@@ -312,6 +314,9 @@ https://discovery.etcd.io/new?size=6
 
     $ curl 10.0.15.5:3000
 
+
+Все ок. получил контент приложения от вебсервера
+
 <br/>
 
 ### Proxy
@@ -352,7 +357,7 @@ export HOST_IP=${HOST_IP:-10.0.15.5}
 
     $ docker login
 
-Ранее в веб интерфейсе созданю репо.
+Ранее в веб интерфейсе создано репо.
 
     $ docker push marley/coreos-nginx
 
