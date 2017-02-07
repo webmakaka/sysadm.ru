@@ -110,6 +110,7 @@ Global=true
     http://172.17.8.103/
 
 
+Тоже самое, только на 80 порту а не на 3000
 
 <div align="center">
     <img src="//files.sysadm.ru/img/linux/containers/coreos/app7.png" border="0" alt="coreos cluster">
