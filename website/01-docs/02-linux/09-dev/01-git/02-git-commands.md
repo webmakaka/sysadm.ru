@@ -83,12 +83,12 @@ permalink: /linux/dev/git/commands/
 
 // Создать новый бранч
 
-    $ git checkout -b feature_SUZ-812
+    $ git checkout -b my_new_branch
 
 
 // Отправить этот бранч на удаленный git сервер
 
-    $ git push -u origin feature_SUZ-812
+    $ git push -u origin my_new_branch
 
 
 <br/>
