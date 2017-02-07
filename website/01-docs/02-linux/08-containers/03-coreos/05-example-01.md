@@ -315,7 +315,49 @@ https://discovery.etcd.io/new?size=6
     $ curl 10.0.15.5:3000
 
 
-Все ок. получил контент приложения от вебсервера
+Все ок. получил контент приложения от вебсервера.
+
+Скорее всего на этом шаге ошибка!  
+В etcd дожна быть запись /services/todo/todo-%i, а ее нет.
+
+    $ etcdctl ls --recursive
+    /coreos.com
+    /coreos.com/updateengine
+    /coreos.com/updateengine/rebootlock
+    /coreos.com/updateengine/rebootlock/semaphore
+    /coreos.com/network
+    /coreos.com/network/config
+    /coreos.com/network/subnets
+    /coreos.com/network/subnets/10.1.30.0-24
+    /coreos.com/network/subnets/10.1.57.0-24
+    /coreos.com/network/subnets/10.1.65.0-24
+    /coreos.com/network/subnets/10.1.2.0-24
+    /coreos.com/network/subnets/10.1.61.0-24
+    /coreos.com/network/subnets/10.1.84.0-24
+    /services
+    /services/rethinkdb
+    /services/rethinkdb/rethinkdb-1
+    /services/rethinkdb/rethinkdb-2
+    /services/todo
+
+
+    $ echo ${COREOS_PUBLIC_IPV4}
+    10.0.11.5
+
+    $ echo $(docker inspect --format=\'\' todo-%i);
+    Error: No such image, container or task: todo-%i
+    []
+
+
+Похоже, нужно запускать на машине, где запущен контейнер с именем todo-%i  
+И подобрать команду для получения порта контейнера с сервисом по имени todo-%i  
+
+Может???
+
+    $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}" todo-4
+
+
+Чего-то всеравно не видно, где бы это дальше использовалось.
 
 <br/>
 
