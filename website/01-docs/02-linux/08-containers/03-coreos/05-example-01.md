@@ -1,24 +1,54 @@
 ---
 layout: page
-title: CoreOS > Example 01
+title: Пример запуска coreos кластера с контейнерами docker, приложением, базой данных и прокси сервером
 permalink: /linux/containers/coreos/example/01/
 ---
 
 
-# CoreOS > Example 01
+# Пример запуска coreos кластера с контейнерами docker, приложением, базой данных и прокси сервером
+
+
+PS. Исходники с Dockerfile, можно взять здесь:
+
+https://github.com/sysadm-ru/Introduction_To_CoreOS
+
+
+Они могу понадобиться, если захочется собрать собственные контейнеры или просто посмотреть примеры.
+
+
+<br/>
+
+**Для запуска примеров нужно:**
+
+
+1) Установить virtualbox
+2) Установить vagrant
+
+
+<br/>
 
 **Vagrantfile и user-data**
+
+
+Скопировать файлы:
+
 
 https://github.com/sysadm-ru/Native-Docker-Clustering
 
 <br/>
+
+Перейти в каталог со скачанными файлами:
+
+<br/>
+
+Сгенерировать ключ:
 
 https://discovery.etcd.io/new?size=7
 
 
     $ vi user-data
 
-Заменяю сгенерированным ключом.
+Заменить сгенерированным ключом.
 
     discovery: https://discovery.etcd.io/89e341b6012e47d7e6654eea7b882418
 
