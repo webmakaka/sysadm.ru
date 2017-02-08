@@ -124,6 +124,12 @@ https://discovery.etcd.io/new?size=7
 
 **Что возвращается:**
 
+    $ cat /etc/environment
+    COREOS_PUBLIC_IPV4=10.0.11.5
+    COREOS_PRIVATE_IPV4=10.0.11.5
+
+<br/>
+
     $ echo $(/usr/bin/etcdctl ls /services/rethinkdb |               \
     >          xargs -I {} /usr/bin/etcdctl get {} |                 \
     >          sed s/^/"--join "/ | sed s/$/":29015"/ |              \
@@ -573,3 +579,11 @@ https://discovery.etcd.io/new?size=7
 </div>
 
 <br/>
+
+
+
+### Что не сделано!
+
+1) Нужен ssh между нодами, чтобы он настраивался где-нибудь в конфигах а не руками.
+
+2)
