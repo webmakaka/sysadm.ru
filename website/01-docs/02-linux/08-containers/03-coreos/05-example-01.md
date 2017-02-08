@@ -7,6 +7,7 @@ permalink: /linux/containers/coreos/example/01/
 
 # Пример запуска coreos кластера с контейнерами docker, приложением, базой данных и прокси сервером
 
+<br/>
 
 PS. Исходники с Dockerfile, можно взять здесь:
 
@@ -21,23 +22,25 @@ https://github.com/sysadm-ru/Introduction_To_CoreOS
 **Для запуска примеров нужно:**
 
 
-1) Установить virtualbox
+1) Установить virtualbox  
 2) Установить vagrant
 
 
 <br/>
 
-**Vagrantfile и user-data**
+### Vagrantfile и user-data
 
 
 Скопировать файлы:
-
 
 https://github.com/sysadm-ru/Native-Docker-Clustering
 
 <br/>
 
-Перейти в каталог со скачанными файлами:
+    $ cd ~
+    $ git clone https://github.com/sysadm-ru/Native-Docker-Clustering
+    $ cd Native-Docker-Clustering
+
 
 <br/>
 
