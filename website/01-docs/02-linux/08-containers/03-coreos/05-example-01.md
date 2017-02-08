@@ -13,7 +13,7 @@ https://github.com/sysadm-ru/Native-Docker-Clustering
 
 <br/>
 
-https://discovery.etcd.io/new?size=6
+https://discovery.etcd.io/new?size=7
 
 
     $ vi user-data
@@ -43,6 +43,7 @@ https://discovery.etcd.io/new?size=6
     core-04                   running (virtualbox)
     core-05                   running (virtualbox)
     core-06                   running (virtualbox)
+    core-07                   running (virtualbox)
 
 
 <br/>
@@ -121,6 +122,18 @@ https://discovery.etcd.io/new?size=6
 
 <br/>
 
+**Что возвращается:**
+
+    $ echo $(/usr/bin/etcdctl ls /services/rethinkdb |               \
+    >          xargs -I {} /usr/bin/etcdctl get {} |                 \
+    >          sed s/^/"--join "/ | sed s/$/":29015"/ |              \
+    >          tr "\n" " ")
+    --join 10.0.13.5:29015 --join 10.0.15.5:29015
+
+
+
+<br/>
+
     $ fleetctl submit *
 
     $ fleetctl list-unit-files
@@ -131,54 +144,79 @@ https://discovery.etcd.io/new?size=6
 
 <br/>
 
-    $ fleetctl start rethinkdb@1 rethinkdb-announce@1
-    $ fleetctl start rethinkdb@2 rethinkdb-announce@2
+    $ fleetctl start rethinkdb@6 rethinkdb-announce@6
+    $ fleetctl start rethinkdb@7 rethinkdb-announce@7
 
 
 <br/>
 
     $ fleetctl list-units
     UNIT				MACHINE			ACTIVE	SUB
-    rethinkdb-announce@1.service	047ef507.../10.0.11.5	active	running
-    rethinkdb-announce@2.service	104a924a.../10.0.12.5	active	running
-    rethinkdb@1.service		047ef507.../10.0.11.5	active	running
-    rethinkdb@2.service		104a924a.../10.0.12.5	active	running
+    rethinkdb-announce@6.service	09e7fca1.../10.0.13.5	active	running
+    rethinkdb-announce@7.service	16d2848f.../10.0.15.5	active	running
+    rethinkdb@6.service		09e7fca1.../10.0.13.5	active	running
+    rethinkdb@7.service		16d2848f.../10.0.15.5	active	running
+
 
 
 <br/>
 
-    $ curl 10.0.11.5:8080
+    $ curl 10.0.15.5:8080
 
 Все ок. получил контент от сервера баз данных.
 
 
 <br/>
 
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/example/01/pic1.png" border="0" alt="coreos cluster example">
+</div>
+
+<br/>
+
+    $ etcdctl ls --recursive
+
+    ***
+
+    /services
+    /services/rethinkdb
+    /services/rethinkdb/rethinkdb-7
+    /services/rethinkdb/rethinkdb-6
+
+
+
+<br/>
+
 ### Web Сервера
 
+    $ etcdctl get /services/rethinkdb/rethinkdb-6
+    10.0.13.5
 
-    $ etcdctl get /services/rethinkdb/rethinkdb-1
-    10.0.11.5
+    $ etcdctl get /services/rethinkdb/rethinkdb-7
+    10.0.15.5
 
-    $ etcdctl get /services/rethinkdb/rethinkdb-2
-    10.0.12.5
 
 <br/>
 
 
     $ cd /tmp/
     $ git clone --depth=1 https://github.com/sysadm-ru/Introduction_To_CoreOS
-    $ cd Introduction_To_CoreOS/Chapter\ 5/todo-angular-express/
+    $ cd Introduction_To_CoreOS/Chapter5/todo-angular-express/
 
 <br/>
 
-В файле config.js
+    $ vi config.js
 
-'172.17.8.101' меняю на '10.0.11.5'    
+'172.17.8.101' меняю на '10.0.15.5'    
 
 <br/>
 
-    $ docker build --rm -t marley/coreos-app .
+10.0.15.5 - любой coreos хост с etcd, который предоставит информацию о подключении к базе. Разумеется, лучше потом какую-нибудь DNS запись для этого использовать.
+
+
+<br/>
+
+    $ docker build --rm -t marley/coreos-nodejs-web-app .
 
 
 <br/>
@@ -195,7 +233,7 @@ https://discovery.etcd.io/new?size=6
 
 Ранее в веб интерфейсе создано репо.
 
-    $ docker push marley/coreos-app
+    $ docker push marley/coreos-nodejs-web-app
 
 <br/>
 
@@ -222,12 +260,12 @@ https://discovery.etcd.io/new?size=6
     TimeoutStartSec=0
     ExecStartPre=-/usr/bin/docker kill %p-%i
     ExecStartPre=-/usr/bin/docker rm %p-%i
-    ExecStartPre=/usr/bin/docker pull marley/coreos-app
+    ExecStartPre=/usr/bin/docker pull marley/coreos-nodejs-web-app
     ExecStart=/usr/bin/docker run --name %p-%i \
           -h %H \
           -p ${COREOS_PUBLIC_IPV4}:3000:3000 \
           -e INSTANCE=%p-%i \
-          marley/coreos-app
+          marley/coreos-nodejs-web-app
     ExecStop=-/usr/bin/docker kill %p-%i
     ExecStop=-/usr/bin/docker rm %p-%i
 
@@ -257,7 +295,7 @@ https://discovery.etcd.io/new?size=6
     TimeoutStartSec=0
     ExecStart=/bin/bash -c '\
     while true; do \
-     port=$(docker inspect --format=\'\' todo-%i); \
+     port=$(docker inspect --format=\'{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}\' todo-%i); \
      curl -sf ${COREOS_PUBLIC_IPV4}:$port/ > /dev/null 2>&1; \
      if [ $? -eq 0 ]; then \
        etcdctl set /services/todo/todo-%i ${COREOS_PUBLIC_IPV4}:$port --ttl 10; \
@@ -275,6 +313,14 @@ https://discovery.etcd.io/new?size=6
 
 <br/>
 
+Следующая команда должна будет возвращать порт на котором работает вебсервер.
+
+    $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}" todo-4
+    3000
+
+
+<br/>
+
     $ fleetctl submit todo*
 
 
@@ -283,87 +329,101 @@ https://discovery.etcd.io/new?size=6
     $ fleetctl list-unit-files
     UNIT				HASH	DSTATE		STATE		TARGET
     rethinkdb-announce@.service	3f7611a	inactive	inactive	-
-    rethinkdb-announce@1.service	3f7611a	launched	launched	047ef507.../10.0.11.5
-    rethinkdb-announce@2.service	3f7611a	launched	launched	104a924a.../10.0.12.5
+    rethinkdb-announce@6.service	3f7611a	launched	launched	09e7fca1.../10.0.13.5
+    rethinkdb-announce@7.service	3f7611a	launched	launched	16d2848f.../10.0.15.5
     rethinkdb@.service		96c6e09	inactive	inactive	-
-    rethinkdb@1.service		96c6e09	launched	launched	047ef507.../10.0.11.5
-    rethinkdb@2.service		96c6e09	launched	launched	104a924a.../10.0.12.5
+    rethinkdb@6.service		96c6e09	launched	launched	09e7fca1.../10.0.13.5
+    rethinkdb@7.service		96c6e09	launched	launched	16d2848f.../10.0.15.5
     todo-sk@.service		64bb9b6	inactive	inactive	-
-    todo@.service			2372aa6	inactive	inactive	-
+    todo@.service			3dc7e5b	inactive	inactive	-
+
 
 
 <br/>
 
-    $ fleetctl start todo@{3..4} todo-sk@{3..4}
+    $ fleetctl start todo@{3..5} todo-sk@{3..5}
 
 <br/>
 
     $ fleetctl list-units
     UNIT				MACHINE			ACTIVE	SUB
-    rethinkdb-announce@1.service	047ef507.../10.0.11.5	active	running
-    rethinkdb-announce@2.service	104a924a.../10.0.12.5	active	running
-    rethinkdb@1.service		047ef507.../10.0.11.5	active	running
-    rethinkdb@2.service		104a924a.../10.0.12.5	active	running
-    todo-sk@3.service		3c89f9a9.../10.0.15.5	active	running
-    todo-sk@4.service		2ccc7711.../10.0.14.5	active	running
-    todo@3.service			3c89f9a9.../10.0.15.5	active	running
-    todo@4.service			2ccc7711.../10.0.14.5	active	running
+    rethinkdb-announce@6.service	09e7fca1.../10.0.13.5	active	running
+    rethinkdb-announce@7.service	16d2848f.../10.0.15.5	active	running
+    rethinkdb@6.service		09e7fca1.../10.0.13.5	active	running
+    rethinkdb@7.service		16d2848f.../10.0.15.5	active	running
+    todo-sk@3.service		72720a60.../10.0.17.5	active	running
+    todo-sk@4.service		56b7dcad.../10.0.14.5	active	running
+    todo-sk@5.service		b420d775.../10.0.11.5	active	running
+    todo@3.service			72720a60.../10.0.17.5	active	running
+    todo@4.service			56b7dcad.../10.0.14.5	active	running
+    todo@5.service			b420d775.../10.0.11.5	active	running
 
 
 <br/>
 
-    $ curl 10.0.15.5:3000
-
+    $ curl 10.0.17.5:3000
 
 Все ок. получил контент приложения от вебсервера.
 
-Скорее всего на этом шаге ошибка!  
-В etcd дожна быть запись /services/todo/todo-%i, а ее нет.
-
-    $ etcdctl ls --recursive
-    /coreos.com
-    /coreos.com/updateengine
-    /coreos.com/updateengine/rebootlock
-    /coreos.com/updateengine/rebootlock/semaphore
-    /coreos.com/network
-    /coreos.com/network/config
-    /coreos.com/network/subnets
-    /coreos.com/network/subnets/10.1.30.0-24
-    /coreos.com/network/subnets/10.1.57.0-24
-    /coreos.com/network/subnets/10.1.65.0-24
-    /coreos.com/network/subnets/10.1.2.0-24
-    /coreos.com/network/subnets/10.1.61.0-24
-    /coreos.com/network/subnets/10.1.84.0-24
-    /services
-    /services/rethinkdb
-    /services/rethinkdb/rethinkdb-1
-    /services/rethinkdb/rethinkdb-2
-    /services/todo
-
-
-    $ echo ${COREOS_PUBLIC_IPV4}
-    10.0.11.5
-
-    $ echo $(docker inspect --format=\'\' todo-%i);
-    Error: No such image, container or task: todo-%i
-    []
-
-
-Похоже, нужно запускать на машине, где запущен контейнер с именем todo-%i  
-И подобрать команду для получения порта контейнера с сервисом по имени todo-%i  
-
-Может???
-
-    $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}" todo-4
-
-
-Чего-то всеравно не видно, где бы это дальше использовалось.
 
 <br/>
 
-### Proxy
+    $ etcdctl ls --recursive
 
-    $ cd /tmp/Introduction_To_CoreOS/Chapter\ 5/nginx-proxy/
+    ***
+
+    /services
+    /services/rethinkdb
+    /services/rethinkdb/rethinkdb-6
+    /services/rethinkdb/rethinkdb-7
+    /services/todo
+    /services/todo/todo-3
+    /services/todo/todo-4
+    /services/todo/todo-5
+
+
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/example/01/pic2.png" border="0" alt="coreos cluster example">
+</div>
+
+<br/>
+
+
+**На самом деле, с первого раза ничего не запустилось**
+
+
+Пришлось искать что это за виртуалка на которой располагается данный сервис.  
+
+Номер, виртуалки не совпадал.  
+
+
+    // логи
+
+    $ fleetctl journal -f --lines=50 todo@3
+    $ fleetctl journal -f --lines=50 todo-sk@3
+
+
+Пришлось не только перестартовывать, но и удалять конфиги, удалять docker images руками.
+
+<br/>
+
+    $ fleetctl stop todo@{3..5} todo-sk@{3..5}
+    $ fleetctl unload todo@{3..5} todo-sk@{3..5}
+    $ fleetctl destroy todo@{3..5} todo-sk@{3..5}
+    $ fleetctl destroy todo@.service
+    $ fleetctl destroy todo-sk@.service
+
+
+И далее повторять все с начала.
+
+
+<br/>
+
+### Proxy Nginx
+
+    $ cd /tmp/Introduction_To_CoreOS/Chapter5/nginx-proxy/
 
 <br/>
 
@@ -371,11 +431,13 @@ https://discovery.etcd.io/new?size=6
 
 заменил
 
-export HOST_IP=${HOST_IP:-172.17.8.101}
+    export HOST_IP=${HOST_IP:-172.17.8.101}
 
 на
 
-export HOST_IP=${HOST_IP:-10.0.15.5}
+    export HOST_IP=${HOST_IP:-10.0.15.5}
+
+10.0.15.5 - любой coreos хост с etcd
 
 
 <br/>
@@ -451,19 +513,21 @@ export HOST_IP=${HOST_IP:-10.0.15.5}
 
     $ fleetctl list-unit-files
     UNIT				HASH	DSTATE		STATE		TARGET
-    nginx.service			c3f2a9b	inactive	-		global
+    nginx.service			111d636	inactive	-		global
     rethinkdb-announce@.service	3f7611a	inactive	inactive	-
-    rethinkdb-announce@1.service	3f7611a	launched	launched	047ef507.../10.0.11.5
-    rethinkdb-announce@2.service	3f7611a	launched	launched	104a924a.../10.0.12.5
+    rethinkdb-announce@6.service	3f7611a	launched	launched	09e7fca1.../10.0.13.5
+    rethinkdb-announce@7.service	3f7611a	launched	launched	16d2848f.../10.0.15.5
     rethinkdb@.service		96c6e09	inactive	inactive	-
-    rethinkdb@1.service		96c6e09	launched	launched	047ef507.../10.0.11.5
-    rethinkdb@2.service		96c6e09	launched	launched	104a924a.../10.0.12.5
-    todo-sk@.service		64bb9b6	inactive	inactive	-
-    todo-sk@3.service		64bb9b6	launched	launched	3c89f9a9.../10.0.15.5
-    todo-sk@4.service		64bb9b6	launched	launched	2ccc7711.../10.0.14.5
-    todo@.service			2372aa6	inactive	inactive	-
-    todo@3.service			2372aa6	launched	launched	3c89f9a9.../10.0.15.5
-    todo@4.service			2372aa6	launched	launched	2ccc7711.../10.0.14.5
+    rethinkdb@6.service		96c6e09	launched	launched	09e7fca1.../10.0.13.5
+    rethinkdb@7.service		96c6e09	launched	launched	16d2848f.../10.0.15.5
+    todo-sk@.service		e8b8fa1	inactive	inactive	-
+    todo-sk@3.service		e8b8fa1	launched	launched	b420d775.../10.0.11.5
+    todo-sk@4.service		e8b8fa1	launched	launched	72720a60.../10.0.17.5
+    todo-sk@5.service		e8b8fa1	launched	launched	56b7dcad.../10.0.14.5
+    todo@.service			b6473ba	inactive	inactive	-
+    todo@3.service			b6473ba	launched	launched	b420d775.../10.0.11.5
+    todo@4.service			b6473ba	launched	launched	72720a60.../10.0.17.5
+    todo@5.service			b6473ba	launched	launched	56b7dcad.../10.0.14.5
 
 
 
@@ -474,8 +538,38 @@ export HOST_IP=${HOST_IP:-10.0.15.5}
 <br/>
 
     $ fleetctl list-units
+    UNIT				MACHINE			ACTIVE	SUB
+    nginx.service			09e7fca1.../10.0.13.5	active	running
+    nginx.service			16d2848f.../10.0.15.5	active	running
+    nginx.service			56b7dcad.../10.0.14.5	active	running
+    nginx.service			72720a60.../10.0.17.5	active	running
+    nginx.service			b420d775.../10.0.11.5	active	running
+    nginx.service			e5b75cfb.../10.0.12.5	active	running
+    nginx.service			f8083379.../10.0.16.5	active	running
+    rethinkdb-announce@6.service	09e7fca1.../10.0.13.5	active	running
+    rethinkdb-announce@7.service	16d2848f.../10.0.15.5	active	running
+    rethinkdb@6.service		09e7fca1.../10.0.13.5	active	running
+    rethinkdb@7.service		16d2848f.../10.0.15.5	active	running
+    todo-sk@3.service		b420d775.../10.0.11.5	active	running
+    todo-sk@4.service		72720a60.../10.0.17.5	active	running
+    todo-sk@5.service		56b7dcad.../10.0.14.5	active	running
+    todo@3.service			b420d775.../10.0.11.5	active	running
+    todo@4.service			72720a60.../10.0.17.5	active	running
+    todo@5.service			56b7dcad.../10.0.14.5	active	running
 
 
-Получил
 
-### 404 Not Found
+<br/>
+
+    $ curl 10.0.17.5:80
+
+Ок. Контент от вебсервера через proxy
+
+
+<br/>
+
+<div align="center">
+    <img src="//files.sysadm.ru/img/linux/containers/coreos/example/01/pic3.png" border="0" alt="coreos cluster example">
+</div>
+
+<br/>
