@@ -107,44 +107,38 @@ https://github.com/sysadm-ru/coreos-docker-examples/blob/master/02/coreos-rethin
 
 <br/>
 
-    $ fleetctl start rethinkdb-discovery@{5..7} rethinkdb@{5..7}
+    $ fleetctl start rethinkdb-discovery@{6..7} rethinkdb@{6..7}
 
 
 <br/>
 
     $ fleetctl list-units
     UNIT				MACHINE				ACTIVE	SUB
-    rethinkdb-discovery@5.service	0044a05b.../172.17.8.104	active	running
-    rethinkdb-discovery@6.service	33d8850a.../172.17.8.102	active	running
-    rethinkdb-discovery@7.service	4765a2ce.../172.17.8.101	active	running
-    rethinkdb@5.service		0044a05b.../172.17.8.104	active	running
-    rethinkdb@6.service		33d8850a.../172.17.8.102	active	running
-    rethinkdb@7.service		4765a2ce.../172.17.8.101	active	running
+    rethinkdb-discovery@6.service	3222ccf3.../172.17.8.104	active	running
+    rethinkdb-discovery@7.service	50ba5eaf.../172.17.8.106	active	running
+    rethinkdb@6.service		3222ccf3.../172.17.8.104	active	running
+    rethinkdb@7.service		50ba5eaf.../172.17.8.106	active	running
 
 
 <br/>
 
-    $ curl 172.17.8.101:18080
+    $ curl 172.17.8.106:18080
 
 
 Можно подключиться браузером:  
-http://172.17.8.101:18080
+http://172.17.8.106:18080
 
 
     $ etcdctl ls /services/rethinkdb
     /services/rethinkdb/172.17.8.104
-    /services/rethinkdb/172.17.8.102
-    /services/rethinkdb/172.17.8.101
-
-
-
+    /services/rethinkdb/172.17.8.106
 
 <br/>
 
     $ etcdctl ls /services/rethinkdb | xargs -I {} etcdctl get {}
-    172.17.8.101
+    172.17.8.106
     172.17.8.104
-    172.17.8.102
+
 
 
 
@@ -152,20 +146,20 @@ http://172.17.8.101:18080
 
     $ etcdctl ls /services/rethinkdb | xargs -I {} etcdctl get {} | sed s/^/"--join "/ | sed s/$/":29015"/
     --join 172.17.8.104:29015
-    --join 172.17.8.102:29015
-    --join 172.17.8.101:29015
+    --join 172.17.8.106:29015
+
 
 
 
 <br/>
 
     $ etcdctl ls /services/rethinkdb | xargs -I {} etcdctl get {} | sed s/^/"--join "/ | sed s/$/":29015"/ | tr "\n" " "
-    --join 172.17.8.104:29015 --join 172.17.8.102:29015 --join 172.17.8.101:29015
+    --join 172.17.8.104:29015 --join 172.17.8.106:29015
 
 
 <br/>
 
-http://172.17.8.103:4001/v2/keys/services/rethinkdb - rethinkdb api
+http://172.17.8.106:4001/v2/keys/services/rethinkdb - rethinkdb api
 
 <br/>
 
@@ -226,11 +220,29 @@ https://github.com/sysadm-ru/coreos-docker-examples/blob/master/02/coreos-gettin
 
 <br/>
 
-    $ fleetctl start helloweb-discovery@{2..4} helloweb@{2..4}
+    $ fleetctl start helloweb-discovery@{3..5} helloweb@{3..5}
+
+<br/>
+
+// следим за ходом выполнения
+
+    $ fleetctl journal -f --lines=100 helloweb@3.service
 
 <br/>
 
     $ fleetctl list-units
+    UNIT				MACHINE				ACTIVE	SUB
+    helloweb-discovery@3.service	6d8e85f3.../172.17.8.101	active	running
+    helloweb-discovery@4.service	8a88c8ac.../172.17.8.107	active	running
+    helloweb-discovery@5.service	b386939f.../172.17.8.102	active	running
+    helloweb@3.service		6d8e85f3.../172.17.8.101	active	running
+    helloweb@4.service		8a88c8ac.../172.17.8.107	active	running
+    helloweb@5.service		b386939f.../172.17.8.102	active	running
+    rethinkdb-discovery@6.service	3222ccf3.../172.17.8.104	active	running
+    rethinkdb-discovery@7.service	50ba5eaf.../172.17.8.106	active	running
+    rethinkdb@6.service		3222ccf3.../172.17.8.104	active	running
+    rethinkdb@7.service		50ba5eaf.../172.17.8.106	active	running
+
 
 
 <br/>
@@ -238,15 +250,8 @@ https://github.com/sysadm-ru/coreos-docker-examples/blob/master/02/coreos-gettin
 
 Подключился к приложению:
 
-    $ curl http://172.17.8.103:8080/greeting
-    "Hello, User! From 172.17.8.103"
-
-
-<br/>
-
-    // логи
-
-    $ fleetctl journal -f --lines=100 helloweb@2.service
+    $ curl http://172.17.8.101:8080/greeting
+    "Hello, User! From 172.17.8.101"
 
 
 <br/>
@@ -282,39 +287,43 @@ https://github.com/sysadm-ru/coreos-docker-examples/blob/master/02/coreos-gettin
 
 <br/>
 
+    $ fleetctl start hellolb@{1..2}
 
-    $ fleetctl start hellolb@1.service
+
+// следим за ходом выполнения
+
+    $ fleetctl journal -f --lines=100 hellolb@1.service
 
 <br/>
 
     $ fleetctl list-units
     UNIT				MACHINE				ACTIVE	SUB
-    hellolb@1.service		dc247a24.../172.17.8.107	active	running
-    helloweb-discovery@2.service	767bed22.../172.17.8.103	active	running
-    helloweb-discovery@3.service	91b437a9.../172.17.8.105	active	running
-    helloweb-discovery@4.service	bb98224a.../172.17.8.104	active	running
-    helloweb@2.service		767bed22.../172.17.8.103	active	running
-    helloweb@3.service		91b437a9.../172.17.8.105	active	running
-    helloweb@4.service		bb98224a.../172.17.8.104	active	running
-    rethinkdb-discovery@5.service	c539d45d.../172.17.8.102	active	running
-    rethinkdb-discovery@6.service	47600f9c.../172.17.8.106	active	running
-    rethinkdb-discovery@7.service	6d303877.../172.17.8.101	active	running
-    rethinkdb@5.service		c539d45d.../172.17.8.102	active	running
-    rethinkdb@6.service		47600f9c.../172.17.8.106	active	running
-    rethinkdb@7.service		6d303877.../172.17.8.101	active	running
+    hellolb@1.service		c983059a.../172.17.8.103	active	running
+    hellolb@2.service		d65c18f4.../172.17.8.105	active	running
+    helloweb-discovery@3.service	6d8e85f3.../172.17.8.101	active	running
+    helloweb-discovery@4.service	8a88c8ac.../172.17.8.107	active	running
+    helloweb-discovery@5.service	b386939f.../172.17.8.102	active	running
+    helloweb@3.service		6d8e85f3.../172.17.8.101	active	running
+    helloweb@4.service		8a88c8ac.../172.17.8.107	active	running
+    helloweb@5.service		b386939f.../172.17.8.102	active	running
+    rethinkdb-discovery@6.service	3222ccf3.../172.17.8.104	active	running
+    rethinkdb-discovery@7.service	50ba5eaf.../172.17.8.106	active	running
+    rethinkdb@6.service		3222ccf3.../172.17.8.104	active	running
+    rethinkdb@7.service		50ba5eaf.../172.17.8.106	active	running
+
 
 <br/>
 
-    $ curl http://172.17.8.107:8888/greeting
-    "Hello, User! From 172.17.8.103"
+    $ curl http://172.17.8.103:8888/greeting
+    "Hello, User! From 172.17.8.107"
 
+    core@core-01 ~ $ curl http://172.17.8.103:8888/greeting
+    "Hello, User! From 172.17.8.101"
 
-    core@core-01 ~ $ curl http://172.17.8.107:8888/greeting
-    "Hello, User! From 172.17.8.105"
+    core@core-01 ~ $ curl http://172.17.8.103:8888/greeting
+    "Hello, User! From 172.17.8.102"core@core-01 ~ $
 
-    core@core-01 ~ $ curl http://172.17.8.107:8888/greeting
-    "Hello, User! From 172.17.8.104"
-
+<br/>
 
 Меняется веб сервер к которому подключаемся.
 
@@ -339,9 +348,9 @@ https://github.com/sysadm-ru/coreos-docker-examples/blob/master/02/coreos-gettin
 
     http {
         upstream backend {
-            server 172.17.8.103:8080;
-            server 172.17.8.105:8080;
-            server 172.17.8.104:8080;
+            server 172.17.8.107:8080;
+            server 172.17.8.101:8080;
+            server 172.17.8.102:8080;
         }
         server {
             listen 8888;
