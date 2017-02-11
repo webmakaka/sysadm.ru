@@ -217,7 +217,7 @@ https://github.com/sysadm-ru/coreos-docker-examples/tree/master/01
 <br/>
 
 
-<pre>
+<xmp>
 
 [Unit]
 Description=ToDo Sidekick
@@ -249,12 +249,12 @@ ExecStop=/usr/bin/etcdctl rm /services/todo/todo-%i
 [X-Fleet]
 MachineOf=todo@%i.service
 
-</pre>
+</xmp>
 
 <br/>
 
 
-<pre>
+<xmp>
 
 // Что выполняет следующая команда?
 
@@ -270,7 +270,7 @@ $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 
 3000
 
 
-</pre>
+</xmp>
 
 <br/>
 
