@@ -217,7 +217,7 @@ https://github.com/sysadm-ru/coreos-docker-examples/tree/master/01
 <br/>
 
 
-<xmp>
+{% highlight text %}
 
 [Unit]
 Description=ToDo Sidekick
@@ -249,16 +249,20 @@ ExecStop=/usr/bin/etcdctl rm /services/todo/todo-%i
 [X-Fleet]
 MachineOf=todo@%i.service
 
-</xmp>
+{% endhighlight %}
 
 <br/>
 
 
-<xmp>
-
 // Что выполняет следующая команда?
 
+{% highlight text %}
+
 $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}" todo-3
+
+{% endhighlight %}
+
+
 
 // Сначала нужно переключиться на сервер, где стартован сервис
 
@@ -266,7 +270,12 @@ $ fleetctl ssh todo-sk@3.service
 
 // Следующая команда должна будет возвращать порт на котором работает вебсервер.
 
+{% highlight text %}
+
 $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}" todo-3
+
+{% endhighlight %}
+
 3000
 
 
