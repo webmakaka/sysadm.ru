@@ -307,53 +307,60 @@ https://discovery.etcd.io/new?size=7
 <br/>
 
 
-    [Unit]
-    Description=ToDo Sidekick
-    Requires=todo@%i.service
+<pre>
 
-    After=docker.service
-    After=todo@%i.service
-    BindsTo=todo@%i.service
+[Unit]
+Description=ToDo Sidekick
+Requires=todo@%i.service
 
-    [Service]
-    EnvironmentFile=/etc/environment
-    User=core
-    Restart=always
-    TimeoutStartSec=0
-    ExecStart=/bin/bash -c '\
-    while true; do \
-     port=$(docker inspect --format=\'{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}\' todo-%i); \
-     curl -sf ${COREOS_PUBLIC_IPV4}:$port/ > /dev/null 2>&1; \
-     if [ $? -eq 0 ]; then \
-       etcdctl set /services/todo/todo-%i ${COREOS_PUBLIC_IPV4}:$port --ttl 10; \
-     else \
-       etcdctl rm /services/todo/todo-%i; \
-     fi; \
-     sleep 5; \
-     done'
+After=docker.service
+After=todo@%i.service
+BindsTo=todo@%i.service
 
-    ExecStop=/usr/bin/etcdctl rm /services/todo/todo-%i
+[Service]
+EnvironmentFile=/etc/environment
+User=core
+Restart=always
+TimeoutStartSec=0
+ExecStart=/bin/bash -c '\
+while true; do \
+ port=$(docker inspect --format=\'{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}\' todo-%i); \
+ curl -sf ${COREOS_PUBLIC_IPV4}:$port/ > /dev/null 2>&1; \
+ if [ $? -eq 0 ]; then \
+   etcdctl set /services/todo/todo-%i ${COREOS_PUBLIC_IPV4}:$port --ttl 10; \
+ else \
+   etcdctl rm /services/todo/todo-%i; \
+ fi; \
+ sleep 5; \
+ done'
 
-    [X-Fleet]
-    MachineOf=todo@%i.service
+ExecStop=/usr/bin/etcdctl rm /services/todo/todo-%i
 
+[X-Fleet]
+MachineOf=todo@%i.service
+
+</pre>
 
 <br/>
 
 
+<pre>
+
 // Что выполняет следующая команда?
 
-    $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}" todo-3
+$ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}" todo-3
 
 // Сначала нужно переключиться на сервер, где стартован сервис
 
-    $ fleetctl ssh todo-sk@3.service
+$ fleetctl ssh todo-sk@3.service
 
 // Следующая команда должна будет возвращать порт на котором работает вебсервер.
 
-    $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}" todo-3
-    3000
+$ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}" todo-3
+3000
 
+
+</pre>
 
 <br/>
 
