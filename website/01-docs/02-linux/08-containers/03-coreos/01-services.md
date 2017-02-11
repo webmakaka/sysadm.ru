@@ -98,10 +98,7 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
     UNIT	MACHINE	ACTIVE	SUB
 
 
-    $ ssh-add ~/.vagrant.d/insecure_private_key
-
     $ fleetctl --tunnel 127.0.0.1:2222 list-machines
-
 
     $ export FLEETCTL_TUNNEL="127.0.0.1:2222"
 
@@ -110,7 +107,10 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
 
 <br/>
 
-Kubernetes - более продвинутый аналог fleet  
+**Аналоги:**
+
+- Kubernetes - более продвинутый аналог fleet
+
 
 <br/>
 
@@ -118,11 +118,6 @@ Kubernetes - более продвинутый аналог fleet
 
 flannel - виртуальная сеть, которая предоставляет подсеть, чтобы контейнеры могли между собой обмениваться пакетами. (я так перевел / понял)
 
-
-### Using Flannel
-
-
-<br/>
 
 <div align="center">
     <img src="//files.sysadm.ru/img/linux/containers/coreos/getting_started_with_coreos/pic5.png" border="0" alt="fleetctl">
@@ -150,5 +145,10 @@ flannel - виртуальная сеть, которая предоставля
 
 ### journalctl
 
+Показывает логи
+
     # journalctl -u hello.service
     # journalctl -f -u hello.service
+
+
+    $ journalctl --unit etcd.service --no-pager

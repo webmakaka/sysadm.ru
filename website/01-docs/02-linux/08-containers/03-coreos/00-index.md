@@ -77,30 +77,9 @@ https://coreos.com/etcd/docs/latest/clustering.html
 <br/>
 
 
-### [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
+### CoreOS Видеокурсы
 
-<ul>
-    <li><a href="/linux/containers/coreos/Introduction_to_CoreOS/">[O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]</a></li>
-</ul>
-
-
-<br/>
-
-
-### Getting Started with CoreOS [29 Nov 2016, ENG]
-
-<ul>
-    <li><a href="/linux/containers/coreos/Getting_Started_with_CoreOS/">Getting Started with CoreOS [29 Nov 2016, ENG]</a></li>
-</ul>
-
-
-<br/>
-
-### Еще неплохое видео по coreos:
-
-http://www.youtube.com/watch?v=wxUxtflalE4
-
-https://github.com/sysadm-ru/production-docker-ha-architecture
+[здесь](/linux/containers/coreos/video-courses/)
 
 
 
