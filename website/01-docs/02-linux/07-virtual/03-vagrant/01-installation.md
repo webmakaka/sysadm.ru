@@ -154,6 +154,7 @@ https://atlas.hashicorp.com/boxes/search
 
 
 
+  // Чтобы можно было по ssh ходить между узлами без пароля
 
     $ ssh-add ~/.vagrant.d/insecure_private_key
     Identity added: /home/marley/.vagrant.d/insecure_private_key (/home/marley/.vagrant.d/insecure_private_key)

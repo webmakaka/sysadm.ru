@@ -8,7 +8,7 @@ permalink: /linux/containers/coreos/
 # CoreOS
 
 
-[Пример запуска coreos кластера с контейнерами docker, приложением, базой данных и прокси сервером ](/linux/containers/coreos/example/01/) 
+[Пример запуска coreos кластера с контейнерами docker, приложением, базой данных и прокси сервером ](/linux/containers/coreos/example/01/)
 
 
 
@@ -128,10 +128,11 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
 <br/>
 
 
-    fleetctl list-machines
-    fleetctl start redis.service
-    fleetctl journal redis.service
-    fleetctl --tunnel=10.2.1.1 list-machines
+    $ fleetctl list-machines
+    $ fleetctl start redis.service
+    $ fleetctl journal redis.service
+    $ fleetctl --tunnel=10.2.1.1 list-machines
+
 
 
 <br/>
@@ -154,7 +155,7 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
     $ fleetctl --tunnel 127.0.0.1:2222 list-machines
 
 
-    $ FLEETCTL_TUNNEL="127.0.0.1:2222"
+    $ export FLEETCTL_TUNNEL="127.0.0.1:2222"
 
     $ fleetctl list-machines
 
