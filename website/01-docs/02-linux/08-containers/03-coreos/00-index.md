@@ -8,10 +8,6 @@ permalink: /linux/containers/coreos/
 # CoreOS
 
 
-[Пример запуска coreos кластера с контейнерами docker, приложением, базой данных и прокси сервером ](/linux/containers/coreos/example/01/)
-
-
-
 <br/>
 
 ### Инсталляция
@@ -43,6 +39,18 @@ permalink: /linux/containers/coreos/
 ### Update | Upgrade
 
 [update](/linux/containers/coreos/update/)
+
+
+
+<br/>
+
+### Примеры запуска
+
+[Подготовка окружения для запуска coreos](/linux/containers/coreos/example/env/)
+
+[Пример запуска coreos кластера с контейнерами docker, приложением, базой данных и прокси сервером ](/linux/containers/coreos/example/01/)
+
+[Пример запуска coreos кластера с контейнерами docker, приложением, базой данных и прокси сервером ](/linux/containers/coreos/example/02/)
 
 
 <br/>
