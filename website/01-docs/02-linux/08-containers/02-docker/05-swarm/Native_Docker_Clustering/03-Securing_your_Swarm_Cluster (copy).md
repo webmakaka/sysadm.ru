@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Native Docker Clustering
-permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your_Swarm_Cluster/
+permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your_Swarm_Cluster/copy/
 ---
 
 # Docker Swarm: Native Docker Clustering [2016, ENG] > Module 5: Securing your Swarm Cluster
@@ -12,13 +12,6 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 <div align="center">
     <img src="//files.sysadm.ru/img/linux/containers/docker/swarm/native-docker-clustering/pic3.png" border="0" alt="Native Docker Clustering">
 </div>
-
-<br/>
-
-### ОШИБКИ. НЕ МОГУ НОРМАЛЬНО РАБОТАТЬ С SSH в VAGRANT. Смогу продолжить, не раньше, чем побежу проблемы.
-
-ПОДРОБНЕЕ ЗДЕСЬ:   
-https://linuxforum.tech/viewtopic.php?id=38509
 
 <br/>
 
@@ -40,7 +33,6 @@ https://linuxforum.tech/viewtopic.php?id=38509
 <br/>
 
     $ vagrant ssh ca
-
     $ sudo su -
 
     # mkdir -p /home/debian/certs/

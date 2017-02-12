@@ -166,8 +166,6 @@ http://172.17.8.106:4001/v2/keys/services/rethinkdb - rethinkdb api
 ### WebServer
 
 
-<br/>
-
 https://github.com/sysadm-ru/coreos-docker-examples/blob/master/02/coreos-gettingstarted-web/helloweb-discovery%40.service
 
 <br/>
@@ -244,11 +242,10 @@ https://github.com/sysadm-ru/coreos-docker-examples/blob/master/02/coreos-gettin
     rethinkdb@7.service		50ba5eaf.../172.17.8.106	active	running
 
 
-
 <br/>
 
 
-Подключился к приложению:
+**Подключился к приложению:**
 
     $ curl http://172.17.8.101:8080/greeting
     "Hello, User! From 172.17.8.101"
@@ -329,6 +326,8 @@ https://github.com/sysadm-ru/coreos-docker-examples/blob/master/02/coreos-gettin
 
 
 <br/>
+
+### Посмотрим что внутри Load Balancer
 
     $ fleetctl ssh hellolb@1
 

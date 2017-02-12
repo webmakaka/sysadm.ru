@@ -16,6 +16,10 @@ permalink: /linux/virtual/vagrant/for-docker-swarm/
 
 {% highlight text %}
 
+
+Vagrant.require_version ">= 1.9.1"
+
+
 VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
@@ -23,6 +27,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.ssh.insert_key = false
   config.ssh.forward_agent = true
+
+
+  config.vm.provider :virtualbox do |v|
+      # On VirtualBox, we don't have guest additions or a functional vboxsf
+      # in CoreOS, so tell Vagrant that so it can be smarter.
+      v.check_guest_additions = false
+      v.functional_vboxsf     = false
+    end
 
 
 
@@ -179,11 +191,22 @@ end
 
 <br/>
 
+
     $ ssh-add ~/.vagrant.d/insecure_private_key
 
 <br/>
 
     $ vagrant up
+
+
+<br/>
+
+// Если не стартовала а отвалилась по timeout, делаем следующее:
+
+    $ vagrant halt node2
+    $ vagrant up node2
+
+    $ vagrant up node3
 
 <br/>
 
@@ -198,11 +221,3 @@ end
     node1                     running (virtualbox)
     node2                     running (virtualbox)
     node3                     running (virtualbox)
-
-
-<br/>
-
-    $ vagrant ssh ca
-    $ sudo su -
-
-    
