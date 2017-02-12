@@ -217,6 +217,11 @@ https://github.com/sysadm-ru/coreos-docker-examples/tree/master/01
 <br/>
 
 
+**Какая-то проблема с движком сайта. Он не хочет печатать параметры --format. Предлагаю смотреть исходник на github**
+
+https://github.com/sysadm-ru/coreos-docker-examples/blob/master/01/coreos-nodejs-web-app/todo-sk%40.service
+
+
 {% highlight text %}
 
 [Unit]
@@ -266,7 +271,7 @@ $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 
 
 // Сначала нужно переключиться на сервер, где стартован сервис
 
-$ fleetctl ssh todo-sk@3.service
+    $ fleetctl ssh todo-sk@3.service
 
 // Следующая команда должна будет возвращать порт на котором работает вебсервер.
 
@@ -278,8 +283,6 @@ $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 
 
 3000
 
-
-</xmp>
 
 <br/>
 
