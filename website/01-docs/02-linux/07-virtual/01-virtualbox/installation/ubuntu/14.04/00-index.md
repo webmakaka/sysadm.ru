@@ -33,9 +33,9 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 
 <br/>
 
-Последняя 5.0 ее и ставлю
+Последняя 5.1 ее и ставлю
 
-    # apt-get install -y virtualbox-5.0
+    # apt-get install -y virtualbox-5.1
 
 
 Создаем группу администраторов виртуальных машин:
@@ -99,7 +99,7 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 <br/>
 
     $ vboxmanage --version
-    5.0.20r106931
+    5.1.14r112924
 
 
 <br/>
@@ -116,11 +116,11 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 <br/>
 
     # cd /tmp/
-    # wget http://download.virtualbox.org/virtualbox/5.0.20/Oracle_VM_VirtualBox_Extension_Pack-5.0.20.vbox-extpack
+    # wget http://download.virtualbox.org/virtualbox/5.1.14/Oracle_VM_VirtualBox_Extension_Pack-5.1.14.vbox-extpack
 
 <br/>
 
-    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.0.20.vbox-extpack
+    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.1.14.vbox-extpack
 
 <br/>
 
@@ -132,5 +132,5 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
     Edition:      
     Description:  USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption.
     VRDE Module:  VBoxVRDP
-    Usable:       true
-    Why unusable:
+    Usable:       false
+    Why unusable: VBoxExtPackRegister returned VERR_VERSION_MISMATCH, pReg=0000000000000000 ErrInfo='VirtualBox version mismatch - expected 5.0 got 5.1'

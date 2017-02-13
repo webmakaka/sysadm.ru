@@ -31,7 +31,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider :virtualbox do |v|
       # On VirtualBox, we don't have guest additions or a functional vboxsf
-      # in CoreOS, so tell Vagrant that so it can be smarter.
       v.check_guest_additions = false
       v.functional_vboxsf     = false
     end
