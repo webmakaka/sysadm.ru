@@ -14,3 +14,5 @@ permalink: /linux/virtual/
 ### [KVM на Centos 6](/linux/virtual/kvm/)
 
 ### [Vagrant](/linux/virtual/vagrant/)
+
+### [Ansible](/linux/virtual/ansible/)
