@@ -45,3 +45,19 @@ Kubernetes converts a set of computers into one big one.
 ### Tutorials  
 
 http://kubernetes.io/docs/tutorials/
+
+
+<br/>
+
+### На rutracker написали:
+
+8-ми узловой кластер прекрасно работает на локальной машине с 16GB RAM!
+
+На Ubuntu ставится одной командой:
+conjure-up kubernetes
+
+https://kubernetes.io/docs/getting-started-guides/ubuntu/local/
+
+Если интересует зачем - смотрим сюда:
+Fission: Serverless Functions as a Service for Kubernetes
+https://github.com/fission/fission

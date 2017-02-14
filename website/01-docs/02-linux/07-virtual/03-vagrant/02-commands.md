@@ -41,6 +41,20 @@ https://atlas.hashicorp.com/boxes/search
     // Destroy without confirmation
     $ vagrant destroy -f
 
+<br/>
+
+    $ vagrant box list
+    coreos-alpha        (virtualbox, 1298.1.0)
+    coreos-stable       (virtualbox, 1185.3.0)
+    coreos-stable       (virtualbox, 1235.6.0)
+    coreos-stable       (virtualbox, 1235.9.0)
+    debian/jessie64     (virtualbox, 8.7.0)
+    hashicorp/precise64 (virtualbox, 1.1.0)
+    ubuntu/trusty64     (virtualbox, 20161214.0.0)
+    ubuntu/trusty64     (virtualbox, 20170208.0.0)
+    ubuntu/xenial64     (virtualbox, 20161213.0.0)
+    ubuntu/xenial64     (virtualbox, 20170209.0.0)
+
 
 <br/>
 
@@ -94,7 +108,7 @@ https://atlas.hashicorp.com/boxes/search
       core-02                   running (virtualbox)
       core-03                   running (virtualbox)
 
-  <br/>
+<br/>
 
       $ vagrant ssh-config
       Host core-01
@@ -134,7 +148,7 @@ https://atlas.hashicorp.com/boxes/search
         ForwardAgent yes
 
 
-  <br/>
+ <br/>
 
 
 
@@ -147,6 +161,26 @@ https://atlas.hashicorp.com/boxes/search
     $ ssh -p 2222 -i ~/.vagrant.d/insecure_private_key
 
 
-  <br/>
+<br/>
 
       $ ssh core-01
+
+<!--
+
+<br/>
+
+    $ ssh-keygen
+
+<br/>
+
+    $ ls ~/.ssh/
+    id_rsa  id_rsa.pub
+
+
+
+$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+$ cat ~/.ssh/id_rsa >> ~/.ssh/insecure_private_key
+
+
+-->
