@@ -20,6 +20,11 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Securing_your
 ПОДРОБНЕЕ ЗДЕСЬ:   
 https://linuxforum.tech/viewtopic.php?id=38509
 
+
+Так. Удалось найти обходной путь. На выходных или даже раньше попробую развернуть.
+
+
+
 <br/>
 
 Подготовил с помощью следующего vagrant скрипта <a href="/linux/virtual/vagrant/for-docker-swarm/"></a>следующее:

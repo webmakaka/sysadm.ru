@@ -25,12 +25,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.boot_timeout = 900
 
-  config.ssh.insert_key = false
-  config.ssh.forward_agent = true
-
 
   config.vm.provider :virtualbox do |v|
       # On VirtualBox, we don't have guest additions or a functional vboxsf
+      # in CoreOS, so tell Vagrant that so it can be smarter.
       v.check_guest_additions = false
       v.functional_vboxsf     = false
     end
@@ -52,9 +50,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
 
-
   config.vm.define "client" do |myVm|
-    myVm.vm.box = 'debian/jessie64'
+
+   #  myVm.ssh.insert_key = true
+   #  myVm.ssh.forward_agent = true
+
+    config.ssh.username = 'vagrant'
+    config.ssh.password = 'vagrant'
+
+    myVm.vm.box = 'v0rtex/xenial64'
     myVm.vm.hostname = 'client'
 
     myVm.vm.network :private_network, ip: "192.168.56.101"
@@ -73,7 +77,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   config.vm.define "ca" do |myVm|
-    myVm.vm.box = 'debian/jessie64'
+
+    # myVm.ssh.insert_key = true
+    # myVm.ssh.forward_agent = true
+
+    config.ssh.username = 'vagrant'
+    config.ssh.password = 'vagrant'
+
+    myVm.vm.box = 'v0rtex/xenial64'
+
+    # myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'ca'
 
     myVm.vm.network :private_network, ip: "192.168.56.102"
@@ -89,7 +102,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   config.vm.define "manager1" do |myVm|
-    myVm.vm.box = 'debian/jessie64'
+
+    # myVm.ssh.insert_key = true
+    # myVm.ssh.forward_agent = true
+
+    config.ssh.username = 'vagrant'
+    config.ssh.password = 'vagrant'
+
+    myVm.vm.box = 'v0rtex/xenial64'
+
+
+    # myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'manager1'
 
     myVm.vm.network :private_network, ip: "192.168.56.103"
@@ -105,7 +128,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   config.vm.define "manager2" do |myVm|
-    myVm.vm.box = 'debian/jessie64'
+
+    # myVm.ssh.insert_key = true
+    # myVm.ssh.forward_agent = true
+
+    config.ssh.username = 'vagrant'
+    config.ssh.password = 'vagrant'
+
+    myVm.vm.box = 'v0rtex/xenial64'
+
+    # myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'manager2'
 
     myVm.vm.network :private_network, ip: "192.168.56.104"
@@ -121,7 +153,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   config.vm.define "manager3" do |myVm|
-    myVm.vm.box = 'debian/jessie64'
+
+    # myVm.ssh.insert_key = true
+    # myVm.ssh.forward_agent = true
+
+
+    config.ssh.username = 'vagrant'
+    config.ssh.password = 'vagrant'
+
+    myVm.vm.box = 'v0rtex/xenial64'
+
+    # myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'manager3'
 
     myVm.vm.network :private_network, ip: "192.168.56.105"
@@ -137,7 +179,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   config.vm.define "node1" do |myVm|
-    myVm.vm.box = 'debian/jessie64'
+
+    # myVm.ssh.insert_key = true
+    # myVm.ssh.forward_agent = true
+
+    config.ssh.username = 'vagrant'
+    config.ssh.password = 'vagrant'
+
+    myVm.vm.box = 'v0rtex/xenial64'
+
+
+    # myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'node1'
 
     myVm.vm.network :private_network, ip: "192.168.56.106"
@@ -153,7 +205,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   config.vm.define "node2" do |myVm|
-    myVm.vm.box = 'debian/jessie64'
+
+    # myVm.ssh.insert_key = true
+    # myVm.ssh.forward_agent = true
+
+    config.ssh.username = 'vagrant'
+    config.ssh.password = 'vagrant'
+
+    myVm.vm.box = 'v0rtex/xenial64'
+
+
+    # myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'node2'
 
     myVm.vm.network :private_network, ip: "192.168.56.107"
@@ -169,7 +231,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   config.vm.define "node3" do |myVm|
-    myVm.vm.box = 'debian/jessie64'
+
+    # myVm.ssh.insert_key = true
+    # myVm.ssh.forward_agent = true
+
+    config.ssh.username = 'vagrant'
+    config.ssh.password = 'vagrant'
+
+    myVm.vm.box = 'v0rtex/xenial64'
+
+    # myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'node3'
 
     myVm.vm.network :private_network, ip: "192.168.56.108"
@@ -185,13 +256,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 end
 
-
 {% endhighlight %}
 
-<br/>
 
+Почему v0rtex/xenial64? Потому, что в ubuntu/xenial64 пароли не удается задать в скрипте.
 
-    $ ssh-add ~/.vagrant.d/insecure_private_key
+Почему не использую для этого SSH ключи? Потому, что не умею в должной степени.
+
+Предложения по улучшению принимаются.
+
 
 <br/>
 
