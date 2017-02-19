@@ -6,11 +6,59 @@ permalink: /linux/hardware/info/
 
 # Команды для получения информации по оборудованию в linux
 
+<br/>
+
 ### Архитектура
 
     $ dpkg --print-architecture
     amd64
 
+<br/>
+
+### Процессор
+
+    # lscpu
+    Architecture:          x86_64
+    CPU op-mode(s):        32-bit, 64-bit
+    Byte Order:            Little Endian
+    CPU(s):                4
+    On-line CPU(s) list:   0-3
+    Thread(s) per core:    1
+    Core(s) per socket:    4
+    CPU socket(s):         1
+    NUMA node(s):          1
+    Vendor ID:             GenuineIntel
+    CPU family:            6
+    Model:                 23
+    Stepping:              6
+    CPU MHz:               2493.739
+    BogoMIPS:              4987.88
+    Virtualization:        VT-x
+    L1d cache:             32K
+    L1i cache:             32K
+    L2 cache:              6144K
+    NUMA node0 CPU(s):     0-3
+
+<br/>
+
+Более подробно:
+
+    # cat /proc/cpuinfo
+
+<br/>
+
+    # cat /proc/cpuinfo | grep model
+    model		: 23
+    model name	: Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz
+    model		: 23
+    model name	: Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz
+    model		: 23
+    model name	: Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz
+    model		: 23
+    model name	: Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz
+
+
+<br/>
 
 ### Версия BIOS
 

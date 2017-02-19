@@ -11,7 +11,6 @@ permalink: /linux/containers/coreos/
 
 ### Основные сервисы CoreOS
 
-
 [здесь](/linux/containers/coreos/services/)
 
 <br/>
@@ -52,11 +51,42 @@ permalink: /linux/containers/coreos/
 
 ### Примеры запуска
 
+[CoreOS Container Linux cluster architectures](https://coreos.com/os/docs/latest/cluster-architectures.html)
+
+- Docker dev environment on laptop
+- Small cluster
+- Easy development/testing cluster
+- Production cluster with central services
+
+
+<br/>
+
+**Small Cluster**
+
+<br/>
+
+<img src="https://coreos.com/os/docs/latest/img/small.png" alt="Small Cluster">
+
+<br/>
+
 [Подготовка окружения для запуска coreos](/linux/containers/coreos/example/env/)
 
-[Пример 1](/linux/containers/coreos/example/01/)
+[Пример 1 (Small cluster)](/linux/containers/coreos/example/01/)
 
-[Пример 2](/linux/containers/coreos/example/02/)
+[Пример 2 (Small cluster)](/linux/containers/coreos/example/02/)
+
+
+<br/>
+
+**Easy development/testing cluster**
+
+<br/>
+
+<img src="https://coreos.com/os/docs/latest/img/dev.png" alt="Easy development/testing cluster">
+
+
+
+
 
 
 <br/>
@@ -64,6 +94,12 @@ permalink: /linux/containers/coreos/
 ### Using Cloud-Config
 
 https://coreos.com/os/docs/latest/cloud-config.html
+
+<br/>
+
+### cloud-configs validator
+
+https://coreos.com/validate/
 
 
 <br/>
