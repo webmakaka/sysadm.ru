@@ -105,12 +105,44 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
     $ fleetctl list-machines
 
 
+
+
+Let's overview the specific options of fleet for the [X-Fleet] section:
+
+    •	 MachineID : This unit will be scheduled on the machine identified by a given string.
+    •	 MachineOf : This limits eligible machines to the one that hosts a specific unit.
+    •	 MachineMetadata : This limits eligible machines to those hosts with this specific metadata.
+    •	 Conflicts : This prevents a unit from being collocated with other units using glob-matching on other unit names.
+    •	 Global : Schedule this unit on all machines in the cluster. A unit is considered invalid if options other than MachineMetadata are provided alongside Global=true.
+
+
+<br/>
+
+Fleetctl commands:
+
+    1.	 Checking the status of the unit:
+    $ fleetctl status hello1.service
+
+    2.	 Stopping the service:
+    $ fleetctl stop hello1.service
+
+    3.	 Viewing the service file:
+    $ fleetctl cat hello1.service
+
+    4.	 If you want to just upload the unit file:
+    $ fleetctl submit hello1.service
+
+    5.	 Listing all running fleet units:
+    $ fleetctl list-units
+    
+    6.	 Listing fleet cluster machines:
+    $ fleetctl list-machines
+
 <br/>
 
 **Аналоги:**
 
 - Kubernetes - более продвинутый аналог fleet
-
 
 <br/>
 
