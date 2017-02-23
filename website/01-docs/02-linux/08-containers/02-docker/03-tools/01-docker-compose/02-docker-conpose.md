@@ -32,6 +32,7 @@ permalink: /linux/containers/docker/tools/docker-compose/
 
 <br/>
 
+// -d - to start your application in the background
 
     $ docker-compose -f docker-compose.yml up -d
 
