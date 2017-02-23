@@ -9,19 +9,22 @@ permalink: /linux/containers/
 
 <br/>
 
+### CoreOS (хостовые операционные системы для docker контейнеров)
+
+[CoreOS](/linux/containers/coreos/)
+
+rancher
+
+
+<br/>
+
 ### [Linux Containers (LXC)](/linux/containers/lxc/)
 
 ### [Docker](/linux/containers/docker/)
 
-### RKT (Roket)
+### [RKT (Roket)](/linux/containers/krt/)
 
 ### Containerd
-
-<br/>
-
-### CoreOS (хостовая операционная система для docker контейнеров)
-
-[CoreOS](/linux/containers/coreos/)
 
 
 <br/>

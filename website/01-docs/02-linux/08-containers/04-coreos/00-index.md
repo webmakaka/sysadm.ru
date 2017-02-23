@@ -85,7 +85,7 @@ permalink: /linux/containers/coreos/
 <img src="https://coreos.com/os/docs/latest/img/dev.png" alt="Easy development/testing cluster">
 
 
-
+[Пример 3 (Easy development/testing cluster)](/linux/containers/coreos/example/03/)
 
 
 

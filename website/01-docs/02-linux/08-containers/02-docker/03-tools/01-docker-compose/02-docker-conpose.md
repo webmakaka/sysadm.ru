@@ -1,13 +1,12 @@
 ---
 layout: page
 title: Линковка Docker контейнеров с помощью Docker Compose
-permalink: /linux/containers/docker/linking-containers/docker-compose/
+permalink: /linux/containers/docker/tools/docker-compose/
 ---
 
 # Линковка Docker контейнеров с помощью Docker Compose
 
 С помощью Docker Compose создаем файл YML с инструкциями о том, какие контейнеры запускать и как линковать их между собой.
-
 
 
     # docker-compose -v

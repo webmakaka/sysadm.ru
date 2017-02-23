@@ -58,13 +58,15 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 <br/>
 
-### Docker Installation
+### Инсталляция Docker
 
 
 [Инсталляция Docker в Ubuntu 14.04](/linux/containers/docker/installation/ubuntu/)  
 [Инсталляция Docker в CentOS 7](/linux/containers/docker/installation/centos/)  
 
+<br/>
 
+[Docker-Compose (Инсталляция Docker-Compose в Ubuntu 14.04) ](/linux/containers/docker/toosl/docker-compose/installation/)  
 
 <br/>
 
@@ -103,8 +105,7 @@ https://docs.docker.com/engine/userguide/networking/
 
 [Пример линковки контейнеров для их совместной работы](/linux/containers/docker/linking-containers/manual-linking/)  
 
-[Docker-Compose (Инсталляция Docker-Compose в Ubuntu 14.04) ](/linux/containers/docker/toosl/docker-compose/installation/)  
-[Линковка Docker контейнеров с помощью Docker Compose](/linux/containers/docker/linking-containers/docker-compose/)
+[Линковка Docker контейнеров с помощью Docker Compose](/linux/containers/docker/tools/docker-compose/)
 
 
 

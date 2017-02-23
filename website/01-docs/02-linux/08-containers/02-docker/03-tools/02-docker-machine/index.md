@@ -10,9 +10,8 @@ https://docs.docker.com/machine/install-machine/
 
 
 Я пока до конца не разобрался, для чего нужена Docker Machine.
-Если все правильно понимаю, то для запуска virtualbox виртуалок. Docker выступает в качестве прослойки.
+Если все правильно понимаю, то для запуска Docker контейнеров на virtualbox. Нужно в первую очередь для запуска Docker контейнеров в Windows, либо на облачных сервисах, таких как aws, goolgle cloud engine, microsoft azure.
 
-Наверное это актуально для WIndows а не для Linux пользователей.
 
 
     $ curl -L https://github.com/docker/machine/releases/download/v0.6.0/docker-machine-`uname -s`-`uname -m` > /usr/local/bin/docker-machine && \
