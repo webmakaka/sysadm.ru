@@ -13,7 +13,9 @@ permalink: /linux/containers/
 
 [CoreOS](/linux/containers/coreos/)
 
-rancher
+Rancher OS (Rancher Labs)
+
+Atomic (RedHat)
 
 
 <br/>

@@ -46,6 +46,14 @@ permalink: /linux/containers/coreos/
 [update](/linux/containers/coreos/update/)
 
 
+<br/>
+
+### Получить ключик
+
+    $ wget -qO - 'https://discovery.etcd.io/new?size=3'
+
+
+<!-- /	#	ip	-4	addr	|	grep	inet -->
 
 <br/>
 

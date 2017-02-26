@@ -23,7 +23,14 @@ Offtopic:
 Если копаете, можете помочь с обновлением и добавлением своих знаний.
 
 
-<strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd! По крайней мере на момент попытки запуска мной! Сейчас в основном использую Debian</strong>
+<strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd! По крайней мере на момент попытки запуска мной! Сейчас в основном использую Debian / Ubuntu</strong>
+
+
+<br/>
+
+P.S.: Скачал интересную и современную книгу "Docker Orchestration". Если кто захочет разобрать и поделиться результатами, пишите. Реально есть что изучать!
+
+
 
 <br/><br/>
 
@@ -46,6 +53,7 @@ https://quay.io
 Можно создать свой Registry:  
 https://docs.docker.com/registry/  
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
+
 
 <br/><br/>
 
