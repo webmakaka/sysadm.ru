@@ -104,4 +104,25 @@ permalink: /linux/dev/git/commands/
 
     $ git checkout master
     $ git merge my_new_branch
+
+    // Удаление ненужной ветки
     $ git branch -D my_new_branch
+
+<br/>
+
+###
+
+
+    $ git remote -v
+    origin	https://github.com/sysadm-ru/sysadm.ru (fetch)
+    origin	https://github.com/sysadm-ru/sysadm.ru (push)
+
+<br/>
+
+    $ git remote rm origin
+
+<br/>
+
+    $ git remote add origin https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git
+
+    $ git push -u origin master
