@@ -134,7 +134,7 @@ Fleetctl commands:
 
     5.	 Listing all running fleet units:
     $ fleetctl list-units
-    
+
     6.	 Listing fleet cluster machines:
     $ fleetctl list-machines
 
@@ -184,3 +184,23 @@ flannel - виртуальная сеть, которая предоставля
 
 
     $ journalctl --unit etcd.service --no-pager
+
+
+
+
+    $ journalctl :	This lists the combined	journal	log	from all the sources.
+
+    $ journalctl –u	etcd2.service :	This lists the logs from etcd2.service .
+
+    $ journalctl –u	etcd2.service –f : This lists the	logs from etcd2. service like tail –f format.
+
+    $ journalctl –u	etcd2.service –n 100 :	This lists	the	logs of	the	last 100 lines.
+
+    $ journalctl –u	etcd2.service –no-pager :	This	lists the logs with	no	pagination,
+    which is useful	for	search.
+
+    $ journalctl –p	err	–n	100 : This lists	all	100	errors by filtering the logs.
+
+    $ journalctl -u	etcd2.service —since today : This lists today’s logs of etcd2.service.
+
+    $ journalctl -u	etcd2.service -o json-pretty :	This lists the logs of etcd2.service in JSON-formatted output.

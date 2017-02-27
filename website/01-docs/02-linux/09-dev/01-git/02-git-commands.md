@@ -110,8 +110,7 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
-###
-
+### Заменить Remote Origin
 
     $ git remote -v
     origin	https://github.com/sysadm-ru/sysadm.ru (fetch)

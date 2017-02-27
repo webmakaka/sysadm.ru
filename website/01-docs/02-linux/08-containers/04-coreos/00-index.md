@@ -15,9 +15,17 @@ permalink: /linux/containers/coreos/
 
 <br/>
 
-### Инсталляция
 
-[Vagrant и CoreOS](/linux/containers/coreos/installation/vagrant-coreos/)  
+
+
+### Запуск CoreOS с помощью Vargrant
+
+[Запуск CoreOS с помощью Vargrant](/linux/containers/coreos/vagrant-coreos/)  
+
+
+<br/>
+
+### Инсталляция
 
 [VirtualBox и CoreOS](/linux/containers/coreos/installation/virtualbox-coreos/)
 
