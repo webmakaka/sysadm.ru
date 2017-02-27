@@ -246,45 +246,45 @@ https://discovery.etcd.io/new
     $ cd coreos
 
     $ git clone https://github.com/coreos/coreos-vagrant/ master
-
-    $ cd master/
-    $ cp config.rb.sample config.rb
-    $ cp user-data.sample user-data
-
-
-    $ curl -w "\n" 'https://discovery.etcd.io/new?size=3'
-    https://discovery.etcd.io/2329624755a7a71b9596b40a5e0ed982
-
-    $ cd ../
     $ cp -r master/ worker
 
 
+    $ curl -w "\n" 'https://discovery.etcd.io/new?size=3'
+    https://discovery.etcd.io/eba44f8d77f0c96e42d8cea0c23d0ba5
 
 
 
 **master**
 
-#cloud-config
+    $ vi master/user-data
 
-coreos:
-  etcd2:
-    discovery: https://discovery.etcd.io/2329624755a7a71b9596b40a5e0ed982
-    advertise-client-urls: http://$public_ipv4:2379
-    initial-advertise-peer-urls: http://$private_ipv4:2380
-    # listen on both the official ports and the legacy ports
-    listen-client-urls: http://0.0.0.0:2379,http://0.0.0.0:4001
-    listen-peer-urls: http://$private_ipv4:2380,http://$private_ipv4:7001
-  fleet:
-     metadata: "role=master"
-     public-ip: $public_ipv4
-  units:
-    - name: etcd2.service
-      command: start
-    - name: fleet.service
-      command: start
+<br/>
+
+    #cloud-config
+
+    coreos:
+      etcd2:
+        discovery: https://discovery.etcd.io/a789492a48d3b72ade3e9fab20443664
+        advertise-client-urls: http://$public_ipv4:2379
+        initial-advertise-peer-urls: http://$private_ipv4:2380
+        # listen on both the official ports and the legacy ports
+        listen-client-urls: http://0.0.0.0:2379,http://0.0.0.0:4001
+        listen-peer-urls: http://$private_ipv4:2380,http://$private_ipv4:7001
+      fleet:
+         metadata: "role=master"
+         public-ip: $public_ipv4
+      units:
+        - name: etcd2.service
+          command: start
+        - name: fleet.service
+          command: start
 
 
 **worker**
+
+<br/>
+
+    $ vi worker/user-data
 
 
     #cloud-config
@@ -293,7 +293,7 @@ coreos:
       etcd2:
         proxy: on
         # use the same discovery token as for master, these nodes will proxy to master
-        discovery: https://discovery.etcd.io/2329624755a7a71b9596b40a5e0ed982
+        discovery: https://discovery.etcd.io/a789492a48d3b72ade3e9fab20443664
         # listen on both the official ports and the legacy ports
         listen-client-urls: http://0.0.0.0:2379,http://0.0.0.0:4001
       fleet:
@@ -307,3 +307,81 @@ coreos:
           command: start
         - name: fleet.service
           command: start
+
+
+
+<br/>
+
+    $ vi master/Vagrantfile
+
+<br/>
+
+    $num_instances = 3
+    $instance_name_prefix = "core-master"
+    $update_channel = "stable"
+    ip = "172.17.8.#{i+102}"
+
+
+<br/>
+
+    $ vi worker/Vagrantfile
+
+<br/>
+
+    $num_instances = 3
+    $instance_name_prefix = "core-worker"
+    $update_channel = "stable"
+    ip = "172.17.8.#{i+105}"
+
+
+
+<br/>
+
+    $ vagrant up
+
+
+<br/>
+
+    $ vagrant ssh core-master-01
+
+<br/>
+
+    $ fleetctl list-machines
+    MACHINE		IP		METADATA
+    113bdafd...	172.17.8.104	role=master
+    3850b7c7...	172.17.8.106	role=worker
+    6acbbc25...	172.17.8.105	role=master
+    7fd2c16c...	172.17.8.103	role=master
+    b5d971b8...	172.17.8.108	role=worker
+    ee3e2e1b...	172.17.8.107	role=worker
+
+
+<br/>
+
+    $ etcdctl member list
+    2adae0d9255f7305: name=113bdafda32c4224a9d6fbaafebafc70 peerURLs=http://172.17.8.104:2380 clientURLs=http://172.17.8.104:2379 isLeader=false
+    77c7ff313654f14f: name=6acbbc25e6ca43a7951c2fd6142e690d peerURLs=http://172.17.8.105:2380 clientURLs=http://172.17.8.105:2379 isLeader=false
+    db29d548a2d79d27: name=7fd2c16c8c1d4801a61e5e5bf5729031 peerURLs=http://172.17.8.103:2380 clientURLs=http://172.17.8.103:2379 isLeader=true
+
+
+<br/>
+
+    $ vagrant ssh core-worker-01
+
+<br/>
+
+    $ fleetctl list-machines
+    MACHINE		IP		METADATA
+    113bdafd...	172.17.8.104	role=master
+    3850b7c7...	172.17.8.106	role=worker
+    6acbbc25...	172.17.8.105	role=master
+    7fd2c16c...	172.17.8.103	role=master
+    b5d971b8...	172.17.8.108	role=worker
+    ee3e2e1b...	172.17.8.107	role=worker
+
+<br/>
+
+    $ etcdctl member list
+    2adae0d9255f7305: name=113bdafda32c4224a9d6fbaafebafc70 peerURLs=http://172.17.8.104:2380 clientURLs=http://172.17.8.104:2379 isLeader=false
+    77c7ff313654f14f: name=6acbbc25e6ca43a7951c2fd6142e690d peerURLs=http://172.17.8.105:2380 clientURLs=http://172.17.8.105:2379 isLeader=false
+    db29d548a2d79d27: name=7fd2c16c8c1d4801a61e5e5bf5729031 peerURLs=http://172.17.8.103:2380 clientURLs=http://172.17.8.103:2379 isLeader=true
