@@ -74,10 +74,14 @@ https://coreos.com/validate/
 
 ### Поехали ставить уже
 
+// Понадобился следующий пакет
+
+    # apt-get install -y gawk
+
 
 // Скачиваю конфиг приведенный выше. Разумеется, в него нужно подставить свой rsa ключ.
 
-    # wget https://raw.githubusercontent.com/sysadm-ru/coreos-cloud-config/master/cloud-config.yaml
+    # wget https://bitbucket.org/sysadm-ru/coreos-cloud-config/raw/304e0cfe50b8492e7d827ed93527ed326f582959/cloud-config.yaml
 
 
 // Запускаю инсталляцию
@@ -85,8 +89,10 @@ https://coreos.com/validate/
     # ./coreos-install -d /dev/sda -C stable -c ./cloud-config.yaml
 
 
-Установка успешно завершается.
+// Установка успешно завершается.
 
+    Installing cloud-config...
+    Success! CoreOS stable 1298.5.0 is installed on /dev/sda
 
 <br/>
 
@@ -95,6 +101,17 @@ https://coreos.com/validate/
     $ ssh core@192.168.1.220
     CoreOS stable (835.11.0)
     core@localhost ~ $
+
+<br/>
+
+    $ docker -v
+    Docker version 1.12.6, build d5236f0
+
+<br/>
+
+    $ git --version
+    git version 2.7.3
+
 
 
 <br/>
@@ -108,7 +125,6 @@ https://coreos.com/validate/
     # vi /var/lib/coreos-install/user_data
 
 
-<br/>
 <br/>
 
 ### Линки на почитать
