@@ -20,4 +20,4 @@ permalink: /linux/containers/coreos/installation/docker-compose/
 Result:
 
     $ docker-compose --version
-    docker-compose version 1.7.0, build 0d7bf73
+    docker-compose version 1.11.2, build dfed245

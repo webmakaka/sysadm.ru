@@ -4,28 +4,6 @@ title: Чат
 permalink: /chat/
 ---
 
-### IRC (Чат)
+# IRC (Чат)
 
-Можно подключиться в браузере к чату админов oracle:<br/>
-Достаточно просто перейти <a href="http://webchat.freenode.net/?channels=%23oracle-dba">по ссылке</a> и ввести login и capcha.
-
-Пока там всеравно тихо, можно и по linux вопросы поздавать, если нужно.
-
-Если постоянно использовать чат, то можно и какой-нибудь клиент установить.
-
-В Windows это может быть MIRC (Я его последний рас использовал лет 12 назад, но он и тогда был крут.)
-
-Сейчас пользуюсь Linux и использую Pigdig.
-
-Server для подключения: irc.freenode.net<br/><br/>
-
-Чтобы переключиться на канал. Можно выполнить команду:
-
-    /join #oracle-dba
-
-
-Или с помощью каких-нибудь менюшек. В PigDig это Conversation -> Join Chat и указать #oracle-dba
-
-<br/><br/>
-
-<strong>Не обещаю, что там кто-нибудь будет, но возможность сидеть в чате есть.</strong>
+[![Join the chat at https://gitter.im/sysadm-ru/Lobby](https://badges.gitter.im/sysadm-ru/Lobby.svg)](https://gitter.im/sysadm-ru/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)

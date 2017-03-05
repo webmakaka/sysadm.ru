@@ -8,15 +8,27 @@
 
     $ cd ~
     $ mkdir -p sysadm.ru && cd sysadm.ru
-    $ git clone --depth=1 https://github.com/sysadm-ru/sysadm.ru .
+    $ git clone --depth=1 https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git .
     $ docker-compose up
 
+// Запустить на background
+
+    $ docker-compose up &
+    $ curl http://localhost:64001
+
 <br/>
 
-Остается в браузере подключиться к localhost:64001
+Остается в браузере подключиться к localhost:65001
 
 
 
 <br/>
 
-### Как сервис на coreos
+### Как сервис на coreos    
+
+    $ sudo su -
+    # cd /home/core/sysadm.ru/
+    # cp sysadm_ru.service /etc/systemd/system
+    # systemctl enable sysadm_ru.service
+    # systemctl start sysadm_ru.service
+    # systemctl status sysadm_ru.service

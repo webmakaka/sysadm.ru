@@ -8,12 +8,15 @@ After=docker.service
 
 Restart=always
 TimeoutStartSec=0
-ExecStartPre=-/usr/bin/docker kill %p-%i
-ExecStartPre=-/usr/bin/docker rm %p-%i
+ExecStartPre=-/usr/bin/docker kill sysadm_ru
+ExecStartPre=-/usr/bin/docker rm sysadm_ru
 ExecStartPre=-/usr/bin/docker pull jekyll/jekyll:pages
-ExecStart=/bin/sh -c '/usr/bin/docker run --name sysadm_ru-%i   \
- -p 64001:4000                        \
- -v .:/srv/jekyll \                      \
- jekyll/jekyll:pages jekyll serve --watch --incremental
-ExecStop=-/usr/bin/docker kill %p-%i
-ExecStop=-/usr/bin/docker rm %p-%i
+ExecStart=/bin/sh -c '/usr/bin/docker run --name sysadm_ru   \
+ -p 65001:4000                        \
+ -v /home/core/sysadm.ru:/srv/jekyll \
+ jekyll/jekyll:pages jekyll serve --watch --incremental'
+ExecStop=-/usr/bin/docker kill sysadm_ru
+ExecStop=-/usr/bin/docker rm sysadm_ru
+
+[Install]
+WantedBy=multi-user.target

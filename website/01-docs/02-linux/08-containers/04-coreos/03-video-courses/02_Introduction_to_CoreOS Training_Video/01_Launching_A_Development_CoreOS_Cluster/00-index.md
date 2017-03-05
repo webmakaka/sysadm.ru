@@ -11,7 +11,7 @@ permalink: /linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Developme
 <br/>
 
 
-[01 Install Dependencies And Boot Your First Cluster](/linux/containers/coreos/installation/vagrant-coreos/)  
+[01 Install Dependencies And Boot Your First Cluster](/linux/containers/coreos/vagrant-coreos/)  
 
 [02 systemd](/linux/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/systemd/)
 
