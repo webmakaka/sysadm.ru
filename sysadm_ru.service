@@ -1,0 +1,16 @@
+[Unit]
+Description=sysadm.ru
+
+Requires=docker.service
+After=docker.service
+
+[Service]
+
+Restart=always
+TimeoutStartSec=0
+ExecStartPre=-/usr/bin/docker kill %p-%i
+ExecStartPre=-/usr/bin/docker rm %p-%i
+ExecStartPre=-/usr/bin/docker pull jekyll/jekyll:pages
+ExecStart=/usr/local/bin/docker-compose up
+ExecStop=-/usr/bin/docker kill %p-%i
+ExecStop=-/usr/bin/docker rm %p-%i
