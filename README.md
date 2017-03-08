@@ -11,7 +11,7 @@
     $ git clone --depth=1 https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git .
     $ docker-compose up
 
-// Запустить на background
+// Запустить background
 
     $ docker-compose up &
     $ curl http://localhost:64001
