@@ -204,3 +204,43 @@ flannel - виртуальная сеть, которая предоставля
     $ journalctl -u	etcd2.service —since today : This lists today’s logs of etcd2.service.
 
     $ journalctl -u	etcd2.service -o json-pretty :	This lists the logs of etcd2.service in JSON-formatted output.
+
+
+<br/>
+
+
+### Important	files	and	directories
+
+* Knowing	these	files	and	directories	helps	with	debugging	the	issues:
+
+* Systemd	unit	file	location	-	 /usr/lib64/systemd/system .
+
+* Network	unit	files	 -	/usr/lib64/systemd/network .
+
+* User-written	unit	files	and	drop-ins	to	change	the	default	parameters	 -
+/etc/systemd/system .	Drop-ins	for	specific	configuration	changes	can	be	done
+using	the	configuration	file	under	the	specific	service	directory.	For	example,	to
+modify	the	fleet	configuration,	create	the	 fleet.service.d 	directory	and	put	the
+configuration	file	in	this	directory.
+
+* User-written	network	unit	files	 -	/etc/systemd/network .
+
+* Runtime	environment	variables	and	drop-in	configuration	of	individual	components
+such	as	 etcd 	and	 fleet 	 -	/run/systemd/system/ .
+
+* The	vagrantfile	user	data	containing	the	 cloud-config 	user	data	used	with	Vagrant	 - /var/lib/coreos-vagrant .
+
+* The	 systemd-journald 	logs	 -	/var/log/journal .
+
+* cloud-config.yaml 	associated	with	providers	such	as	Vagrant,	AWS,	and	 GCE-
+/usr/share/oem .	(CoreOS	first	executes	this	 cloud-config 	and	then	executes	the
+user-provided	 cloud-config .)
+
+* Release	channel	and	update	strategy	 -	/etc/coreos/update.conf .
+
+* The	public	and	private	IP	address	( COREOS_PUBLIC_IPV4 	and	 COREOS_PRIVATE_IPV4 )
+-	/etc/environment .
+
+* The	machine	ID	for	the	particular CoreOS node - /etc/machine-id .
+
+* The	flannel	network	configuration	 -	/run/flannel/ .

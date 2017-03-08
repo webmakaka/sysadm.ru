@@ -16,8 +16,6 @@ permalink: /linux/containers/coreos/
 <br/>
 
 
-
-
 ### Запуск CoreOS с помощью Vargrant
 
 [Запуск CoreOS с помощью Vargrant](/linux/containers/coreos/vagrant-coreos/)  
