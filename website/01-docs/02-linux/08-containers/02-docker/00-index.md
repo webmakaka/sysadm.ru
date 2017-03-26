@@ -85,6 +85,13 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 <br/>
 
+### Запуск Docker контейнера
+
+[Запуск Ubuntu Docker контейнера](/linux/containers/docker/run/)  
+
+
+<br/>
+
 ### Docker Tools
 
 Docker-Compose (для совместной работы контейнеров)  

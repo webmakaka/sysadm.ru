@@ -105,12 +105,11 @@ https://discovery.etcd.io/new
 
 <br/>
 
-    <!-- $ cd node1/ -->
+<!-- $ cd node1/ -->
 
-    <!-- $ cp config.rb.sample config.rb -->
-    <!-- $ cp user-data.sample user-data -->
+<!-- $ cp config.rb.sample config.rb -->
+<!-- $ cp user-data.sample user-data -->
 
-<br/>
 
     $ cd ../
 

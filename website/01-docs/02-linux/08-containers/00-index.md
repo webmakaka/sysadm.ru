@@ -9,7 +9,7 @@ permalink: /linux/containers/
 
 <br/>
 
-### CoreOS (хостовые операционные системы для docker контейнеров)
+### Хостовые операционные системы для docker контейнеров
 
 [CoreOS](/linux/containers/coreos/)
 
@@ -18,7 +18,10 @@ Rancher OS (Rancher Labs)
 Atomic (RedHat)
 
 
+
 <br/>
+
+### Контейнеры
 
 ### [Linux Containers (LXC)](/linux/containers/lxc/)
 
