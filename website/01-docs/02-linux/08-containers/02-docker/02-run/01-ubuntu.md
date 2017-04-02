@@ -15,7 +15,7 @@ permalink: /linux/containers/docker/run/
 
 // Для работы нужно что-то поставить
 
-    # apt-get install -y git wget curl
+    # apt-get install -y git wget curl iputils-ping
 
 
 <br/>

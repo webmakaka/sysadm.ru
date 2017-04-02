@@ -14,6 +14,9 @@ permalink: /linux/dev/git/
 
 ### [Создание сервера GIT в centos 6 с несколькими пользователями](/linux/dev/git/git-server/centos/6/ver2/)
 
+
+# GitLab
+
 ### [Инсталляция GITLAB в centos 6 из пакетов](/linux/dev/git/gitlab/centos/6/)
 
 <br/>

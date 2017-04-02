@@ -59,11 +59,6 @@ http://blog.asidorov.name/2014/07/gitlab.html
 https://github.com/gitlabhq/gitlab-recipes/blob/master/install/centos/README.md
 
 
-
-
-
-
-
 Omnibus package installation (recommended)  
 https://about.gitlab.com/installation/
 
