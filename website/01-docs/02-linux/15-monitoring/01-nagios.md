@@ -69,7 +69,7 @@ permalink: /linux/monitoring/nagios/
 
 <br/>
 
-###(optional) link nagios-version to /usr/local/nagios
+### (optional) link nagios-version to /usr/local/nagios
 
     sudo ln -s /usr/local/nagios-4.1.1 /usr/local/nagios
     sudo ln -s /usr/local/nagios/etc /etc/nagios
