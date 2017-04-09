@@ -15,6 +15,8 @@ permalink: /linux/containers/docker/run/
 
     $ docker run -i -t -p 80:8080 ubuntu:latest  /bin/bash
 
+<br/>
+
     # apt-get update
 
 

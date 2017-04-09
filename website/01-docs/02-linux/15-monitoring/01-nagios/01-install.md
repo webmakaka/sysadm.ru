@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Инсталляция Nagios в Ubuntu Linux
+title: Инсталляция Nagios в Ubuntu Linux (Xenial)
 permalink: /linux/monitoring/nagios/install/
 ---
 
 
-### Инсталляция Nagios в Ubuntu Linux
+### Инсталляция Nagios в Ubuntu Linux (Xenial)
 
 <br/>
 
