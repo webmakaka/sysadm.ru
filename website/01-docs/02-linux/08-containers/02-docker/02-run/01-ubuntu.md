@@ -10,12 +10,21 @@ permalink: /linux/containers/docker/run/
 
 
     $ docker run -i -t ubuntu:latest /bin/bash
+
+Если это будет webserver, то команда может быть следующей, чтобы можно было при обращении к порту 80 локалхоста подключаться к порту 8080 контейнера
+
+    $ docker run -i -t -p 80:8080 ubuntu:latest  /bin/bash
+
     # apt-get update
 
 
-// Для работы нужно что-то поставить
+// Для работы лично мне нужно поставить
 
-    # apt-get install -y git wget curl iputils-ping
+    # apt-get install -y vim git wget curl iputils-ping net-tools
+
+# Если предстоит что-то компилить
+
+    # apt-get install -y build-essential
 
 
 <br/>

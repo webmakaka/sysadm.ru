@@ -57,15 +57,3 @@ http://blog.asidorov.name/2014/07/gitlab.html
 
 По хорошему, нужно настроить по этим шагам:  
 https://github.com/gitlabhq/gitlab-recipes/blob/master/install/centos/README.md
-
-
-Omnibus package installation (recommended)  
-https://about.gitlab.com/installation/
-
-
-Installation from source  
-https://docs.gitlab.com/ce/install/installation.html
-
-
-GitLab Docker images  
-https://docs.gitlab.com/omnibus/docker/README.html
