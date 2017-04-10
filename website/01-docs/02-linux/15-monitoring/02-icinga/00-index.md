@@ -7,4 +7,4 @@ permalink: /linux/monitoring/icinga/
 # Icinga в Linux
 
 
-### [Инсталляция Icinga в Ubuntu Linux](/linux/monitoring/icinga/install/)
+### [Инсталляция Icinga в Ubuntu Linux](/linux/monitoring/icinga/)

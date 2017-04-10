@@ -6,11 +6,17 @@ permalink: /linux/monitoring/icinga/install/
 
 ### Инсталляция Icinga в Ubuntu Linux (Xenial)
 
-<br/>
+<br/
 
 https://docs.icinga.com/icinga2/latest/doc/module/icinga2/chapter/getting-started#!/icinga2/latest/doc/module/icinga2/chapter/getting-started#setting-up-icinga2
 
 https://github.com/Icinga/icingaweb2/blob/master/doc/02-Installation.md
+
+
+
+Надо будет посмотреть:  
+https://www.youtube.com/watch?v=UQ0xAizmgKI
+https://www.youtube.com/watch?v=aE9B0ghweCo
 
 <br/>
 
@@ -37,80 +43,6 @@ https://github.com/Icinga/icingaweb2/blob/master/doc/02-Installation.md
 
     # ./configure
     # make && make install
-
-
-<br/>
-
-### MySQL
-
-    # apt-get install -y mysql-server mysql-client
-    # service mysql restart
-
-    # mysql -u root -p
-
-    CREATE DATABASE icinga2;
-
-    GRANT SELECT, INSERT, UPDATE, DELETE, DROP, CREATE VIEW, INDEX, EXECUTE ON icinga2.* TO 'icinga2'@'localhost' IDENTIFIED BY 'icinga2';
-
-
-<br/>
-
-    CREATE DATABASE icingaweb2;
-
-    GRANT SELECT, INSERT, UPDATE, DELETE, DROP, CREATE VIEW, INDEX, EXECUTE ON icingaweb2.* TO 'icingaweb2'@'localhost' IDENTIFIED BY 'icingaweb2';
-
-    quit
-
-<!-- <br/>
-
-    mysql -p icingaweb2
-
-    INSERT INTO icingaweb_user (name, active, password_hash) VALUES ('icingaadmin', 1, '$1$EzxLOFDr$giVx3bGhVm4lDUAw6srGX1');
-    quit -->
-
-
-<br/>
-
-    # vi /etc/icingaweb2/resources.ini
-
-
-{% highlight text %}
-
-[icingaweb2]
-type                = "db"
-db                  = "mysql"
-host                = "localhost"
-port                = "3306"
-dbname              = "icingaweb2"
-username            = "icingaweb2"
-password            = "icingaweb2"
-
-
-[icinga2]
-type                = "db"
-db                  = "mysql"
-host                = "localhost"
-port                = "3306"
-dbname              = "icinga2"
-username            = "icinga2"
-password            = "icinga2"
-
-{% endhighlight %}
-
-    <!-- # mysql -u root -p icinga </usr/share/icinga2-ido-mysql/schema/mysql.sql -->
-    # mysql -p icinga2 < /usr/share/icinga2-ido-mysql/schema/mysql.sql
-
-
-Возможно, что она должна здесь быть:
-
-    /usr/share/icingaweb2/etc/schema/mysql.schema.sql
-
-    # mysql -p icingaweb2 < /usr/share/doc/icingaweb2/schema/mysql.schema.sql
-
-
-icingaweb_group
-
-    https://raw.githubusercontent.com/Icinga/icingaweb2/master/etc/schema/mysql.schema.sql
 
 
 <br/>
@@ -150,9 +82,102 @@ icingaweb_group
     # icingacli setup config directory
 
     # icingacli setup token create    
-    The newly generated setup token is: 7e07c7f0d3ffd2e2
+    The newly generated setup token is: d0b6c72e28c5a825
 
     # service icinga2 restart
+
+
+
+
+
+<br/>
+
+### MySQL
+
+    # apt-get install -y mysql-server mysql-client
+    # service mysql restart
+
+    # mysql -u root -p
+
+    CREATE DATABASE icinga2;
+
+    GRANT SELECT, INSERT, UPDATE, DELETE, DROP, CREATE VIEW, INDEX, EXECUTE ON icinga2.* TO 'icinga2'@'localhost' IDENTIFIED BY 'icinga2';
+
+
+<br/>
+
+    CREATE DATABASE icingaweb2;
+
+    GRANT SELECT, INSERT, UPDATE, DELETE, DROP, CREATE VIEW, INDEX, EXECUTE ON icingaweb2.* TO 'icingaweb2'@'localhost' IDENTIFIED BY 'icingaweb2';
+
+    quit
+
+
+
+    # openssl passwd -1 myPass
+
+
+ <br/>
+
+    # mysql -p icingaweb2
+
+
+
+    INSERT INTO icingaweb_user (name, active, password_hash) VALUES ('icingaadmin', 1, '$1$3HDF03w4$2EYLIAMJILGaQtMRbPSED1');
+
+    quit
+
+
+
+
+<br/>
+
+    <!-- # mysql -u root -p icinga </usr/share/icinga2-ido-mysql/schema/mysql.sql -->
+    # mysql -p icinga2 < /usr/share/icinga2-ido-mysql/schema/mysql.sql
+
+
+    # mysql -p icingaweb2 < /usr/share/icingaweb2/etc/schema/mysql.schema.sql
+
+
+Возможно, позднее схема будет расположена здесь:
+
+    # mysql -p icingaweb2 < /usr/share/doc/icingaweb2/schema/mysql.schema.sql
+
+
+
+<br/>
+
+    # vi /etc/icingaweb2/resources.ini
+
+
+{% highlight text %}
+
+[icingaweb2]
+type                = "db"
+db                  = "mysql"
+host                = "localhost"
+port                = "3306"
+dbname              = "icingaweb2"
+username            = "icingaweb2"
+password            = "icingaweb2"
+
+
+[icinga2]
+type                = "db"
+db                  = "mysql"
+host                = "localhost"
+port                = "3306"
+dbname              = "icinga2"
+username            = "icinga2"
+password            = "icinga2"
+
+{% endhighlight %}
+
+
+icingaweb_group
+
+    https://raw.githubusercontent.com/Icinga/icingaweb2/master/etc/schema/mysql.schema.sql
+
 
 
 <br/>
@@ -163,11 +188,6 @@ icingaweb_group
     вставляю token
 
 <br/>
-<br/>
-<br/>
-<br/>
 
 
-There is currently no icinga instance writing to the IDO. Make sure that a icinga instance is configured and able to write to the IDO.
-
-http://serverfault.com/questions/743426/there-is-currently-no-icinga-instance-writing-to-the-ido
+icingaweb2 / icingaweb2
