@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Конфигурирование Nagios для мониторинга хостов
-permalink: /linux/monitoring/nagios/automating-configuration/
+permalink: /linux/monitoring/nagios/ubuntu/16.04/automating-configuration/
 ---
 
 
-### Конфигурирование Nagios для мониторинга хостов
+# Конфигурирование Nagios для мониторинга хостов
 
 <br/>
 

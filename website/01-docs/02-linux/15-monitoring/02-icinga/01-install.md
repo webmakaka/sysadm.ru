@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Инсталляция Icinga в Ubuntu Linux (Xenial)
-permalink: /linux/monitoring/icinga/install/
+permalink: /linux/monitoring/icinga/ubuntu/16.04/install/
 ---
 
-### Инсталляция Icinga в Ubuntu Linux (Xenial)
+# Инсталляция Icinga в Ubuntu Linux (Xenial)
 
-<br/
+<br/>
 
 https://docs.icinga.com/icinga2/latest/doc/module/icinga2/chapter/getting-started#!/icinga2/latest/doc/module/icinga2/chapter/getting-started#setting-up-icinga2
 
@@ -15,6 +15,7 @@ https://github.com/Icinga/icingaweb2/blob/master/doc/02-Installation.md
 
 
 Надо будет посмотреть:  
+
 https://www.youtube.com/watch?v=UQ0xAizmgKI
 https://www.youtube.com/watch?v=aE9B0ghweCo
 
@@ -113,7 +114,6 @@ https://www.youtube.com/watch?v=aE9B0ghweCo
     quit
 
 
-
     # openssl passwd -1 myPass
 
 
@@ -122,12 +122,9 @@ https://www.youtube.com/watch?v=aE9B0ghweCo
     # mysql -p icingaweb2
 
 
-
     INSERT INTO icingaweb_user (name, active, password_hash) VALUES ('icingaadmin', 1, '$1$3HDF03w4$2EYLIAMJILGaQtMRbPSED1');
 
     quit
-
-
 
 
 <br/>
@@ -143,7 +140,7 @@ https://www.youtube.com/watch?v=aE9B0ghweCo
 
     # mysql -p icingaweb2 < /usr/share/doc/icingaweb2/schema/mysql.schema.sql
 
-
+<!--
 
 <br/>
 
@@ -177,7 +174,7 @@ password            = "icinga2"
 icingaweb_group
 
     https://raw.githubusercontent.com/Icinga/icingaweb2/master/etc/schema/mysql.schema.sql
-
+ -->
 
 
 <br/>

@@ -7,9 +7,9 @@ permalink: /linux/monitoring/nagios/
 # Nagios в Linux
 
 
-### [Инсталляция Nagios в Ubuntu Linux](/linux/monitoring/nagios/install/)
+### [Инсталляция Nagios в Ubuntu Linux](/linux/monitoring/nagios/ubuntu/16.04/install/)
 
-### [Конфигурирование Nagios для мониторинга хостов](/linux/monitoring/nagios/configure/)
+### [Конфигурирование Nagios для мониторинга хостов](/linux/monitoring/nagios/ubuntu/16.04/configure/)
 
 <br/>
 

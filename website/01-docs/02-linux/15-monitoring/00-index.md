@@ -9,6 +9,7 @@ permalink: /linux/monitoring/
 
 ### [Nagios](/linux/monitoring/nagios/)
 
-### [Icinga (Форк Nagios)](/linux/monitoring/nagios/)
+### [Icinga (Форк Nagios)](/linux/monitoring/icinga/)
 
-### Zabbix
+
+### [Zabbix)](/linux/monitoring/zabbix/)
