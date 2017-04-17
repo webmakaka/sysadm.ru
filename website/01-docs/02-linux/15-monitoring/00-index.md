@@ -7,9 +7,8 @@ permalink: /linux/monitoring/
 # Мониторинг серверов и рабочих станций в Linux
 
 
+### [Zabbix)](/linux/monitoring/zabbix/)
+
 ### [Nagios](/linux/monitoring/nagios/)
 
 ### [Icinga (Форк Nagios)](/linux/monitoring/icinga/)
-
-
-### [Zabbix)](/linux/monitoring/zabbix/)
