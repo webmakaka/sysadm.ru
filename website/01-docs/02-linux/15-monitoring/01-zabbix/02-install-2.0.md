@@ -127,7 +127,6 @@ login: Admin/zabbix
     # service apache2 restart
 
 
-
 <br/>
 
 Configuration --> Hosts --> Enable

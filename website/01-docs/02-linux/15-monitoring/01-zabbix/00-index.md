@@ -9,4 +9,4 @@ permalink: /linux/monitoring/zabbix/
 
 ### [Инсталляция Zabbix 3.X в Ubuntu Linux 16.04 (Xenial)](/linux/monitoring/zabbix/3.x/ubuntu/16.04/install/)
 
-### [Инсталляция Zabbix 2.X в Ubuntu Linux 16.04 (Xenial)](/linux/monitoring/zabbix/2.x/ubuntu/16.04/install/)
+### [Инсталляция Zabbix 2.X в Ubuntu Linux 16.04 (Xenial)](/slinux/monitoring/zabbix/2.x/ubuntu/16.04/install/)

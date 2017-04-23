@@ -24,13 +24,18 @@ https://www.zabbix.com/documentation/3.2/manual/installation/install_from_packag
 
     # service mysql restart
 
+<br/>
+
     shell> mysql -uroot
     mysql> create database zabbix character set utf8 collate utf8_bin;
     mysql> grant all privileges on zabbix.* to zabbix@localhost identified by 'P@SSW0RD';
     mysql> quit;
 
+<br/>
+
     # zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | mysql -uzabbix -p zabbix
 
+<br/>
 
     # vi /etc/zabbix/zabbix_server.conf
     DBHost=localhost
@@ -44,14 +49,13 @@ https://www.zabbix.com/documentation/3.2/manual/installation/install_from_packag
     # update-rc.d zabbix-server enable
 
 
-
-<br/>
+<!-- <br/>
 
     # vi /etc/zabbix/apache.conf
 
     (может быть еще в этом нужно указать # vi /etc/php/7.0/cli/php.ini)
 
-    php_value date.timezone Europe/Moscow
+    php_value date.timezone Europe/Moscow -->
 
 <br/>
 
@@ -62,6 +66,15 @@ https://www.zabbix.com/documentation/3.2/manual/installation/install_from_packag
 <br/>
 
     # apt-get install -y php-bcmath php-mbstring php-xmlwriter php-xmlreader
+
+<br/>
+
+// Чтобы можно было обращаться к серверу по url без префикса zabbix
+
+    # vi /etc/apache2/sites-enabled/000-default.conf
+
+    # DocumentRoot /var/www/html
+    DocumentRoot /usr/share/zabbix
 
 <br/>
 
@@ -102,3 +115,27 @@ login: Admin/zabbix
 ### Настройка Zabbix на мониторинг сайтов:
 
 https://www.youtube.com/watch?v=EWV8A29wvlk
+
+
+Configuration --> Hosts --> Zabbix server --> Enable
+
+
+Configuration --> Hosts --> Applications --> Create Application --> WebSites
+
+
+// Повторять при добавлении нового хоста:
+
+Configuration --> Hosts --> Zabbix server --> Web Scenarios --> Create Web Scenario
+
+Name: Hostname
+Application: WebSites
+
+Steps --> add -->
+
+Name: index
+url: hostname
+require status codes: 200
+
+Monitoring --> Latest data --> zabbix server --> latest data --> Websites
+
+Monitoring --> Web
