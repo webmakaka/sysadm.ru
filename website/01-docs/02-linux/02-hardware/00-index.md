@@ -31,3 +31,26 @@ permalink: /linux/hardware/
 ### VideoCard
 
 [Установить в Ubuntu nvidia драйвера вместо opensource](/linux/hardware/videocard/ubuntu/drivers/nvidia/)
+
+
+// Узнать сколько видеокарта использует GPU памяти
+    $ watch -n 1 nvidia-smi
+
+
+    Thu May 11 21:42:29 2017       
+    +------------------------------------------------------+                       
+    | NVIDIA-SMI 340.101    Driver Version: 340.101        |                       
+    |-------------------------------+----------------------+----------------------+
+    | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+    | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+    |===============================+======================+======================|
+    |   0  GeForce 9800 GT...  Off  | 0000:04:00.0     N/A |                  N/A |
+    | 35%   59C    P0    N/A /  N/A |    321MiB /   511MiB |     N/A      Default |
+    +-------------------------------+----------------------+----------------------+
+
+    +-----------------------------------------------------------------------------+
+    | Compute processes:                                               GPU Memory |
+    |  GPU       PID  Process name                                     Usage      |
+    |=============================================================================|
+    |    0            Not Supported                                               |
+    +-----------------------------------------------------------------------------+
