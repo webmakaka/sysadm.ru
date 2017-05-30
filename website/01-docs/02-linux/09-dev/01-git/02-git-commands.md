@@ -9,7 +9,7 @@ permalink: /linux/dev/git/commands/
 
 // Задать парамеры идентификации git
 
-    $ git config my_nick_name
+    $ git config user.name my_nick_name
     $ git config user.email "my_email@myEmail.ru"
 
 
