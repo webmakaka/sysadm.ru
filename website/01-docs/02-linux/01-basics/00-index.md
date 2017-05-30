@@ -22,3 +22,14 @@ permalink: /linux/basics/
 
 
 ### [Команды запуска сервисов systemd (systemctl)](/linux/basics/systemctl/)
+
+
+<br/>
+
+## Centos 7.x
+
+### [Инсталляция Chrome в Centos 7.x](/linux/basics/centos/7/chrome/)
+
+Смена раскладка клавиатуры по Shift + ALT.
+
+Systems tools > settings > keyboard > shortcuts tab > typing > modifiers - only switch to next source > from the drop down menu choose alt+shift

@@ -35,4 +35,4 @@ https://adblockplus.org/
 
 
 Статья как лучше настроить:  
-https://adblockplus.org/tutorials#tracking
+https://adblockplus.org/en/features#socialmedia
