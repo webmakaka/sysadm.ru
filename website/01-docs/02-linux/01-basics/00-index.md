@@ -30,6 +30,6 @@ permalink: /linux/basics/
 
 ### [Инсталляция Chrome в Centos 7.x](/linux/basics/centos/7/chrome/)
 
-Смена раскладка клавиатуры по Shift + ALT.
+### [Смена раскладка клавиатуры по Shift + ALT в Centos 7.x](/linux/basics/centos/7/keyboard-switch-by-shift-and-alt/)
 
-Systems tools > settings > keyboard > shortcuts tab > typing > modifiers - only switch to next source > from the drop down menu choose alt+shift
+### [Смонтировать NTFS в Centos 7.x](/linux/basics/centos/7/mount-ntfs/)
