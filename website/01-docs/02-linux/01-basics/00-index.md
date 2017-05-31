@@ -33,3 +33,7 @@ permalink: /linux/basics/
 ### [Смена раскладка клавиатуры по Shift + ALT в Centos 7.x](/linux/basics/centos/7/keyboard-switch-by-shift-and-alt/)
 
 ### [Смонтировать NTFS в Centos 7.x](/linux/basics/centos/7/mount-ntfs/)
+
+### [Работа с репозиториями в Centos 7](/linux/basics/centos/7/working-with-repos/)
+
+### [Инсталляция VLC в Centos 7](/linux/basics/centos/7/vlc/)
