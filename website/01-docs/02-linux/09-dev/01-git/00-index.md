@@ -6,7 +6,7 @@ permalink: /linux/dev/git/
 
 # Git в Linux
 
-### [Инсталляция GIT в centos 6.x из исходников](/linux/dev/git/installation/centos/6/)
+### [Инсталляция GIT из исходников](/linux/dev/git/install/)
 
 ### [Некоторые команды GIT](/linux/dev/git/commands/)
 

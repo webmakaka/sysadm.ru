@@ -94,6 +94,10 @@ permalink: /linux/dev/git/commands/
 
     $ git push -u origin my_new_branch
 
+// Иногда вот так приходится делать
+
+    $ git push --set-upstream origin my_new_branch
+
 
 <br/>
 

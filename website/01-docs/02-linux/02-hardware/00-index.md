@@ -26,6 +26,23 @@ permalink: /linux/hardware/
 [HDD / SSD и другие блочные устройства в Linux](/linux/hardware/hdd/)
 
 
+
+
+<br/>
+
+### Информация об используемой памяти
+
+    $ egrep --color 'Mem|Cache|Swap' /proc/meminfo
+    MemTotal:        7801672 kB
+    MemFree:          137984 kB
+    MemAvailable:     230696 kB
+    Cached:           797396 kB
+    SwapCached:        12904 kB
+    SwapTotal:       4718588 kB
+    SwapFree:        1245060 kB
+
+
+
 <br/>
 
 ### VideoCard

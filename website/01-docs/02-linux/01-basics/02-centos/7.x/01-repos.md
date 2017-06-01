@@ -8,6 +8,9 @@ permalink: /linux/basics/centos/7/repos/
 
 # Публичные репозитории Centos
 
+<br/>
+
+**RPMForge/RepoForge both projects are dead and should not be used – Please use EPEL Repository.**
 
 <br/>
 
@@ -22,12 +25,24 @@ permalink: /linux/basics/centos/7/repos/
     gpgcheck=1
     enabled=1
 
+
+<br/>
+
+
+### EPEL Repository
+
+
+    # rpm -Uvh http://fedora-mirror01.rbc.ru/pub/epel/epel-release-latest-7.noarch.rpm
+
 <br/>
 
 
 ### rpmfusion
 
     # rpm -Uvh https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
+
+
+
 
 
 <br/>
