@@ -28,12 +28,10 @@ permalink: /linux/basics/
 
 ## Centos 7.x
 
-### [Инсталляция Chrome в Centos 7.x](/linux/basics/centos/7/chrome/)
+### [Публичные репозитории](/linux/basics/centos/7/repos/)
 
 ### [Смена раскладка клавиатуры по Shift + ALT в Centos 7.x](/linux/basics/centos/7/keyboard-switch-by-shift-and-alt/)
 
+### [Инсталляция популярных программ в Centos 7.x](/linux/basics/centos/7/install-popular-programms/)
+
 ### [Смонтировать NTFS в Centos 7.x](/linux/basics/centos/7/mount-ntfs/)
-
-### [Работа с репозиториями в Centos 7](/linux/basics/centos/7/working-with-repos/)
-
-### [Инсталляция VLC в Centos 7](/linux/basics/centos/7/vlc/)

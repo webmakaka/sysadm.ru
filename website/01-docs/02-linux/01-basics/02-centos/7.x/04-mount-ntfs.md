@@ -15,13 +15,11 @@ permalink: /linux/basics/centos/7/mount-ntfs/
 
     # rpm -ivh epel-release-latest-7.noarch.rpm
 
-    # yum clean all
-
-    # yum update -y
+    # yum clean all && yum update
 
     # yum install -y ntfs-3g ntfsprogs
 
-
+n
 <br/>
 
 ### При необходимости смотрировать в режими только для чтения:
