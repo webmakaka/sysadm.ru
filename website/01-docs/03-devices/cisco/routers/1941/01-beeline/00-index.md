@@ -56,6 +56,8 @@ GigabitEthernet0/0 - присвоен мой статический IP. Ране
 
 ### Настройка роутера для работы в домашней сети Билайн
 
+<a href="/devices/cisco/routers/1941/beeline-not-works/">Cisco Router 1941 если отвалился интернет в локальной сети Билайн</a>
+
 <a href="/devices/cisco/routers/1941/beeline-port-forwarding/">Cisco Router 1941 Проброс порта в локальную сеть Билайн</a> (WebServer)
 
 
