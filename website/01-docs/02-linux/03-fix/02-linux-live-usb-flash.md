@@ -15,6 +15,12 @@ permalink: /linux/fix/linux-live-usb-flash/
 
 Только нужно убедиться, в правильности раздела на который нужно записывать, иначе можете все нахер уничтожить.
 
+<br/>
+
+    # ls /dev/sd*
+    # fdisk -l /dev/sdf
+
+<br/>
 
 **Главное не перепутать диск!**
 
@@ -24,3 +30,8 @@ permalink: /linux/fix/linux-live-usb-flash/
 **С дебианом тоже работает**
 
     # dd if=./debian-8.6.0-amd64-DVD-1.iso of=/dev/sdg
+
+
+**С ubuntu тоже работает**
+
+    # dd if=./ubuntu-14.04.5-desktop-amd64.iso of=/dev/sdf
