@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Некоторые команды GIT
+title: Основные команды GIT
 permalink: /linux/dev/git/commands/
 ---
 
-# Некоторые команды GIT
+# Основные команды GIT
 
 
 // Конфиг
@@ -153,10 +153,7 @@ https://ru.stackoverflow.com/questions/462251/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D1
 
 <br/>
 
-### Некоторые команды:
-
-
-// Выделение цветом
+### Выделение цветом
 
     $ git config --global color.ui true
 
@@ -164,14 +161,17 @@ https://ru.stackoverflow.com/questions/462251/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D1
 https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 
 
-// Не отслеживать изменения chmod
+<br/>
+
+### Не отслеживать изменения chmod
 
     $ git config core.fileMode false
 
 
 
+<br/>
 
-// Показывать текущую ветку (branch) в консоли:
+### Показывать текущую ветку (branch) в консоли:
 
     $ curl -o ~/.git-prompt.sh \
     https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
@@ -187,3 +187,25 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 или
 
     $ export PS1='Geoff[\W]$(__git_ps1 "(%s)"): '
+
+
+
+
+<br/>
+
+### both modified - выбрать одну из сторон, не делая ручной merge (пока изучаю)
+
+
+If you're already in conflicted state, and you want to just accept all of theirs:
+
+    git checkout --theirs .
+    git add .
+
+If you want to do the opposite:
+
+    git checkout --ours .
+    git add .
+
+This is pretty drastic, so make sure you really want to wipe everything out like this before doing it.
+
+https://stackoverflow.com/questions/10697463/resolve-git-merge-conflicts-in-favor-of-their-changes-during-a-pull

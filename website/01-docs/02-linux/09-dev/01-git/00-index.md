@@ -8,7 +8,7 @@ permalink: /linux/dev/git/
 
 ### [Инсталляция GIT из исходников](/linux/dev/git/install/)
 
-### [Некоторые команды GIT](/linux/dev/git/commands/)
+### [Основные команды GIT](/linux/dev/git/commands/)
 
 ### [Создание сервера GIT в centos 6 с единственным пользователем git](/linux/dev/git/git-server/centos/6/ver1/)
 
