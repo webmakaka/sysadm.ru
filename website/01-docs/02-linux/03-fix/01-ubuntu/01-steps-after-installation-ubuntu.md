@@ -192,7 +192,7 @@ menu:minimize,maximize,close
 
     снять галочку --> Use colors from system theme
 
-    Экран белый, шрифт черный.
+    Buil-in schemes: Black on white
 
 
 

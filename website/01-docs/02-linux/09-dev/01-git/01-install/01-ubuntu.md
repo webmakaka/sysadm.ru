@@ -8,17 +8,17 @@ permalink: /linux/dev/git/install/ubuntu/
 # Инсталляция GIT из исходников в Ubuntu
 
 
-    $ sudo apt-get install -y git
-    $ git --version
-    $ cd /tmp
-    $ git clone https://github.com/git/git.git
-    $ cd git/
-    $ less RelNotes
-    Git v1.8.4
+    # apt-get install -y git
+    # git --version
+    # cd /tmp
+    # git clone --depth=1 https://github.com/git/git.git
+    # cd git/
+    # less RelNotes
+    Git 2.14 Release Notes
 
 <br/>
 
-    # sudo apt-get install -y \
+    # apt-get install -y \
     libcurl4-gnutls-dev \
     libexpat1-dev \
     gettext \
@@ -28,36 +28,47 @@ permalink: /linux/dev/git/install/ubuntu/
 
 <br/>
 
-    $ make prefix=/opt/git/1.8.4 all
-    $ sudo make prefix=/opt/git/1.8.4 install
+    # make prefix=/opt/git/2.14 all
+    # make prefix=/opt/git/2.14 install
+
 
 <br/>
 
-    $ sudo apt-get remove -y git
+    # /opt/git/2.14/bin/git --version
+    git version 2.13.1.516.g05ec6e1
 
 <br/>
 
-    $ /opt/git/1.8.4/bin/git --version
-    git version 1.8.3.1.437.g0dbd812
+    # apt-get remove -y git
+
 
 <br/>
 
-    $ vi ~/.bash_profile
+    # su - <user_name>
+
+<br/>
+
+    # ln -s /opt/git/2.14 /opt/git/current
+
+
+<br/>
+
+    $ vi ~/.bashrc
 
 <br/>
 
     #### GIT ##############################
 
-        export GIT_HOME=/opt/git/1.8.4
+        export GIT_HOME=/opt/git/current
         export PATH=$PATH:$GIT_HOME/bin
 
     #### GIT ##############################
 
 <br/>
 
-    $ source ~/.bash_profile
+    $ logout
 
 <br/>
 
     $ git --version
-    git version 1.8.3.1.437.g0dbd812
+    git version 2.13.1.516.g05ec6e1

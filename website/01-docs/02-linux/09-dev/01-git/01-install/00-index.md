@@ -10,4 +10,4 @@ permalink: /linux/dev/git/install/
 
 ### [Ubuntu](/linux/dev/git/install/ubuntu/)
 
-### [Ubuntu](/linux/dev/git/install/centos/)
+### [Centos](/linux/dev/git/install/centos/)
