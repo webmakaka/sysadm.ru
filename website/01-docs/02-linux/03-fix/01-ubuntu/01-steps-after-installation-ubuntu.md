@@ -113,6 +113,23 @@ menu:minimize,maximize,close
 <img src="//files.sysadm.ru/img/linux/basics/ubuntu/steps-after-installation/regional-formats.png" alt="Ubuntu Region Formats">
 
 
+<br/>
+
+### Первый день недели - понедельник
+
+    $ cd ~
+    $ cp .pam_environment .pam_environment.orig
+    $ vi .pam_environment
+
+добавить:
+
+    #Change first day of week to Monday
+    export LC_TIME=en_GB.UTF-8
+    #Change to metric system
+    export LC_MEASUREMENT=en_GB.UTF-8
+
+
+
 
 <br/>
 
