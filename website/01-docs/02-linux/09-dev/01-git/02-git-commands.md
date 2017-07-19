@@ -101,6 +101,24 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
+### Push
+
+-- отправить все бранчи на удаленный сервер
+
+    $ git push --all -u
+
+<br/>
+
+###  Посмотреть что поменялось
+
+<br/>
+
+-- посмотреть изменения только названия фалов
+
+    $ git diff --name-only 06be2bf42c94c669f2c656593b10716fee7ad6dc
+
+<br/>
+
 ###  Отменить сделанные изменения (все данные потеряются)
 
     $ git reset --hard
@@ -111,7 +129,11 @@ permalink: /linux/dev/git/commands/
 ###  Добавить изменения в мастер ветку
 
     $ git checkout master
-    $ git merge my_new_branch
+    $ git merge --no-ff my_new_branch
+
+--no-ff -- no fast forward    
+
+<br/>
 
     // Удаление ненужной ветки
     $ git branch -D my_new_branch
@@ -133,6 +155,7 @@ permalink: /linux/dev/git/commands/
     $ git remote add origin https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git
 
     $ git push -u origin master
+
 
 
 <br/>
@@ -187,8 +210,6 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 или
 
     $ export PS1='Geoff[\W]$(__git_ps1 "(%s)"): '
-
-
 
 
 <br/>
