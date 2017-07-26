@@ -41,8 +41,6 @@ permalink: /linux/dev/git/commands/
 
     $ git config core.fileMode false
 
-
-
 <br/>
 
 // Получить информацию по 2 последним коммитам
@@ -51,10 +49,15 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
-// Получить лог удаленного репо
+// Получить лог удаленного (на другом хосте) репо
 
     $ git log origin/master
 
+<br/>
+
+// Посмотреть историю изменения одного файла
+
+    $ git log -p имя_файла
 
 
 <br/>
@@ -108,6 +111,13 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
+###  Удалить все добавленные файлв в проект но не добавленные в git (remove all untracked files)
+
+    $ git clean -fd
+
+
+<br/>
+
 ###  Добавить изменения в мастер ветку
 
     $ git checkout master
@@ -150,6 +160,36 @@ permalink: /linux/dev/git/commands/
 https://ru.stackoverflow.com/questions/462251/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D1%8A%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%82%D1%8C-%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D0%BE%D0%B2-%D0%B2-%D0%BE%D0%B4%D0%B8%D0%BD
 
 
+<br/>
+
+### Не отслеживать изменения chmod
+
+    $ git config core.fileMode false
+
+
+<br/>
+
+### both modified - выбрать одну из сторон, не делая ручной merge
+
+If you're already in conflicted state, and you want to just accept all of theirs:
+
+Принять их сторону
+
+    git checkout --theirs .
+    git add .
+
+If you want to do the opposite:
+
+Принять нашу сторону
+
+    git checkout --ours .
+    git add .
+
+This is pretty drastic, so make sure you really want to wipe everything out like this before doing it.
+
+https://stackoverflow.com/questions/10697463/resolve-git-merge-conflicts-in-favor-of-their-changes-during-a-pull
+
+
 
 <br/>
 
@@ -159,14 +199,6 @@ https://ru.stackoverflow.com/questions/462251/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D1
 
 Можно также посмотреть здесь:  
 https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
-
-
-<br/>
-
-### Не отслеживать изменения chmod
-
-    $ git config core.fileMode false
-
 
 
 <br/>
@@ -187,25 +219,3 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 или
 
     $ export PS1='Geoff[\W]$(__git_ps1 "(%s)"): '
-
-
-
-
-<br/>
-
-### both modified - выбрать одну из сторон, не делая ручной merge (пока изучаю)
-
-
-If you're already in conflicted state, and you want to just accept all of theirs:
-
-    git checkout --theirs .
-    git add .
-
-If you want to do the opposite:
-
-    git checkout --ours .
-    git add .
-
-This is pretty drastic, so make sure you really want to wipe everything out like this before doing it.
-
-https://stackoverflow.com/questions/10697463/resolve-git-merge-conflicts-in-favor-of-their-changes-during-a-pull
