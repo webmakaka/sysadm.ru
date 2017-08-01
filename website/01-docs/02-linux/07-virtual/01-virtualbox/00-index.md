@@ -6,7 +6,6 @@ permalink: /linux/virtual/virtualbox/
 
 # Virtual Box
 
-
 Offtopic:
 
 Лично я пользуюсь в последнее время контейнерами Docker. Если по какой-то причине, контейнеры docker не подходят, то виртуальные машины VirtualBox.

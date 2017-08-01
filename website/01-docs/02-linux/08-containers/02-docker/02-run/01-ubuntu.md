@@ -4,8 +4,6 @@ title: Запуск Ubuntu Docker контейнера
 permalink: /linux/containers/docker/run/
 ---
 
-
-
 # Запуск Ubuntu Docker контейнера
 
 
