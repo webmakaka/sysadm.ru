@@ -84,12 +84,12 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 
 Добавьте
 
-    ############################################
-    #### VirtualBox Parameters
+############################################
+#### VirtualBox Parameters
 
-        export VM_HOME=$HOME/machines
+    export VM_HOME=$HOME/machines
 
-    ############################################
+############################################
 
 
 Применить новые параметры:
@@ -99,7 +99,7 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 <br/>
 
     $ vboxmanage --version
-    5.1.14r112924
+    5.1.26r117224
 
 
 <br/>
@@ -116,21 +116,21 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 <br/>
 
     # cd /tmp/
-    # wget http://download.virtualbox.org/virtualbox/5.1.14/Oracle_VM_VirtualBox_Extension_Pack-5.1.14.vbox-extpack
+    # wget http://download.virtualbox.org/virtualbox/5.1.26/Oracle_VM_VirtualBox_Extension_Pack-5.1.26.vbox-extpack
 
 <br/>
 
-    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.1.14.vbox-extpack
+    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.1.26.vbox-extpack
 
 <br/>
 
     # VBoxManage list extpacks
     Extension Packs: 1
     Pack no. 0:   Oracle VM VirtualBox Extension Pack
-    Version:      5.0.20
-    Revision:     106931
+    Version:      5.1.26
+    Revision:     117224
     Edition:      
-    Description:  USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption.
+    Description:  USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe.
     VRDE Module:  VBoxVRDP
-    Usable:       false
-    Why unusable: VBoxExtPackRegister returned VERR_VERSION_MISMATCH, pReg=0000000000000000 ErrInfo='VirtualBox version mismatch - expected 5.0 got 5.1'
+    Usable:       true
+    Why unusable:
