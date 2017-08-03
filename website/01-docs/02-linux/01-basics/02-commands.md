@@ -67,9 +67,14 @@ ps -ef | grep java | grep "netcracker/config" | sed 's/^[a-zA-Z]\{1,\}[[:space:]
     grep '^http_access' /etc/squid/squid.conf
 
 
+Locat / Foreign Address, Состояние, Протокол, Название программы, Порт
+
+    $ netstat -tanp
+
+
 открыт ли порт 4848 на сервере
 
-    netstat -lpna |grep 4848
+    netstat -lpna | grep 4848
 
 
 Список подключенных хостов

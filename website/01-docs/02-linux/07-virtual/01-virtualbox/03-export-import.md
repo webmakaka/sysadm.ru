@@ -101,6 +101,8 @@ Successfully imported the appliance.
 
     $ vboxmanage list vms
 
+<br/>
+
 ### Дополнительно по настройке сети после импорта
 
 После импорта отсутствуют сетевые адаптеры в системе.

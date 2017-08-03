@@ -7,11 +7,10 @@ permalink: /linux/virtual/virtualbox/vm/centos-6/
 
 # Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
 
+
 Имеем ноутбук, подключенный по WI-FI.
 На него нужно установить виртуальную машину с Centos.
 Доступа к управлению WI-FI точкой доступа нет.
-
-___
 
 Задаем переменную с именем создаваемой виртуальной машины, чтобы в дальнейшем лишний раз не подставлять данное значение в команды.
 
@@ -71,7 +70,6 @@ ___
     $ VBoxManage modifyvm ${vm} --floppy disabled --audio none
 
 
-
 <br/>
 
 ### Подключаю контроллер жестких дисков (SAS):
@@ -103,8 +101,6 @@ ___
     --variant Standard
 
 
-
-
 ### Подключаю диски к SAS контроллеру:
 
 
@@ -113,8 +109,6 @@ ___
     --port 0 \
     --type hdd \
     --medium ${vm}_dsk1.vdi
-
-
 
 <br/>
 
@@ -137,7 +131,6 @@ ___
     --medium  ~/ISO/CentOS-6.6-x86_64-bin-DVD1to2/CentOS-6.6-x86_64-bin-DVD1.iso
 
 
-
 <br/>
 
 ### Определяем порядок устройств, с которых будет произведена попытка стартовать систему:
@@ -153,7 +146,6 @@ ___
 
     $ VBoxManage modifyvm ${vm} \
     --snapshotfolder ${VM_HOME}/${vm}/snapshots
-
 
 
 <br/>
@@ -174,9 +166,13 @@ ___
     --nic2 hostonly \
     --hostonlyadapter2 vboxnet0
 
+<br/>
+
+ifconfig на хост машине должен выводить vboxnet0.
+
 vboxnet0 - виртуальный адаптер хостовой машины.
 
-Если виртуального адаптера нет, можно его самостоятельно создать.
+Если виртуального адаптера нет, нуно его самостоятельно создать.
 
 
     $ VBoxManage hostonlyif create
@@ -298,18 +294,7 @@ http://manpages.ubuntu.com/manpages/lucid/man1/rdesktop.1.html
 
 ### Могут понадобиться следующие команды:
 
-Извлечь DVD диск можно командой
-
-    $ VBoxManage modifyvm ${vm} --dvd none
-
-Reset виртуальной машины
-
-    $ VBoxManage controlvm ${vm} reset
-
-Выключить виртуальную машину
-
-    $ VBoxManage controlvm ${vm} poweroff
-
+    sysadm.ru/linux/virtual/virtualbox/commands/
 
 
 <br/>
