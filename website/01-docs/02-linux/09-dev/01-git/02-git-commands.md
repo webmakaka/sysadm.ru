@@ -12,12 +12,6 @@ permalink: /linux/dev/git/commands/
 
     $ vi ~/.gitconfig
 
-
-// Задать логин и эл.почту. (Обязательно необходимо для коммитов).
-
-        $ git config --global user.name "your_username"
-        $ git config --global user.email "your_email"
-
 <br/>
 
 // Задать парамеры идентификации git глобально (лучше использовать локально, когда много git проектов с разными пользователями)
@@ -70,6 +64,10 @@ permalink: /linux/dev/git/commands/
     $ git commit -m "Что я сделал в результате работы"
     $ git push
 
+-- отправить все бранчи на удаленный сервер
+
+    $ git push --all -u
+
 <br/>
 
 ###  Забрать git из удаленного репозитория (один из вариантов)
@@ -103,19 +101,10 @@ permalink: /linux/dev/git/commands/
     $ git push --set-upstream origin my_new_branch
 
 
-<br/>
-
-### Push
-
--- отправить все бранчи на удаленный сервер
-
-    $ git push --all -u
 
 <br/>
 
 ###  Посмотреть что поменялось
-
-<br/>
 
 -- посмотреть изменения только названия фалов
 
@@ -130,10 +119,9 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
-###  Удалить все добавленные файлв в проект но не добавленные в git (remove all untracked files)
+###  Удалить untracked files
 
     $ git clean -fd
-
 
 <br/>
 
@@ -212,7 +200,6 @@ If you want to do the opposite:
 This is pretty drastic, so make sure you really want to wipe everything out like this before doing it.
 
 https://stackoverflow.com/questions/10697463/resolve-git-merge-conflicts-in-favor-of-their-changes-during-a-pull
-
 
 
 <br/>

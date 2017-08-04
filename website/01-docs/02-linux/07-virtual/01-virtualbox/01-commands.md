@@ -6,9 +6,13 @@ permalink: /linux/virtual/virtualbox/commands/
 
 # Virtual Box Основные команды
 
--- Получить список виртуальных машин
+-- Получить список всех виртуальных машин
 
     $ vboxmanage list vms
+
+-- Получить список стартованных виртуальных машин
+
+    $ vboxmanage list runningvms
 
 -- Удалить виртуальную машину
 
