@@ -38,7 +38,7 @@ Kubernetes converts a set of computers into one big one.
 
 ### [O'Reilly] Building Microservice Systems with Docker and Kubernetes [2016, ENG]
 
-[Kubernetes > Building Microservice Systems with Docker and Kubernetes](/linux/containers/kubernetes/Building_Microservice_Systems_with_Docker_and_Kubernetes/)
+[Kubernetes > Building Microservice Systems with Docker and Kubernetes](/linux/containers/kubernetes/building-microservice-systems-with-docker-and-kubernetes/)
 
 <br/>
 

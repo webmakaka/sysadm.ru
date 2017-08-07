@@ -43,7 +43,7 @@ P.S. На момент регистрации этого домена мной, 
 **Текущие направления в повышении компетенции:**
 
 - <a href="/linux/containers/docker/swarm/">Docker Swarm</a>
-- <a href="/linux/containers/kubernetes/Building_Microservice_Systems_with_Docker_and_Kubernetes/">Kuberntes</a>
+- <a href="/linux/containers/kubernetes/building-microservice-systems-with-docker-and-kubernetes/">Kuberntes</a>
 
 
 Изучаю видеоматериалы, пытаюсь поднять docker swarm и kubernetes локально. Кому интересно, могут присоединиться к изучению.

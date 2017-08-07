@@ -18,6 +18,8 @@ permalink: /linux/virtual/virtualbox/commands/
 
     $ vboxmanage unregistervm vm_oel7.3_oracle_db_12.2 --delete
 
+
+
 <br/>
 
 ### Могут понадобиться следующие команды:

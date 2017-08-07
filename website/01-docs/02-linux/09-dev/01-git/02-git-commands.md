@@ -8,7 +8,7 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
-// Конфиг
+### Глобальный конфиг
 
     $ vi ~/.gitconfig
 
@@ -32,11 +32,13 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
-// Не отслеживать изменения chmod
+### Не отслеживать изменения chmod
 
     $ git config core.fileMode false
 
 <br/>
+
+### git log
 
 // Получить информацию по 2 последним коммитам
 
@@ -172,12 +174,16 @@ permalink: /linux/dev/git/commands/
 https://ru.stackoverflow.com/questions/462251/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D1%8A%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%82%D1%8C-%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D0%BE%D0%B2-%D0%B2-%D0%BE%D0%B4%D0%B8%D0%BD
 
 
+
 <br/>
 
-### Не отслеживать изменения chmod
+### Поменять автора коммита
 
-    $ git config core.fileMode false
+-- Меняю в последнем коммите автора
 
+    $ git commit --amend --author "My Name <my-email@my-company.com>"
+
+https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit
 
 <br/>
 
