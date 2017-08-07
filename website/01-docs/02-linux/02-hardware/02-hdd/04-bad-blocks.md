@@ -238,7 +238,11 @@ TYPE - тип атрибута:
 **Почитать, если что:**
 
 https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html  
-https://unix.community/resources/47/
+
+
+<!--
+    https://unix.community/resources/47/
+-->
 
 
 <br/>
@@ -341,7 +345,6 @@ https://unix.community/resources/47/
 Пометка бэд блоков (в дальнейшем помеченные блоки будут игнорироваться):
 
     # e2fsck -l ~/badblocks_sdb1.txt /dev/sdb1
-
 
 
 <br/>

@@ -12,6 +12,6 @@ permalink: /windows/containers/docker/run-asp-net-app-in-docker/
 У кого нет денег и кто не брезгает качать с трекеров, ищите. Они там есть.
 Я брал на darkos.club.
 
-А так как мудаки с которыми работает pluralsight, <a href="https://oradev.github.io/">забанили мой репо</a> с исходниками (один из репо), я вообще не рекомендую покупать что-либо от pluralsight.
+А так как мудаки с которыми работает pluralsight, забанили мой репо с исходниками (один из репо), я вообще не рекомендую покупать что-либо от pluralsight.
 
  [гитхаб](https://github.com/sysadm-ru/Docker-for-Web-Developers/).

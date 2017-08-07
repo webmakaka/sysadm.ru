@@ -45,8 +45,8 @@ permalink: /linux/webservers/
 [Бесплатные сертификаты для сайта](/linux/webservers/cert-for-free/)
 
 
-<br/>
+<!-- <br/>
 
 ### Сертификаты Let's Encrypt: получение, настройка и автоматизация
 
-[Сертификаты Let's Encrypt: получение, настройка и автоматизация](https://unix.community/resources/18/)
+[Сертификаты Let's Encrypt: получение, настройка и автоматизация](https://unix.community/resources/18/) -->
