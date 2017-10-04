@@ -1,16 +1,17 @@
 ---
 layout: page
-title: Архиваторы в Linux
-permalink: /linux/basics/archives/
+title: Команды работы с архивами в Linux
+permalink: /linux/basics/archives/commands/
 ---
 
-# Архиваторы в Linux
+# Команды работы с архивами в Linux
 
 <br/>
 
 ### 7z
 
-    # apt-get install p7zip-full
+-- Извлечь архив в файл
+
     # 7z x ./VBoxGuestAdditions_5.0.10.iso -o./VBoxGuestAdditions_5.0.10/
 
 
@@ -78,3 +79,14 @@ tar: .: Not found in archive
 Извлечь .rar:
 
     $ unrar e archiveName.rar
+
+
+Еще где-то стырено:    
+
+    # unrar x (file_name).rar           extract with full path
+    # unrar e -kb (file_name).rar       (Keep broken)
+    # unrar l (file_name).rar           list files inside
+    # unrar e (file_name).rar           dump files excluding folders
+    # rar a (file_name).rar (file_name) create a archive Rar file
+    # rar r (file_name).rar             recover or fix a archive file or files
+    # rar a -p (file_name).rar          create a archive Rar file with password

@@ -63,14 +63,8 @@ permalink: /linux/basics/centos/7/install-popular-programms/
     # yum install -y skype
 
 
-
-
 <br/>
 
-### 7zip
+### Архиваторы
 
-Подключить репо <a href="/linux/basics/centos/7/repos/">Epel</a>
-
-<br/>
-
-    # yum install -y p7zip
+<a href="/linux/basics/archives/installation/">здесь</a>

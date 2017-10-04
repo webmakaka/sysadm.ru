@@ -108,6 +108,11 @@ permalink: /linux/dev/git/commands/
 
 ###  Посмотреть что поменялось
 
+-- посмотреть изменения в файле
+
+    $ git diff website/01-docs/02-linux/08-containers/02-docker/00-index.md
+
+
 -- посмотреть изменения только названия фалов
 
     $ git diff --name-only 06be2bf42c94c669f2c656593b10716fee7ad6dc

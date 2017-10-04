@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Инсталляция Docker в Ubuntu 14.04
+title: Инсталляция Docker в Ubuntu
 permalink: /linux/containers/docker/installation/ubuntu/
 ---
 
 
 
-# Инсталляция Docker в Ubuntu 14.04
+# Инсталляция Docker в Ubuntu
 
 
 <!-- **Вариант 1 устанавливаем docker из репо docker (рекоменую)**   -->
@@ -19,7 +19,7 @@ permalink: /linux/containers/docker/installation/ubuntu/
 
 <br/>
 
-**xenial (16.04**
+**xenial (16.04)**
 
     # echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc/apt/sources.list.d/docker.list
 
@@ -27,7 +27,7 @@ permalink: /linux/containers/docker/installation/ubuntu/
 
     # echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list
 
-**precise (12.04**
+**precise (12.04)**
 
     # echo "deb https://apt.dockerproject.org/repo ubuntu-precise main" | sudo tee /etc/apt/sources.list.d/docker.list
 
@@ -44,8 +44,8 @@ If you are installing docker engine on Ubuntu Xenial, Wily or Trusty, it’s rec
 
 <br/>
 
-    $ docker -v
-    Docker version 1.12.3, build 6b644ec
+    #  docker -v
+    Docker version 17.05.0-ce, build 89658be
 
 
 

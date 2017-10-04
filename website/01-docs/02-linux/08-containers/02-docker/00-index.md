@@ -69,7 +69,7 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 ### Инсталляция Docker
 
 
-[Инсталляция Docker в Ubuntu 14.04](/linux/containers/docker/installation/ubuntu/)  
+[Инсталляция Docker в Ubuntu](/linux/containers/docker/installation/ubuntu/)  
 [Инсталляция Docker в CentOS 7](/linux/containers/docker/installation/centos/)  
 
 <br/>

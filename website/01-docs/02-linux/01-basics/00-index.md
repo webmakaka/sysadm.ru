@@ -7,7 +7,7 @@ permalink: /linux/basics/
 # Базовые вещи
 
 
-### [Архиваторы](/linux/basics/archives/)
+### [Архиваторы и работа с архивами в Linux](/linux/basics/archives/)
 
 ### [Незапоминаемые команды в принципе](/linux/basics/commands/)
 
