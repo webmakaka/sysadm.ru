@@ -42,7 +42,6 @@ ______
 ### [Адаптер WiFi 802.11n ASUS USB-N13 Wireless USB Adapter, до 300Мбит/с](/devices/wireless/asus-usb-n13-wireless-usb-adapter/)
 
 
-
 <br/>
 
 # Архитектура:
@@ -57,15 +56,6 @@ ______
 # Видеокурсы:
 
 ### [Видеокурсы для админинов](/linux/video-courses/)
-
-
-______
-
-<br/>
-
-# Развлекательное видео IT тематики (не приколы):
-
-### [Железки](/entertainment/hardware/)  
 
 
 ______
