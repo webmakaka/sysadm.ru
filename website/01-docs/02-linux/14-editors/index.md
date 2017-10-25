@@ -44,7 +44,7 @@ http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
 Я не знаю как пришел к этому конфигу, но можно сделать и получше:
 
     $ cd ~/.atom/
-    $ cp styles.less styles.less.bkp
+    $ cp styles.less styles.less.orig
 
 Заменяем, можно целиком файл.
 
@@ -83,14 +83,12 @@ atom-typescript
 
 **Возможно также полезные настройки**
 
-Но ноже быть сейчас это уже неактуально!
-
-Edit --> Preferences
+Edit --> Preferences --> Editor
 
     Show invisibles: true
     Tab Length: 4
 
-    Infisible space: .
+    Invisible space: .
     Soft Tab: yes
     Tab type: Soft
 

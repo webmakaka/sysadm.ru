@@ -26,7 +26,7 @@ permalink: /linux/basics/centos/7/install-popular-programms/
 
 <br/>
 
-    # yum install google-chrome-stable
+    # yum install -y google-chrome-stable
 
 
 
@@ -34,8 +34,11 @@ permalink: /linux/basics/centos/7/install-popular-programms/
 
 ### Инсталляция VLC Centos 7.x
 
+Нужны репо epel, rpmfusion.
 
-    # rpm -Uvh https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
+
+[Как добавить репо](/linux/basics/centos/7/repos/)
+
 
 <br/>
 

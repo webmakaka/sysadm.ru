@@ -241,3 +241,16 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 или
 
     $ export PS1='Geoff[\W]$(__git_ps1 "(%s)"): '
+
+
+<br/>
+
+### Для версиии 1.x сделать push как и в версии Git 2.0
+
+-- я пользуюсь этим
+
+  git config --global push.default simple
+
+-- наоборот
+
+  git config --global push.default matching
