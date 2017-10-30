@@ -102,14 +102,15 @@ permalink: /linux/virtual/virtualbox/installation/centos/6/
     # service sshd restart
 
 
-===================================
+<br/>
 
+### Настройка параметров учетной записи для работы с виртуальными машинами
 
-# su - vmadm
+    # su - vmadm
 
 <br/>
 
-$  vi ~/.bash_profile
+    $  vi ~/.bash_profile
 
 <br/>
 

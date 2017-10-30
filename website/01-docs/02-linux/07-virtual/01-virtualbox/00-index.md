@@ -21,11 +21,11 @@ Offtopic:
 
 [Инсталляция VirtualBox 5.X в командной строке в Ubuntu](/linux/virtual/virtualbox/installation/ubuntu/14.04/)
 
+[Инсталляция VirtualBox 5.x в командной строке в Centos / Oracle Linux 7](/linux/virtual/virtualbox/installation/centos/7/)
 
 ### Инсталляция VirtualBox 4.X
 
-
-[Инсталляция VirtualBox в командной строке в RedHat/Centos](/linux/virtual/virtualbox/installation/centos/6/)
+[Инсталляция VirtualBox в командной строке в RedHat/Centos/Oracle Linux](/linux/virtual/virtualbox/installation/centos/6/)
 
 
 
@@ -48,7 +48,7 @@ Offtopic:
 
 ### Инсталляция Guest Additions
 
-[Инсталляция Guest Additions в Ubuntu Linux в командной строке](/linux/virtual/virtualbox/guest-additions-installation-in-command-line/)
+[Инсталляция Guest Additions в командной строке](/linux/virtual/virtualbox/guest-additions-installation-in-command-line/)
 
 
 <br/>

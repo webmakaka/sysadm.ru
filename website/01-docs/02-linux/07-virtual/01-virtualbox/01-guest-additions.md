@@ -5,7 +5,7 @@ permalink: /linux/virtual/virtualbox/guest-additions-installation-in-command-lin
 ---
 
 
-# Инсталляция Guest Additions в Ubuntu Linux в командной строке
+# Инсталляция Guest Additions в командной строке
 
 
 Пакет Guest Additions как минимум нужен для того, чтобы мышка по экрану нормально перемещалась, работала copy+paste и может быть что-то еще. Нужно ли устанавливать guest additions, если предстоит работать только в командной строке, не скажу, не знаю.
@@ -23,10 +23,11 @@ http://download.virtualbox.org/virtualbox/4.3.30/VBoxGuestAdditions_4.3.30.iso
     $ sudo su -
 
     # apt-get install -y wget
+    # apt-get install -y gcc make perl
 
     # cd /tmp
 
-    # wget http://download.virtualbox.org/virtualbox/5.0.10/VBoxGuestAdditions_5.0.10.iso
+    # wget http://download.virtualbox.org/virtualbox/5.2.0/VBoxGuestAdditions_5.2.0.iso
 
 
 <br/>
@@ -35,11 +36,31 @@ http://download.virtualbox.org/virtualbox/4.3.30/VBoxGuestAdditions_4.3.30.iso
 
     # apt-get install p7zip-full
 
-    # 7z x ./VBoxGuestAdditions_5.0.10.iso -o./VBoxGuestAdditions_5.0.10/
+    # 7z x ./VBoxGuestAdditions_5.2.0.iso -o./VBoxGuestAdditions_5.2.0/
+
+
+
+<!-- <br/>
+
+### Centos 7.3 x64
+
+    # dnf -y install gcc automake make kernel-devel kernel-headers perl
+
+VBoxGuestAdditions_5.2.0.iso - не заработала, ошибка при компиляции:
+
+
+hgsmi_base.c:99:2: error: implicit declaration of function ‘AssertRC’ [-Werror=implicit-function-declaration]
+  AssertRC(p->rc);
+
+
+  # chmod +x VBoxLinuxAdditions.run  
+  # ./VBoxLinuxAdditions.run -->
+
 
 <br/>
 
 ### Centos x64
+
 
     # wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 
@@ -54,7 +75,7 @@ http://download.virtualbox.org/virtualbox/4.3.30/VBoxGuestAdditions_4.3.30.iso
 ### Продолжаем
 
 
-    # cd VBoxGuestAdditions_5.0.10/
+    # cd VBoxGuestAdditions_5.2.0/
 
     # chmod +x ./VBoxLinuxAdditions.run
 
