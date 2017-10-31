@@ -11,7 +11,6 @@ permalink: /linux/basics/centos/7/keyboard-switch-by-shift-and-alt/
 <br/>
 
 
-
 Systems tools > settings > keyboard > shortcuts tab > typing > modifiers - only switch to next source > from the drop down menu choose alt+shift
 
 
@@ -28,3 +27,12 @@ Command: gnome-terminal
 Now a new shortcut added with status "disabled". Click on "disabled" word and assign your shortcut.
 
 For me, I prefer Ctrl+Alt+t to run Terminal
+
+
+<br/>
+
+# Запуск System Monitor по Ctrl + Alt + Delete
+
+
+Name: System Monitor
+Command: gnome-system-monitor
