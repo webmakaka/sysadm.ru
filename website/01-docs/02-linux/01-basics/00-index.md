@@ -20,7 +20,6 @@ permalink: /linux/basics/
 
 ### [Unable to locate package *****.so.*](/linux/basics/ubuntu/Install-package-for-missing-libraries/)
 
-
 ### [Команды запуска сервисов systemd (systemctl)](/linux/basics/systemctl/)
 
 
@@ -35,3 +34,11 @@ permalink: /linux/basics/
 ### [Инсталляция популярных программ в Centos 7.x](/linux/basics/centos/7/install-popular-programms/)
 
 ### [Смонтировать NTFS в Centos 7.x](/linux/basics/centos/7/mount-ntfs/)
+
+
+
+<br/>
+
+## Переустановка операционной системы Linux
+
+### [Переустановка операционной системы Linux](/linux/basics/reinstall/)

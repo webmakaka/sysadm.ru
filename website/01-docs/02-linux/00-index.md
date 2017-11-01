@@ -18,12 +18,6 @@ permalink: /linux/
 
 <br/>
 
-# Ремонт:
-
-### [Мелкий ремонт](/linux/fix/)
-
-<br/>
-
 # Linux Networks:
 
 ### [Linux Networks](/linux/networks/)
