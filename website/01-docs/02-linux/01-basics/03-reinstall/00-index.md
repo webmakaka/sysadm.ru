@@ -30,10 +30,3 @@ permalink: /linux/basics/reinstall/
     <li><a href="/linux/basics/reinstall/centos/6/steps-after-installation-centos-7x/">Centos 7 нужные мне для работы пакеты</a>
     </li>
 </ul>
-
-
-<br/>
-
-### Wi-Fi адаптер
-
-[Мудацкий Realtek опять не работает в Ubuntu](/linux/basics/reinstall/wi-fi/ubuntu/realtek/)
