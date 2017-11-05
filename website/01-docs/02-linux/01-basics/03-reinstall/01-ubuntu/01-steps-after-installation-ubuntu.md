@@ -171,7 +171,7 @@ menu:minimize,maximize,close
 
 <br/>
 
-### Отключение экрана
+### Параметры отключения экрана
 
 
   System tools - System Settings --> Brightness & Lock
@@ -211,6 +211,12 @@ menu:minimize,maximize,close
 
     Buil-in schemes: Black on white
 
+
+<br/>
+
+### Отключаю противный звук при ошибке в консоли
+
+    $ gsettings set org.gnome.desktop.sound event-sounds false
 
 
 ### Дополнительное ПО
