@@ -51,6 +51,7 @@ https://hub.docker.com
 https://quay.io
 
 Можно создать свой Registry:  
+
 https://docs.docker.com/registry/  
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
 
@@ -70,7 +71,7 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 
 [Инсталляция Docker в Ubuntu](/linux/containers/docker/installation/ubuntu/)  
-[Инсталляция Docker в CentOS 7](/linux/containers/docker/installation/centos/)  
+[Инсталляция Docker в CentOS 7](/linux/containers/docker/installation/centos/7/)  
 
 <br/>
 

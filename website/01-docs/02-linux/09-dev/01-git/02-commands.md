@@ -59,6 +59,13 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
+// Получить дерево коммитов
+
+    $ git log --graph --all --oneline --decorate -20
+
+
+<br/>
+
 ###  Закоммитить все и отправить на сервер
 
     $ git status
