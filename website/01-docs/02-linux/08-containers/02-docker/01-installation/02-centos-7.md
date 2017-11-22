@@ -60,24 +60,22 @@ https://docs.docker.com/engine/installation/linux/docker-ce/centos/#uninstall-ol
 
 <br/>
 
-    # systemctl start docker
-
-<br/>
-
-    -- вот эта команда вроде как лишняя.
-    -- точнее в последний раз когда ставил обошелся без нее.
     # systemctl start docker.service
 
 <br/>
 
     # systemctl status docker.service
 
+
+    # systemctl enable docker.service
+
 <br/>
 
     # groupadd docker
 
-    # usermod -aG docker your_username
+<br/>
 
+    # usermod -aG docker your_username
 
 <br/>
 
