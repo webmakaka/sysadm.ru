@@ -70,10 +70,14 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 
 <br/>
 
-    ###############################
-    # USER DEFINED
-    . ~/.bash_profile
-    ###############################
+{% highlight shell %}
+
+###############################
+# USER DEFINED
+. ~/.bash_profile
+###############################
+
+{% endhighlight %}
 
 
 Отредактируйте файл ~/.bash_profile
@@ -84,12 +88,19 @@ permalink: /linux/virtual/virtualbox/installation/ubuntu/14.04/
 
 Добавьте
 
+
+{% highlight shell %}
+
 ############################################
 #### VirtualBox Parameters
 
     export VM_HOME=$HOME/machines
 
 ############################################
+
+{% endhighlight %}
+
+
 
 
 Применить новые параметры:

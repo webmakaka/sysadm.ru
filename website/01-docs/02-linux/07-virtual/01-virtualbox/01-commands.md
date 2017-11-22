@@ -35,3 +35,15 @@ Reset виртуальной машины
 Выключить виртуальную машину
 
     $ VBoxManage controlvm ${vm} poweroff
+
+
+<br/>
+
+### Получить помощь по командам:
+
+
+    $ vboxmanage help
+
+<br/>
+
+    $ VBoxManage list ostypes
