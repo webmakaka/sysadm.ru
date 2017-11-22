@@ -4,7 +4,6 @@ title: Инсталляция Docker в CentOS 7
 permalink: /linux/containers/docker/installation/centos/7/
 ---
 
-
 # Инсталляция Docker в CentOS 7.3
 
 Устанавливаю 21 ноября 2017
