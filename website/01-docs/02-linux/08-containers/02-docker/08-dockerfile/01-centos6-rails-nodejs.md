@@ -6,6 +6,14 @@ permalink: /linux/containers/docker/dockerfile/my-dockerfile-for-rails-and-nodej
 
 # Dockerfile для разработки rails и node.js приложений в centos 6
 
+**Последний раз делаю:**  
+03.12.2017
+
+<br/>
+
+По идее нужно все что касается ноды вообще выпилить. 
+
+<br/>
 
 В настоящее время, для разработки node.js приложения, я использую контейнеры, которые подготовили разработчики node.js. Если интересно как это запустить, смотрите на jsdev.org
 
@@ -29,8 +37,9 @@ permalink: /linux/containers/docker/dockerfile/my-dockerfile-for-rails-and-nodej
     ENV DEVELOPER_USERNAME developer
     ENV DEVELOPER_PASSWORD developer
 
-    ENV RUBY_VERSION 2.1.4
-    ENV RAILS_VERSION 4.1.7
+    ENV RUBY_VERSION 2.4.2
+    #ENV RAILS_VERSION 5.1.4
+    ENV RAILS_VERSION 4.2.10
 
     RUN echo "root:$DOCKER_ROOT_PASSWORD" | chpasswd
 
@@ -114,6 +123,11 @@ permalink: /linux/containers/docker/dockerfile/my-dockerfile-for-rails-and-nodej
 
     RUN gem update --system
     RUN gem update
+    
+    ### TEMPORARY SOLUTION
+    ### https://github.com/rubygems/rubygems/issues/2058
+    RUN rm -rf /home/developer/.rbenv/versions/2.4.2/bin/bundle
+    ### TEMPORARY SOLUTION END
 
     RUN gem install bundler --no-ri --no-rdoc
     RUN rbenv rehash

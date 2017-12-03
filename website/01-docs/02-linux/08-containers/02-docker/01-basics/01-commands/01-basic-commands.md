@@ -80,6 +80,11 @@ ___
     $ docker images
     $ docker images --tree
     $ docker images debian
+    
+// переименвать имидж
+    
+    -- Переименовываю имидж. Чтобы контейнер на hub.docker.com начинался с моего username на этом сайте.
+    $ docker tag centos6/rais:v01 marley/centos6-for-jekyll:latest
 
 
 // Запустить контейнер и отправить 30 пингов до гугла

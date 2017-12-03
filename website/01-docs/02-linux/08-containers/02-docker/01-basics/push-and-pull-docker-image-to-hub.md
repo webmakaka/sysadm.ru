@@ -42,10 +42,56 @@ container_id и container_name как и для image в данном случа
     $ doceker pull <your_docker_hub_login>/<image_name>
 
 
+
 <br/>
 
-### Конкретный пример. Делал совсем недавно (Docker version 1.9.1)
+### Конкретный пример. 
 
+**Делаю 3.12.2017**
+
+<br/>
+
+    Есть уже готовый image нужно его перенести на hub.docker.com <br/>
+    Я зашел через веб интерфейс и добавил новый репо руками.
+
+
+<br/>
+
+    $ docker -v
+    Docker version 17.03.0-ce, build 60ccb22
+
+
+    
+<br/>
+    
+    -- Переименовываю имидж. Чтобы контейнер на hub.docker.com начинался с моего username на этом сайте.
+    $ docker tag centos6/rais:v01 marley/centos6-for-jekyll:latest
+    
+<br/>
+    
+    $ docker images
+    REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
+    marley/centos6-for-jekyll   latest              522e5166515e        17 minutes a
+    
+
+<br/>
+
+    $ docker login
+    $ docker push marley/centos6-for-jekyll
+
+
+<br/>
+
+Забрать теперь можно командой:
+
+    $ docker pull marley/centos6-for-jekyll
+
+
+
+
+<br/>
+
+### Конкретный пример. Делал для версии (Docker version 1.9.1)
 
     $ docker commit nginx_server marley/nginx_server:1
 

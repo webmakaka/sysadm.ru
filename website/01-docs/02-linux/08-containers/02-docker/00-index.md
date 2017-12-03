@@ -101,7 +101,7 @@ Docker-Compose (для совместной работы контейнеров)
 
 <br/>
 
-### Docker NetWorking (Не особо и нужно. Но возможность такая есть)
+### Docker NetWorking (Не особо и нужно. Но возможность такая есть (или по крайней мере была))
 
 https://docs.docker.com/engine/userguide/networking/
 
@@ -178,7 +178,7 @@ https://docs.docker.com/engine/userguide/networking/
 
 ### Примеры конфигов работы с Docker
 
-[Docker for Web Developers (видеокурс)](https://github.com/sysadm-ru/Docker-for-Web-Developers)
+[Docker for Web Developers (видеокурс)](https://bitbucket.org/sysadm-ru/docker-for-web-developers)
 
 ___
 
