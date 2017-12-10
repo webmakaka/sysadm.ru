@@ -13,7 +13,7 @@ permalink: /linux/virtual/virtualbox/installation/centos/7/
 
 <br/>
 
-    # yum install -y \
+    # dnf install -y \
     wget  \
     make \
     gcc \
@@ -77,7 +77,7 @@ permalink: /linux/virtual/virtualbox/installation/centos/7/
 <br/>
 
     -- закопипаситл пакеты, которые нужно поставить из информационного сообщения
-    # yum install -y kernel-uek-devel kernel-uek-devel-4.1.12-61.1.18.el7uek.x86_64
+    # dnf install -y kernel-uek-devel-4.1.12-61.1.18.el7uek.x86_64
 
 <br/>
 
