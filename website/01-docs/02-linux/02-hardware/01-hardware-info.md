@@ -148,7 +148,12 @@ permalink: /linux/hardware/info/
 ### Узнать температуру процессора, материнской платы
 
 
+    -- ubuntu like
     # apt-get install -y lm-sensors
+    
+    -- redhat like
+    # yum install lm_sensors
+    
     # sensors
 
     atk0110-acpi-0
