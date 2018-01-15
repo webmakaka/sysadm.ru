@@ -59,6 +59,10 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
+    $ git log --name-only
+
+<br/>
+
 // Получить дерево коммитов
 
     $ git log --graph --all --oneline --decorate -20
@@ -186,6 +190,13 @@ permalink: /linux/dev/git/commands/
 https://ru.stackoverflow.com/questions/462251/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D1%8A%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%82%D1%8C-%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D0%BE%D0%B2-%D0%B2-%D0%BE%D0%B4%D0%B8%D0%BD
 
 
+<br/>
+
+### Заменить заголовок коммита
+
+-- Меняю в последнем коммите заголовок
+
+    $ git commit --amend -m "ваш заголовок"
 
 <br/>
 
@@ -261,3 +272,14 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 -- наоборот
 
   git config --global push.default matching
+
+
+
+<br/>
+
+
+### Откатить файлы к определенному коммиту
+
+    git checkout a82de97faaafee458d47c60a51e12f7d7c7dba13 file_path/file_name
+
+    git rebase -i HEAD~2
