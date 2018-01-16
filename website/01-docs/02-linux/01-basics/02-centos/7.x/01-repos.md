@@ -99,3 +99,13 @@ permalink: /linux/basics/centos/7/repos/
 -- обновить
 
     # yum clean all && yum update
+
+
+<br/>
+
+-- найти из какого репозитория установлен пакет
+
+    # find-repos-of-install p7zip
+
+
+https://habrahabr.ru/post/301292/
