@@ -63,7 +63,14 @@ permalink: /linux/basics/centos/7/install-popular-programms/
 
 <br/>
 
-    # yum install -y skype
+    # dnf install -y skype
+
+<br/>
+    -- Удалить skype
+    # dnf remove -y skypeforlinux.x86_64
+
+    -- Установить из командной строки, скачанный с сайта skype
+    # dnf install -y ./skypeforlinux-64.rpm
 
 
 <br/>
