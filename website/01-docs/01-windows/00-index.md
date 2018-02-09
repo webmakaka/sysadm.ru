@@ -6,9 +6,15 @@ permalink: /windows/
 
 # Windows
 
+
 <br/>
 
-### [Базовые вещи](/windows/basics/)
+### [Донастройка программ](/windows/tweaks/)
+
+
+<br/>
+
+### [Информация о железках,удаленная перезагрузка в Windows](/windows/basics/)
 
 
 <br/>

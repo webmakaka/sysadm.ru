@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Базовые вещи в Windows
+title: Информация о железках, удаленная перезагрузка в Windows
 permalink: /windows/basics/
 ---
 
-### Базовые вещи в Windows
+# Информация о железках, удаленная перезагрузка в Windows
 
 [Информация о железках и windows](/windows/basics/info/)
 
