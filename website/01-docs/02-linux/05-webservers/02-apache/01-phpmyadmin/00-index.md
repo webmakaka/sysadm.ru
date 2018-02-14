@@ -8,6 +8,7 @@ permalink: /linux/webservers/apache/phpmyadmin/
 
 # Php MyAdmin показывает белый экран, без какого либо кода.
 
+<br/>
 
     # cat /dev/null > /var/log/httpd/error_log
 
