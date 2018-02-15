@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Virtual Box Настрока сети
+title: Virtual Box настрока сетевых интерфейсов
 permalink: /linux/virtual/virtualbox/network/
 ---
 
-# Virtual Box настрока сети
+# Virtual Box настрока сетевых интерфейсов
 
 <br/>
 

@@ -63,9 +63,9 @@ Offtopic:
 
 <br/>
 
-### Настройка сети:
+### Настрока сетевых интерфейсов:
 
-[Настройка сети в Centos 6, когда используется несколько адаптеров](/linux/virtual/virtualbox/networking/)
+[Настрока сетевых интерфейсов](/linux/virtual/virtualbox/network/)
 
 
 <br/>
