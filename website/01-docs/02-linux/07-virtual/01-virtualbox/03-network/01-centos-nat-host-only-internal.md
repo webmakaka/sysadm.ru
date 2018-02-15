@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Настройка сети в Centos 6, когда используется несколько адаптеров
-permalink: /linux/virtual/virtualbox/networking/
+permalink: /linux/virtual/virtualbox/network/centos-nat-host-only-internal/
 ---
 
 
@@ -72,7 +72,7 @@ eth2
     0.0.0.0         192.168.56.1    0.0.0.0         UG    0      0        0 eth1
 
 
-Я хз, почему здесь 56.1
+56.1 здесь - интерфейс с этим адресом, который VirtualBox создает по умолчанию на хостовой машине. Именно с ним и работает виртуальная машина, обмениваясь пакетами.
 
     $ route delete default gw 192.168.56.1 eth1
     $ route add default gw 10.0.2.2 eth0
