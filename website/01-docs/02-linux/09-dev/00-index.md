@@ -12,6 +12,8 @@ permalink: /linux/dev/
 
 ### [JAVA](//javadev.org/development-tools/jdk/installation/)
 
-### [Программирование в Linux на GO](/linux/dev/go/)
+### [GO](/linux/dev/go/)
 
-### [Программирование для Web (Ruby on Rails, Node.JS)](/linux/dev/web/)
+### [Node.JS)](/linux/dev/nodejs/)
+
+### [Ruby on Rails](/linux/dev/ruby-on-rails/)
