@@ -219,6 +219,13 @@ menu:minimize,maximize,close
     $ gsettings set org.gnome.desktop.sound event-sounds false
 
 
+<br/>
+
+### Заблокировать дерьмовые сайты, вроде 1xbet
+
+https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
+
+
 ### Дополнительное ПО
 
 [atom](/linux/editors/)  
