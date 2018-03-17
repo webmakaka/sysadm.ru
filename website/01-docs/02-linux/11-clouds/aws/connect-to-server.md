@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Подключиться к серверу в облаке AWS в командной строке linux
-permalink: /linux/cloud/aws/connect-to-server/
+permalink: /linux/clouds/aws/connect-to-server/
 ---
 
 **Подключиться к серверу:**

@@ -1,10 +1,21 @@
 ---
 layout: page
-title: Cloud
-permalink: /linux/clusters/
+title: Linux Clustering
+permalink: /linux/clustering/
 ---
 
-# Cloud
+# Linux Clustering
+
+
+<div align="center">
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/4LyL4sNZ1u4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+</div>
+
+
+<br/>
+<br/>
 
 ### [DRBD](http://odba.ru/showthread.php?t=474)  
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Amazon Web Services (AWS)
-permalink: /linux/cloud/aws/
+permalink: /linux/clouds/aws/
 ---
 
 В общем решил поучиться немного AWS сервисам. Благо написано **AWS Free Usage Tier** и год учись бесплатно, используй ресурсы в размерах разумного и будет всем ХОРОШО.
@@ -24,5 +24,5 @@ permalink: /linux/cloud/aws/
 Впрочем я и сам могу тоже самое руками сделать. Появилось желание покопать в сторону Chef.
 
 
-[Подключиться к серверу в облаке AWS в командной строке linux](/linux/cloud/aws/connect-to-server/)  
-[Инсталляция Node.js в облаке AWS](/linux/cloud/aws/nodejs-server/)
+[Подключиться к серверу в облаке AWS в командной строке linux](/linux/clouds/aws/connect-to-server/)  
+[Инсталляция Node.js в облаке AWS](/linux/clouds/aws/nodejs-server/)

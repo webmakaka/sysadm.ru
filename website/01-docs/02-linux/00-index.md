@@ -40,9 +40,9 @@ ______
 
 # Кластеры, Облака, Распределенные системы:
 
-### [Clusters](/linux/clusters/)
+### [Linux Clustering](/linux/clustering/)
 
-### [Cloud: Облачные технологии (Amazon, Heroku)](/linux/cloud/)  
+### [Cloud: Облачные технологии (Amazon, Heroku)](/linux/clouds/)  
 
 ### [Distributed Systems (BigData, Hadoop, Hive, etc.)](/linux/distributed-systems/)  
 

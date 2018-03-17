@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Heroku Centos 6.X
-permalink: /linux/cloud/heroku/
+permalink: /linux/clouds/heroku/
 ---
 
 # Heroku Centos 6.X
