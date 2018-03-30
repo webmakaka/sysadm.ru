@@ -18,6 +18,10 @@ permalink: /linux/basics/
 
 ### [Инсталляция Google Chrome](/linux/basics/ubuntu/chrome/)
 
+### [Скачать playlist с youtube](/linux/basics/ubuntu/download-youtube-playlist/)
+
+### [Программа для скачивания с файлопомоек вроде Rapidgator, Nitroflare, Uploadgig etc.](/linux/basics/ubuntu/download-from-file-hostings/)
+
 ### [Unable to locate package *****.so.*](/linux/basics/ubuntu/Install-package-for-missing-libraries/)
 
 ### [Команды запуска сервисов systemd (systemctl)](/linux/basics/systemctl/)

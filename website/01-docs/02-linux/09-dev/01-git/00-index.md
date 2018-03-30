@@ -6,6 +6,8 @@ permalink: /linux/dev/git/
 
 # Git в Linux
 
+### [Обновление GIT до актуальных версий из ppa в Ubuntu](/linux/dev/git/install/ubuntu/ppa/)
+
 ### [Инсталляция GIT из исходников](/linux/dev/git/install/)
 
 ### [Основные команды GIT](/linux/dev/git/commands/)
