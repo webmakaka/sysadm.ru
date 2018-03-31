@@ -18,6 +18,8 @@ permalink: /linux/basics/
 
 ### [Инсталляция Google Chrome](/linux/basics/ubuntu/chrome/)
 
+### [Инсталляция ACE плеера в Ubuntu](/linux/basics/ubuntu/ace-player-installation/)
+
 ### [Скачать playlist с youtube](/linux/basics/ubuntu/download-youtube-playlist/)
 
 ### [Программа для скачивания с файлопомоек вроде Rapidgator, Nitroflare, Uploadgig etc.](/linux/basics/ubuntu/download-from-file-hostings/)
