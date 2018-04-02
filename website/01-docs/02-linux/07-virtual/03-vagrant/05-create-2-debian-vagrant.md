@@ -22,8 +22,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.insert_key = false
   config.ssh.forward_agent = true
 
-
-
   config.vm.provision :hosts do |provisioner|
 
       provisioner.add_host '192.168.56.101', ['web']
@@ -37,7 +35,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     web.vm.network :private_network, ip: "192.168.56.101"
     web.vm.network :forwarded_port, guest: 22, host: 10122, id: "ssh"
-
 
     web.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]

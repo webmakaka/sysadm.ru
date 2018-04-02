@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Публичные репозитории Centos
+title: Публичные репозитории Centos 7
 permalink: /linux/basics/centos/7/repos/
 ---
 
@@ -54,7 +54,7 @@ permalink: /linux/basics/centos/7/repos/
 
 ### rpmfusion
 
-  # yum localinstall -y --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
+    # yum localinstall -y --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
 
 
 Подробнее:
@@ -64,7 +64,7 @@ permalink: /linux/basics/centos/7/repos/
 
 <br/>
 
-**RPMForge/RepoForge both projects are dead and should not be used – Please use EPEL Repository.**
+**RPMForge сдох. Вместо него рекомендуют использовать EPEL**
 
 
 

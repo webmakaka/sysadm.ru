@@ -12,8 +12,8 @@ permalink: /linux/virtual/vagrant/commands/
 
 ### Создание виртуальной машины с помощью Vagrant
 
-Подготовленные виртуальные машины (можно бесплатно завести свою учетку):  
-https://atlas.hashicorp.com/boxes/search
+Подготовленные виртуальные машины:  
+https://app.vagrantup.com/boxes/search
 
 
     // Инициализировать конфиг файл с определенной операционной системой
@@ -71,7 +71,7 @@ https://atlas.hashicorp.com/boxes/search
 
 <br/>
 
-    marley@workstation:/projects/sysadm.ru$ vagrant global-status
+    $ vagrant global-status
     id       name    provider   state   directory                           
     ------------------------------------------------------------------------
     d2681b6  core-01 virtualbox running /home/marley/coreos-vagrant         

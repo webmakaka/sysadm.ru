@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Удалить рекламу из skype в Windows 10
-permalink: /windows/basics/skype-do-not-show-advertising/
+permalink: /windows/tweaks/skype-do-not-show-advertising/
 ---
 
 # Удалить рекламу из skype в Windows 10

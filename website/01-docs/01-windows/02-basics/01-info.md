@@ -4,7 +4,7 @@ title: Информация о железках и windows
 permalink: /windows/basics/info/
 ---
 
-### Информация о железках и windows
+# Информация о железках и windows
 
 
 ### Информация о Windows в командной строке
@@ -33,8 +33,3 @@ permalink: /windows/basics/info/
 Для скачивания регистрация не нужна.
 
 http://www.cpuid.com/
-
-
-
-
-cpuid

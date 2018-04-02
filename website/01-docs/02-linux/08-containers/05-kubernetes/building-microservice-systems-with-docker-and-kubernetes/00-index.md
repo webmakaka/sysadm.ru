@@ -11,14 +11,14 @@ permalink: /linux/containers/kubernetes/building-microservice-systems-with-docke
 <br/><br/>
 
 <div align="center">
-    <img src="//files.sysadm.ru/img/linux/containers/kubernetes/building-microservice-systems-with-docker-and-kubernetes/pic1.png" border="0" alt="Building Microservice Systems with Docker and Kubernetes">
+    <img src="//files.sysadm.ru/img/linux/containers/kubernetes/Building_Microservice_Systems_with_Docker_and_Kubernetes/pic1.png" border="0" alt="Building Microservice Systems with Docker and Kubernetes">
 </div>
 
 <br/><br/>
 
 
 <div align="center">
-    <img src="//files.sysadm.ru/img/linux/containers/kubernetes/building-microservice-systems-with-docker-and-kubernetes/pic2.png" border="0" alt="Building Microservice Systems with Docker and Kubernetes">
+    <img src="//files.sysadm.ru/img/linux/containers/kubernetes/Building_Microservice_Systems_with_Docker_and_Kubernetes/pic2.png" border="0" alt="Building Microservice Systems with Docker and Kubernetes">
 </div>
 
 <br/><br/>
