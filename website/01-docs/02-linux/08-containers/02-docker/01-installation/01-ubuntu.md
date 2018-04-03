@@ -1,121 +1,68 @@
 ---
 layout: page
-title: Инсталляция Docker в Ubuntu
+title: Инсталляция и Upgrade Docker в Ubuntu 14.04
 permalink: /linux/containers/docker/installation/ubuntu/
 ---
 
 
+# Инсталляция / Upgrade Docker в Ubuntu 14.04
 
-# Инсталляция Docker в Ubuntu
+Делаю:  
+03.04.2018
+
+Похоже, они с каждым релизом меняют способ установки. 
+Пятый раз переписываю!
 
 
-<!-- **Вариант 1 устанавливаем docker из репо docker (рекоменую)**   -->
+<br/>
 
-    $ sudo su -
+### Инсталляция Docker версии 18.03.0
+
+
+    -- Удаляю текущую версию docker
+    # apt-get remove -y docker docker-engine docker.io
+
 
     # apt-get update
-    # apt-get install -y apt-transport-https ca-certificates
-    # apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 
-<br/>
+    # apt-get install -y \
+        linux-image-extra-$(uname -r) \
+        linux-image-extra-virtual
+        
+    # apt-get install -y \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        software-properties-common
+        
+    # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    
+    # apt-key fingerprint 0EBFCD88
+    
+    # add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+   
+   
+   # apt-get update
+   # apt-get install -y docker-ce
 
-**xenial (16.04)**
-
-    # echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc/apt/sources.list.d/docker.list
-
-**trusty (14.04)**
-
-    # echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list
-
-**precise (12.04)**
-
-    # echo "deb https://apt.dockerproject.org/repo ubuntu-precise main" | sudo tee /etc/apt/sources.list.d/docker.list
-
-<br/>
-
-    # apt-get update
-    # apt-cache policy docker-engine
-
-If you are installing docker engine on Ubuntu Xenial, Wily or Trusty, it’s recommended to install the linux-image-extra- kernel packages to allow using aufs
-
-    # apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual
-
-    # apt-get install -y docker-engine
-
-<br/>
-
-    #  docker -v
-    Docker version 17.05.0-ce, build 89658be
+   # docker -v
+   Docker version 18.03.0-ce, build 0520e24
 
 
-
-<!-- <br/>
-
-**Вариант 2: устанавливаем docker из репо docker (рекоменую)**
-
-    # wget -qO- https://get.docker.com/gpg | apt-key add -
-    # echo "deb http://get.docker.com/ubuntu docker main" >> /etc/apt/sources.list.d/docker.list
-
-    # apt-get update
-    # apt-get install -y lxc-docker
-
-    # docker -v
-
+Подробнее:  
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 
 <br/>
 
-**Вариант 3: устанавливаем docker из репо ubuntu. (не рекомендую)**
-
-    $ sudo su -
-
-    # apt-get update
-    # apt-get install -y docker.io
-    # service docker.io status
-
-    $ docker -v -->
-
-<!--
-<br/>
-
-**Вариант 2: Из исходников, что лежат на github (я не разобрался и у меня не заработало!!!)**
-
-
-    $ sudo apt-get install make git
-    $ cd /tmp/
-    $ git clone --depth=1 https://github.com/docker/docker.git
-
-    $ cd docker/
-
-    $ sudo make build
-    $ sudo make binary
-
-
-    $ ./bundles/1.14.0-dev/binary-client/docker --version
-    Docker version 1.14.0-dev, build 001cbc4
-
-    $ sudo ./bundles/1.14.0-dev/binary-daemon/dockerd --version
-    Docker version 1.14.0-dev, build 001cbc4
-
-
-    # rm /usr/bin/docker
-
-    # ln -s  /tmp/docker/bundles/1.12.4-rc1/binary-client/docker-1.12.4-rc1 /usr/bin/docker
-    # ln -s  /tmp/docker/bundles/1.12.4-rc1/binary-daemon/dockerd-1.12.4-rc1 /usr/bin/dockerd
-
-    # docker daemon
-
-    Ошибка!!!
-
-Мне пока не горит. Нет желания тратить на исследование свое личное время. Если кто подскажет как сделать или я сам разберусь, напишу.
-
- -->
+## Настройка 
 
 <br/>
 
-### Настройка
-
-**Предоставить пользователю права для работы с docker**
+### Предоставить пользователю права для работы с docker
 
     $ sudo gpasswd -a <username> docker
 
@@ -132,7 +79,7 @@ If you are installing docker engine on Ubuntu Xenial, Wily or Trusty, it’s rec
 
 <br/>
 
-### Определяю каталог для хранения контейнеров и имиджей.
+### Изменить каталог по умолчанию для хранения контейнеров и имиджей
 
 (Просто не хочу, хранить редко используемые docker файлы на системном, да еще и SSD диске)
 
@@ -151,14 +98,3 @@ If you are installing docker engine on Ubuntu Xenial, Wily or Trusty, it’s rec
 
     # ps auxwww | grep docker
     root      2476  0.0  0.1 274324 29896 ?        Ssl  10:10   0:00 /usr/bin/docker daemon -g /mnt/dsk1/docker
-
-
-<br/>
-<br/>
-
-https://docs.docker.com/engine/installation/linux/ubuntulinux/
-
-
-Из исхдных кодов:  
-http://tristan.lt/blog/docker-4-build-docker-from-sources/  
-http://oyvindsk.com/writing/docker-build-from-source  

@@ -11,7 +11,7 @@ permalink: /linux/containers/
 
 ### Хостовые операционные системы для docker контейнеров
 
-[CoreOS](/linux/containers/coreos/)
+[CoreOS (была куплена RedHat)](/linux/containers/coreos/)
 
 Rancher OS (Rancher Labs)
 

@@ -16,23 +16,20 @@ Offtopic:
 
 В качестве хостовой машины для docker контейнеров вполне подойдет CoreOS. Желающих прокачать скилы по работе с Docker, предлагаю присмотреться к этому linux. Желающие копать совместно, присоединяйтесь.
 
-
 Здесь собираются материалы по работе с docker, начиная с версии 1.1. Материалы постепенно обновляются по мере необходимости обращения к ним.
+
 Некоторые вещи обновлять не успеваю, т.к. docker развивается достаточно быстро.
 
 Если копаете, можете помочь с обновлением и добавлением своих знаний.
 
-
-<strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd! По крайней мере на момент попытки запуска мной! Сейчас в основном использую Debian / Ubuntu</strong>
-
-
-<br/>
-
-P.S.: Скачал интересную и современную книгу "Docker Orchestration". Если кто захочет разобрать и поделиться результатами, пишите. Реально есть что изучать!
+<strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd! По крайней мере на момент попытки запуска мной! Сейчас в основном использую контейнеры с Debian / Ubuntu</strong>
 
 
 
 <br/><br/>
+
+[Последняя версия Docker Community Edition] - на апрель 2018 - 18.03.0-ce (2018-03-21)  
+https://docs.docker.com/release-notes/docker-ce/
 
 [Подготовленные image]  
 https://hub.docker.com/explore/
@@ -70,18 +67,12 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 ### Инсталляция Docker
 
 
-[Инсталляция Docker в Ubuntu](/linux/containers/docker/installation/ubuntu/)  
+[Инсталляция / Upgrade Docker в Ubuntu](/linux/containers/docker/installation/ubuntu/)  
 [Инсталляция Docker в CentOS 7](/linux/containers/docker/installation/centos/7/)  
 
 <br/>
 
 [Docker-Compose (Инсталляция Docker-Compose в Ubuntu 14.04) ](/linux/containers/docker/toosl/docker-compose/installation/)  
-
-<br/>
-
-### Docker Update | Upgrade
-
-[Upgrade Docker в Ubuntu](/linux/containers/docker/basics/upgrade-docker-on-ubuntu/)  
 
 
 <br/>

@@ -9,19 +9,25 @@ permalink: /linux/containers/docker/docker-machine/
 https://docs.docker.com/machine/install-machine/
 
 
-Я пока до конца не разобрался, для чего нужена Docker Machine.
-Если все правильно понимаю, то для запуска Docker контейнеров на virtualbox. Нужно в первую очередь для запуска Docker контейнеров в Windows, либо на облачных сервисах, таких как aws, goolgle cloud engine, microsoft azure.
+Я пока до конца не разобрался, для чего нужена Docker Machine. И без нее все нормально работает.
+Если все правильно понимаю, то для запуска Docker контейнеров с использованием драйвера virtualbox и virtualbox виртуалок. Понятно, что это нужно, когда, например приходится делать это в Windows. Но под linux не вижу особой в этом необходимости.
 
 
+Делаю:  
+03.04.2018
 
-    $ curl -L https://github.com/docker/machine/releases/download/v0.6.0/docker-machine-`uname -s`-`uname -m` > /usr/local/bin/docker-machine && \
+Смотрю последний релиз (сегодня это 0.14):
+https://github.com/docker/machine/releases/
+
+
+    # curl -L https://github.com/docker/machine/releases/download/v0.14.0/docker-machine-`uname -s`-`uname -m` > /usr/local/bin/docker-machine && \
     chmod +x /usr/local/bin/docker-machine
 
 
 <br/>
 
     # docker-machine -v
-    docker-machine version 0.6.0, build e27fb87
+    docker-machine version 0.14.0, build 89b8332
 
 
 <br/>
