@@ -50,6 +50,9 @@ https://github.com/kubernetes/minikube
     NAME                              READY     STATUS    RESTARTS   AGE
     hello-minikube-64698d6ccf-t4t97   1/1       Running   0          7m
 
+
+<br/>
+
     $ curl $(minikube service hello-minikube --url)
     CLIENT VALUES:
     client_address=172.17.0.1
@@ -69,6 +72,9 @@ https://github.com/kubernetes/minikube
     BODY:
     -no body in request-
 
+
+<br/>
+
     $ minikube stop
 
 
@@ -82,16 +88,19 @@ https://github.com/kubernetes/minikube
     $ kubectl create secret generic db-user-pass --from-file=./username.txt --from-file=./password.txt
     secret "db-user-pass" created
     
-
+<br/>
     
     $ kubectl get secret 
     NAME                  TYPE                                  DATA      AGE
     db-user-pass          Opaque                                2         42s
     default-token-7c5ss   kubernetes.io/service-account-token   3         3h
 
+<br/>
 
     // если нужно удалить
     $ kubectl delete secret db-user-pass
+    
+<br/>
         
     $ kubectl describe secrets/db-user-pass
     Name:         db-user-pass
@@ -105,6 +114,9 @@ https://github.com/kubernetes/minikube
     ====
     username.txt:  5 bytes
     password.txt:  11 bytes
+
+
+<br/>
 
     $ echo -n "admin" | base64
     $ echo -n "p@$$w0rd" | base64
@@ -121,10 +133,14 @@ https://github.com/kubernetes/minikube
         username: YWRtaW4=
         password: cEAxODg3MXcwcmQ=
     
-    
+
+<br/>
+
     $ kubectl create -f ./secret.yaml
     
-    
+
+<br/>
+
     $ kubectl get secret
     NAME                  TYPE                                  DATA      AGE
     db-user-pass          Opaque                                2         10m
@@ -136,8 +152,6 @@ https://github.com/kubernetes/minikube
 <br/>
 
 ### 12-Using Secrets in Applications
-    
-    
     
     $ cd helloworld
     

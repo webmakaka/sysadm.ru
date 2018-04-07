@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Docker Swarm > Native Docker Clustering > Configs
-permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/configs/
+permalink: /linux/containers/docker/clustering/swarm/Native_Docker_Clustering/configs/
 ---
 
 # Docker Swarm > Native Docker Clustering [2016, ENG] > Configs

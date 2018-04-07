@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Native Docker Clustering
-permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Building_Your_Swarm_Infrastructure/
+permalink: /linux/containers/docker/clustering/swarm/Native_Docker_Clustering/Building_Your_Swarm_Infrastructure/
 ---
 
 # Docker Swarm: Native Docker Clustering [2016, ENG] > Module 4: Building your Swarm Infrastructure
@@ -10,7 +10,7 @@ permalink: /linux/containers/docker/swarm/Native_Docker_Clustering/Building_Your
 <br/>
 
 <div align="center">
-    <img src="//files.sysadm.ru/img/linux/containers/docker/swarm/native-docker-clustering/pic2.png" border="0" alt="Native Docker Clustering">
+    <img src="//files.sysadm.ru/img/linux/containers/docker/clustering/swarm/native-docker-clustering/pic2.png" border="0" alt="Native Docker Clustering">
 </div>
 
 

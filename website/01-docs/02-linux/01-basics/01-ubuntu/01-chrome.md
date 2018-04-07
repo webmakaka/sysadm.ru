@@ -18,7 +18,7 @@ permalink: /linux/basics/ubuntu/chrome/
 
 ### Дополнительные Плагины
 
-Data Saver
+Data Saver, Quick JavaScript Switcher, Доступ рутрекер
 
 
 <br/>

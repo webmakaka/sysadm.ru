@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Какие-то старые записи по Docker Swarm (устаревшие, позде будут выпилены)
-permalink: /linux/containers/docker/swarm/old/
+permalink: /linux/containers/docker/clustering/swarm/old/
 ---
 
 # Какие-то старые записи по Docker Swarm (устаревшие, позде будут выпилены)
 
+Но некоторые команды возможно понадобятся, поэтому и не удаляю.
 
 ### strategy
 
@@ -15,14 +16,15 @@ permalink: /linux/containers/docker/swarm/old/
 
 стартуем 20 контейнеров. Они должны разместить произвольно на хостах.
 
-    for i in {1..20}; do /bin/bash -c "docker run -d nginx"; done
+    $ for i in {1..20}; do /bin/bash -c "docker run -d nginx"; done
 
 удаляем
 
-    docker rm -f $(docker ps -aq)
+    $ docker rm -f $(docker ps -aq)
 
 
-___
+<br/>
+
 
 **strategy binpacking** (default) (в зависимости от памяти хост машины)
 
@@ -32,7 +34,7 @@ ___
     swarm manage token://<token> -H 0.0.0.0:4243 --strategy binpacking &
 
 
-___
+<br/>
 
 **Affinity filter**
 
@@ -43,7 +45,7 @@ ___
     docker run -d --name c5 -e affinity:container!=c1 nginx
 
 
-___
+<br/>
 
 **Standard Constraints**
 
@@ -54,7 +56,7 @@ ___
     docker run -d --name c2 -e constraint:operatingsystem==fedora* nginx (Ошибка!)
 
 
-___
+<br/>
 
 **Custom Constraints**
 
@@ -88,7 +90,8 @@ two:
     docker ps
 
 
-___
+<br/>
+
 
 **Resourse Constraints**
 
@@ -102,11 +105,9 @@ ___
 Если попытаться выполнить команду 4-й раз получим ошибку, т.к. ресурсов больше нет.
 
 
-
-
 <br/>
 
-### Пример из видео
+### Пример
 
 
     $ docker-machine create --driver virtualbox dev1

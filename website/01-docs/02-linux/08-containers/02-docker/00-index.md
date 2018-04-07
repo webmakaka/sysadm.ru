@@ -35,22 +35,18 @@ https://docs.docker.com/release-notes/docker-ce/
 https://hub.docker.com/explore/
 
 
-[YouTube Playlist]  
-http://www.youtube.com/playlist?list=PLkA60AVN3hh_6cAz8TUGtkYbJSL2bdZ4h
-
-
-[Docker Tutorial]  
-https://gist.github.com/sysadm-ru/bfc6e91fa891b4d457522212acaa8810
-
-
 [Docker Registry (Network Storage For Docker Images)] (облачный сервис для хранения контейнеров)  
 https://hub.docker.com  
 https://quay.io
 
-Можно создать свой Registry:  
+
+На hub.docker.com можно делать автоматически генерируемые контейнеры. Для этого необходимо указать где сервису взять Dockerfile. Например на github или bitbucket. При изменении файла, собирается заново. Вот пример моего контейнера, https://hub.docker.com/r/marley/nodejs/builds/ - автоматически собирается при обновлении контейнера от официального поставщика контейнеров в node.js.
+
+Можно создать свой Registry (мне пока не был нужен):  
 
 https://docs.docker.com/registry/  
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
+
 
 
 <br/><br/>
@@ -66,13 +62,8 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 ### Инсталляция Docker
 
-
 [Инсталляция / Upgrade Docker в Ubuntu](/linux/containers/docker/installation/ubuntu/)  
 [Инсталляция Docker в CentOS 7](/linux/containers/docker/installation/centos/7/)  
-
-<br/>
-
-[Docker-Compose (Инсталляция Docker-Compose в Ubuntu 14.04) ](/linux/containers/docker/toosl/docker-compose/installation/)  
 
 
 <br/>
@@ -86,13 +77,16 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 ### Docker Tools
 
-Docker-Compose (для совместной работы контейнеров)  
+<br/>
+
+[Docker-Compose (для совместной работы контейнеров)](/linux/containers/docker/toosl/docker-compose/)  
+
 [Docker Machine (для запуска контейнеров в virtualbox, обычно в windows)](/linux/containers/docker/docker-machine/)  
 
 
 <br/>
 
-### Docker NetWorking (Не особо и нужно. Но возможность такая есть (или по крайней мере была))
+### Docker NetWorking (Не особо и нужно. Но возможность такая есть (или по крайней мере была в версии 1.3))
 
 https://docs.docker.com/engine/userguide/networking/
 
@@ -106,13 +100,11 @@ https://docs.docker.com/engine/userguide/networking/
 ### Docker Linking Containers
 
 
-Лучше использовать docker-compose для линковки контейнеров.
+Лучше использовать <a href="/linux/containers/docker/toosl/docker-compose/">docker-compose</a> для линковки контейнеров.
 Для работы с docker-compose нужные версии docker >= 1.8.
 
 
 [Пример линковки контейнеров для их совместной работы](/linux/containers/docker/linking-containers/manual-linking/)  
-
-[Линковка Docker контейнеров с помощью Docker Compose](/linux/containers/docker/tools/docker-compose/)
 
 
 
@@ -150,13 +142,7 @@ https://docs.docker.com/engine/userguide/networking/
 
 ### Docker Clustering
 
-[Docker Swarm](/linux/containers/docker/swarm/)  
-
-**Alternatives:**
-
-- Kubernetes
-- Mesosphere
-- Apache Mesos
+[Docker Swarm](/linux/containers/docker/clustering/swarm/)  
 
 <br/>
 
