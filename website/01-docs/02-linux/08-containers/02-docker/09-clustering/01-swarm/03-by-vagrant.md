@@ -10,7 +10,7 @@ permalink: /linux/containers/docker/clustering/swarm/by-vagrant/
 По материалам видеокурса: Projects-in-Docker
 
 
-Делаю:
+Делаю:  
 27.04.2018
 
 
@@ -18,7 +18,7 @@ permalink: /linux/containers/docker/clustering/swarm/by-vagrant/
 https://github.com/marley-nodejs/Projects-in-Docker
 
 
-Делаю с помощью Vagrant, т.к. при использовании docker-machine я не смог установить внутри виртуалок пакеты для поднятия NFS.
+Делаю с помощью  <a href="/linux/virtual/vagrant/">Vagrant</a>, т.к. при использовании docker-machine я не смог установить внутри виртуалок пакеты для поднятия NFS (Network file system).
 
 <br/>
 
@@ -174,6 +174,8 @@ end
     $ vagrant box update
     $ vagrant up
     
+<br/>
+    
     $ vagrant status
     Current machine states:
 
@@ -188,6 +190,8 @@ end
 
 ### На все виртуалки ставим docker
     
+<a href="/linux/containers/docker/installation/ubuntu/">вот как</a>
+    
     
     $ vagrant ssh manager1
     $ vagrant ssh manager2
@@ -195,6 +199,8 @@ end
     $ vagrant ssh worker2
     $ vagrant ssh service1
     
+
+<br/>
 
     В hosts уже прописаны нужные ip и хосты
     
@@ -231,7 +237,8 @@ service1
     # apt-get install nfs-common
     # mount service1:/var/nfs/dbvol /mnt
     
-Потом нужно будет сделать, чтобы при перезагрузке автоматически подгружалось!!!
+Потом нужно будет сделать, чтобы при перезагрузке автоматически подгружалось!!! 
+(Нужно в fstab прописать)
     
     
     
@@ -252,6 +259,7 @@ service1
     To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
     
     
+<br/>
     
     # docker swarm join-token manager
     To add a manager to this swarm, run the following command:
@@ -306,7 +314,7 @@ service1
     
 <br/>
     
-### Делаю общий storage для mongodb
+### Делаю свой registry
     
 Делаю несекьерный!!!
 
@@ -473,10 +481,15 @@ manager1, manager2, service1
     http://192.168.56.104:8080/#/
     http://192.168.56.105:8080/#/
 
+<br/>
+
+Добавить данные в базу по следующему URL
 
     http://192.168.56.101:8080/create.html#/
 
-    user/pass
+
+    login: user
+    password: pass
     
 <br/>
     

@@ -12,7 +12,7 @@ permalink: /linux/containers/docker/clustering/swarm/by-docker-machine/
 
 По материалам видеокурса: Projects-in-Docker
 
-Делаю в конце мая 2018
+Делаю в конце апреля 2018
 
 Разворачиваю в swarm вот это приложение:  
 https://github.com/marley-nodejs/Projects-in-Docker
@@ -134,7 +134,7 @@ https://github.com/marley-nodejs/Projects-in-Docker
     $ docker build -t marley/mywebserver --build-arg PASSWORD=pass123 .
     
     
-Чтобы запустить контейнер в swarm, его нужно куда-то положить. То что он лежит локально на хост машине, ничего незначит. Виртуалки не знают ничего об этом не знают. Я решил, что проще всего положить их на docker hub.
+Чтобы запустить контейнер в swarm, его нужно куда-то положить. То что он лежит локально на хост машине, ничего незначит. Виртуалки не знают ничего об этом. Я решил, что проще всего положить их на docker hub.
 
 Захожу на docker hub, создаю репо. (мб. уже и не нужно создавать в веб интерфейсе. хз)
     

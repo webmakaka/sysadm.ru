@@ -48,7 +48,7 @@ https://docs.docker.com/engine/swarm/swarm-tutorial/
 
 ### Docker Swarm - кластер с использованием виртуалок с ubuntu в vagrant (с сохранением данных после перезагрузки)
 
-[здесь](/linux/containers/docker/clustering/swarm/by-docker-machine/)
+[здесь](/linux/containers/docker/clustering/swarm/by-vagrant/)
 
 
 <br/>
