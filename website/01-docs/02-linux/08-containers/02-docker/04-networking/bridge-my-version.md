@@ -8,6 +8,8 @@ permalink: /linux/containers/docker/networking/ubuntu-bridge/bridge-my-version/
 # Задание параметров сетевых интерфейсов docker в Ubuntu (IP, gateway, etc.)
 
 
+Делалось для Docker версии 1.X
+
 Сейчас, они что-то там пилят, но пока все сырое.
 
 
@@ -15,9 +17,6 @@ https://github.com/docker/libnetwork/blob/master/docs/overlay.md
 
 https://github.com/docker/libnetwork
 
-
-Можно посмотреть видео из плейлиста, приведенное на первой странице.
-И поискать consul.
 
 
 <br/>

@@ -60,18 +60,18 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 <br/><br/>
 
 
-### Docker
+### Инсталляция Docker
+
+[Инсталляция Docker](/linux/containers/docker/installation/)  
+
+
+<br/>
+
+### Базовые вещи
 
 [Имидж и контейнер, в чем собственно разница?](/linux/containers/docker/basics/images-and-containers/)  
 
 [Основные команды Docker](/linux/containers/docker/basics/basic-commands/)
-
-<br/>
-
-### Инсталляция Docker
-
-[Инсталляция / Upgrade Docker в Ubuntu](/linux/containers/docker/installation/ubuntu/)  
-[Инсталляция Docker в CentOS 7](/linux/containers/docker/installation/centos/7/)  
 
 
 <br/>

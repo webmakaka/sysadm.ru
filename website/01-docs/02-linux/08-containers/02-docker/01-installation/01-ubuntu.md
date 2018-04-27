@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Инсталляция и Upgrade Docker в Ubuntu 14.04
+title: Инсталляция и Upgrade Docker в Ubuntu
 permalink: /linux/containers/docker/installation/ubuntu/
 ---
 
 
-# Инсталляция / Upgrade Docker в Ubuntu 14.04
+# Инсталляция / Upgrade Docker в Ubuntu
 
 
 Похоже, они с каждым релизом меняют способ установки. 
@@ -16,13 +16,13 @@ permalink: /linux/containers/docker/installation/ubuntu/
 27.04.2018
 
 на ubuntu/xenial64  
-на ubuntu/bionic64 - пока не работает. Делаю на виртуалке.
+на ubuntu/bionic64 - Делал на виртуалке, чего-то не хватало!
 
 
 
 <br/>
 
-### Инсталляция Docker версии 18.03.0
+### Инсталляция Docker версии 18.x
 
     -- Удаляю текущую версию docker (если нужно)
     # apt-get remove -y docker docker-engine docker.io
@@ -40,9 +40,11 @@ permalink: /linux/containers/docker/installation/ubuntu/
         software-properties-common
         
     # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+<!-- 
+    # apt-key fingerprint 0EBFCD88 -->
     
-    # apt-key fingerprint 0EBFCD88
-    
+
     # add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \

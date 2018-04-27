@@ -6,6 +6,11 @@ permalink: /linux/containers/docker/networking/ubuntu-bridge/
 
 # Настройка моста для работы с Docker в Ubuntu
 
+
+Делалось для Docker версии 1.X
+
+<br/>
+
     sudo apt-get install bridge-utils
 
 <br/>
