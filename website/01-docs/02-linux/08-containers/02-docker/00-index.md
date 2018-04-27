@@ -14,19 +14,27 @@ Offtopic:
 
 ### Offtopic:
 
-В качестве хостовой машины для docker контейнеров вполне подойдет CoreOS. Желающих прокачать скилы по работе с Docker, предлагаю присмотреться к этому linux. Желающие копать совместно, присоединяйтесь.
-
 Здесь собираются материалы по работе с docker, начиная с версии 1.1. Материалы постепенно обновляются по мере необходимости обращения к ним.
 
 Некоторые вещи обновлять не успеваю, т.к. docker развивается достаточно быстро.
 
 Если копаете, можете помочь с обновлением и добавлением своих знаний.
 
+
+В качестве хостовой машины для docker контейнеров может быть интересен дистрибутив (уже от RedHat) - CoreOS. Впрочем, я считаю, что лучше Ubuntu и самому поставить тот же Docker и поднять доп сервисы, если они будут нужны.
+
+
 <strong>P.S.!!! В контейнерах для Centos7 не работает из коробки systemd! По крайней мере на момент попытки запуска мной! Сейчас в основном использую контейнеры с Debian / Ubuntu</strong>
 
+Еще стали предлагать в качестве контейнеров использовать alpine linux. Вроде жрет меньше ресурсов и еще какие-то преимущества. Но я пока хз. 
 
 
-<br/><br/>
+
+<br/>
+
+### Поехали
+
+<br/>
 
 [Последняя версия Docker Community Edition] - на апрель 2018 - 18.03.0-ce (2018-03-21)  
 https://docs.docker.com/release-notes/docker-ce/
@@ -42,7 +50,7 @@ https://quay.io
 
 На hub.docker.com можно делать автоматически генерируемые контейнеры. Для этого необходимо указать где сервису взять Dockerfile. Например на github или bitbucket. При изменении файла, собирается заново. Вот пример моего контейнера, https://hub.docker.com/r/marley/nodejs/builds/ - автоматически собирается при обновлении контейнера от официального поставщика контейнеров в node.js.
 
-Можно создать свой Registry (мне пока не был нужен):  
+Можно создать свой Registry:  
 
 https://docs.docker.com/registry/  
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
@@ -71,13 +79,13 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 ### Запуск Docker контейнера
 
 [Запуск Ubuntu Docker контейнера](/linux/containers/docker/run/)  
+[Пример запуска веб проекта в контейнерах Docker](https://github.com/marley-nodejs/Projects-in-Docker)  
 
 
 <br/>
 
 ### Docker Tools
 
-<br/>
 
 [Docker-Compose (для совместной работы контейнеров)](/linux/containers/docker/toosl/docker-compose/)  
 
@@ -86,7 +94,7 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 <br/>
 
-### Docker NetWorking (Не особо и нужно. Но возможность такая есть (или по крайней мере была в версии 1.3))
+### Docker NetWorking (Не особо и нужно. Но возможность такая есть (или по крайней мере была в версии 1.3). Не пользуюсь этой возможностью)
 
 https://docs.docker.com/engine/userguide/networking/
 
@@ -140,16 +148,16 @@ https://docs.docker.com/engine/userguide/networking/
 
 <br/>
 
-### Docker Clustering
-
-[Docker Swarm](/linux/containers/docker/clustering/swarm/)  
-
-<br/>
-
-### Dockerfile
+### Dockerfile - скрипт для создания контейнера автоматически
 
 [здесь](/linux/containers/docker/dockerfile/)  
 
+
+<br/>
+
+### Docker Clustering
+
+[Docker Swarm](/linux/containers/docker/clustering/swarm/)  
 
 <br/>
 
@@ -158,6 +166,28 @@ https://docs.docker.com/engine/userguide/networking/
 [Docker for Web Developers (видеокурс)](https://bitbucket.org/sysadm-ru/docker-for-web-developers)
 
 ___
+
+
+<br/>
+
+Еще вот здесь чувак пишет о s6-overlay. (Я хз пока что это такое):
+
+
+    http://reangdblog.blogspot.com/2016/09/debian-ubuntu-docker.html
+
+
+    Я использую s6-overlay, эта набор скриптов поверх s6, которые разрабатывались специально под docker. Я не буду пересказывать документацию, но вкратце опишу возможности: 
+
+    - "Повесить" набор скриптов на старт и остановку контейнера.
+    - Декларативно описать назначение прав на директории и файлы, вместо беспорядочных chmod и chown в разных местах.
+    - Для каждого сервиса можно написать скрипт запуска под нужным пользователем, и скрипт, который будет выполняться при завершении контейнера.
+    - Ну и конечно единообразное логирование каждого шага.
+
+
+    https://github.com/just-containers/s6-overlay
+
+
+
 
 <br/>
 

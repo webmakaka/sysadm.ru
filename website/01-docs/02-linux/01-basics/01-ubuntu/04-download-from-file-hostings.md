@@ -10,6 +10,16 @@ permalink: /linux/basics/ubuntu/download-from-file-hostings/
 
 jdownloader (jdownloader.org)
 
+
+<br/>
+
+<div align="center">
+    <img src="http://storage6.static.itmages.ru/i/18/0412/h_1523516754_7360888_d0fa6ee52b.png" border="0" alt="Программа для скачивания с файлопомоек вроде Rapidgator, Nitroflare, Uploadgig etc.">
+</div>
+
+
+<br/><br/>
+
 - Проверяет доступны ли файлы. 
 - Сама считает время. 
 - Подает звук, когда пришло время ввести капчу. 

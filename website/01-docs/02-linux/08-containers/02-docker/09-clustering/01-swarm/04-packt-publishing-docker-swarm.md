@@ -105,18 +105,6 @@ https://bitbucket.org/sysadm-ru/docker-swarm
 
 <br/>
     
-    $ eval $(docker-machine env swarm-1)
-    
-<br/>
-    
-    $ docker node ls
-    ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
-    q3ily6egm1c0hrxk8low98pzp *   swarm-1             Ready               Active              Leader              18.03.0-ce
-    go1vgq9rumqrwrmtn66ub369l     swarm-2             Ready               Active                                  18.03.0-ce
-
-
-<br/>
-    
     $ eval $(docker-machine env swarm-3)
 
 
@@ -170,6 +158,8 @@ https://bitbucket.org/sysadm-ru/docker-swarm
 https://github.com/dockersamples/docker-swarm-visualizer
 
 
+<br/>
+
     $ docker service create \
       --name=viz \
       --publish=8080:8080/tcp \
@@ -177,6 +167,8 @@ https://github.com/dockersamples/docker-swarm-visualizer
       --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
       dockersamples/visualizer
 
+
+<br/>
 
 http://192.168.99.100:8080/
 http://192.168.99.101:8080/
@@ -269,7 +261,7 @@ http://192.168.99.102:8080/
     
 <br/>
 
-#!/bin/bash
+    #!/bin/bash
 
     for i in 1 2 3; do
         docker-machine rm -f swarm-$i
@@ -305,6 +297,7 @@ http://192.168.99.102:8080/
     ni6iagdgbwi9        visualizer            replicated          1/1                 dockersamples/visualizer:latest           *:8000->8080/tcp
 
 
+<br/>
     
     $ curl http://$(docker-machine ip swarm-1):8080
     $ curl http://$(docker-machine ip swarm-2):8080
@@ -513,50 +506,50 @@ http://192.168.99.102:8000/
     
 <br/>
 
-server {
-    listen       80;
-    server_name  localhost;
+    server {
+        listen       80;
+        server_name  localhost;
 
-    #charset koi8-r;
-    #access_log  /var/log/nginx/host.access.log  main;
+        #charset koi8-r;
+        #access_log  /var/log/nginx/host.access.log  main;
 
-    location / {
-        root   /usr/share/nginx/html;
-        index  index.html index.htm;
+        location / {
+            root   /usr/share/nginx/html;
+            index  index.html index.htm;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   /usr/share/nginx/html;
+        }
+
+        # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+        #
+        #location ~ \.php$ {
+        #    proxy_pass   http://127.0.0.1;
+        #}
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        #location ~ \.php$ {
+        #    root           html;
+        #    fastcgi_pass   127.0.0.1:9000;
+        #    fastcgi_index  index.php;
+        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+        #    include        fastcgi_params;
+        #}
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #    deny  all;
+        #}
     }
-
-    #error_page  404              /404.html;
-
-    # redirect server error pages to the static page /50x.html
-    #
-    error_page   500 502 503 504  /50x.html;
-    location = /50x.html {
-        root   /usr/share/nginx/html;
-    }
-
-    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
-    #
-    #location ~ \.php$ {
-    #    proxy_pass   http://127.0.0.1;
-    #}
-
-    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
-    #
-    #location ~ \.php$ {
-    #    root           html;
-    #    fastcgi_pass   127.0.0.1:9000;
-    #    fastcgi_index  index.php;
-    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
-    #    include        fastcgi_params;
-    #}
-
-    # deny access to .htaccess files, if Apache's document root
-    # concurs with nginx's one
-    #
-    #location ~ /\.ht {
-    #    deny  all;
-    #}
-}
 
 <br/>
 
@@ -592,7 +585,9 @@ server {
     $ curl http://$(docker-machine ip swarm-1):80
 
 
-## 04-RUNNING MY APPLICATION
+<br/>
+
+## 03-RUNNING MY APPLICATION
 
 <br/>
 
@@ -1004,7 +999,7 @@ http://192.168.99.100:8000/
 
 <br/>
 
-## 05-DOCKER STACK
+## 04-DOCKER STACK
 
 <br/>
 
@@ -1360,6 +1355,8 @@ https://bitbucket.org/sysadm-ru/docker-swarm/raw/d382b2f2b6cce1ca285dacf14807128
 
     $ docker service scale api_names-demo=4
 
+
+<br/>
 
     $  docker stack ps -f desired-state=running api
     ID                  NAME                IMAGE                            NODE                DESIRED STATE       CURRENT STATE                    ERROR               PORTS

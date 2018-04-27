@@ -7,21 +7,25 @@ permalink: /linux/containers/docker/installation/ubuntu/
 
 # Инсталляция / Upgrade Docker в Ubuntu 14.04
 
-Делаю:  
-03.04.2018
 
 Похоже, они с каждым релизом меняют способ установки. 
 Пятый раз переписываю!
+
+Делаю:  
+
+27.04.2018
+
+на ubuntu/xenial64  
+на ubuntu/bionic64 - пока не работает. Делаю на виртуалке.
+
 
 
 <br/>
 
 ### Инсталляция Docker версии 18.03.0
 
-
-    -- Удаляю текущую версию docker
+    -- Удаляю текущую версию docker (если нужно)
     # apt-get remove -y docker docker-engine docker.io
-
 
     # apt-get update
 
@@ -49,7 +53,7 @@ permalink: /linux/containers/docker/installation/ubuntu/
    # apt-get install -y docker-ce
 
    # docker -v
-   Docker version 18.03.0-ce, build 0520e24
+   Docker version 18.03.1-ce, build 9ee9f40
 
 
 Подробнее:  

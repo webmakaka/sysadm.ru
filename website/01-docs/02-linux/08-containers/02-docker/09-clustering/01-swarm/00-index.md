@@ -31,16 +31,31 @@ https://docs.docker.com/engine/swarm/swarm-tutorial/
 
 <br/>
 
-### Docker Swarm первый взгляд (на смомом деле нет)
+### Docker Swarm первый взгляд
 
 [здесь](/linux/containers/docker/clustering/swarm/first-look/)
+
 
 
 <br/>
 
-### [Packt Publishing] Docker Swarm [August 31, 2017]
+### Docker Swarm - кластер с использованием docker-machine (без сохранения данных после перезагрузки)
 
-[здесь](/linux/containers/docker/clustering/swarm/first-look/)
+[здесь](/linux/containers/docker/clustering/swarm/by-docker-machine/)
+
+
+<br/>
+
+### Docker Swarm - кластер с использованием виртуалок с ubuntu в vagrant (с сохранением данных после перезагрузки)
+
+[здесь](/linux/containers/docker/clustering/swarm/by-docker-machine/)
+
+
+<br/>
+
+### [Packt Publishing] Docker Swarm [August 31, 2017] (Имеет смысл смотреть, чтобы понять как делать обновления контейнеров)
+
+[здесь](/linux/containers/docker/clustering/swarm/packt-publishing-docker-swarm/)
 
 
 <br/>

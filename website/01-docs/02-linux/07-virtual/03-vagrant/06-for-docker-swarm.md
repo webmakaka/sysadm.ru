@@ -7,6 +7,7 @@ permalink: /linux/virtual/vagrant/for-docker-swarm/
 
 # Vagrant машины для Docker Swarm
 
+
 <br/>
 
     $ vagrant plugin install vagrant-hosts
@@ -34,7 +35,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
 
-
   config.vm.provision :hosts do |provisioner|
 
       provisioner.add_host '192.168.56.101', ['client']
@@ -49,16 +49,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
 
-
   config.vm.define "client" do |myVm|
 
-   #  myVm.ssh.insert_key = true
+   myVm.ssh.insert_key = true
    #  myVm.ssh.forward_agent = true
 
-    config.ssh.username = 'vagrant'
-    config.ssh.password = 'vagrant'
-
-    myVm.vm.box = 'v0rtex/xenial64'
+    myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'client'
 
     myVm.vm.network :private_network, ip: "192.168.56.101"
@@ -72,21 +68,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
-
-
-
-
   config.vm.define "ca" do |myVm|
 
-    # myVm.ssh.insert_key = true
+    myVm.ssh.insert_key = true
     # myVm.ssh.forward_agent = true
 
-    config.ssh.username = 'vagrant'
-    config.ssh.password = 'vagrant'
-
-    myVm.vm.box = 'v0rtex/xenial64'
-
-    # myVm.vm.box = 'ubuntu/xenial64'
+    myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'ca'
 
     myVm.vm.network :private_network, ip: "192.168.56.102"
@@ -100,19 +87,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
 
-
   config.vm.define "manager1" do |myVm|
 
-    # myVm.ssh.insert_key = true
+    myVm.ssh.insert_key = true
     # myVm.ssh.forward_agent = true
 
-    config.ssh.username = 'vagrant'
-    config.ssh.password = 'vagrant'
 
-    myVm.vm.box = 'v0rtex/xenial64'
+    myVm.vm.box = 'ubuntu/xenial64'
 
-
-    # myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'manager1'
 
     myVm.vm.network :private_network, ip: "192.168.56.103"
@@ -126,18 +108,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
 
-
   config.vm.define "manager2" do |myVm|
 
-    # myVm.ssh.insert_key = true
+    myVm.ssh.insert_key = true
     # myVm.ssh.forward_agent = true
 
-    config.ssh.username = 'vagrant'
-    config.ssh.password = 'vagrant'
-
-    myVm.vm.box = 'v0rtex/xenial64'
-
-    # myVm.vm.box = 'ubuntu/xenial64'
+    myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'manager2'
 
     myVm.vm.network :private_network, ip: "192.168.56.104"
@@ -151,19 +127,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
 
-
   config.vm.define "manager3" do |myVm|
 
-    # myVm.ssh.insert_key = true
+    myVm.ssh.insert_key = true
     # myVm.ssh.forward_agent = true
 
-
-    config.ssh.username = 'vagrant'
-    config.ssh.password = 'vagrant'
-
-    myVm.vm.box = 'v0rtex/xenial64'
-
-    # myVm.vm.box = 'ubuntu/xenial64'
+    myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'manager3'
 
     myVm.vm.network :private_network, ip: "192.168.56.105"
@@ -177,19 +146,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
 
-
   config.vm.define "node1" do |myVm|
 
-    # myVm.ssh.insert_key = true
+    myVm.ssh.insert_key = true
     # myVm.ssh.forward_agent = true
 
-    config.ssh.username = 'vagrant'
-    config.ssh.password = 'vagrant'
+    myVm.vm.box = 'ubuntu/xenial64'
 
-    myVm.vm.box = 'v0rtex/xenial64'
-
-
-    # myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'node1'
 
     myVm.vm.network :private_network, ip: "192.168.56.106"
@@ -203,19 +166,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
 
-
   config.vm.define "node2" do |myVm|
 
-    # myVm.ssh.insert_key = true
+    myVm.ssh.insert_key = true
     # myVm.ssh.forward_agent = true
 
-    config.ssh.username = 'vagrant'
-    config.ssh.password = 'vagrant'
+    myVm.vm.box = 'ubuntu/xenial64'
 
-    myVm.vm.box = 'v0rtex/xenial64'
-
-
-    # myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'node2'
 
     myVm.vm.network :private_network, ip: "192.168.56.107"
@@ -229,18 +186,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
 
-
   config.vm.define "node3" do |myVm|
 
-    # myVm.ssh.insert_key = true
+    myVm.ssh.insert_key = true
     # myVm.ssh.forward_agent = true
 
-    config.ssh.username = 'vagrant'
-    config.ssh.password = 'vagrant'
-
-    myVm.vm.box = 'v0rtex/xenial64'
-
-    # myVm.vm.box = 'ubuntu/xenial64'
+    myVm.vm.box = 'ubuntu/xenial64'
     myVm.vm.hostname = 'node3'
 
     myVm.vm.network :private_network, ip: "192.168.56.108"
@@ -253,17 +204,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
-
 end
 
 {% endhighlight %}
-
-
-Почему v0rtex/xenial64? Потому, что в ubuntu/xenial64 пароли не удается задать в скрипте.
-
-Почему не использую для этого SSH ключи? Потому, что не умею в должной степени.
-
-Предложения по улучшению принимаются.
 
 
 <br/>

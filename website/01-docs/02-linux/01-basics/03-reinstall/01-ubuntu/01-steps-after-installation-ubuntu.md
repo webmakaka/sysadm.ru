@@ -218,13 +218,21 @@ menu:minimize,maximize,close
 
     $ gsettings set org.gnome.desktop.sound event-sounds false
 
+<br/>
 
+### Чтобы при нажатии правой кнопкой мышки по папке было поле меню "Открыть в терминале" 
+
+    $ sudo apt-get install nautilus-open-terminal
+    $ nautilus -q
+    
+    
 <br/>
 
 ### Заблокировать дерьмовые сайты, вроде 1xbet
 
 https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
+<br/>
 
 ### Дополнительное ПО
 

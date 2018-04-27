@@ -22,7 +22,8 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
 
 <br/>
 
-    $ cd /tmp
+    $ mkdir ~/docker-swarm-scripts
+    $ cd ~/docker-swarm-scripts
     $ git clone https://bitbucket.org/sysadm-ru/native-docker-clustering
     $ cd native-docker-clustering
     $ vagrant box update
@@ -88,7 +89,7 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
 
 <br/>
 
-### core-02 core-03
+### core-02, core-03, ....
 
     $ docker swarm join \
     --token SWMTKN-1-2pz4il4gexlaan2ik825mr5xdxmpllbqxhmhhf6x6z8kvcf889-ekfm7so78lcqgy06eqvanudcg \

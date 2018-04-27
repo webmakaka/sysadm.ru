@@ -32,5 +32,6 @@ permalink: /linux/containers/docker/run/
 ### Стартовать контейнер для разработки
 
 // Разрабатывать на хостовой, запускать в контейнере
+// Каталог на /home/marley/go будет тем же самым, что и /project внутри контейнера
 
     $ docker run -i -t --name dev -v /home/marley/go:/project ubuntu:latest  /bin/bash

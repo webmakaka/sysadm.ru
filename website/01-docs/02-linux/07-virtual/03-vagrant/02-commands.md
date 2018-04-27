@@ -16,8 +16,40 @@ permalink: /linux/virtual/vagrant/commands/
 https://app.vagrantup.com/boxes/search
 
 
+<br/>
+
+Vagrant копирует виртуальные машины с следующие директории. 
+
+<br/>
+
+    $ pwd
+    /home/marley/.vagrant.d/boxes
+
+    $ ls
+    bento-VAGRANTSLASH-ubuntu-14.04  hashicorp-VAGRANTSLASH-precise64
+    coreos-alpha                     ubuntu-VAGRANTSLASH-bionic64
+    coreos-beta                      ubuntu-VAGRANTSLASH-trusty64
+    coreos-stable                    ubuntu-VAGRANTSLASH-xenial64
+    debian-VAGRANTSLASH-jessie64     v0rtex-VAGRANTSLASH-xenial64
+
+
+<br/>
+
+
+Если версия обновляется, то в каталогах присутствуют разные версии. Может занимать много места.
+
+
+    $ cd ubuntu-VAGRANTSLASH-trusty64
+    
+    $ ls
+    20161214.0.0  20170208.0.0  metadata_url
+
+<br/>
+
+### Команды
+
     // Инициализировать конфиг файл с определенной операционной системой
-    $ vagrant init bento/ubuntu-14.04
+    $ vagrant init ubuntu/bionic64
 
 
     // Задать параметры создаваемой виртуальной машины
@@ -151,14 +183,14 @@ https://app.vagrantup.com/boxes/search
  <br/>
 
 
-
   // Чтобы можно было по ssh ходить между узлами без пароля
 
     $ ssh-add ~/.vagrant.d/insecure_private_key
     Identity added: /home/marley/.vagrant.d/insecure_private_key (/home/marley/.vagrant.d/insecure_private_key)
 
+Потом:
 
-    $ ssh -p 2222 -i ~/.vagrant.d/insecure_private_key
+    $ ssh core-01 -p 2222 -i ~/.vagrant.d/insecure_private_key
 
 
 <br/>
