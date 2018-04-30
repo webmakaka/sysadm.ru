@@ -15,3 +15,5 @@ permalink: /linux/virtual/vagrant/
 [Создание с помощью Vagrant виртуальной машины Ubuntu](/linux/virtual/vagrant/create-ubuntu-vm-by-vagrant/)  
 
 [Создание с помощью Vagrant 2 виртуальных машин Debian](/linux/virtual/vagrant/create-2-debian-vagrant/)
+
+[Vagrant c Docker внутри](/linux/virtual/vagrant/vagrant-with-docker/)

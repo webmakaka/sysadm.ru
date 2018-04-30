@@ -24,10 +24,14 @@
 
 <br/>
 
-### Как сервис на coreos    
+### Как сервис 
+
 
     $ sudo su -
-    # cd /home/core/sysadm.ru/
+    # mkdir -p /project
+    # cd /project
+    # git clone --depth=1 https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git
+    # cd sysadm.ru/
     # cp sysadm_ru.service /etc/systemd/system
     # systemctl enable sysadm_ru.service
     # systemctl start sysadm_ru.service

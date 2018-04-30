@@ -13,7 +13,7 @@ ExecStartPre=-/usr/bin/docker rm sysadm_ru
 ExecStartPre=-/usr/bin/docker pull jekyll/jekyll:pages
 ExecStart=/bin/sh -c '/usr/bin/docker run --name sysadm_ru   \
  -p 65001:4000                        \
- -v /home/core/sysadm.ru:/srv/jekyll \
+ -v /project/sysadm.ru:/srv/jekyll \
  jekyll/jekyll:pages jekyll serve --watch --incremental'
 ExecStop=-/usr/bin/docker kill sysadm_ru
 ExecStop=-/usr/bin/docker rm sysadm_ru

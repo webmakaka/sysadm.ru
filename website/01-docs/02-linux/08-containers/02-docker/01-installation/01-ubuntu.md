@@ -18,6 +18,11 @@ permalink: /linux/containers/docker/installation/ubuntu/
 на ubuntu/xenial64  
 на ubuntu/bionic64 - Делал на виртуалке, чего-то не хватало!
 
+Думаю, будет работать, когда файл Packages  
+https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
+
+будет не пустым.
+
 
 
 <br/>
@@ -29,6 +34,7 @@ permalink: /linux/containers/docker/installation/ubuntu/
 
     # apt-get update
 
+    -- нужно только для ubuntu 14.04
     # apt-get install -y \
         linux-image-extra-$(uname -r) \
         linux-image-extra-virtual
@@ -69,6 +75,16 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/
 <br/>
 
 ### Предоставить пользователю права для работы с docker
+
+
+<!-- 
+
+Проверить работает или нет
+Если да, заменить
+
+sudo usermdo -aG docker <username> -->
+
+
 
     $ sudo gpasswd -a <username> docker
 

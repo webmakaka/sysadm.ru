@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ubuntu Unable to locate package
-permalink: /linux/basics/ubuntu/Install-package-for-missing-libraries/
+permalink: /linux/basics/ubuntu/install-package-for-missing-libraries/
 ---
 
 # Ubuntu Unable to locate package

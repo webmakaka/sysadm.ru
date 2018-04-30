@@ -24,9 +24,11 @@ permalink: /linux/basics/
 
 ### [Программа для скачивания с файлопомоек вроде Rapidgator, Nitroflare, Uploadgig etc.](/linux/basics/ubuntu/download-from-file-hostings/)
 
-### [Unable to locate package *****.so.*](/linux/basics/ubuntu/Install-package-for-missing-libraries/)
+### [Unable to locate package *****.so.*](/linux/basics/ubuntu/install-package-for-missing-libraries/)
 
 ### [Команды запуска сервисов systemd (systemctl)](/linux/basics/systemctl/)
+
+### [Мелкие улучшения](/linux/basics/ubuntu/small-improvements/)
 
 
 <br/>
