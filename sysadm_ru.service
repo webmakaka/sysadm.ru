@@ -10,7 +10,7 @@ Restart=always
 TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill sysadm_ru
 ExecStartPre=-/usr/bin/docker rm sysadm_ru
-ExecStartPre=-/usr/bin/docker pull jekyll/jekyll:pages
+ExecStartPre=-/usr/bin/docker pull jekyll/jekyll:latest
 ExecStart=/bin/sh -c '/usr/bin/docker run --name sysadm_ru   \
  -p 65001:4000                        \
  -v /project/sysadm.ru:/srv/jekyll \

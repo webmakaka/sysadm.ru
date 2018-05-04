@@ -143,7 +143,7 @@ https://docs.docker.com/engine/userguide/networking/
 ### Docker практические задачи
 
 [Переместить файлы Docker](/linux/containers/docker/basics/move-docker-files/)  
-[Перенос форума в контейнеры Docker (В работе)](/linux/containers/docker/odba/)
+<!-- [Перенос форума в контейнеры Docker (В работе)](/linux/containers/docker/odba/) -->
 
 
 <br/>

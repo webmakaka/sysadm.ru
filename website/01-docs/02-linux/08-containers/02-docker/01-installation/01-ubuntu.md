@@ -77,16 +77,10 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ### Предоставить пользователю права для работы с docker
 
 
-<!-- 
-
-Проверить работает или нет
-Если да, заменить
-
-sudo usermdo -aG docker <username> -->
-
-
-
-    $ sudo gpasswd -a <username> docker
+    $ sudo usermod -aG docker <username>
+    
+    
+<!-- $ sudo gpasswd -a <username> docker -->
 
 в группе docker должен появиться этот пользователь  
 

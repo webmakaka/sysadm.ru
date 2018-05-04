@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Создание с помощью Vagrant 2 виртуальных машин Debian
+title: Создание с помощью Vagrant 2-х виртуальных машин Debian
 permalink: /linux/virtual/vagrant/create-2-debian-vagrant/
 ---
 
 
-# Создание с помощью Vagrant 2 виртуальных машин Debian
+# Создание с помощью Vagrant 2-х виртуальных машин Debian
 
 <br/>
 

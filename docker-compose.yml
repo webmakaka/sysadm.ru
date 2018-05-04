@@ -1,5 +1,5 @@
 jekyll:
-    image: jekyll/jekyll:pages
+    image: jekyll/jekyll:latest
     command: jekyll serve --watch --incremental
     ports:
         - 65001:4000
