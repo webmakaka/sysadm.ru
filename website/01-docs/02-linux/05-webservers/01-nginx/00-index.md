@@ -6,6 +6,14 @@ permalink: /linux/webservers/nginx/
 
 # Nginx Debian Jessie
 
+<br/>
+
+### Nginx 1.X
+
+[Инсталляция Nginx 1.X сервер на Ubuntu (Xenial) из пакетов](/linux/webservers/nginx/1.x/ubuntu/xenial/installation/)  
+
+
+<br/>
 
 ### Nginx 1.8.X
 

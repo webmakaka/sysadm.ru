@@ -10,6 +10,9 @@ permalink: /linux/webservers/nginx/1.8/debian/jessie/proxy/
 
 На 192.168.1.202 работает webserver и принимает и корректно обрабатывает запросы на обращение по адресу sysadm.ru на порту 8080.
 
+
+<br/>
+
     # vi /etc/hosts
     192.168.1.202 webserver
 
@@ -49,10 +52,14 @@ permalink: /linux/webservers/nginx/1.8/debian/jessie/proxy/
 
 <br/>
 
-
     # service nginx restart
 
 <br/>
 
     # curl sysadm.ru:80
     <h1>Hello, sysadm.ru</h1>
+
+
+<br/>
+
+Для удаленных подключения, нужно еще выключить firewall.

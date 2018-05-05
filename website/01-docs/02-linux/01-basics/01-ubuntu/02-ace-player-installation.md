@@ -48,15 +48,15 @@ permalink: /linux/basics/ubuntu/ace-player-installation/
 <br/>
 
 <div align="center">
-    <img src="http://storage6.static.itmages.ru/i/18/0331/h_1522515268_2569674_42675bdd23.png" border="0" alt="Установка Ace плеера в Ubuntu">
+    <img src="//files.sysadm.ru/img/ace-01.png" border="0" alt="Установка Ace плеера в Ubuntu">
     
     <br/><br/>
     
-    <img src="http://storage6.static.itmages.ru/i/18/0331/h_1522515268_6890254_12ab5f68cc.png" border="0" alt="Установка Ace плеера в Ubuntu">
+    <img src="//files.sysadm.ru/img/ace-02.png" border="0" alt="Установка Ace плеера в Ubuntu">
     
     <br/><br/>
     
-    <img src="http://storage6.static.itmages.ru/i/18/0331/h_1522515268_3028729_270daa318d.png" border="0" alt="Установка Ace плеера в Ubuntu">    
+    <img src="//files.sysadm.ru/img/ace-03.png" border="0" alt="Установка Ace плеера в Ubuntu">    
     
 </div>
 

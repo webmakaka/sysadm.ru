@@ -9,6 +9,7 @@ permalink: /linux/webservers/nginx/1.8/debian/jessie/installation/
 
 <br/>
 
+    $ sudo su -
     # apt-get update -y && apt-get upgrade -y
     # apt-get install -y vim curl links wget
 

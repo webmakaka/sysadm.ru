@@ -10,6 +10,10 @@ permalink: /linux/virtual/vagrant/vagrant-with-docker/
 
 <br/>
 
+    $ cd ~
+    $ mkdir -p  vagrant-scripts
+    $ cd vagrant-scripts
+
     $ vi Vagrantfile
 
 
