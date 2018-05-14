@@ -44,7 +44,9 @@ https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
         ca-certificates \
         curl \
         software-properties-common
-        
+
+<br/>
+
     # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 <!-- 
@@ -52,16 +54,16 @@ https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
     
 
     # add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-   
-   
-   # apt-get update
-   # apt-get install -y docker-ce
+    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) \
+    stable"
 
-   # docker -v
-   Docker version 18.03.1-ce, build 9ee9f40
+
+    # apt-get update
+    # apt-get install -y docker-ce
+
+    # docker -v
+    Docker version 18.03.1-ce, build 9ee9f40
 
 
 Подробнее:  
