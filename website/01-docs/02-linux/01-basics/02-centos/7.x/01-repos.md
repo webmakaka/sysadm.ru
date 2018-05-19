@@ -64,7 +64,7 @@ permalink: /linux/basics/centos/7/repos/
 
 <br/>
 
-**RPMForge сдох. Вместо него рекомендуют использовать EPEL**
+**RPMForge умер! Вместо него рекомендуют использовать EPEL**
 
 
 

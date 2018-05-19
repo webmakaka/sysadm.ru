@@ -23,7 +23,9 @@ https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
 
 будет не пустым.
 
+А пока, можно установить нестабильную версию, если кому-то оч.нетерпится.
 
+Кстати, на ubuntu bionic64 не перейду до тех пор, пока стабильный docker на ней работать не будет.
 
 <br/>
 
