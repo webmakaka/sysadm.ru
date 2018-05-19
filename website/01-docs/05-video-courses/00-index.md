@@ -15,8 +15,6 @@ permalink: /linux/video-courses/
 
 <br/>
 
-Вот, пример того, чего набрал я.   
-http://storage5.static.itmages.ru/i/18/0321/h_1521645475_5149398_428c598186.png
 
 После видеокурс, к которому есть доступ, можно скачать программной udemy-dl (https://github.com/r0oth3x49/udemy-dl).
 
