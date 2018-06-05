@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ansible
-permalink: /linux/virtual/ansible/
+permalink: /linux/automate/ansible/
 ---
 
 # Ansible

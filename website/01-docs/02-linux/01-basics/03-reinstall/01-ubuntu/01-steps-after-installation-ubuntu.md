@@ -228,9 +228,13 @@ menu:minimize,maximize,close
     
 <br/>
 
-### Заблокировать дерьмовые сайты, вроде 1xbet
+### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
 https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
+
++ 
+
+    0.0.0.0 betcity.ru
 
 <br/>
 

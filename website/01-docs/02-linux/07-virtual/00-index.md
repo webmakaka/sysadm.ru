@@ -21,5 +21,3 @@ permalink: /linux/virtual/
 ### Инструменты
 
 ### [Vagrant](/linux/virtual/vagrant/)
-
-### [Ansible](/linux/virtual/ansible/)
