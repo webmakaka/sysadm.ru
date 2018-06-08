@@ -9,8 +9,6 @@ permalink: /linux/virtual/kvm/
 
 <pre>
 
-P.S. Если устанавливать на Centos виртуальную машину Centos, то уж лучше (имхо) ставить не KVM а LXC.
-
 <strong>Инсталляция и настройка</strong>
 
 
@@ -271,6 +269,7 @@ VMName_2 — имя новой виртуальной машины
 
 
 <br/><br/>
+
 <strong>Почитать:</strong><br/><br/>
 <strong>Установка и настройка KVM под управлением CentOS 6</strong><br/>
 http://habrahabr.ru/post/168791/
@@ -278,6 +277,3 @@ http://habrahabr.ru/post/168791/
 <br/><br/>
 <strong>Настройка KVM в CentOS 6</strong><br/>
 http://www.alsigned.ru/?p=2027
-
-
-</div>
