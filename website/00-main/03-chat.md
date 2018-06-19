@@ -6,6 +6,15 @@ permalink: /chat/
 
 # Чат
 
+### Telegram 
+
+https://t.me/sysadm_ru
+
+
+<br/>
+
+### Gitter чат
+
 
 Требуется github или twitter аккаунт.
 

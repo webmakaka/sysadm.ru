@@ -1,5 +1,0 @@
-/linux/virtual/lxc/ubuntu-lxc.php
-/linux/red-hat-public-repositories.php
-/linux/webservers/apache/centos/6/installation/php.php
-/linux/virtual/docker/dockerfiles/centos6-rails.php
-/linux/virtual/docker/centos/6.5/dockerfile.php
