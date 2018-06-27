@@ -21,8 +21,8 @@ permalink: /linux/servers/containers/docker/lamp/
 <br/>
 
     $ git clone https://github.com/tkyk/docker-compose-lamp
-    $ docker-compose stop
-    $ docker-compose stop
+    $ cd docker-compose-lamp
+    $ docker-compose build
     $ docker-compose up -d
     $ docker-compose stop
     $ docker-compose rm
