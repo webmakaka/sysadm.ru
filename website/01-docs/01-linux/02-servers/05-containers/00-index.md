@@ -7,25 +7,15 @@ permalink: /linux/servers/containers/
 
 # Контейнеры в Linux
 
-<br/>
-
-### Хостовые операционные системы для docker контейнеров
-
-[CoreOS (была куплена RedHat)](/linux/servers/containers/coreos/)
-
-Rancher OS (Rancher Labs)
-
-Atomic (RedHat)
-
-
 
 <br/>
 
 ### Контейнеры
 
-### [Linux Containers (LXC)](/linux/servers/containers/lxc/)
 
 ### [Docker](/linux/servers/containers/docker/)
+
+### [Linux Containers (LXC)](/linux/servers/containers/lxc/)
 
 ### [RKT (Roket)](/linux/servers/containers/krt/)
 

@@ -128,7 +128,9 @@ https://docs.docker.com/engine/userguide/networking/
 
 ### Работа с официальными и не только контейнерами
 
+[Lamp Server](/linux/servers/containers/docker/lamp/)
 [Работа с официальным mysql Docker контейнером](/linux/servers/containers/docker/official/containers/mysql/)  
+
 
 
 <br/>
@@ -165,6 +167,17 @@ https://docs.docker.com/engine/userguide/networking/
 
 [Docker for Web Developers (видеокурс)](https://bitbucket.org/sysadm-ru/docker-for-web-developers)
 
+
+<br/>
+
+### Хостовые операционные системы для docker контейнеров
+
+[CoreOS (была куплена RedHat)](/linux/servers/containers/coreos/)
+
+Rancher OS (Rancher Labs)
+
+Atomic (RedHat)
+
 ___
 
 
@@ -185,6 +198,8 @@ ___
 
 
     https://github.com/just-containers/s6-overlay
+
+
 
 
 
