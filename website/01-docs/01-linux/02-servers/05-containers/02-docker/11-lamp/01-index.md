@@ -12,6 +12,12 @@ permalink: /linux/servers/containers/docker/lamp/
 
 </div>
 
+<br/><br/>
+
+Коннектиться нужно к localhost.<br/>
+Пароли для подключения к базе в конфигах. <br/>
+База, если что назвается "db".<br/>
+
 <br/>
 
     $ git clone https://github.com/tkyk/docker-compose-lamp
