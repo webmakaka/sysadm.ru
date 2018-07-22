@@ -33,9 +33,9 @@ permalink: /linux/servers/virtual/virtualbox/installation/ubuntu/14.04/
 
 <br/>
 
-Последняя 5.1 ее и ставлю
+Последняя 5.2 ее и ставлю
 
-    # apt-get install -y virtualbox-5.1
+    # apt-get install -y virtualbox-5.2
 
 
 Создаем группу администраторов виртуальных машин:
@@ -117,31 +117,33 @@ permalink: /linux/servers/virtual/virtualbox/installation/ubuntu/14.04/
 
 ### Установка пакетов расширения (USB, Remote Console, etc)
 
+Делаю: 17.07.2018
+
+
+    -- если нужно удалить старый
+    $ VBoxManage extpack uninstall  "Oracle VM VirtualBox Extension Pack"
+
+<br/>
+
     $ VBoxManage list extpacks
     Extension Packs: 0
+    
+<br/>    
+    
+    $ cd ~
+    $ wget http://download.virtualbox.org/virtualbox/5.2.16/Oracle_VM_VirtualBox_Extension_Pack-5.2.16.vbox-extpack
+    $ VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.2.16.vbox-extpack
+    
 
 <br/>
 
-    $ sudo su -
-
-<br/>
-
-    # cd /tmp/
-    # wget http://download.virtualbox.org/virtualbox/5.1.26/Oracle_VM_VirtualBox_Extension_Pack-5.1.26.vbox-extpack
-
-<br/>
-
-    # VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.1.26.vbox-extpack
-
-<br/>
-
-    # VBoxManage list extpacks
+    $ VBoxManage list extpacks
     Extension Packs: 1
     Pack no. 0:   Oracle VM VirtualBox Extension Pack
-    Version:      5.1.26
-    Revision:     117224
+    Version:      5.2.16
+    Revision:     123759
     Edition:      
     Description:  USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe.
     VRDE Module:  VBoxVRDP
-    Usable:       true
-    Why unusable:
+    Usable:       true 
+    Why unusable: 

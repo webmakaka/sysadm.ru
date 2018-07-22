@@ -20,8 +20,17 @@ permalink: /linux/servers/containers/docker/lamp/
 
 <br/>
 
-    $ git clone https://github.com/tkyk/docker-compose-lamp
+    $ git clone https://github.com/tkyk/docker-compose-lamp.git    
     $ cd docker-compose-lamp
+    
+-- Наверное имеет смысл заменить в файле Dockerfile timezone
+
+    $ vi Dockerfile
+        
+    date.timezone = Europe/Moscow
+    
+<br/>
+    
     $ docker-compose build
     $ docker-compose up -d
     $ docker-compose stop
@@ -40,3 +49,18 @@ permalink: /linux/servers/containers/docker/lamp/
 
 
 </div>
+
+<br/>
+
+### Чтобы еще работал phpmyadmin
+
+
+    # cd /tmp/docker-compose-lamp/webroot/phpmyadmin/
+    $ cp config.sample.inc.php config.inc.php 
+    # chmod 644 -R  /tmp/docker-compose-lamp/webroot/phpmyadmin/config.inc.php
+    
+    
+    -- Прописать в качестве хоста db
+    $ vi config.inc.php 
+    
+    $cfg['Servers'][$i]['host'] = 'db';

@@ -5,46 +5,17 @@ permalink: /linux/servers/containers/docker/installation/ubuntu/
 ---
 
 
-# Инсталляция / Upgrade Docker в Ubuntu
-
-
-Похоже, они с каждым релизом меняют способ установки. 
-Пятый раз переписываю!
+# Инсталляция / Upgrade Docker в Ubuntu 18.04 bionic64
 
 Делаю:  
 
-27.04.2018
+21.07.2018
 
-на ubuntu/xenial64  
-на ubuntu/bionic64 - Делал на виртуалке, чего-то не хватало!
-
-Думаю, будет работать, когда файл Packages  
-https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
-
-будет не пустым.
-
-    UPD. В июне файл стал не пустым. Наверное можно ставить и новую ubuntu и новый docker.
-    Когда буду ставить обновлю написанное.
-
-
-А пока, можно установить нестабильную версию, если кому-то оч.нетерпится.
-
-Кстати, на ubuntu bionic64 не перейду до тех пор, пока стабильный docker на ней работать не будет.
 
 <br/>
 
 ### Инсталляция Docker версии 18.x
 
-    -- Удаляю текущую версию docker (если нужно)
-    # apt-get remove -y docker docker-engine docker.io
-
-    # apt-get update
-
-    -- нужно только для ubuntu 14.04
-    # apt-get install -y \
-        linux-image-extra-$(uname -r) \
-        linux-image-extra-virtual
-        
     # apt-get install -y \
         apt-transport-https \
         ca-certificates \
@@ -69,12 +40,16 @@ https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
     # apt-get install -y docker-ce
 
     # docker -v
-    Docker version 18.03.1-ce, build 9ee9f40
+    Docker version 18.06.0-ce, build 0ffa825
 
+<br/>
 
 Подробнее:  
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
+<br/>
+Бинарники берутся здесь:  
+https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
 
 <br/>
 
@@ -85,14 +60,14 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ### Предоставить пользователю права для работы с docker
 
 
-    $ sudo usermod -aG docker <username>
+    # usermod -aG docker <username>
     
     
 <!-- $ sudo gpasswd -a <username> docker -->
 
 в группе docker должен появиться этот пользователь  
 
-    $ cat /etc/group
+    # cat /etc/group | grep docker
         docker:x:126:username
 
 Перелогиниваемся, иначе не будет работать

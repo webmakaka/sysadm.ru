@@ -64,6 +64,8 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 [Инсталляция Docker](/linux/servers/containers/docker/installation/)  
 
+[Инсталляция Docker-Compose (для совместной работы контейнеров)](/linux/servers/containers/docker/tools/docker-compose/)  
+
 
 <br/>
 
@@ -86,9 +88,6 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 ### Docker Tools
 
-
-[Docker-Compose (для совместной работы контейнеров)](/linux/servers/containers/docker/toosl/docker-compose/)  
-
 [Docker Machine (для запуска контейнеров в virtualbox, обычно в windows)](/linux/servers/containers/docker/docker-machine/)  
 
 
@@ -108,7 +107,7 @@ https://docs.docker.com/engine/userguide/networking/
 ### Docker Linking Containers
 
 
-Лучше использовать <a href="/linux/servers/containers/docker/toosl/docker-compose/">docker-compose</a> для линковки контейнеров.
+Лучше использовать <a href="/linux/servers/containers/docker/tools/docker-compose/">docker-compose</a> для линковки контейнеров.
 Для работы с docker-compose нужные версии docker >= 1.8.
 
 

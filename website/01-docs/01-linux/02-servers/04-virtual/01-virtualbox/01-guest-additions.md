@@ -8,15 +8,13 @@ permalink: /linux/servers/virtual/virtualbox/guest-additions-installation-in-com
 # Инсталляция Guest Additions в командной строке
 
 
-Пакет Guest Additions как минимум нужен для того, чтобы мышка по экрану нормально перемещалась, работала copy+paste и может быть что-то еще. Нужно ли устанавливать guest additions, если предстоит работать только в командной строке, не скажу, не знаю.
+Пакет Guest Additions как минимум нужен для того, чтобы мышка по экрану нормально перемещалась, работала copy+paste и может быть что-то еще. Нужно ли устанавливать guest additions, если предстоит работать только в командной строке, наверное нет.
 
 Installation guide
 
 http://www.virtualbox.org/manual/ch04.html#idp11277648
 
-Downloads
 
-http://download.virtualbox.org/virtualbox/4.3.30/VBoxGuestAdditions_4.3.30.iso
 
 Пример в Ubuntu:
 
@@ -27,16 +25,16 @@ http://download.virtualbox.org/virtualbox/4.3.30/VBoxGuestAdditions_4.3.30.iso
 
     # cd /tmp
 
-    # wget http://download.virtualbox.org/virtualbox/5.2.0/VBoxGuestAdditions_5.2.0.iso
+    # wget http://download.virtualbox.org/virtualbox/5.2.16/VBoxGuestAdditions_5.2.16.iso
 
 
 <br/>
 
 ### Ubuntu
 
-    # apt-get install p7zip-full
+    # apt-get install -y p7zip-full
 
-    # 7z x ./VBoxGuestAdditions_5.2.0.iso -o./VBoxGuestAdditions_5.2.0/
+    # 7z x ./VBoxGuestAdditions_5.2.16.iso -o./VBoxGuestAdditions_5.2.16/
 
 
 

@@ -234,7 +234,13 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 + 
 
+    0.0.0.0 rbc.ru
+    0.0.0.0 lenta.ru
     0.0.0.0 betcity.ru
+    
+    81.17.30.22 nnm-club.me
+    
+    
 
 <br/>
 

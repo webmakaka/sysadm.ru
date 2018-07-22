@@ -24,7 +24,13 @@ Offtopic:
 
 <br/>
 
-### Регистрация виртуальной машины
+### Обновление VirtualBox в Ubuntu
+
+[Обновление VirtualBox в Ubuntu](/linux/servers/virtual/virtualbox/update/ubuntu/14.04/)
+
+<br/>
+
+### Регистрация виртуальной машины (если нужно заново зарегистрировать)
 
 [Регистрация виртуальной машины](/linux/servers/virtual/virtualbox/register/)
 
@@ -35,6 +41,7 @@ Offtopic:
 [Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux](/linux/servers/virtual/virtualbox/vm/centos-6/) Nat + HostOnly Network
 
 [Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux](/linux/servers/virtual/virtualbox/vm/oracle-linux-6/) Bridget Network
+
 
 
 <br/>

@@ -211,6 +211,10 @@ ___
 // remove all Docker images:  
 
     # docker rmi $(docker images -q)
+    
+// Если Error when deleting images - image is referenced in multiple repositories:  
+
+    # docker rmi -f $(docker images -q)  
 
 
 <br/>
