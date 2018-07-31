@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Шаги после инсталляции Ubuntu (для себя)
-permalink: /linux/desktops/reinstall/ubuntu/steps-after-installation-ubuntu/
+permalink: /linux/desktops/install/ubuntu/steps-after-installation-ubuntu/
 ---
 
 # Шаги после инсталляции Ubuntu (для себя)
@@ -38,7 +38,8 @@ P.S.: В релизе 16.04.01 - ничего из этого не пофикс�
     openssh-server \
     traceroute \
     git \
-    vlc
+    vlc \
+    net-tools
 
 
 <br/>
@@ -237,6 +238,7 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
     0.0.0.0 rbc.ru
     0.0.0.0 lenta.ru
     0.0.0.0 betcity.ru
+    0.0.0.0 blackhole.beeline.ru
     
     81.17.30.22 nnm-club.me
     

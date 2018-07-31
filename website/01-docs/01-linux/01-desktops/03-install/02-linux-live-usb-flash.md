@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Создание загрузочной USB флешки в Linux
-permalink: /linux/desktops/reinstall/linux-live-usb-flash/
+permalink: /linux/desktops/install/linux-live-usb-flash/
 ---
 
 # Создание загрузочной USB флешки в Linux

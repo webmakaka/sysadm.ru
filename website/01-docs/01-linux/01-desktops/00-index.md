@@ -4,6 +4,15 @@ title: Базовые вещи
 permalink: /linux/desktops/
 ---
 
+
+<br/>
+
+## Установка / переустановка операционной системы Linux
+
+### [Переустановка операционной системы Linux](/linux/desktops/install/)
+
+<br/>
+
 # Базовые вещи
 
 
@@ -46,11 +55,3 @@ permalink: /linux/desktops/
 ### [Инсталляция популярных программ в Centos 7.x](/linux/desktops/centos/7/install-popular-programms/)
 
 ### [Смонтировать NTFS в Centos 7.x](/linux/desktops/centos/7/mount-ntfs/)
-
-
-
-<br/>
-
-## Переустановка операционной системы Linux
-
-### [Переустановка операционной системы Linux](/linux/desktops/reinstall/)

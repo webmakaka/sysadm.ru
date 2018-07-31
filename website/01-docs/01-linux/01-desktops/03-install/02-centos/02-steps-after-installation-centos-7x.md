@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Centos 7 нужные мне для работы пакеты
-permalink: /linux/desktops/reinstall/centos/6/steps-after-installation-centos-7x/
+permalink: /linux/desktops/install/centos/6/steps-after-installation-centos-7x/
 ---
 
 # Centos 7 нужные мне для работы пакеты
