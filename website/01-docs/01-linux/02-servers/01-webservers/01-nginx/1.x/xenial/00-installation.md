@@ -8,7 +8,7 @@ permalink: /linux/servers/webservers/nginx/1.x/ubuntu/xenial/installation/
 
 
 Делаю:  
-04.05.2018
+01.08.2018
 
 
 <br/>
@@ -71,3 +71,16 @@ permalink: /linux/servers/webservers/nginx/1.x/ubuntu/xenial/installation/
 
 
     # links http://localhost
+
+
+<br/>
+
+    # netstat -aln | grep 80
+    tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN     
+
+
+<br/>
+
+По умолчанию работает на порту 80. Поменять можно:
+
+    # vi /etc/nginx/conf.d/default.conf

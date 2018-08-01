@@ -6,18 +6,79 @@ permalink: /linux/servers/databases/postgresql/ubuntu/
 
 # PostgreSQL инсталляция в Ubuntu
 
+Делаю:  
 
-{% highlight text %}
-
-sudo aptutude search postgresql
-
-sudo apt-add-repository ppa:pitti/postgresql
-sudo apt-get update -y
-sudo apt-get install -y postgresql-9.2 libpq-dev
-
-sudo service postgresql status
+01.08.2018
 
 
-sudo su -c psql postgres
+Нужна версия именно postgresql-9.6. 
 
-{% endhighlight %}
+
+    # apt-cache search postgresql-9.6
+
+
+
+нету....
+
+
+```
+
+# vi /etc/apt/sources.list.d/pgdg.list
+
+deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
+
+
+# apt-get install -y wget ca-certificates
+# wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+# apt-get update
+# apt-get upgrade -y
+
+
+# apt-get install -y postgresql-9.6
+
+
+# service postgresql start
+# service postgresql status
+
+# /usr/lib/postgresql/9.6/bin/pg_ctl --version
+pg_ctl (PostgreSQL) 9.6.9
+
+
+```
+
+<br/>
+
+
+<br/>
+
+```
+
+vi /etc/postgresql/9.3/main/pg_hba.conf
+local   all             postgres                                peer
+
+here change peer to trust
+
+restart, sudo service postgresql restart
+
+now try, psql -U postgres
+
+
+```
+
+<br/>
+
+
+Было полезным:
+
+https://wiki.postgresql.org/wiki/Apt
+
+
+<br/>
+
+### DEV сервер
+
+
+    # apt-get install -y postgresql-server-dev-9.6
+
+    -- Показать пути к расширениям
+    $ pg_config  --pkglibdir

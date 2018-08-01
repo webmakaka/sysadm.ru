@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Инсталляция Docker-Compose в Ubuntu 18.04
+title: Инсталляция Docker-Compose в Ubuntu 18.04.1
 permalink: /linux/servers/containers/docker/tools/docker-compose/installation/ubuntu/
 ---
 
-# Инсталляция Docker-Compose в Ubuntu 18.04
+# Инсталляция Docker-Compose в Ubuntu 18.04.1
 
 Docker-Compose нужен, чтобы организовать совместную работу нескольких контейнеров)
 

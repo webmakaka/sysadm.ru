@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Инсталляция и Upgrade Docker в Ubuntu
+title: Инсталляция и Upgrade Docker в Ubuntu 18.04.1 bionic64
 permalink: /linux/servers/containers/docker/installation/ubuntu/
 ---
 
 
-# Инсталляция / Upgrade Docker в Ubuntu 18.04 bionic64
+# Инсталляция / Upgrade Docker в Ubuntu 18.04.1 bionic64
 
 Делаю:  
 
-21.07.2018
+01.08.2018
 
 
 <br/>
