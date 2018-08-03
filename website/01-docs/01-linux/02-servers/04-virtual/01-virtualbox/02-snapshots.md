@@ -6,6 +6,9 @@ permalink: /linux/servers/virtual/virtualbox/snapshots/
 
 # Работа со снапшотами
 
+
+<br/>
+
 ### Создание снапшотов:
 
 Созадем каталог для снапшотов для ранее созданной виртуальной машины.
@@ -19,6 +22,9 @@ permalink: /linux/servers/virtual/virtualbox/snapshots/
 Создаем снапшот
 
     $ VBoxManage snapshot ${vm} take snapshot_name --description snapshot_description
+
+
+<br/>
 
 ### Восстановление:
 
@@ -40,6 +46,7 @@ Snapshots:
     0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 
 
+<br/>
 
 ### Удалить снапшот
 

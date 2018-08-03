@@ -7,6 +7,39 @@ permalink: /linux/hardware/hdd/mount-disks/
 
 # Монтирование hdd
 
+
+    # fdisk -l /dev/sda
+
+
+    -- Если нужно создать раздел. (см. что спрашивает.)
+    # fdisk /dev/sda
+
+
+    Command (m for help): [n]
+    Partition type:
+       p   primary (0 primary, 0 extended, 4 free)
+       e   extended
+    Select (default p): [p]
+    Partition number (1-4, default 1):
+    Using default value 1
+    First sector (1024-8148439, default 1024):
+    Using default value 1024
+    Last sector, +sectors or +size{K,M,G} (1024-8148439, default 8148439):
+    Using default value 8148439
+
+    Command (m for help): [w]
+    The partition table has been altered!
+
+    Calling ioctl() to re-read partition table.
+    Syncing disks.
+
+
+    -- Запись на созданный раздел фаловой системы
+    # mkfs.ext4 /dev/sda1
+
+<br/>
+
+
     # ls /dev/sd*
     /dev/sda   /dev/sdb   /dev/sdb2  /dev/sdb4
     /dev/sda1  /dev/sdb1  /dev/sdb3  /dev/sdb5
@@ -46,7 +79,7 @@ permalink: /linux/hardware/hdd/mount-disks/
 
 <br/>
 
-### Запись в fstab
+### Запись в fstab (чтобы после каждой загрузки не монтировать заново)
 
 
     # vi /etc/fstab
@@ -64,7 +97,7 @@ permalink: /linux/hardware/hdd/mount-disks/
 
 <br/>
 
-Отменяем резервирование 5% для суперпользователя следующей командой.
+Отменяем резервирование 5% для суперпользователя следующей командой. (Если не нужно)
 
     # tune2fs /dev/sda1 -m 0
 

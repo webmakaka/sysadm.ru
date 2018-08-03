@@ -16,12 +16,17 @@ Offtopic:
 
 [Основные команды](/linux/servers/virtual/virtualbox/commands/)
 
+<br/>
 
 ### Инсталляция VirtualBox 5.X
 
-[Инсталляция VirtualBox 5.X в командной строке в Ubuntu](/linux/servers/virtual/virtualbox/installation/ubuntu/14.04/)
+[Инсталляция VirtualBox 5.X в командной строке в Ubuntu 18](/linux/servers/virtual/virtualbox/installation/ubuntu/18.04/)
+
+[Инсталляция VirtualBox 5.X в командной строке в Ubuntu 14](/linux/servers/virtual/virtualbox/installation/ubuntu/14.04/)
 
 [Инсталляция VirtualBox 5.x в командной строке в Centos / Oracle Linux 7](/linux/servers/virtual/virtualbox/installation/centos/7/)
+
+<br/>
 
 ### Инсталляция VirtualBox 4.X
 

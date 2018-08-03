@@ -48,12 +48,9 @@ pg_ctl (PostgreSQL) 9.6.9
 
 <br/>
 
-
-<br/>
-
 ```
 
-vi /etc/postgresql/9.3/main/pg_hba.conf
+vi /etc/postgresql/9.6/main/pg_hba.conf
 local   all             postgres                                peer
 
 here change peer to trust
@@ -82,3 +79,17 @@ https://wiki.postgresql.org/wiki/Apt
 
     -- Показать пути к расширениям
     $ pg_config  --pkglibdir
+
+
+
+
+<br/>
+
+
+
+# \dx
+                 List of installed extensions
+  Name   | Version |   Schema   |         Description          
+---------+---------+------------+------------------------------
+ plpgsql | 1.0     | pg_catalog | PL/pgSQL procedural language
+(1 row)

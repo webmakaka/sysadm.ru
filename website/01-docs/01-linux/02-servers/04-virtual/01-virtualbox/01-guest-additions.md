@@ -16,27 +16,6 @@ http://www.virtualbox.org/manual/ch04.html#idp11277648
 
 
 
-Пример в Ubuntu:
-
-    $ sudo su -
-
-    # apt-get install -y wget
-    # apt-get install -y gcc make perl
-
-    # cd /tmp
-
-    # wget http://download.virtualbox.org/virtualbox/5.2.16/VBoxGuestAdditions_5.2.16.iso
-
-
-<br/>
-
-### Ubuntu
-
-    # apt-get install -y p7zip-full
-
-    # 7z x ./VBoxGuestAdditions_5.2.16.iso -o./VBoxGuestAdditions_5.2.16/
-
-
 
 <!-- <br/>
 
@@ -67,11 +46,6 @@ hgsmi_base.c:99:2: error: implicit declaration of function ‘AssertRC’ [-Werr
     # yum install -y p7zip
 
     # 7za x ./VBoxGuestAdditions_5.0.10.iso -o./VBoxGuestAdditions_5.0.10/
-
-<br/>
-
-### Продолжаем
-
 
     # cd VBoxGuestAdditions_5.2.0/
 

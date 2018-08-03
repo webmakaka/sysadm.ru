@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Инсталляция Vargant в Ubuntu 14.04
-permalink: /linux/servers/virtual/vagrant/installation/ubuntu-14-04/
+title: Инсталляция Vargant в Ubuntu 18.04
+permalink: /linux/servers/virtual/vagrant/installation/ubuntu/
 ---
 
 
-# Инсталляция Vargant в Ubuntu 14.04
+# Инсталляция Vargant в Ubuntu 18.04
 
 Делаю 
-02.04.2018
+02.08.2018
 
 <br/>
 
@@ -36,9 +36,9 @@ https://www.vagrantup.com/downloads.html
 ### Инсталляция Vagrant
 
     # cd /tmp
-    # wget https://releases.hashicorp.com/vagrant/2.0.3/vagrant_2.0.3_x86_64.deb
+    # wget https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_x86_64.deb
 
-    # dpkg -i vagrant_2.0.3_x86_64.deb
+    # dpkg -i vagrant_2.1.2_x86_64.deb
 
     # vagrant -v
-    Vagrant 2.0.3
+    Vagrant 2.1.2

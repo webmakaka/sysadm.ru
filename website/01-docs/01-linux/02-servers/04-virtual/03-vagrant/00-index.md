@@ -34,7 +34,7 @@ https://github.com/bradtraversy/vagrant_lamp_traversy/blob/master/Vagrantfile
 ### Наработки админа сайта
 
 
-[Инсталляция Vargant в Ubuntu 14.04](/linux/servers/virtual/vagrant/installation/ubuntu-14-04/)  
+[Инсталляция Vargant в Ubuntu 18.04](/linux/servers/virtual/vagrant/installation/ubuntu/)  
 
 [Команды Vagrant](/linux/servers/virtual/vagrant/commands/)  
 

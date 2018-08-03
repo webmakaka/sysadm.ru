@@ -48,7 +48,8 @@ Offtopic:
 
 ### Инсталляция Guest Additions
 
-[Инсталляция Guest Additions в командной строке](/linux/servers/virtual/virtualbox/guest-additions-installation-in-command-line/)
+-- нужно будет перенести в установку
+[Инсталляция Guest Additions в командной строке Centos](/linux/servers/virtual/virtualbox/guest-additions-installation-in-command-line/)
 
 
 <br/>
