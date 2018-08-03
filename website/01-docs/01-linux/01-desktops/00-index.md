@@ -18,6 +18,8 @@ permalink: /linux/desktops/
 
 ### [Архиваторы и работа с архивами в Linux](/linux/desktops/archives/)
 
+### [Проверка MD5](/linux/desktops/md5/)
+
 ### [Незапоминаемые команды в принципе](/linux/desktops/commands/)
 
 ### [Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/desktops/code/editors/)
@@ -28,7 +30,6 @@ permalink: /linux/desktops/
 <br/>
 
 ## [Ubuntu](/linux/desktops/ubuntu/)
-
 
 
 

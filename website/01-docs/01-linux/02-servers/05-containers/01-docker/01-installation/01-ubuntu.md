@@ -9,7 +9,7 @@ permalink: /linux/servers/containers/docker/installation/ubuntu/
 
 Делаю:  
 
-01.08.2018
+03.08.2018
 
 
 <br/>

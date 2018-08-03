@@ -16,7 +16,7 @@ permalink: /linux/desktops/
 
 ### [Скачать playlist с youtube](/linux/desktops/ubuntu/download-youtube-playlist/)
 
-### [Программа для скачивания с файлопомоек вроде Rapidgator, Nitroflare, Uploadgig etc.](/linux/desktops/ubuntu/download-from-file-hostings/)
+### [Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.](/linux/desktops/ubuntu/download-from-file-hostings/)
 
 ### [Unable to locate package *****.so.*](/linux/desktops/ubuntu/install-package-for-missing-libraries/)
 

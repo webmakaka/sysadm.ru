@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Программа для скачивания с файлопомоек вроде Rapidgator, Nitroflare, Uploadgig etc.
+title: Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.
 permalink: /linux/desktops/ubuntu/download-from-file-hostings/
 ---
 
 
-# Программа для скачивания с файлопомоек вроде Rapidgator, Nitroflare, Uploadgig etc.
+# Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.
 
 
 jdownloader (jdownloader.org)
@@ -14,7 +14,7 @@ jdownloader (jdownloader.org)
 <br/>
 
 <div align="center">
-    <img src="http://storage6.static.itmages.ru/i/18/0412/h_1523516754_7360888_d0fa6ee52b.png" border="0" alt="Программа для скачивания с файлопомоек вроде Rapidgator, Nitroflare, Uploadgig etc.">
+    <img src="http://storage6.static.itmages.ru/i/18/0412/h_1523516754_7360888_d0fa6ee52b.png" border="0" alt="Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.">
 </div>
 
 
@@ -26,7 +26,7 @@ jdownloader (jdownloader.org)
 - Может работать с купленными ключами. 
 
 
-Требуеся установленная java.
+**Требуеся установленная java**
 
 Обращаю внимание, что есть (были) сайт/ы на которых нахаляву можно получить ключи на премиум от этих сервисов. Главное не тормозить. Ну или можно купить премиум, если оч. нужно.
 
