@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Инсталляция Nginx 1.X сервер на Ubuntu (Xenial) из пакетов
-permalink: /linux/servers/webservers/nginx/1.x/ubuntu/xenial/installation/
+title: Инсталляция Nginx 1.X сервера на Ubuntu из пакетов
+permalink: /linux/servers/webservers/nginx/1.x/ubuntu/installation/
 ---
 
-# Инсталляция Nginx 1.X сервер на Ubuntu (Xenial) из пакетов
+# Инсталляция Nginx 1.X сервера на Ubuntu из пакетов
 
 
 Делаю:  
@@ -28,11 +28,23 @@ permalink: /linux/servers/webservers/nginx/1.x/ubuntu/xenial/installation/
 
     # cd /etc/apt/sources.list.d/
 
+<br/>
+
     # vi nginx.list
 
 <br/>
 Добавляю в конец файла
 <br/>
+
+**Если (Bionic)**
+
+    deb http://nginx.org/packages/ubuntu/ bionic nginx
+    deb-src http://nginx.org/packages/ubuntu/ bionic nginx
+
+
+<br/>
+
+ **Если (BiXenialonic)**
 
     deb http://nginx.org/packages/ubuntu/ xenial nginx
     deb-src http://nginx.org/packages/ubuntu/ xenial nginx

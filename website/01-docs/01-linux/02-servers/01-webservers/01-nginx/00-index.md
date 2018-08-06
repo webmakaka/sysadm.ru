@@ -10,7 +10,7 @@ permalink: /linux/servers/webservers/nginx/
 
 ### Nginx 1.X
 
-[Инсталляция Nginx 1.X сервер на Ubuntu (Xenial) из пакетов](/linux/servers/webservers/nginx/1.x/ubuntu/xenial/installation/)  
+[Инсталляция Nginx 1.X сервера на Ubuntu из пакетов](/linux/servers/webservers/nginx/1.x/ubuntu/installation/)  
 
 
 <br/>

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Devices
-permalink: /devices/devices/
+permalink: /devices/
 ---
 
 # Devices
