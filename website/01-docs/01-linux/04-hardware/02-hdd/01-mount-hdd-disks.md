@@ -7,42 +7,54 @@ permalink: /linux/hardware/hdd/mount-disks/
 
 # Монтирование hdd
 
+Делаю!  
+31.03.2018
 
-    # fdisk -l /dev/sda
+В Ubuntu 18.04
 
 
-    -- Если нужно создать раздел. (см. что спрашивает.)
-    # fdisk /dev/sda
+    # fdisk -l /dev/sd*
 
+<br/>
+
+    # ls /dev/sd*
+    /dev/sda  /dev/sda1  /dev/sda2  /dev/sdb
+
+<br/>
+
+Мне нужно примонтировать диск, подключенный как sdb. На нем нет никаких разделов.
+
+<br/>
+
+    # fdisk /dev/sdb
+
+<br/>
 
     Command (m for help): [n]
-    Partition type:
-       p   primary (0 primary, 0 extended, 4 free)
-       e   extended
-    Select (default p): [p]
-    Partition number (1-4, default 1):
-    Using default value 1
-    First sector (1024-8148439, default 1024):
-    Using default value 1024
-    Last sector, +sectors or +size{K,M,G} (1024-8148439, default 8148439):
-    Using default value 8148439
+    Partition number (1-128, default 1): [p]
+    Value out of range.
+    Partition number (1-128, default 1): [1]
+    First sector (34-1953525134, default 2048): [Enter]
+    Last sector, +sectors or +size{K,M,G,T,P} (2048-1953525134, default 1953525134): [Enter]
 
-    Command (m for help): [w]
-    The partition table has been altered!
+    Created a new partition 1 of type 'Linux filesystem' and of size 931,5 GiB.
 
+    Command (m for help): w
+    The partition table has been altered.
     Calling ioctl() to re-read partition table.
     Syncing disks.
 
+<br/>
 
     -- Запись на созданный раздел фаловой системы
-    # mkfs.ext4 /dev/sda1
+    # mkfs.ext4 /dev/sdb1
 
 <br/>
 
 
     # ls /dev/sd*
-    /dev/sda   /dev/sdb   /dev/sdb2  /dev/sdb4
-    /dev/sda1  /dev/sdb1  /dev/sdb3  /dev/sdb5
+    /dev/sda  /dev/sda1  /dev/sda2  /dev/sdb  /dev/sdb1
+
 
 
 <br/>
@@ -54,28 +66,27 @@ permalink: /linux/hardware/hdd/mount-disks/
  <br/>  
 
 
-     # blkid /dev/sda1
-     /dev/sda1: UUID="ff8ed3b5-a750-4a49-b02a-8f56ea418797" TYPE="ext4"
+    # blkid /dev/sdb1
+    /dev/sdb1: UUID="66bda136-6e40-478b-87cd-f80e871b5ac3" TYPE="ext4" PARTUUID="8f991ad1-bb8b-f843-853a-946142c288b3"
+
 
 
 или
 
      # blkid
-     /dev/sda1: UUID="ff8ed3b5-a750-4a49-b02a-8f56ea418797" TYPE="ext4"
-     /dev/sdb1: UUID="1f5a5c6d-25b6-4496-997b-2abdb95983e2" TYPE="xfs"
-     /dev/sdb2: UUID="0c52e673-2e67-4565-b507-62a8940e1eb2" TYPE="swap"
-     /dev/sdb3: UUID="4437af40-4b7a-4fa1-b6a3-48559f6dfcb2" TYPE="xfs"
-     /dev/sdb5: UUID="fc1de487-ffaf-414c-82d1-765597229a8a" TYPE="xfs"
+    /dev/sdb1: UUID="66bda136-6e40-478b-87cd-f80e871b5ac3" TYPE="ext4" PARTUUID="8f991ad1-bb8b-f843-853a-946142c288b3"
+    ***
+
 
 
 <br/>
 
-    # mount /dev/sda1 /mnt/dsk1/
+    # mount /dev/sdb1 /mnt/dsk1/
 
 <br/>
 
+    -- Если нужно отмонтировать
     # mount /mnt/dsk1/
-
 
 <br/>
 
@@ -87,7 +98,7 @@ permalink: /linux/hardware/hdd/mount-disks/
 <br/>
 
     # 1 TB
-    UUID=ff8ed3b5-a750-4a49-b02a-8f56ea418797 /mnt/dsk1 ext4 defaults 0 0
+    UUID=66bda136-6e40-478b-87cd-f80e871b5ac3 /mnt/dsk1 ext4 defaults 0 0
 
 
 <br/>
@@ -99,11 +110,18 @@ permalink: /linux/hardware/hdd/mount-disks/
 
 Отменяем резервирование 5% для суперпользователя следующей командой. (Если не нужно)
 
-    # tune2fs /dev/sda1 -m 0
+    # tune2fs /dev/sdb1 -m 0
 
 
 <br/>
 
     # df -h
     ***
-    /dev/sda1       917G   77M  917G   1% /mnt/dsk1
+    /dev/sdb1       916G   77M  916G   1% /mnt/dsk1
+
+
+<br/>
+
+# Разрешу пользователю писать на диск
+
+    # chown -R <username> /mnt/dsk1
