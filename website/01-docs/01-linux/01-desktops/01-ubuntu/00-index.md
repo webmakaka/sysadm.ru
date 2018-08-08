@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ubuntu
-permalink: /linux/desktops/
+permalink: /linux/desktops/ubuntu/
 ---
 
 <br/>

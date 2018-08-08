@@ -8,44 +8,107 @@ permalink: /linux/servers/databases/postgresql/ubuntu/
 
 Делаю:  
 
-01.08.2018
-
-
-Нужна версия именно postgresql-9.6. 
-
-
-    # apt-cache search postgresql-9.6
-
-
-
-нету....
-
+08.08.2018
 
 ```
 
-# vi /etc/apt/sources.list.d/pgdg.list
+$ PG_VERSION=9.6
 
-deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
+-- bionic
+# echo 'deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main' > /etc/apt/sources.list.d/pgdg.list
 
+-- xenial
+# echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' > /etc/apt/sources.list.d/pgdg.list
 
-# apt-get install -y wget ca-certificates
+-- trusty
+# echo 'deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main' > /etc/apt/sources.list.d/pgdg.list
+
 # wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+
 # apt-get update
-# apt-get upgrade -y
+# apt-get install -y postgresql-$PG_VERSION postgresql-server-dev-$PG_VERSION
 
-
-# apt-get install -y postgresql-9.6
-
-
-# service postgresql start
+# service postgresql restart
 # service postgresql status
 
-# /usr/lib/postgresql/9.6/bin/pg_ctl --version
-pg_ctl (PostgreSQL) 9.6.9
-
-
 ```
 
+<br/>
+
+### Подключение к базе
+
+
+# su - postgres
+
+$ psql
+
+postgres-# \dx
+                 List of installed extensions
+  Name   | Version |   Schema   |         Description          
+---------+---------+------------+------------------------------
+ plpgsql | 1.0     | pg_catalog | PL/pgSQL procedural language
+(1 row)
+
+
+
+
+<br/>
+
+### Добавление расширения jsonbx-1.0.0
+
+    # apt install -y gcc make
+    # cd /home/marley/Desktop/jsonbx-1.0.0
+    # make
+
+    # pg_config --pkglibdir
+    /usr/lib/postgresql/9.6/lib
+
+    # cp jsonbx.o /usr/lib/postgresql/9.6/lib
+    # cp jsonbx.so /usr/lib/postgresql/9.6/lib
+
+    # cp jsonbx.control /usr/share/postgresql/9.6/extension/
+    # cp jsonbx--1.0.sql /usr/share/postgresql/9.6/extension/
+
+
+    $ psql
+    psql (9.6.9)
+    Type "help" for help.
+
+    postgres=# CREATE EXTENSION IF NOT EXISTS jsonbx;
+    CREATE EXTENSION
+    postgres=#
+    postgres=#
+    postgres=# \dx
+                     List of installed extensions
+      Name   | Version |   Schema   |         Description          
+    ---------+---------+------------+------------------------------
+     jsonbx  | 1.0     | public     | Jsonb extension
+     plpgsql | 1.0     | pg_catalog | PL/pgSQL procedural language
+    (2 rows)
+
+
+<br/>
+
+### Импорт базы
+
+    $ su - postgres
+    $ psql
+
+    -- Если база не создана
+    $ CREATE DATABASE <db_name>;
+
+<br/>
+
+    $ cd <db_dump_dir>
+
+    -- Данные будут перезаписаны
+    $ pg_restore -d <db_name> myDump.dump -j 4 -c
+
+
+
+
+
+<!--
 <br/>
 
 ```
@@ -67,29 +130,4 @@ now try, psql -U postgres
 
 Было полезным:
 
-https://wiki.postgresql.org/wiki/Apt
-
-
-<br/>
-
-### DEV сервер
-
-
-    # apt-get install -y postgresql-server-dev-9.6
-
-    -- Показать пути к расширениям
-    $ pg_config  --pkglibdir
-
-
-
-
-<br/>
-
-
-
-# \dx
-                 List of installed extensions
-  Name   | Version |   Schema   |         Description          
----------+---------+------------+------------------------------
- plpgsql | 1.0     | pg_catalog | PL/pgSQL procedural language
-(1 row)
+https://wiki.postgresql.org/wiki/Apt -->

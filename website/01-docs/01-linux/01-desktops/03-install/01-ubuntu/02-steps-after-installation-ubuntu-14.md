@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Шаги после инсталляции Ubuntu (для себя)
-permalink: /linux/desktops/install/ubuntu/steps-after-installation-ubuntu/
+title: Шаги после инсталляции Ubuntu 14 (для себя)
+permalink: /linux/desktops/install/ubuntu/steps-after-installation-ubuntu-14/
 ---
 
-# Шаги после инсталляции Ubuntu (для себя)
+# Шаги после инсталляции Ubuntu 14 (для себя)
 
 Я уже попробовал 16.04 и вернулся на 14.04 release 04.
 
@@ -221,28 +221,28 @@ menu:minimize,maximize,close
 
 <br/>
 
-### Чтобы при нажатии правой кнопкой мышки по папке было поле меню "Открыть в терминале" 
+### Чтобы при нажатии правой кнопкой мышки по папке было поле меню "Открыть в терминале"
 
     $ sudo apt-get install nautilus-open-terminal
     $ nautilus -q
-    
-    
+
+
 <br/>
 
 ### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
 https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
-+ 
++
 
     0.0.0.0 rbc.ru
     0.0.0.0 lenta.ru
     0.0.0.0 betcity.ru
     0.0.0.0 blackhole.beeline.ru
-    
+
     81.17.30.22 nnm-club.me
-    
-    
+
+
 
 <br/>
 
