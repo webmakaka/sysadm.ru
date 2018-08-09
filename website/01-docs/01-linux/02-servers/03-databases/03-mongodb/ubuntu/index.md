@@ -4,11 +4,46 @@ title: MongoDB инсталляция в Ubuntu 16.04
 permalink: /linux/servers/databases/mongodb/ubuntu/installation/
 ---
 
-# MongoDB инсталляция в Ubuntu 16.04
+# MongoDB инсталляция в Ubuntu 18.04
 
 
 Делаю!  
-01.08.2018 
+08.08.2018
+
+
+```
+
+# mongodb repo
+# echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > /etc/apt/sources.list.d/mongodb.list
+# apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9ECBEC467F0CEB10
+
+apt-get update
+apt-get install -y mongodb
+
+# mongo --version
+MongoDB shell version v3.6.3
+git version: 9586e557d54ef70f9ca4b43c26892cd55257e1a5
+OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+allocator: tcmalloc
+modules: none
+build environment:
+    distarch: x86_64
+    target_arch: x86_64
+
+
+# service mongodb restart
+# service postgresql status
+# systemctl enable mongodb
+
+```
+
+<br/>
+
+### MongoDB инсталляция в Ubuntu 16.04 (Еще 1 вариант)
+
+
+Делаю!  
+01.08.2018
 
 Мне нужна именно версия v3.6
 
@@ -21,7 +56,6 @@ permalink: /linux/servers/databases/mongodb/ubuntu/installation/
 
     -- Если нужно удалить репо
     # rm /etc/apt/sources.list.d/mongodb*.list
-
 
     # apt-get update
 

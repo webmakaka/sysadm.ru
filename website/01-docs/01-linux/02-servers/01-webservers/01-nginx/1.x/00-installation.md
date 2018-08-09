@@ -8,7 +8,7 @@ permalink: /linux/servers/webservers/nginx/1.x/ubuntu/installation/
 
 
 Делаю:  
-01.08.2018
+08.08.2018
 
 
 <br/>
@@ -58,9 +58,10 @@ permalink: /linux/servers/webservers/nginx/1.x/ubuntu/installation/
 
     # service nginx restart
     # service nginx status
-    
+    # systemctl enable nginx
+
 <br/>
-    
+
     # nginx -v
     nginx version: nginx/1.14.0
 
