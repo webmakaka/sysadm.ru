@@ -64,7 +64,7 @@ Offtopic:
 
 [Замена виртуального диска VirtualBox в командной строке](/linux/servers/virtual/virtualbox/replace-disk/)
 
-[Уменьшить размер ранимаемого виртуальной машиной дискового пространства](/linux/servers/virtual/virtualbox/decrease-disk-space/)
+[Уменьшить размер занимаемого виртуальной машиной дискового пространства](/linux/servers/virtual/virtualbox/decrease-disk-space/)
 
 [Конвертировать wmdk в vdi](/linux/servers/virtual/virtualbox/convert-vmdk-vdi/)
 
