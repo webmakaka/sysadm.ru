@@ -6,7 +6,7 @@ permalink: /linux/desktops/ubuntu/chrome/
 
 # Инсталляция Chrome в Ubuntu
 
-Данный способ работает в: 12.04, 14.04, 16.04
+Данный способ работает в: 12.04, 14.04, 16.04, 18.04
 
     $ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
     $ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'

@@ -8,7 +8,7 @@ permalink: /linux/servers/webservers/nginx/1.x/ubuntu/installation/
 
 
 Делаю:  
-08.08.2018
+19.08.2018
 
 
 <br/>
@@ -38,13 +38,16 @@ permalink: /linux/servers/webservers/nginx/1.x/ubuntu/installation/
 
 **Если (Bionic)**
 
-    deb http://nginx.org/packages/ubuntu/ bionic nginx
-    deb-src http://nginx.org/packages/ubuntu/ bionic nginx
+```shell
+deb http://nginx.org/packages/ubuntu/ bionic nginx
+deb-src http://nginx.org/packages/ubuntu/ bionic nginx
+
+```
 
 
 <br/>
 
- **Если (BiXenialonic)**
+ **Если (xenial)**
 
     deb http://nginx.org/packages/ubuntu/ xenial nginx
     deb-src http://nginx.org/packages/ubuntu/ xenial nginx

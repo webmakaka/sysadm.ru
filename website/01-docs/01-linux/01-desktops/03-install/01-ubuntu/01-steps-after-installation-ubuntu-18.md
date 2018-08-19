@@ -12,16 +12,15 @@ permalink: /linux/desktops/install/ubuntu/steps-after-installation-ubuntu-18/
 ### Обновление
 
     $ sudo su -
-    # apt-get update && apt-get upgrade -y
-
+    # apt update && apt-get upgrade -y
 
 // ДОП ПО
 
-    # apt-get install -y ubuntu-restricted-extras
+    # apt install -y ubuntu-restricted-extras
 
 <br/>
 
-    # apt-get install -y \
+    # apt install -y \
     vim \
     openssh-server \
     traceroute \
@@ -34,12 +33,36 @@ permalink: /linux/desktops/install/ubuntu/steps-after-installation-ubuntu-18/
 
 ### Gnome Panel
 
-    # apt-get install -y gnome-panel
+    # apt install -y gnome-panel
 
     # reboot
 
 Перезагружаемся, при старте выбираем - gnome (Metacity)
 
+
+<br/>
+
+### Смена раскладки клавиатуры по Alt + Shift
+
+Вот надо что-нибудь да испортить! По умолчанию, нужно выбрать комбинацию из 3х клваиш, чтобы сменить раскладку.
+
+    $ sudo apt-get install -y gnome-tweak-tool
+    $ gnome-tweaks
+
+<br/>
+
+### Keyboard Shortcuts
+
+    Убрать logout по CTRL + ALT + DELETE
+
+<br/>
+
+    Добавить в Custom shortcuts
+
+    Name: system-monitor
+    Command: gnome-system-monitor
+
+    CTRL + ALT + DELETE
 
 
 <br/>
@@ -63,5 +86,5 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 ### Дополнительное ПО
 
-[atom](/linux/desktops/code/editors/)  
 [chrome](/linux/desktops/ubuntu/chrome/)
+[atom](/linux/desktops/code/editors/)  

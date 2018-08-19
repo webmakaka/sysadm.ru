@@ -7,12 +7,27 @@ permalink: /linux/desktops/ubuntu/ace-player-installation/
 # Инсталляция ACE плеера в Ubuntu
 
 
+<br/>
+
+### Инсталляция ACE плеера в Ubuntu 16.04 / 18.04.1
+
+
 Делаю!  
-31.03.2018
+19.08.2018
 
-В общем футбол по телевизору не показывают. На сайте матч тв тоже нет, а на спортбоксе просят денег.
+    $ sudo snap install acestreamplayer
+    $ acestreamplayer
 
-На сайтах выпили ссылки на сопки, а если и остались, то соп плеер не коннектится. Остались ссылки на Ace плеер. Я зх почему, но сопку активно использую, а эйс плеер нет.
+На вопрос о возрасте, я указал, что мне меньше 13 лет и рекламу всякого УГ (Уткина Г...) мне не стали показывать.
+
+<div align="center">
+    <img src="http://img.ipev.ru/2018/08/19/Screenshot-from-2018-08-19-00-44-55.png" border="0" alt="Установка Ace плеера в Ubuntu 18.04.1">
+
+</div>
+
+<br/>
+
+https://snapcraft.io/acestreamplayer
 
 
 <br/>
@@ -33,13 +48,12 @@ permalink: /linux/desktops/ubuntu/ace-player-installation/
 
     # apt-get update
     # apt-get install -y acestream-full
-    
+
 <br/>
 
 Далее, запустить плеер можете в списке программ "Музыка и видео", или в командной строке:
 
     $ acestreamplayer
-
 
 <br/>
 
@@ -49,15 +63,15 @@ permalink: /linux/desktops/ubuntu/ace-player-installation/
 
 <div align="center">
     <img src="//files.sysadm.ru/img/ace-01.png" border="0" alt="Установка Ace плеера в Ubuntu">
-    
+
     <br/><br/>
-    
+
     <img src="//files.sysadm.ru/img/ace-02.png" border="0" alt="Установка Ace плеера в Ubuntu">
-    
+
     <br/><br/>
-    
+
     <img src="//files.sysadm.ru/img/ace-03.png" border="0" alt="Установка Ace плеера в Ubuntu">    
-    
+
 </div>
 
 
@@ -68,9 +82,3 @@ permalink: /linux/desktops/ubuntu/ace-player-installation/
 - livesport(.)ws
 - sopsport(.)org
 - football-russia(.)tv
-
-<br/><br/>
-
-Я не ворую фотбол. Была в свое время такая акция.<br/>
-Воруют, это когда чего-то становится меньше. А так, футбола у них меньше не стало.
-Придумают же ...

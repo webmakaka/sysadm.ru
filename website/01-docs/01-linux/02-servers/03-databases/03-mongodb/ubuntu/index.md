@@ -1,24 +1,24 @@
 ---
 layout: page
-title: MongoDB инсталляция в Ubuntu 16.04
+title: MongoDB инсталляция в Ubuntu 18.04.1
 permalink: /linux/servers/databases/mongodb/ubuntu/installation/
 ---
 
-# MongoDB инсталляция в Ubuntu 18.04
+# MongoDB инсталляция в Ubuntu 18.04.1
 
 
 Делаю!  
-08.08.2018
+19.08.2018
 
 
 ```
 
-# mongodb repo
+// mongodb repo
 # echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > /etc/apt/sources.list.d/mongodb.list
 # apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9ECBEC467F0CEB10
 
-apt-get update
-apt-get install -y mongodb
+# apt update
+# apt install -y mongodb
 
 # mongo --version
 MongoDB shell version v3.6.3
@@ -32,7 +32,7 @@ build environment:
 
 
 # service mongodb restart
-# service postgresql status
+# service mongodb status
 # systemctl enable mongodb
 
 ```

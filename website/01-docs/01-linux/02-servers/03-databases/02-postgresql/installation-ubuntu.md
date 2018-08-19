@@ -8,9 +8,11 @@ permalink: /linux/servers/databases/postgresql/ubuntu/
 
 Делаю:  
 
-08.08.2018
+19.08.2018
 
 ```
+
+$ sudo su -
 
 $ PG_VERSION=9.6
 
@@ -30,6 +32,7 @@ $ PG_VERSION=9.6
 
 # service postgresql restart
 # service postgresql status
+# systemctl enable postgresql
 
 ```
 
@@ -91,21 +94,42 @@ postgres-# \dx
 
 ### Импорт базы
 
-    $ su - postgres
-    $ psql
+Разные способы имеются
 
-    -- Если база не создана
-    $ CREATE DATABASE <db_name>;
+```shell
+
+// Создание бекапа
+$ pg_dump database_name > database_name_20160527.sql
+
+// Восстановление
+
+$ su - postgres
+$ psql
+
+-- Если база не создана
+$ CREATE DATABASE <db_name>;
+
+exit
+
+$ psql database_name < database_name_20160527.sql
+```
 
 <br/>
 
-    $ cd <db_dump_dir>
-
-    -- Данные будут перезаписаны
-    $ pg_restore -d <db_name> myDump.dump -j 4 -c
+https://www.netguru.co/tips/how-to-dump-and-restore-postgresql-database
 
 
+<br/>
 
+ЕЩе есть такой вариант:
+
+```shell
+
+$ cd <db_dump_dir>
+
+-- Данные будут перезаписаны
+$ pg_restore -d <db_name> myDump.dump -j 4 -c
+```
 
 
 <!--
