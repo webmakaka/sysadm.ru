@@ -12,6 +12,8 @@ permalink: /linux/hardware/hdd/mount-disks/
 
 В Ubuntu 18.04
 
+!!! На диске нет никаких данных.
+
 
     # fdisk -l /dev/sd*
 
@@ -97,14 +99,14 @@ permalink: /linux/hardware/hdd/mount-disks/
 
 <br/>
 
-    # 1 TB
-    UUID=66bda136-6e40-478b-87cd-f80e871b5ac3 /mnt/dsk1 ext4 defaults 0 0
-
+```shell
+# 1 TB
+UUID=66bda136-6e40-478b-87cd-f80e871b5ac3 /mnt/dsk1 ext4 defaults 0 0
+```
 
 <br/>
 
     # mount /mnt/dsk1/
-
 
 <br/>
 
