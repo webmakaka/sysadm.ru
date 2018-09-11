@@ -19,8 +19,7 @@ permalink: /sitemap/
 
 </div>
 
-
-______
+---
 
 <br/>
 
@@ -28,7 +27,7 @@ ______
 
 ### [HardWare](/hardware/)
 
-______
+---
 
 <br/>
 
@@ -36,9 +35,7 @@ ______
 
 ### [Cisco: Switches and Routers](/devices/cisco/)
 
-
-______
-
+---
 
 <br/>
 
@@ -46,9 +43,16 @@ ______
 
 ### [Видеокурсы для админинов](/linux/video-courses/)
 
-
-______
+---
 
 <br/>
 
-### [О сайте](/about/)  
+# Разное:
+
+### [Истории](/stories/)
+
+---
+
+<br/>
+
+### [О сайте](/about/)
