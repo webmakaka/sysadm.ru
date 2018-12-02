@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PostgreSQL инсталляция в Ubuntu
-permalink: /linux/servers/databases/postgresql/ubuntu/
+permalink: /linux/servers/databases/postgresql/install/ubuntu/
 ---
 
 # PostgreSQL инсталляция в Ubuntu

@@ -11,3 +11,5 @@ permalink: /linux/dev/git/install/
 ### [Ubuntu](/linux/dev/git/install/ubuntu/)
 
 ### [Centos](/linux/dev/git/install/centos/)
+
+### [шибки при работе с GIT](/linux/dev/git/errors/)

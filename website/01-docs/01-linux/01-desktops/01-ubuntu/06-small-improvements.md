@@ -41,14 +41,24 @@ permalink: /linux/desktops/ubuntu/small-improvements/
 
 ### Не спрашивать каждый раз пароль при комаде с sudo
 
+    # sudo usermod -aG sudo <username>
+
     # vi /etc/sudoers
 
+    %sudo   ALL=(ALL:ALL) ALL
+
+меняю на:
+
+    #%sudo   ALL=(ALL:ALL) ALL
+    %sudo   ALL=(ALL:ALL) NOPASSWD:ALL
+
+<!-- 
     root    ALL=(ALL:ALL) ALL
 
     меняю на
 
     root    ALL=(ALL:ALL) ALL
-    <username>    ALL=(ALL:ALL) NOPASSWD:ALL
+    <username>    ALL=(ALL:ALL) NOPASSWD:ALL -->
 
 
 <br/>

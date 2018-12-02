@@ -6,6 +6,9 @@ permalink: /linux/dev/nodejs/installation/centos/
 
 # Инсталляция node.js, bower в centos 6.X
 
+(Материал устарел. Требует обновления.)
+
+
     # curl -sL https://rpm.nodesource.com/setup | bash -
     # yum install -y nodejs npm
 
@@ -40,7 +43,6 @@ permalink: /linux/dev/nodejs/installation/centos/
     # useradd developer
 
     # chown -R developer /projects
-
 
     # su - developer
 

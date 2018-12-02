@@ -10,6 +10,7 @@ permalink: /linux/dev/ruby-on-rails/installation/centos/6.X/
 
 Имеется также вариант, который можно посмотреть на сайте rvm.io
 
+<br/>
 
 ### С использованием rbenv
 

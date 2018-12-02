@@ -14,7 +14,7 @@ permalink: /linux/servers/virtual/vagrant/create-2-debian-vagrant/
     $ vi Vagrantfile
 
 
-{% highlight text %}
+```shell
 
 VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -59,8 +59,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 end
 
-
-{% endhighlight %}
+```
 
 
     $ ssh-add ~/.vagrant.d/insecure_private_key

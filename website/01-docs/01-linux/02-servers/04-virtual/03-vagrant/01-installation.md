@@ -8,7 +8,7 @@ permalink: /linux/servers/virtual/vagrant/installation/ubuntu/
 # Инсталляция Vargant в Ubuntu 18.04
 
 Делаю 
-02.08.2018
+23.11.2018
 
 <br/>
 
@@ -21,8 +21,8 @@ https://www.vagrantup.com/downloads.html
 У меня уже был установлен. Чего-то старый какой-то. Надо бы его обновить!
 
     # vagrant version
-    Installed Version: 1.9.1
-    Latest Version: 2.0.3
+    Installed Version: 2.0.3
+    Latest Version: 2.2.1
 
 <br/>
 
@@ -30,15 +30,17 @@ https://www.vagrantup.com/downloads.html
 
     # apt-get remove -y vagrant
 
-
 <br/>
 
 ### Инсталляция Vagrant
 
     # cd /tmp
-    # wget https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_x86_64.deb
+    # wget https://releases.hashicorp.com/vagrant/2.2.1/vagrant_2.2.1_x86_64.deb
 
-    # dpkg -i vagrant_2.1.2_x86_64.deb
+    # dpkg -i vagrant_2.2.1_x86_64.deb
 
     # vagrant -v
-    Vagrant 2.1.2
+    Vagrant 2.2.1
+
+    $ vagrant plugin update
+

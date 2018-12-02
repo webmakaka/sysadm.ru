@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PostgreSQL инсталляция в Centos 6.X
-permalink: /linux/servers/databases/postgresql/centos/
+permalink: /linux/servers/databases/postgresql/install/centos/
 ---
 
 # PostgreSQL инсталляция в Centos 6.X
