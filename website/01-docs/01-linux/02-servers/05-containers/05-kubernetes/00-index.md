@@ -10,7 +10,7 @@ Kubernetes converts a set of computers into one big one.
 
 <br/>
 
-![kubernetes](/img/linux/servers/containers/kubernetes/1.png){: .center-image }
+![working with kubernetes](/website/img/linux/servers/containers/kubernetes/1.png "working with kubernetes1"){: .center-image }
 
 
 <br/>
