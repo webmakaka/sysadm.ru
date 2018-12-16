@@ -10,7 +10,7 @@ Kubernetes converts a set of computers into one big one.
 
 <br/>
 
-![working with kubernetes](/website/img/linux/servers/containers/kubernetes/1.png "working with kubernetes1"){: .center-image }
+![working with kubernetes](/img/linux/servers/containers/kubernetes/working-with-kubernetes.png "working with kubernetes"){: .center-image }
 
 
 <br/>
@@ -21,6 +21,11 @@ Kubernetes converts a set of computers into one big one.
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 v1.13.1
 ```
+
+<br/>
+
+[Kuberneters на локальном хосте (cubectl и minikube)](/linux/servers/containers/kubernetes/localhost/) 
+
 
 <br/>
 
