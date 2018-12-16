@@ -17,13 +17,14 @@ permalink: /linux/desktops/centos/7/repos/
 
 <br/>
 
-    [Centos]
-    name= Centos $releasever - $basearch
-    baseurl=http://mirror.centos.org/centos/7/os/x86_64/
-    gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-7
-    gpgcheck=1
-    enabled=1
-
+```bash
+[Centos]
+name= Centos $releasever - $basearch
+baseurl=http://mirror.centos.org/centos/7/os/x86_64/
+gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-7
+gpgcheck=1
+enabled=1
+```
 
 <br/>
 
@@ -36,13 +37,14 @@ permalink: /linux/desktops/centos/7/repos/
 
 <br/>
 
-    [Epel]
-    name= Epel $releasever - $basearch
-    baseurl=https://mirror.yandex.ru/epel/7/x86_64/
-    gpgkey=https://mirror.yandex.ru/epel/RPM-GPG-KEY-EPEL-7
-    gpgcheck=1
-    enabled=1
-
+```bash
+[Epel]
+name= Epel $releasever - $basearch
+baseurl=https://mirror.yandex.ru/epel/7/x86_64/
+gpgkey=https://mirror.yandex.ru/epel/RPM-GPG-KEY-EPEL-7
+gpgcheck=1
+enabled=1
+```
 
 <br/>
 

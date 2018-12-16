@@ -1,5 +1,6 @@
 # Build layer
-FROM ruby:2.4.1-stretch
+#FROM ruby:2.4.1-stretch
+FROM ruby:latest
 
 # Install program to configure locales
 RUN apt-get update && apt-get install -y locales
