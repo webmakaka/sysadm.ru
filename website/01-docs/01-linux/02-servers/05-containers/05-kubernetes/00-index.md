@@ -15,15 +15,6 @@ Kubernetes converts a set of computers into one big one.
 
 <br/>
 
-**Текущая стабильная версия:**
-
-```shell
-$ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
-v1.13.1
-```
-
-<br/>
-
 [Kuberneters на локальном хосте (cubectl и minikube)](/linux/servers/containers/kubernetes/localhost/) 
 
 

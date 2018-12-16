@@ -6,41 +6,10 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
 
 # Какие-то попытки разобраться с cubectl и minikube
 
-VirtualBox должен быть установлен
+
+[Инсталляция cubectl и minikube](/linux/servers/containers/kubernetes/localhost/cubect-minikube-installation/) 
 
 
-<br/>
-
-### Install kubectl
-
-https://kubernetes.io/docs/tasks/tools/install-kubectl/
-
-```shell
-
-$ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-
-$ chmod +x ./kubectl
-$ sudo mv ./kubectl /usr/local/bin/kubectl
-```
-    
-
-<br/>
-
-### Install minikube
-
-
-https://github.com/kubernetes/minikube/releases
-
-
-```shell
--- Последняя версия:
-$ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
-
-
-$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
-```
-    
-    
 <br/>
     
     $ minikube start

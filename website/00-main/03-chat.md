@@ -1,25 +1,12 @@
 ---
 layout: page
-title: Чат
+title: Телеграм Чат
 permalink: /chat/
 ---
 
-# Чат
+# Телеграм Чат
 
-### Telegram 
+### Telegram группа (где пока нет никого) 
 
 https://t.me/sysadm_ru
 
-
-<br/>
-
-### Gitter чат
-
-
-Требуется github или twitter аккаунт.
-
-
-[![Join the chat at https://gitter.im/sysadm-ru/Lobby](https://badges.gitter.im/sysadm-ru/Lobby.svg)](https://gitter.im/sysadm-ru/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-
-Кликни на зеленую кнопку для логина.
