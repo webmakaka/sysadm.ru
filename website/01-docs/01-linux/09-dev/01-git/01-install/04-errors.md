@@ -8,6 +8,19 @@ permalink: /linux/dev/git/errors/
 # Ошибки при работе с GIT
 
 
+
+<br/>
+
+### fatal: unable to access SSL connect error
+
+    $ git pull
+    fatal: unable to access 'https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git/': SSL connect error
+
+
+<br/>
+
+Попробовал выполнить команду, написанную ниже. Получил тоже сообщение об ошибке.
+
 <br/>
 
 ### fatal: HTTP request failed
@@ -20,6 +33,12 @@ permalink: /linux/dev/git/errors/
 
 <br/>
 
-Исправилась выполнением команды:
+### Исправилась выполнением команды:
 
     # yum update -y nss curl
+
+
+
+
+
+

@@ -15,12 +15,13 @@ VirtualBox должен быть установлен
 
 https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
+```shell
 
-    $ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-    
-    $ chmod +x ./kubectl
-    $ sudo mv ./kubectl /usr/local/bin/kubectl
-    
+$ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+
+$ chmod +x ./kubectl
+$ sudo mv ./kubectl /usr/local/bin/kubectl
+```
     
 
 <br/>
@@ -31,12 +32,13 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl/
 https://github.com/kubernetes/minikube/releases
 
 
-    -- Последняя версия:
-    $ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
+```shell
+-- Последняя версия:
+$ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 
 
-    $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
-    
+$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+```
     
     
 <br/>
@@ -152,7 +154,6 @@ https://github.com/kubernetes/minikube/releases
       
       $ echo $TOKEN
       
-      
       -- get the API server endpoint
       $ APISERVER=$(kubectl config view | grep https | cut -f 2- -d ":" | tr -d " ")
       
@@ -161,9 +162,6 @@ https://github.com/kubernetes/minikube/releases
       
       $ curl $APISERVER --header "Authorization: Bearer $TOKEN" --insecure
 
-
-    
-    
 <br/>
 
 ### Запуск контейренов
@@ -223,11 +221,10 @@ https://github.com/kubernetes/minikube/releases
     -no body in request-
 
 
-<br/>9
+<br/>
 
     $ minikube stop
     $ minikube delete
-
 
 
 <br/>
@@ -237,8 +234,6 @@ https://github.com/kubernetes/minikube/releases
     $ kubectl get deployments
     NAME             DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
     hello-minikube   1         1         1            1           8d
-
-
 
     $ kubectl delete deployments hello-minikube
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Автоматизация рутинных операций
-permalink: /linux/automate/
+permalink: /linux/automation/
 ---
 
 # Автоматизация рутинных операций

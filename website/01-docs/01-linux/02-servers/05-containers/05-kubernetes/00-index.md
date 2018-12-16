@@ -8,9 +8,28 @@ permalink: /linux/servers/containers/kubernetes/
 
 Kubernetes converts a set of computers into one big one.
 
+<br/>
+
+![kubernetes](/img/linux/servers/containers/kubernetes/1.png){: .center-image }
+
+
+<br/>
+
+**Текущая стабильная версия:**
+
+```shell
+$ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+v1.13.1
+```
+
+<br/>
 
 **Бесплатный курс по kubernetes:**  
 https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS158x+1T2018/course/
+
+**Tutorials**  
+http://kubernetes.io/docs/tutorials/
+
 
 <br/>
 
@@ -27,19 +46,6 @@ https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS158x+1T2018/course
 - One instance for the Master
 - Serveral instances as Minions
 
-
-<br/>
-
-**Текущая стабильная версия:**
-
-$ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
-v1.10.0
-
-<br/>
-
-### Tutorials  
-
-http://kubernetes.io/docs/tutorials/
 
 <br/>
 
@@ -71,8 +77,6 @@ In this setup, we have multiple master nodes, which work in an HA mode, but we h
 
 * Multi-Node etcd, Multi-Master, and Multi-Worker Installation
 In this mode, etcd is configured in a clustered mode, outside the Kubernetes cluster, and the nodes connect to it. The master nodes are all configured in an HA mode, connecting to multiple worker nodes. This is the most advanced and recommended production setup.
-
-
 
 
 <br/>
