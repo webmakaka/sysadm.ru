@@ -1,5 +1,4 @@
 # Build layer
-#FROM ruby:2.4.1-stretch
 FROM ruby:latest
 
 # Install program to configure locales

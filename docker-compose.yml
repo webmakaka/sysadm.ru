@@ -2,6 +2,6 @@ jekyll:
     image: jekyll/jekyll:latest
     command: jekyll serve --watch --incremental
     ports:
-        - 65001:4000
+        - 8081:4000
     volumes:
         - .:/srv/jekyll
