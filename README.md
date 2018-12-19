@@ -1,4 +1,4 @@
-# Исходники сайта [sysadm.ru](http://sysadm.ru)
+# Исходники сайта [sysadm.ru](https://sysadm.ru)
 
 Запустить sysadm.ru на своем хосте с использованием docker контейнера:
 
@@ -17,7 +17,7 @@
     # systemctl status sysadm.ru.service
 
 
-http://localhost:4005
+http://localhost:4006
 
 <br/>
 
