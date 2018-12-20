@@ -26,13 +26,12 @@ P.S. На момент регистрации этого домена мной, 
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/bender.jpg" border="0" alt="Злобный робот bender">
-</div>
+![Злобный робот bender](/img/bender.jpg "Злобный робот bender"){: .center-image }
 
 <br/>
 
 **Для контактов:**
 
 email:  
-![Marley](http://img.fotografii.org/a3333333mail.gif 'Marley')
+
+![Marley](/img/a3333333mail.gif "Marley")

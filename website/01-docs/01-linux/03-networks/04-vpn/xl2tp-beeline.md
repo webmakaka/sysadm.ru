@@ -419,7 +419,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 </pre>
 
 <br/><br/>
-Остается только настроить <a href="https://sysadm.ru/linux/centos/nat/index.html">NAT</a>.
+Остается только настроить <a href="/linux/networks/nat/centos/nat/">NAT</a>.
 <br/><br/>
 
 -----------------------------------------------------

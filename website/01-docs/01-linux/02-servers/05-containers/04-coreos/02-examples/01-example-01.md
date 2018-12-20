@@ -137,9 +137,8 @@ https://github.com/sysadm-ru/coreos-docker-examples/tree/master/01
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/example/01/pic1.png" border="0" alt="coreos cluster example">
-</div>
+![coreos cluster example](/img/linux/servers/containers/coreos/example/01/pic1.png "coreos cluster example"){: .center-image }
+
 
 <br/>
 
@@ -362,9 +361,9 @@ $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/example/01/pic2.png" border="0" alt="coreos cluster example">
-</div>
+
+![coreos cluster example](/img/linux/servers/containers/coreos/example/01/pic2.png "coreos cluster example"){: .center-image }
+
 
 <br/>
 
@@ -499,6 +498,5 @@ $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/example/01/pic3.png" border="0" alt="coreos cluster example">
-</div>
+
+![coreos cluster example](/img/linux/servers/containers/coreos/example/01/pic3.png "coreos cluster example"){: .center-image }

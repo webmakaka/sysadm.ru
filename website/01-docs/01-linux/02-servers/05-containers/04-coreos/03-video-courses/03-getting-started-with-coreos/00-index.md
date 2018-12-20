@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Getting Started with CoreOS [29 Nov 2016, ENG]
-permalink: /linux/servers/containers/coreos/Getting_Started_with_CoreOS/
+permalink: /linux/servers/containers/coreos/getting-started-with-coreos/
 ---
 
 
@@ -10,9 +10,7 @@ permalink: /linux/servers/containers/coreos/Getting_Started_with_CoreOS/
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting_started_with_coreos/pic4.png" border="0" alt="fleetctl">
-</div>
+![fleetctl](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic4.png "fleetctl"){: .center-image }
 
 <br/>
 

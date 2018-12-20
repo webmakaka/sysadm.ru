@@ -42,13 +42,13 @@ Etcd - похоже на Consul и ZooKeeper. (Лично я ничего из �
 <br/>
 
 <div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting_started_with_coreos/pic1.png" border="0" alt="coreos cluster">
+    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic1.png" border="0" alt="coreos cluster">
 </div>
 
 <br/>
 
 <div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting_started_with_coreos/pic2.png" border="0" alt="coreos cluster">
+    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic2.png" border="0" alt="coreos cluster">
 </div>
 
 <br/>
@@ -70,7 +70,7 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
 <br/>
 
 <div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting_started_with_coreos/pic3.png" border="0" alt="fleetctl">
+    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic3.png" border="0" alt="fleetctl">
 </div>
 
 <br/>
@@ -152,7 +152,7 @@ flannel - виртуальная сеть, которая предоставля
 
 
 <div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting_started_with_coreos/pic5.png" border="0" alt="fleetctl">
+    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic5.png" border="0" alt="fleetctl">
 </div>
 
 <br/>
@@ -161,14 +161,14 @@ flannel - виртуальная сеть, которая предоставля
 <br/>
 
 <div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting_started_with_coreos/pic6.png" border="0" alt="fleetctl">
+    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic6.png" border="0" alt="fleetctl">
 </div>
 
 <br/>
 
 
 <div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting_started_with_coreos/pic7.png" border="0" alt="fleetctl">
+    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic7.png" border="0" alt="fleetctl">
 </div>
 
 

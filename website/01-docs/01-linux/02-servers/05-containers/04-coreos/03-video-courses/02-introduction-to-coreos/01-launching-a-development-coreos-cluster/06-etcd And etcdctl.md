@@ -1,7 +1,7 @@
 ---
 layout: page
 title: etcd And etcdctl
-permalink: /linux/servers/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/etcd_And_etcdctl/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/etcd_And_etcdctl/
 ---
 
 

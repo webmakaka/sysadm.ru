@@ -24,4 +24,4 @@ permalink: /about/
 **Для контактов:**
 
 email:  
-![Marley](http://img.fotografii.org/a3333333mail.gif "Marley")
+![Marley](/img/a3333333mail.gif "Marley")

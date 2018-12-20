@@ -23,7 +23,7 @@ permalink: /linux/servers/containers/docker/clustering/swarm/Native_Docker_Clust
 
 **Инсталляция python 2 в coreos**
 
-https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-coreos.sh
+<!-- https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-coreos.sh -->
 
 172.17.0.1 - ip адрес docker интерфейса на хостовой машине.
 

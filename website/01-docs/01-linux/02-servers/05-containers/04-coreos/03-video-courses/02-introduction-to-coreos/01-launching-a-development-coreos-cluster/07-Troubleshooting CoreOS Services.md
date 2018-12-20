@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Troubleshooting CoreOS Services
-permalink: /linux/servers/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/Troubleshooting_CoreOS_Services/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/Troubleshooting_CoreOS_Services/
 ---
 
 

@@ -14,7 +14,7 @@ permalink: /linux/servers/containers/coreos/video-courses/
 ### [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
 
 <ul>
-    <li><a href="/linux/servers/containers/coreos/Introduction_to_CoreOS/">[O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]</a></li>
+    <li><a href="/linux/servers/containers/coreos/introduction-to-coreos/">[O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]</a></li>
 </ul>
 
 
@@ -26,7 +26,7 @@ permalink: /linux/servers/containers/coreos/video-courses/
 Все разобрано включено в пример 2 на главной странице coreos.
 
 <ul>
-    <li><a href="/linux/servers/containers/coreos/Getting_Started_with_CoreOS/">Getting Started with CoreOS [29 Nov 2016, ENG]</a></li>
+    <li><a href="/linux/servers/containers/coreos/getting-started-with-coreos/">Getting Started with CoreOS [29 Nov 2016, ENG]</a></li>
 </ul>
 
 

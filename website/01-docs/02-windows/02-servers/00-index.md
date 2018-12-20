@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Windows - Администрирование серверов
-permalink: /linux/servers/
+permalink: /windows/servers/
 ---
 
 # Администрирование серверов:

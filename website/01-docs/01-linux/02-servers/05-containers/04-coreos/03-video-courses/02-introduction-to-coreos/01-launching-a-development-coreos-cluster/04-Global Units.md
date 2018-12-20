@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Global Units
-permalink: /linux/servers/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/Global_Units/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/Global_Units/
 ---
 
 

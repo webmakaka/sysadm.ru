@@ -102,7 +102,7 @@ CTRL + T и начать набирать название файла в про�
 
 <br/>
 
-<a href="//jsdev.org/env/atom/install-atom-on-ubuntu-14-04/"><strong>Еще больше материалов по Atom от меня</strong></a>
+<a href="//jsdev.org/env/ide/atom/install-atom-on-ubuntu-14-04/"><strong>Еще больше материалов по Atom от меня</strong></a>
 
 <br/>
 

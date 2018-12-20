@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Introduction to CoreOS Training Video
-permalink: /linux/servers/containers/coreos/Introduction_to_CoreOS/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/
 ---
 
 
@@ -42,13 +42,13 @@ https://github.com/coreos/coreos-vagrant/
 
 <br/>
 
-[01. Launching A Development CoreOS Cluster](/linux/servers/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/)
+[01. Launching A Development CoreOS Cluster](/linux/servers/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/)
 
-[02. Deploying A DatabaseBacked Web Application](/linux/servers/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Deploying_A_DatabaseBacked_Web_Application/)
+[02. Deploying A DatabaseBacked Web Application](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/deploying-a-database-backed-web-application/)
 
 
 06\. CoreOS In Production (DiginalOcean, Monitoring, Logging)
 
 07\. Advanced Topics (IPtables, ETCD Security)
 
-[08. Kubernetes (Пока ничего не понятно, или почти ничего)](/linux/servers/containers/coreos/Introduction_to_CoreOS/Deploying_A_DatabaseBacked_Web_Application/Kubernetes/)
+[08. Kubernetes (Пока ничего не понятно, или почти ничего)](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/kubernetes/)

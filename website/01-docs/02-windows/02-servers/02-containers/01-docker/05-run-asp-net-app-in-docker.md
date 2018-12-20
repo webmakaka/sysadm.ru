@@ -14,4 +14,3 @@ permalink: /windows/servers/containers/docker/run-asp-net-app-in-docker/
 
 А так как мудаки с которыми работает pluralsight, забанили мой репо с исходниками (один из репо), я вообще не рекомендую покупать что-либо от pluralsight.
 
- [гитхаб](https://github.com/sysadm-ru/Docker-for-Web-Developers/).

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: systemd
-permalink: /linux/servers/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/systemd/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/systemd/
 ---
 
 

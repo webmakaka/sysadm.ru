@@ -81,7 +81,7 @@ Windows переустановить и Word поставить и компью�
 
 
 email:  
-![Marley](http://img.fotografii.org/a3333333mail.gif "Marley")
+![Marley](/img/a3333333mail.gif "Marley")
 
 
 <br/><br/>

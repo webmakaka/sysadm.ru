@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Starting Units with Fleet
-permalink: /linux/servers/containers/coreos/Introduction_to_CoreOS/Launching_A_Development_CoreOS_Cluster/Starting_Units_with_Fleet/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/starting-units-with-fleet/
 ---
 
 

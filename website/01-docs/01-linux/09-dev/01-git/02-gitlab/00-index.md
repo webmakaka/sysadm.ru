@@ -23,9 +23,3 @@ https://docs.gitlab.com/omnibus/docker/README.html
 
 ### [Инсталляция GITLAB в centos 6 из пакетов](/linux/dev/git/gitlab/centos/6/)
 
-
-<br/>
-
-### Поделитесь нормальной пошаговой докой по развертыванию GITLAB и аналогов.
-
-Вроде вот [этой](https://github.com/sysadm-ru/gitlab-recipes/tree/master/install/centos), но только лучше.
