@@ -23,7 +23,7 @@ COPY Gemfile Gemfile
 RUN bundle install
 COPY . .
 RUN bundle exec jekyll build
-# RUN bundle exec htmlproofer ./_site --only-4xx --check-html --allow-hash-href --assume-extension
+RUN bundle exec htmlproofer ./_site --file-ignore /.git/,./_site/404.html --only-4xx --check-html --allow-hash-href --assume-extension
 
 # Hosting Layer
 FROM nginx

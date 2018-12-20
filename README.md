@@ -27,14 +27,10 @@ http://localhost:4006
 
     $ cd ~
     $ mkdir -p sysadm.ru && cd sysadm.ru
-    $ git clone --depth=1 https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git .
+    $ git clone --depth=1 https://bitbucket.org/sysadm-ru/sysadm.ru.git .
     $ docker-compose up
-
-// Можно запустить в background
-
-    $ docker-compose up &
-
+    
 <br/>
 
-Остается в браузере подключиться к localhost:8081
+Остается в браузере подключиться к localhost:80
 
