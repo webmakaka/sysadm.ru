@@ -262,10 +262,13 @@ VMName_2 — имя новой виртуальной машины
 
 </pre>
 
-<img src="//files.sysadm.ru/img/linux/servers/virtual/kvm/remmina.png" border="0" alt="Инсталляция KVM в CENTOS 6"><br/><br/>
-<img src="//files.sysadm.ru/img/linux/servers/virtual/kvm/kvm_01.png" border="0" alt="Инсталляция KVM в CENTOS 6"><br/><br/>
-<img src="//files.sysadm.ru/img/linux/servers/virtual/kvm/kvm_02.png" border="0" alt="Инсталляция KVM в CENTOS 6"><br/><br/>
-<img src="//files.sysadm.ru/img/linux/servers/virtual/kvm/kvm_03.png" border="0" alt="Инсталляция KVM в CENTOS 6"><br/><br/>
+![Инсталляция KVM в CENTOS](/img/linux/servers/virtual/kvm/remmina.png "Инсталляция KVM в CENTOS"){: .center-image }
+
+![Инсталляция KVM в CENTOS](/img/linux/servers/virtual/kvm/kvm_01.png "Инсталляция KVM в CENTOS"){: .center-image }
+
+![Инсталляция KVM в CENTOS](/img/linux/servers/virtual/kvm/kvm_02.png "Инсталляция KVM в CENTOS"){: .center-image }
+
+![Инсталляция KVM в CENTOS](/img/linux/servers/virtual/kvm/kvm_03.png "Инсталляция KVM в CENTOS"){: .center-image }
 
 
 <br/><br/>

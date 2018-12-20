@@ -36,8 +36,7 @@ permalink: /linux/servers/containers/coreos/installation/on-host-machine/
 
 ### Подготавливю минимальный конфиг
 
-<script src="http://gist-it.appspot.com/https://github.com/sysadm-ru/coreos-cloud-config/blob/master/cloud-config.yaml">
-</script>
+https://bitbucket.org/sysadm-ru/coreos-cloud-config/src/master/cloud-config.yaml
 
 
 <br/>

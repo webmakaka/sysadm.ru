@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Deploying RethinkDB Database
-permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/Deploying_RethinkDB_Database/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/deploying-rethinkdb-database/
 ---
 
 
@@ -150,7 +150,4 @@ X-ConditionMachineOf=rethinkdb-announce@%i.service
 <br/>
 
 
-
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/app5.png" border="0" alt="coreos cluster">
-</div>
+![coreos cluster](/img/linux/servers/containers/coreos/app5.png "coreos cluster"){: .center-image }

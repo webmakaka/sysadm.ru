@@ -24,9 +24,4 @@ permalink: /linux/servers/databases/postgresql/
 
 <br/>
 
-<div align="center">
-
-    <img src="//files.sysadm.ru/img/linux/databases/postgresql/datagrip-postgresql-heroku.png" border="0" alt="no pg_hba.conf entry for host">  
-
-</div>
-
+![no pg_hba.conf entry for host](/img/linux/servers/databases/postgresql/datagrip-postgresql-heroku.png "no pg_hba.conf entry for host"){: .center-image }

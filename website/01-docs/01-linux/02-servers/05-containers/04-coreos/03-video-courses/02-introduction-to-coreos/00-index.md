@@ -27,15 +27,12 @@ https://github.com/coreos/coreos-vagrant/
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/app1.png" border="0" alt="cluster">
-</div>
+![cluster](/img/linux/servers/containers/coreos/app1.png "cluster"){: .center-image }
+
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/app2.png" border="0" alt="cluster">
-</div>
+![cluster](/img/linux/servers/containers/coreos/app2.png "cluster"){: .center-image }
 
 <br/>
 

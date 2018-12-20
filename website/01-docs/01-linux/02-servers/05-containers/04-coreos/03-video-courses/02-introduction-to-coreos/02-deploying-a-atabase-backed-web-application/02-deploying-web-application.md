@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Deploying Web Application
-permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/Deploying_Web_Application/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/deploying-web-application/
 ---
 
 
@@ -202,9 +202,7 @@ MachineOf=todo@%i.service
 <br/>
 
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/app6.png" border="0" alt="coreos cluster">
-</div>    
+![coreos cluster](/img/linux/servers/containers/coreos/app6.png "coreos cluster"){: .center-image } 
 
 
 

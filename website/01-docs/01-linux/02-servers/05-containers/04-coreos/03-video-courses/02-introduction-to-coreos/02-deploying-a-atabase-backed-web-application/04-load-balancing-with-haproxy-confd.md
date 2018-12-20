@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Load balancing with HAPROXY & CONFD
-permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/Load_Balancing_With_HAProxy_confd/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/load-balancing-with-haproxy-confd/
 ---
 
 

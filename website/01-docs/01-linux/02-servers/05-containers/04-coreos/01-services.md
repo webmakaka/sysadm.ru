@@ -33,23 +33,19 @@ Etcd - похоже на Consul и ZooKeeper. (Лично я ничего из �
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/etcd.png" border="0" alt="etcd">
-</div>
+![etcd](/img/linux/servers/containers/coreos/etcd.png "etcd"){: .center-image }
+
 
 <br/>
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic1.png" border="0" alt="coreos cluster">
-</div>
+![coreos cluster](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic1.png "coreos cluster"){: .center-image }
+
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic2.png" border="0" alt="coreos cluster">
-</div>
+![coreos cluster](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic2.png "coreos cluster"){: .center-image }
 
 <br/>
 
@@ -69,9 +65,8 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic3.png" border="0" alt="fleetctl">
-</div>
+![fleetctl](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic3.png "fleetctl"){: .center-image }
+
 
 <br/>
 
@@ -151,26 +146,20 @@ Fleetctl commands:
 flannel - виртуальная сеть, которая предоставляет подсеть, чтобы контейнеры могли между собой обмениваться пакетами. (я так перевел / понял)
 
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic5.png" border="0" alt="fleetctl">
-</div>
-
-<br/>
+![fleetctl](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic5.png "fleetctl"){: .center-image }
 
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic6.png" border="0" alt="fleetctl">
-</div>
 
 <br/>
 
+![fleetctl](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic6.png "fleetctl"){: .center-image }
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/getting-started-with-coreos/pic7.png" border="0" alt="fleetctl">
-</div>
 
+<br/>
+
+![fleetctl](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic7.png "fleetctl"){: .center-image }
 
 
 <br/>
@@ -184,8 +173,6 @@ flannel - виртуальная сеть, которая предоставля
 
 
     $ journalctl --unit etcd.service --no-pager
-
-
 
 
     $ journalctl :	This lists the combined	journal	log	from all the sources.

@@ -24,7 +24,6 @@ Centos
 
 
 <ul>
-	<li><a href="/linux/servers/containers/lxc/centos-lxc-with-script/">Centos LXC и libvirt (Настройка с помощью скрипта)</a></li>
 	<li><a href="/linux/servers/containers/lxc/centos-lxc/">Linux Containers (lxc) в Centos 6.5 x64 (libvirt)</a></li>
 </ul>
 

@@ -9,9 +9,7 @@ permalink: /linux/servers/containers/docker/clustering/swarm/Native_Docker_Clust
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/docker/clustering/swarm/native-docker-clustering/pic2.png" border="0" alt="Native Docker Clustering">
-</div>
+![Native Docker Clustering](/img/linux/servers/containers//docker/clustering/swarm/native-docker-clustering/pic2.png "Native Docker Clustering"){: .center-image }
 
 
 <br/>

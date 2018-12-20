@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Load balancing with NGINX
-permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/Load_Balancing_With_NGINX_confd/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/load-balancing-with-nginx-confd/
 ---
 
 
@@ -112,9 +112,8 @@ Global=true
 
 Тоже самое, только на 80 порту а не на 3000
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/app7.png" border="0" alt="coreos cluster">
-</div>
+
+![coreos cluster](/img/linux/servers/containers/coreos/app7.png "coreos cluster"){: .center-image } 
 
 
 Если нужно остановить и выгрузить все, что касается сервиса:

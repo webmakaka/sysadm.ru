@@ -11,7 +11,7 @@ permalink: /linux/servers/containers/coreos/example/01/prev/
 
 PS. Исходники с Dockerfile, можно взять здесь:
 
-https://github.com/sysadm-ru/Introduction_To_CoreOS
+https://bitbucket.org/sysadm-ru/introduction_to_coreos
 
 
 Они могу понадобиться, если захочется собрать собственные контейнеры или просто посмотреть примеры.
@@ -33,12 +33,12 @@ https://github.com/sysadm-ru/Introduction_To_CoreOS
 
 Скопировать файлы:
 
-https://github.com/sysadm-ru/Native-Docker-Clustering
+https://bitbucket.org/sysadm-ru/native-docker-clustering
 
 <br/>
 
     $ cd ~
-    $ git clone https://github.com/sysadm-ru/Native-Docker-Clustering
+    $ git clone https://bitbucket.org/sysadm-ru/native-docker-clustering
     $ cd Native-Docker-Clustering
 
 
@@ -215,9 +215,7 @@ https://discovery.etcd.io/new?size=7
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/example/01/pic1.png" border="0" alt="coreos cluster example">
-</div>
+![coreos cluster example](/img/linux/servers/containers/coreos/example/01/pic1.png "coreos cluster example"){: .center-image }
 
 <br/>
 
@@ -431,9 +429,7 @@ https://discovery.etcd.io/new?size=7
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/example/01/pic2.png" border="0" alt="coreos cluster example">
-</div>
+![coreos cluster example](/img/linux/servers/containers/coreos/example/01/pic2.png "coreos cluster example"){: .center-image }
 
 <br/>
 
@@ -615,8 +611,6 @@ https://discovery.etcd.io/new?size=7
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/coreos/example/01/pic3.png" border="0" alt="coreos cluster example">
-</div>
 
-<br/>
+![coreos cluster example](/img/linux/servers/containers/coreos/example/01/pic3.png "coreos cluster example"){: .center-image }
+

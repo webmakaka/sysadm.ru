@@ -151,10 +151,7 @@ http://172.17.8.101:8080/
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/linux/servers/containers/docker/clustering/swarm/swarm-visualizer.png" border="0" alt="Визуализация Docker Swarm">
-</div>
-
+![Визуализация Docker Swarm](/img/linux/servers/containers//docker/clustering/swarm/swarm-visualizer.png "Визуализация Docker Swarm"){: .center-image }
 
 <br/>
 

@@ -18,13 +18,13 @@ permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-a
 
 
 
-[01 Deploying RethinkDB Database](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/Deploying_RethinkDB_Database/)  
+[01 Deploying RethinkDB Database](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/deploying-rethinkdb-database/)  
 
 
-[02 Deploying Web Application](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/Deploying_Web_Application/)  
+[02 Deploying Web Application](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/deploying-web-application/)  
 
 
-[03 Load Balancing With NGINX  confd](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/Load_Balancing_With_NGINX_confd/)  
+[03 Load Balancing With NGINX  confd](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/load-balancing-with-nginx-confd/)  
 
 
-[04 Load balancing with HAPROXY & CONFD](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/Load_Balancing_With_HAProxy_confd/)
+[04 Load balancing with HAPROXY & CONFD](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/load-balancing-with-haproxy-confd/)

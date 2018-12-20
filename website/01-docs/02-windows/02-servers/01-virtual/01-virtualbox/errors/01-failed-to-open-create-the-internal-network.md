@@ -13,6 +13,4 @@ permalink: /windows/servers/virtual/virtualbox/errors/failed-to-open-create-the-
 
 <br/>
 
-<div align="center">
-	<img src="//files.sysadm.ru/img/windows/servers/virtual/virtualbox/errors/failed-to-open-create-the-internal-network.png" alt="VirtualBox Windows10 Failed to open/create the internal network" border="0" />
-</div>
+![VirtualBox Windows10 Failed to open/create the internal network](/img/windows/servers/virtual/virtualbox/errors/failed-to-open-create-the-internal-network.png "VirtualBox Windows10 Failed to open/create the internal network"){: .center-image }
