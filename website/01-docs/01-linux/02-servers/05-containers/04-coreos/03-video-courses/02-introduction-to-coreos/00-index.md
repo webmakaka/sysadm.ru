@@ -41,11 +41,11 @@ https://github.com/coreos/coreos-vagrant/
 
 [01. Launching A Development CoreOS Cluster](/linux/servers/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/)
 
-[02. Deploying A DatabaseBacked Web Application](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/deploying-a-database-backed-web-application/)
+[02. Deploying A DatabaseBacked Web Application](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/deploying-a-database-backed-web-application/)
 
 
 06\. CoreOS In Production (DiginalOcean, Monitoring, Logging)
 
 07\. Advanced Topics (IPtables, ETCD Security)
 
-[08. Kubernetes (Пока ничего не понятно, или почти ничего)](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/kubernetes/)
+[08. Kubernetes (Пока ничего не понятно, или почти ничего)](/linux/servers/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/kubernetes/)

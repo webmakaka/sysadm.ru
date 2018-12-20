@@ -20,10 +20,8 @@ permalink: /linux/desktops/ubuntu/ace-player-installation/
 
 На вопрос о возрасте, я указал, что мне меньше 13 лет и рекламу всякого УГ (Уткина Г...) мне не стали показывать.
 
-<div align="center">
-    <img src="http://img.ipev.ru/2018/08/19/Screenshot-from-2018-08-19-00-44-55.png" border="0" alt="Установка Ace плеера в Ubuntu 18.04.1">
+![Установка Ace плеера в Ubuntu 18.04.1](/img/linux/desktops/ubuntu/ace-player-installation/ace-18-04.png "Установка Ace плеера в Ubuntu 18.04.1"){: .center-image }
 
-</div>
 
 <br/>
 
@@ -61,19 +59,12 @@ https://snapcraft.io/acestreamplayer
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/ace-01.png" border="0" alt="Установка Ace плеера в Ubuntu">
 
-    <br/><br/>
+![Установка Ace плеера в Ubuntu](/img/linux/desktops/ubuntu/ace-player-installation/ace-01.png "Установка Ace плеера в Ubuntu"){: .center-image }
 
-    <img src="//files.sysadm.ru/img/ace-02.png" border="0" alt="Установка Ace плеера в Ubuntu">
+![Установка Ace плеера в Ubuntu](/img/linux/desktops/ubuntu/ace-player-installation/ace-02.png "Установка Ace плеера в Ubuntu"){: .center-image }
 
-    <br/><br/>
-
-    <img src="//files.sysadm.ru/img/ace-03.png" border="0" alt="Установка Ace плеера в Ubuntu">    
-
-</div>
-
+![Установка Ace плеера в Ubuntu](/img/linux/desktops/ubuntu/ace-player-installation/ace-03.png "Установка Ace плеера в Ubuntu"){: .center-image }
 
 <br/>
 

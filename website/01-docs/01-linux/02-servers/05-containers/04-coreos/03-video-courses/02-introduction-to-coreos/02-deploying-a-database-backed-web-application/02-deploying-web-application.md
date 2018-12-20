@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Deploying Web Application
-permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/deploying-web-application/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/deploying-web-application/
 ---
 
 

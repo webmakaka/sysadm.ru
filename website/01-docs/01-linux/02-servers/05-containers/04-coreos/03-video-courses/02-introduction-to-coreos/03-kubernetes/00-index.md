@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kubernetes
-permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/kubernetes/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/kubernetes/
 ---
 
 

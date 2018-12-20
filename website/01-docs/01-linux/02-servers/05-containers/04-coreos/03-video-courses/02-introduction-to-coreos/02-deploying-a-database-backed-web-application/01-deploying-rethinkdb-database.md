@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Deploying RethinkDB Database
-permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-atabase-backed-web-application/deploying-rethinkdb-database/
+permalink: /linux/servers/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/deploying-rethinkdb-database/
 ---
 
 
