@@ -42,7 +42,7 @@ permalink: /linux/desktops/install/ubuntu/steps-after-installation-ubuntu-18/
 
 <br/>
 
-### Смена раскладки клавиатуры по Alt + Shift
+### Смена раскладки клавиатуры по Alt + Shift (При необходимости)
 
 Вот надо что-нибудь да испортить! По умолчанию, нужно выбрать комбинацию из 3х клваиш, чтобы сменить раскладку.
 
@@ -51,13 +51,17 @@ permalink: /linux/desktops/install/ubuntu/steps-after-installation-ubuntu-18/
 
 <br/>
 
-### Keyboard Shortcuts
+### System --> Settings --> Devices --> Keyboard
 
     Убрать logout по CTRL + ALT + DELETE
 
 <br/>
 
-    Добавить в Custom shortcuts
+Logout - убираем 
+
+<br/>
+
+Добавляем
 
     Name: system-monitor
     Command: gnome-system-monitor

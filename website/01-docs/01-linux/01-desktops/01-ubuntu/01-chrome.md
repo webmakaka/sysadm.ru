@@ -34,5 +34,5 @@ https://adblockplus.org/
     - Allow some non-intrusive advertising
 
 
-Статья как лучше настроить:  
+Статья как лучше настроить (наерное устарела):  
 https://adblockplus.org/en/features#socialmedia

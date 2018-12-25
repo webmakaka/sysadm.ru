@@ -9,14 +9,14 @@ permalink: /linux/servers/containers/docker/installation/ubuntu/
 
 Делаю:  
 
-03.08.2018
+25.12.2018
 
 
 <br/>
 
 ### Инсталляция Docker версии 18.x
 
-    # apt-get install -y \
+    # apt install -y \
         apt-transport-https \
         ca-certificates \
         curl \
@@ -36,19 +36,18 @@ permalink: /linux/servers/containers/docker/installation/ubuntu/
     stable"
 
 
-    # apt-get update
-    # apt-get install -y docker-ce
+    # apt update && apt install -y docker-ce
 
     # docker -v
-    Docker version 18.06.0-ce, build 0ffa825
+    Docker version 18.09.0, build 4d60db4
 
 <br/>
 
-Подробнее:  
+**Подробнее:**  
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 <br/>
-Бинарники берутся здесь:  
+**Бинарники docker лежат здесь:**  
 https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
 
 <br/>
@@ -61,9 +60,6 @@ https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
 
 
     # usermod -aG docker <username>
-    
-    
-<!-- $ sudo gpasswd -a <username> docker -->
 
 в группе docker должен появиться этот пользователь  
 
@@ -79,8 +75,6 @@ https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
 <br/>
 
 ### Изменить каталог по умолчанию для хранения контейнеров и имиджей
-
-(Просто не хочу, хранить редко используемые docker файлы на системном, да еще и SSD диске)
 
     # mkdir -p /mnt/dsk1/docker
     # chown -R <username> /mnt/dsk1/docker
