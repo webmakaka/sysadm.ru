@@ -1,6 +1,6 @@
 ---
 layout: page
-title: [Ubuntu, Realtek RTL-8110SC/8169SC] отваливается сетевой интерфейс на ubuntu 14.04.5 lts
+title: Ubuntu, Realtek RTL-8110SC/8169SC - отваливается сетевой интерфейс на ubuntu 14.04.5 lts
 permalink: /linux/desktops/ubuntu/network/realtek-r8169-error/
 ---
 
