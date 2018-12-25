@@ -8,8 +8,6 @@ permalink: /linux/desktops/ubuntu/
 
 # Ubuntu
 
-### [Настройка статической адресации сетевых интерфейсов в ubuntu 18.04](/linux/desktops/ubuntu/network/)
-
 ### [Инсталляция Libre Office](/linux/desktops/ubuntu/libreoffice/)
 
 ### [Инсталляция Google Chrome](/linux/desktops/ubuntu/chrome/)
@@ -25,3 +23,9 @@ permalink: /linux/desktops/ubuntu/
 ### [Команды запуска сервисов systemd (systemctl)](/linux/desktops/systemctl/)
 
 ### [Мелкие улучшения](/linux/desktops/ubuntu/small-improvements/)
+
+
+
+### Сеть
+
+### [Сеть в Ubuntu](/linux/desktops/ubuntu/network/)
