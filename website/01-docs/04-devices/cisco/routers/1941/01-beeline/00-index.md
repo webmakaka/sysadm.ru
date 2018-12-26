@@ -21,9 +21,7 @@ permalink: /devices/cisco/routers/1941/beeline/
 
 <br/>
 
-<div align="center">
-    <img src="//files.sysadm.ru/img/devices/cisco/routers/1941/beeline/login_beeline.png" border="0" alt="beeline login">
-</div>    
+![beeline login](/img/devices/cisco/routers/1941/beeline/login_beeline.png "beeline login"){: .center-image }
 
 <br/>
 

@@ -1,18 +1,11 @@
 ---
 layout: page
 title: Шаги после инсталляции Ubuntu 14 (для себя)
-permalink: /linux/desktops/install/ubuntu/steps-after-installation-ubuntu-14/
+permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-14/
 ---
 
 # Шаги после инсталляции Ubuntu 14 (для себя)
 
-Я уже попробовал 16.04 и вернулся на 14.04 release 04.
-
-В 16.04 у меня сбрасывались настройки для второго монитора, мышка ходила как-то странно, были проблемы с переключением клавиатуры. Индикатор раскладки при ее переключении не переключался. Отсутствовал Ubuntu Market (или как он там называется). Компьютер несколько раз выклюался.
-
-В общем, пусть пока дорабатывают, может попробую когда появится release 2 или будет какая необходимость в 16.04.
-
-P.S.: В релизе 16.04.01 - ничего из этого не пофиксили.
 
 
 <br/>
@@ -111,7 +104,10 @@ menu:minimize,maximize,close
 
 <br/>
 
-<img src="//files.sysadm.ru/img/linux/desktops/ubuntu/steps-after-installation/regional-formats.png" alt="Ubuntu Region Formats">
+
+![Ubuntu Region Formats](/img/linux/desktops/ubuntu/install/regional-formats.png "Ubuntu Region Formats"){: .center-image }
+
+
 
 
 <br/>

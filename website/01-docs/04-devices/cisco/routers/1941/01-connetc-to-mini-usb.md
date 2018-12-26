@@ -9,19 +9,11 @@ permalink: /devices/cisco/routers/1941/connetc-to-mini-usb/
 Подключил Cisco с помощью голубого консольного кабеля, что шел в комплекте с устройством. (К интерфейсам RJ-45 ничего не подключал.) к компьютеру.
 
 <br/>
-<br/>
 
 
-
-<div align="center">
-
-
-	<img src="http://files.sysadm.ru/devices/cisco/routers/1941/cicso-mini-usb-console-cable.jpg" border="0" alt="cicso mini usb console cable">
+![cicso mini usb console cable](/img//devices/cisco/routers/1941/connetc-to-mini-usb/cicso-mini-usb-console-cable.jpg "cicso mini usb console cable"){: .center-image }
 
 
-</div>
-
-<br/>
 <br/>
 
 

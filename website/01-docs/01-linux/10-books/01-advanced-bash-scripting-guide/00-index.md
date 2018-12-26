@@ -19,7 +19,7 @@ permalink: /linux/books/advanced-bash-scripting-guide/
 
 <br/>
 
-<a href="http://files.sysadm.ru/linux/books/AdvancedBasScriptingGuide-1-38.odt" target="_blank">Скачать книгу</a> (v.1.38 .odt формат)
+<a href="/files/books/AdvancedBasScriptingGuide-1-38.odt" target="_blank">Скачать книгу</a> (v.1.38 .odt формат)
 
 
 <a href="http://linuxforum.tech/viewtopic.php?id=35341" target="_blank">Обсуждение</a>

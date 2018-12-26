@@ -87,9 +87,8 @@ Locat / Foreign Address, Состояние, Протокол, Название 
     $ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
 
 
-<div align="center">
-	<img src="//files.sysadm.ru/img/mtaalamu.png" alt="mtaalamu" border="0">
-</div>
+![mtaalamu](/img/mtaalamu.png "mtaalamu"){: .center-image }
+
 
 
 Проще

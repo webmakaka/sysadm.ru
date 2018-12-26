@@ -11,7 +11,7 @@ permalink: /devices/cisco/switches/catalyst-ws-c2960g-8tc-l/
 
 
 
-<a href="http://files.sysadm.ru/devices/cisco/switches/catalyst-ws-c2960g-8tc-l/Catalyst_2960_Switch_GSG_8port.pdf">pdf с документацией</a>
+<a href="/files/books/Catalyst_2960_Switch_GSG_8port.pdf">pdf с документацией</a>
 
 <br/>
 

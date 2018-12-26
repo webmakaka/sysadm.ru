@@ -9,9 +9,9 @@ permalink: /linux/books/
 
 ### [Advanced Bash-Scripting Guide Углубленное изучение искусства написания сценариев командной оболочки](/linux/books/advanced-bash-scripting-guide/)
 
-### [SystemD для администраторов](http://files.sysadm.ru/linux/books/systemd-for-administrators.pdf)
+### [SystemD для администраторов](/files/books/systemd-for-administrators.pdf)
 
-### [iptables: правила хорошего тона](http://files.sysadm.ru/linux/books/iptables.pdf)
+### [iptables: правила хорошего тона](/files/books/iptables.pdf)
 
 
 

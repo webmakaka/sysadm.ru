@@ -10,9 +10,9 @@ permalink: /linux/hardware/hdd/partition-may-lead-to-very-poor-performance/
 
 <br/>
 
-<div align="center">
-	<img src="//files.sysadm.ru/img/linux/hardware/hdd/partition-may-lead-to-very-poor-performance.jpg" alt="The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance" border="0" />
-</div>
+
+
+![The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance](/img/linux/hardware/hdd/partition-may-lead-to-very-poor-performance.jpg "The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance"){: .center-image }
 
 
 <br/>

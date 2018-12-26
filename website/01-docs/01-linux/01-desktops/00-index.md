@@ -7,14 +7,11 @@ permalink: /linux/desktops/
 
 <br/>
 
-## Установка / переустановка операционной системы Linux
-
-### [Переустановка операционной системы Linux](/linux/desktops/install/)
-
-<br/>
-
 # Базовые вещи
 
+### [ISO образы с Linux](/linux/desktops/distribs/)
+
+### [Создание загрузочной USB флешки в Linux](/linux/desktops/linux-live-usb-flash/)
 
 ### [Архиваторы и работа с архивами в Linux](/linux/desktops/archives/)
 
@@ -29,10 +26,12 @@ permalink: /linux/desktops/
 
 <br/>
 
-## [Ubuntu](/linux/desktops/ubuntu/)
+# [Ubuntu](/linux/desktops/ubuntu/)
 
 
 
 <br/>
 
-## [Centos](/linux/desktops/centos/)
+# [Centos](/linux/desktops/centos/)
+
+

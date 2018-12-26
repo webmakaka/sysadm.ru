@@ -8,6 +8,9 @@ permalink: /linux/desktops/ubuntu/
 
 # Ubuntu
 
+
+### [Шаги после инсталляции Ubuntu](/linux/desktops/ubuntu/install/)
+
 ### [Инсталляция Libre Office](/linux/desktops/ubuntu/libreoffice/)
 
 ### [Инсталляция Google Chrome](/linux/desktops/ubuntu/chrome/)

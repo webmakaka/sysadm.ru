@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Шаги после инсталляции Ubuntu 18 (для себя)
-permalink: /linux/desktops/install/ubuntu/steps-after-installation-ubuntu-18/
+permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
 ---
 
 # Шаги после инсталляции Ubuntu 18 (для себя)
