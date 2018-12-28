@@ -79,6 +79,16 @@ Logout - убираем
 
 <br/>
 
+### Автозапуск telegram
+
+System Tools --> Preferences --> Startup Applications
+
+
+![Автозапуск telegram](/img/linux/desktops/ubuntu/install/autostart-telegram.png "Автозапуск telegram"){: .center-image }
+
+
+<br/>
+
 ### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
 https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
