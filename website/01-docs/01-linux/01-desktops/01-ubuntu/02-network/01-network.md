@@ -6,7 +6,7 @@ permalink: /linux/desktops/ubuntu/network/static-ip/
 
 # Настройка статической адресации сетевых интерфейсов в ubuntu 18.04 в командной строке
 
-**Вроде, сначала нужно отключить и удалить всякие network-manager !!!**
+**Чтобы работало, сначала нужно отключить network-manager !!! Но я теперь ленюсь и настраиваю конфиги в формочках**
 
 <br/>
 
@@ -23,3 +23,14 @@ permalink: /linux/desktops/ubuntu/network/static-ip/
 <br/>
 
     # /etc/init.d/networking restart
+
+
+<br/>
+
+### Отключить ipv6 в Ubuntu 18.04 (В тестировании)
+
+    # vi /etc/sysctl.conf
+
+    net.ipv6.conf.all.disable_ipv6 = 1
+    net.ipv6.conf.default.disable_ipv6 = 1
+    net.ipv6.conf.lo.disable_ipv6 = 1

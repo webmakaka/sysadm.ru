@@ -68,6 +68,14 @@ Logout - убираем
 
     CTRL + ALT + DELETE
 
+<br/>
+
+### Отключить противный звук при ошибке в консоли
+
+
+![Отключить противный звук при ошибке в консоли](/img/linux/desktops/ubuntu/install/disable-sound-when-error-in-the-console.png "Отключить противный звук при ошибке в консоли"){: .center-image }
+
+
 
 <br/>
 
