@@ -8,7 +8,7 @@ permalink: /linux/servers/containers/docker/tools/docker-compose/
 
 <br/>
 
-[Инсталляция Docker-Compose в Ubuntu 18.04 ](/linux/servers/containers/docker/tools/docker-compose/installation/ubuntu/)  
+[Инсталляция Docker-Compose в Ubuntu 18.04 ](/linux/servers/containers/docker/tools/docker-compose/install/ubuntu/)  
 
 
 [Линковка Docker контейнеров с помощью Docker Compose](/linux/servers/containers/docker/tools/docker-compose/)

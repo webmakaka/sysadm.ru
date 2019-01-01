@@ -6,9 +6,16 @@ permalink: /linux/desktops/ubuntu/network/static-ip/
 
 # Настройка статической адресации сетевых интерфейсов в ubuntu 18.04 в командной строке
 
-**Чтобы работало, сначала нужно отключить network-manager !!! Но я теперь ленюсь и настраиваю конфиги в формочках**
+**Не рекомндуется делать без особой необходимости**
 
-<br/>
+**Чтобы работало, сначала нужно отключить network-manager !!! Но в 99% случаев достаточно и GUI инструментов настройки**
+
+
+    # apt-get remove resolvconf
+
+
+Пришлось сделать reboot
+
 
     # vi /etc/network/interfaces
 
@@ -20,7 +27,26 @@ permalink: /linux/desktops/ubuntu/network/static-ip/
                  netmask 255.255.255.0
                  gateway 192.168.1.1
 
+
+
 <br/>
+
+
+Я пересоздавал resolv.conf, т.к. это был файл - ссылка на еще что-то.
+
+    # rm resolv.conf
+    # touch resolv.conf
+
+<br/>
+
+    # vi resolv.conf
+
+<br/>
+
+    nameserver 192.168.1.1
+
+<br/>
+
 
     # /etc/init.d/networking restart
 

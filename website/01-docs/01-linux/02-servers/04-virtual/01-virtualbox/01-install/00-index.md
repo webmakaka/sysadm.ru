@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Virtual Box
-permalink: /linux/servers/virtual/virtualbox/installation/
+permalink: /linux/servers/virtual/virtualbox/install/
 ---
 
 # Virtual Box
@@ -20,14 +20,14 @@ Offtopic:
 
 ### Инсталляция VirtualBox 5.X
 
-[Инсталляция VirtualBox 5.X в командной строке в Ubuntu 18](/linux/servers/virtual/virtualbox/installation/ubuntu/18.04/)
+[Инсталляция VirtualBox 5.X в командной строке в Ubuntu 18](/linux/servers/virtual/virtualbox/install/ubuntu/18.04/)
 
-[Инсталляция VirtualBox 5.X в командной строке в Ubuntu 14](/linux/servers/virtual/virtualbox/installation/ubuntu/14.04/)
+[Инсталляция VirtualBox 5.X в командной строке в Ubuntu 14](/linux/servers/virtual/virtualbox/install/ubuntu/14.04/)
 
-[Инсталляция VirtualBox 5.x в командной строке в Centos / Oracle Linux 7](/linux/servers/virtual/virtualbox/installation/centos/7/)
+[Инсталляция VirtualBox 5.x в командной строке в Centos / Oracle Linux 7](/linux/servers/virtual/virtualbox/install/centos/7/)
 
 <br/>
 
 ### Инсталляция VirtualBox 4.X
 
-[Инсталляция VirtualBox в командной строке в RedHat/Centos/Oracle Linux](/linux/servers/virtual/virtualbox/installation/centos/6/)
+[Инсталляция VirtualBox в командной строке в RedHat/Centos/Oracle Linux](/linux/servers/virtual/virtualbox/install/centos/6/)

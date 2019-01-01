@@ -6,10 +6,9 @@ permalink: /linux/networks/
 
 # Linux Networks
 
-## Настройка сети в различных дистрибутивах Linux
 
+## Centos
 
-### [Настройка статической адресации сетевых интерфейсов в ubuntu server 16.04](/linux/networks/ubuntu/)
 
 ### [Настройка сети в centos 6.X](/linux/networks/centos/6/)
 

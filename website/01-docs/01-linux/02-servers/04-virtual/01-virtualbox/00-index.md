@@ -19,7 +19,7 @@ Offtopic:
 
 ### Инсталляция VirtualBox
 
-[Инсталляция VirtualBox](/linux/servers/virtual/virtualbox/installation/)
+[Инсталляция VirtualBox](/linux/servers/virtual/virtualbox/install/)
 
 
 <br/>

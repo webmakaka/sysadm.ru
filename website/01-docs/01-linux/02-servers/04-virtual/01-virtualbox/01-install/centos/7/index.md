@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция VirtualBox в командной строке в Centos / Oracle Linux
-permalink: /linux/servers/virtual/virtualbox/installation/centos/7/
+permalink: /linux/servers/virtual/virtualbox/install/centos/7/
 ---
 
 # Инсталляция VirtualBox в командной строке в Centos / Oracle Linux
@@ -35,7 +35,6 @@ permalink: /linux/servers/virtual/virtualbox/installation/centos/7/
 <br/>
 
     -- последняя версия в репо 5.2
-
     # yum install -y VirtualBox-5.2.x86_64
 
 

@@ -9,7 +9,7 @@ permalink: /linux/distributed-systems/hadoop/single-node-installation-on-centos-
 <br/>
 
 > Java должна быть установлена
-> http://javadev.org/java_basics/installation/jdk/8/linux/centos/6/x86_x64/
+> https://javadev.org/development-tools/jdk/9/installation/centos/7/
 
 
 
