@@ -30,6 +30,14 @@ P.S. На момент регистрации этого домена мной, 
 
 <br/>
 
+Хммммм...
+
+<br/>
+
+![Robotics Software Engineer](/img/robotics-software-engineer-nanodegree.jpg "Robotics Software Engineer"){: .center-image }
+
+<br/>
+
 **Для контактов:**
 
 email:  
