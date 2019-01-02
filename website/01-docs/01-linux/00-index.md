@@ -24,12 +24,6 @@ permalink: /linux/
 ### [Работа с железками в linux](/linux/hardware/)
 
 
-<br/>
-
-# Linux Networks:
-
-### [Linux Networks](/linux/networks/)
-
 
 <br/>
 

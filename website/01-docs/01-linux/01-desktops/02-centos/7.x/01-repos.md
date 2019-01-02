@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Публичные репозитории Centos 7
-permalink: /linux/desktops/centos/7/repos/
+permalink: /linux/desktops/centos/7.x/repos/
 ---
 
 <br/>

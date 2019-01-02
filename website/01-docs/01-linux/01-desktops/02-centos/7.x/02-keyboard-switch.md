@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Смена раскладка клавиатуры по Shift + ALT в Centos 7.x
-permalink: /linux/desktops/centos/7/keyboard-switch-by-shift-and-alt/
+permalink: /linux/desktops/centos/7.x/keyboard-switch-by-shift-and-alt/
 ---
 
 <br/>

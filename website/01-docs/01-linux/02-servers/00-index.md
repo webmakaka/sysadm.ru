@@ -6,6 +6,9 @@ permalink: /linux/servers/
 
 # Администрирование серверов:
 
+
+### [Networks](/linux/servers/networks/)
+
 ### [Web Servers](/linux/servers/webservers/)
 
 ### [Proxy Servers](/linux/servers/proxy/)

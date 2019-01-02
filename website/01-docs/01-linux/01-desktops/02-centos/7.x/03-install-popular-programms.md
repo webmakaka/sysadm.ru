@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция популярных программ в Centos 7.x
-permalink: /linux/desktops/centos/7/install-popular-programms/
+permalink: /linux/desktops/centos/7.x/install-popular-programms/
 ---
 
 
