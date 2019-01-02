@@ -13,3 +13,10 @@ permalink: /linux/desktops/ubuntu/network/
 ### [Соединение точка-точка (ad-hoc) по WiFi между Ubuntu Linux и Windows XP](/linux/desktops/ubuntu/network/ad-hoc/)
 
 ### [Информация по сетевому адаптеру](/linux/desktops/ubuntu/network/info/)
+
+
+<br/>
+
+## Wi-Fi
+
+### [TP-Link TL-WN823N отваливается сеть](/linux/desktops/ubuntu/network/wi-fi/tl-wn823n/)
