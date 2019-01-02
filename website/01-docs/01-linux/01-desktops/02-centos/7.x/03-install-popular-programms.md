@@ -37,7 +37,7 @@ permalink: /linux/desktops/centos/7.x/install-popular-programms/
 Нужны репо epel, rpmfusion.
 
 
-[Как добавить репо](/linux/desktops/centos/7/repos/)
+[Как добавить репо](/linux/desktops/centos/7.x/repos/)
 
 
 <br/>

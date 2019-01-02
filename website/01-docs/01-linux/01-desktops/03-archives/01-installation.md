@@ -36,7 +36,7 @@ permalink: /linux/desktops/archives/installation/
 
 ### 7zip
 
-Подключить репо <a href="/linux/desktops/centos/7/repos/">Epel</a>
+Подключить репо <a href="/linux/desktops/centos/7.x/repos/">Epel</a>
 
 <br/>
 
