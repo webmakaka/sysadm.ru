@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Docker в CentOS 7
-permalink: /linux/servers/containers/docker/installation/centos/7/
+permalink: /linux/servers/containers/docker/install/centos/7/
 ---
 
 # Инсталляция Docker в CentOS 7.3

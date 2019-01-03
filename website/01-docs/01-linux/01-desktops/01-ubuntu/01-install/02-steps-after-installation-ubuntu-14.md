@@ -245,4 +245,4 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 ### Дополнительное ПО
 
 [atom](/linux/desktops/code/editors/)  
-[chrome](/linux/desktops/ubuntu/chrome/)
+[chrome](/linux/desktops/ubuntu/browsers/chrome/)

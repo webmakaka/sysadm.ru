@@ -190,7 +190,7 @@ end
 
 ### На все виртуалки ставим docker
     
-<a href="/linux/servers/containers/docker/installation/ubuntu/">вот как</a>
+<a href="/linux/servers/containers/docker/install/ubuntu/">вот как</a>
     
     
     $ vagrant ssh manager1

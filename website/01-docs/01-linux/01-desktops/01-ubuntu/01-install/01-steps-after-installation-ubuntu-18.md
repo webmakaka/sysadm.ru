@@ -14,7 +14,42 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
     $ sudo su -
     # apt update && apt-get upgrade -y
 
-// ДОП ПО
+
+
+<br/>
+
+### Установка VSCODE
+
+
+    $ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+    $ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+    $ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
+
+    $ sudo apt-get install apt-transport-https
+    $ sudo apt-get update
+    $ sudo apt-get install code 
+
+    https://code.visualstudio.com/docs/setup/linux
+
+
+
+<br/>
+
+### Запуск sysadm.ru в редакторе vscode
+
+
+    # apt install -y git
+
+    $ mkdir ~/projects && cd ~/projects
+    $ git clone https://bitbucket.org/sysadm-ru/sysadm.ru
+    $ cd sysadm.ru
+    $ code .
+
+
+<br/>
+
+### Устанавливаем дополнительное ПО
 
     # apt install -y ubuntu-restricted-extras
 
@@ -42,7 +77,7 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
 
 <br/>
 
-### Смена раскладки клавиатуры по Alt + Shift (При необходимости)
+### Смена раскладки клавиатуры по Alt + Shift (При необходимости. В последнее время не нужно было.)
 
 Вот надо что-нибудь да испортить! По умолчанию, нужно выбрать комбинацию из 3х клваиш, чтобы сменить раскладку.
 
@@ -51,13 +86,14 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
 
 <br/>
 
-### System --> Settings --> Devices --> Keyboard
+### ПО CTRL + ALT + DELETE показывать текущие процессы
 
-    Убрать logout по CTRL + ALT + DELETE
+Applications --> System Tools --> Preferences --> Settings --> Devices --> Keyboard
 
-<br/>
+System --> Logout
 
-Logout - убираем 
+    Убрираем
+
 
 <br/>
 
@@ -75,16 +111,6 @@ Logout - убираем
 
 ![Отключить противный звук при ошибке в консоли](/img/linux/desktops/ubuntu/install/disable-sound-when-error-in-the-console.png "Отключить противный звук при ошибке в консоли"){: .center-image }
 
-
-
-<br/>
-
-### Автозапуск telegram
-
-System Tools --> Preferences --> Startup Applications
-
-
-![Автозапуск telegram](/img/linux/desktops/ubuntu/install/autostart-telegram.png "Автозапуск telegram"){: .center-image }
 
 
 <br/>
@@ -108,5 +134,36 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 ### Дополнительное ПО
 
-[chrome](/linux/desktops/ubuntu/chrome/)
-[atom](/linux/desktops/code/editors/)  
+[chrome](/linux/desktops/ubuntu/browsers/chrome/)  
+[Opera](/linux/desktops/ubuntu/browsers/opera/)  
+
+
+<br/>
+
+### Автозапуск telegram
+
+Applications --> System Tools --> Preferences --> Startup Applications
+
+<br/>
+
+Name: Telegram  
+Command: '/opt/telegram/Telegram -startintray'
+
+
+![Автозапуск telegram](/img/linux/desktops/ubuntu/install/autostart-telegram.png "Автозапуск telegram"){: .center-image }
+
+
+<br/>
+
+### Убрать автовыключение монитора
+
+Applications --> System Tools --> Preferences --> Settings --> Power
+
+Power Saving --> Blank screen --> Never
+
+
+<br/>
+
+### Еще дополнительне ПО
+
+    $ sudo apt install -y transmission whois

@@ -62,7 +62,7 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 ### Инсталляция Docker
 
-[Инсталляция Docker](/linux/servers/containers/docker/installation/)  
+[Инсталляция Docker](/linux/servers/containers/docker/install/)  
 
 [Инсталляция Docker-Compose (для совместной работы контейнеров)](/linux/servers/containers/docker/tools/docker-compose/)  
 

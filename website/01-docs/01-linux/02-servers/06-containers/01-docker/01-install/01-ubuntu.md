@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция и Upgrade Docker в Ubuntu 18.04.1 bionic64
-permalink: /linux/servers/containers/docker/installation/ubuntu/
+permalink: /linux/servers/containers/docker/install/ubuntu/
 ---
 
 
@@ -9,7 +9,7 @@ permalink: /linux/servers/containers/docker/installation/ubuntu/
 
 Делаю:  
 
-25.12.2018
+03.01.2019
 
 
 <br/>
@@ -74,7 +74,7 @@ https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
 
 <br/>
 
-### Изменить каталог по умолчанию для хранения контейнеров и имиджей
+### (При необходимости!) Изменить каталог по умолчанию для хранения контейнеров и имиджей
 
     # mkdir -p /mnt/dsk1/docker
     # chown -R <username> /mnt/dsk1/docker

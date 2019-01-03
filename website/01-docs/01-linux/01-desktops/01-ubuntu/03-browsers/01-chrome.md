@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Google Chrome в Ubuntu
-permalink: /linux/desktops/ubuntu/chrome/
+permalink: /linux/desktops/ubuntu/browsers/chrome/
 ---
 
 # Инсталляция Chrome в Ubuntu

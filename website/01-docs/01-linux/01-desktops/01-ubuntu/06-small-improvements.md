@@ -41,6 +41,7 @@ permalink: /linux/desktops/ubuntu/small-improvements/
 
 ### Не спрашивать каждый раз пароль при комаде с sudo
 
+    -- добавить при необходимости пользователя в группу sudo
     # sudo usermod -aG sudo <username>
 
     # vi /etc/sudoers
@@ -49,8 +50,10 @@ permalink: /linux/desktops/ubuntu/small-improvements/
 
 меняю на:
 
-    #%sudo   ALL=(ALL:ALL) ALL
-    %sudo   ALL=(ALL:ALL) NOPASSWD:ALL
+```shell
+#%sudo   ALL=(ALL:ALL) ALL
+%sudo   ALL=(ALL:ALL) NOPASSWD:ALL
+```    
 
 <!-- 
     root    ALL=(ALL:ALL) ALL

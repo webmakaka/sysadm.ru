@@ -11,9 +11,9 @@ permalink: /linux/desktops/ubuntu/
 
 ### [Шаги после инсталляции Ubuntu](/linux/desktops/ubuntu/install/)
 
-### [Инсталляция Libre Office](/linux/desktops/ubuntu/libreoffice/)
+### [Инсталляция браузера в Ubuntu](/linux/desktops/ubuntu/browsers/)
 
-### [Инсталляция Google Chrome](/linux/desktops/ubuntu/chrome/)
+### [Инсталляция Libre Office](/linux/desktops/ubuntu/libreoffice/)
 
 ### [Инсталляция ACE плеера в Ubuntu](/linux/desktops/ubuntu/ace-player-installation/)
 
