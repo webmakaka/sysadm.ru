@@ -27,6 +27,8 @@ permalink: /linux/desktops/ubuntu/
 
 ### [Мелкие улучшения](/linux/desktops/ubuntu/small-improvements/)
 
+### [Знакомство в ipfs](/linux/desktops/ubuntu/ipfs/)
+
 
 
 ### Сеть

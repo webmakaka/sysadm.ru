@@ -147,7 +147,7 @@ Applications --> System Tools --> Preferences --> Startup Applications
 <br/>
 
 Name: Telegram  
-Command: '/opt/telegram/Telegram -startintray'
+Command: /opt/telegram/Telegram -startintray
 
 
 ![Автозапуск telegram](/img/linux/desktops/ubuntu/install/autostart-telegram.png "Автозапуск telegram"){: .center-image }

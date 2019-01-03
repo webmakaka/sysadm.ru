@@ -36,3 +36,10 @@ https://adblockplus.org/
 
 Статья как лучше настроить (наерное устарела):  
 https://adblockplus.org/en/features#socialmedia
+
+
+<br/>
+
+### Отключить всплывающие уведомления 
+
+Edit --> Settings --> Advanced --> Content Settings --> Notifications --> Disable
