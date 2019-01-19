@@ -12,55 +12,126 @@ permalink: /linux/servers/containers/docker/lamp/
 
 </div>
 
-<br/><br/>
+**Делаю 19.01.2019**
 
-Коннектиться нужно к localhost.<br/>
-Пароли для подключения к базе в конфигах. <br/>
-База, если что назвается "db".<br/>
+    $ cd ~
+    $ mkdir linuxcommunity.ru
+    $ cd linuxcommunity.ru
+
+    $ git clone https://github.com/tkyk/docker-compose-lamp.git .
+
+
+    -- Наверное имеет смысл заменить в файле Dockerfile timezone
+
+        $ vi Dockerfile
+
+        date.timezone = Europe/Moscow
 
 <br/>
 
-    $ git clone https://github.com/tkyk/docker-compose-lamp.git    
-    $ cd docker-compose-lamp
-    
--- Наверное имеет смысл заменить в файле Dockerfile timezone
+    $ vi docker-compose.yml
 
-    $ vi Dockerfile
-        
-    date.timezone = Europe/Moscow
-    
+    Указать нужные port:
+
+      ports:
+    - "5001:80"
+
+    Указать нужные пароли:
+
+    MYSQL_ROOT_PASSWORD: phpapptest
+    MYSQL_DATABASE: phpapp
+
 <br/>
-    
+
+Впринципе, можно запустить и попробовать. Может вам не нужно устанавливать форум.
+
+<br/>
+
+## Устанавливаю форум punbb
+
+<br/>
+
+### Скачиваю punbb
+
+https://punbb.info/
+
+Копирую все скрипты из архива в каталог webroot. Также добавляю русский язык.
+
+    $ chmod 0777 ./webroot/img/avatars/
+    $ chmod 0777 ./webroot/cache/
+
+<br/>
+
+### Добавляю phpmyadmin
+
+Копирую phpmyadmin в webroot. Разумеется переименовываю каталог на phpmyadmin.
+
+    # cd ./phpmyadmin/
+    $ cp config.sample.inc.php config.inc.php
+    # chmod 644 -R config.inc.php
+
+    -- Прописать в качестве хоста db
+    $ vi config.inc.php
+
+    $cfg['Servers'][$i]['host'] = 'db';
+
+<br/>
+
+### Запуск
+
     $ docker-compose build
     $ docker-compose up -d
+
+    -- если потом нужно будет остановить
     $ docker-compose stop
+
+    -- или даже удалить
     $ docker-compose rm
 
 <br/>
 
-Пол часа потерять, чтобы потом за 5 минут запускать LAMP!
+Я сразу привязал домен и настроил его на хост. В ином случае, требуется подключаться к хосту по ip или dns имени.
 
 <br/>
 
-<div align="center">
-
-
-	<img src="http://img.ipev.ru/2018/06/27/Screenshot-from-2018-06-27-053342.png" border="0" alt="lamp server inside docker">
-
-
-</div>
+![lamp server inside docker](/img/linux/servers/containers/docker/lamp/docker-lamp-1.png "lamp server inside docker"){: .center-image }
 
 <br/>
 
-### Чтобы еще работал phpmyadmin
+![lamp server inside docker](/img/linux/servers/containers/docker/lamp/docker-lamp-2.png "lamp server inside docker"){: .center-image }
 
+<br/>
 
-    # cd /tmp/docker-compose-lamp/webroot/phpmyadmin/
-    $ cp config.sample.inc.php config.inc.php 
-    # chmod 644 -R  /tmp/docker-compose-lamp/webroot/phpmyadmin/config.inc.php
-    
-    
-    -- Прописать в качестве хоста db
-    $ vi config.inc.php 
-    
-    $cfg['Servers'][$i]['host'] = 'db';
+### Улучшения
+
+linuxcommunity.ru/webroot/style/Oxygen/oxygen.min.css
+
+```css
+.brd {
+    padding: 1em 2em;
+    margin: 0 auto;
+    max-width: 1100px;
+    min-width: 700px;
+    width: 90%;
+}
+```
+
+Меняю max-width
+
+```css
+.brd {
+    padding: 1em 2em;
+    margin: 0 auto;
+    max-width: 2460px;
+    min-width: 700px;
+    width: 96%;
+}
+```
+
+<br/>
+
+### Борьба со спамом
+
+Копирую fancy_stop_spam в каталог linuxcommunity.ru/webroot/extensions
+
+Administratoin --> Extensins --> Install
