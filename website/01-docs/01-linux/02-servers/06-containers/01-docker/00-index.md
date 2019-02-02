@@ -106,8 +106,11 @@ https://docs.docker.com/engine/userguide/networking/
 
 ### Работа с официальными и не только контейнерами
 
-[Lamp Server](/linux/servers/containers/docker/lamp/)  
+[Lamp Server](/linux/servers/containers/docker/lamp/)
+
 [Работа с официальным mysql Docker контейнером](/linux/servers/containers/docker/official/containers/mysql/)
+
+[YouTube: Quick Wordpress Setup With Docker](https://www.youtube.com/watch?v=pYhLEV-sRpY)
 
 <br/>
 

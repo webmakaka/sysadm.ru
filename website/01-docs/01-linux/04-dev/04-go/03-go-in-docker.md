@@ -6,16 +6,13 @@ permalink: /linux/dev/go/go-in-docker/
 
 # Запуск GO программ в контейнере Docker
 
-
-
     $ cd /tmp/
-    $ vi Dockerfile
-    
+
     $ git clone https://bitbucket.org/marley-golang/hw1_tree/
     $ cd hw1_tree/
 
     $ docker build -t mailgo_hw1 .
-    
+
 <br/>
     
 Можно заменить команду в Dockerfile на:
