@@ -6,27 +6,23 @@ permalink: /linux/desktops/ubuntu/ace-player-installation/
 
 # Инсталляция ACE плеера в Ubuntu
 
-
 <br/>
 
 ### Инсталляция ACE плеера в Ubuntu 16.04 / 18.04.1
 
-
 Делаю!  
-19.08.2018
+13.02.2019
 
     $ sudo snap install acestreamplayer
     $ acestreamplayer
 
-На вопрос о возрасте, я указал, что мне меньше 13 лет и рекламу всякого УГ (Уткина Г...) мне не стали показывать.
+На вопрос о возрасте, я указал, что мне меньше 13 лет и рекламу всякого УГ мне вроде стали показывать меньше.
 
 ![Установка Ace плеера в Ubuntu 18.04.1](/img/linux/desktops/ubuntu/ace-player-installation/ace-18-04.png "Установка Ace плеера в Ubuntu 18.04.1"){: .center-image }
-
 
 <br/>
 
 https://snapcraft.io/acestreamplayer
-
 
 <br/>
 
@@ -59,7 +55,6 @@ https://snapcraft.io/acestreamplayer
 
 <br/>
 
-
 ![Установка Ace плеера в Ubuntu](/img/linux/desktops/ubuntu/ace-player-installation/ace-01.png "Установка Ace плеера в Ubuntu"){: .center-image }
 
 ![Установка Ace плеера в Ubuntu](/img/linux/desktops/ubuntu/ace-player-installation/ace-02.png "Установка Ace плеера в Ubuntu"){: .center-image }
@@ -70,6 +65,6 @@ https://snapcraft.io/acestreamplayer
 
 ### Ссылки на трансляции футбола (Sopcast, Ace Stream):
 
-- livesport(.)ws
-- sopsport(.)org
-- football-russia(.)tv
+-   livesport(.)ws
+-   sopsport(.)org
+-   football-russia(.)tv

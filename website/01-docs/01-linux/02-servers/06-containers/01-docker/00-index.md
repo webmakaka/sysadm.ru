@@ -112,6 +112,8 @@ https://docs.docker.com/engine/userguide/networking/
 
 [YouTube: Quick Wordpress Setup With Docker](https://www.youtube.com/watch?v=pYhLEV-sRpY)
 
+[docker-django](https://github.com/ruddra/docker-django)
+
 <br/>
 
 ### Информация о запущенных контейнерах
