@@ -4,6 +4,6 @@ title: Cloud
 permalink: /linux/clouds/
 ---
 
-### [Heroku](/linux/clouds/heroku/)  
+### [Heroku clouds](/linux/clouds/heroku/)
 
 ### [Amazon Web Services (AWS)](/linux/clouds/aws/)

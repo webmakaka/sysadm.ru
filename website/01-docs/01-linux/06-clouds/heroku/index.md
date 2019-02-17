@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Heroku Centos 6.X
+title: Heroku clouds
 permalink: /linux/clouds/heroku/
 ---
 
-# Heroku Centos 6.X
+# Heroku clouds
+
+### Установка клиента Heroku в Centos 6.X
 
 Создал аккаунт на сайте heroku.com
-
 
 Далее на centos инсталлирую по для работы с heroku
 
@@ -18,7 +19,7 @@ permalink: /linux/clouds/heroku/
 
     # su - developer
 
-<br/>  
+<br/>
 
     $ vi ~/.bash_profile
 
@@ -31,12 +32,13 @@ permalink: /linux/clouds/heroku/
 
     #### HEROKU ##############################
 
-
 <br/>
-
 
     $ source ~/.bash_profile
 
+<br/>
+
+### Запуск node.js приложения в heroku
 
 Подготовка приложения.
 
@@ -47,23 +49,6 @@ permalink: /linux/clouds/heroku/
 
     $ heroku login
     $ heroku apps:create marley-org
-
-
-<!--
-
-heroku apps:create marley-org
-
-
-mkdir example
-
-cd example
-
-git init
-
-heroku apps:create example
-
-
--->
 
     $ git remote -v
     heroku	https://git.heroku.com/marley-org.git (fetch)
@@ -96,14 +81,11 @@ heroku apps:create example
     // в моем случае это
     https://marley-org.herokuapp.com/
 
-
-
 <br/>
 
 ### Добавление домена на хостинг heroku
 
-**Теперь, чтобы привязать домен к аккаунту требуется предоставить данные с редитки. Раньше можно было и без**
-
+**Теперь, чтобы привязать домен к аккаунту требуется предоставить данные с кредитки. Раньше можно было и без**
 
 После того, как Heroku получил мою карточку. Он стал клянчить деньги. Говорит, мол ресурс стал популярным. Но я то знаю, что это не совсем так, или даже совсем не так.
 
@@ -123,12 +105,10 @@ heroku apps:create example
     // В админке управления доменом:
     CNAME marley.org marley-org.herokuapp.com
 
-
 Troubleshooting
 
         heroku logs
         heroku restart
-
 
 <br/>
 
@@ -146,8 +126,6 @@ Troubleshooting
 
     $ heroku git:clone -a marley-org
 
-
-
 <br/>
 
 ### После долгой паузы, понадобилось подключиться и обновить node.js приложение в Heroku
@@ -160,16 +138,13 @@ Troubleshooting
     === My Apps
     marley-org
 
-
 <br/>
 
     $ cd ./marley.org
 
 <br/>
 
-
     $ heroku config:set --app marley-org
-
 
 <br/>
 
@@ -186,3 +161,14 @@ Troubleshooting
 <br/>
 
     $ heroku ps:scale web=1
+
+<br/>
+
+### Создать бесплатную (урезанную) базу PostgreSQL в heroku в командной строке linux
+
+    $ heroku login
+    $ heroku create my_unique_app_name
+    $ heroku addons:create heroku-postgresql:hobby-dev --app my_unique_app_name
+
+    // Получить строку подключения к базе
+    $ heroku config --app my_unique_app_name
