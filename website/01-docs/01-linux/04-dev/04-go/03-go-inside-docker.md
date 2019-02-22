@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Запуск GO программ в контейнере Docker
-permalink: /linux/dev/go/go-in-docker/
+permalink: /linux/dev/go/go-inside-docker/
 ---
 
 # Запуск GO программ в контейнере Docker

@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Инсталляция Libre Office в Ubuntu
+title: Инсталляция Libre Office в Ubuntu 18.04
 permalink: /linux/desktops/ubuntu/libreoffice/
 ---
 
-# Инсталляция Libre Office в Ubuntu
+# Инсталляция Libre Office в Ubuntu 18.04
 
 Делаю!  
-14.08.2018
+19.02.2019
 
 Понадобилось переустановить Libre Office
 
@@ -23,8 +23,9 @@ permalink: /linux/desktops/ubuntu/libreoffice/
 
 <br/>
 
-    tar -xvzf LibreOffice_5.0.0_Linux_x86_deb.tar.gz
-    cd LibreOffice_5.0.0.5_Linux_x86_deb/DEBS/
-    dpkg -i *.deb
+    $ cd ~/Downloads/
+    $ tar -xvzf LibreOffice_6.2.0_Linux_x86-64_deb.tar.gz
+    $ cd LibreOffice_6.2.0.3_Linux_x86-64_deb/DEBS
+    $ sudo dpkg -i *.deb
 
 https://ask.libreoffice.org/en/question/56236/how-may-i-install-libreoffice-targz-file/

@@ -172,3 +172,6 @@ Troubleshooting
 
     // Получить строку подключения к базе
     $ heroku config --app my_unique_app_name
+
+    // Подключиться к базе с помощью psql
+    $ heroku pg:plsql --app my_unique_app_name
