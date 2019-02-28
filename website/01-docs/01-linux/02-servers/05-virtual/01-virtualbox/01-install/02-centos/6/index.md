@@ -63,7 +63,6 @@ permalink: /linux/servers/virtual/virtualbox/install/centos/6/
     Usable:       true
     Why unusable:
 
-
 <br/>
 
     # useradd -m vmadm
@@ -76,12 +75,9 @@ permalink: /linux/servers/virtual/virtualbox/install/centos/6/
 
     # usermod -G vboxusers vmadm
 
-
-
 <br/>
 
 ### Запрет входа root по SSH
-
 
     # cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bkp
 
@@ -100,7 +96,6 @@ permalink: /linux/servers/virtual/virtualbox/install/centos/6/
 <br/>
 
     # service sshd restart
-
 
 <br/>
 
@@ -126,7 +121,6 @@ permalink: /linux/servers/virtual/virtualbox/install/centos/6/
 
     ############################################
 
-
 Применить новые параметры:
 
     $ source ~/.bash_profile
@@ -137,5 +131,77 @@ permalink: /linux/servers/virtual/virtualbox/install/centos/6/
     $ mkdir -p ${VM_BACKUPS}
     $ mkdir -p ${VM_ISO}
 
-
 Далее создаем виртуальную машину
+
+<br/>
+
+# Инсталляция Guest Additions в командной строке в Centos x64
+
+Пакет Guest Additions как минимум нужен для того, чтобы мышка по экрану нормально перемещалась, работала copy+paste и может быть что-то еще. Нужно ли устанавливать guest additions, если предстоит работать только в командной строке, наверное нет.
+
+Installation guide
+
+http://www.virtualbox.org/manual/ch04.html#idp11277648
+
+<br/>
+
+### Centos x64
+
+    # wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+
+    # rpm -ivh rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+
+    # yum install -y p7zip
+
+    # 7za x ./VBoxGuestAdditions_5.0.10.iso -o./VBoxGuestAdditions_5.0.10/
+
+    # cd VBoxGuestAdditions_5.2.0/
+
+    # chmod +x ./VBoxLinuxAdditions.run
+
+    # ./VBoxLinuxAdditions.run
+
+    # reboot
+
+На клиенте, после инсталляции guest additions можно выполнить команды:
+
+    $ VBoxClient
+
+    Options:
+
+      --clipboard            start the shared clipboard service
+      --draganddrop          start the drag and drop service
+      --display              start the display management service
+      --checkhostversion start the host version notifier service
+      --seamless             start the seamless windows service
+      -d, --nodaemon         continue running as a system service
+
+Буфер обмена постоянно перестает работать.
+
+К сожалению, мне пока не удалось найти решения, которое позволило бы полностью побороть данную проблему.
+
+Как вариант,
+
+// Найти процесс clipboard
+
+    $ ps -Af | grep VBoxClient
+
+// кильнуть его по -9
+
+    $ kill -9
+
+// Стартовать его заново
+
+    $ VBoxClient --clipboard
+
+Или попробовать использовать команды:
+
+    $ killall VBoxClient
+
+    $ VBoxClient-all
+
+Если гостевая машина windows, можно попробовать убить процесс VBoxTray.exe
+
+// Investigating shared clipboard problems on X11 guests or hosts
+
+https://www.virtualbox.org/wiki/X11Clipboard

@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Kuberneters ошибки
-permalink: /linux/servers/containers/kubernetes/localhost/errors/
+title: Возникавшие ошибки при работе с VirtualBox
+permalink: /linux/servers/virtual/virtualbox/errors/
 ---
 
-# Kuberneters ошибки
+# Возникавшие ошибки при работе с VirtualBox
 
 <br/>
 
@@ -27,7 +27,6 @@ To opt out of these messages, run the command:
 	minikube config set WantReportErrorPrompt false
 ================================================================================
 ```
-
 
 <br/>
 

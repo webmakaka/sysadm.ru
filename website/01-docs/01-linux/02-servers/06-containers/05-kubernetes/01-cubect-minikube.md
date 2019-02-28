@@ -6,9 +6,7 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
 
 # Какие-то попытки разобраться с cubectl и minikube
 
-
-[Инсталляция cubectl и minikube](/linux/servers/containers/kubernetes/localhost/cubect-minikube-installation/) 
-
+[Инсталляция cubectl и minikube](/linux/servers/containers/kubernetes/minikube/cubect-minikube-installation/)
 
 <br/>
     
@@ -27,10 +25,10 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
 
     $ kubectl cluster-info
     Kubernetes master is running at https://192.168.99.101:8443
-    
+
     -- если есть желание подключиться к Kubernetes Dashboard
     $ kubectl proxy
-    
+
     -- Можно коннектиться
     http://127.0.0.1:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard:/proxy/#!/overview?namespace=default
 
@@ -117,27 +115,25 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
         "/version"
       ]
 
-
       -- Get the token
       $ TOKEN=$(kubectl describe secret $(kubectl get secrets | grep default | cut -f1 -d ' ') | grep -E '^token' | cut -f2 -d':' | tr -d '\t' | tr -d " ")
-      
+
       $ echo $TOKEN
-      
+
       -- get the API server endpoint
       $ APISERVER=$(kubectl config view | grep https | cut -f 2- -d ":" | tr -d " ")
-      
-      
+
+
       $ echo $APISERVER
-      
+
       $ curl $APISERVER --header "Authorization: Bearer $TOKEN" --insecure
 
 <br/>
 
 ### Запуск контейренов
 
-    
     $ kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080
-    
+
 
     $ kubectl expose deployment hello-minikube --type=NodePort
 
@@ -145,19 +141,18 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
     $ kubectl get pod
     NAME                              READY     STATUS    RESTARTS   AGE
     hello-minikube-64698d6ccf-t4t97   1/1       Running   0          7m
-    
-    
+
+
     $ kubectl get deployments
-    
+
     $ kubectl get replicasets
-    
-    
+
+
     $ kubectl describe pod  hello-minikube-64698d6ccf-t4t97
-    
+
     $  kubectl get nodes
     NAME       STATUS    ROLES     AGE       VERSION
     minikube   Ready     <none>    5d        v1.9.4
-
 
 <br/>
 
@@ -189,12 +184,10 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
     BODY:
     -no body in request-
 
-
 <br/>
 
     $ minikube stop
     $ minikube delete
-
 
 <br/>
 
@@ -209,7 +202,7 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
 <br/>
 
     $ vi webserver.yaml
-    
+
 <br/>
     
     apiVersion: apps/v1
@@ -234,7 +227,6 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
             ports:
             - containerPort: 80
 
-
 <br/>
 
     $ kubectl create -f webserver.yaml
@@ -245,7 +237,7 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
     $ kubectl get replicasets
     NAME                  DESIRED   CURRENT   READY     AGE
     webserver-b477df957   3         3         1         <invalid>
-    
+
 <br/>
     
     $ kubectl get pods
@@ -257,7 +249,7 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
 <br/>
 
     $ vi webserver-svc.yaml
-    
+
 <br/>
     
     apiVersion: v1
@@ -272,8 +264,7 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
       - port: 80
         protocol: TCP
       selector:
-        app: nginx 
-
+        app: nginx
 
 <br/>
 
@@ -318,19 +309,15 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
 
     $ minikube service web-service
 
-
 <br/>
 
-### ConfigMaps and Secrets  
-
+### ConfigMaps and Secrets
 
 https://www.youtube.com/watch?v=UpPnmvHwsjA
-
 
 <br/>
 
 ### Create the ConfigMap
-
 
     $ kubectl create configmap my-config --from-literal=key1=value1 --from-literal=key2=value2
 
@@ -352,9 +339,9 @@ https://www.youtube.com/watch?v=UpPnmvHwsjA
 <br/>
 
     $ kubectl create -f customer1-configmap.yaml
-    
+
     $ kubectl get configmaps customer1 -o yaml
-    
+
     $ kubectl describe configmap customer1
     Name:         customer1
     Namespace:    default
@@ -374,11 +361,9 @@ https://www.youtube.com/watch?v=UpPnmvHwsjA
     Customer1_Company
     Events:  <none>
 
-
 <br/>
 
 ### Secrets
-
 
     $ kubectl create secret generic my-password --from-literal=password=mysqlpassword
 
@@ -387,18 +372,17 @@ https://www.youtube.com/watch?v=UpPnmvHwsjA
     NAME          TYPE      DATA      AGE
     my-password   Opaque    1         <invalid>
 
-
 <br/>
 
 ### Create a Secret Manually
 
     $ echo mysqlpassword | base64
     bXlzcWxwYXNzd29yZAo=
-    
+
     $ echo -n "bXlzcWxwYXNzd29yZAo=" | base64 --decode
 
     $ vi ./secret.yaml
-    
+
     apiVersion: v1
     kind: Secret
     metadata:
@@ -407,12 +391,10 @@ https://www.youtube.com/watch?v=UpPnmvHwsjA
     data:
         username: YWRtaW4=
         password: cEAxODg3MXcwcmQ=
-    
 
 <br/>
 
     $ kubectl create -f ./secret.yaml
-    
 
 <br/>
 
@@ -422,12 +404,11 @@ https://www.youtube.com/watch?v=UpPnmvHwsjA
     default-token-7c5ss   kubernetes.io/service-account-token   3         3h
     mysecret              Opaque                                2         <invalid>
 
-
 <br/>
 
     // если нужно удалить
     $ kubectl delete secret db-user-pass
-    
+
 <br/>
         
     $ kubectl describe secrets/db-user-pass
@@ -443,8 +424,6 @@ https://www.youtube.com/watch?v=UpPnmvHwsjA
     username.txt:  5 bytes
     password.txt:  11 bytes
 
-
-
 <br/>
 
 ### Secrets from file
@@ -455,27 +434,22 @@ https://www.youtube.com/watch?v=UpPnmvHwsjA
     $ kubectl create secret generic db-user-pass --from-file=./username.txt --from-file=./password.txt
     secret "db-user-pass" created
 
-
 <br/>
 
-### Ingress  
+### Ingress
 
-https://www.youtube.com/watch?v=Blmw3kTSHCs  
-
+https://www.youtube.com/watch?v=Blmw3kTSHCs
 
 Ingress, which is another method we can use to access our applications from the external world
 
-
 With Ingress, users don't connect directly to a Service. Users reach the Ingress endpoint, and, from there, the request is forwarded to the respective Service.
-
 
 <br/>
 
     $ minikube addons enable ingress
-    
+
     $ vi webserver-ingress.yaml
-    
-    
+
 <br/>
     
     apiVersion: extensions/v1beta1
@@ -507,9 +481,8 @@ With Ingress, users don't connect directly to a Service. Users reach the Ingress
     $ cat /etc/hosts
     127.0.0.1        localhost
     ::1              localhost
-    192.168.99.100   blue.example.com green.example.com 
-    
-    
+    192.168.99.100   blue.example.com green.example.com
+
 <br/>
 
     $ kubectl describe ingress web-ingress

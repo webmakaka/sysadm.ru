@@ -20,7 +20,7 @@ Offtopic:
 
 ### Инсталляция VirtualBox 5.X
 
-[Инсталляция VirtualBox 5.X в командной строке в Ubuntu 18](/linux/servers/virtual/virtualbox/install/ubuntu/18.04/)
+[Инсталляция VirtualBox 6.X в командной строке в Ubuntu 18](/linux/servers/virtual/virtualbox/install/ubuntu/18.04/)
 
 [Инсталляция VirtualBox 5.X в командной строке в Ubuntu 14](/linux/servers/virtual/virtualbox/install/ubuntu/14.04/)
 

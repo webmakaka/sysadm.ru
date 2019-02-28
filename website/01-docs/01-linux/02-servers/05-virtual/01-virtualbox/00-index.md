@@ -16,17 +16,9 @@ Offtopic:
 
 [Основные команды](/linux/servers/virtual/virtualbox/commands/)
 
-
 ### Инсталляция VirtualBox
 
 [Инсталляция VirtualBox](/linux/servers/virtual/virtualbox/install/)
-
-
-<br/>
-
-### Обновление VirtualBox в Ubuntu
-
-[Обновление VirtualBox в Ubuntu](/linux/servers/virtual/virtualbox/update/ubuntu/14.04/)
 
 <br/>
 
@@ -41,16 +33,6 @@ Offtopic:
 [Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux](/linux/servers/virtual/virtualbox/vm/centos-6/) Nat + HostOnly Network
 
 [Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux](/linux/servers/virtual/virtualbox/vm/oracle-linux-6/) Bridget Network
-
-
-
-<br/>
-
-### Инсталляция Guest Additions
-
--- нужно будет перенести в установку
-[Инсталляция Guest Additions в командной строке Centos](/linux/servers/virtual/virtualbox/guest-additions-installation-in-command-line/)
-
 
 <br/>
 
@@ -68,13 +50,11 @@ Offtopic:
 
 [Конвертировать wmdk в vdi](/linux/servers/virtual/virtualbox/convert-vmdk-vdi/)
 
-
 <br/>
 
 ### Настрока сетевых интерфейсов:
 
 [Настрока сетевых интерфейсов](/linux/servers/virtual/virtualbox/network/)
-
 
 <br/>
 
@@ -82,9 +62,14 @@ Offtopic:
 
 [Подключение USB устройств](/linux/servers/virtual/virtualbox/usb/)
 
-
 <br/>
 
 ### Подготовленные образы VirtualBox с Linux
 
 <a href="http://www.osboxes.org/virtualbox-images/" rel="nofollow">osboxes</a>
+
+<br/>
+
+### Возникавшие ошибки при работе с VirtualBox
+
+<a href="/linux/servers/virtual/virtualbox/errors/" rel="nofollow">osboxes</a>
