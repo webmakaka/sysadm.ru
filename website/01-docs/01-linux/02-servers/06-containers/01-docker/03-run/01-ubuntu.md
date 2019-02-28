@@ -1,37 +1,30 @@
 ---
 layout: page
-title: Запуск Ubuntu Docker контейнера
+title: Пример запуска прилоения в Docker одной командой
 permalink: /linux/servers/containers/docker/run/
 ---
 
-# Запуск Ubuntu Docker контейнера
-
-
-    $ docker run -i -t ubuntu:latest /bin/bash
-
-Если это будет webserver, то команда может быть следующей, чтобы можно было при обращении к порту 80 локалхоста подключаться к порту 8080 контейнера
-
-    $ docker run -i -t -p 80:8080 ubuntu:latest  /bin/bash
+# Пример запуска прилоения в Docker одной командой
 
 <br/>
 
-    # apt-get update
+### Запустить приложение с котиками одной командой
 
+**Само приложение:**
 
-// Для работы лично мне нужно поставить
-
-    # apt-get install -y vim git wget curl iputils-ping net-tools
-
-# Если предстоит что-то компилить
-
-    # apt-get install -y build-essential
-
+https://github.com/marley-nodejs/voting-game
 
 <br/>
 
-### Стартовать контейнер для разработки
+**Команда для запуска:**
 
-// Разрабатывать на хостовой, запускать в контейнере
-// Каталог на /home/marley/go будет тем же самым, что и /project внутри контейнера
+Docker должен быть установлен!!!
 
-    $ docker run -i -t --name dev -v /home/marley/go:/project ubuntu:latest  /bin/bash
+    $ docker run -it \
+    -p 80:8080 \
+    --name nodejs-voting-game \
+    marley/nodejs-voting-game
+
+<br/>
+
+http://localhost

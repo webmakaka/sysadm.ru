@@ -44,6 +44,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/run-application/
     kubectl run --generator=run/v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
     replicationcontroller/nodejs-voting-game created
 
+<br/>
 
     $ kubectl get pods
     NAME                       READY   STATUS    RESTARTS   AGE
@@ -55,8 +56,11 @@ permalink: /linux/servers/containers/kubernetes/minikube/run-application/
 
 rc - replicationcontroller
 
+<br/>
+
     $ kubectl expose rc nodejs-voting-game --type=LoadBalancer --name nodejs-voting-game-load-balancer
 
+<br/>
 
     // Можно не ждать External-IP. На minikube он не появится
     $ kubectl get services
@@ -64,10 +68,12 @@ rc - replicationcontroller
     kubernetes                         ClusterIP      10.96.0.1      <none>        443/TCP          104s
     nodejs-voting-game-load-balancer   LoadBalancer   10.96.51.251   <pending>     8080:30748/TCP   8s
 
-
+<br/>
 
     $ minikube ip
     192.168.99.102
+
+<br/>
 
     $ echo $(minikube service nodejs-voting-game-load-balancer --url)
     http://192.168.99.102:30748
@@ -118,7 +124,7 @@ rc - replicationcontroller
 
 <br/>
 
-### Пока котики, нам будет вас не хватать %(
+### Пока котики, нам будет вас не хватать :(
 
     $ minikube stop
     $ minikube delete

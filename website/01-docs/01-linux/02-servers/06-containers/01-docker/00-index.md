@@ -41,9 +41,9 @@ https://hub.docker.com/explore/
 https://hub.docker.com  
 https://quay.io
 
-На hub.docker.com можно делать автоматически генерируемые контейнеры. Для этого необходимо указать где сервису взять Dockerfile. Например на github или bitbucket. При изменении файла, собирается заново. Вот пример моего контейнера, https://hub.docker.com/r/marley/nodejs/builds/ - автоматически собирается при обновлении контейнера от официального поставщика контейнеров в node.js.
+На hub.docker.com можно делать автоматически собираемые image. Для этого необходимо указать сервису проект с Dockerfile. При внесении изменений в проект, image собирается заново.
 
-Можно создать свой Registry:
+**Можно также создать свой Registry:**
 
 https://docs.docker.com/registry/  
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
@@ -56,6 +56,8 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 [Инсталляция Docker-Compose (для совместной работы контейнеров)](/linux/servers/containers/docker/tools/docker-compose/)
 
+[Пример запуска прилоения в Docker одной командой](/linux/servers/containers/docker/run/)
+
 <br/>
 
 ### Базовые вещи
@@ -66,16 +68,9 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-
 
 <br/>
 
-### Запуск Docker контейнера
-
-[Запуск Ubuntu Docker контейнера](/linux/servers/containers/docker/run/)  
-[Пример запуска веб проекта в контейнерах Docker](https://github.com/marley-nodejs/Projects-in-Docker)
-
-<br/>
-
 ### Docker Tools
 
-[Docker Machine (для запуска контейнеров в virtualbox, обычно в windows)](/linux/servers/containers/docker/docker-machine/)
+[Docker Machine (для запуска контейнеров в virtualbox, обычно в windows или mac)](/linux/servers/containers/docker/docker-machine/)
 
 <br/>
 
@@ -105,6 +100,8 @@ https://docs.docker.com/engine/userguide/networking/
 <br/>
 
 ### Работа с официальными и не только контейнерами
+
+[Пример запуска веб проекта в контейнерах Docker](https://github.com/marley-nodejs/Projects-in-Docker)
 
 [Lamp Server](/linux/servers/containers/docker/lamp/)
 
