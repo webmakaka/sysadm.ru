@@ -4,14 +4,11 @@ title: Контейнеры в Linux
 permalink: /linux/servers/containers/
 ---
 
-
 # Контейнеры в Linux
-
 
 <br/>
 
 ### Контейнеры
-
 
 ### [Docker](/linux/servers/containers/docker/)
 
@@ -21,9 +18,8 @@ permalink: /linux/servers/containers/
 
 ### Containerd
 
-
 <br/>
 
-### Kubernetes
+### Управление контейнерами
 
-[Начинаем разбираться](/linux/servers/containers/kubernetes/)
+[Kubernetes](/linux/servers/containers/kubernetes/)
