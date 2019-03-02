@@ -41,6 +41,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/run-application/
 
     // Делал с ключом run-pod, были какие-то проблемы
     $ kubectl run nodejs-voting-game --image=marley/nodejs-voting-game --port=8080 --generator=run/v1
+
     kubectl run --generator=run/v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
     replicationcontroller/nodejs-voting-game created
 
@@ -126,11 +127,14 @@ rc - replicationcontroller
 
 ### Пока котики, нам будет вас не хватать :(
 
+<!--
     // Удалить все модули, службы и контроллер репликации. Секреты не удалятся.
     $ kubectl delete all --all
 
     // Удалить все созданные модули (Контроллер репликации будет поднимать модуль из-за команды run/v1)
     $ kubectl delete po --all
+
+-->
 
     $ minikube stop
 

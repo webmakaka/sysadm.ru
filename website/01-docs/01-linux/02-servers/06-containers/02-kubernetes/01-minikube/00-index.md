@@ -21,3 +21,5 @@ permalink: /linux/servers/containers/kubernetes/minikube/
 [Инсталляция cubectl и minikube в ubuntu 18.04](/linux/servers/containers/kubernetes/minikube/cubect-minikube-installation/)
 
 [Запуск приложения в minikube](/linux/servers/containers/kubernetes/minikube/run-application/)
+
+[Предоставление внешним клиентам доступа к службам](/linux/servers/containers/kubernetes/minikube/svc/)

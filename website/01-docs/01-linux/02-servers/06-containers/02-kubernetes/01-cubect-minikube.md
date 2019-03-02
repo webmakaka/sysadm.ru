@@ -197,6 +197,8 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
     NAME             DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
     hello-minikube   1         1         1            1           8d
 
+<br/>
+
     $ kubectl delete deployments hello-minikube
 
 <br/>
