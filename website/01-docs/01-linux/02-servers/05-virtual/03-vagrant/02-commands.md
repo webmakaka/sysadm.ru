@@ -4,9 +4,7 @@ title: Команды Vagrant
 permalink: /linux/servers/virtual/vagrant/commands/
 ---
 
-
 # Команды Vagrant
-
 
 <br/>
 
@@ -15,10 +13,9 @@ permalink: /linux/servers/virtual/vagrant/commands/
 Подготовленные виртуальные машины:  
 https://app.vagrantup.com/boxes/search
 
-
 <br/>
 
-Vagrant копирует виртуальные машины с следующие директории. 
+Vagrant копирует виртуальные машины с следующие директории.
 
 <br/>
 
@@ -32,15 +29,12 @@ Vagrant копирует виртуальные машины с следующи
     coreos-stable                    ubuntu-VAGRANTSLASH-xenial64
     debian-VAGRANTSLASH-jessie64     v0rtex-VAGRANTSLASH-xenial64
 
-
 <br/>
-
 
 Если версия обновляется, то в каталогах присутствуют разные версии. Может занимать много места.
 
-
     $ cd ubuntu-VAGRANTSLASH-trusty64
-    
+
     $ ls
     20161214.0.0  20170208.0.0  metadata_url
 
@@ -60,13 +54,13 @@ Vagrant копирует виртуальные машины с следующи
 
     // Подключиться
     $ vagrant ssh
-    
+
     // приостановить
     $ vagrant suspend
 
     // остановить
     $ vagrant halt
-    
+
     // продолжить
     $ vagrant resume
 
@@ -93,11 +87,9 @@ Vagrant копирует виртуальные машины с следующи
     ubuntu/xenial64     (virtualbox, 20161213.0.0)
     ubuntu/xenial64     (virtualbox, 20170209.0.0)
 
-
 <br/>
 
 ### Ошибка
-
 
     $ vagrant ssh core-01 -- -A
     A Vagrant environment or target machine is required to run this
@@ -106,15 +98,14 @@ Vagrant копирует виртуальные машины с следующи
     this command on. A final option is to change to a directory with a
     Vagrantfile and to try again.
 
-
 <br/>
 
     $ vagrant global-status
-    id       name    provider   state   directory                           
+    id       name    provider   state   directory
     ------------------------------------------------------------------------
-    d2681b6  core-01 virtualbox running /home/marley/coreos-vagrant         
-    bf4323b  core-02 virtualbox running /home/marley/coreos-vagrant         
-    1151104  core-03 virtualbox running /home/marley/coreos-vagrant         
+    d2681b6  core-01 virtualbox running /home/marley/coreos-vagrant
+    bf4323b  core-02 virtualbox running /home/marley/coreos-vagrant
+    1151104  core-03 virtualbox running /home/marley/coreos-vagrant
 
     The above shows information about all known Vagrant environments
     on this machine. This data is cached and may not be completely
@@ -133,9 +124,7 @@ Vagrant копирует виртуальные машины с следующи
       todo-sk@1.service
       todo@1.service
 
-
-
-<br/>      
+<br/>
 
 ### Еще команды:
 
@@ -185,11 +174,9 @@ Vagrant копирует виртуальные машины с следующи
         LogLevel FATAL
         ForwardAgent yes
 
-
  <br/>
 
-
-  // Чтобы можно было по ssh ходить между узлами без пароля
+// Чтобы можно было по ssh ходить между узлами без пароля
 
     $ ssh-add ~/.vagrant.d/insecure_private_key
     Identity added: /home/marley/.vagrant.d/insecure_private_key (/home/marley/.vagrant.d/insecure_private_key)
@@ -198,10 +185,9 @@ Vagrant копирует виртуальные машины с следующи
 
     $ ssh core-01 -p 2222 -i ~/.vagrant.d/insecure_private_key
 
-
 <br/>
 
-      $ ssh core-01
+    $ ssh core-01
 
 <!--
 

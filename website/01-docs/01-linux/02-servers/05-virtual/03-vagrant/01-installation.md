@@ -6,7 +6,7 @@ permalink: /linux/servers/virtual/vagrant/installation/ubuntu/
 
 # Инсталляция Vargant в Ubuntu 18.04
 
-Делаю
+Делаю  
 02.03.2019
 
 <br/>

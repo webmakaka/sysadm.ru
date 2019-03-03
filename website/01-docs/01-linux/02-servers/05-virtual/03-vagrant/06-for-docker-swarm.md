@@ -4,9 +4,7 @@ title: Vagrant машины для Docker Swarm
 permalink: /linux/servers/virtual/vagrant/for-docker-swarm/
 ---
 
-
 # Vagrant машины для Docker Swarm
-
 
 <br/>
 
@@ -14,9 +12,7 @@ permalink: /linux/servers/virtual/vagrant/for-docker-swarm/
 
     $ vi Vagrantfile
 
-
-{% highlight text %}
-
+```text
 
 Vagrant.require_version ">= 1.9.1"
 
@@ -206,13 +202,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 end
 
-{% endhighlight %}
-
+```
 
 <br/>
 
     $ vagrant up
-
 
 <br/>
 

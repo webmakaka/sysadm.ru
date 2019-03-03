@@ -4,7 +4,6 @@ title: Создание с помощью Vagrant 2-х виртуальных м
 permalink: /linux/servers/virtual/vagrant/create-2-debian-vagrant/
 ---
 
-
 # Создание с помощью Vagrant 2-х виртуальных машин Debian
 
 <br/>
@@ -12,7 +11,6 @@ permalink: /linux/servers/virtual/vagrant/create-2-debian-vagrant/
     $ vagrant plugin install vagrant-hosts
 
     $ vi Vagrantfile
-
 
 ```shell
 
@@ -60,7 +58,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 end
 
 ```
-
 
     $ ssh-add ~/.vagrant.d/insecure_private_key
 

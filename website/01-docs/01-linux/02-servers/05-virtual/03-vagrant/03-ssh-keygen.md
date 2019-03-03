@@ -4,11 +4,7 @@ title: SSH keys
 permalink: /linux/servers/virtual/vagrant/ssh-keygen/
 ---
 
-
 # SSH keys (По прошествию времени, у меня по поводу всего этого какие-то сомнения)
-
-
-
 
 Create a new pair of SSH keys
 

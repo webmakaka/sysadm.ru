@@ -6,14 +6,12 @@ permalink: /linux/servers/virtual/vagrant/create-ubuntu-vm-by-vagrant/
 
 # Создание с помощью Vagrant виртуальной машины Ubuntu
 
-
     $ mkdir -p ~/vagrant/ubuntu/
     $ cd ~/vagrant/ubuntu/
 
 <br/>
 
     $ vi Vagrantfile
-
 
 ```shell
 
@@ -35,7 +33,6 @@ end
 
     $ vagrant up
     $ vagrant ssh
-
 
 <br/>
 
@@ -74,9 +71,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 end
 
 ```
-
-
-
-
 
 https://gist.github.com/maxivak/c318fd085231b9ab934e631401c876b1
