@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ansible
-permalink: /linux/servers/devops//ansible/
+permalink: /linux/servers/devops/ansible/
 ---
 
 # Ansible
@@ -14,7 +14,7 @@ permalink: /linux/servers/devops//ansible/
 
 <br/>
 
-### [Инсталляция Ansible в Ubuntu 14.04](/linux/servers/devops//ansible/installation/)
+### [Инсталляция Ansible в Ubuntu 14.04](/linux/servers/devops/ansible/installation/)
 
 <br/>
 

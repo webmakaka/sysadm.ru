@@ -12,11 +12,11 @@ permalink: /linux/servers/devops/
 
 <br/>
 
-### [Ansible](/linux/servers/devops//ansible/)
+### [Ansible](/linux/servers/devops/ansible/)
 
 <br/>
 
-### [Puppet](/linux/servers/devops//puppet/)
+### [Puppet](/linux/servers/devops/puppet/)
 
 <br/>
 

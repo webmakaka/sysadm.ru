@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Ansible в Ubuntu 14.04
-permalink: /linux/servers/devops//ansible/installation/
+permalink: /linux/servers/devops/ansible/installation/
 ---
 
 # Инсталляция Ansible в Ubuntu 14.04
