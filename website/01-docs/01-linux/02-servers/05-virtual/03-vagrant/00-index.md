@@ -45,3 +45,5 @@ https://github.com/bradtraversy/vagrant_lamp_traversy/blob/master/Vagrantfile
 [Vagrant c Docker внутри](/linux/servers/virtual/vagrant/vagrant-with-docker/)
 
 [Деплой nodejs приложения на удаленный сервер с помощью ansible](/linux/servers/virtual/vagrant/deploy-node-app-by-ansible/)
+
+[Vagrant и Ansible playbook для подготовки виртуальных машин Virtualbox](/linux/servers/virtual/vagrant/vagrant-ansible-playbook/)

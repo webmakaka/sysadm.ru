@@ -14,7 +14,9 @@ permalink: /linux/servers/devops/ansible/
 
 <br/>
 
-### [Инсталляция Ansible в Ubuntu 14.04](/linux/servers/devops/ansible/installation/)
+### [Инсталляция Ansible в Ubuntu 18.04](/linux/servers/devops/ansible/install/ubuntu/)
+
+### [Инсталляция Ansible в Centos 7.3](/linux/servers/devops/ansible/install/centos/)
 
 <br/>
 
