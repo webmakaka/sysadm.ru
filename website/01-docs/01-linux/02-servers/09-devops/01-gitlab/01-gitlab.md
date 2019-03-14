@@ -1,20 +1,16 @@
 ---
 layout: page
 title: Инсталляция GITLAB в centos 6 из пакетов
-permalink: /linux/dev/git/gitlab/centos/6/
+permalink: linux/servers/devops/gitlab/centos/6/
 ---
 
 # Инсталляция GITLAB в centos 6 из пакетов
 
 Потом зашел на сайт официальной документации: http://doc.gitlab.com/ce/install/installation.html и о чудо нашел такое предложение: " If you want to install on RHEL/CentOS we recommend using the Omnibus packages."
 
-
 И попал на эту страницу: https://about.gitlab.com/downloads/ выбрал тут CentOS 6.
 
-
-
 И легко в несколько команд поставил GitLab сервер:
-
 
     # yum install postfix
 
@@ -29,20 +25,18 @@ permalink: /linux/dev/git/gitlab/centos/6/
 
 Тут я указал свой домен: external_url 'http://192.168.56.2'
 
-
-И запустил реконфиг:  
+И запустил реконфиг:
 
     # gitlab-ctl reconfigure
-
 
 Данный пакет представляет из себя сценарий Chef'a, который все ставит и настраивает в автоматическом режиме.
 
 После чего я сразу смог попасть в работающий GitLab по адресу: http://asidorov.name/
 
-Первоначальные реквизиты доступа:  
+Первоначальные реквизиты доступа:
 
 Пользователь: root  
-Пароль: 5iveL!fe  
+Пароль: 5iveL!fe
 
 После чего вам предложат сразу задать пароль для root'a. После изменения данного пароля вы сможете авторизироваться в системе GitLab.
 
@@ -50,7 +44,6 @@ permalink: /linux/dev/git/gitlab/centos/6/
 
 Оно ставит и настраивает автоматически: nginx, postgresql, redis, unicorn, sidekiq.
 Очень удобно и просто. Спасибо огромное разработчикам за такую простоту.
-
 
 По материалам сайта:  
 http://blog.asidorov.name/2014/07/gitlab.html

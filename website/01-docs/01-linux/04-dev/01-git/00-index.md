@@ -20,4 +20,4 @@ permalink: /linux/dev/git/
 
 # GitLab
 
-### [GitLab](/linux/dev/git/gitlab/)
+### [GitLab](linux/servers/devops/gitlab/)

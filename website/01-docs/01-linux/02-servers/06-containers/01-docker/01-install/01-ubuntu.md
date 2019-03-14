@@ -4,13 +4,11 @@ title: Инсталляция и Upgrade Docker в Ubuntu 18.04.1 bionic64
 permalink: /linux/servers/containers/docker/install/ubuntu/
 ---
 
-
 # Инсталляция / Upgrade Docker в Ubuntu 18.04.1 bionic64
 
-Делаю:  
+Делаю:
 
-03.01.2019
-
+13.03.2019
 
 <br/>
 
@@ -26,9 +24,8 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
 
     # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-<!-- 
+<!--
     # apt-key fingerprint 0EBFCD88 -->
-    
 
     # add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
@@ -39,7 +36,7 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
     # apt update && apt install -y docker-ce
 
     # docker -v
-    Docker version 18.09.0, build 4d60db4
+    Docker version 18.09.3, build 774a1f4
 
 <br/>
 
@@ -52,16 +49,15 @@ https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
 
 <br/>
 
-## Настройка 
+## Настройка
 
 <br/>
 
 ### Предоставить пользователю права для работы с docker
 
-
     # usermod -aG docker <username>
 
-в группе docker должен появиться этот пользователь  
+в группе docker должен появиться этот пользователь
 
     # cat /etc/group | grep docker
         docker:x:126:username

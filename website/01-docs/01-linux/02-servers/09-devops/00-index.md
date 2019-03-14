@@ -12,6 +12,14 @@ permalink: /linux/servers/devops/
 
 <br/>
 
+### [GitLab](/linux/servers/devops/gitlab/)
+
+<br/>
+
+### [jenkins](/linux/servers/devops/jenkins/)
+
+<br/>
+
 ### [Ansible](/linux/servers/devops/ansible/)
 
 <br/>
