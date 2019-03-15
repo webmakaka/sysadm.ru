@@ -16,7 +16,7 @@ permalink: /linux/servers/devops/
 
 <br/>
 
-### [jenkins](/linux/servers/devops/jenkins/)
+### [Jenkins](/linux/servers/devops/jenkins/)
 
 <br/>
 
