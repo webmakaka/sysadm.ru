@@ -14,7 +14,6 @@ permalink: /linux/desktops/archives/commands/
 
     # 7z x ./VBoxGuestAdditions_5.0.10.iso -o./VBoxGuestAdditions_5.0.10/
 
-
 <br/>
 
 ### tar.gz
@@ -34,8 +33,6 @@ tar: .: Not found in archive
 
     tar -xzvf dynagen-0.11.0.tar.gz
 
-
-
 <br/>
 
 ### tar.bz2
@@ -43,7 +40,6 @@ tar: .: Not found in archive
 Извлечь tar.bz2:
 
     tar -jxf FileName.tar.bz2
-
 
 <br/>
 
@@ -61,7 +57,6 @@ tar: .: Not found in archive
 
     tar xvf FileName.tar -C ./
 
-
 <br/>
 
 ### .tgz
@@ -69,8 +64,6 @@ tar: .: Not found in archive
 Извлечь .tgz:
 
     tar xf FileName.tgz -C ./
-
-
 
 <br/>
 
@@ -83,13 +76,12 @@ tar: .: Not found in archive
 <br/>
 
 Извлечь .rar в каталог с текущим именем архива:
-    
-    $ unrar x Archive.part1.rar
 
+    $ unrar x Archive.part1.rar
 
 <br/>
 
-Еще команды:    
+Еще команды:
 
     # unrar x (file_name).rar           extract with full path
     # unrar e -kb (file_name).rar       (Keep broken)
@@ -98,7 +90,6 @@ tar: .: Not found in archive
     # rar a (file_name).rar (file_name) create a archive Rar file
     # rar r (file_name).rar             recover or fix a archive file or files
     # rar a -p (file_name).rar          create a archive Rar file with password
-
 
 <br/>
 
