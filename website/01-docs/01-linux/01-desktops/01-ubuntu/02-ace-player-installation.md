@@ -10,7 +10,7 @@ permalink: /linux/desktops/ubuntu/ace-player-installation/
 
 ### Инсталляция ACE плеера в Ubuntu 16.04 / 18.04.1
 
-Делаю!  
+Делаю:  
 13.02.2019
 
     $ sudo snap install acestreamplayer

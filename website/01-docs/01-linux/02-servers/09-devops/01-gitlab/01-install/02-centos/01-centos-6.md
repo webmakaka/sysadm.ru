@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция GITLAB в centos 6 из пакетов
-permalink: linux/servers/devops/gitlab/centos/6/
+permalink: /linux/servers/devops/gitlab/install/centos/6/
 ---
 
 # Инсталляция GITLAB в centos 6 из пакетов

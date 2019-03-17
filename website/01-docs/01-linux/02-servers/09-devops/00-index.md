@@ -14,6 +14,8 @@ permalink: /linux/servers/devops/
 
 ### [GitLab](/linux/servers/devops/gitlab/)
 
+### [GitTea Youtube](https://www.youtube.com/watch?v=dTvTBlzKqgg)
+
 <br/>
 
 ### [Jenkins](/linux/servers/devops/jenkins/)
