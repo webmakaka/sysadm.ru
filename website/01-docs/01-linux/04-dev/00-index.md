@@ -10,7 +10,7 @@ permalink: /linux/dev/
 
 ### [GIT](/linux/dev/git/)
 
-### [JAVA](//javadev.org/development-tools/jdk/installation/)
+### [JAVA](//javadev.org/devtools/jdk/install/)
 
 ### [GO](/linux/dev/go/)
 
