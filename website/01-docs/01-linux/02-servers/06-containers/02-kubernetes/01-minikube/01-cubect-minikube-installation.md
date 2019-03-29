@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Инсталляция cubectl и minikube в ubuntu 18.04
+title: Инсталляция kubectl и minikube в ubuntu 18.04
 permalink: /linux/servers/containers/kubernetes/minikube/cubect-minikube-installation/
 ---
 
-# Инсталляция cubectl и minikube
+# Инсталляция kubectl и minikube
 
 Делаю:  
 28.02.2019

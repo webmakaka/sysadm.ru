@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Kuberneters на локальном хосте (minikube, cubectl и virtualbox)
+title: Kuberneters на локальном хосте (minikube, kubectl и virtualbox)
 permalink: /linux/servers/containers/kubernetes/minikube/
 ---
 
-# Kuberneters на локальном хосте (minikube, cubectl и virtualbox)
+# Kuberneters на локальном хосте (minikube, kubectl и virtualbox)
 
 <br/>
 
@@ -18,7 +18,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/
 
 ### Начало
 
-[Инсталляция cubectl и minikube в ubuntu 18.04](/linux/servers/containers/kubernetes/minikube/cubect-minikube-installation/)
+[Инсталляция kubectl и minikube в ubuntu 18.04](/linux/servers/containers/kubernetes/minikube/cubect-minikube-installation/)
 
 [Запуск приложения в minikube](/linux/servers/containers/kubernetes/minikube/run-application/)
 

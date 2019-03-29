@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, cubectl)
+title: Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, kubectl)
 permalink: /linux/servers/containers/kubernetes/kubeadm/single-master/
 ---
 
-# Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, cubectl)
+# Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, kubectl)
 
 Делаю  
 29.03.2019
@@ -32,6 +32,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/single-master/
 <br/>
 
     $ git clone https://bitbucket.org/sysadm-ru/vagrant-kuberntes .
+    $ cd centos7
 
 <br/>
 

@@ -26,7 +26,7 @@ Kubernets он как квантовая механика. Стоит пол г�
 
 <br/>
 
-### [Kuberneters на локальном хосте (minikube, cubectl и virtualbox)](/linux/servers/containers/kubernetes/minikube/)
+### [Kuberneters на локальном хосте (minikube, kubectl и virtualbox)](/linux/servers/containers/kubernetes/minikube/)
 
 ### [Kuberneters в виртуальных машинах (kubeadm, vagrant и virtualbox)](/linux/servers/containers/kubernetes/kubeadm/)
 
@@ -36,7 +36,7 @@ Kubernets он как квантовая механика. Стоит пол г�
 
 ### Первые попытки установить и запустить локально
 
-[Какие-то попытки разобраться с cubectl и minikube](/linux/servers/containers/kubernetes/cubect-minikube/)
+[Какие-то попытки разобраться с kubectl и minikube](/linux/servers/containers/kubernetes/cubect-minikube/)
 
 <br/>
 
