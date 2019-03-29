@@ -13,13 +13,11 @@ permalink: /linux/desktops/ubuntu/browsers/chrome/
     $ sudo apt-get update -y
     $ sudo apt-get install -y google-chrome-stable
 
-
 <br/>
 
 ### Дополнительные Плагины
 
-Data Saver, Quick JavaScript Switcher, Доступ рутрекер
-
+Data Saver, Quick JavaScript Switcher, Доступ рутрекер, EditThisCookie, SetupVPN
 
 <br/>
 
@@ -27,19 +25,20 @@ Data Saver, Quick JavaScript Switcher, Доступ рутрекер
 
 https://adblockplus.org/
 
-
 В настройках:
 
     + ruAdList+EasyList
     - Allow some non-intrusive advertising
 
+<br/>
 
-Статья как лучше настроить (наерное устарела):  
-https://adblockplus.org/en/features#socialmedia
+**Advanced --> MyFilterList:**
 
+    *jivosite.com*
+    ||supervisor.ext-twitch.tv/supervisor/v1/index.html
 
 <br/>
 
-### Отключить всплывающие уведомления 
+### Отключить всплывающие уведомления
 
 Edit --> Settings --> Advanced --> Content Settings --> Notifications --> Disable

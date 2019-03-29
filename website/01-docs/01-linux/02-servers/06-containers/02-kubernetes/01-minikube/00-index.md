@@ -23,3 +23,11 @@ permalink: /linux/servers/containers/kubernetes/minikube/
 [Запуск приложения в minikube](/linux/servers/containers/kubernetes/minikube/run-application/)
 
 [Предоставление внешним клиентам доступа к службам](/linux/servers/containers/kubernetes/minikube/svc/)
+
+[Разворачиваем многоуровневое приложение в minikube](/linux/servers/containers/kubernetes/minikube/multi-tier-application/)
+
+<br/>
+
+### Начало
+
+[Материал из курса: Learn DevOps: The Complete Kubernetes Course](/linux/servers/containers/kubernetes/minikube/learn-devops-the-complete-kubernetes-course/)

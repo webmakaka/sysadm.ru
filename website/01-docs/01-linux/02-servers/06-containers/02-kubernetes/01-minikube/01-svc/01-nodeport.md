@@ -11,11 +11,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/svc/nodeport/
 
 <br/>
 
-<br/>
-
-    $ cd ~
-    $ mkdir tmp
-    $ cd tmp/
+    $ mkdir ~/nodejs-cats-app && cd ~/nodejs-cats-app
 
 <br/>
 
@@ -23,39 +19,39 @@ permalink: /linux/servers/containers/kubernetes/minikube/svc/nodeport/
 
 <br/>
 
-    $ vi nodejs-voting-game-replicaset.yaml
+    $ vi nodejs-cats-app-replicaset.yaml
 
 ```
 apiVersion: apps/v1beta2
 kind: ReplicaSet
 metadata:
-  name: nodejs-voting-game
+  name: nodejs-cats-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nodejs-voting-game
+      app: nodejs-cats-app
   template:
     metadata:
       labels:
-        app: nodejs-voting-game
+        app: nodejs-cats-app
     spec:
       containers:
-      - name: nodejs-voting-game
-        image: marley/nodejs-voting-game
+      - name: nodejs-cats-app
+        image: marley/nodejs-cats-app
 ```
 
-    $ kubectl create -f nodejs-voting-game-replicaset.yaml
+    $ kubectl create -f nodejs-cats-app-replicaset.yaml
 
 <br/>
 
-    $ vi nodejs-voting-game-svc-nodeport.yaml
+    $ vi nodejs-cats-app-svc-nodeport.yaml
 
 ```
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs-voting-game-nodeport
+  name: nodejs-cats-app-nodeport
 spec:
   type: NodePort
   ports:
@@ -63,29 +59,29 @@ spec:
     targetPort: 8080
     nodePort: 30123
   selector:
-    app: nodejs-voting-game
+    app: nodejs-cats-app
 ```
 
-    $ kubectl create -f nodejs-voting-game-svc-nodeport.yaml
+    $ kubectl create -f nodejs-cats-app-svc-nodeport.yaml
 
 <br/>
 
     $ kubectl get pods
     NAME                       READY   STATUS    RESTARTS   AGE
-    nodejs-voting-game-5z649   1/1     Running   0          35s
-    nodejs-voting-game-9kfc6   1/1     Running   0          35s
-    nodejs-voting-game-wsll5   1/1     Running   0          35s
+    nodejs-cats-app-5z649   1/1     Running   0          35s
+    nodejs-cats-app-9kfc6   1/1     Running   0          35s
+    nodejs-cats-app-wsll5   1/1     Running   0          35s
 
 <br/>
 
     $ kubectl get svc
     NAME                          TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
     kubernetes                    ClusterIP   10.96.0.1      <none>        443/TCP        5m20s
-    nodejs-voting-game-nodeport   NodePort    10.111.60.77   <none>        80:30123/TCP   31s
+    nodejs-cats-app-nodeport   NodePort    10.111.60.77   <none>        80:30123/TCP   31s
 
 <br/>
 
-    $ echo $(minikube service nodejs-voting-game-nodeport --url)
+    $ echo $(minikube service nodejs-cats-app-nodeport --url)
     http://192.168.99.105:30123
 
 <br/>
@@ -95,4 +91,4 @@ spec:
 <br/>
 
     // Если понадобится удалить
-    $ kubectl delete svc nodejs-voting-game-nodeport
+    $ kubectl delete svc nodejs-cats-app-nodeport

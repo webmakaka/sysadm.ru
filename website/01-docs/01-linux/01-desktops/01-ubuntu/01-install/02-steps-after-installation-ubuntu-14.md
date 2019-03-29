@@ -6,8 +6,6 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-14/
 
 # Шаги после инсталляции Ubuntu 14 (для себя)
 
-
-
 <br/>
 
 ### Обновление
@@ -18,7 +16,6 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-14/
 <!--
 # apt-get upgrade -y
 -->
-
 
 // ДОП ПО
 
@@ -33,7 +30,6 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-14/
     git \
     vlc \
     net-tools
-
 
 <br/>
 
@@ -51,7 +47,6 @@ sudo apt-get install gnome-session-flashback
 gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
 -->
 
-
     # reboot
 
 Перезагружаемся, при старте выбираем - gnome (Metacity)
@@ -65,7 +60,6 @@ gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize
 
     left :
     $ gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'
-
 
 <!--
 
@@ -88,7 +82,6 @@ menu:minimize,maximize,close
 
 -->
 
-
 <br/>
 
 ### Раскладка клавиатуры и язык
@@ -104,11 +97,7 @@ menu:minimize,maximize,close
 
 <br/>
 
-
 ![Ubuntu Region Formats](/img/linux/desktops/ubuntu/install/regional-formats.png "Ubuntu Region Formats"){: .center-image }
-
-
-
 
 <br/>
 
@@ -125,13 +114,9 @@ menu:minimize,maximize,close
     #Change to metric system
     export LC_MEASUREMENT=en_GB.UTF-8
 
-
-
-
 <br/>
 
 ### Shortcuts
-
 
     System Settings -> Keyboard --> Shortcuts
 
@@ -144,7 +129,6 @@ menu:minimize,maximize,close
     Command: gnome-system-monitor
 
     ПО: Ctrl + Alt + Delete
-
 
 <!-- <br/>
 
@@ -170,13 +154,10 @@ menu:minimize,maximize,close
 
 ### Параметры отключения экрана
 
+System tools - System Settings --> Brightness & Lock
 
-  System tools - System Settings --> Brightness & Lock
-
-  Turn screen off when inactive for: 1 hour
-  Lock screen after: 3o min
-
-
+Turn screen off when inactive for: 1 hour
+Lock screen after: 3o min
 
 <br/>
 
@@ -187,13 +168,11 @@ menu:minimize,maximize,close
     #548080 - Workstation
     #B8C195 - Ноутбук
 
-
 <br/>
 
 ### Terminal
 
-
-  Edit --> Keyboard shortcuts
+Edit --> Keyboard shortcuts
 
 Отключаю:
 
@@ -208,7 +187,6 @@ menu:minimize,maximize,close
 
     Buil-in schemes: Black on white
 
-
 <br/>
 
 ### Отключаю противный звук при ошибке в консоли
@@ -222,23 +200,11 @@ menu:minimize,maximize,close
     $ sudo apt-get install nautilus-open-terminal
     $ nautilus -q
 
-
 <br/>
 
 ### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
-https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
-
-+
-
-    0.0.0.0 rbc.ru
-    0.0.0.0 lenta.ru
-    0.0.0.0 betcity.ru
-    0.0.0.0 blackhole.beeline.ru
-
-    81.17.30.22 nnm-club.me
-
-
+https://sysadm.ru/linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
 
 <br/>
 

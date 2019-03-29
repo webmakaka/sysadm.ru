@@ -40,16 +40,16 @@ permalink: /linux/servers/containers/kubernetes/minikube/run-application/
 ### Запуск без конфигов JSON / YAML
 
     // Делал с ключом run-pod, были какие-то проблемы
-    $ kubectl run nodejs-voting-game --image=marley/nodejs-voting-game --port=8080 --generator=run/v1
+    $ kubectl run nodejs-cats-app --image=marley/nodejs-cats-app --port=8080 --generator=run/v1
 
     kubectl run --generator=run/v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
-    replicationcontroller/nodejs-voting-game created
+    replicationcontroller/nodejs-cats-app created
 
 <br/>
 
     $ kubectl get pods
     NAME                       READY   STATUS    RESTARTS   AGE
-    nodejs-voting-game-nsk72   1/1     Running   0          23s
+    nodejs-cats-app-nsk72   1/1     Running   0          23s
 
 <br/>
 
@@ -59,7 +59,7 @@ rc - replicationcontroller
 
 <br/>
 
-    $ kubectl expose rc nodejs-voting-game --type=LoadBalancer --name nodejs-voting-game-load-balancer
+    $ kubectl expose rc nodejs-cats-app --type=LoadBalancer --name nodejs-cats-app-load-balancer
 
 <br/>
 
@@ -67,7 +67,7 @@ rc - replicationcontroller
     $ kubectl get services
     NAME                               TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
     kubernetes                         ClusterIP      10.96.0.1      <none>        443/TCP          104s
-    nodejs-voting-game-load-balancer   LoadBalancer   10.96.51.251   <pending>     8080:30748/TCP   8s
+    nodejs-cats-app-load-balancer   LoadBalancer   10.96.51.251   <pending>     8080:30748/TCP   8s
 
 <br/>
 
@@ -76,42 +76,42 @@ rc - replicationcontroller
 
 <br/>
 
-    $ echo $(minikube service nodejs-voting-game-load-balancer --url)
+    $ echo $(minikube service nodejs-cats-app-load-balancer --url)
     http://192.168.99.102:30748
 
 <br/>
 
-![Cats inside minikube](/img/linux/servers/containers/kubernetes/nodejs-voting-game-cats.png "Cats inside minikube"){: .center-image }
+![Cats inside minikube](/img/linux/servers/containers/kubernetes/nodejs-cats-app-cats.png "Cats inside minikube"){: .center-image }
 
 <br/>
 
     $ kubectl get rc
     NAME                 DESIRED   CURRENT   READY   AGE
-    nodejs-voting-game   1         1         1       4m41s
+    nodejs-cats-app   1         1         1       4m41s
 
 <br/>
 
 ### Изменение количества реплик
 
-    $ kubectl scale rc nodejs-voting-game --replicas=3
+    $ kubectl scale rc nodejs-cats-app --replicas=3
 
 <br/>
 
     $ kubectl get rc
     NAME                 DESIRED   CURRENT   READY   AGE
-    nodejs-voting-game   3         3         3       5m6s
+    nodejs-cats-app   3         3         3       5m6s
 
 <br/>
 
     $ kubectl get pods
     NAME                       READY   STATUS    RESTARTS   AGE
-    nodejs-voting-game-mtp56   1/1     Running   0          22s
-    nodejs-voting-game-mvvnp   1/1     Running   0          22s
-    nodejs-voting-game-nsk72   1/1     Running   0          5m21s
+    nodejs-cats-app-mtp56   1/1     Running   0          22s
+    nodejs-cats-app-mvvnp   1/1     Running   0          22s
+    nodejs-cats-app-nsk72   1/1     Running   0          5m21s
 
 <br/>
 
-    $ kubectl describe pod nodejs-voting-game-mvvnp
+    $ kubectl describe pod nodejs-cats-app-mvvnp
 
 <br/>
 

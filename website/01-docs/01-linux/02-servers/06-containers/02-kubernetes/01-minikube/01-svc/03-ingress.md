@@ -9,8 +9,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/svc/ingress/
 Делаю:  
 02.03.2019
 
-Replica Set созданы как в NodePort
-NodePort создан как в NodePort
+Replica Set и NodePort уже созданы как <a href="/linux/servers/containers/kubernetes/minikube/svc/nodeport/">здесь</a>
 
 <br/>
 
@@ -33,33 +32,33 @@ NodePort создан как в NodePort
 
 <br/>
 
-    $ vi nodejs-voting-game-svc-ingress.yaml
+    $ vi nodejs-cats-app-svc-ingress.yaml
 
 ```
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: nodejs-voting-game-ingress
+  name: nodejs-cats-app-ingress
 spec:
   rules:
-  - host: nodejs-voting-game.example.com
+  - host: nodejs-cats-app.example.com
     http:
       paths:
       - path: /
         backend:
-          serviceName: nodejs-voting-game-nodeport
+          serviceName: nodejs-cats-app-nodeport
           servicePort: 80
 ```
 
 <br/>
 
-    $ kubectl create -f nodejs-voting-game-svc-ingress.yaml
+    $ kubectl create -f nodejs-cats-app-svc-ingress.yaml
 
 <br/>
 
     $ kubectl get ingresses
     NAME                         HOSTS                            ADDRESS   PORTS   AGE
-    nodejs-voting-game-ingress   nodejs-voting-game.example.com             80      7s
+    nodejs-cats-app-ingress   nodejs-cats-app.example.com             80      7s
 
 <br/>
 
@@ -70,11 +69,15 @@ spec:
 
     # vi /etc/hosts
 
-    192.168.99.105 nodejs-voting-game.example.com
+    192.168.99.105 nodejs-cats-app.example.com
 
 <br/>
 
-Подключаемся по адресу nodejs-voting-game.example.com
+Подключаемся по адресу:
+
+http://nodejs-cats-app.example.com
+
+<br/>
 
     // Если не нужно, удалить
-    $ kubectl delete ingress nodejs-voting-game-ingress
+    $ kubectl delete ingress

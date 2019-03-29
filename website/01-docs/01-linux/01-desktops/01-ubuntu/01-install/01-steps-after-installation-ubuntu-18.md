@@ -68,12 +68,35 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
 
 <br/>
 
-### Смена раскладки клавиатуры по Alt + Shift (При необходимости. В последнее время не нужно было.)
+### Смена раскладки клавиатуры по Alt + Shift (В последний раз не потребовалось)
 
 Вот надо что-нибудь да испортить! По умолчанию, нужно выбрать комбинацию из 3х клваиш, чтобы сменить раскладку.
 
     $ sudo apt-get install -y gnome-tweak-tool
     $ gnome-tweaks
+
+<br/>
+
+### Установить формат дат в консоли на английский
+
+<br/>
+
+    Applications --> System Tools --> System Settings --> Region & Language --> Formats --> United States
+
+<!-- <br/>
+
+### Первый день недели - понедельник
+
+    $ cd ~
+    $ cp .pam_environment .pam_environment.orig
+    $ vi .pam_environment
+
+добавить:
+
+    #Change first day of week to Monday
+    export LC_TIME=en_GB.UTF-8
+    #Change to metric system
+    export LC_MEASUREMENT=en_GB.UTF-8 -->
 
 <br/>
 
@@ -108,10 +131,20 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 +
 
+    0.0.0.0 mailtrack.io
     0.0.0.0 rbc.ru
     0.0.0.0 lenta.ru
     0.0.0.0 betcity.ru
     0.0.0.0 blackhole.beeline.ru
+    0.0.0.0 jivosite.ru
+    0.0.0.0 www.jivosite.ru
+
+
+    0.0.0.0 onlinefreecourse.net
+    0.0.0.0 downloadtutorials.net
+    0.0.0.0 ebookie.org
+    0.0.0.0 winline.ru
+    0.0.0.0 downloadtutorials.net
 
     81.17.30.22 nnm-club.me
 

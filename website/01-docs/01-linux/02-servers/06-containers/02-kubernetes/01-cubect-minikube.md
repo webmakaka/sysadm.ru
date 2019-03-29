@@ -26,94 +26,6 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
     $ kubectl cluster-info
     Kubernetes master is running at https://192.168.99.101:8443
 
-    -- если есть желание подключиться к Kubernetes Dashboard
-    $ kubectl proxy
-
-    -- Можно коннектиться
-    http://127.0.0.1:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard:/proxy/#!/overview?namespace=default
-
-<br/>
-    
-    -- api
-    $ curl http://localhost:8001/
-    {
-      "paths": [
-        "/api",
-        "/api/v1",
-        "/apis",
-        "/apis/",
-        "/apis/admissionregistration.k8s.io",
-        "/apis/admissionregistration.k8s.io/v1alpha1",
-        "/apis/admissionregistration.k8s.io/v1beta1",
-        "/apis/apiextensions.k8s.io",
-        "/apis/apiextensions.k8s.io/v1beta1",
-        "/apis/apiregistration.k8s.io",
-        "/apis/apiregistration.k8s.io/v1beta1",
-        "/apis/apps",
-        "/apis/apps/v1",
-        "/apis/apps/v1beta1",
-        "/apis/apps/v1beta2",
-        "/apis/authentication.k8s.io",
-        "/apis/authentication.k8s.io/v1",
-        "/apis/authentication.k8s.io/v1beta1",
-        "/apis/authorization.k8s.io",
-        "/apis/authorization.k8s.io/v1",
-        "/apis/authorization.k8s.io/v1beta1",
-        "/apis/autoscaling",
-        "/apis/autoscaling/v1",
-        "/apis/autoscaling/v2beta1",
-        "/apis/batch",
-        "/apis/batch/v1",
-        "/apis/batch/v1beta1",
-        "/apis/batch/v2alpha1",
-        "/apis/certificates.k8s.io",
-        "/apis/certificates.k8s.io/v1beta1",
-        "/apis/events.k8s.io",
-        "/apis/events.k8s.io/v1beta1",
-        "/apis/extensions",
-        "/apis/extensions/v1beta1",
-        "/apis/networking.k8s.io",
-        "/apis/networking.k8s.io/v1",
-        "/apis/policy",
-        "/apis/policy/v1beta1",
-        "/apis/rbac.authorization.k8s.io",
-        "/apis/rbac.authorization.k8s.io/v1",
-        "/apis/rbac.authorization.k8s.io/v1alpha1",
-        "/apis/rbac.authorization.k8s.io/v1beta1",
-        "/apis/scheduling.k8s.io",
-        "/apis/scheduling.k8s.io/v1alpha1",
-        "/apis/settings.k8s.io",
-        "/apis/settings.k8s.io/v1alpha1",
-        "/apis/storage.k8s.io",
-        "/apis/storage.k8s.io/v1",
-        "/apis/storage.k8s.io/v1alpha1",
-        "/apis/storage.k8s.io/v1beta1",
-        "/healthz",
-        "/healthz/autoregister-completion",
-        "/healthz/etcd",
-        "/healthz/ping",
-        "/healthz/poststarthook/apiservice-openapi-controller",
-        "/healthz/poststarthook/apiservice-registration-controller",
-        "/healthz/poststarthook/apiservice-status-available-controller",
-        "/healthz/poststarthook/bootstrap-controller",
-        "/healthz/poststarthook/ca-registration",
-        "/healthz/poststarthook/generic-apiserver-start-informers",
-        "/healthz/poststarthook/kube-apiserver-autoregistration",
-        "/healthz/poststarthook/start-apiextensions-controllers",
-        "/healthz/poststarthook/start-apiextensions-informers",
-        "/healthz/poststarthook/start-kube-aggregator-informers",
-        "/healthz/poststarthook/start-kube-apiserver-informers",
-        "/logs",
-        "/metrics",
-        "/swagger-2.0.0.json",
-        "/swagger-2.0.0.pb-v1",
-        "/swagger-2.0.0.pb-v1.gz",
-        "/swagger.json",
-        "/swaggerapi",
-        "/ui",
-        "/ui/",
-        "/version"
-      ]
 
       -- Get the token
       $ TOKEN=$(kubectl describe secret $(kubectl get secrets | grep default | cut -f1 -d ' ') | grep -E '^token' | cut -f2 -d':' | tr -d '\t' | tr -d " ")
@@ -206,28 +118,31 @@ permalink: /linux/servers/containers/kubernetes/cubect-minikube/
     $ vi webserver.yaml
 
 <br/>
-    
-    apiVersion: apps/v1
-    kind: Deployment
+
+```yaml1
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: webserver
+    labels:
+    app: nginx
+spec:
+    replicas: 3
+    selector:
+    matchLabels:
+        app: nginx
+    template:
     metadata:
-      name: webserver
-      labels:
+        labels:
         app: nginx
     spec:
-      replicas: 3
-      selector:
-        matchLabels:
-          app: nginx
-      template:
-        metadata:
-          labels:
-            app: nginx
-        spec:
-          containers:
-          - name: nginx
-            image: nginx:alpine
-            ports:
-            - containerPort: 80
+        containers:
+        - name: nginx
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+
+```
 
 <br/>
 
@@ -323,9 +238,11 @@ https://www.youtube.com/watch?v=UpPnmvHwsjA
 
     $ kubectl create configmap my-config --from-literal=key1=value1 --from-literal=key2=value2
 
+<br/>
 
     $ kubectl get configmaps my-config -o yaml
 
+<br/>
 
     $ vi customer1-configmap.yaml
 
@@ -369,6 +286,7 @@ https://www.youtube.com/watch?v=UpPnmvHwsjA
 
     $ kubectl create secret generic my-password --from-literal=password=mysqlpassword
 
+<br/>
 
     $ kubectl get secret my-password
     NAME          TYPE      DATA      AGE
@@ -450,32 +368,37 @@ With Ingress, users don't connect directly to a Service. Users reach the Ingress
 
     $ minikube addons enable ingress
 
+<br/>
+
     $ vi webserver-ingress.yaml
 
 <br/>
     
-    apiVersion: extensions/v1beta1
-    kind: Ingress
-    metadata:
-      name: web-ingress
-      namespace: default
-    spec:
-      rules:
-      - host: blue.example.com
-        http:
-          paths:
-          - backend:
-              serviceName: webserver-blue-svc
-              servicePort: 80
-      - host: green.example.com
-        http:
-          paths:
-          - backend:
-              serviceName: webserver-green-svc
-              servicePort: 80
-    
+```yaml1
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: web-ingress
+    namespace: default
+spec:
+    rules:
+    - host: blue.example.com
+    http:
+        paths:
+        - backend:
+            serviceName: webserver-blue-svc
+            servicePort: 80
+    - host: green.example.com
+    http:
+        paths:
+        - backend:
+            serviceName: webserver-green-svc
+            servicePort: 80
+
+```
+
 <br/>
-    
+
     $ kubectl create -f webserver-ingress.yaml
 
 <br/>
@@ -488,3 +411,4 @@ With Ingress, users don't connect directly to a Service. Users reach the Ingress
 <br/>
 
     $ kubectl describe ingress web-ingress
+```

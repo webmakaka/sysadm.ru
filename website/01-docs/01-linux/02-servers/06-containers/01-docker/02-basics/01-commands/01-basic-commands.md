@@ -6,17 +6,16 @@ permalink: /linux/servers/containers/docker/basics/basic-commands/
 
 # Основные команды Docker
 
-
 Создать свой репо для контейнеров (1 приватный бесплатно + нет ограничений для публичных контейнеров)  
-https://hub.docker.com  
+https://hub.docker.com
 
-___
+---
 
-$ docker -v  
+\$ docker -v
 
     Docker version 1.9.1, build a34a1d5
 
-$ docker version  
+\$ docker version
 
     Client:
      Version:      1.9.1
@@ -34,9 +33,7 @@ $ docker version
      Built:        Fri Nov 20 13:12:04 UTC 2015
      OS/Arch:      linux/amd64
 
-
-
-$ docker info
+\$ docker info
 
     Containers: 3
     Images: 87
@@ -58,34 +55,30 @@ $ docker info
     Registry: https://index.docker.io/v1/
     WARNING: No swap limit support
 
+---
 
-___
-
-
-// поискать в репо что-нибуть  
+// поискать в репо что-нибуть
 
     $ docker search centos
 
-
-// взять из репо последнюю версию debian  
+// взять из репо последнюю версию debian
 
     $ docker pull debian
 
-// взять все версии debian  
+// взять все версии debian
 
     $ docker pull -a debian
 
-// получить список скачанных images  
+// получить список скачанных images
 
     $ docker images
     $ docker images --tree
     $ docker images debian
-    
-// переименвать имидж
-    
-    -- Переименовываю имидж. Чтобы контейнер на hub.docker.com начинался с моего username на этом сайте.
-    $ docker tag centos6/rais:v01 marley/centos6-for-jekyll:latest
 
+// переименвать имидж
+  
+ -- Переименовываю имидж. Чтобы контейнер на hub.docker.com начинался с моего username на этом сайте.
+\$ docker tag centos6/rais:v01 marley/centos6-for-jekyll:latest
 
 // Запустить контейнер и отправить 30 пингов до гугла
 
@@ -95,45 +88,38 @@ ___
 
     $ docker run -i -t centos:centos6 /bin/bash
 
-
-
 <br/>
 
     -d - Detached mode (зупустится в фоне)
 
-<br/>    
+<br/>
 
     $ docker run -i -t -d debian
 
-
-Задать имя, иначе она будет выбрано самостоятельно  
+Задать имя, иначе она будет выбрано самостоятельно
 
     $ docker run -i -t -d  --name myDebianServ debian
 
-
-// Контенеры и имиджи хранятся здесь  
+// Контенеры и имиджи хранятся здесь
 
     $ cat /var/lib/docker/aufs/diff/<container_id>
 
-    $ ls -l /var/lib/docker/containers  
+    $ ls -l /var/lib/docker/containers
     $ ls -l /var/lib/docker/containers | wc -l
 
-___
+---
 
 // показать активные контейнеры
 
     $ docker ps
 
-
-// показать все контейнеры в том числе остановленные  
+// показать все контейнеры в том числе остановленные
 
     $ docker ps -a
 
-
-// Последний стартовавший контейнер.  
+// Последний стартовавший контейнер.
 
     $ docker ps -l
-
 
 // Старт стоп
 
@@ -141,7 +127,6 @@ ___
     $ docker stop <container_id>
     $ docker kill <container_id>
     $ docker restart <container_id>
-
 
 // Сколько жрет ресурсов
 
@@ -152,7 +137,7 @@ ___
 
     CTRL + P + Q
 
-// Подключиться  
+// Подключиться
 
     $ docker attach <container_id>
 
@@ -160,8 +145,7 @@ ___
 
     $ docker exec -it <container_id> bash
 
-___
-
+---
 
     $ docker top <container_id>
     $ docker inspect <container_id>
@@ -175,20 +159,16 @@ ___
 
 Пример
 
-    $ docker port my_container  
+    $ docker port my_container
 
     1337/tcp -> 0.0.0.0:1337
     3000/tcp -> 0.0.0.0:3000
     8080/tcp -> 0.0.0.0:80
     9000/tcp -> 0.0.0.0:9000
 
-
-
 // узнать IP контейнера Docker
 
-
     $ docker inspect --format='{{.NetworkSettings.IPAddress}}' containerId
-
 
 <br/>
 
@@ -199,23 +179,21 @@ ___
     $ docker rm  <container_id>
     $ docker rm -f <container_id>
 
-
-// stop all Docker containers:  
+// stop all Docker containers:
 
     # docker stop $(docker ps -a -q)
 
-// remove all Docker containers:  
+// remove all Docker containers:
 
     # docker rm $(docker ps -a -q)
 
-// remove all Docker images:  
+// remove all Docker images:
 
     # docker rmi $(docker images -q)
-    
-// Если Error when deleting images - image is referenced in multiple repositories:  
 
-    # docker rmi -f $(docker images -q)  
+// Если Error when deleting images - image is referenced in multiple repositories:
 
+    # docker rmi -f $(docker images -q)
 
 ```
 $ docker system prune -a
@@ -224,8 +202,14 @@ WARNING! This will remove:
         - all networks not used by at least one container
         - all images without at least one container associated to them
         - all build cache
-Are you sure you want to continue? [y/N] 
+Are you sure you want to continue? [y/N]
 ```
+
+<br/>
+
+### Системная информация
+
+    $ docker system info
 
 <br/>
 
@@ -234,11 +218,9 @@ Are you sure you want to continue? [y/N]
     $ docker history <image_name>
     $ docker history --no-trunc <image_name>
 
-
 Возможно, более наглядно.
 
 https://github.com/CenturyLinkLabs/dockerfile-from-image
-
 
 Хочу понять каким образом был сделан docker image у автора курса по CoreOS
 

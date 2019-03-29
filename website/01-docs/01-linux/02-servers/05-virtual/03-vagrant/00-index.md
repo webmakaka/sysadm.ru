@@ -47,3 +47,5 @@ https://github.com/bradtraversy/vagrant_lamp_traversy/blob/master/Vagrantfile
 [Деплой nodejs приложения на удаленный сервер с помощью ansible](/linux/servers/devops/ansible/deploy-node-app-by-ansible/)
 
 [Vagrant и Ansible playbook для подготовки виртуальных машин Virtualbox](/linux/servers/virtual/vagrant/vagrant-ansible-playbook/)
+
+[Разворачиваем Gitlab в виртуальной машине, созданной с помощью Vagrant](/linux/servers/virtual/vagrant/vagrant-gitlab/)

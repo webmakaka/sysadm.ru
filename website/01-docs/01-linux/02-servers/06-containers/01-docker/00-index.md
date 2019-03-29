@@ -111,6 +111,8 @@ https://docs.docker.com/engine/userguide/networking/
 
 [docker-django](https://github.com/ruddra/docker-django)
 
+[MongoDB + импорт данных](https://github.com/g0t4/docker-mongo-sample-datasets/tree/docker-registry)
+
 <br/>
 
 ### Информация о запущенных контейнерах

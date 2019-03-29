@@ -39,3 +39,13 @@ permalink: /linux/servers/devops/
 <br/>
 
 ### [Kubernetes](/linux/servers/containers/kubernetes/)
+
+<br/>
+
+### Материалы по DevOps с youtube на русском (для начинающих)
+
+    https://youtu.be/NYJsP7bvNHU
+    https://youtu.be/C8D1_acR4SM
+    https://youtu.be/vtDvgAl3gVA
+    https://youtu.be/fqgGVnuHye8
+    https://youtu.be/s04UyNeakSY

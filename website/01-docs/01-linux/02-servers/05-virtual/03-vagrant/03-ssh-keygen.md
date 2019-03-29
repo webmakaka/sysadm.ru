@@ -8,11 +8,11 @@ permalink: /linux/servers/virtual/vagrant/ssh-keygen/
 
 Create a new pair of SSH keys
 
-    ssh-keygen -f ~/.vagrant.d/insecure_private_key
+    $ ssh-keygen -f ~/.vagrant.d/insecure_private_key
 
 Copy content of public key
 
-    cat ~/.vagrant.d/insecure_private_key.pub
+    $ cat ~/.vagrant.d/insecure_private_key.pub
 
 On other shell in Homestead VM Machine copy into authorized_keys
 

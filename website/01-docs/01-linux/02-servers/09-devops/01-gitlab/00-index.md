@@ -10,6 +10,12 @@ permalink: /linux/servers/devops/gitlab/
 
 ### [Инсталляция GITLAB в Ubuntu 18.04 из пакетов](/linux/servers/devops/gitlab/install/ubuntu/18.04/)
 
+[Разворачиваем Gitlab в виртуальной машине, созданной с помощью Vagrant](/linux/servers/virtual/vagrant/vagrant-gitlab/)
+
+<br/>
+
+## Архив
+
 ### [Инсталляция GITLAB в Centos 6 из пакетов](/linux/servers/devops/gitlab/install/centos/6/)
 
 <br/>

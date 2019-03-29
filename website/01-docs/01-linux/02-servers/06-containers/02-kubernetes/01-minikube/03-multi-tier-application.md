@@ -1,10 +1,20 @@
 ---
 layout: page
-title: Kubernetes - A Multi-Tier Application
-permalink: /linux/servers/containers/kubernetes/multi-tier-application/
+title: Разворачиваем многоуровневое приложение в minikube
+permalink: /linux/servers/containers/kubernetes/minikube/multi-tier-application/
 ---
 
-# Kubernetes - A Multi-Tier Application
+# Разворачиваем многоуровневое приложение в minikube
+
+Оригинальное название: "Kubernetes - A Multi-Tier Application"
+
+Делаю  
+29.03.2019
+
+Прилжение работает!  
+Но разворачивается минут 10.
+
+<br/>
 
 https://www.youtube.com/watch?time_continue=1&v=Tywdpr3tWLo
 
@@ -22,31 +32,38 @@ https://github.com/cloudyuga/rsvpapp
 
 <br/>
 
+    $ mkdir ~/kubernetes-minikube && cd ~/kubernetes-minikube
+
+<br/>
+
     $ vi rsvp-db.yaml
 
 <br/>
 
-    apiVersion: apps/v1
-    kind: Deployment
+```yaml1
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rsvp-db
+  labels:
+    appdb: rsvpdb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      appdb: rsvpdb
+  template:
     metadata:
-      name: rsvp-db
       labels:
         appdb: rsvpdb
     spec:
-      replicas: 1
-      selector:
-        matchLabels:
-          appdb: rsvpdb
-      template:
-        metadata:
-          labels:
-            appdb: rsvpdb
-        spec:
-          containers:
-          - name: rsvp-db
-            image: mongo:3.3
-            ports:
-            - containerPort: 27017
+      containers:
+      - name: rsvp-db
+        image: mongo:3.3
+        ports:
+        - containerPort: 27017
+
+```
 
 <br/>
 
@@ -56,20 +73,24 @@ https://github.com/cloudyuga/rsvpapp
 
 ### Create the Service for MongoDB
 
-\$ vi rsvp-db-service.yaml
+    $ vi rsvp-db-service.yaml
 
-    apiVersion: v1
-    kind: Service
-    metadata:
-      name: mongodb
-      labels:
-        app: rsvpdb
-    spec:
-      ports:
-      - port: 27017
-        protocol: TCP
-      selector:
-        appdb: rsvpdb
+<br/>
+
+```yaml1
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+  labels:
+    app: rsvpdb
+spec:
+  ports:
+  - port: 27017
+    protocol: TCP
+  selector:
+    appdb: rsvpdb
+```
 
 <br/>
 
@@ -111,31 +132,33 @@ https://hub.docker.com/r/teamcloudyuga/rsvpapp/
 
 <br/>
 
-    apiVersion: apps/v1
-    kind: Deployment
+```yaml1
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rsvp
+  labels:
+    app: rsvp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rsvp
+  template:
     metadata:
-      name: rsvp
       labels:
         app: rsvp
     spec:
-      replicas: 1
-      selector:
-        matchLabels:
-          app: rsvp
-      template:
-        metadata:
-          labels:
-            app: rsvp
-        spec:
-          containers:
-          - name: rsvp-app
-            image: teamcloudyuga/rsvpapp
-            env:
-            - name: MONGODB_HOST
-              value: mongodb
-            ports:
-            - containerPort: 5000
-              name: web-port
+      containers:
+      - name: rsvp-app
+        image: teamcloudyuga/rsvpapp
+        env:
+        - name: MONGODB_HOST
+          value: mongodb
+        ports:
+        - containerPort: 5000
+          name: web-port
+```
 
 <br/>
 
@@ -151,20 +174,23 @@ Notice that in the ports section we mentioned the containerPort 5000, and given 
 
 <br/>
 
-    apiVersion: v1
-    kind: Service
-    metadata:
-      name: rsvp
-      labels:
-        app: rsvp
-    spec:
-      type: NodePort
-      ports:
-      - port: 80
-        targetPort: web-port
-        protocol: TCP
-      selector:
-        app: rsvp
+```yaml1
+apiVersion: v1
+kind: Service
+metadata:
+  name: rsvp
+  labels:
+    app: rsvp
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: web-port
+    protocol: TCP
+  selector:
+    app: rsvp
+
+```
 
 <br/>
 
