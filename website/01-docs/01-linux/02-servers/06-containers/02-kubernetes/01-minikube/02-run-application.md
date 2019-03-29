@@ -81,7 +81,7 @@ rc - replicationcontroller
 
 <br/>
 
-![Cats inside minikube](/img/linux/servers/containers/kubernetes/nodejs-cats-app-cats.png "Cats inside minikube"){: .center-image }
+![Cats inside minikube](/img/linux/servers/containers/kubernetes/nodejs-cats-app.png "Cats inside minikube"){: .center-image }
 
 <br/>
 

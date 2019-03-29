@@ -6,7 +6,7 @@ permalink: /linux/servers/devops/jenkins/
 
 # Jenkins
 
-### [Инсталляция Jenkins в ubuntu 18.04 из пакетов](//javadev.org/devtools/ci/jenkins/install/ubuntu/18.04/)
+### [Инсталляция Jenkins в ubuntu 18.04 из пакетов](//javadev.org/devtools/cicd/jenkins/install/ubuntu/18.04/)
 
 <br/>
 

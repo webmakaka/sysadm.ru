@@ -28,9 +28,7 @@ Kubernets он как квантовая механика. Стоит пол г�
 
 ### [Kuberneters на локальном хосте (minikube, cubectl и virtualbox)](/linux/servers/containers/kubernetes/minikube/)
 
-### [Single Master Kubernetes Cluster в виртуалках (vagrant, kubeadm, cubectl)](/linux/servers/containers/kubernetes/kubeadm/)
-
-### [Creating Highly Available Clusters with kubeadm](https://kubernetes.io/docs/setup/independent/high-availability/)
+### [Kuberneters в виртуальных машинах (kubeadm, vagrant и virtualbox)](/linux/servers/containers/kubernetes/kubeadm/)
 
 <br/>
 
