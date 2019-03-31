@@ -62,6 +62,8 @@ spec:
     app: nodejs-cats-app
 ```
 
+<br/>
+
     $ kubectl create -f nodejs-cats-app-svc-nodeport.yaml
 
 <br/>
@@ -92,3 +94,4 @@ spec:
 
     // Если понадобится удалить
     $ kubectl delete svc nodejs-cats-app-nodeport
+    $ kubectl delete rs nodejs-cats-app

@@ -1,13 +1,10 @@
 ---
 layout: page
 title: Linux Containers (lxc) в Centos 6.5 x64
-permalink: /linux/servers/containers/lxc/centos-lxc/
+permalink: /linux/servers/containers/lxc/centos/
 ---
 
-
 # Linux Containers (lxc) в Centos 6.5 x64
-
-
 
 <pre>
 
@@ -329,7 +326,6 @@ Network default has been undefined
 
 </pre>
 
-
 ### Настраиваю маршрутизацию для работы LXC в конфигурации route-mode:
 
 <br/>
@@ -338,7 +334,6 @@ Network default has been undefined
 <div align="center">
 	<img src="http://img.fotografii.org/images/network/Virtual_network_switch_in_routed_mode.png" border="0" alt="LXC network in routed mode">
 </div>
-
 
 <br/>
 <br/>
@@ -501,9 +496,6 @@ rtt min/avg/max/mdev = 6.772/10.618/17.241/4.703 ms
 
 </pre>
 
-
-
-
 <!--
 
 
@@ -531,11 +523,6 @@ iptables -A FORWARD -i eth2 -o eth1 -s 192.168.2.0/24 -d 192.168.1.0/24 -j ACCEP
 echo "ip route add 192.168.1.101 via 192.168.1.11 dev br0" >> /etc/sysconfig/network-scripts/route-br0
 
 -->
-
-
-
-
-
 
 <!--
 
@@ -617,10 +604,6 @@ $ ping 192.168.1.21
 
 -->
 
-
-
-
-
 <!--
 ### Настройка сетевых интерфейсов на хосте
 
@@ -663,10 +646,6 @@ EOF
 
 
 -->
-
-
-
-
 
 <pre>
 
@@ -730,6 +709,5 @@ http://openadmins.ru/blog/kvm-network-iptables
 http://linuxforum.ru/viewtopic.php?id=33307
 http://linuxforum.ru/viewtopic.php?id=34269
 </pre>
-
 
 </div>

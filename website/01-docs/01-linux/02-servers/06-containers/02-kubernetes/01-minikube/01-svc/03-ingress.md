@@ -80,4 +80,4 @@ http://nodejs-cats-app.example.com
 <br/>
 
     // Если не нужно, удалить
-    $ kubectl delete ingress
+    $ kubectl delete ingress nodejs-cats-app-ingress

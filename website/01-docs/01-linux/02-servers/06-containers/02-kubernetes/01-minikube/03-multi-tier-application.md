@@ -119,7 +119,7 @@ The frontend is created using a Python Flask-based microframework. Its source co
 
 Next, we will go through the steps of creating the rsvp frontend.
 
-Docker image
+Docker image  
 https://raw.githubusercontent.com/cloudyuga/rsvpapp/master/Dockerfile
 
 https://hub.docker.com/r/teamcloudyuga/rsvpapp/

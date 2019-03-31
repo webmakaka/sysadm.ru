@@ -137,12 +137,6 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/single-master/
 
 Ждемс...Пока не будет...
 
-    # kubectl get nodes
-    NAME         STATUS   ROLES    AGE   VERSION
-    master.k8s   Ready    master   89s   v1.14.0
-    node1.k8s    Ready    <none>   65s   v1.14.0
-    node2.k8s    Ready    <none>   64s   v1.14.0
-
 <br/>
 
     # kubectl get po -n kube-system
@@ -159,6 +153,14 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/single-master/
     kube-proxy-w4snq                     1/1     Running   0          82s
     kube-proxy-wqrjd                     1/1     Running   0          87s
     kube-scheduler-master.k8s            1/1     Running   0          33s
+
+и
+
+    # kubectl get nodes
+    NAME         STATUS   ROLES    AGE   VERSION
+    master.k8s   Ready    master   89s   v1.14.0
+    node1.k8s    Ready    <none>   65s   v1.14.0
+    node2.k8s    Ready    <none>   64s   v1.14.0
 
 <br/>
 

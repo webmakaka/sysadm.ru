@@ -1,17 +1,15 @@
 ---
 layout: page
-title: Ubuntu Linux Containers (lxc)
-permalink: /linux/servers/containers/lxc/ubuntu-lxc/
+title: Ubuntu Linux Containers (lxc) (Наверное устарело по большей части)
+permalink: /linux/servers/containers/lxc/ubuntu/archive/
 ---
 
-
-# Ubuntu: Linux Containers (lxc)
-
+# Ubuntu: Linux Containers (lxc) (Наверное устарело по большей части)
 
 <pre>
 
 
-marley@webserv:~$ sudo su -
+$ sudo su -
 root@webserv:~# apt-get update
 
 <strong>Подготовка родительской (хост) системы</strong>
@@ -158,7 +156,7 @@ root@server:~# ping 192.168.1.20
 root@server:~# ssh <a class="__cf_email__" href="../../../cdn-cgi/l/email-protection.html" data-cfemail="335e52415f564a73020a011d02050b1d021d0103">[email&#160;protected]</a><script cf-hash='f9e31' type="text/javascript">
 /* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script>
 
-$ hostname
+\$ hostname
 mail.corpX.un
 
 CTRL + D
@@ -176,14 +174,11 @@ CONTAINERS="mail"
 
 -->
 
-
 =======================
 
-
 <strong>Почитать:</strong>
-http://mtaalamu.ru/blog/2044.html
-http://wiki.val.bmstu.ru/doku.php?id=%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BE%D1%82%D0%BA%D0%B0%D0%B7%D0%BE%D1%83%D1%81%D1%82%D0%BE%D0%B9%D1%87%D0%B8%D0%B2%D1%8B%D1%85_unix_%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B9
 
+http://wiki.val.bmstu.ru/doku.php?id=%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BE%D1%82%D0%BA%D0%B0%D0%B7%D0%BE%D1%83%D1%81%D1%82%D0%BE%D0%B9%D1%87%D0%B8%D0%B2%D1%8B%D1%85_unix_%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B9
 
 https://help.ubuntu.com/12.04/serverguide/lxc.html
 
