@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Какие-то попытки разобраться с kubectl и minikube
-permalink: /linux/servers/containers/kubernetes/cubect-minikube/
+permalink: /linux/servers/containers/kubernetes/deprecated/
 ---
 
 # Какие-то попытки разобраться с kubectl и minikube
 
-[Инсталляция kubectl и minikube](/linux/servers/containers/kubernetes/minikube/cubect-minikube-installation/)
+[Инсталляция kubectl и minikube](/linux/servers/containers/kubernetes/install/)
 
 <br/>
     

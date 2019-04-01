@@ -1,15 +1,25 @@
 ---
 layout: page
 title: Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, kubectl) + nginx ingress
-permalink: /linux/servers/containers/kubernetes/kubeadm/single-master-nginx-ingress/
+permalink: /linux/servers/containers/kubernetes/kubeadm/install/single-master/nginx-ingress/
 ---
 
 # Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, kubectl) + nginx ingress
 
+// TODO: Нужно переделать
+
 Делаю  
 29.03.2019
 
-Нужно поднять 3 виртуальные машины:
+<br/>
+
+По материалам из видео индуса:
+
+https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0
+
+<br/>
+
+Нужно поднять 4 виртуальные машины:
 
 <br/>
 
@@ -21,6 +31,18 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/single-master-nginx-ingr
 <br/>
 
 Это будет сделано с помощью <a href="/linux/servers/virtual/vagrant/">Vagrant</a>
+
+<br/>
+Рисунок индуса:
+<br/>
+
+![kubernetes ingress](/img/linux/servers/containers/kubernetes/kubeadm/install/single-master/nginx-ingress/ingress.png "kubernetes ingress"){: .center-image }
+
+<br/>
+Но вроде должно работать вот так, без всяких haproxy:
+<br/>
+
+![kubernetes ingress real](/img/linux/servers/containers/kubernetes/kubeadm/install/single-master/nginx-ingress/ingress-real.png "kubernetes ingress real"){: .center-image }
 
 <br/>
 
@@ -189,7 +211,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/single-master-nginx-ingr
 
     # yum install -y haproxy
 
-
+<br/>
 
     # cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.orig
 

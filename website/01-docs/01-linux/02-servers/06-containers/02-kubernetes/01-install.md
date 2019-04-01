@@ -1,21 +1,71 @@
 ---
 layout: page
-title: Варианты инсталляции kubernetes
+title: Инсталляция kubectl и minikube в ubuntu 18.04
 permalink: /linux/servers/containers/kubernetes/install/
 ---
 
-# Варианты инсталляции kubernetes
+# Инсталляция kubectl и minikube
 
-Kubernetes can be installed using different configurations. The four major installation types are briefly presented below:
+Делаю:  
+28.02.2019
 
--   All-in-One Single-Node Installation
-    With all-in-one, all the master and worker components are installed on a single node. This is very useful for learning, development, and testing. This type should not be used in production. Minikube is one such example.
+<br/>
 
--   Single-Node etcd, Single-Master, and Multi-Worker Installation
-    In this setup, we have a single master node, which also runs a single-node etcd instance. Multiple worker nodes are connected to the master node.
+VirtualBox должен быть установлен. Используется версия VirtualBox 6.0.4
 
--   Single-Node etcd, Multi-Master, and Multi-Worker Installation
-    In this setup, we have multiple master nodes, which work in an HA mode, but we have a single-node etcd instance. Multiple worker nodes are connected to the master nodes.
+<br/>
 
--   Multi-Node etcd, Multi-Master, and Multi-Worker Installation
-    In this mode, etcd is configured in a clustered mode, outside the Kubernetes cluster, and the nodes connect to it. The master nodes are all configured in an HA mode, connecting to multiple worker nodes. This is the most advanced and recommended production setup.
+### Инсталляция клиента kubectl для работы с kubernetes
+
+<br/>
+
+```shell
+
+-- Текущая стабильная версия kubernetes (v1.14.0)
+$ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+
+
+-- Установка
+$ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
+
+```
+
+<br/>
+
+### Инсталляция minikube (виртуальная машина для изучения и тестов) (Устанавливать при необходимости). Лучше сразу ставить кластер.
+
+```shell
+-- Последняя версия (v0.34.1):
+$ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
+
+-- Установка
+$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+
+$ minikube version
+minikube version: v0.34.1
+
+```
+
+### [Kuberneters на локальном хосте (minikube, kubectl и virtualbox)](/linux/servers/containers/kubernetes/minikube/)
+
+<br/>
+
+### [Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/single-master/)
+
+<br/>
+
+### [Microk8s](/linux/servers/containers/kubernetes/microk8s/)
+
+<br/>
+
+### Install Helm (что-то вроде package manager). (Устанавливать при необходимости).
+
+    $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
+
+
+    $ helm version --short --client
+    Client: v2.13.1+g618447c
+
+<br/>
+
+### [Варианты инсталляции kubernetes](/linux/servers/containers/kubernetes/install-types/)

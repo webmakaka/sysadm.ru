@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Single Master Kubernetes Cluster в виртуальных lxc контейнерах (kubeadm, kubectl) (Не заработал)
-permalink: /linux/servers/containers/kubernetes/kubeadm/single-master/lxc/
+permalink: /linux/servers/containers/kubernetes/kubeadm/install/single-master/lxc/
 ---
 
 # Single Master Kubernetes Cluster в виртуальных lxc контейнерах (kubeadm, kubectl) (Не заработал)
