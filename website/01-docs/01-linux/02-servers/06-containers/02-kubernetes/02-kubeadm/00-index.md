@@ -10,10 +10,10 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Изучаем установку и настройку kubernetes в виртуальных машинах и контейнерах](/linux/servers/containers/kubernetes/kubeadm/install/)
 
-<br/>
-
 ### [Using Persistent Volumes and Claims in Kubernetes Cluster (начинаем разбираться)](/linux/servers/containers/kubernetes/kubeadm/persistence/)
 
 ### [Менеджер пакетов helm (начинаем разбираться)](/linux/servers/containers/kubernetes/kubeadm/heml/)
 
 ### [Init Containers in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/init-containers/)
+
+### [DaemonSets](/linux/servers/containers/kubernetes/kubeadm/daemon-sets/)

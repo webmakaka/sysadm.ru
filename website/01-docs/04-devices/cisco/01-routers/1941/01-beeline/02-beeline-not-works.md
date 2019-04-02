@@ -9,7 +9,10 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 <br/>
 
 **Последний раз аналогичная проблема:**<br/>
-05.03.2019
+02.04.2019 - 15 минут
+
+Ранее:<br/>
+05.03.2019 - Интернета не было > 12 часов
 
 <br/>
 <br/>
@@ -26,13 +29,9 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 <br/>
 
-Интернета не было > 12 часов
-
-<br/>
-
 Итого на чей стороне проблемы:
 
-2 (Marley) : 3 (Beeline)
+2 (Marley) : 4 (Beeline)
 
 <br/>
 

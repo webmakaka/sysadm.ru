@@ -32,7 +32,7 @@ https://github.com/bradtraversy/vagrant_lamp_traversy/blob/master/Vagrantfile
 
 ### Наработки админа сайта
 
-[Инсталляция Vargant в Ubuntu 18.04](/linux/servers/virtual/vagrant/installation/ubuntu/)
+[Инсталляция Vargant в Ubuntu 18.04](/linux/servers/virtual/vagrant/install/ubuntu/)
 
 [Команды Vagrant](/linux/servers/virtual/vagrant/commands/)
 
@@ -49,3 +49,5 @@ https://github.com/bradtraversy/vagrant_lamp_traversy/blob/master/Vagrantfile
 [Vagrant и Ansible playbook для подготовки виртуальных машин Virtualbox](/linux/servers/virtual/vagrant/vagrant-ansible-playbook/)
 
 [Разворачиваем Gitlab в виртуальной машине, созданной с помощью Vagrant](/linux/servers/virtual/vagrant/vagrant-gitlab/)
+
+[Разворачиваем Kubernetes кластер с помощью Vagrant](/linux/servers/containers/kubernetes/kubeadm/single-master/)

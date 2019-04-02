@@ -4,7 +4,6 @@ title: CoreOS
 permalink: /linux/servers/containers/coreos/
 ---
 
-
 # CoreOS
 
 <br/>
@@ -15,24 +14,21 @@ permalink: /linux/servers/containers/coreos/
 
 <br/>
 
-
 ### Запуск CoreOS с помощью Vargrant
 
-[Запуск CoreOS с помощью Vargrant](/linux/servers/containers/coreos/vagrant-coreos/)  
-
+[Запуск CoreOS с помощью Vargrant](/linux/servers/containers/coreos/vagrant-coreos/)
 
 <br/>
 
 ### Инсталляция
 
-[VirtualBox и CoreOS](/linux/servers/containers/coreos/installation/virtualbox-coreos/)
+[VirtualBox и CoreOS](/linux/servers/containers/coreos/install/virtualbox-coreos/)
 
-[Инсталляция CoreOS на 2х виртуальных машинах virtualBox](/linux/servers/containers/coreos/installation/virtualbox-coreos-2-machines/)
+[Инсталляция CoreOS на 2х виртуальных машинах virtualBox](/linux/servers/containers/coreos/install/virtualbox-coreos-2-machines/)
 
-[Инсталляция CoreOS на хостовую машину](/linux/servers/containers/coreos/installation/on-host-machine/)
+[Инсталляция CoreOS на хостовую машину](/linux/servers/containers/coreos/install/on-host-machine/)
 
-[Инсталляция Docker Compose на CoreOS](/linux/servers/containers/coreos/installation/docker-compose/)
-
+[Инсталляция Docker Compose на CoreOS](/linux/servers/containers/coreos/install/docker-compose/)
 
 <!-- [Инсталляция Python на CoreOS](https://github.com/sysadm-ru/python-on-coreos/blob/master/install-python-on-coreos.sh) -->
 
@@ -44,20 +40,17 @@ permalink: /linux/servers/containers/coreos/
 
 [Настройка сетевых адаптеров в CoreOS](/linux/servers/containers/coreos/network/)
 
-
 <br/>
 
 ### Update | Upgrade
 
 [update](/linux/servers/containers/coreos/update/)
 
-
 <br/>
 
 ### Получить ключик
 
     $ wget -qO - 'https://discovery.etcd.io/new?size=3'
-
 
 <!-- /	#	ip	-4	addr	|	grep	inet -->
 
@@ -67,11 +60,10 @@ permalink: /linux/servers/containers/coreos/
 
 [CoreOS Container Linux cluster architectures](https://coreos.com/os/docs/latest/cluster-architectures.html)
 
-- Docker dev environment on laptop
-- Small cluster
-- Easy development/testing cluster
-- Production cluster with central services
-
+-   Docker dev environment on laptop
+-   Small cluster
+-   Easy development/testing cluster
+-   Production cluster with central services
 
 <br/>
 
@@ -89,7 +81,6 @@ permalink: /linux/servers/containers/coreos/
 
 [Пример 2 (Small cluster)](/linux/servers/containers/coreos/example/02/)
 
-
 <br/>
 
 **Easy development/testing cluster**
@@ -98,10 +89,7 @@ permalink: /linux/servers/containers/coreos/
 
 <img src="https://coreos.com/os/docs/latest/img/dev.png" alt="Easy development/testing cluster">
 
-
 [Пример 3 (Easy development/testing cluster)](/linux/servers/containers/coreos/example/03/)
-
-
 
 <br/>
 
@@ -115,25 +103,17 @@ https://coreos.com/os/docs/latest/cloud-config.html
 
 https://coreos.com/validate/
 
-
 <br/>
 
 ### Clustering Guide
 
 https://coreos.com/etcd/docs/latest/clustering.html
 
-
-
 <br/>
-
 
 ### CoreOS Видеокурсы
 
 [здесь](/linux/servers/containers/coreos/video-courses/)
-
-
-
-
 
 <br/>
 <br/>
@@ -143,18 +123,14 @@ https://coreos.com/etcd/docs/latest/clustering.html
 [Команды (пока разбираемся)](/linux/servers/containers/coreos/commands/)  
 [cloud-config (пока разбираемся)](/linux/servers/containers/coreos/cloud-config/)
 
-
 confd:  
 https://github.com/kelseyhightower/confd
-
 
 <br/><br/>
 
 **Возможно, полезные статьи по CoreOS:**
 
-
 <ul>
-
 
     <li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-fleet-and-fleetctl-to-manage-your-coreos-cluster" rel="nofollow">How To Use Fleet and Fleetctl to Manage your CoreOS Cluster</a></li>
 

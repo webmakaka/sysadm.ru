@@ -1,9 +1,8 @@
 ---
 layout: page
 title: Инсталляция CoreOS в virtualBox
-permalink: /linux/servers/containers/coreos/installation/virtualbox-coreos/
+permalink: /linux/servers/containers/coreos/install/virtualbox-coreos/
 ---
-
 
 # Подготовка виртуального жесткого диска virtualbox с coreos
 
@@ -43,13 +42,11 @@ permalink: /linux/servers/containers/coreos/installation/virtualbox-coreos/
 
     $ wget https://raw.github.com/coreos/scripts/master/contrib/create-basic-configdrive
 
-
 Далее я добавляю настройки для сети. Имеет смысл, если нет DHCP сервера, который выдаст виртуальной машине какой-нибудь IP адрес. Если такой сервер есть, то можно и не далать этого. Или даже лучше не делать.
 
 Главное правильно задать в конфиге имя сетевого адаптера enp0s3.
 
     $ vi create-basic-configdrive
-
 
 После:
 
@@ -69,7 +66,6 @@ permalink: /linux/servers/containers/coreos/installation/virtualbox-coreos/
         Address=192.168.1.11/24
         Gateway=192.168.1.1
 
-
 <br/>
 
     $ chmod +x create-basic-configdrive
@@ -78,7 +74,6 @@ permalink: /linux/servers/containers/coreos/installation/virtualbox-coreos/
 
     $ ./create-basic-configdrive -H my_vm01 -S ~/.ssh/id_rsa.pub
     Success! The config-drive image was created on /mnt/dsk0/my_vm01.iso
-
 
 <br/>
 
@@ -96,19 +91,15 @@ Vdi диск подключаю как жесткий диск. ISO как CD-RO
 
 **Внимание!!! Чтобы узнать по какому IP подключаться. Нужно в окне приглашения (где нужно ввести login) несколько раз нажать на [Enter]. Появится окно, в котором будет написано, к какому IP подлючаться**
 
-
     $ ssh core@192.168.1.11
     Last login: Sat Jan 16 12:12:40 2016 from 192.168.1.5
     CoreOS stable (835.9.0)
-
 
 Docker уже установлен.
 Мне пока больше ничего и не нужно.
 
     $ docker -v
     Docker version 1.8.3, build cedd534-dirty
-
-
 
 <br/><br/>
 

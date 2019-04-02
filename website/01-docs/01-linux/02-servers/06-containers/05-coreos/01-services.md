@@ -6,7 +6,6 @@ permalink: /linux/servers/containers/coreos/services/
 
 # Основные сервисы CoreOS
 
-
 <br/>
 
 ### Etcd
@@ -29,19 +28,15 @@ Etcd - похоже на Consul и ZooKeeper. (Лично я ничего из �
     member ecd0a5d052505a2f is healthy: got healthy result from http://172.17.8.102:2379
     cluster is healthy
 
-
-
 <br/>
 
 ![etcd](/img/linux/servers/containers/coreos/etcd.png "etcd"){: .center-image }
-
 
 <br/>
 
 <br/>
 
 ![coreos cluster](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic1.png "coreos cluster"){: .center-image }
-
 
 <br/>
 
@@ -51,9 +46,8 @@ Etcd - похоже на Consul и ZooKeeper. (Лично я ничего из �
 
 **Аналоги:**
 
-- consul
-- ZooKeeper
-
+-   consul
+-   ZooKeeper
 
 <br/>
 
@@ -61,25 +55,18 @@ Etcd - похоже на Consul и ZooKeeper. (Лично я ничего из �
 
 Fleet — (коротко и упрощенно - distributed systemd) это «надстройка» над systemd, которая переносит управление службами с локальной машины на уровень кластера. Fleet хранит конфигурацию служб в виде юнитов systemd (в etcd), автоматически доставляет ее на локальные машины, запускает, перезапускает (при необходимости), останавливает службы на машинах кластера. Fleet умеет планировать запуск служб исходя из загруженности конкретных машин кластера. Ему можно сказать, что конкретную службу нужно запускать только на определенных машинах и т.д.
 
-
-
 <br/>
 
 ![fleetctl](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic3.png "fleetctl"){: .center-image }
 
-
 <br/>
-
 
     $ fleetctl list-machines
     $ fleetctl start redis.service
     $ fleetctl journal redis.service
     $ fleetctl --tunnel=10.2.1.1 list-machines
 
-
-
 <br/>
-
 
     $ fleetctl list-machines
     MACHINE		IP		METADATA
@@ -89,7 +76,7 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
 
 <br/>
 
-    $ fleetctl list-units   
+    $ fleetctl list-units
     UNIT	MACHINE	ACTIVE	SUB
 
 
@@ -99,8 +86,7 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
 
     $ fleetctl list-machines
 
-
-
+<br/>
 
 Let's overview the specific options of fleet for the [X-Fleet] section:
 
@@ -109,7 +95,6 @@ Let's overview the specific options of fleet for the [X-Fleet] section:
     •	 MachineMetadata : This limits eligible machines to those hosts with this specific metadata.
     •	 Conflicts : This prevents a unit from being collocated with other units using glob-matching on other unit names.
     •	 Global : Schedule this unit on all machines in the cluster. A unit is considered invalid if options other than MachineMetadata are provided alongside Global=true.
-
 
 <br/>
 
@@ -137,7 +122,7 @@ Fleetctl commands:
 
 **Аналоги:**
 
-- Kubernetes - более продвинутый аналог fleet
+-   Kubernetes - более продвинутый аналог fleet
 
 <br/>
 
@@ -145,22 +130,17 @@ Fleetctl commands:
 
 flannel - виртуальная сеть, которая предоставляет подсеть, чтобы контейнеры могли между собой обмениваться пакетами. (я так перевел / понял)
 
-
 ![fleetctl](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic5.png "fleetctl"){: .center-image }
 
-
 <br/>
-
 
 <br/>
 
 ![fleetctl](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic6.png "fleetctl"){: .center-image }
 
-
 <br/>
 
 ![fleetctl](/img/linux/servers/containers/coreos/getting-started-with-coreos/pic7.png "fleetctl"){: .center-image }
-
 
 <br/>
 
@@ -192,42 +172,41 @@ flannel - виртуальная сеть, которая предоставля
 
     $ journalctl -u	etcd2.service -o json-pretty :	This lists the logs of etcd2.service in JSON-formatted output.
 
-
 <br/>
 
+### Important files and directories
 
-### Important	files	and	directories
+-   Knowing these files and directories helps with debugging the issues:
 
-* Knowing	these	files	and	directories	helps	with	debugging	the	issues:
+-   Systemd unit file location - /usr/lib64/systemd/system .
 
-* Systemd	unit	file	location	-	 /usr/lib64/systemd/system .
+-   Network unit files - /usr/lib64/systemd/network .
 
-* Network	unit	files	 -	/usr/lib64/systemd/network .
+-   User-written unit files and drop-ins to change the default parameters -
+    /etc/systemd/system . Drop-ins for specific configuration changes can be done
+    using the configuration file under the specific service directory. For example, to
+    modify the fleet configuration, create the fleet.service.d directory and put the
+    configuration file in this directory.
 
-* User-written	unit	files	and	drop-ins	to	change	the	default	parameters	 -
-/etc/systemd/system .	Drop-ins	for	specific	configuration	changes	can	be	done
-using	the	configuration	file	under	the	specific	service	directory.	For	example,	to
-modify	the	fleet	configuration,	create	the	 fleet.service.d 	directory	and	put	the
-configuration	file	in	this	directory.
+-   User-written network unit files - /etc/systemd/network .
 
-* User-written	network	unit	files	 -	/etc/systemd/network .
+-   Runtime environment variables and drop-in configuration of individual components
+    such as etcd and fleet - /run/systemd/system/ .
 
-* Runtime	environment	variables	and	drop-in	configuration	of	individual	components
-such	as	 etcd 	and	 fleet 	 -	/run/systemd/system/ .
+-   The vagrantfile user data containing the cloud-config user data used with Vagrant - /var/lib/coreos-vagrant .
 
-* The	vagrantfile	user	data	containing	the	 cloud-config 	user	data	used	with	Vagrant	 - /var/lib/coreos-vagrant .
+-   The systemd-journald logs - /var/log/journal .
 
-* The	 systemd-journald 	logs	 -	/var/log/journal .
+-   cloud-config.yaml associated with providers such as Vagrant, AWS, and GCE-
+    /usr/share/oem . (CoreOS first executes this cloud-config and then executes the
+    user-provided cloud-config .)
 
-* cloud-config.yaml 	associated	with	providers	such	as	Vagrant,	AWS,	and	 GCE-
-/usr/share/oem .	(CoreOS	first	executes	this	 cloud-config 	and	then	executes	the
-user-provided	 cloud-config .)
+-   Release channel and update strategy - /etc/coreos/update.conf .
 
-* Release	channel	and	update	strategy	 -	/etc/coreos/update.conf .
+-   The public and private IP address ( COREOS_PUBLIC_IPV4 and COREOS_PRIVATE_IPV4 )
 
-* The	public	and	private	IP	address	( COREOS_PUBLIC_IPV4 	and	 COREOS_PRIVATE_IPV4 )
--	/etc/environment .
+*   /etc/environment .
 
-* The	machine	ID	for	the	particular CoreOS node - /etc/machine-id .
+-   The machine ID for the particular CoreOS node - /etc/machine-id .
 
-* The	flannel	network	configuration	 -	/run/flannel/ .
+-   The flannel network configuration - /run/flannel/ .

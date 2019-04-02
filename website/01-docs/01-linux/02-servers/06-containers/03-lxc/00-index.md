@@ -6,44 +6,10 @@ permalink: /linux/servers/containers/lxc/
 
 # Linux Containers (LXC)
 
-<br/>
-Ubuntu
-<br/>
-
-<ul>
-	<li><a href="/linux/servers/containers/lxc/ubuntu/">Ubuntu LXC</a></li>
-</ul>
+У lxc есть преимущества перед virtualbox, т.к. не приходится задействовать дополнительный слой для виртуализации. В моем случае vagrant скрипты настолько прижились, что я к lxc не обращаюсь и предпочитаю более медленные и более жрущие ресурсы виртуальные машины от virtualbox.
 
 <br/>
-Centos
-<br/>
 
-<ul>
-	<li><a href="/linux/servers/containers/lxc/centos/">Linux Containers (lxc) в Centos 6.5 x64 (libvirt)</a></li>
-</ul>
+### [Ubuntu](/linux/servers/containers/lxc/ubuntu/)
 
-<br/>
-<hr>
-<br/>
-
-Полезные статьи по LXC<br/>
-http://vasilisc.com/lxc-1-0-blog-post-series
-
-lxc — нативные контейнеры Linux<br/>
-http://habrahabr.ru/post/74808/
-
-Наш опыт тестирования LXC (Linux Containers) на примере Debian Wheezy<br/>
-http://habrahabr.ru/company/centosadmin/blog/202482/
-
-Создание LXC-контейнеров с общей файловой базой<br/>
-http://habrahabr.ru/post/181247/
-
-<br/>
-<hr>
-<br/>
-
-Скрипт бэкапа виртуальных машин в libvirt с удалённого сервера<br/>
-http://linux.weirded.ru/2013/04/libvirt.html
-
-Exploring LXC Networking<br/>
-http://containerops.org/2013/11/19/lxc-networking/
+### [Centos 6.5](/linux/servers/containers/lxc/centos/)

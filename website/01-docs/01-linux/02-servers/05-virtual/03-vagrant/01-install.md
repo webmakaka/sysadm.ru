@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Vargant в Ubuntu 18.04
-permalink: /linux/servers/virtual/vagrant/installation/ubuntu/
+permalink: /linux/servers/virtual/vagrant/install/ubuntu/
 ---
 
 # Инсталляция Vargant в Ubuntu 18.04

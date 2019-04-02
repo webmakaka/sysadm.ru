@@ -7,17 +7,19 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/single-master/
 # Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster
 
 Делаю  
-01.04.2019
+02.04.2019
 
 <br/>
 
-Предполагается что уже установлен VirtualBox, Vagrant, kubectl
-
-https://sysadm.ru/linux/servers/containers/kubernetes/install/
+Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>
 
 <br/>
 
-Разворачиваются 3 виртуалки по 2GB оперативной памяти.
+Разворачиваются 3 виртуалки по 2GB оперативной памяти. По идее, на узлы вполне достаточно и 1GB.
+
+<br/>
+
+### На хост машине
 
 <br/>
 
@@ -47,9 +49,8 @@ https://sysadm.ru/linux/servers/containers/kubernetes/install/
 
 <br/>
 
+    // Пароль root: kubeadmin
     $ scp root@master:/etc/kubernetes/admin.conf ~/.kube/config
-
-Пароль root: kubeadmin
 
 <br/>
 

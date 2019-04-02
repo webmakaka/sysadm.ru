@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция CoreOS на хостовую машину
-permalink: /linux/servers/containers/coreos/installation/on-host-machine/
+permalink: /linux/servers/containers/coreos/install/on-host-machine/
 ---
 
 # Инсталляция CoreOS на хостовую машину
@@ -18,7 +18,6 @@ permalink: /linux/servers/containers/coreos/installation/on-host-machine/
 
     $ cat ~/.ssh/id_rsa.pub
 
-
 <br/>
 
 ### На Ubuntu
@@ -31,17 +30,15 @@ permalink: /linux/servers/containers/coreos/installation/on-host-machine/
     # wget https://raw.githubusercontent.com/coreos/init/master/bin/coreos-install
     # chmod +x coreos-install
 
-
 <br/>
 
 ### Подготавливю минимальный конфиг
 
 https://bitbucket.org/sysadm-ru/coreos-cloud-config/src/master/cloud-config.yaml
 
-
 <br/>
 
-С названием сетевых интерфейсов пока не разобрался как они задаются. Поэтому несколько раз переделывал все шаги, пока не нашел подходящий. Если покопаться в интернете, то можно найти совершенно разные варианты задания имен сетевых интерфейсов.  В компьютере установлено 2, почему enp4s1, пока хз.
+С названием сетевых интерфейсов пока не разобрался как они задаются. Поэтому несколько раз переделывал все шаги, пока не нашел подходящий. Если покопаться в интернете, то можно найти совершенно разные варианты задания имен сетевых интерфейсов. В компьютере установлено 2, почему enp4s1, пока хз.
 
 Думаю, что можно узнать mac адрес сетевой карты и прописать что-то похожее на следующее:
 
@@ -60,14 +57,11 @@ https://bitbucket.org/sysadm-ru/coreos-cloud-config/src/master/cloud-config.yaml
 
 Тем у кого настроен DHCP, имеет смысл выпилить блок с явным указанием настроек сети.
 
-
 <br/>
 
 ### Проверяю его валидность
 
 https://coreos.com/validate/
-
-
 
 <br/>
 
@@ -77,16 +71,13 @@ https://coreos.com/validate/
 
     # apt-get install -y gawk
 
-
 // Скачиваю конфиг приведенный выше. Разумеется, в него нужно подставить свой rsa ключ.
 
     # wget https://bitbucket.org/sysadm-ru/coreos-cloud-config/raw/304e0cfe50b8492e7d827ed93527ed326f582959/cloud-config.yaml
 
-
 // Запускаю инсталляцию
 
     # ./coreos-install -d /dev/sda -C stable -c ./cloud-config.yaml
-
 
 // Установка успешно завершается.
 
@@ -111,18 +102,14 @@ https://coreos.com/validate/
     $ git --version
     git version 2.7.3
 
-
-
 <br/>
 <br/>
 
 ### Возможно, полезная информация
 
-
 Сloud config можно отредактировать после установки, внеся правки в файл.
 
     # vi /var/lib/coreos-install/user_data
-
 
 <br/>
 
@@ -131,7 +118,6 @@ https://coreos.com/validate/
 https://deis.com/blog/2015/coreos-on-virtualbox  
 https://coreos.com/os/docs/latest/installing-to-disk.html  
 https://coreos.com/os/docs/latest/booting-with-iso.html  
-http://www.youtube.com/watch?v=yiWa0KFJDfI  
-
+http://www.youtube.com/watch?v=yiWa0KFJDfI
 
 http://www.liberidu.com/blog/2015/04/11/basic-newbie-install-coreos-on-virtualbox-getting-started-with-docker/

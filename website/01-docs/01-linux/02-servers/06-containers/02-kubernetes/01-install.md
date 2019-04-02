@@ -15,7 +15,7 @@ VirtualBox должен быть установлен. Используется 
 
 <br/>
 
-### Инсталляция клиента kubectl для работы с kubernetes
+### Инсталляция kubectl (клиента для работы с kubernetes)
 
 <br/>
 
@@ -60,8 +60,10 @@ minikube version: v0.34.1
 
 ### Install Helm (что-то вроде package manager). (Устанавливать при необходимости).
 
-    $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
+    // Посмотреть релизы
+    https://github.com/helm/helm/releases
 
+    $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
 
     $ helm version --short --client
     Client: v2.13.1+g618447c
