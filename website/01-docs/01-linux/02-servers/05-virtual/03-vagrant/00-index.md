@@ -50,4 +50,4 @@ https://github.com/bradtraversy/vagrant_lamp_traversy/blob/master/Vagrantfile
 
 [Разворачиваем Gitlab в виртуальной машине, созданной с помощью Vagrant](/linux/servers/virtual/vagrant/vagrant-gitlab/)
 
-[Разворачиваем Kubernetes кластер с помощью Vagrant](/linux/servers/containers/kubernetes/kubeadm/single-master/)
+[Разворачиваем Kubernetes кластер с помощью Vagrant](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)

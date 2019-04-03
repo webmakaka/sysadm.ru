@@ -6,11 +6,11 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 # Kuberneters в виртуальных машинах и контейнерах
 
-### [Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/single-master/)
+### [Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
 
 ### [Изучаем установку и настройку kubernetes в виртуальных машинах и контейнерах](/linux/servers/containers/kubernetes/kubeadm/install/)
 
-### [Using Persistent Volumes and Claims in Kubernetes Cluster (начинаем разбираться)](/linux/servers/containers/kubernetes/kubeadm/persistence/)
+### [Using Persistent Volumes and Claims in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/persistence/)
 
 ### [Менеджер пакетов helm (начинаем разбираться)](/linux/servers/containers/kubernetes/kubeadm/heml/)
 

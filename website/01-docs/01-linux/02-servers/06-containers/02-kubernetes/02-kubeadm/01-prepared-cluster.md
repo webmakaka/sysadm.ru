@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster
-permalink: /linux/servers/containers/kubernetes/kubeadm/single-master/
+permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 ---
 
 # Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster
 
 Делаю  
-02.04.2019
+03.04.2019
 
 <br/>
 

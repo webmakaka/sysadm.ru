@@ -50,7 +50,7 @@ minikube version: v0.34.1
 
 <br/>
 
-### [Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/single-master/)
+### [Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
 
 <br/>
 

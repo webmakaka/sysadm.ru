@@ -203,18 +203,12 @@ http://192.168.0.11:30111/
 
 <br/>
 
-### Может быть полезным - литература:
-
-https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/
-
-<br/>
-
 ### Использование кластера с локальной машины
 
     Для этого с помощью следующей ниже команды необходимо скопировать
     файл /etc/kubernetes/admin.conf с ведущего узла на локальную машину:
 
-    $ scp root@192.168.0.10:/etc/kubernetes/admin.conf ~/.kube/config2
+    $ scp root@master.k8s:/etc/kubernetes/admin.conf ~/.kube/config
 
 <br/>
 
@@ -241,3 +235,19 @@ https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/
     firewall-cmd --permanent --add-port=6783/tcp
     firewall-cmd  --reload
     modprobe br_netfilter
+
+<br/>
+
+### Может быть полезным:
+
+https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/
+
+<br/>
+
+Видео:
+
+https://www.youtube.com/watch?v=Araf8JYQn3w&list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0&index=2
+
+И дока к ней:
+
+https://github.com/justmeandopensource/kubernetes/blob/master/docs/install-cluster.md
