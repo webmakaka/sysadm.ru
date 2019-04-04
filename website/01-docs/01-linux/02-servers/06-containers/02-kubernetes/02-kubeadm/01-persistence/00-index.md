@@ -11,3 +11,5 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/
 ### [NFS](/linux/servers/containers/kubernetes/kubeadm/persistence/nfs/)
 
 ### [Statefulsets](/linux/servers/containers/kubernetes/kubeadm/persistence/statefulsets/)
+
+### [Dynamically NFS provisioning](/linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-provisioning/)

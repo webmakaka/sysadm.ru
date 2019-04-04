@@ -62,6 +62,16 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 
 <br/>
 
+### Получить дополнительную информацию по кластеру
+
+    $ kubectl get cs
+    NAME                 STATUS    MESSAGE             ERROR
+    scheduler            Healthy   ok
+    controller-manager   Healthy   ok
+    etcd-0               Healthy   {"health":"true"}
+
+<br/>
+
     $ kubectl get po -n kube-system
     NAME                                 READY   STATUS    RESTARTS   AGE
     coredns-fb8b8dccf-74mcz              1/1     Running   0          10m
@@ -76,3 +86,15 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
     kube-proxy-trvqn                     1/1     Running   0          8m
     kube-proxy-wfbsl                     1/1     Running   0          4m53s
     kube-scheduler-master.k8s            1/1     Running   0          9m47s
+
+<br/>
+
+    $ kubectl version --short
+    Client Version: v1.14.0
+    Server Version: v1.14.0
+
+<br/>
+
+    $ kubectl cluster-info
+    Kubernetes master is running at https://192.168.0.10:6443
+    KubeDNS is running at https://192.168.0.10:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy

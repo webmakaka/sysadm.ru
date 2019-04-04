@@ -17,3 +17,24 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 ### [Init Containers in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/init-containers/)
 
 ### [DaemonSets](/linux/servers/containers/kubernetes/kubeadm/daemon-sets/)
+
+<!--
+
+
+kubectl run nginx --image nginx
+
+kubectl get pods
+
+kubectl port-forward nginx-sdfdf 8080:80
+
+kubectl logs nginx-sdfdf
+
+kubectl scale deploy nginx --replicas2
+
+
+kubectl expose deployment nginx --type NodePort --port 80
+
+
+kubectl describe svc nginx
+
+-->

@@ -4,7 +4,7 @@ title: Kubernetes Statefulsets
 permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/statefulsets/
 ---
 
-Kubernetes Statefulsets
+# Kubernetes Statefulsets
 
 Делаю: 03.04.2019
 
@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=r_ZEpPTCcPE&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Тоже самое, что и в NFS
+Тоже самое, что и в <a href="/linux/servers/containers/kubernetes/kubeadm/persistence/nfs/">NFS</a>, только
 
     $ sudo mkdir -p /srv/nfs/kubedata/{pv0,pv1,pv2,pv3,pv4}
 

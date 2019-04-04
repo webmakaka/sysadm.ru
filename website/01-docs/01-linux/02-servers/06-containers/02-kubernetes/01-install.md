@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/install/
 # Инсталляция kubectl и minikube
 
 Делаю:  
-28.02.2019
+04.04.2019
 
 <br/>
 

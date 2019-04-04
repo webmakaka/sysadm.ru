@@ -76,6 +76,7 @@ end
     $ sudo systemctl start nfs-server
 
     $ sudo mkdir -p /srv/nfs/kubedata
+
     $ sudo chmod -R 777 /srv/nfs
 
 <br/>
@@ -115,7 +116,8 @@ end
     # ls /mnt/
     index.html
 
-<!-- # umount /mnt -->
+    // kubernetes может сам смонтировать разделы
+    # umount /mnt
 
 <br/>
 
