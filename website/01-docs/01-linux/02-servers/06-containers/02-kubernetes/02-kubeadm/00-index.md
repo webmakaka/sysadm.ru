@@ -6,35 +6,20 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 # Kuberneters в виртуальных машинах и контейнерах
 
-### [Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
+### [Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
 
-### [Изучаем установку и настройку kubernetes в виртуальных машинах и контейнерах](/linux/servers/containers/kubernetes/kubeadm/install/)
+### [Изучаем установку и настройку Kubernetes Cluster в виртуальных машинах и контейнерах](/linux/servers/containers/kubernetes/kubeadm/install/)
 
-### [Using Persistent Volumes and Claims in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/persistence/)
-
-### [Менеджер пакетов helm (начинаем разбираться)](/linux/servers/containers/kubernetes/kubeadm/heml/)
-
-### [Init Containers in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/init-containers/)
+### [Kubernetes Pods, Replicasets & Deployments](/linux/servers/containers/kubernetes/kubeadm/pods-replicasets-deployments/)
 
 ### [DaemonSets](/linux/servers/containers/kubernetes/kubeadm/daemon-sets/)
 
-<!--
+### [Init Containers in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/init-containers/)
 
+### [Using Persistent Volumes and Claims in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/persistence/)
 
-kubectl run nginx --image nginx
+### [MetalLB Load Balancer in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/)
 
-kubectl get pods
+### [Ingress](/linux/servers/containers/kubernetes/kubeadm/ingress/)
 
-kubectl port-forward nginx-sdfdf 8080:80
-
-kubectl logs nginx-sdfdf
-
-kubectl scale deploy nginx --replicas2
-
-
-kubectl expose deployment nginx --type NodePort --port 80
-
-
-kubectl describe svc nginx
-
--->
+### [Менеджер пакетов helm (начинаем разбираться)](/linux/servers/containers/kubernetes/kubeadm/heml/)
