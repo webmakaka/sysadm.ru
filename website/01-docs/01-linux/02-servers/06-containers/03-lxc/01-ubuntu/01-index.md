@@ -153,8 +153,7 @@ mail       18252 pts/1    00:00:00 getty
 
 
 root@server:~# ping 192.168.1.20
-root@server:~# ssh <a class="__cf_email__" href="../../../cdn-cgi/l/email-protection.html" data-cfemail="335e52415f564a73020a011d02050b1d021d0103">[email&#160;protected]</a><script cf-hash='f9e31' type="text/javascript">
-/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script>
+root@server:~# ssh marley@192.168.1.20
 
 \$ hostname
 mail.corpX.un
