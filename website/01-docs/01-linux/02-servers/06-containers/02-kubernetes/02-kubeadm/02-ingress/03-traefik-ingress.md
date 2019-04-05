@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=A_PjjCM1eLA
 Рисунок индуса:
 <br/>
 
-![kubernetes ingress](/img/linux/servers/containers/kubernetes/kubeadm/ingress/nginx-ingress/ingress.png "kubernetes ingress"){: .center-image }
+![kubernetes ingress](/img/linux/servers/containers/kubernetes/kubeadm/ingress/ingress.png "kubernetes ingress"){: .center-image }
 
 <br/>
 

@@ -9,6 +9,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/install/single-master/lx
 Делаю  
 30.03.2019
 
+(Нужно переделать. Использовать lxc на железке)
+
 <br/>
 
 **По материалам:**
@@ -27,7 +29,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/install/single-master/lx
 
 <br/>
 
-    $ $ git clone https://github.com/justmeandopensource/vagrant .
+    $ git clone https://github.com/justmeandopensource/vagrant .
 
     $ cd vagrant/vagrantfiles/ubuntu18/
 
@@ -214,16 +216,7 @@ used_by: []
 
     # kubectl delete deploy nginx
 
-```
-
-
-
-
-
-
-
-
-```
+<br/>
 
     # kubectl get nodes
     NAME       STATUS   ROLES    AGE   VERSION
@@ -312,12 +305,7 @@ backend http_back
 
     # kubectl create -f daemon-set/nginx-ingress.yaml
 
-
-
     # kubectl get all -n nginx-ingress
-
-
-
 
     $ mkdir ~/kubernetes-lxc && cd ~/kubernetes-lxc
     $ git clone https://github.com/justmeandopensource/kubernetes .
@@ -361,6 +349,8 @@ backend http_back
     # kubectl create -f ingress-resource-2.yaml
 
     # kubectl describe ing ingress-resource-2
+
+<br/>
 
 На клиенте в
 /etc/hosts

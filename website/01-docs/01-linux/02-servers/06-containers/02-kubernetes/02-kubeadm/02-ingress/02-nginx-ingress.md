@@ -17,13 +17,13 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-![kubernetes ingress](/img/linux/servers/containers/kubernetes/kubeadm/ingress/nginx-ingress/ingress.png "kubernetes ingress"){: .center-image }
+![kubernetes ingress](/img/linux/servers/containers/kubernetes/kubeadm/ingress/ingress.png "kubernetes ingress"){: .center-image }
 
 <br/>
 Но вроде должно работать вот так, без всяких haproxy:
 <br/>
 
-![kubernetes ingress real](/img/linux/servers/containers/kubernetes/kubeadm/ingress/nginx-ingress/ingress-real.png "kubernetes ingress real"){: .center-image }
+![kubernetes ingress real](/img/linux/servers/containers/kubernetes/kubeadm/ingress/ingress-real.png "kubernetes ingress real"){: .center-image }
 
 <br/>
 
