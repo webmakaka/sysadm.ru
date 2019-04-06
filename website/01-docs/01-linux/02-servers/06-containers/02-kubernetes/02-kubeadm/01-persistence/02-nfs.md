@@ -6,7 +6,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/nfs/
 
 # NFS Persistent Volume in Kubernetes Cluster
 
-Делаю: 02.04.2019
+Делаю: 06.04.2019
 
 По материалам индуса:
 
@@ -78,6 +78,7 @@ end
     $ sudo mkdir -p /srv/nfs/kubedata
 
     $ sudo chmod -R 777 /srv/nfs
+    $ sudo chown nobody: /srv/nfs/kubedata
 
 <br/>
 
@@ -85,7 +86,13 @@ end
 
     $ sudo vi /etc/exports
 
+<!--
+
     /srv/nfs/kubedata *(rw,sync,no_subtree_check,insecure)
+
+-->
+
+    /srv/nfs/kubedata *(rw,sync,no_subtree_check,no_root_squash,no_all_squash,insecure)
 
 На youtube под видео, индусы предлагают решение, чтобы не использовать insecure.
 

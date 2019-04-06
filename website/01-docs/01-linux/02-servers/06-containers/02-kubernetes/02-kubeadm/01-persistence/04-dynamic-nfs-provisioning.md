@@ -6,7 +6,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-
 
 ### Dynamically NFS provisioning
 
-Делаю: 04.04.2019
+Делаю: 06.04.2019
 
 <br/>
 
@@ -20,27 +20,23 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Тоже самое, что и в <a href="/linux/servers/containers/kubernetes/kubeadm/persistence/nfs/">NFS</a>, только
-
-    $ sudo vi /etc/exports
-
-    /srv/nfs/kubedata *(rw,sync,no_subtree_check,no_root_squash,no_all_squash,insecure)
+Тоже самое, что и в <a href="/linux/servers/containers/kubernetes/kubeadm/persistence/nfs/">NFS</a>
 
 <br/>
 
-    $ sudo chown nobody: /srv/nfs/kubedata
-
-    $ sudo exportfs -rav
-
-<br/>
+### Подготавливаем кластер для работы с NFS. (выполняем команды на хост машине)
 
     $ kubectl create -f https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/rbac.yaml
 
-    $ kubectl get clusterrole,clusterrolebinding,role,rolebinding
+<br/>
 
     $ kubectl get clusterrole,clusterrolebinding,role,rolebinding | grep nfs
 
+<br/>
+
     $ kubectl create -f https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/class.yaml
+
+<br/>
 
     $ kubectl get storageclass
     NAME                  PROVISIONER       AGE
@@ -48,7 +44,7 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-    $ mkdir ~/tmp && cd ~/tmp/
+    $ mkdir -p ~/tmp/dynamic-nfs-provisioning/ && cd ~/tmp/dynamic-nfs-provisioning/
 
     $ curl -LJO https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/deployment.yaml
 
@@ -56,7 +52,7 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
     $ vi deployment.yaml
 
-    <<NFS Server IP>> меняю на 192.168.0.6
+    <<NFS Server IP>> меняю на 192.168.0.6 (в 2 местах)
 
 <br/>
 
@@ -84,6 +80,8 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
     managed-nfs-storage   example.com/nfs   9m3s
 
 <br/>
+
+### Создаем PVC
 
     $ vi 4-pvc-nfs.yaml
 
@@ -122,7 +120,7 @@ spec:
 
 <br/>
 
-### Пробуем
+### Пробуем запустить контейнер
 
     $ vi 4-busybox-pv-hostpath.yaml
 
@@ -210,7 +208,8 @@ spec:
 
 <br/>
 
-### Удаляем
+### Удаляем, когда надоело играться
 
     $ kubectl delete pod busybox
     $ kubectl delete pvc --all
+    $ kubectl delete deploy nfs-client-provisioner

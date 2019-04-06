@@ -12,6 +12,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Kubernetes Pods, Replicasets & Deployments](/linux/servers/containers/kubernetes/kubeadm/pods-replicasets-deployments/)
 
+### [Kubernetes Namespaces & Contexts](/linux/servers/containers/kubernetes/kubeadm/namespaces-and-contexts/)
+
 ### [DaemonSets](/linux/servers/containers/kubernetes/kubeadm/daemon-sets/)
 
 ### [Init Containers in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/init-containers/)
@@ -22,4 +24,4 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Ingress](/linux/servers/containers/kubernetes/kubeadm/ingress/)
 
-### [Менеджер пакетов helm (начинаем разбираться)](/linux/servers/containers/kubernetes/kubeadm/heml/)
+### [Менеджер пакетов helm. Запуск Jenkins в kuberntes с помощью heml](/linux/servers/containers/kubernetes/kubeadm/heml/)

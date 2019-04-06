@@ -1,52 +1,156 @@
 ---
 layout: page
-title: Менеджер пакетов helm (начинаем разбираться)
+title: Менеджер пакетов helm. Запуск Jenkins в kuberntes с помощью heml
 permalink: /linux/servers/containers/kubernetes/kubeadm/heml/
 ---
 
-# Менеджер пакетов helm (начинаем разбираться)
+# Менеджер пакетов helm. Запуск Jenkins в kuberntes с помощью heml
+
+<br/>
+
+Делаю: 06.04.2019
 
 <br/>
 
 По материалам из видео индуса:
 
-https://www.youtube.com/watch?v=HTj3MMZE6zg&index=25&list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0
+https://www.youtube.com/watch?v=ObGR0EfVPlg&list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0&index=26
 
 <br/>
 
-    // Установка
-    https://sysadm.ru/linux/servers/containers/kubernetes/install/
+Предыдущее видео, в котором он рассказывает о helm обзорное и все повторяется в видео, ссылка на которое вверху.
+
+<br/>
+
+### Running Jenkins in Kubernetes Cluster using Helm
+
+<br/>
+
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins1.png "kubernetes Helm Jenkins"){: .center-image }
+
+<br/>
+
+Подготовили кластер и окружение как <a href="/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/">здесь</a>.
+
+Поднимаем Dynamic NFS как<a href="/linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-provisioning/">здесь</a>.
 
     $ kubectl -n kube-system create serviceaccount tiller
 
     $ kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
 
-    $ kubectl get clusterrolebinding tiller
-    NAME     AGE
-    tiller   21s
-
     $ helm init --service-account tiller
-
-    $ kubectl -n kube-system get pods | grep tiller
-    tiller-deploy-8458f6c667-rz588                1/1     Running   0          50s
-
-    $ helm home
-    /home/marley/.helm
-
-
-    $ helm repo listNAME  	URL
-    stable	https://kubernetes-charts.storage.googleapis.com
-    local 	http://127.0.0.1:8879/charts
 
     $ helm search jenkins
 
-    $ helm inspect jenkins
+    $ helm inspect values stable/jenkins > /tmp/jenkins.values
 
-    $ helm inspect stable/jenkins
+<br/>
 
-    $ helm fetch stable/jenkins
+    $ kubectl get storageclass
+    NAME                  PROVISIONER       AGE
+    managed-nfs-storage   example.com/nfs   42m
 
-    $ tar zxf jenkins-0.36.2.tgz
+<br/>
 
+    $ vi /tmp/jenkins.values
 
-    $ helm reset --remove-helm-home
+<br/>
+
+    Значения которые менять не нужно - удалить.
+    Те которые нужно переопределить оставить в файле.
+
+<br/>
+
+    После удаления, все, что осталось:
+
+<br/>
+
+```
+
+Master:
+  AdminUser: admin
+  AdminPassword: admin
+  ServiceType: NodePort
+  NodePort: 32323
+
+Persistence:
+  StorageClass: "managed-nfs-storage"
+
+rbac:
+  install: true
+
+```
+
+<br/>
+
+    $ helm install stable/jenkins --values /tmp/jenkins.values --name myjenkins
+
+<br/>
+
+    $ kubectl get pods
+    NAME                                      READY   STATUS    RESTARTS   AGE
+    myjenkins-6f995f57d6-2hjhg                1/1     Running   0          3m43s
+    nfs-client-provisioner-67cd85d66d-9b5l8   1/1     Running   0          55m
+
+<br/>
+
+    $ kubectl get pvc
+    NAME        STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS          AGE
+    myjenkins   Bound    pvc-81c13cb5-5862-11e9-8748-525400261060   8Gi        RWO            managed-nfs-storage   4m26s
+
+<br/>
+
+    $ helm status myjenkins | less
+
+<br/>
+
+http://node1.k8s:32323/
+
+<br/>
+
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins2.png "kubernetes Helm Jenkins"){: .center-image }
+
+<br/>
+
+Credentials --> Jenkins --> Global credentials --> Add Credentials
+
+Kind --> Kubernetes Service Account
+
+<br/>
+
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins3.png "kubernetes Helm Jenkins"){: .center-image }
+
+<br/>
+
+Manage Jenkins --> Configure System
+
+<br/>
+
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins4.png "kubernetes Helm Jenkins"){: .center-image }
+
+<br/>
+
+New Item --> "demo-job"--> Freestyle Project
+
+Build --> Execute shell
+
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins5.png "kubernetes Helm Jenkins"){: .center-image }
+
+```
+echo Hi this is from inside the container
+hostname
+sleep 20
+```
+
+Build now
+
+<br/>
+
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins6.png "kubernetes Helm Jenkins"){: .center-image }
+
+<br/>
+
+### Удаление jenkins из kubernetes
+
+    $ helm list
+    $ helm delete myjenkins --purge

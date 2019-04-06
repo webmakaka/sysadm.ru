@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster
 
 Делаю  
-04.04.2019
+06.04.2019
 
 <br/>
 
@@ -48,6 +48,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
     $ vagrant up
 
 <br/>
+
+### Копирование на хост конфиг файла, чтобы управлять кластером удаленно
 
     // Пароль root: kubeadmin
     $ scp root@master:/etc/kubernetes/admin.conf ~/.kube/config
