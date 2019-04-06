@@ -26,7 +26,7 @@ https://www.youtube.com/watch?v=ObGR0EfVPlg&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins1.png "kubernetes Helm Jenkins"){: .center-image }
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm/helm-jenkins1.png "kubernetes Helm Jenkins"){: .center-image }
 
 <br/>
 
@@ -108,7 +108,7 @@ http://node1.k8s:32323/
 
 <br/>
 
-![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins2.png "kubernetes Helm Jenkins"){: .center-image }
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm/helm-jenkins2.png "kubernetes Helm Jenkins"){: .center-image }
 
 <br/>
 
@@ -118,7 +118,7 @@ Kind --> Kubernetes Service Account
 
 <br/>
 
-![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins3.png "kubernetes Helm Jenkins"){: .center-image }
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm/helm-jenkins3.png "kubernetes Helm Jenkins"){: .center-image }
 
 <br/>
 
@@ -126,7 +126,7 @@ Manage Jenkins --> Configure System
 
 <br/>
 
-![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins4.png "kubernetes Helm Jenkins"){: .center-image }
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm/helm-jenkins4.png "kubernetes Helm Jenkins"){: .center-image }
 
 <br/>
 
@@ -134,7 +134,7 @@ New Item --> "demo-job"--> Freestyle Project
 
 Build --> Execute shell
 
-![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins5.png "kubernetes Helm Jenkins"){: .center-image }
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm/helm-jenkins5.png "kubernetes Helm Jenkins"){: .center-image }
 
 ```
 echo Hi this is from inside the container
@@ -146,7 +146,7 @@ Build now
 
 <br/>
 
-![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm-jenkins6.png "kubernetes Helm Jenkins"){: .center-image }
+![kubernetes Helm Jenkins](/img/linux/servers/containers/kubernetes/kubeadm/helm/helm-jenkins6.png "kubernetes Helm Jenkins"){: .center-image }
 
 <br/>
 
