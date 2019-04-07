@@ -14,6 +14,10 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Kubernetes Namespaces & Contexts](/linux/servers/containers/kubernetes/kubeadm/namespaces-and-contexts/)
 
+### [Node Selector in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/node-selector/)
+
+### [Jobs & Cronjobs in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/jobs-and-cronjobs/)
+
 ### [DaemonSets](/linux/servers/containers/kubernetes/kubeadm/daemon-sets/)
 
 ### [Init Containers in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/init-containers/)
