@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Jobs & Cronjobs in Kubernetes Cluster
+title: Jobs & Cronjobs in Kubernetes
 permalink: /linux/servers/containers/kubernetes/kubeadm/jobs-and-cronjobs/
 ---
 
-# Jobs & Cronjobs in Kubernetes Cluster
+# Jobs & Cronjobs in Kubernetes
 
 <br/>
 

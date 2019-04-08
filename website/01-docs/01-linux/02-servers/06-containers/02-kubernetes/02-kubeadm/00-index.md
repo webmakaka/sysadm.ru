@@ -16,7 +16,11 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Node Selector in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/node-selector/)
 
-### [Jobs & Cronjobs in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/jobs-and-cronjobs/)
+### [Jobs & Cronjobs in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/jobs-and-cronjobs/)
+
+### [Secrets in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/secrets/)
+
+### [ConfigMaps in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/config-maps/)
 
 ### [DaemonSets](/linux/servers/containers/kubernetes/kubeadm/daemon-sets/)
 
