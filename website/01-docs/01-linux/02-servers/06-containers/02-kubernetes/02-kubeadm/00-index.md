@@ -6,9 +6,23 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 # Kuberneters в виртуальных машинах и контейнерах
 
+## Практические задачи
+
 ### [Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
 
 ### [Изучаем установку и настройку Kubernetes Cluster в виртуальных машинах и контейнерах](/linux/servers/containers/kubernetes/kubeadm/install/)
+
+### [Переименование узлов Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/renaming-kubernetes-nodes/)
+
+### [MetalLB Load Balancer in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/)
+
+### [Ingress](/linux/servers/containers/kubernetes/kubeadm/ingress/)
+
+### [Менеджер пакетов helm. Запуск Jenkins в kuberntes с помощью heml](/linux/servers/containers/kubernetes/kubeadm/heml/)
+
+<br/>
+
+## Основы
 
 ### [Kubernetes Pods, Replicasets & Deployments](/linux/servers/containers/kubernetes/kubeadm/pods-replicasets-deployments/)
 
@@ -26,10 +40,6 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Init Containers in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/init-containers/)
 
-### [Using Persistent Volumes and Claims in Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/persistence/)
+### [Resource Quotas & Limits in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/resource-quotas-and-limits/)
 
-### [MetalLB Load Balancer in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/)
-
-### [Ingress](/linux/servers/containers/kubernetes/kubeadm/ingress/)
-
-### [Менеджер пакетов helm. Запуск Jenkins в kuberntes с помощью heml](/linux/servers/containers/kubernetes/kubeadm/heml/)
+### [Persistent Volumes и Claims в Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/persistence/)

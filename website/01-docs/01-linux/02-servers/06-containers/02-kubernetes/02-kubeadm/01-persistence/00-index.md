@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Using Persistent Volumes and Claims in Kubernetes Cluster
+title: Persistent Volumes и Claims в Kubernetes Cluster
 permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/
 ---
 
-# Using Persistent Volumes and Claims in Kubernetes Cluster
+# Persistent Volumes и Claims в Kubernetes Cluster
 
 ### [HostPath](/linux/servers/containers/kubernetes/kubeadm/persistence/hostpath/)
 

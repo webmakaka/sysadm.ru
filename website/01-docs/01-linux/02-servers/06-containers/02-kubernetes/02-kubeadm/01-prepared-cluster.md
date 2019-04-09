@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster
 
 Делаю  
-06.04.2019
+09.04.2019
 
 <br/>
 
@@ -51,16 +51,31 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 
 ### Копирование на хост конфиг файла, чтобы управлять кластером удаленно
 
+Если kubectl не установлена, то <a href="/linux/servers/containers/kubernetes/install/">вот</a>.
+
+<br/>
+
+    // Если каталог не создан
+    $ mkdir -p ~/.kube/config
+
+<br/>
+
     // Пароль root: kubeadmin
     $ scp root@master:/etc/kubernetes/admin.conf ~/.kube/config
 
 <br/>
 
+    $ kubectl version --short
+    Client Version: v1.14.1
+    Server Version: v1.14.1
+
+<br/>
+
     $ kubectl get nodes
     NAME         STATUS   ROLES    AGE     VERSION
-    master.k8s   Ready    master   7m50s   v1.14.0
-    node1.k8s    Ready    <none>   4m51s   v1.14.0
-    node2.k8s    Ready    <none>   104s    v1.14.0
+    master.k8s   Ready    master   14m     v1.14.1
+    node1.k8s    Ready    <none>   11m     v1.14.1
+    node2.k8s    Ready    <none>   9m34s   v1.14.1
 
 <br/>
 
@@ -88,12 +103,6 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
     kube-proxy-trvqn                     1/1     Running   0          8m
     kube-proxy-wfbsl                     1/1     Running   0          4m53s
     kube-scheduler-master.k8s            1/1     Running   0          9m47s
-
-<br/>
-
-    $ kubectl version --short
-    Client Version: v1.14.0
-    Server Version: v1.14.0
 
 <br/>
 
