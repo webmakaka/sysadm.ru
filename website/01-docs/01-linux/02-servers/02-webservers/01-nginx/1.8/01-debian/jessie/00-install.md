@@ -1,18 +1,16 @@
 ---
 layout: page
 title: Инсталляция Nginx 1.8 сервера на Debian из пакетов
-permalink: /linux/servers/webservers/nginx/1.8/debian/jessie/installation/
+permalink: /linux/servers/webservers/nginx/1.8/debian/jessie/install/
 ---
 
 # Инсталляция Nginx 1.8 сервер на Debian из пакетов
-
 
 <br/>
 
     $ sudo su -
     # apt-get update -y && apt-get upgrade -y
     # apt-get install -y vim curl links wget
-
 
 <br/>
 
@@ -54,7 +52,6 @@ permalink: /linux/servers/webservers/nginx/1.8/debian/jessie/installation/
     ETag: "56a78fbf-264"
     Accept-Ranges: bytes
 
-
-<br/>   
+<br/>
 
     # links http://localhost

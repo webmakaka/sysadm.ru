@@ -11,6 +11,10 @@ permalink: /linux/servers/containers/kubernetes/microk8s/
 
 <br/>
 
+Делаю: XX.04.2019
+
+<br/>
+
 По материалам из видео индуса.
 
 https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0
@@ -19,7 +23,7 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
     $ mkdir ~/microk8s && cd ~/microk8s
 
-    # git clone https://github.com/justmeandopensource/vagrant
+    # git clone https://bitbucket.org/sysadm-ru/vagrant.git
 
     $ cd vagrant/vagrantfiles/ubuntu18/
 
@@ -27,6 +31,7 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
     $ vagrant ssh
 
+<br/>
 
     $ sudo apt-get install snapd
 
@@ -38,6 +43,7 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
     core      16-2.38  6673  stable    canonical✓  core
     microk8s  v1.14.0  492   stable    canonical✓  classic
 
+<br/>
 
     $ microk8s.kubectl cluster-info
 
@@ -45,8 +51,12 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
     Client Version: v1.14.0
     Server Version: v1.14.0
 
+<br/>
 
+    // делаем alias, чтобы далее выполнять команду kubectl
     $ alias kubectl='microk8s.kubectl'
+
+<br/>
 
     $ kubectl get nodes -o wide
     NAME         STATUS   ROLES    AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
@@ -57,6 +67,7 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
     $ kubectl expose deploy nginx --port 80 --target-port 80 --type ClusterIP
 
+<br/>
 
     $ sudo apt-get update && sudo apt-get install -y elinks
 
@@ -67,6 +78,6 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
     $ microk8s.reset
 
-    <br/>
+<br/>
 
     $ microk8s.enable dashboard

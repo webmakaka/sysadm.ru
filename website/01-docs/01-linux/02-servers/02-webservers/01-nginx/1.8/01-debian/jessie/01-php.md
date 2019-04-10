@@ -6,7 +6,6 @@ permalink: /linux/servers/webservers/nginx/1.8/debian/jessie/php/
 
 # Инсталляция PHP и настройка для работы с Nginx 1.8
 
-
     # apt-cache search php5
 
 <br/>
@@ -33,23 +32,19 @@ permalink: /linux/servers/webservers/nginx/1.8/debian/jessie/php/
 
 <br/>
 
-
     # rm *
     # vi index.php
 
     <?php phpinfo(); ?>
-
 
 <br/>
 
     # cd /etc/nginx/conf.d
     # cp default.conf default.conf.orig
 
-
 <br/>
 
     # vi default.conf
-
 
 <br/>
 
@@ -57,30 +52,29 @@ permalink: /linux/servers/webservers/nginx/1.8/debian/jessie/php/
 
 <br/>
 
-    server {
-        listen       80;
-        server_name  localhost;
-        root   /usr/share/nginx/html;
+```
+server {
+    listen       80;
+    server_name  localhost;
+    root   /usr/share/nginx/html;
 
-        location / {
-            index index.php index.html;
-        }
-
-        location ~ \.php$ {
-             try_files $uri = 404;
-             include fastcgi_params;
-             fastcgi_pass  unix:/var/run/php5-fpm.sock;
-             fastcgi_index index.php;
-
-             fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-       }
-
+    location / {
+        index index.php index.html;
     }
 
+    location ~ \.php$ {
+            try_files $uri = 404;
+            include fastcgi_params;
+            fastcgi_pass  unix:/var/run/php5-fpm.sock;
+            fastcgi_index index.php;
 
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+    }
+
+}
+```
 
 <br/>
-
 
 Без добавления в группу не работало:
 
@@ -103,7 +97,6 @@ permalink: /linux/servers/webservers/nginx/1.8/debian/jessie/php/
 
     # service php5-fpm restart
     # service nginx restart
-
 
 <br/>
 

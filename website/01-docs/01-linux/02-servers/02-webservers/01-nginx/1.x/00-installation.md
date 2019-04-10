@@ -6,17 +6,14 @@ permalink: /linux/servers/webservers/nginx/1.x/ubuntu/installation/
 
 # Инсталляция Nginx 1.X сервера на Ubuntu из пакетов
 
-
 Делаю:  
 19.08.2018
-
 
 <br/>
 
     $ sudo su -
     # apt-get update -y && apt-get upgrade -y
     # apt-get install -y vim curl links wget
-
 
 <br/>
 
@@ -44,13 +41,15 @@ deb-src http://nginx.org/packages/ubuntu/ bionic nginx
 
 ```
 
-
 <br/>
 
- **Если (xenial)**
+**Если (xenial)**
 
-    deb http://nginx.org/packages/ubuntu/ xenial nginx
-    deb-src http://nginx.org/packages/ubuntu/ xenial nginx
+```shell
+deb http://nginx.org/packages/ubuntu/ xenial nginx
+deb-src http://nginx.org/packages/ubuntu/ xenial nginx
+
+```
 
 <br/>
 
@@ -68,7 +67,6 @@ deb-src http://nginx.org/packages/ubuntu/ bionic nginx
     # nginx -v
     nginx version: nginx/1.14.0
 
-
 <br/>
 
     # curl -I http://localhost
@@ -82,18 +80,14 @@ deb-src http://nginx.org/packages/ubuntu/ bionic nginx
     ETag: "5ad6113c-264"
     Accept-Ranges: bytes
 
-
-<br/>   
-
+<br/>
 
     # links http://localhost
-
 
 <br/>
 
     # netstat -aln | grep 80
-    tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN     
-
+    tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN
 
 <br/>
 
