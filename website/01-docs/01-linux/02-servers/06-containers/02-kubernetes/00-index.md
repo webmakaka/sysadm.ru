@@ -69,6 +69,8 @@ Kubernets он как квантовая механика. Стоит пол г�
 
 ### [Kuberneters в виртуальных машинах и контейнерах](/linux/servers/containers/kubernetes/kubeadm/)
 
+### [Kuberneters в облаках](/linux/servers/containers/kubernetes/clouds/)
+
 <br/>
 
 ### Материалы для изучения:

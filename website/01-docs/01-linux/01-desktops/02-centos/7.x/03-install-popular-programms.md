@@ -4,7 +4,6 @@ title: Инсталляция популярных программ в Centos 7.
 permalink: /linux/desktops/centos/7.x/install-popular-programms/
 ---
 
-
 # Инсталляция популярных программ в Centos 7.x
 
 <br/>
@@ -28,22 +27,17 @@ permalink: /linux/desktops/centos/7.x/install-popular-programms/
 
     # yum install -y google-chrome-stable
 
-
-
 <br/>
 
 ### Инсталляция VLC Centos 7.x
 
 Нужны репо epel, rpmfusion.
 
-
 [Как добавить репо](/linux/desktops/centos/7.x/repos/)
-
 
 <br/>
 
     # yum install -y vlc
-
 
 <br/>
 
@@ -60,7 +54,6 @@ permalink: /linux/desktops/centos/7.x/install-popular-programms/
     gpgcheck=1
     gpgkey=https://repo.skype.com/data/SKYPE-GPG-KEY
 
-
 <br/>
 
     # dnf install -y skype
@@ -71,7 +64,6 @@ permalink: /linux/desktops/centos/7.x/install-popular-programms/
 
     -- Установить из командной строки, скачанный с сайта skype
     # dnf install -y ./skypeforlinux-64.rpm
-
 
 <br/>
 

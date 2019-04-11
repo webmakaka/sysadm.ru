@@ -6,7 +6,6 @@ permalink: /linux/desktops/archives/installation/
 
 # Инсталляция архиваторов в Linux
 
-
 ## Ubuntu
 
 -- 7 zip
@@ -15,12 +14,10 @@ permalink: /linux/desktops/archives/installation/
 
 ## Centos
 
-
 -- По идее, ставится так:
 
     # wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
     # yum install -y rar unrar
-
 
 -- rar из исходников (не проверял !!!)
 
