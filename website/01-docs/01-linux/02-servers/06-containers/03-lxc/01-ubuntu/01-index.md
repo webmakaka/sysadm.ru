@@ -181,6 +181,4 @@ http://wiki.val.bmstu.ru/doku.php?id=%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%
 
 https://help.ubuntu.com/12.04/serverguide/lxc.html
 
-http://lxc.teegra.net/
-
 </pre>

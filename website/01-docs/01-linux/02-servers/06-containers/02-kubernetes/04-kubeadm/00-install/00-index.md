@@ -10,7 +10,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/install/
 
 ### [Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, kubectl)](/linux/servers/containers/kubernetes/kubeadm/install/single-master/)
 
-### [Single Master Kubernetes Cluster в виртуальных lxc контейнерах (kubeadm, kubectl) (Не заработал)](/linux/servers/containers/kubernetes/kubeadm/install/single-master/lxc/)
+### [Single Master Kubernetes Cluster в lxc контейнерах](/linux/servers/containers/kubernetes/kubeadm/install/single-master/lxc/)
 
 <br/>
 
