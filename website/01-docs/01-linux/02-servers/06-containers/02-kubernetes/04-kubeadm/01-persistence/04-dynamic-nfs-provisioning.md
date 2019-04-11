@@ -20,7 +20,11 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Тоже самое, что и в <a href="/linux/servers/containers/kubernetes/kubeadm/persistence/nfs/">NFS</a>
+Подготовили кластер и окружение как <a href="/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/">здесь</a>.
+
+<br/>
+
+Подготовили экспорт <a href="/linux/servers/containers/kubernetes/kubeadm/persistence/nfs/">NFS</a>
 
 <br/>
 
@@ -34,17 +38,49 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-    $ kubectl create -f https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/class.yaml
+    $ rm -rf ~/tmp/k8s/dynamic-nfs-provisioning/ && mkdir -p ~/tmp/k8s/dynamic-nfs-provisioning/ && cd ~/tmp/k8s/dynamic-nfs-provisioning/
+
+<!-- $ kubectl create -f https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/class.yaml -->
+
+    $ curl -LJO https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/class.yaml
 
 <br/>
 
-    $ kubectl get storageclass
-    NAME                  PROVISIONER       AGE
-    managed-nfs-storage   example.com/nfs   8s
+    $ vi class.yaml
+
+Делаем, что storageclass будет по умолчанию, добавив аннотацию
+
+```
+annotations:
+  storageclass.kubernetes.io/is-default-class: "true"
+```
+
+Получаем:
+
+```
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: managed-nfs-storage
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+provisioner: example.com/nfs
+parameters:
+  archiveOnDelete: "false"
+
+```
 
 <br/>
 
-    $ mkdir -p ~/tmp/dynamic-nfs-provisioning/ && cd ~/tmp/dynamic-nfs-provisioning/
+    $ kubectl create -f class.yaml
+
+<br/>
+
+    $ $ kubectl get storageclass
+    NAME                            PROVISIONER       AGE
+    managed-nfs-storage (default)   example.com/nfs   7s
+
+<br/>
 
     $ curl -LJO https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/deployment.yaml
 
@@ -80,6 +116,12 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
     managed-nfs-storage   example.com/nfs   9m3s
 
 <br/>
+
+Подготовка закончена!
+
+<br/>
+
+## Изучаем всевозможные варианты использования
 
 ### Создаем PVC
 

@@ -16,7 +16,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Ingress](/linux/servers/containers/kubernetes/kubeadm/ingress/)
 
-### [Менеджер пакетов helm. Запуск Jenkins в kuberntes с помощью heml](/linux/servers/containers/kubernetes/kubeadm/heml/)
+### [Kubernetes Package Manager (Helm)](/linux/servers/containers/kubernetes/kubeadm/heml/)
 
 ### [Устанавливаем WEB GUI для управления Kubernetes кластером (Rancher)](/linux/servers/containers/kubernetes/kubeadm/gui/rancher/)
 

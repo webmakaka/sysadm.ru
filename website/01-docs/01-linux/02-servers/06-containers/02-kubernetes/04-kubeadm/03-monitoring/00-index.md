@@ -6,4 +6,4 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/monitoring/
 
 # Kubernetes Monitoring
 
-### [Prometheus monitoring for Kubernetes Cluster and Grafana visualization](/linux/servers/containers/kubernetes/kubeadm/monitoring/prometheus-and-grafana/)
+### [Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml](/linux/servers/containers/kubernetes/kubeadm/heml/prometheus-and-grafana/)

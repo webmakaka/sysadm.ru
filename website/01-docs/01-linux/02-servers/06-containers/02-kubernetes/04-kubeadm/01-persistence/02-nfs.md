@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=to14wmNmRCI&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Поднимаю кластер заново.
+Подготовили кластер и окружение как <a href="/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/">здесь</a>.
 
 <br/>
 
@@ -64,7 +64,7 @@ end
 
 <br/>
 
-### Внутри nfs-serv.k8s
+### Подготавливаем NFS сервер. Настраиваем экспорт. (На nfs-serv.k8s)
 
     // пинг кластера
     $ ping 192.168.0.10
@@ -89,7 +89,6 @@ end
 <!--
 
     /srv/nfs/kubedata *(rw,sync,no_subtree_check,insecure)
-
 -->
 
     /srv/nfs/kubedata *(rw,sync,no_subtree_check,no_root_squash,no_all_squash,insecure)
@@ -98,8 +97,18 @@ end
 
     $ sudo exportfs -rav
 
+Посмотреть результаты:
+
     $ sudo exportfs -v
     $ sudo showmount -e
+
+<br/>
+
+Подготовка закончена!
+
+<br/>
+
+## Изучаем всевозможные варианты использования
 
     $ sudo vi /srv/nfs/kubedata/index.html
 

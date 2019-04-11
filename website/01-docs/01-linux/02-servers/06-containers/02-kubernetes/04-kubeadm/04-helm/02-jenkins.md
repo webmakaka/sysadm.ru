@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Менеджер пакетов helm. Запуск Jenkins в kuberntes с помощью heml
-permalink: /linux/servers/containers/kubernetes/kubeadm/heml/
+title: Запуск Jenkins в kuberntes с помощью heml
+permalink: /linux/servers/containers/kubernetes/kubeadm/heml/jenkins/
 ---
 
-# Менеджер пакетов helm. Запуск Jenkins в kuberntes с помощью heml
+# Запуск Jenkins в kuberntes с помощью heml
 
 <br/>
 
@@ -18,7 +18,7 @@ https://www.youtube.com/watch?v=ObGR0EfVPlg&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Предыдущее видео, в котором он рассказывает о helm обзорное и все повторяется в видео, ссылка на которое вверху.
+Предыдущее видео, в котором он рассказывает о helm обзорное и все повторяется в видео, ссылка на которое выше.
 
 <br/>
 
@@ -30,15 +30,15 @@ https://www.youtube.com/watch?v=ObGR0EfVPlg&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Подготовили кластер и окружение как <a href="/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/">здесь</a>.
+-   Подготовили кластер и окружение
+-   Подняли Dynamic NFS
+-   Инсталлировали helm
 
-Поднимаем Dynamic NFS как<a href="/linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-provisioning/">здесь</a>.
+как <a href="/linux/servers/containers/kubernetes/kubeadm/heml/install/">здесь</a>
 
-    $ kubectl -n kube-system create serviceaccount tiller
+<br/>
 
-    $ kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
-
-    $ helm init --service-account tiller
+### Устанавливаем Jenkins
 
     $ helm search jenkins
 
