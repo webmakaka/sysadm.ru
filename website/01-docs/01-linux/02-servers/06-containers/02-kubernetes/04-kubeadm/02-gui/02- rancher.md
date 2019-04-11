@@ -80,11 +80,11 @@ http://localhost
 
 <br/>
 
-![kubernetes GUI Rancher](/img/linux/servers/containers/kubernetes/kubeadm/gui/gui/rancher/rancher-06.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/linux/servers/containers/kubernetes/kubeadm/gui/rancher/rancher-06.png "kubernetes GUI Rancher"){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/linux/servers/containers/kubernetes/kubeadm/gui/gui/rancher/rancher-07.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/linux/servers/containers/kubernetes/kubeadm/gui/rancher/rancher-07.png "kubernetes GUI Rancher"){: .center-image }
 
 <br/>
 
