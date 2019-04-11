@@ -38,26 +38,6 @@ Kubernets он как квантовая механика. Стоит пол г�
 
 <br/>
 
-### [Инсталляция клиента для работы с kubernetes кластером (kubectl, minikube)](/linux/servers/containers/kubernetes/install/)
-
-<br/>
-
-### [Kuberneters на локальном хосте (minikube, kubectl и virtualbox)](/linux/servers/containers/kubernetes/minikube/)
-
-### [Kuberneters в виртуальных машинах и контейнерах](/linux/servers/containers/kubernetes/kubeadm/)
-
-### [Microk8s (в виртуальных машинах)](/linux/servers/containers/kubernetes/microk8s/)
-
-<br/>
-
-## Устарело. Необходима чистка. Удалять пока жалко.
-
-### Первые попытки установить и запустить локально
-
-[Какие-то попытки разобраться с kubectl и minikube](/linux/servers/containers/kubernetes/deprecated/)
-
-<br/>
-
 **Building blocks:**
 
 -   RCs - Replication Controllers. Заменили на Replica Sets.
@@ -73,12 +53,30 @@ Kubernets он как квантовая механика. Стоит пол г�
 
 <br/>
 
-### Tutorials
+### [Инсталляция клиента для работы с kubernetes кластером (kubectl, minikube)](/linux/servers/containers/kubernetes/install/)
 
+<br/>
+
+### [Основы Kubernets](/linux/servers/containers/kubernetes/basics/)
+
+<br/>
+
+## Более практичные примеры
+
+### [Kuberneters на локальном хосте (minikube, kubectl и virtualbox)](/linux/servers/containers/kubernetes/minikube/)
+
+### [Microk8s (в виртуальных машинах)](/linux/servers/containers/kubernetes/microk8s/)
+
+### [Kuberneters в виртуальных машинах и контейнерах](/linux/servers/containers/kubernetes/kubeadm/)
+
+<br/>
+
+### Материалы для изучения:
+
+**Tutorials**  
 http://kubernetes.io/docs/tutorials/
 
 <br/>
 
-### Kubernetes The Hard Way
-
+**Kubernetes The Hard Way**  
 https://github.com/kelseyhightower/kubernetes-the-hard-way

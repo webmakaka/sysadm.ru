@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster
 
 Делаю  
-10.04.2019
+11.04.2019
 
 <br/>
 
@@ -43,8 +43,13 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 
     # git clone https://bitbucket.org/sysadm-ru/kubernetes .
 
+    // Скрипты для установки актуальной версии kubernetes сluster
     $ cd vagrant-provisioning/
 
+    // Скрипты для установки kubernetes сluster (1.11.6)
+    $ cd misc/vagrant-provisioning-by-version/
+
+    // Запуск
     $ vagrant up
 
 <br/>
@@ -109,3 +114,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
     $ kubectl cluster-info
     Kubernetes master is running at https://192.168.0.10:6443
     KubeDNS is running at https://192.168.0.10:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+<br/>
+
+### Установка предыдущих версий kubernetes

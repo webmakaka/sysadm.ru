@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kubernetes Namespaces & Contexts
-permalink: /linux/servers/containers/kubernetes/kubeadm/namespaces-and-contexts/
+permalink: /linux/servers/containers/kubernetes/basics/namespaces-and-contexts/
 ---
 
 # Kubernetes Namespaces & Contexts

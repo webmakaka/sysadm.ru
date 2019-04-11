@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kubernetes DaemonSets
-permalink: /linux/servers/containers/kubernetes/kubeadm/daemon-sets/
+permalink: /linux/servers/containers/kubernetes/basics/daemon-sets/
 ---
 
 # Kubernetes DaemonSets

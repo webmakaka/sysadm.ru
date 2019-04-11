@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Node Selector in Kubernetes
-permalink: /linux/servers/containers/kubernetes/kubeadm/node-selector/
+permalink: /linux/servers/containers/kubernetes/basics/node-selector/
 ---
 
 # Node Selector in Kubernetes

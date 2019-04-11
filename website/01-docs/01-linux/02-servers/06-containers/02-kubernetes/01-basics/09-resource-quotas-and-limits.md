@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resource Quotas & Limits in Kubernetes
-permalink: /linux/servers/containers/kubernetes/kubeadm/resource-quotas-and-limits/
+permalink: /linux/servers/containers/kubernetes/basics/resource-quotas-and-limits/
 ---
 
 # Resource Quotas & Limits in Kubernetes

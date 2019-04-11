@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ConfigMaps in Kubernetes
-permalink: /linux/servers/containers/kubernetes/kubeadm/config-maps/
+permalink: /linux/servers/containers/kubernetes/basics/config-maps/
 ---
 
 # ConfigMaps in Kubernetes

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Secrets in Kubernetes
-permalink: /linux/servers/containers/kubernetes/kubeadm/secrets/
+permalink: /linux/servers/containers/kubernetes/basics/secrets/
 ---
 
 # Secrets in Kubernetes

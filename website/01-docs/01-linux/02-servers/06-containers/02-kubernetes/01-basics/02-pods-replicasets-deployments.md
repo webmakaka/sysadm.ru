@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kubernetes Pods, Replicasets & Deployments
-permalink: /linux/servers/containers/kubernetes/kubeadm/pods-replicasets-deployments/
+permalink: /linux/servers/containers/kubernetes/basics/pods-replicasets-deployments/
 ---
 
 # Kubernetes Pods, Replicasets & Deployments

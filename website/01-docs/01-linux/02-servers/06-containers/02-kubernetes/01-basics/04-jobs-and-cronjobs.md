@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Jobs & Cronjobs in Kubernetes
-permalink: /linux/servers/containers/kubernetes/kubeadm/jobs-and-cronjobs/
+permalink: /linux/servers/containers/kubernetes/basics/jobs-and-cronjobs/
 ---
 
 # Jobs & Cronjobs in Kubernetes

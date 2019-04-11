@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Менеджер пакетов helm (начинаем разбираться)
-permalink: /linux/servers/containers/kubernetes/kubeadm/init-containers/
+permalink: /linux/servers/containers/kubernetes/basics/init-containers/
 ---
 
 # Init Containers in Kubernetes Cluster

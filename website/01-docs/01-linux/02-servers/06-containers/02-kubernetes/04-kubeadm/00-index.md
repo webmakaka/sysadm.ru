@@ -30,8 +30,6 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 <br/>
 
-## Основы Kubernetes
-
-### [Основы Kubernetes](/linux/servers/containers/kubernetes/basics/)
+## Изучаем установку и настройку Kubernetes Cluster
 
 ### [Изучаем установку и настройку Kubernetes Cluster в виртуальных машинах и контейнерах](/linux/servers/containers/kubernetes/kubeadm/install/)
