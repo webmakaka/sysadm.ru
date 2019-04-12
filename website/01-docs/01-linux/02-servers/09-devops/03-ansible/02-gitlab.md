@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Gitlab
+title: Разворачиваем Gitlab с помощью ansible-galaxy и ansible-playbook
 permalink: /linux/servers/devops/ansible/gitlab/
 ---
 
-# Gitlab
+# Разворачиваем Gitlab с помощью Ansible
 
 Делаю  
-15.03.2019
+12.04.2019
 
 <br/>
 
@@ -42,7 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     controller.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-      v.customize ["modifyvm", :id, "--memory", 512]
+      v.customize ["modifyvm", :id, "--memory", 8192]
       v.customize ["modifyvm", :id, "--name", "controller"]
     end
 
@@ -172,3 +172,8 @@ becore_ask_pass = False
 <br/>
 
     $ ansible-playbook playbook.yaml -K
+
+<br/>
+
+Остается подключиться:  
+http://192.168.56.101/

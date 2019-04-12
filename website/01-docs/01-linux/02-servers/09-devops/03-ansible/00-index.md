@@ -12,6 +12,10 @@ permalink: /linux/servers/devops/ansible/
 
 <br/>
 
+### [Разворачиваем Gitlab с помощью ansible-galaxy и ansible-playbook](/linux/servers/devops/ansible/gitlab/)
+
+<br/>
+
 ### [Деплой nodejs приложения на удаленный сервер с помощью ansible](/linux/servers/devops/ansible/deploy-node-app-by-ansible/)
 
 <br/>
