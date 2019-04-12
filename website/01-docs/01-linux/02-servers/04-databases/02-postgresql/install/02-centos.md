@@ -6,6 +6,8 @@ permalink: /linux/servers/databases/postgresql/install/centos/
 
 # PostgreSQL инсталляция в Centos 6.X
 
+<br/>
+
 ### Для версии 9
 
 1\. Configure your YUM repository
@@ -22,12 +24,10 @@ permalink: /linux/servers/databases/postgresql/install/centos/
 
     # yum localinstall -y  http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-1.noarch.rpm
 
-
 3\. Install PostgreSQL
 
     # yum list postgres*
     # yum install -y postgresql94-server
-
 
 4\. Initialize
 
@@ -41,19 +41,18 @@ permalink: /linux/servers/databases/postgresql/install/centos/
 
     # service postgresql-9.4 start
 
-
 https://wiki.postgresql.org/wiki/YUM_Installation
 
-
+<br/>
 
 ### Для версии 8
-
 
     # yum install -y postgresql-server
     # chkconfig --levels 35 postgresql on
 
     # service postgresql initdb
 
+<br/>
 
 ### Настройка конфигов (расположение зависит от выбранной версии postgresql)
 
@@ -80,7 +79,7 @@ Config:
 
 <br/>
 
-    добавляю:  
+    добавляю:
 
     host          all           all           192.168.56.0      255.255.255.0         trust
 
@@ -90,9 +89,9 @@ Config:
 
     # service postgresql restart
 
+<br/>
 
 ### Создание базы и пользователя
-
 
     # su - postgres
 
@@ -102,7 +101,6 @@ Config:
     CREATE USER scott WITH PASSWORD 'tiger';
 
     GRANT ALL PRIVILEGES ON DATABASE mydatabase to scott;
-
 
 // Удалить базу (если нужно), можно командой
 
@@ -116,17 +114,17 @@ Config:
 
     $ psql -h 192.168.1.11 -p 5432 -U user -W mydatabase
 
-___
-
+---
 
 Если нужно собрать из исходников более новую версию:
-http://odba.ru/showthread.php?t=465  
+http://odba.ru/showthread.php?t=465
 
 Вроде неплохая статья:  
 http://www.unixmen.com/postgresql-9-4-released-install-centos-7/
 
+---
 
-______
+<br/>
 
 ### Импорт / Экспорт
 
@@ -138,9 +136,7 @@ Restore
 
     pg_restore --verbose --clean --no-acl --no-owner -h myhost -U myuser -d mydb latest.dump
 
-
-______
-
+---
 
 Dump Можно преобразовать в sql (Нужно уточнить параметры)
 
@@ -150,8 +146,9 @@ Dump Можно преобразовать в sql (Нужно уточнить �
 
     $ psql database -f dump.sql
 
+---
 
-______
+<br/>
 
 ### Ошибка 1:
 
@@ -166,31 +163,29 @@ ______
 
     $ pg_restore --version
     pg_restore (PostgreSQL) 9.4.1
-___
 
+---
+
+<br/>
 
 ### Ошибка 2:
 
-[archiver (db)] could not execute query: ERROR:  language "plpgsql" does not exist
+[archiver (db)] could not execute query: ERROR: language "plpgsql" does not exist
 
     $ psql mydatabase
     CREATE LANGUAGE plpgsql;
 
-
 http://softlabpro.blogspot.ru/2011/05/postgresql-restore-9x-backup-in-8x.html
 
-
-
+<br/>
 
 ### Ошибка 3:
 
-
-ERROR: could not execute query: ERROR:  must be owner of language plpgsql
+ERROR: could not execute query: ERROR: must be owner of language plpgsql
 
     $ psql paymentgate
     paymentgate=# alter role <user_name> with superuser;
     ALTER ROLE
-
 
 Убедиться, что owner выставлен правильно.
 
@@ -207,7 +202,6 @@ ERROR: could not execute query: ERROR:  must be owner of language plpgsql
      template1   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
                  |          |          |             |             | postgres=CTc/postgres
     (4 rows)
-
 
 <!--
 

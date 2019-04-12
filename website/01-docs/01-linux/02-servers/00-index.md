@@ -22,4 +22,6 @@ permalink: /linux/servers/
 
 ### [Мониторинг](/linux/servers/monitoring/)
 
+### [Logging](/linux/servers/logging/)
+
 ### [DevOps](/linux/servers/devops/)

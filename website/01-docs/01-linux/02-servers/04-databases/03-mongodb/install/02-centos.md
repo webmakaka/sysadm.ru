@@ -1,10 +1,12 @@
 ---
 layout: page
 title: MongoDB инсталляция в Centos 6.X
-permalink: /linux/servers/databases/mongodb/centos/installation/
+permalink: /linux/servers/databases/mongodb/install/centos/
 ---
 
 # MongoDB инсталляция в Centos 6.X
+
+<br/>
 
 ### Mongo 3.X
 
@@ -45,8 +47,6 @@ enabled=1
 
 {% endhighlight %}
 
-
-
 <br/>
 
     # yum install -y mongo-10gen mongo-10gen-server
@@ -56,12 +56,9 @@ enabled=1
 
     # mongo
 
-
 ### Конфиг
 
 /etc/mongod.conf
-
-
 
 ### Подключиться к MongoDB
 
@@ -71,8 +68,7 @@ enabled=1
 
     $ mongo --host localhost --port 49153
 
-___
-
+---
 
 **При разработке и если данные не нужны можно отключить журналирования для более быстрой работы:**
 
@@ -80,8 +76,6 @@ ___
     echo 'mongod --nojournal --dbpath=/data/db' > mongod-start
     chmod a+x mongod-start
     ./mongod-start
-
-
 
 <br/>
 
