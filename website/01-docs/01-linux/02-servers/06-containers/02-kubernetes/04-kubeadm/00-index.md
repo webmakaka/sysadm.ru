@@ -28,6 +28,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Kubernetes Monitoring](/linux/servers/containers/kubernetes/kubeadm/monitoring/)
 
+### [Horizontal Pod Autoscaler in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/horizontal-pod-autoscaler/)
+
 <br/>
 
 ## Изучаем установку и настройку Kubernetes Cluster

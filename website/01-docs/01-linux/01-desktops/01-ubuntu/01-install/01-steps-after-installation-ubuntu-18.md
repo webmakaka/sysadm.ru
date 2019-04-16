@@ -96,7 +96,26 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
     #Change first day of week to Monday
     export LC_TIME=en_GB.UTF-8
     #Change to metric system
-    export LC_MEASUREMENT=en_GB.UTF-8 -->
+    export LC_MEASUREMENT=en_GB.UTF-8
+
+
+
+Вариант 2
+
+https://askubuntu.com/questions/6016/how-to-set-monday-as-the-first-day-of-the-week-in-gnome-calendar-applet
+
+/etc/default/locale
+
+LANG=en_US.UTF-8
+LANGUAGE=en_US
+LC_TIME="en_GB.UTF-8"
+LC_PAPER="en_GB.UTF-8"
+LC_MEASUREMENT="en_GB.UTF-8"
+
+
+
+
+     -->
 
 <br/>
 
