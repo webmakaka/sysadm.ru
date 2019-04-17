@@ -1,10 +1,24 @@
 ---
 layout: page
-title: Инсталляция ACE плеера в Ubuntu
-permalink: /linux/desktops/ubuntu/ace-player-installation/
+title: Инсталляция SopCast и ACE плеера в Ubuntu
+permalink: /linux/desktops/ubuntu/sopcast-ace-player-install/
 ---
 
-# Инсталляция ACE плеера в Ubuntu
+# Инсталляция SopCast и ACE плеера в Ubuntu
+
+<br/>
+
+### Инсталляция SopCast плеера в Ubuntu 18.04.1
+
+Делаю:  
+16.04.2019
+
+    $ sudo add-apt-repository ppa:linuxthebest.net/sopcast
+    $ sudo apt-get update
+    $ sudo apt-get install -y sopcast-player
+    $ sopcast-player
+
+Пока писал эти 4 команды, Месси забил 2 мяча МЮ в ЛЧ.
 
 <br/>
 

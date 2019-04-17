@@ -51,7 +51,6 @@ Learn DevOps: The Complete Kubernetes Course
 
     $ kubectl expose pod nodehelloworld.example.com  --type=NodePort --name helloworld-service
 
-
     $ minikube service helloworld-service --url
 
     http://192.168.99.106:31141

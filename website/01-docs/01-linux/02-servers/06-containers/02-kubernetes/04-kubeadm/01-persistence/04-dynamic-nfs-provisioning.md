@@ -4,7 +4,7 @@ title: Dynamically NFS provisioning
 permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-provisioning/
 ---
 
-### Dynamically NFS provisioning
+# Dynamically NFS provisioning
 
 Делаю: 06.04.2019
 
@@ -24,7 +24,7 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Подготовили экспорт <a href="/linux/servers/containers/kubernetes/kubeadm/persistence/nfs/">NFS</a>
+Подготовили экспорт NFS как<a href="/linux/servers/containers/kubernetes/kubeadm/persistence/nfs/">здесь</a>
 
 <br/>
 
@@ -39,6 +39,8 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 <br/>
 
     $ rm -rf ~/tmp/k8s/dynamic-nfs-provisioning/ && mkdir -p ~/tmp/k8s/dynamic-nfs-provisioning/ && cd ~/tmp/k8s/dynamic-nfs-provisioning/
+
+<br/>
 
 <!-- $ kubectl create -f https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/class.yaml -->
 
@@ -76,7 +78,7 @@ parameters:
 
 <br/>
 
-    $ $ kubectl get storageclass
+    $ kubectl get storageclass
     NAME                            PROVISIONER       AGE
     managed-nfs-storage (default)   example.com/nfs   7s
 
@@ -108,12 +110,6 @@ parameters:
 
     NAME                                                DESIRED   CURRENT   READY   AGE
     replicaset.apps/nfs-client-provisioner-67cd85d66d   1         1         1       19s
-
-<br/>
-
-    $ kubectl get storageclass
-    NAME                  PROVISIONER       AGE
-    managed-nfs-storage   example.com/nfs   9m3s
 
 <br/>
 

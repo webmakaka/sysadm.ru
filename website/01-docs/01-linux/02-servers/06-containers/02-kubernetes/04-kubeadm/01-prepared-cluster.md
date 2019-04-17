@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster
 
 Делаю  
-16.04.2019
+17.04.2019
 
 <br/>
 

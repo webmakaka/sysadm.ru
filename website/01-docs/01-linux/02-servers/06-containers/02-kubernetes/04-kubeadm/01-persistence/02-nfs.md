@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=to14wmNmRCI&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 Добавляю еще 1 виртуалку на которой будет смонтирован еще 1 раздел.
 
-    $ mkdir ~/vagrant-kubernetes-nfs-serv && cd ~/vagrant-kubernetes-nfs-serv
+    $ rm -rf ~/vagrant-kubernetes-nfs-serv && mkdir ~/vagrant-kubernetes-nfs-serv && cd ~/vagrant-kubernetes-nfs-serv
 
 <br/>
 
@@ -55,10 +55,14 @@ end
 
     $ vagrant up
 
+<br/>
+
     $ vagrant status
     Current machine states:
 
     nfs-serv.k8s              running (virtualbox)
+
+<br/>
 
     $ vagrant ssh nfs-serv.k8s
 

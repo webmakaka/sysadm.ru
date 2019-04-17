@@ -164,6 +164,8 @@ spec:
 
     $ kubectl create -f rsvp-web.yaml
 
+<br/>
+
 While creating the Deployment for the frontend, we are passing the name of the MongoDB Service, mongodb, as an environment variable, which is expected by our frontend.
 
 Notice that in the ports section we mentioned the containerPort 5000, and given it the web-port name. We will be using the referenced web-port name while creating the Service for the rsvp application. This is useful, as we can change the underlying containerPort without making any changes to our Service.
@@ -209,7 +211,7 @@ You may notice that we have mentioned the targetPort in the ports section, which
 
 <br/>
 
-    -- $ kubectl get svc
+    $ kubectl get svc
     $ kubectl get services
     NAME             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
     kubernetes       ClusterIP   10.96.0.1        <none>        443/TCP          9d
@@ -231,12 +233,18 @@ You may notice that we have mentioned the targetPort in the ports section, which
 
 Currently, we have one replica running for the frontend. To scale it to 4 replicas, we can use the following command:
 
+<br/>
+
     $ kubectl scale deployment rsvp --replicas=3
+
+<br/>
 
     $ kubectl get deployments
     NAME        DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
     rsvp        3         3         3            3           10m
     rsvp-db     1         1         1            1           15m
+
+<br/>
 
     $ kubectl get pods
     NAME                        READY     STATUS    RESTARTS   AGE

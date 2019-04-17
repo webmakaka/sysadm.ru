@@ -8,14 +8,13 @@ permalink: /linux/desktops/ubuntu/
 
 # Ubuntu
 
-
 ### [Шаги после инсталляции Ubuntu](/linux/desktops/ubuntu/install/)
 
 ### [Инсталляция браузера в Ubuntu](/linux/desktops/ubuntu/browsers/)
 
 ### [Инсталляция Libre Office](/linux/desktops/ubuntu/libreoffice/)
 
-### [Инсталляция ACE плеера в Ubuntu](/linux/desktops/ubuntu/ace-player-installation/)
+### [Инсталляция SopCast и ACE плеера в Ubuntu](/linux/desktops/ubuntu/sopcast-ace-player-install/)
 
 ### [Скачать playlist с youtube](/linux/desktops/ubuntu/download-youtube-playlist/)
 
@@ -28,8 +27,6 @@ permalink: /linux/desktops/ubuntu/
 ### [Мелкие улучшения](/linux/desktops/ubuntu/small-improvements/)
 
 ### [Знакомство в ipfs](/linux/desktops/ubuntu/ipfs/)
-
-
 
 ### Сеть
 

@@ -6,6 +6,10 @@ permalink: /linux/servers/containers/kubernetes/basics/
 
 # Основы Kubernets
 
+Replica Sets и Replication Controller считаются устаревшими и рекомендуется вместо них использовать Deployments.
+
+<br/>
+
 ### [Kubernetes Pods, Replicasets & Deployments](/linux/servers/containers/kubernetes/basics/pods-replicasets-deployments/)
 
 ### [Kubernetes Namespaces & Contexts](/linux/servers/containers/kubernetes/basics/namespaces-and-contexts/)

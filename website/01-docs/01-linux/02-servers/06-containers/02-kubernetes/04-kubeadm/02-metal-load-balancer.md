@@ -48,7 +48,7 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 192.168.0.20-192.168.1.25
+      - 192.168.0.20-192.168.0.25
 EOF
 
 ```

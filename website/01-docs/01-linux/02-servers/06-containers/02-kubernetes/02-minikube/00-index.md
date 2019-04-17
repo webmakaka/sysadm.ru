@@ -24,7 +24,11 @@ permalink: /linux/servers/containers/kubernetes/minikube/
 
 [Предоставление внешним клиентам доступа к службам](/linux/servers/containers/kubernetes/minikube/svc/)
 
+[Пример Ingress в minikube (Nginx)](/linux/servers/containers/kubernetes/kubeadm/minikube-ingress-nginx/)
+
 [Разворачиваем многоуровневое приложение в minikube](/linux/servers/containers/kubernetes/minikube/multi-tier-application/)
+
+[Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]](/linux/servers/containers/kubernetes/minikube/docker-and-kubernetes/)
 
 <br/>
 
