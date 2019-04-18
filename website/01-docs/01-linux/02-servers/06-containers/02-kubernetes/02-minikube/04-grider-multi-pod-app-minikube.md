@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Разворачиваем приложение из видео курса Stephen Grider Docker and Kubernetes The Complete Guide
-permalink: /linux/servers/containers/kubernetes/minikube/docker-and-kubernetes/
+permalink: /linux/servers/containers/kubernetes/minikube/grider-multi-pod-app-minikube/
 ---
 
 # Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]
@@ -58,7 +58,7 @@ https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
 
 <br/>
 
-### Ingress
+### KubernetesInc Ingress Nginx
 
     $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
 

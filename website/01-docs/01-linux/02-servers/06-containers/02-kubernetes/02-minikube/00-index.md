@@ -28,7 +28,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/
 
 [Разворачиваем многоуровневое приложение в minikube](/linux/servers/containers/kubernetes/minikube/multi-tier-application/)
 
-[Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]](/linux/servers/containers/kubernetes/minikube/docker-and-kubernetes/)
+[Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]](/linux/servers/containers/kubernetes/minikube/grider-multi-pod-app-minikube/)
 
 <br/>
 

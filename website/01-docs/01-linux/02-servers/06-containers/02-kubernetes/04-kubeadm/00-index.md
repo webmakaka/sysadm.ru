@@ -30,6 +30,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Horizontal Pod Autoscaler in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/horizontal-pod-autoscaler/)
 
+### [Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]](/linux/servers/containers/kubernetes/kubeadm/grider-multi-pod-app/)
+
 <br/>
 
 ## Изучаем установку и настройку Kubernetes Cluster

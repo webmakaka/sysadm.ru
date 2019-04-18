@@ -90,11 +90,6 @@ end
 
     $ sudo vi /etc/exports
 
-<!--
-
-    /srv/nfs/kubedata *(rw,sync,no_subtree_check,insecure)
--->
-
     /srv/nfs/kubedata *(rw,sync,no_subtree_check,no_root_squash,no_all_squash,insecure)
 
 На youtube под видео, индусы предлагают решение, чтобы не использовать insecure.

@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=A_PjjCM1eLA
 
 <br/>
 
-Подготовили кластер, окружение и haproxy как <a href="/linux/servers/containers/kubernetes/kubeadm/ingress/nginx-ingress/">здесь</a>.
+Подготовили кластер, окружение и haproxy как <a href="/linux/servers/containers/kubernetes/kubeadm/ingress/nginxinc-kubernets-ingress/">здесь</a>.
 
 <br/>
 

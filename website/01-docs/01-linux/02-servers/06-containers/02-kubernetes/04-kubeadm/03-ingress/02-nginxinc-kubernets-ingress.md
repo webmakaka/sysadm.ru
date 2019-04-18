@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Nginx ingress
-permalink: /linux/servers/containers/kubernetes/kubeadm/ingress/nginx-ingress/
+title: Запускаем приложение с использованием NginxInc Kubernetes Ingress
+permalink: /linux/servers/containers/kubernetes/kubeadm/ingress/nginxinc-kubernets-ingress/
 ---
 
-# Nginx ingress
+# Запускаем приложение с использованием NginxInc Kubernetes Ingress
 
 Делаю  
 04.04.2019
@@ -31,7 +31,7 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Добавляю еще 1 виртуалку на которой будет работать haproxy.
+### Добавляю еще 1 виртуалку, на которой будет работать haproxy.
 
 <br/>
 
@@ -74,7 +74,7 @@ end
 
 <br/>
 
-### HA proxy
+### Устанавливаем и настраиваем HA proxy
 
     $ sudo su -
 
@@ -120,44 +120,7 @@ backend http_back
 
 <br/>
 
-### Создаем nginx ingress контроллер
-
-Скрипты:  
-https://github.com/nginxinc/kubernetes-ingress
-
-<br/>
-
-    $ kubectl create -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/master/deployments/common/ns-and-sa.yaml
-
-<br/>
-
-    $ kubectl get ns
-    NAME              STATUS   AGE
-    default           Active   18m
-    kube-node-lease   Active   18m
-    kube-public       Active   18m
-    kube-system       Active   18m
-    nginx-ingress     Active   3s
-
-<br/>
-
-    $ kubectl create -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/master/deployments/common/default-server-secret.yaml
-
-    $ kubectl create -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/master/deployments/common/nginx-config.yaml
-
-    $ kubectl create -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/master/deployments/rbac/rbac.yaml
-
-    $ kubectl create -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/master/deployments/daemon-set/nginx-ingress.yaml
-
-<br/>
-
-    $ kubectl get all -n nginx-ingress
-    NAME                      READY   STATUS    RESTARTS   AGE
-    pod/nginx-ingress-2hns6   1/1     Running   0          12m
-    pod/nginx-ingress-qx6jp   1/1     Running   0          12m
-
-    NAME                           DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
-    daemonset.apps/nginx-ingress   2         2         2       2            2           <none>          12m
+### [Создаем NginxInc Kubernetes Ingress контроллер](/linux/servers/containers/kubernetes/kubeadm/ingress/nginxinc-kubernets-ingress-install/)
 
 <br/>
 
@@ -338,9 +301,3 @@ spec:
     # kubectl delete ing nodejs-cats-app-ingress
     # kubectl delete service nodejs-cats-app-deployment
     # kubectl delete svc nodejs-cats-app-nodeport
-
-<br/>
-
-### Ingress troubleshooting
-
-https://github.com/kubernetes/ingress-nginx/blob/master/docs/troubleshooting.md

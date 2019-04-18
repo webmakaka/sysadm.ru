@@ -1,14 +1,19 @@
 ---
 layout: page
 title: Разворачиваем приложение из видео курса Stephen Grider Docker and Kubernetes: The Complete Guide
-permalink: /linux/servers/containers/kubernetes/kubeadm/docker-and-kubernetes/
+permalink: /linux/servers/containers/kubernetes/kubeadm/grider-multi-pod-app/
 ---
 
 # Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]
 
 <br/>
 
-Делаю: 17.04.2019
+Делаю: 18.04.2019
+
+<br/>
+
+**Обращаю внимание, что используется:**
+nginxinc-kubernetes-ingress
 
 <br/>
 
@@ -56,16 +61,22 @@ https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
 
 <br/>
 
-### Ingress
+### [Создаем NginxInc Kubernetes Ingress контроллер](/linux/servers/containers/kubernetes/kubeadm/ingress/nginxinc-kubernets-ingress-install/)
 
-Подготовили кластер и окружение как <a href="/linux/servers/containers/kubernetes/kubeadm/ingress/nginx-ingress/">здесь</a>.
+<br/>
+
+### Добавляем свой конфиг
+
+<br/>
 
 ```
 $ cat <<EOF | kubectl apply -f -
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: final-ingress
+  name: nginxinc-kubernetes-ingress
+  annotations:
+    nginx.org/rewrites: "serviceName=server-cluster-ip-service rewrite=/"
 spec:
   rules:
   - host: nginx.example.com
@@ -83,10 +94,6 @@ EOF
 
 ```
 
-nginx.example.com
-nginx.example.com/api/
-nginx.example.com/api/values/current
-
 <br/>
 
 ### На клиенте
@@ -94,32 +101,14 @@ nginx.example.com/api/values/current
     # vi /etc/hosts
     192.168.0.5 nginx.example.com
 
-# =========
+<br/>
 
-    $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
+**Пробуем подключаться:**
 
-```
-$ cat <<EOF | kubectl apply -f -
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: ingress-service
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/rewrite-target: /
-spec:
-  rules:
-    - host: nginx.example.com
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: client-cluster-ip-service
-              servicePort: 3000
-          - path: /api/
-            backend:
-              serviceName: server-cluster-ip-service
-              servicePort: 5000
-EOF
+nginx.example.com  
+nginx.example.com/api/  
+nginx.example.com/api/values/current
 
-```
+<br/>
+
+### KubernetesInc Ingress Nginx (надо будет попробовать!!!)
