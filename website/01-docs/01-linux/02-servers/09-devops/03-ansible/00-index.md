@@ -20,4 +20,8 @@ permalink: /linux/servers/devops/ansible/
 
 <br/>
 
+### [Скрипты для развертывания Kubernetes с помощью Ansible в Vagrant](https://bitbucket.org/sysadm-ru/vagrant-ansible-kubernetes/)
+
+<br/>
+
 ### [Обучающие видео по работе с Ansible](/linux/servers/devops/ansible/videos/)

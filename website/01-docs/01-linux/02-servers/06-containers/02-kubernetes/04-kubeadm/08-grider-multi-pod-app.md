@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Разворачиваем приложение из видео курса Stephen Grider Docker and Kubernetes: The Complete Guide
+title: Разворачиваем приложение из видео курса Stephen Grider Docker and Kubernetes The Complete Guide
 permalink: /linux/servers/containers/kubernetes/kubeadm/grider-multi-pod-app/
 ---
 
@@ -46,7 +46,6 @@ https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
 
     $ kubectl create -f .
 
-    $ kubectl get pods
     NAME                                      READY   STATUS    RESTARTS   AGE
     client-deployment-bfb978799-pbtdn         1/1     Running   0          2m55s
     client-deployment-bfb978799-t76p5         1/1     Running   0          2m55s
@@ -105,10 +104,9 @@ EOF
 
 **Пробуем подключаться:**
 
-nginx.example.com  
-nginx.example.com/api/  
-nginx.example.com/api/values/current
+    nginx.example.com
+    nginx.example.com/api/
+    nginx.example.com/api/values/current
+    OK
 
-<br/>
-
-### KubernetesInc Ingress Nginx (надо будет попробовать!!!)
+<!-- $ curl http://192.168.0.5 -H 'Host:nginx.example.com' -->

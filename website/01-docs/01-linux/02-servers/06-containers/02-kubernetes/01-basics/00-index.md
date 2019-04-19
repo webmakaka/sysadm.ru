@@ -28,6 +28,8 @@ Replica Sets и Replication Controller считаются устаревшими
 
 ### [Resource Quotas & Limits in Kubernetes](/linux/servers/containers/kubernetes/basics/resource-quotas-and-limits/)
 
+### [Services: ClusterIP, NodePort, LoadBalancer, Ingress](/linux/servers/containers/kubernetes/basics/services/)
+
 <br/>
 
     -- Get the token
