@@ -8,7 +8,7 @@ permalink: /linux/desktops/ubuntu/sopcast-ace-player-install/
 
 <br/>
 
-### Инсталляция SopCast плеера в Ubuntu 18.04.1
+### Инсталляция SopCast плеера в Ubuntu 18.04.1 (Чего-то к трансляциям этим плеером не особо подключается в последнее время)
 
 Делаю:  
 16.04.2019

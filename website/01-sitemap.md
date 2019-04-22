@@ -41,7 +41,7 @@ permalink: /sitemap/
 
 # Видеокурсы:
 
-### [Видеокурсы для админинов](/linux/video-courses/)
+### [Видеокурсы для админов](/linux/video-courses/)
 
 ---
 
