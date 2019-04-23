@@ -16,7 +16,7 @@ permalink: /linux/servers/logging/elk/install/
 https://www.youtube.com/watch?v=Cfbanio3Lao&list=PL34sAs7_26wOgpqMW_0_E95k9tq2VkMOZ&index=1
 
 <br/>
-Рисуноки индуса:
+Рисунки индуса:
 <br/>
 
 ![elk install 01](/img/linux/servers/logging/elk/intall/elk-install-01.png "elk install 01"){: .center-image }

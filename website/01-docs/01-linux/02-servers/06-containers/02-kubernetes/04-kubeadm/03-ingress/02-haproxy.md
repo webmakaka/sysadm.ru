@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/ingress/haproxy/
 # Устанавливаем и настраиваем HAProxy для Kuberntes (тестовые задачи)
 
 Делаю  
-19.04.2019
+23.04.2019
 
 <br/>
 
@@ -25,9 +25,9 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-    $ vi Vagrantfile
-
 Виртуалка для NFS
+
+    $ vi Vagrantfile
 
 ```
 # -*- mode: ruby -*-
@@ -95,6 +95,8 @@ backend http_back
   server kube 192.168.0.11:80
   server kube 192.168.0.12:80
 ```
+
+<br/>
 
 Предварительно заменив адреса узлов кластера на нужные.
 

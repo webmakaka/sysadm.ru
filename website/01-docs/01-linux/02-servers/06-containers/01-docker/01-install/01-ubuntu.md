@@ -8,7 +8,7 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
 
 Делаю:
 
-13.03.2019
+23.04.2019
 
 <br/>
 
@@ -36,7 +36,7 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
     # apt update && apt install -y docker-ce
 
     # docker -v
-    Docker version 18.09.3, build 774a1f4
+    Docker version 18.09.5, build e8ff056
 
 <br/>
 

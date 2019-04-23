@@ -9,7 +9,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/svc/load-balancer/
 Делаю:  
 02.03.2019
 
-Replica Set созданы как в NodePort
+Replica Set созданы как<a href="/linux/servers/containers/kubernetes/minikube/svc/nodeport/">здесь</a>
 
 <br/>
 

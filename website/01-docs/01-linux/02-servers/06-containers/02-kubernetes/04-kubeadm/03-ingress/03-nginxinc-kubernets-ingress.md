@@ -20,12 +20,6 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 ![kubernetes ingress](/img/linux/servers/containers/kubernetes/kubeadm/ingress/ingress.png "kubernetes ingress"){: .center-image }
 
 <br/>
-Но вроде должно работать вот так, без всяких haproxy:
-<br/>
-
-![kubernetes ingress real](/img/linux/servers/containers/kubernetes/kubeadm/ingress/ingress-real.png "kubernetes ingress real"){: .center-image }
-
-<br/>
 
 Подготовили кластер и окружение как <a href="/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/">здесь</a>.
 
@@ -93,9 +87,9 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-### Попробуем запустить свое приложение:
+## Попробуем запустить свое приложение:
 
-    $ mkdir ~/cats-app/ && cd ~/cats-app/
+    $ mkdir ~/tmp/cats-app/ && cd ~/tmp/cats-app/
 
 <br/>
 
