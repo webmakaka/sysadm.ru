@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Пример Ingress в minikube (Nginx) + TLS
-permalink: /linux/servers/containers/kubernetes/kubeadm/minikube-ingress-nginx/
+permalink: /linux/servers/containers/kubernetes/kubeadm/minikube-ingress-nginx/tls/
 ---
 
 # Пример Ingress в minikube (Nginx) + TLS

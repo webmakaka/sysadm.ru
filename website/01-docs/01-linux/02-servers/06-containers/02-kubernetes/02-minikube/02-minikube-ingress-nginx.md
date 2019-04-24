@@ -6,6 +6,48 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/minikube-ingress-nginx/
 
 # Пример Ingress в minikube (Nginx)
 
+Делаю: 24.04.2019
+
+<br/>
+
+### KubernetesInc Ingress Nginx
+
+    $ minikube start
+
+    $ minikube addons enable ingress
+
+    $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
+
+    $ kubectl apply -f https://raw.githubusercontent.com/marley-nodejs/cats-app/master/minikube-cats-app-deployment.yaml
+
+    $ kubectl apply -f https://raw.githubusercontent.com/marley-nodejs/cats-app/master/minikube-cats-app-cluster-ip-service.yaml
+
+    $ kubectl apply -f https://raw.githubusercontent.com/marley-nodejs/cats-app/master/minikube-cats-app-ingress-service.yaml
+
+<br/>
+
+    $ kubectl get ing
+    NAME              HOSTS   ADDRESS   PORTS   AGE
+    ingress-service   *                 80      24s
+
+<br/>
+
+    $ minikube ip
+    192.168.99.119
+
+<br/>
+
+    https://192.168.99.119/
+
+<br/>
+
+Если все ОК. (У меня да).  
+Должны появиться котики.
+
+<br/>
+
+### Еще 1 пример
+
 Делаю: 17.04.2019
 
 <br/>
