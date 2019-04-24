@@ -26,6 +26,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/ingress/kubernetesinc-in
 
 меняю версию nginx-ingress-controller:0.17.1 на nginx-ingress-controller:0.24.1
 
+    $ kubectl create -f nginx-ingress-controller.yml
+
 <!--
 
     // ingress controller

@@ -63,7 +63,7 @@ vm.max_map_count=262144
 <br/>
 
     # su - vagrant
-    $ mkdir ~/tmp && ~/tmp
+    $ mkdir ~/tmp && cd ~/tmp
     $ git clone https://bitbucket.org/sysadm-ru/elk.git
 
     $ cd elk/docker
