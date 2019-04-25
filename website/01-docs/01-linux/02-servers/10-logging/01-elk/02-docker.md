@@ -9,7 +9,7 @@ permalink: /linux/servers/logging/elk/docker/
 <br/>
 
 Делаю  
-23.04.2019
+26.04.2019
 
 По материалам индуса:
 
@@ -66,9 +66,15 @@ vm.max_map_count=262144
     $ mkdir ~/tmp && cd ~/tmp
     $ git clone https://bitbucket.org/sysadm-ru/elk.git
 
-    $ cd elk/docker
-    $ docker-compse up
+    $ cd ~/tmp/elk/docker
+    $ docker-compose up
 
 <br/>
 
 http://192.168.0.11:5601
+
+<br/>
+
+### Удалить созданную виртуальную машину (когда перестанет быть нужной)
+
+    $ docker-compose rm -f

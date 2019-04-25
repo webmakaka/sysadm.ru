@@ -50,7 +50,7 @@ vm.max_map_count=262144
     $ mkdir ~/tmp && cd ~/tmp
     $ git clone https://bitbucket.org/sysadm-ru/elk.git
 
-    $ cd elk/docker-efk/
+    $ cd ~/tmp/elk/docker-efk/
     $ docker-compose up -d
 
 <br/>

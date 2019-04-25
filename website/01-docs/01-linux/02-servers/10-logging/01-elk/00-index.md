@@ -12,4 +12,8 @@ permalink: /linux/servers/logging/elk/
 
 ### [Running ELK stack in Docker containers](/linux/servers/logging/elk/docker/)
 
-### [ow to install EFK stack using Docker with Fluentd](/linux/servers/logging/elk/docker-fluentd/)
+### [How to install EFK stack using Docker with Fluentd](/linux/servers/logging/elk/docker-fluentd/)
+
+### [Monitoring System Logs and Metrics in ELK Stack (FileBeat & MetricBeat)](/linux/servers/logging/elk/filebeat-metricbeat/)
+
+### [Monitoring Apache Logs and Metrics in ELK stack](/linux/servers/logging/elk/apache-logs-and-metrics/)
