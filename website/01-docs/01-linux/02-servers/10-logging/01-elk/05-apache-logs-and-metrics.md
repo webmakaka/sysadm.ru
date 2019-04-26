@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Monitoring Apache Logs and Metrics in ELK stack
-permalink: /linux/servers/logging/elk/filebeat-metricbeat/
+permalink: /linux/servers/logging/elk/apache-logs-and-metrics/
 ---
 
 # Monitoring Apache Logs and Metrics in ELK stack
