@@ -43,11 +43,7 @@ https://www.youtube.com/watch?v=Cfbanio3Lao&list=PL34sAs7_26wOgpqMW_0_E95k9tq2Vk
 
 <br/>
 
-### Поехали
-
-<br/>
-
-### На хост машине запускаем виртуалки
+### Подготавливаем host машину
 
 <br/>
 
@@ -65,6 +61,10 @@ https://www.youtube.com/watch?v=Cfbanio3Lao&list=PL34sAs7_26wOgpqMW_0_E95k9tq2Vk
 192.168.0.10 client.example.com client
 192.168.0.11 server.example.com server
 ```
+
+<br/>
+
+### На хост машине запускаем виртуалки
 
     $ mkdir ~/vagrant-elk && cd ~/vagrant-elk
 
