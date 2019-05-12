@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Обучающие видео по работе с Ansible
-permalink: /linux/servers/devops/ansible/videos/
+permalink: /linux/servers/devops/automation/ansible/videos/
 ---
 
 # Обучающие видео по работе с Ansible

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Puppet
-permalink: /linux/servers/devops/puppet/
+permalink: /linux/servers/devops/automation/puppet/
 ---
 
 # Puppet

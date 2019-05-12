@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Разворачиваем Gitlab с помощью ansible-galaxy и ansible-playbook
-permalink: /linux/servers/devops/ansible/gitlab/
+permalink: /linux/servers/devops/automation/ansible/gitlab/
 ---
 
 # Разворачиваем Gitlab с помощью Ansible
@@ -121,6 +121,7 @@ apt update && apt upgrade -y
     $ cd ~
     $ git clone --depth=1 https://github.com/marley-nodejs/Hands-On-DevOps-with-Ansible/
 
+<br/>
 
     $ cd /home/ansible/Hands-On-DevOps-with-Ansible/infrastructure/
 

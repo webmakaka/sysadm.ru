@@ -76,8 +76,8 @@ https://hub.docker.com
     $ docker images debian
 
 // переименвать имидж
-  
- -- Переименовываю имидж. Чтобы контейнер на hub.docker.com начинался с моего username на этом сайте.
+
+-- Переименовываю имидж. Чтобы контейнер на hub.docker.com начинался с моего username на этом сайте.
 \$ docker tag centos6/rais:v01 marley/centos6-for-jekyll:latest
 
 // Запустить контейнер и отправить 30 пингов до гугла
@@ -195,15 +195,15 @@ https://hub.docker.com
 
     # docker rmi -f $(docker images -q)
 
-```
-$ docker system prune -a
-WARNING! This will remove:
-        - all stopped containers
-        - all networks not used by at least one container
-        - all images without at least one container associated to them
-        - all build cache
-Are you sure you want to continue? [y/N]
-```
+<br/>
+
+Более новый способ удаления всех оъектов
+
+    $ docker system prune -a
+    $ docker container prune
+    $ docker image prune -a
+    $ docker volume prune
+    $ docker network prune
 
 <br/>
 

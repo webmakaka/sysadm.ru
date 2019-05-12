@@ -44,11 +44,11 @@ https://github.com/bradtraversy/vagrant_lamp_traversy/blob/master/Vagrantfile
 
 [Vagrant c Docker внутри](/linux/servers/virtual/vagrant/vagrant-with-docker/)
 
-[Деплой nodejs приложения на удаленный сервер с помощью ansible](/linux/servers/devops/ansible/deploy-node-app-by-ansible/)
+[Деплой nodejs приложения на удаленный сервер с помощью ansible](/linux/servers/devops/automation/ansible/deploy-node-app-by-ansible/)
 
 [Vagrant и Ansible playbook для подготовки виртуальных машин Virtualbox](/linux/servers/virtual/vagrant/vagrant-ansible-playbook/)
 
-[Разворачиваем Gitlab в виртуальной машине, созданной с помощью Vagrant](/linux/servers/virtual/vagrant/vagrant-gitlab/)
+[Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](/linux/servers/virtual/vagrant/vagrant-gitlab/)
 
 [Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
 

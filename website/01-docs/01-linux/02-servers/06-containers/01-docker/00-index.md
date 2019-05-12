@@ -45,8 +45,6 @@ https://quay.io
 
 **Можно также создать свой Registry:**
 
-https://docs.docker.com/registry/  
-https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
 
 <br/><br/>
 
@@ -133,6 +131,14 @@ https://docs.docker.com/engine/userguide/networking/
 
 [здесь](/linux/servers/containers/docker/dockerfile/)
 
+
+<br/>
+
+### Self-hosted Registry (Свой dockerhub)
+
+[Self-hosted Registry](/linux/servers/containers/docker/self-hosted-registry/)
+
+
 <br/>
 
 ### Docker Clustering
@@ -149,7 +155,7 @@ https://docs.docker.com/engine/userguide/networking/
 
 ### Хостовые операционные системы для docker контейнеров
 
-[CoreOS (была куплена RedHat)](/linux/servers/containers/coreos/)
+[CoreOS (была куплена RedHat/IBM)](/linux/servers/containers/coreos/)
 
 Rancher OS (Rancher Labs)
 
@@ -173,30 +179,3 @@ Atomic (RedHat)
 
 
     https://github.com/just-containers/s6-overlay
-
-<br/>
-
-**Возможно, полезные статьи по docker:**
-
-<ul>
-
-    <li><a href="http://rus-linux.net/MyLDP/vm/docker/docker-tutorial.html" rel="nofollow">Docker – руководство для начинающих</a></li>
-
-    <li><a href="http://dou.ua/lenta/articles/docker/" rel="nofollow">Виртуализация процесса разработки, часть 1: Docker</a></li>
-
-    <li><a href="http://habrahabr.ru/post/253877/" rel="nofollow">Понимая Docker</a></li>
-    <li><a href="http://habrahabr.ru/post/253999/" rel="nofollow">Docker и костыли в продакшене</a></li>
-    <li><a href="http://habrahabr.ru/post/250469/" rel="nofollow">Как жить с Docker, или почему лучше с ним, чем без него?</a></li>
-    <li><a href="http://habrahabr.ru/post/247969/" rel="nofollow">Docker в продакшене — чему мы научились, запустив более 300 миллионов контейнеров</a></li>
-    <li><a href="http://habrahabr.ru/post/247903/" rel="nofollow">Docker: интересные особенности базовых образов</a></li>
-
-
-    <li><a href="http://habrahabr.ru/post/247547/" rel="nofollow">Создание окружения для веб-разработки на основе Docker (для PHP)</a></li>
-    <li><a href="http://habrahabr.ru/post/246933/" rel="nofollow">Docker, SkyDNS и SkyDock — быстро и удобно</a></li>
-    <li><a href="http://habrahabr.ru/post/234829/" rel="nofollow">Оптимизация образов Docker</a></li>
-    <li><a href="http://habrahabr.ru/company/infopulse/blog/237737/" rel="nofollow">Почему вам не нужен sshd в Docker-контейнере</a></li>
-    <li><a href="http://habrahabr.ru/post/240509/" rel="nofollow">Docker: запуск графических приложений в контейнерах</a></li>
-    <li><a href="http://habrahabr.ru/post/238069/" rel="nofollow">Деплой Rails-приложения с помощью Docker</a></li>
-    <li><a href="http://habrahabr.ru/post/243953/" rel="nofollow">Docker в браузере, или как создать и «расшарить» среду разработки</a></li>
-
-</ul>

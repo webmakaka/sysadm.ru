@@ -6,6 +6,7 @@ permalink: /linux/servers/monitoring/
 
 # Мониторинг серверов и рабочих станций в Linux
 
+### [Check_mk](/linux/servers/monitoring/check-mk/)
 
 ### [Zabbix](/linux/servers/monitoring/zabbix/)
 

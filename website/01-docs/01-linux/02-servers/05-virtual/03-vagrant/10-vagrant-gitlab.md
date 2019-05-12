@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Разворачиваем Gitlab в виртуальной машине, созданной с помощью Vagrant
+title: Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами
 permalink: /linux/servers/virtual/vagrant/vagrant-gitlab/
 ---
 
-# Разворачиваем Gitlab в виртуальной машине, созданной с помощью Vagrant
+# Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами
 
 Делаю 22.03.2019
 

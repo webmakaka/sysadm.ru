@@ -12,25 +12,17 @@ permalink: /linux/servers/devops/
 
 <br/>
 
-### [GitLab](/linux/servers/devops/gitlab/)
+### [Системы управления версиями (Version Control System, VCS)](/linux/servers/devops/vcs/)
 
-### [GitTea Youtube](https://www.youtube.com/watch?v=dTvTBlzKqgg)
-
-<br/>
-
-### [Jenkins](/linux/servers/devops/jenkins/)
 
 <br/>
 
-### [Ansible](/linux/servers/devops/ansible/)
+### [Continuous integration / Continuous delivery (CI/CD)](/linux/servers/devops/cicd/)
+
 
 <br/>
 
-### [Puppet](/linux/servers/devops/puppet/)
-
-<br/>
-
-### Chef
+### [Автоматизация: Ansible, Puppet, Chef](/linux/servers/devops/automation/)
 
 <br/>
 

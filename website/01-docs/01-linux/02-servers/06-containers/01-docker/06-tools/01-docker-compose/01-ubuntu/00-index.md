@@ -9,7 +9,7 @@ permalink: /linux/servers/containers/docker/tools/docker-compose/install/ubuntu/
 Docker-Compose нужен, чтобы организовать совместную работу нескольких контейнеров)
 
 **Делаю:**  
-23.04.2019
+10.05.2019
 
 Смотрю последний релиз (сегодня это 1.24.0):
 https://github.com/docker/compose/releases

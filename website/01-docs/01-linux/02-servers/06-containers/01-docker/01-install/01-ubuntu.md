@@ -8,7 +8,7 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
 
 Делаю:
 
-23.04.2019
+11.05.2019
 
 <br/>
 
@@ -32,11 +32,10 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
     $(lsb_release -cs) \
     stable"
 
-
     # apt update && apt install -y docker-ce
 
     # docker -v
-    Docker version 18.09.5, build e8ff056
+    Docker version 18.09.6, build 481bc77
 
 <br/>
 

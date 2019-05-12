@@ -10,6 +10,8 @@ permalink: /linux/servers/virtual/vagrant/for-docker-swarm/
 
     $ vagrant plugin install vagrant-hosts
 
+<br/>
+
     $ vi Vagrantfile
 
 ```text

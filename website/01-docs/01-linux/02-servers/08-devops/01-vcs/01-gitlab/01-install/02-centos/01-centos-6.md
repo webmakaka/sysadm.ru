@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция GITLAB в centos 6 из пакетов
-permalink: /linux/servers/devops/gitlab/install/centos/6/
+permalink: /linux/servers/devops/vcs/gitlab/install/centos/6/
 ---
 
 # Инсталляция GITLAB в centos 6 из пакетов
@@ -48,5 +48,4 @@ permalink: /linux/servers/devops/gitlab/install/centos/6/
 По материалам сайта:  
 http://blog.asidorov.name/2014/07/gitlab.html
 
-По хорошему, нужно настроить по этим шагам:  
-https://github.com/gitlabhq/gitlab-recipes/blob/master/install/centos/README.md
+

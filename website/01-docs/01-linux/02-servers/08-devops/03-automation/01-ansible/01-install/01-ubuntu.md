@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Ansible в Ubuntu 18.04
-permalink: /linux/servers/devops/ansible/install/ubuntu/
+permalink: /linux/servers/devops/automation/ansible/install/ubuntu/
 ---
 
 # Инсталляция Ansible в Ubuntu 18.04

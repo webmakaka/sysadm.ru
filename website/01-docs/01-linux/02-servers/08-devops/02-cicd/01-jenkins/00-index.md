@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Jenkins
-permalink: /linux/servers/devops/jenkins/
+permalink: /linux/servers/devops/cicd/jenkins/
 ---
 
 # Jenkins
@@ -23,3 +23,8 @@ docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins
 
     // Получить пароль
     $ docker exec <container_id> cat /var/jenkins_home/secrets/initialAdminPassword
+
+
+<br/>
+
+### [Примеры использования](https://github.com/marley-nodejs/Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker)
