@@ -8,7 +8,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/horizontal-pod-autoscale
 
 <br/>
 
-Делаю: 16.04.2019
+Делаю:  
+16.04.2019
 
 По материалам из видео индуса:
 

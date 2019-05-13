@@ -32,6 +32,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]](/linux/servers/containers/kubernetes/kubeadm/grider-multi-pod-app/)
 
+### [Setup Lets Encrypt cert-manager in Kubernetes Bare Metal](/linux/servers/containers/kubernetes/kubeadm/lets-encrypt/)
+
 <br/>
 
 ## Изучаем установку и настройку Kubernetes Cluster

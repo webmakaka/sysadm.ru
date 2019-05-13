@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/ingress/haproxy/
 # Устанавливаем и настраиваем HAProxy для Kuberntes (тестовые задачи)
 
 Делаю  
-23.04.2019
+13.05.2019
 
 <br/>
 
@@ -24,8 +24,6 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
     $ mkdir ~/vagrant-kubernetes-haproxy && cd ~/vagrant-kubernetes-haproxy
 
 <br/>
-
-Виртуалка для NFS
 
     $ vi Vagrantfile
 
@@ -66,7 +64,7 @@ end
 
 <br/>
 
-    # yum install -y haproxy
+    # yum install -y haproxy net-tools
 
 <br/>
 
@@ -105,3 +103,9 @@ backend http_back
     # systemctl enable haproxy
     # systemctl start haproxy
     # systemctl status haproxy
+
+
+<br/>
+
+// Убедиться, что слушается порт
+    # netstat -nltp

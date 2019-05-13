@@ -27,7 +27,6 @@ https://www.youtube.com/watch?v=MNId4HG0wV8&list=PL34sAs7_26wOgpqMW_0_E95k9tq2Vk
 
 <br/>
 
-<br/>
 
     # vi /etc/sysctl.conf
 
@@ -39,6 +38,8 @@ https://www.youtube.com/watch?v=MNId4HG0wV8&list=PL34sAs7_26wOgpqMW_0_E95k9tq2Vk
 #
 vm.max_map_count=262144
 ```
+
+<br/>
 
     // Применит параметры до перезагрузки
     # sysctl -w vm.max_map_count=262144

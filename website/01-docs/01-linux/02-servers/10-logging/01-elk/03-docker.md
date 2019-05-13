@@ -9,7 +9,7 @@ permalink: /linux/servers/logging/elk/docker/
 <br/>
 
 Делаю  
-26.04.2019
+13.05.2019
 
 По материалам индуса:
 
@@ -54,6 +54,8 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 #
 vm.max_map_count=262144
 ```
+
+<br/>
 
     // Применит параметры до перезагрузки
     # sysctl -w vm.max_map_count=262144

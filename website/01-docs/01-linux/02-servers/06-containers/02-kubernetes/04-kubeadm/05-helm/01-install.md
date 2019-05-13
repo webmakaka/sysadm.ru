@@ -4,11 +4,12 @@ title: Подготовка и установка helm
 permalink: /linux/servers/containers/kubernetes/kubeadm/heml/install/
 ---
 
-# Подготовка и установка helm
+# Подготовка и установка helm/tiller
 
 <br/>
 
-Делаю: 11.04.2019
+Делаю:  
+13.05.2019
 
 <br/>
 
@@ -32,7 +33,7 @@ https://www.youtube.com/watch?v=ObGR0EfVPlg&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-### Инсталляция
+### Инсталляция tiller
 
     $ kubectl -n kube-system create serviceaccount tiller
 

@@ -19,3 +19,8 @@ permalink: /linux/servers/logging/elk/
 ### [Monitoring System Logs and Metrics in ELK Stack (FileBeat & MetricBeat)](/linux/servers/logging/elk/filebeat-metricbeat/)
 
 ### [Monitoring Apache Logs and Metrics in ELK stack](/linux/servers/logging/elk/apache-logs-and-metrics/)
+
+<br/>
+
+**Offtopic docker-compose для версии elk 7.0.1)**  
+https://bitbucket.org/sysadm-ru/elk-v2/src/master/

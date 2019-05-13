@@ -6,9 +6,8 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
 
 # Инсталляция / Upgrade Docker в Ubuntu 18.04.1 bionic64
 
-Делаю:
-
-11.05.2019
+Делаю:  
+13.05.2019
 
 <br/>
 

@@ -53,6 +53,7 @@ https://sundog-education.com/elasticsearch/
     $ sudo apt-get install openjdk-8-jre-headless -y
     $ sudo apt-get install openjdk-8-jdk-headless -y
 
+<br/>
 
     $ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 
