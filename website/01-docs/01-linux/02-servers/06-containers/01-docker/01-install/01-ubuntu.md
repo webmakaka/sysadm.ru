@@ -7,11 +7,37 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 18.04.1 bionic64
 
 Делаю:  
-13.05.2019
+16.05.2019
 
 <br/>
 
 ### Инсталляция Docker версии 18.x
+
+**Вариант 1: Пусть скрипты сделают все сами:**
+
+    $ sudo su -
+
+    # curl -LJO https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%201/Video%201.3/install-docker.sh
+
+    # chmod +x ./install-docker.sh
+
+    # ./install-docker.sh
+
+<br/>
+
+**+ сразу docker-compose**
+
+
+    # curl -LJO https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%201/Video%201.3/install-docker-compose.sh
+
+    # chmod +x ./install-docker-compose.sh
+
+    # ./install-docker-compose.sh
+
+
+<br/>
+
+**Вариант 2: Нет, я лучше сам буду выполнять команды**
 
     # apt install -y \
         apt-transport-https \
@@ -23,8 +49,7 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
 
     # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-<!--
-    # apt-key fingerprint 0EBFCD88 -->
+    # apt-key fingerprint 0EBFCD88
 
     # add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
@@ -42,6 +67,7 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 <br/>
+
 **Бинарники docker лежат здесь:**  
 https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
 

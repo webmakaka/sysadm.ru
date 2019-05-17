@@ -8,7 +8,7 @@ permalink: /linux/servers/devops/vcs/gitlab/
 
 <br/>
 
-### [Инсталляция GITLAB в Ubuntu 18.04 из пакетов](/linux/servers/devops/vcs/gitlab/install/ubuntu/18.04/)
+### [Инсталляция GITLAB в Ubuntu 18.04 из пакетов](/linux/servers/devops/vcs/gitlab/install/ubuntu/)
 
 ### [Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](/linux/servers/virtual/vagrant/vagrant-gitlab/)
 

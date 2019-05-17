@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Инсталляция GITLAB в Ubuntu 18.04 из пакетов
-permalink: /linux/servers/devops/vcs/gitlab/install/ubuntu/18.04/
+permalink: /linux/servers/devops/vcs/gitlab/install/ubuntu/
 ---
 
 # Инсталляция GITLAB в Ubuntu 18.04 из пакетов
 
 Делаю:  
-11.05.2019
+16.05.2019
 
 <br/>
 
@@ -21,7 +21,7 @@ permalink: /linux/servers/devops/vcs/gitlab/install/ubuntu/18.04/
 
 <br/>
 
-### Для начала на в hosts пропишу host
+### Для начала в hosts пропишу
 
 
     # vi /etc/hosts
@@ -103,7 +103,14 @@ http://gitlab.local
 
 <br/>
 
-# Gitlab runner (чтобы gitlab работал как CI/CD (если ничего не путаю))
+# Gitlab runner (чтобы gitlab работал как CI/CD)
+
+
+    # vi /etc/hosts
+
+    127.0.0.1 gitlab.local
+
+<br/>
 
     # apt install -y gitlab-runner
 
@@ -111,43 +118,86 @@ http://gitlab.local
 
 Создаем любой проект. Заходим в него.
 
-Settings --> CI/CD --> Runners
 
-Смотрим наши параметры, которые нужно будет задать в консоли.
+<!-- https://github.com/do-community/hello_hapi 
+
+
+https://www.alibabacloud.com/blog/up-and-running-with-gitlab-ci%2Fcd-on-alibaba-cloud_594044
+
+-->
+
 
 <br/>
 
-    # gitlab-runner register
+**Добавляю в корень проекта .gitlab-ci.yml:**
+
+https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%203/Video%203.1/.gitlab-ci.yml
+
+<br/>
+
+Удаляю строку  
+image: busybox:latest
+
+<br/>
+
+Settings --> CI/CD --> Runners
+
+Смотрим наши параметры, которые нужно будет задать в консоли. А именно gitlab url и gitlab-ci token.
+
+<br/>
+
+    $ sudo gitlab-runner register
 
     Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
-    [http://gitlab.local/]
+    [http://gitlab.local/][Enter] 
 
     Please enter the gitlab-ci token for this runner:
-    [v5ctn2FfTMybH59n9jy9]
+    [bCZh-V_zyksxUPipzYoB][Enter] 
 
     Please enter the gitlab-ci description for this runner:
-    [This is gitlab CI/CD tutorial]
+    [This is gitlab CI/CD tutorial][Enter] 
 
     Please enter the gitlab-ci tags for this runner (comma separated):
-    [stage,qu,build,deploy]
+    [stage,qu,build,deploy][Enter] 
 
     Whether to run untagged builds [true/false]:
-    [false]: [Enter] 
+    [true]: [Enter] 
 
     Whether to lock the Runner to current project [true/false]:
     [true]: [Enter]
 
     Please enter the executor: docker-ssh, virtualbox, docker+machine, docker, shell, ssh, docker-ssh+machine, kubernetes, parallels:
-    [shell]
+    [shell][Enter] 
 
     Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
+
+<br/>
+
+Или как вариант (который в должной мере не тестировался)
+
+```
+$ sudo gitlab-runner register -n \
+  --url http://gitlab.local/ \
+  --registration-token bCZh-V_zyksxUPipzYoB \
+  --executor shell \
+  --description "shell-builder"
+```
+
+
+
+<br/>
+
+Создается файл с конфигом раннера:
+
+    /etc/gitlab-runner/config.toml
+
 
 
 <!-- 
 ```
 sudo gitlab-runner register -n \
-  --url https://gitlab.example.com/ \
-  --registration-token your-token \
+  --url http://gitlab.local/ \
+  --registration-token bCZh-V_zyksxUPipzYoB \
   --executor docker \
   --description "docker-builder" \
   --docker-image "docker:latest" \
@@ -161,6 +211,21 @@ Settings --> CI/CD --> Runners
 Должен появиться созданный runner.
 
 <br/>
+
+Settings --> CI/CD --> Pipelines --> Run Pipeline
+
+<br/>
+
+При сообщении:
+
+**the project doesn't have any runners online assigned to it.**
+
+Можно, как вариант, в настройках runner указать галочку:
+
+Run untagged jobs: Indicates whether this runner can pick jobs without tags 
+
+<br/>
+
 
 # Gitlab Registry (собственное хранилище docker контейнеров)
 

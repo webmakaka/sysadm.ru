@@ -24,7 +24,11 @@ permalink: /devices/cisco/routers/1941/beeline-port-forwarding/
 
     cisco-router-1941(config)# ip nat inside source static tcp 192.168.1.201 80 95.31.31.8 80 extendable
 
+<!--
 
+    cisco-router-1941(config)# ip nat inside source static tcp 192.168.1.102 443 95.31.31.8 443 extendable
+
+-->
 
 http://www.cisco.com/c/en/us/support/docs/long-reach-ethernet-lre-digital-subscriber-line-xdsl/asymmetric-digital-subscriber-line-adsl/12905-827spat.html
 
@@ -39,5 +43,18 @@ interface Loopback0
 ip address 95.31.31.8 255.255.255.255
 ip nat outside
 ip virtual-reassembly
+
+-->
+
+
+<!--
+
+en
+conf t
+interface loopback 1 
+ip address 95.31.31.8 255.255.255.0
+#exit
+
+
 
 -->
