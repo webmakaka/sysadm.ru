@@ -136,7 +136,7 @@ https://docs.docker.com/engine/userguide/networking/
 
 ### Self-hosted Registry (Свой dockerhub)
 
-[Self-hosted Registry](/linux/servers/containers/docker/self-hosted-registry/)
+[Self-hosted Registry](/linux/servers/containers/docker/registry/)
 
 
 <br/>
