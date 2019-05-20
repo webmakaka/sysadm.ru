@@ -7,7 +7,7 @@ permalink: /linux/servers/devops/vcs/gitlab/install/ubuntu/
 # Инсталляция GITLAB в Ubuntu 18.04 из пакетов
 
 Делаю:  
-16.05.2019
+18.05.2019
 
 <br/>
 
@@ -18,7 +18,6 @@ permalink: /linux/servers/devops/vcs/gitlab/install/ubuntu/
     // Также предполагается, что установлен vagrant-hostmanager
     $ vagrant plugin install vagrant-hostmanager
 
-
 <br/>
 
 ### Для начала в hosts клиента пропишу
@@ -26,7 +25,7 @@ permalink: /linux/servers/devops/vcs/gitlab/install/ubuntu/
 
     # vi /etc/hosts
 
-    192.168.0.11 gitlab.local
+    127.0.0.1 gitlab.local
 
 
 <br/>
@@ -133,12 +132,52 @@ http://gitlab.local
 
 ```
 
+<br/>
+
+    // Получить информацию по установленно версии gitlab
+    $ sudo gitlab-rake gitlab:env:info
+
+```
+System information
+System:		Ubuntu 18.04
+Current User:	git
+Using RVM:	no
+Ruby Version:	2.5.3p105
+Gem Version:	2.7.6
+Bundler Version:1.17.3
+Rake Version:	12.3.2
+Redis Version:	3.2.12
+Git Version:	2.18.1
+Sidekiq Version:5.2.5
+Go Version:	unknown
+
+GitLab information
+Version:	11.10.4
+Revision:	62c464651d2
+Directory:	/opt/gitlab/embedded/service/gitlab-rails
+DB Adapter:	PostgreSQL
+DB Version:	9.6.11
+URL:		http://gitlab.local
+HTTP Clone URL:	http://gitlab.local/some-group/some-project.git
+SSH Clone URL:	git@gitlab.local:some-group/some-project.git
+Using LDAP:	no
+Using Omniauth:	yes
+Omniauth Providers: 
+
+GitLab Shell
+Version:	9.0.0
+Repository storage paths:
+- default: 	/var/opt/gitlab/git-data/repositories
+GitLab Shell path:		/opt/gitlab/embedded/service/gitlab-shell
+Git:		/opt/gitlab/embedded/bin/git
+```
+
+<br/>
 
 Жду предложение по решению проблемы. Сам устал искать решение.
 
 
 <br/>
-
 
 Поднимал на разных хостах gitlab и registry. При добавлении контейнера в registry все время было сообщение no **"container images stored for this project"**. Насколько понял из поисков,чтобы работало, нужно, чтобы gitlab и registry были на одном хосте. 
 
@@ -159,7 +198,7 @@ http://gitlab.local
 
 <br/>
 
-**Обращаю внимание, что на сервере с registry, необходимо сам сервер добавить в список разрешенных работы для клиента. ** Если этого не сделать. То gitlab не запустится.
+**Обращаю внимание, что на сервере с registry, необходимо сам сервер добавить в список разрешенных работы для клиента.**
 
 <br/>
 

@@ -7,13 +7,13 @@ permalink: /linux/servers/containers/docker/registry/self-signed-tls-security/
 # Собственный Docker Registry с самоподписанным TLS сертификатом
 
 Делаю:  
-17.05.2019
+18.05.2019
 
 <br/>
 
     # vi /etc/hosts
 
-    192.168.0.11 registry.local
+    127.0.0.1 registry.local
 
 <br/>
 
@@ -29,6 +29,8 @@ https://192.168.0.11/v2/_catalog -->
 
 <br/>
 
+    // Забираем из запущенного контейнера сертификаты
+
     $ cd ~
     $ docker cp tls_secured_1:/certs .
     $ sudo cp certs/selfsigned.crt /usr/local/share/ca-certificates/
@@ -40,6 +42,8 @@ https://192.168.0.11/v2/_catalog -->
     $ sudo systemctl restart docker
 
 <br/>
+
+    // Если есть желание проверить
 
     $ docker pull busybox
     $ docker image tag busybox registry.local/busybox
@@ -85,5 +89,3 @@ https://192.168.0.11/v2/_catalog -->
 
     $ curl --insecure https://registry.local/v2/_catalog
     {"repositories":["busybox","mongo"]}
-
-
