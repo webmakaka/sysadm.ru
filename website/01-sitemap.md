@@ -25,6 +25,13 @@ permalink: /sitemap/
 
 ### [Clouds](/clouds/)
 
+
+<br/>
+
+# BigData:
+
+### [Hadoop, Hive, etc.](/bigdata/)
+
 ---
 
 <br/>

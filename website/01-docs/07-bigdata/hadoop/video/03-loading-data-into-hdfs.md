@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Loading Data into HDFS
-permalink: /linux/distributed-systems/hadoop/loading-data-into-hdfs/
+permalink: /bigdata/hadoop/loading-data-into-hdfs/
 ---
 
 user hadoop

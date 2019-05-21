@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hadoop Multi Node Installation on Centos 6.X (Non-Secure Mode)
-permalink: /linux/distributed-systems/hadoop/multi-node-installation-on-centos-6-non-sucure-mode/
+permalink: /bigdata/hadoop/multi-node-installation-on-centos-6-non-sucure-mode/
 ---
 
 

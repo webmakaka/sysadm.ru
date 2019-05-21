@@ -22,12 +22,6 @@ permalink: /linux/
 
 ### [Работа с железками в linux](/linux/hardware/)
 
-<br/>
-
-# Распределенные системы:
-
-### [Distributed Systems (BigData, Hadoop, Hive, etc.)](/linux/distributed-systems/)
-
 ---
 
 <br/>

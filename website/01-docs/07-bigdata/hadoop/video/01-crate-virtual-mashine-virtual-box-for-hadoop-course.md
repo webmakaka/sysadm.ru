@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Создание виртуальной машины virtual box для курса по hadoop
-permalink: /linux/distributed-systems/hadoop/crate-virtual-machine-virtual-box-for-hadoop-course/
+permalink: /bigdata/hadoop/crate-virtual-machine-virtual-box-for-hadoop-course/
 ---
 
 Настраивается, так как я всегда и настраиваю virtulabox машины. Кому нужно, смотрите подробности в разделе по virtualbox.

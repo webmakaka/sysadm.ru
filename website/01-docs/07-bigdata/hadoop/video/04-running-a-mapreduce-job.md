@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Working with Hadoop via the Command Line Running a MapReduce Job
-permalink: /linux/distributed-systems/hadoop/running-a-mapreduce-job/
+permalink: /bigdata/hadoop/running-a-mapreduce-job/
 ---
 
     $ cd /srv/hadoop/share/hadoop/mapreduce/
