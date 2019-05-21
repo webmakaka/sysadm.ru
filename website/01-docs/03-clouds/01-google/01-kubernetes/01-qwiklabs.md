@@ -1,14 +1,13 @@
 ---
 layout: page
 title: Обучение в qwiklabs - kuberneters в облаках Google (GKE) 
-permalink: /linux/servers/containers/kubernetes/clouds/google/qwiklabs/
+permalink: /clouds/google/kubernetes/qwiklabs/
 ---
 
 # Обучение в qwiklabs - kuberneters в облаках Google (GKE) 
 
-Есть сайт для обучению облачным технологиям qwiklabs.com. Предоставляют доступ к облачным решениям от AWS и Google + примеры как со всем этим работать. Решение платное, но можно поискать купоны / промо и т.д. Я например, нашел себе здесь аккаунт на месяц.
-
-https://medium.com/@sathishvj/qwiklabs-free-codes-gcp-and-aws-e40f3855ffdb
+Делаю!  
+20.05.2019
 
 <br/>
 
@@ -146,7 +145,6 @@ ngnix - Frontend to the auth and hello services.
     gke-io-default-pool-f40e6c02-961s  us-central1-b  n1-standard-1               10.128.0.4   34.66.156.29     RUNNING
     gke-io-default-pool-f40e6c02-b6rw  us-central1-b  n1-standard-1               10.128.0.2   104.197.229.212  RUNNING
     gke-io-default-pool-f40e6c02-jw06  us-central1-b  n1-standard-1               10.128.0.3   35.232.234.44    RUNNING
-
 
 <br/>
 

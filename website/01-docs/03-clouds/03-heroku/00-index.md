@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Heroku clouds
-permalink: /linux/clouds/heroku/
+permalink: /clouds/heroku/
 ---
 
 # Heroku clouds
@@ -25,12 +25,14 @@ permalink: /linux/clouds/heroku/
 
 <br/>
 
-    #### HEROKU ##############################
+```
+#### HEROKU ##############################
 
-        export HEROKU_HOME=/usr/local/heroku/bin/
-        export PATH=$PATH:$HEROKU_HOME
+    export HEROKU_HOME=/usr/local/heroku/bin/
+    export PATH=$PATH:$HEROKU_HOME
 
-    #### HEROKU ##############################
+#### HEROKU ##############################
+```
 
 <br/>
 

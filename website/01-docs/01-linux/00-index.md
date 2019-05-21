@@ -24,9 +24,7 @@ permalink: /linux/
 
 <br/>
 
-# Облака, Распределенные системы:
-
-### [Cloud: Облачные технологии (Amazon, Heroku)](/linux/clouds/)
+# Распределенные системы:
 
 ### [Distributed Systems (BigData, Hadoop, Hive, etc.)](/linux/distributed-systems/)
 

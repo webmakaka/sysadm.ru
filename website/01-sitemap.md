@@ -19,6 +19,12 @@ permalink: /sitemap/
 
 </div>
 
+<br/>
+
+# Облака:
+
+### [Clouds](/clouds/)
+
 ---
 
 <br/>

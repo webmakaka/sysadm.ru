@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Amazon Web Services (AWS)
-permalink: /linux/clouds/aws/
+permalink: /clouds/aws/
 ---
 
 # Amazon Web Services (AWS)
@@ -26,8 +26,8 @@ permalink: /linux/clouds/aws/
 
 Впрочем я и сам могу тоже самое руками сделать. Появилось желание покопать в сторону Chef.
 
-[Подключиться к серверу в облаке AWS в командной строке linux](/linux/clouds/aws/connect-to-server/)  
-[Инсталляция Node.js в облаке AWS](/linux/clouds/aws/nodejs-server/)
+[Подключиться к серверу в облаке AWS в командной строке linux](/clouds/aws/connect-to-server/)  
+[Инсталляция Node.js в облаке AWS](/clouds/aws/nodejs-server/)
 
 <br/>
 
