@@ -4,6 +4,8 @@ title: Working with Hadoop via the Command Line Running a MapReduce Job
 permalink: /bigdata/hadoop/running-a-mapreduce-job/
 ---
 
+# Working with Hadoop via the Command Line Running a MapReduce Job
+
     $ cd /srv/hadoop/share/hadoop/mapreduce/
 
 

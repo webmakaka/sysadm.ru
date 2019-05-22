@@ -4,6 +4,8 @@ title: Hadoop Single Node Installation on Centos 6.X
 permalink: /bigdata/hadoop/single-node-installation-on-centos-6/
 ---
 
+# Hadoop Single Node Installation on Centos 6.X
+
 Имеем виртуальную машину Centos, c IP 192.168.1.11
 
 <br/>
@@ -161,6 +163,9 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 <br/>
 
 	$ cp /opt/hadoop/2.7.1/etc/hadoop/mapred-site.xml.template /opt/hadoop/2.7.1/etc/hadoop/mapred-site.xml
+
+<br/>
+
 	$ vi /opt/hadoop/2.7.1/etc/hadoop/mapred-site.xml
 
 <br/>

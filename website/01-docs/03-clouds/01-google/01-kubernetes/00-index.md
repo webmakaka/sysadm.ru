@@ -18,3 +18,9 @@ permalink: /clouds/google/kubernetes/
 <br/>
 
 ### [Запуск приложения с котиками в GKE (Load Balancer)](/clouds/google/kubernetes/google/cats-app/)
+
+
+<br/>
+
+### [Setting up Jenkins on Kubernetes Engine](/clouds/google/kubernetes/google/jenkins/)
+

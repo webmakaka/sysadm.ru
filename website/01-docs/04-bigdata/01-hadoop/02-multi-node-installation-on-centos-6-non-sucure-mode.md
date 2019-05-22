@@ -4,6 +4,8 @@ title: Hadoop Multi Node Installation on Centos 6.X (Non-Secure Mode)
 permalink: /bigdata/hadoop/multi-node-installation-on-centos-6-non-sucure-mode/
 ---
 
+# Hadoop Multi Node Installation on Centos 6.X (Non-Secure Mode)
+
 
 > Java должна быть установлена
 > http://javadev.org/java_basics/installation/jdk/8/linux/centos/6/x86_x64/
@@ -22,9 +24,7 @@ permalink: /bigdata/hadoop/multi-node-installation-on-centos-6-non-sucure-mode/
 	# yum install -y \
 	openssh-clients
 
-
 <br/>
-
 
 Конфиг везде разный, но выглядит приблизительно следующим образом:
 

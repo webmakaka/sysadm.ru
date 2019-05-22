@@ -4,6 +4,8 @@ title: Loading Data into HDFS
 permalink: /bigdata/hadoop/loading-data-into-hdfs/
 ---
 
+# Loading Data into HDFS
+
 user hadoop
 
     $ hdfs namenode -format

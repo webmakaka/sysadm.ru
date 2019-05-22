@@ -4,6 +4,7 @@ title: Working with Hadoop via the Command Line Starting HDFS and Yarn
 permalink: /bigdata/hadoop/starting-hdfs-and-yarn/
 ---
 
+# Working with Hadoop via the Command Line Starting HDFS and Yarn
 
     ssh student@192.168.1.11
 

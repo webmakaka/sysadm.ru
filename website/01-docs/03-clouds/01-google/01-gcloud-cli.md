@@ -48,6 +48,9 @@ Create Key --> JSON
 <br/>
 
     $ gcloud auth activate-service-account --key-file=/mnt/dsk1/qwiklabs-gcp-d8a61bdf964e52e3-9775b0a34e00.json
+
+<br/>
+
     $ gcloud init
 
 <br/>
@@ -103,12 +106,23 @@ Create Key --> JSON
     $ gcloud compute instances list
     $ gcloud container clusters list
 
+<br/>
 
+    // Очистить список аккаунтов из auth list
+    $ gcloud auth revoke --all
 
+    // Подключиться к cloud-shell (Чтобы не рабать в браузерной командной строке)
+    $ gcloud alpha cloud-shell ssh
+
+<br/>
+
+    $ gcloud iam service-accounts create my-sa-123 --display-name "my service account"
+
+    $ gcloud project add-iam-policy-binding $DEVSHELL_PROJECT_ID --member serviceAccount:my-sa-123@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role roles/editor
 
 <!-- gcloud config configurations delete 
 
-$ gcloud alpha cloud-shell ssh
+
 
 https://cloud.google.com/blog/products/gcp/introducing-the-ability-to-connect-to-cloud-shell-from-any-terminal
 
