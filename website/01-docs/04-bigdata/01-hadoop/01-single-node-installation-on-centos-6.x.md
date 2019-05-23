@@ -110,8 +110,8 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 <br/>
 
-	mkdir -p ~/hadoop_data/hdfs/namenode
-	mkdir -p ~/hadoop_data/hdfs/datanode
+	$ mkdir -p ~/hadoop_data/hdfs/namenode
+	$ mkdir -p ~/hadoop_data/hdfs/datanode
 
 <br/>
 

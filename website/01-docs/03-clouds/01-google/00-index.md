@@ -12,7 +12,7 @@ permalink: /clouds/google/
 
 <br/>
 
-* Google Compute Engine (GCE) (Виртуалки)
+* <a href="/clouds/google/virtual/">Google Compute Engine (GCE) (Виртуалки)</a>
 * <a href="/clouds/google/kubernetes/">Google Container Engine (GKE) (Kubernetes)</a>
 * Google App Engine (GAE)
 
