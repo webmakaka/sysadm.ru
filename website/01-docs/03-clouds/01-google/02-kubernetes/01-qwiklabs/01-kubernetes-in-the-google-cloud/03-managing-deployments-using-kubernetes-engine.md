@@ -72,6 +72,8 @@ containers:
 
 **Rolling update**
 
+![Managing Deployments Using Kubernetes Engine](/img/clouds/google/kubernetes/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/pic1.png "Managing Deployments Using Kubernetes Engine"){: .center-image }
+
 
     $ kubectl edit deployment hello
 
@@ -139,11 +141,16 @@ containers:
 <br/>
 
 
-**Canary deployments**
+### Canary deployments
 
 When you want to test a new deployment in production with a subset of your users, use a canary deployment. Canary deployments allow you to release a change to a small subset of your users to mitigate risk associated with new releases.
 
+**Create a canary deployment**
 
+
+![Managing Deployments Using Kubernetes Engine](/img/clouds/google/kubernetes/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/pic2.png "Managing Deployments Using Kubernetes Engine"){: .center-image }
+
+<br/>
 
     $ vi deployments/hello-canary.yaml
 
@@ -191,6 +198,10 @@ spec:
 Rolling updates are ideal because they allow you to deploy an application slowly with minimal overhead, minimal performance impact, and minimal downtime. There are instances where it is beneficial to modify the load balancers to point to that new version only after it has been fully deployed. In this case, blue-green deployments are the way to go.
 
 Kubernetes achieves this by creating two separate deployments; one for the old "blue" version and one for the new "green" version. Use your existing hello deployment for the "blue" version. The deployments will be accessed via a Service which will act as the router. Once the new "green" version is up and running, you'll switch over to using that version by updating the Service.
+
+<br/>
+
+![Managing Deployments Using Kubernetes Engine](/img/clouds/google/kubernetes/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/pic3.png "Managing Deployments Using Kubernetes Engine"){: .center-image }
 
 <br/>
 
