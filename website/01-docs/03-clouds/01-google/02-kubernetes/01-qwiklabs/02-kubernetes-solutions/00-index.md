@@ -15,5 +15,5 @@ https://www.qwiklabs.com/quests/45
 
 ### [Using Kubernetes Engine to Deploy Apps with Regional Persistent Disks](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/using-kubernetes-engine-to-deploy-apps-with-regional-persistent-disks/)
 
-
+### [NGINX Ingress Controller on Google Kubernetes Engine](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/nginx-ingress-controller-on-google-kubernetes-engine/)
 
