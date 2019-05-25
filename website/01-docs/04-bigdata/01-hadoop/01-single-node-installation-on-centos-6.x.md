@@ -11,8 +11,8 @@ permalink: /bigdata/hadoop/single-node-installation-on-centos-6/
 <br/>
 
 > Java должна быть установлена
-> https://javadev.org/development-tools/jdk/9/installation/centos/7/
 
+<a href="https://javadev.org/devtools/jdk/install/linux/">Инсталляция JDK</a>
 
 
 <br/>

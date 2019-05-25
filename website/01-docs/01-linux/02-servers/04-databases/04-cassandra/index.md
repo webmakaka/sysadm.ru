@@ -16,10 +16,11 @@ http://docs.datastax.com/en/cassandra/2.1/cassandra/install/installRHEL_t.html
 
 <br/>
 
-JDK 7.25 и выше должно быть установлено. (впрочем это не значит, что JDK8 подойдет, поэтому устанавливаю JDK7)
+JDK должно быть установлено.
 
-https://javadev.org/development-tools/jdk7/installation/centos/6/
+<a href="https://javadev.org/devtools/jdk/install/linux/">Инсталляция JDK</a>
 
+<br/>
 
     # vi /etc/yum.repos.d/datastax.repo
 
