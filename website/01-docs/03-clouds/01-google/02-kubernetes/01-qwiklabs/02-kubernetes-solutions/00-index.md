@@ -17,7 +17,6 @@ https://www.qwiklabs.com/quests/45
 
 ### [NGINX Ingress Controller on Google Kubernetes Engine](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/nginx-ingress-controller-on-google-kubernetes-engine/)
 
-
 ### [Distributed Load Testing Using Kubernetes](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/)
 
-
+### [Running Dedicated Game Servers in Google Kubernetes Engine](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/)

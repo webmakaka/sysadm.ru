@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, kubectl)
-permalink: /linux/servers/containers/kubernetes/kubeadm/install/single-master/
+permalink: /linux/servers/containers/kubernetes/kubeadm/install/single-master/vagrant-virtualbox/
 ---
 
 # Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, kubectl)
