@@ -24,3 +24,7 @@ https://www.qwiklabs.com/quests/45
 ### [Awwvision: Cloud Vision API from a Kubernetes Cluster](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/awwvision/)
 
 ### [Running a MongoDB Database in Kubernetes with StatefulSets](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/running-a-mongodb-database-in-kubernetes-with-statefulsets/)
+
+### [Kubeflow End to End (ML)](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/kubeflow-end-to-end/)
+
+

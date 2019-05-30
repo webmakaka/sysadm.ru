@@ -134,10 +134,3 @@ Using a database is outside the scope of this lab, however for this case, the co
     $ kubectl delete svc mongo
     $ kubectl delete pvc -l role=mongo
     $ gcloud container clusters delete "hello-world"
-
-
-
-
-
-
-
