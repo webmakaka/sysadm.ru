@@ -20,3 +20,7 @@ https://www.qwiklabs.com/quests/45
 ### [Distributed Load Testing Using Kubernetes](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/)
 
 ### [Running Dedicated Game Servers in Google Kubernetes Engine](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/)
+
+### [Awwvision: Cloud Vision API from a Kubernetes Cluster](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/awwvision/)
+
+### [Running a MongoDB Database in Kubernetes with StatefulSets](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/running-a-mongodb-database-in-kubernetes-with-statefulsets/)

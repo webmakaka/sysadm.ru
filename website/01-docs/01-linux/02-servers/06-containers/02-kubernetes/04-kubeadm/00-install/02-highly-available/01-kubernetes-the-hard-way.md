@@ -82,8 +82,15 @@ https://www.youtube.com/watch?v=NvQY5tuxALY
 
     # vi /etc/haproxy/haproxy.cfg
 
+Оставляем блок global и defaults. Все, что после defaults удаляем.
+
+И добавляем:
 
 ```
+#---------------------------------------------------------------------
+# User defined
+#---------------------------------------------------------------------
+
 frontend k8s
     bind 10.81.125.83:6443
     mode tcp
@@ -98,6 +105,8 @@ backend k8s
     server controler-1 10.81.125.253:6443 check
     server controler-2 10.81.125.234:6443 check
 ```
+
+<br/>
 
     # systemctl enable haproxy
     # systemctl start haproxy
@@ -153,7 +162,6 @@ https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/04-c
 
 
 **Certificate Authority**
-
 
 ```
 {
@@ -275,6 +283,8 @@ cfssl gencert \
 done
 ```
 
+<br/>
+
     $ ls -l worker*pem
     -rw------- 1 marley marley 1675 May 28 02:42 worker-0-key.pem
     -rw-r--r-- 1 marley marley 1484 May 28 02:42 worker-0.pem
@@ -392,6 +402,8 @@ cfssl gencert \
 }
 ```
 
+<br/>
+
 **The Kubernetes API Server Certificate**
 
 Меняем оригинальный конфиг.
@@ -438,7 +450,6 @@ cfssl gencert \
 <br/>
 
 **The Service Account Key Pair**
-
 
 ```
 {
@@ -512,6 +523,7 @@ cfssl gencert \
     $ lxc exec worker-0 ls 
     ca.pem	worker-0-key.pem  worker-0.pem
  
+<br/>
 
     $ lxc exec controller-0 ls                
     ca-key.pem  kubernetes-key.pem	service-account-key.pem
@@ -815,7 +827,6 @@ EOF
 
 <br/>
 
-
     # {
       chmod +x kube-apiserver kube-controller-manager kube-scheduler kubectl
       mv kube-apiserver kube-controller-manager kube-scheduler kubectl /usr/local/bin/
@@ -984,7 +995,7 @@ EOF
 
 <br/>
 
-### На одной ноде
+### Выполнить на одной ноде
 
 **RBAC**
 
@@ -1034,6 +1045,7 @@ subjects:
 EOF
 ```
 
+<br/>
 
 ### 07 Bootstrap worker nodes
 
@@ -1358,7 +1370,11 @@ EOF
     В общем в контейнерах пинг не проходит между контейнерами.
 
 <br/>
-    // gw -- worker
+
+Чего-то я этот шаг совсем не понял. Мы же это на клиенте выполняли?
+
+<br/>
+    // gw -- worker nodes
     $ sudo route add -net 10.200.0.0 netmask 255.255.255.0 gw 10.81.125.9
     $ sudo route add -net 10.200.1.0 netmask 255.255.255.0 gw 10.81.125.231
     $ sudo route add -net 10.200.2.0 netmask 255.255.255.0 gw 10.81.125.10
@@ -1413,7 +1429,7 @@ EOF
       /registry/secrets/default/kubernetes-the-hard-way | hexdump -C
 
 
-Увидели справа k8s:enc. Оч. образовались.
+Увидели справа k8s:enc. Оч. обрадовались.
 
 
     # exit
@@ -1433,6 +1449,8 @@ EOF
 http://localhost:8080/
 
 OK
+
+<br/>
 
     $ kubectl scale deploy nginx --replicas 10
 
