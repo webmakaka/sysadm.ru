@@ -4,30 +4,32 @@ title: Инсталляция Node.js в облаке AWS
 permalink: /clouds/aws/nodejs-server/
 ---
 
+# Инсталляция Node.js в облаке AWS
+
 Имеем Amazon'овский образ RedHat based  
 
 Подключились к серверу.
 
-    sudo yum update -y 
-    sudo yum install -y gcc-c++ make
-    sudo yum install -y openssl-devel
-    sudo yum install -y git
+    $ sudo yum update -y 
+    $ sudo yum install -y gcc-c++ make
+    $ sudo yum install -y openssl-devel
+    $ sudo yum install -y git
     
 <br/>
 
 **Инсталляция node.js**
     
-    cd /tmp/
-    git clone git://github.com/joyent/node.git
-    cd node
-    ./configure
-    make
-    sudo make install
+    $ cd /tmp/
+    $ git clone git://github.com/joyent/node.git
+    $ cd node
+    $ ./configure
+    $ make
+    $ sudo make install
     
 <br/>
     
-    sudo su
-    vi /etc/sudoers
+    $ sudo su
+    # vi /etc/sudoers
 
 
 {% highlight text %}
@@ -42,16 +44,16 @@ Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
 
 **Инсталляция npm**
 
-    cd /tmp/
-    git clone https://github.com/isaacs/npm.git
-    cd npm
-    sudo make install
+    $ cd /tmp/
+    $ git clone https://github.com/isaacs/npm.git
+    $ cd npm
+    $ sudo make install
     
     
     
 **Возможная проверка работы Node.js приложения в облаке AWS**
 
-    vi server.js
+    $ vi server.js
 
 {% highlight text %}
 
@@ -63,9 +65,8 @@ require("http").createServer(function(request, response){
 
 {% endhighlight %}
 
-
-    node server.js
-    curl http://localhost:8080
+    $ node server.js
+    $ curl http://localhost:8080
 
 
 P.S. Чтобы работали приложения (в том числе сгенерированные с помощью express) в opsWorks, нужно чтобы стартовый скрипт находился в корне каталога приложения и имел имя server.js.  

@@ -111,14 +111,9 @@ Create Key --> JSON
     // Очистить список аккаунтов из auth list
     $ gcloud auth revoke --all
 
-    // Подключиться к cloud-shell (Чтобы не рабать в браузерной командной строке)
-    $ gcloud alpha cloud-shell ssh
+    // Подключиться к cloud-shell (Чтобы не рабать в браузерной командной строке)oud-shell ssh
 
-<br/>
 
-    $ gcloud iam service-accounts create my-sa-123 --display-name "my service account"
-
-    $ gcloud project add-iam-policy-binding $DEVSHELL_PROJECT_ID --member serviceAccount:my-sa-123@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role roles/editor
 
 <!-- gcloud config configurations delete 
 

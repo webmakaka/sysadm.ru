@@ -16,11 +16,14 @@ permalink: /clouds/google/
 
 <br/>
 
-* <a href="/clouds/google/virtual/">Google Compute Engine (GCE) (Виртуалки)</a>
-* <a href="/clouds/google/kubernetes/">Google Container Engine (GKE) (Kubernetes)</a>
-* Google App Engine (GAE)
-
+### [Cloud Storage bucket](/clouds/google/cloud-storage-bucket/)
 
 <br/>
 
-Setting up Jenkins on Kubernetes Engine
+### [Cloud KMS](/clouds/google/cloud-kms/)
+
+<br/>
+
+* <a href="/clouds/google/virtual/">Google Compute Engine (GCE) (Виртуалки)</a>
+* <a href="/clouds/google/kubernetes/">Google Container Engine (GKE) (Kubernetes)</a>
+* <a href="/clouds/google/gae/">Google App Engine (GAE)</a>

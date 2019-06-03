@@ -4,12 +4,12 @@ title: Подключиться к серверу в облаке AWS в ком�
 permalink: /clouds/aws/connect-to-server/
 ---
 
-**Подключиться к серверу:**
+# Подключиться к серверу в облаке AWS в командной строке linux
 
 Создать Key Pair в консоли AWS и с скачать ключ.
 
-    chmod 400 /home/marley/Downloads/AWS-Key.pem
-    ssh -i /home/marley/Downloads/AWS-Key.pem ec2-user@<ip_сервера>.
+    $ chmod 400 /home/marley/Downloads/AWS-Key.pem
+    $ ssh -i /home/marley/Downloads/AWS-Key.pem ec2-user@<ip_сервера>.
 
 ___
 

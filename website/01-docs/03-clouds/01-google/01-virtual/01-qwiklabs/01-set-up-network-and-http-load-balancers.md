@@ -154,4 +154,3 @@ After creating the global forwarding rule, it can take several minutes for your 
 Take note of the http-content-rule IP_ADDRESS for the forwarding rule.
 
 From the browser, you should be able to connect to http://IP_ADDRESS/. It may take three to five minutes. If you do not connect, wait a minute then reload the browser.
-

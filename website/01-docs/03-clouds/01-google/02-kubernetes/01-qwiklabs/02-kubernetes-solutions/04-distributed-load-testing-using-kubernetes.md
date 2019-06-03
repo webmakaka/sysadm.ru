@@ -8,7 +8,7 @@ permalink: /clouds/google/kubernetes/qwiklabs/kubernetes-solutions/distributed-l
 
 <br/>
 
-Делаю!  
+Делаю:  
 26.05.2019
 
 

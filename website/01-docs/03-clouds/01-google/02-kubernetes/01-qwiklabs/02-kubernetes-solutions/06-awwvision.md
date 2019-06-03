@@ -8,7 +8,7 @@ permalink: /clouds/google/kubernetes/qwiklabs/kubernetes-solutions/awwvision/
 
 <br/>
 
-Делаю!  
+Делаю:  
 28.05.2019
 
 

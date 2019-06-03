@@ -175,10 +175,15 @@ title: Role Editor
     $ gcloud iam roles undelete viewer --project $DEVSHELL_PROJECT_ID
 
 
+<br/>
 
+# service-accounts 
 
+A service account is a special Google account that belongs to your application or a virtual machine (VM) instead of an individual end user. Your application uses the service account to call the Google API of a service, so that the users aren't directly involved.
 
+For example, a Compute Engine VM may run as a service account, and that account can be given permissions to access the resources it needs. This way the service account is the identity of the service, and the service account's permissions control which resources the service can access.
 
+A service account is identified by its email address, which is unique to the account.
 
 <br/>
 
@@ -196,18 +201,26 @@ title: Role Editor
 
 ### Create a service account
 
-    $ export SERVICE_ACCOUNT=user-gcp-sa
+    $ export PROJECT_ID=$(gcloud config get-value project)
+    $ export SERVICE_ACCOUNT=marley
 
     $ export SERVICE_ACCOUNT_EMAIL=${SERVICE_ACCOUNT}@${PROJECT_ID}.iam.gserviceaccount.com
 
     $ gcloud iam service-accounts create ${SERVICE_ACCOUNT} \
-    --display-name "GCP Service Account for use with kubeflow examples"
+    --display-name "GCP Service Account"
 
 <br/>
+
+<!--
 
     $ gcloud projects add-iam-policy-binding ${PROJECT_ID} --member \
     serviceAccount:${SERVICE_ACCOUNT_EMAIL} \
     --role=roles/storage.admin
+-->
+
+    $ gcloud projects add-iam-policy-binding ${PROJECT_ID} --member \
+    serviceAccount:${SERVICE_ACCOUNT_EMAIL} \
+    --role=roles/owner
 
 // Generate a credentials file for upload to the cluster:
 

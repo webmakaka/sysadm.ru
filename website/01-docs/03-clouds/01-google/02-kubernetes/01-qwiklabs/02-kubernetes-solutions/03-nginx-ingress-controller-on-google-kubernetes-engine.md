@@ -8,7 +8,7 @@ permalink: /clouds/google/kubernetes/qwiklabs/kubernetes-solutions/nginx-ingress
 
 <br/>
 
-Делаю!  
+Делаю:  
 25.05.2019
 
 

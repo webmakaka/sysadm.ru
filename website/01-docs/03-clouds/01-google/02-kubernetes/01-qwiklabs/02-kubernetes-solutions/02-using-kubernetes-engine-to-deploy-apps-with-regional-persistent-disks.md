@@ -8,7 +8,7 @@ permalink: /clouds/google/kubernetes/qwiklabs/kubernetes-solutions/using-kuberne
 
 <br/>
 
-Делаю!  
+Делаю:  
 24.05.2019
 
 

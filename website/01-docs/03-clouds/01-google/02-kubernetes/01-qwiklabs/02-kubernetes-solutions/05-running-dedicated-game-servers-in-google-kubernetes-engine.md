@@ -8,7 +8,7 @@ permalink: /clouds/google/kubernetes/qwiklabs/kubernetes-solutions/running-dedic
 
 <br/>
 
-Делаю!  
+Делаю:  
 27.05.2019
 
 

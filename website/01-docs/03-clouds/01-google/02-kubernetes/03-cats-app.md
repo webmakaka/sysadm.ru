@@ -6,7 +6,7 @@ permalink: /clouds/google/kubernetes/google/cats-app/
 
 # Запуск приложения с котиками в GKE (Load Balancer)
 
-Делаю!  
+Делаю:  
 21.05.2019
 
 <br/>

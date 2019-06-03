@@ -6,7 +6,6 @@ permalink: /clouds/google/kubernetes/
 
 # Kuberneters в облаках Google (GKE)
 
-
 <br/>
 
 ### [Лабораторные из qwiklabs - kuberneters в облаках Google (GKE)](/clouds/google/kubernetes/qwiklabs/)

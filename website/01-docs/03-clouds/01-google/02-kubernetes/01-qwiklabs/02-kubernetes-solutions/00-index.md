@@ -27,4 +27,6 @@ https://www.qwiklabs.com/quests/45
 
 ### [Kubeflow End to End (ML)](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/kubeflow-end-to-end/)
 
+### [Deploy a Web App on GKE with HTTPS Redirect using Lets Encrypt](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/deploy-a-web-app-on-gke-with-https-redirect-using-lets-encrypt/)
+
 

@@ -9,7 +9,7 @@ permalink: /clouds/google/kubernetes/qwiklabs/kubernetes-solutions/running-a-mon
 
 <br/>
 
-Делаю!  
+Делаю:  
 29.05.2019
 
 

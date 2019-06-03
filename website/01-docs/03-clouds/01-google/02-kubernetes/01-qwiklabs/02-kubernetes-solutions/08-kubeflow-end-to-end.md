@@ -9,7 +9,7 @@ permalink: /clouds/google/kubernetes/qwiklabs/kubernetes-solutions/kubeflow-end-
 
 <br/>
 
-Делаю!  
+Делаю:  
 30.05.2019
 
 

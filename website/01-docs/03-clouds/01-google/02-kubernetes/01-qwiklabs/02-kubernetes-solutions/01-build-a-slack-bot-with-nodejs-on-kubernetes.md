@@ -8,7 +8,7 @@ permalink: /clouds/google/kubernetes/qwiklabs/kubernetes-solutions/build-a-slack
 
 <br/>
 
-Делаю!  
+Делаю:  
 24.05.2019
 
 
