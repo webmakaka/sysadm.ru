@@ -23,7 +23,7 @@ permalink: /linux/servers/devops/
 
 <br/>
 
-### [Автоматизация: Ansible, Puppet, Chef](/linux/servers/devops/automation/)
+### [Автоматизация Ansible, Puppet, Chef, Terraform](/linux/servers/devops/automation/)
 
 <br/>
 
@@ -32,6 +32,7 @@ permalink: /linux/servers/devops/
 <br/>
 
 ### [Kubernetes](/linux/servers/containers/kubernetes/)
+
 
 <br/>
 
@@ -42,3 +43,5 @@ permalink: /linux/servers/devops/
     https://youtu.be/vtDvgAl3gVA
     https://youtu.be/fqgGVnuHye8
     https://youtu.be/s04UyNeakSY
+
+

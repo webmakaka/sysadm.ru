@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Автоматизация Ansible, Puppet, Chef
+title: Автоматизация Ansible, Puppet, Chef, Terraform
 permalink: /linux/servers/devops/automation/
 ---
 
-# Автоматизация: Ansible, Puppet, Chef
+# Автоматизация Ansible, Puppet, Chef, Terraform
 
 
 <br/>
@@ -18,4 +18,8 @@ permalink: /linux/servers/devops/automation/
 <br/>
 
 ### Chef
+
+<br/>
+
+### [Terraform](/linux/servers/devops/automation/terraform/)
 

@@ -1500,3 +1500,10 @@ http://worker-ip:exposed_port
 
     $ lxc list
 
+
+
+<br/>
+
+### Kubernetes The Hard Way HA Testing
+
+https://www.youtube.com/watch?v=AWGSchaLnJA
