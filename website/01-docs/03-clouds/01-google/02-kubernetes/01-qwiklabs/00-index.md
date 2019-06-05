@@ -13,3 +13,5 @@ permalink: /clouds/google/kubernetes/qwiklabs/
 [Kubernetes Solutions](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/)
 
 [Google Kubernetes Engine Best Practices](/clouds/google/kubernetes/qwiklabs/kubernetes-best-practices/)
+
+[Google Kubernetes Engine Best Practices: Security](/clouds/google/kubernetes/qwiklabs/kubernetes-best-practices-security/)

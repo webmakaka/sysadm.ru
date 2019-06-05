@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Terraform
+title: Автоматизация Ansible, Puppet, Chef, Terraform
 permalink: /linux/servers/devops/automation/terraform/
 ---
 
@@ -39,21 +39,7 @@ Complex changesets can be applied to your infrastructure with minimal human inte
 
 <br/>
 
-### Install Terraform
-
-
-
-    $ wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip
-
-    $ unzip terraform_0.11.14_linux_amd64.zip
-
-    $ export PATH="$PATH:$HOME/terraform"
-    $ cd /usr/bin
-    $ sudo ln -s $HOME/terraform
-    $ cd $HOME
-    $ source ~/.bashrc
-
-    $ terraform version
+### [Install Terraform](/linux/servers/devops/automation/terraform/install/)
 
 
 <br/>
