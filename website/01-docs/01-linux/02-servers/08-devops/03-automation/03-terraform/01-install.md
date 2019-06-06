@@ -6,6 +6,14 @@ permalink: /linux/servers/devops/automation/terraform/install/
 
 # Install Terraform (Google cloud)
 
+Делаю:  
+06.06.2019
+
+
+<br/>
+
+**0.11.14**
+
     $ wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip
 
     $ unzip terraform_0.11.14_linux_amd64.zip
@@ -13,14 +21,20 @@ permalink: /linux/servers/devops/automation/terraform/install/
     $ sudo mv terraform /usr/local/bin/
 
     $ terraform version
+    Terraform v0.11.14
 
-<!--
 
-    $ export PATH="$PATH:$HOME/terraform"
-    $ cd /usr/bin
-    $ sudo ln -s $HOME/terraform
-    $ cd $HOME
-    $ source ~/.bashrc
+<br/>
 
--->
+**0.12.1**
 
+**Provider "google" v1.20.0 is not compatible with Terraform 0.12.1.**
+
+    $ wget https://releases.hashicorp.com/terraform/0.12.1/terraform_0.12.1_linux_amd64.zip
+
+    $ unzip terraform_0.12.1_linux_amd64.zip
+
+    $ sudo mv terraform /usr/local/bin/
+
+    $ terraform version
+    Terraform v0.12.1
