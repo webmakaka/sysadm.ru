@@ -9,7 +9,7 @@ permalink: /clouds/google/kubernetes/qwiklabs/kubernetes-best-practices-security
 <br/>
 
 Делаю:  
-06.06.2019
+07.06.2019
 
 
 https://www.qwiklabs.com/focuses/5156?parent=catalog

@@ -13,5 +13,8 @@ https://www.qwiklabs.com/quests/64
 
 ### [How to Use a Network Policy on Google Kubernetes Engine](/clouds/google/kubernetes/qwiklabs/kubernetes-best-practices-security/how-to-use-a-network-policy-on-gke/)
 
-
 ### [Using Role-based Access Control in Kubernetes Engine](/clouds/google/kubernetes/qwiklabs/kubernetes-best-practices-security/using-role-based-access-control-in-kubernetes-engine/)
+
+### [Binary Authorization](/clouds/google/kubernetes/qwiklabs/kubernetes-best-practices-security/binary-authorization/)
+
+### [Securing Applications on Kubernetes Engine - Three Examples](/clouds/google/kubernetes/qwiklabs/kubernetes-best-practices-security/securing-applications-on-kubernetes-engine-three-examples/)

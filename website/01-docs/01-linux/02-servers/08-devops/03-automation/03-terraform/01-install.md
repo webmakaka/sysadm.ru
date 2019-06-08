@@ -7,7 +7,7 @@ permalink: /linux/servers/devops/automation/terraform/install/
 # Install Terraform (Google cloud)
 
 Делаю:  
-06.06.2019
+08.06.2019
 
 
 <br/>
