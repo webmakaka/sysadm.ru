@@ -18,3 +18,7 @@ https://www.qwiklabs.com/quests/64
 ### [Binary Authorization](/clouds/google/kubernetes/qwiklabs/kubernetes-best-practices-security/binary-authorization/)
 
 ### [Securing Applications on Kubernetes Engine - Three Examples](/clouds/google/kubernetes/qwiklabs/kubernetes-best-practices-security/securing-applications-on-kubernetes-engine-three-examples/)
+
+### [Kubernetes Engine Communication Through VPC Peering](/clouds/google/kubernetes/qwiklabs/kubernetes-best-practices-security/kubernetes-engine-communication-through-vpc-peering/)
+
+### [Hardening Default GKE Cluster Configurations](/clouds/google/kubernetes/qwiklabs/kubernetes-best-practices-security/hardening-default-gke-cluster-configurations/)

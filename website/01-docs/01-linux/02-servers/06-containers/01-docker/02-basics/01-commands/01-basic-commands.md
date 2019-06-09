@@ -179,21 +179,30 @@ https://hub.docker.com
     $ docker rm  <container_id>
     $ docker rm -f <container_id>
 
-// stop all Docker containers:
+// Остановить все контейнеры:
 
     # docker stop $(docker ps -a -q)
 
-// remove all Docker containers:
+// Удалить все контейнеры:
 
     # docker rm $(docker ps -a -q)
 
-// remove all Docker images:
+// Удалить все остановленные контейнеры:
+
+    $ docker rm $(docker ps -qa --no-trunc --filter "status=exited")
+
+// Удалить все образы:
 
     # docker rmi $(docker images -q)
 
 // Если Error when deleting images - image is referenced in multiple repositories:
 
     # docker rmi -f $(docker images -q)
+
+// Удалить неиспользуемые образы:
+
+    $ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+
 
 <br/>
 
