@@ -20,6 +20,10 @@ permalink: /clouds/google/
 
 <br/>
 
+### [Cloud SQL](/clouds/google/cloud-sql/)
+
+<br/>
+
 ### [Cloud KMS](/clouds/google/cloud-kms/)
 
 <br/>

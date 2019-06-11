@@ -6,7 +6,12 @@ permalink: /clouds/google/cloud-storage-bucket/
 
 # Cloud Storage bucket
 
+    $ export PROJECT_ID=$(gcloud info --format='value(config.project)')
+    $ export BUCKET_NAME=${PROJECT_ID}-ml
 
-
-    $ BUCKET_NAME=<YOUR_NAME>_enron_corpus
+    // Create the storage bucket 
     $ gsutil mb gs://${BUCKET_NAME}
+
+   
+    // Скопировать все файлы в Cloud Storage bucket
+    $ gsutil -m cp *.csv gs://${BUCKET_NAME}/flights/raw/

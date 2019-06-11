@@ -151,13 +151,16 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 +
 
     0.0.0.0 mailtrack.io
+    0.0.0.0 metrika.yandex.ru
+    0.0.0.0 informer.yandex.ru
+    
     0.0.0.0 rbc.ru
     0.0.0.0 lenta.ru
     0.0.0.0 betcity.ru
     0.0.0.0 blackhole.beeline.ru
     0.0.0.0 jivosite.ru
     0.0.0.0 www.jivosite.ru
-
+    0.0.0.0 content.mql5.com
 
     0.0.0.0 onlinefreecourse.net
     0.0.0.0 downloadtutorials.net
