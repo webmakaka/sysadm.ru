@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/install/
 # Инсталляция kubectl и minikube
 
 Делаю:  
-09.04.2019
+01.08.2019
 
 <br/>
 
@@ -21,7 +21,7 @@ VirtualBox должен быть установлен. Используется 
 
 ```shell
 
--- Текущая стабильная версия kubernetes (v1.14.1)
+-- Текущая стабильная версия kubernetes (v1.15.1)
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 
@@ -38,14 +38,14 @@ $ sudo rm -rf /usr/local/bin/kubectl
 ### Инсталляция minikube (виртуальная машина для изучения и тестов) (Устанавливать при необходимости). Лучше сразу ставить кластер.
 
 ```shell
--- Последняя версия (v0.34.1):
+-- Последняя версия (v1.2.0):
 $ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 
 -- Установка
 $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 
 $ minikube version
-minikube version: v0.34.1
+minikube version: v1.2.0
 
 ```
 

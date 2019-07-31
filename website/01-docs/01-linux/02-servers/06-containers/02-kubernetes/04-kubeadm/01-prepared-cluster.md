@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster
 
 Делаю  
-27.04.2019
+01.08.2019
 
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
@@ -47,6 +47,9 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
     // Скрипты для установки kubernetes сluster (1.11.6)
     $ cd misc/vagrant-provisioning-by-version/
 
+    // Обновить образы виртуальных машин virtualbox
+    $ vagrant box update
+
     // Запуск
     $ vagrant up
 
@@ -63,22 +66,24 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 
 <br/>
 
+    // Копируем конфиг файл
     // Пароль root: kubeadmin
     $ scp root@master:/etc/kubernetes/admin.conf ~/.kube/config
 
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.14.1
-    Server Version: v1.14.1
+    Client Version: v1.15.1
+    Server Version: v1.15.1
 
 <br/>
 
     $ kubectl get nodes
     NAME         STATUS   ROLES    AGE     VERSION
-    master.k8s   Ready    master   14m     v1.14.1
-    node1.k8s    Ready    <none>   11m     v1.14.1
-    node2.k8s    Ready    <none>   9m34s   v1.14.1
+    master.k8s   Ready    master   11m     v1.15.1
+    node1.k8s    Ready    <none>   7m41s   v1.15.1
+    node2.k8s    Ready    <none>   4m2s    v1.15.1
+
 
 <br/>
 
@@ -86,26 +91,27 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 
     $ kubectl get cs
     NAME                 STATUS    MESSAGE             ERROR
-    scheduler            Healthy   ok
-    controller-manager   Healthy   ok
-    etcd-0               Healthy   {"health":"true"}
+    scheduler            Healthy   ok                  
+    controller-manager   Healthy   ok                  
+    etcd-0               Healthy   {"health":"true"}   
+
 
 <br/>
 
     $ kubectl get po -n kube-system
     NAME                                 READY   STATUS    RESTARTS   AGE
-    coredns-fb8b8dccf-74mcz              1/1     Running   0          10m
-    coredns-fb8b8dccf-rpcdf              1/1     Running   0          10m
-    etcd-master.k8s                      1/1     Running   0          9m48s
+    coredns-5c98db65d4-rq5mm             1/1     Running   0          11m
+    coredns-5c98db65d4-s8rvc             1/1     Running   0          11m
+    etcd-master.k8s                      1/1     Running   0          10m
     kube-apiserver-master.k8s            1/1     Running   0          10m
-    kube-controller-manager-master.k8s   1/1     Running   0          9m50s
-    kube-flannel-ds-amd64-8vvqx          1/1     Running   0          4m53s
-    kube-flannel-ds-amd64-b97h7          1/1     Running   0          10m
-    kube-flannel-ds-amd64-m9qnt          1/1     Running   0          8m
-    kube-proxy-f7fh2                     1/1     Running   0          10m
-    kube-proxy-trvqn                     1/1     Running   0          8m
-    kube-proxy-wfbsl                     1/1     Running   0          4m53s
-    kube-scheduler-master.k8s            1/1     Running   0          9m47s
+    kube-controller-manager-master.k8s   1/1     Running   0          10m
+    kube-flannel-ds-amd64-2w2n5          1/1     Running   0          8m16s
+    kube-flannel-ds-amd64-t8mgd          1/1     Running   0          4m37s
+    kube-flannel-ds-amd64-wzc6s          1/1     Running   0          11m
+    kube-proxy-5lchz                     1/1     Running   0          11m
+    kube-proxy-nh2bz                     1/1     Running   0          4m37s
+    kube-proxy-vf2jg                     1/1     Running   0          8m16s
+    kube-scheduler-master.k8s            1/1     Running   0          10m
 
 <br/>
 
