@@ -9,11 +9,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 Делаю  
 27.04.2019
 
-<br/>
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
-
-<br/>
 
 Разворачиваются 3 виртуалки по 2GB оперативной памяти. По идее, на узлы вполне достаточно и 1GB.
 
@@ -21,13 +18,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 
 ### На хост машине
 
-<br/>
-
-    $ vagrant plugin install vagrant-hostmanager
-
-<br/>
-
-    $ sudo /etc/hosts
+    $ sudo vi /etc/hosts
 
 ```
 #---------------------------------------------------------------------
@@ -39,9 +30,16 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 192.168.0.12 node2.k8s node2
 ```
 
+<br/>
+
+    $ vagrant plugin install vagrant-hostmanager
+
+<br/>
+
+
     $ mkdir ~/vagrant-kubernetes && cd ~/vagrant-kubernetes
 
-    # git clone https://bitbucket.org/sysadm-ru/kubernetes .
+    $ git clone https://bitbucket.org/sysadm-ru/kubernetes .
 
     // Скрипты для установки актуальной версии kubernetes сluster
     $ cd vagrant-provisioning/

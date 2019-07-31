@@ -9,6 +9,12 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/install/single-master/va
 Делаю  
 29.03.2019
 
+<br/>
+
+Есть уже <a href="/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/">подготовленный вариант</a> развертывания kubernetes скриптами, где не нужно самому что-либо делать. Здесь информация, если хочется поднять самостоятельно.
+
+<br/>
+
 Нужно поднять 3 виртуальные машины:
 
 <br/>

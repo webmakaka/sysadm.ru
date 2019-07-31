@@ -10,7 +10,7 @@ permalink: /linux/desktops/archives/installation/
 
 -- 7 zip
 
-    # apt-get install p7zip-full
+    # apt-get install -y p7zip-full
 
 ## Centos
 

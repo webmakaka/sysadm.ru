@@ -99,14 +99,15 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 <br/>
 
-	***
-
-	<configuration>
-	    <property>
-	        <name>fs.defaultFS</name>
-	        <value>hdfs://localhost:9000</value>
-	    </property>
-	</configuration>
+```
+***
+<configuration>
+	<property>
+		<name>fs.defaultFS</name>
+		<value>hdfs://localhost:9000</value>
+	</property>
+</configuration>
+```
 
 <br/>
 
@@ -119,23 +120,24 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 <br/>
 
-	***
+```
+***
 
-	<configuration>
-	    <property>
-	        <name>dfs.replication</name>
-	        <value>1</value>
-	    </property>
-		<property>
-			<name>dfs.namenode.name.dir</name>
-			<value>file:/home/hadoop/hadoop_data/hdfs/namenode</value>
-		</property>
-		<property>
-			<name>dfs.datanode.name.dir</name>
-			<value>file:/home/hadoop/hadoop_data/hdfs/datanode</value>
-		</property>
-	</configuration>
-
+<configuration>
+	<property>
+		<name>dfs.replication</name>
+		<value>1</value>
+	</property>
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value>file:/home/hadoop/hadoop_data/hdfs/namenode</value>
+	</property>
+	<property>
+		<name>dfs.datanode.name.dir</name>
+		<value>file:/home/hadoop/hadoop_data/hdfs/datanode</value>
+	</property>
+</configuration>
+```
 
 ! Нужно посмотреть, возможно, что параметр должен называться dfs.datanode.data.dir
 
@@ -146,19 +148,20 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 <br/>
 
-	***
+```
+***
 
-	<configuration>
-	    <property>
-	        <name>yarn.nodemanager.aux-services</name>
-	        <value>mapreduce_shuffle</value>
-	    </property>
-		<property>
-			<name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
-			<value>org.apache.hadoop.mapred.ShuffleHandler</value>
-		</property>
-	</configuration>
-
+<configuration>
+	<property>
+		<name>yarn.nodemanager.aux-services</name>
+		<value>mapreduce_shuffle</value>
+	</property>
+	<property>
+		<name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+		<value>org.apache.hadoop.mapred.ShuffleHandler</value>
+	</property>
+</configuration>
+```
 
 <br/>
 
@@ -170,12 +173,14 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 <br/>
 
-	<configuration>
-	    <property>
-	        <name>mapreduce.framework.name</name>
-	        <value>yarn</value>
-	    </property>
-	</configuration>
+```
+<configuration>
+	<property>
+		<name>mapreduce.framework.name</name>
+		<value>yarn</value>
+	</property>
+</configuration>
+```
 
 <br/>
 
