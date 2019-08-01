@@ -21,11 +21,11 @@ https://www.qwiklabs.com/quests/45
 
 ### [Running Dedicated Game Servers in Google Kubernetes Engine](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/)
 
-### [Awwvision: Cloud Vision API from a Kubernetes Cluster](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/awwvision/)
+### [Awwvision: Cloud Vision API from a Kubernetes Cluster](https://matematika.org/clouds/google/qwiklabs/advanced-ml-infrastructure/awwvision/)
 
 ### [Running a MongoDB Database in Kubernetes with StatefulSets](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/running-a-mongodb-database-in-kubernetes-with-statefulsets/)
 
-### [Kubeflow End to End (ML)](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/kubeflow-end-to-end/)
+### [Kubeflow End to End (ML)](https://matematika.org/clouds/google/qwiklabs/advanced-ml-infrastructure/kubeflow-end-to-end/)
 
 ### [Deploy a Web App on GKE with HTTPS Redirect using Lets Encrypt](/clouds/google/kubernetes/qwiklabs/kubernetes-solutions/deploy-a-web-app-on-gke-with-https-redirect-using-lets-encrypt/)
 
