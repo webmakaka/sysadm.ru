@@ -79,6 +79,6 @@ https://snapcraft.io/acestreamplayer
 
 ### Ссылки на трансляции футбола (Sopcast, Ace Stream):
 
--   livesport(.)ws
--   sopsport(.)org
--   football-russia(.)tv
+- pimpletv(.)ru (Сохраняйте ссылки на трансляции. Ссылки могут работать на следующих трансляциях)
+- livesport(.)ws (На них наехали, РПФЛ больше здесь можно не ловить. Только если в комментариях кто кинет ссылку)
+- football-russia(.)tv (Похоже, здесь уже нечего ловить)

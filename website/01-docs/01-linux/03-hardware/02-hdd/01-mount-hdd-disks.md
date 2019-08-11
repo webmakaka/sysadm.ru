@@ -8,12 +8,11 @@ permalink: /linux/hardware/hdd/mount-disks/
 # Монтирование hdd
 
 Делаю!  
-31.03.2018
+11.08.2019
 
 В Ubuntu 18.04
 
 !!! На диске нет никаких данных.
-
 
     # fdisk -l /dev/sd*
 
@@ -41,7 +40,7 @@ permalink: /linux/hardware/hdd/mount-disks/
 
     Created a new partition 1 of type 'Linux filesystem' and of size 931,5 GiB.
 
-    Command (m for help): w
+    Command (m for help): [w]
     The partition table has been altered.
     Calling ioctl() to re-read partition table.
     Syncing disks.

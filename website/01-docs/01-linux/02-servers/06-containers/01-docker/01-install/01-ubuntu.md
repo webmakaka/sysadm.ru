@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 18.04.1 bionic64
 
 Делаю:  
-18.05.2019
+11.08.2019
 
 <br/>
 
@@ -17,11 +17,17 @@ permalink: /linux/servers/containers/docker/install/ubuntu/
 
     $ sudo su -
 
+    # cd /tmp/
+
     # curl -LJO https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%201/Video%201.3/install-docker-and-docker-compose.sh
 
     # chmod +x ./install-docker-and-docker-compose.sh
 
     # ./install-docker-and-docker-compose.sh
+
+    # docker -v
+    Docker version 19.03.1, build 74b1e89
+
 
 <!-- <br/>
 

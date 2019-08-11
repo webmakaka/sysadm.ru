@@ -87,6 +87,7 @@ permalink: /linux/servers/virtual/virtualbox/vm/centos-6/
 
 
 
+
 ### Создание и подключение жестких дисков:
 
 
@@ -229,7 +230,6 @@ vboxnet0 - виртуальный адаптер хостовой машины.
 
 
 ### Показать результат созданной виртаульной машины:
-
 
     $ VBoxManage showvminfo ${vm}
 

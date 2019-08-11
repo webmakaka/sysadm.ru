@@ -20,10 +20,15 @@ permalink: /linux/servers/virtual/virtualbox/export-import/
 При необходимости, нужно задать переменные:
 
     $ vboxmanage list vms
-    $ vm=<machine_name>
+    $ export vm=<machine_name>
 
 
-### Export виртуальной машины
+<br/>
+
+### Подготовка к Export'у виртуальной машины
+
+Делаю:  
+10.08.2019
 
 Может быть использован как вариант создания резервной копии или для создания копии уже работающей виртуальной машины.
 
@@ -44,7 +49,9 @@ permalink: /linux/servers/virtual/virtualbox/export-import/
     $ VBoxManage controlvm ${vm} resume
 
 
-### Export виртуальной машины
+<br/>
+
+### Команды Export'a виртуальной машины
 
 // Создать каталог для backup
 
@@ -62,13 +69,17 @@ permalink: /linux/servers/virtual/virtualbox/export-import/
 
     $ vm=vm_centos_jboss_postgresql
 
-Создаем каталоги для виртуальной машины  и для snapshots
+Создаем каталоги для виртуальной машины и для snapshots
 
     $ mkdir -p ${VM_HOME}/${vm}/snapshots
 
 Определяем каталог, куда следует выполнить импорт
 
     $ VBoxManage setproperty machinefolder ${VM_HOME}/${vm}
+
+Посмотреть переменные
+
+    $ vboxmanage list systemproperties | grep folder
 
 
 ### Import виртуальной машины
@@ -101,11 +112,15 @@ Successfully imported the appliance.
 
     $ vboxmanage list vms
 
+Запустить импортированную виртуальную машину
+
+    $ vboxmanage startvm ${vm} -type headless &
+
 <br/>
 
 ### Дополнительно по настройке сети после импорта
 
-После импорта отсутствуют сетевые адаптеры в системе.
+Иногда после импорта отсутствуют сетевые адаптеры в системе.
 
 Нужно отредактировать файл /etc/udev/rules.d/70-persistent-net.rules
 
