@@ -1,6 +1,6 @@
 ---
 layout: page
-title: VBoxManage  error Nonexistent host networking interface, name 'eth0' (VERR_INTERNAL_ERROR)
+title: VBoxManage error Nonexistent host networking interface name eth0 (VERR_INTERNAL_ERROR)
 permalink: /linux/servers/virtual/virtualbox/network/nonexistent-host-networking-interface/
 ---
 
