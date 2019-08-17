@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Архиваторы в Linux
-permalink: /linux/desktops/archives/installation/
+permalink: /linux/desktops/archives/install/
 ---
 
 # Инсталляция архиваторов в Linux

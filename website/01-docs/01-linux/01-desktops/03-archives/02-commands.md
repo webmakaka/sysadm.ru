@@ -10,73 +10,68 @@ permalink: /linux/desktops/archives/commands/
 
 ### 7z
 
--- Извлечь архив в файл
+    // Извлечь архив в каталог
+    $  7z x ./VBoxGuestAdditions_5.0.10.iso -o./VBoxGuestAdditions_5.0.10/
 
-    # 7z x ./VBoxGuestAdditions_5.0.10.iso -o./VBoxGuestAdditions_5.0.10/
+    // Создать архив большого размера, поделив его на части
+    $  7z a -v1024m Large-file-separated-in-multi-parts.zip Large-Many-Gigabytes-File.SQL
 
 <br/>
 
 ### tar.gz
 
-Создать tar.gz:
+    // Создать tar.gz:
+    $ tar -cvzpf FileName.tar.gz ./file_dir
 
-    tar -cvzpf FileName.tar.gz ./file_dir
-
-Извлечь tar.gz:
-
-    tar -xvzpf FileName.tar.gz ./
+    // Извлечь tar.gz:
+    $ tar -xvzpf FileName.tar.gz ./
 
 Если:
 tar: .: Not found in archive
 
 Можно попробовать:
 
-    tar -xzvf dynagen-0.11.0.tar.gz
+    $ tar -xzvf dynagen-0.11.0.tar.gz
 
 <br/>
 
 ### tar.bz2
 
-Извлечь tar.bz2:
-
-    tar -jxf FileName.tar.bz2
+    // Извлечь tar.bz2
+    $ tar -jxf FileName.tar.bz2
 
 <br/>
 
 ### ZIP
 
-Создать архив zip:
+    // Создать zip архив кучи файлов по маске:
+    $ for i in $(find ./logs/ -name "*") ;do zip ./weblogic_logs.zip $i; done
 
-    for i in $(find ./logs/ -name "*") ;do zip ./weblogic_logs.zip $i; done
 
 <br/>
 
 ### tar
 
-Извлечь tar:
-
-    tar xvf FileName.tar -C ./
+    // Извлечь tar
+    $ tar xvf FileName.tar -C ./
 
 <br/>
 
 ### .tgz
 
-Извлечь .tgz:
-
-    tar xf FileName.tgz -C ./
+    // Извлечь .tgz:   
+    $ tar xf FileName.tgz -C ./
 
 <br/>
 
 ### .rar
 
-Извлечь .rar в текущий каталог:
-
+    // Извлечь .rar в текущий каталог:
     $ unrar e archiveName.rar
 
 <br/>
 
-Извлечь .rar в каталог с текущим именем архива:
-
+    // Извлечь .rar в каталог с текущим именем архива:
     $ unrar x Archive.part1.rar
 
 <br/>

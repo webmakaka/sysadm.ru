@@ -69,4 +69,4 @@ permalink: /linux/desktops/centos/7.x/install-popular-programms/
 
 ### Архиваторы
 
-<a href="/linux/desktops/archives/installation/">здесь</a>
+<a href="/linux/desktops/archives/install/">здесь</a>

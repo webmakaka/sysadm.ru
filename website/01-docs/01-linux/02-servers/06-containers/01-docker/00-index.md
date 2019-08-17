@@ -31,7 +31,7 @@ Offtopic:
 
 <br/>
 
-[Последняя версия Docker Community Edition] - на апрель 2018 - 18.03.0-ce (2018-03-21)  
+[Последняя версия Docker Community Edition] - на августе 2019 - 19.03.1  
 https://docs.docker.com/release-notes/docker-ce/
 
 [Подготовленные image]  
@@ -43,7 +43,7 @@ https://quay.io
 
 На hub.docker.com можно делать автоматически собираемые image. Для этого необходимо указать сервису проект с Dockerfile. При внесении изменений в проект, image собирается заново.
 
-**Можно также создать свой Registry:**
+**Можно также создать свой Registry**
 
 
 <br/><br/>

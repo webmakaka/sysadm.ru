@@ -8,6 +8,6 @@ permalink: /linux/desktops/archives/
 
 <br/>
 
-### [Инсталляция архиваторов в Linux](/linux/desktops/archives/installation/)
+### [Инсталляция архиваторов в Linux](/linux/desktops/archives/install/)
 
 ### [Команды работы с архивами в Linux](/linux/desktops/archives/commands/)
