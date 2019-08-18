@@ -111,15 +111,17 @@ permalink: /linux/servers/virtual/virtualbox/install/centos/6/
 
 Добавляю:
 
-    # User specific environment and startup programs
-    ############################################
-    #### VirtualBox Parameters
+```
+# User specific environment and startup programs
+############################################
+#### VirtualBox Parameters
 
-               export VM_HOME=$HOME/machines
-               export VM_BACKUPS=$HOME/backups
-               export VM_ISO=$HOME/iso
+            export VM_HOME=$HOME/machines
+            export VM_BACKUPS=$HOME/backups
+            export VM_ISO=$HOME/iso
 
-    ############################################
+############################################
+```
 
 Применить новые параметры:
 

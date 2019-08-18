@@ -26,8 +26,8 @@ permalink: /linux/desktops/ubuntu/
 
 ### [Мелкие улучшения](/linux/desktops/ubuntu/small-improvements/)
 
-### [Знакомство в ipfs](/linux/desktops/ubuntu/ipfs/)
+### [Знакомство с ipfs](/linux/desktops/ubuntu/ipfs/)
 
-### Сеть
+### [Удаленный рабочий стол в Ubuntu 18.04](/linux/desktops/ubuntu/vnc-server/)
 
 ### [Сеть в Ubuntu](/linux/desktops/ubuntu/network/)

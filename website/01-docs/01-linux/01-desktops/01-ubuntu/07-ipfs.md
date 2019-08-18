@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Знакомство в ipfs
+title: Знакомство с ipfs
 permalink: /linux/desktops/ubuntu/ipfs/
 ---
 
-# Знакомство в ipfs
+# Знакомство с ipfs
 
 Делаю впервые:  
 03.01.2019

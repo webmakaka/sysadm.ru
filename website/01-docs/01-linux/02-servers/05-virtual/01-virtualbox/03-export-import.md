@@ -22,13 +22,21 @@ permalink: /linux/servers/virtual/virtualbox/export-import/
     $ vboxmanage list vms
     $ export vm=<machine_name>
 
+<br/>
+
+    $ export VM_BACKUPS=${VM_HOME}/backup
+    
+    $ echo ${VM_BACKUPS}
+    /mnt/dsk1/machines/backups
+
+
 
 <br/>
 
 ### Подготовка к Export'у виртуальной машины
 
 Делаю:  
-10.08.2019
+18.08.2019
 
 Может быть использован как вариант создания резервной копии или для создания копии уже работающей виртуальной машины.
 

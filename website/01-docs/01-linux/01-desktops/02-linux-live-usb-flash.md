@@ -24,7 +24,7 @@ permalink: /linux/desktops/linux-live-usb-flash/
 
 **Главное не перепутать диск!**
 
-    # dd if=./CentOS-7-x86_64-DVD-1511.iso of=/dev/sdf
+    # dd if=./CentOS-7-x86_64-DVD-1810.iso of=/dev/sdf
 
 
 **С дебианом тоже работает**
