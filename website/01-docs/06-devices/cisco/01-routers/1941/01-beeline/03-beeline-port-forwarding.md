@@ -4,35 +4,36 @@ title: Cisco Router 1941 Проброс порта в локальную сет�
 permalink: /devices/cisco/routers/1941/beeline-port-forwarding/
 ---
 
-
 # Cisco Router 1941 Проброс порта в локальную сеть Билайн
 
 <strong>Проброс порта в локальную сеть.</strong>
-Для примера, пусть это будет вебсервер, который работает на хосте 192.168.1.201 и слушает порт 80.
+Для примера, пусть это будет вебсервер, который работает на хосте 192.168.1.101 и слушает порт 80.
 
 
     cisco-router-1941> en
     cisco-router-1941# conf t
 
--- Все запросы от внешних клиентов на IP адрес 95.31.31.8 с портом 80 должны перенаправляться на IP адрес 192.168.1.201 с портом 80
+-- Все запросы от внешних клиентов на IP адрес 95.31.31.8 с портом 80 должны перенаправляться на IP адрес 192.168.1.101 с портом 80
+
+
+    cisco-router-1941(config)# ip nat inside source static tcp 192.168.1.101 80 95.31.31.8 80 extendable
 
 <!--
 
-    cisco-router-1941(config)# ip nat inside source static tcp 95.31.31.8 80 192.168.1.201 80 extendable
+    // Тоже самое для https
+    cisco-router-1941(config)# ip nat inside source static tcp 192.168.1.101 443 95.31.31.8 443 extendable
 
 -->
 
-    cisco-router-1941(config)# ip nat inside source static tcp 192.168.1.201 80 95.31.31.8 80 extendable
+<!-- no ip nat inside source static tcp     192.168.1.101 80 95.31.31.8 80
+    no ip nat inside source static tcp 192.168.1.101 443 95.31.31.8 443 -->
 
-<!--
 
-    cisco-router-1941(config)# ip nat inside source static tcp 192.168.1.102 443 95.31.31.8 443 extendable
+    // Посмотреть маршруты
+    # sho run | in nat
 
--->
 
 http://www.cisco.com/c/en/us/support/docs/long-reach-ethernet-lre-digital-subscriber-line-xdsl/asymmetric-digital-subscriber-line-adsl/12905-827spat.html
-
-
 
 
 <!--

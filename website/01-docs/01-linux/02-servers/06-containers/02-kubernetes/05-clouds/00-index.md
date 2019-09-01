@@ -6,4 +6,4 @@ permalink: /linux/servers/containers/kubernetes/clouds/
 
 # Kuberneters в облаках
 
-### [Kuberneters в облаках Google (GKE)](/clouds/google/kubernetes/)
+### [Kuberneters в облаках Google (GKE)](/clouds/google/gke/)
