@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Apache Httpd сервер на Centos 6.6 из пакетов
-permalink: /linux/servers/webservers/apache/installation/
+permalink: /linux/servers/webservers/apache/install/
 ---
 
 # Инсталляция Apache Httpd сервер на Centos 6.6 из пакетов

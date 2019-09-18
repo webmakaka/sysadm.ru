@@ -9,5 +9,5 @@ url: "https://sysadm.ru" # the base hostname & protocol for your site
 markdown: kramdown
 
 
-gems:
+plugins:
   - jekyll-sitemap

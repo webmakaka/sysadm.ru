@@ -25,3 +25,14 @@ permalink: /linux/servers/devops/automation/ansible/
 <br/>
 
 ### [Обучающие видео по работе с Ansible](/linux/servers/devops/automation/ansible/videos/)
+
+
+<br/>
+
+## Тестовые задания для DevOps по работе с Ansible
+
+### [Задание 1](https://bitbucket.org/sysadm-ru/artem-ansible/src/master/)
+
+### [Задание 2](https://github.com/edvegas/ssoft-test)
+
+
