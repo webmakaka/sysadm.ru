@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster
 
 Делаю  
-01.08.2019
+22.09.2019
 
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
@@ -44,14 +44,29 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
     // Скрипты для установки актуальной версии kubernetes сluster
     $ cd vagrant-provisioning/
 
-    // Скрипты для установки kubernetes сluster (1.11.6)
-    $ cd misc/vagrant-provisioning-by-version/
-
     // Обновить образы виртуальных машин virtualbox
     $ vagrant box update
 
     // Запуск
     $ vagrant up
+
+    $ vagrant status
+    Current machine states:
+
+    master.k8s                running (virtualbox)
+    node1.k8s                 running (virtualbox)
+    node2.k8s                 running (virtualbox)
+
+
+
+<br/>
+
+P.S.
+
+    // Если нужно установить по какой-то причине старую версию kubernetes
+    // В следующем каталоге лежат скрипты для установки kubernetes сluster (1.11.6)
+    $ cd misc/vagrant-provisioning-by-version/
+
 
 <br/>
 
@@ -73,48 +88,104 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.15.1
-    Server Version: v1.15.1
+    Client Version: v1.16.0
+    Server Version: v1.16.0
 
 <br/>
 
     $ kubectl get nodes
     NAME         STATUS   ROLES    AGE     VERSION
-    master.k8s   Ready    master   11m     v1.15.1
-    node1.k8s    Ready    <none>   7m41s   v1.15.1
-    node2.k8s    Ready    <none>   4m2s    v1.15.1
+    master.k8s   Ready    master   7m31s   v1.16.0
+    node1.k8s    Ready    <none>   3m56s   v1.16.0
+    node2.k8s    Ready    <none>   44s     v1.16.0
 
 
 <br/>
 
 ### Получить дополнительную информацию по кластеру
 
-    $ kubectl get cs
-    NAME                 STATUS    MESSAGE             ERROR
-    scheduler            Healthy   ok                  
-    controller-manager   Healthy   ok                  
-    etcd-0               Healthy   {"health":"true"}   
-
+    $  kubectl get cs
+    NAME                 AGE
+    scheduler            <unknown>
+    controller-manager   <unknown>
+    etcd-0               <unknown>
 
 <br/>
 
     $ kubectl get po -n kube-system
     NAME                                 READY   STATUS    RESTARTS   AGE
-    coredns-5c98db65d4-rq5mm             1/1     Running   0          11m
-    coredns-5c98db65d4-s8rvc             1/1     Running   0          11m
-    etcd-master.k8s                      1/1     Running   0          10m
-    kube-apiserver-master.k8s            1/1     Running   0          10m
-    kube-controller-manager-master.k8s   1/1     Running   0          10m
-    kube-flannel-ds-amd64-2w2n5          1/1     Running   0          8m16s
-    kube-flannel-ds-amd64-t8mgd          1/1     Running   0          4m37s
-    kube-flannel-ds-amd64-wzc6s          1/1     Running   0          11m
-    kube-proxy-5lchz                     1/1     Running   0          11m
-    kube-proxy-nh2bz                     1/1     Running   0          4m37s
-    kube-proxy-vf2jg                     1/1     Running   0          8m16s
-    kube-scheduler-master.k8s            1/1     Running   0          10m
+    coredns-5644d7b6d9-sx4tr             1/1     Running   0          7m57s
+    coredns-5644d7b6d9-z7rkq             1/1     Running   0          7m57s
+    etcd-master.k8s                      1/1     Running   0          7m12s
+    kube-apiserver-master.k8s            1/1     Running   0          7m11s
+    kube-controller-manager-master.k8s   1/1     Running   0          7m14s
+    kube-flannel-ds-amd64-dqwxj          1/1     Running   0          7m57s
+    kube-flannel-ds-amd64-m57cq          1/1     Running   0          4m43s
+    kube-flannel-ds-amd64-q2m5n          1/1     Running   0          91s
+    kube-proxy-7ztrf                     1/1     Running   0          7m57s
+    kube-proxy-fzm95                     1/1     Running   0          4m43s
+    kube-proxy-nxwhq                     1/1     Running   0          91s
+    kube-scheduler-master.k8s            1/1     Running   0          7m14s
+
 
 <br/>
 
     $ kubectl cluster-info
     Kubernetes master is running at https://192.168.0.10:6443
     KubeDNS is running at https://192.168.0.10:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+
+<br/>
+
+### Если что-то не так
+
+
+    $ kubectl get nodes
+    NAME         STATUS     ROLES    AGE   VERSION
+    master.k8s   NotReady   master   30m   v1.16.0
+    node1.k8s    NotReady   <none>   26m   v1.16.0
+    node2.k8s    NotReady   <none>   23m   v1.16.0
+
+<br/>
+
+, начинаем поиск
+
+    $ kubectl describe nodes master.k8s
+
+
+<br/>
+
+```
+Ready            False   Sun, 22 Sep 2019 10:27:17 +0300   Sun, 22 Sep 2019 09:56:54 +0300   KubeletNotReady              runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady message:docker: network plugin is not ready: cni config uninitialized
+```
+
+<br/>
+
+
+```
+$ kubectl get pods --all-namespaces
+NAMESPACE     NAME                                 READY   STATUS    RESTARTS   AGE
+kube-system   coredns-5644d7b6d9-kgv52             0/1     Pending   0          43m
+kube-system   coredns-5644d7b6d9-zlxbc             0/1     Pending   0          43m
+kube-system   etcd-master.k8s                      1/1     Running   0          43m
+kube-system   kube-apiserver-master.k8s            1/1     Running   0          42m
+kube-system   kube-controller-manager-master.k8s   1/1     Running   0          42m
+kube-system   kube-flannel-ds-amd64-95z5w          1/1     Running   0          43m
+kube-system   kube-flannel-ds-amd64-97ssr          1/1     Running   0          37m
+kube-system   kube-flannel-ds-amd64-xdj4c          1/1     Running   0          40m
+kube-system   kube-proxy-8cjsl                     1/1     Running   0          37m
+kube-system   kube-proxy-mp87t                     1/1     Running   0          43m
+kube-system   kube-proxy-vdhvn                     1/1     Running   0          40m
+kube-system   kube-scheduler-master.k8s            1/1     Running   0          43m
+```
+
+<br/>
+
+    $ kubectl describe pod coredns.... -n kube-system
+    $ kubectl delete pod coredns.... -n kube-system
+
+<br/>
+
+Описание решения данной ошибки:
+
+https://stackoverflow.com/questions/58037620/how-to-fix-flannel-cni-plugin-error-plugin-flannel-does-not-support-config-ve

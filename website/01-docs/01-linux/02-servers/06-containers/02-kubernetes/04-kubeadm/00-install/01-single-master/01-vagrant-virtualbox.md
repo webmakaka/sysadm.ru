@@ -133,6 +133,10 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/install/single-master/va
 
 **Flannel**
 
+Конфиги можно посмотреть здесь:
+
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+
 Вариант с Weave Net у меня не заработал, но отлично заработал вариант с Flannel.
 
 Узлы уже должны быть подключены к master.k8s.
@@ -246,7 +250,7 @@ http://192.168.0.11:30111/
 
 ### Может быть полезным:
 
-https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
 
 <br/>
 
