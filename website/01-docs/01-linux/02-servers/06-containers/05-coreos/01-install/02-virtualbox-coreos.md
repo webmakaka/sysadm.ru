@@ -101,8 +101,4 @@ Docker уже установлен.
     $ docker -v
     Docker version 1.8.3, build cedd534-dirty
 
-<br/><br/>
 
-**Материалы:**
-
-<a href="https://coreos.com/os/docs/latest/booting-on-virtualbox.html" rel="nofollow">Running CoreOS on VirtualBox</a>

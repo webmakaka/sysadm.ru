@@ -40,9 +40,4 @@ permalink: /linux/servers/containers/coreos/network/
     64 bytes from ya.ru (93.158.134.3): icmp_seq=2 ttl=55 time=2.39 ms
 
 
-<br/><br/>
 
-Материалы:  
-
-
-[Network Configuration with networkd](https://coreos.com/os/docs/latest/network-config-with-networkd.html)

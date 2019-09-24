@@ -12,6 +12,8 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
 
     $ sudo su -
     # apt update && apt-get upgrade -y
+    # apt-get install -y curl git
+
 
 <br/>
 
@@ -32,8 +34,6 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
 
 ### Запуск sysadm.ru в редакторе vscode
 
-    # apt install -y git
-
     $ mkdir ~/projects && cd ~/projects
     $ git clone https://bitbucket.org/sysadm-ru/sysadm.ru
     $ cd sysadm.ru
@@ -51,7 +51,6 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
     vim \
     openssh-server \
     traceroute \
-    git \
     vlc \
     net-tools \
     rar unrar-free
@@ -68,7 +67,7 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
 
 <br/>
 
-### Смена раскладки клавиатуры по Alt + Shift (В последний раз не потребовалось)
+### Смена раскладки клавиатуры по Alt + Shift
 
 Вот надо что-нибудь да испортить! По умолчанию, нужно выбрать комбинацию из 3х клваиш, чтобы сменить раскладку.
 
@@ -151,14 +150,17 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 +
 
 ```
+0.0.0.0 blackhole.beeline.ru
 0.0.0.0 mailtrack.io
 0.0.0.0 metrika.yandex.ru
 0.0.0.0 informer.yandex.ru
+0.0.0.0 naydex.net
+0.0.0.0 *.naydex.net
 
 0.0.0.0 rbc.ru
 0.0.0.0 lenta.ru
 0.0.0.0 betcity.ru
-0.0.0.0 blackhole.beeline.ru
+
 0.0.0.0 jivosite.ru
 0.0.0.0 www.jivosite.ru
 0.0.0.0 content.mql5.com
@@ -170,10 +172,7 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 0.0.0.0 downloadtutorials.net
 
 0.0.0.0 content.mql5.com
-0.0.0.0 metrika.yandex.ru
-0.0.0.0 informer.yandex.ru
-0.0.0.0 naydex.net
-0.0.0.0 *.naydex.net
+
 
 
 81.17.30.22 nnm-club.me
