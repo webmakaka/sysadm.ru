@@ -58,7 +58,6 @@ permalink: /linux/servers/containers/coreos/
 
 ### Примеры запуска
 
-[CoreOS Container Linux cluster architectures](https://coreos.com/os/docs/latest/cluster-architectures.html)
 
 -   Docker dev environment on laptop
 -   Small cluster
@@ -68,10 +67,6 @@ permalink: /linux/servers/containers/coreos/
 <br/>
 
 **Small Cluster**
-
-<br/>
-
-<img src="https://coreos.com/os/docs/latest/img/small.png" alt="Small Cluster">
 
 <br/>
 
@@ -87,7 +82,6 @@ permalink: /linux/servers/containers/coreos/
 
 <br/>
 
-<img src="https://coreos.com/os/docs/latest/img/dev.png" alt="Easy development/testing cluster">
 
 [Пример 3 (Easy development/testing cluster)](/linux/servers/containers/coreos/example/03/)
 
