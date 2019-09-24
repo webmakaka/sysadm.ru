@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Install logstash ELK stack on CentOS 7 Elasticsearch, Logstash, Kibana
-permalink: /linux/servers/logging/elk/install/
+permalink: /linux/servers/logging/elk/install/centos/
 ---
 
 # Install logstash ELK stack on CentOS 7 Elasticsearch, Logstash, Kibana
