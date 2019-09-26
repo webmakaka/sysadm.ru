@@ -9,6 +9,11 @@ permalink: /linux/servers/databases/postgresql/
 [Ubuntu](/linux/servers/databases/postgresql/install/ubuntu/)  
 [Centos](/linux/servers/databases/postgresql/install/centos/)  
 
+<br/>
+
+**Автоустановщик PostgreSQL в режиме master-slave и standalone:**
+
+<a href="https://www.linux.org.ru/news/opensource/15245410">LOR</a> |<a href="https://github.com/Anton-PG/pgsql-for-you">Git</a>
 
 <br/>
 

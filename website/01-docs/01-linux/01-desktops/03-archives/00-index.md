@@ -8,6 +8,8 @@ permalink: /linux/desktops/archives/
 
 <br/>
 
-### [Инсталляция архиваторов в Linux](/linux/desktops/archives/install/)
+### [7zip](/linux/desktops/archives/7zip/)
 
-### [Команды работы с архивами в Linux](/linux/desktops/archives/commands/)
+### [Rar](/linux/desktops/archives/rar/)
+
+### [Остальные](/linux/desktops/archives/other/)

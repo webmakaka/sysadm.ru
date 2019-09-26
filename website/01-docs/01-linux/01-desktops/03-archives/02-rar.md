@@ -1,70 +1,40 @@
 ---
 layout: page
-title: Команды работы с архивами в Linux
-permalink: /linux/desktops/archives/commands/
+title: Rar в Linux
+permalink: /linux/desktops/archives/rar/
 ---
 
-# Команды работы с архивами в Linux
+# Rar в Linux
 
 <br/>
 
-### 7z
+## Ubuntu
 
-    // Извлечь архив в каталог
-    $  7z x ./VBoxGuestAdditions_5.0.10.iso -o./VBoxGuestAdditions_5.0.10/
-
-    // Создать архив большого размера, поделив его на части
-    $  7z a -v1024m Large-file-separated-in-multi-parts.zip Large-Many-Gigabytes-File.SQL
+    # apt install -y \
+    rar unrar-free
 
 <br/>
 
-### tar.gz
+## Centos
 
-    // Создать tar.gz:
-    $ tar -cvzpf FileName.tar.gz ./file_dir
+-- По идее, ставится так:
 
-    // Извлечь tar.gz:
-    $ tar -xvzpf FileName.tar.gz ./
+    # wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
+    # yum install -y rar unrar
 
-Если:
-tar: .: Not found in archive
+-- rar из исходников (не проверял !!!)
 
-Можно попробовать:
-
-    $ tar -xzvf dynagen-0.11.0.tar.gz
-
-<br/>
-
-### tar.bz2
-
-    // Извлечь tar.bz2
-    $ tar -jxf FileName.tar.bz2
+    wget http://www.rarlab.com/rar/rarlinux-3.8.0.tar.gz
+    tar -zxvf rarlinux-3.8.0.tar.gz
+    cd rar
+    su root
+    make
+    make install
+    exit
 
 <br/>
 
-### ZIP
-
-    // Создать zip архив кучи файлов по маске:
-    $ for i in $(find ./logs/ -name "*") ;do zip ./weblogic_logs.zip $i; done
-
-
-<br/>
-
-### tar
-
-    // Извлечь tar
-    $ tar xvf FileName.tar -C ./
-
-<br/>
-
-### .tgz
-
-    // Извлечь .tgz:   
-    $ tar xf FileName.tgz -C ./
-
-<br/>
-
-### .rar
+### Работа с архиватором rar
 
     // Извлечь .rar в текущий каталог:
     $ unrar e archiveName.rar

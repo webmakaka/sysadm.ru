@@ -23,6 +23,7 @@ permalink: /linux/desktops/ubuntu/install/steps-after-installation-ubuntu-18/
     $ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
     $ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
+<br/>
 
     $ sudo apt-get install apt-transport-https
     $ sudo apt-get update
@@ -145,9 +146,7 @@ System --> Logout
 
 ### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
-https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
-+
 
 ```
 0.0.0.0 blackhole.beeline.ru
@@ -179,11 +178,26 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 ```
 
++
+
+Отсюда добавим кучу сайтов:  
+https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
+
+
+<br/>
+
+    # curl https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt --output badwebsites.txt
+
+    # cat ./badwebsites.txt >> /etc/hosts
+
+
+
+
 <br/>
 
 ### Дополнительное ПО
 
-[chrome](/linux/desktops/ubuntu/browsers/chrome/)  
+[Chrome](/linux/desktops/ubuntu/browsers/chrome/)  
 [Opera](/linux/desktops/ubuntu/browsers/opera/)
 
 <br/>
