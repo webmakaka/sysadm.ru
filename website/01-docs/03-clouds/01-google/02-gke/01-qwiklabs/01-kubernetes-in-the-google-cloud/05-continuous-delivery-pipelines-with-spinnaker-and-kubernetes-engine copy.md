@@ -18,6 +18,8 @@ https://www.qwiklabs.com/focuses/552?parent=catalog
 
 <br/>
 
+### Introduction
+
 This hands-on lab shows you how to create a continuous delivery pipeline using Google Kubernetes Engine, Google Cloud Source Repositories, Google Cloud Container Builder, and Spinnaker. After you create a sample application, you configure these services to automatically build, test, and deploy it. When you modify the application code, the changes trigger the continuous delivery pipeline to automatically rebuild, retest, and redeploy the new version.
 
 <br/>
