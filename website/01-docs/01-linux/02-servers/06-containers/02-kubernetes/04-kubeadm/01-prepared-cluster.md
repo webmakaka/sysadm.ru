@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster
 
 Делаю  
-22.09.2019
+04.10.2019
 
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
@@ -67,6 +67,12 @@ P.S.
     // В следующем каталоге лежат скрипты для установки kubernetes сluster (1.11.6)
     $ cd misc/vagrant-provisioning-by-version/
 
+<br/>
+
+Если coredns-* не будут стартовать, обновить файл kube-flannel.yml, скачав его по ссылке с сайта:
+
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+
 
 <br/>
 
@@ -88,17 +94,17 @@ P.S.
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.16.0
-    Server Version: v1.16.0
+    Client Version: v1.16.1
+    Server Version: v1.16.1
+
 
 <br/>
 
     $ kubectl get nodes
-    NAME         STATUS   ROLES    AGE     VERSION
-    master.k8s   Ready    master   7m31s   v1.16.0
-    node1.k8s    Ready    <none>   3m56s   v1.16.0
-    node2.k8s    Ready    <none>   44s     v1.16.0
-
+    NAME         STATUS   ROLES    AGE    VERSION
+    master.k8s   Ready    master   9m6s   v1.16.1
+    node1.k8s    Ready    <none>   6m5s   v1.16.1
+    node2.k8s    Ready    <none>   3m9s   v1.16.1
 
 <br/>
 
