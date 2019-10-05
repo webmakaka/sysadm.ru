@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster
+title: Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 ---
 
-# Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster
+# Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 
 Делаю  
 04.10.2019

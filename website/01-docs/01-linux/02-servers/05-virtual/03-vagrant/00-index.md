@@ -50,6 +50,6 @@ https://github.com/bradtraversy/vagrant_lamp_traversy/blob/master/Vagrantfile
 
 [Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](/linux/servers/virtual/vagrant/vagrant-gitlab/)
 
-[Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
+[Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
 
 [Скрипты для развертывания Kubernetes с помощью Ansible в Vagrant](https://bitbucket.org/sysadm-ru/vagrant-ansible-kubernetes/)

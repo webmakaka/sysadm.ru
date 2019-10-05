@@ -8,7 +8,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ## Практические задачи
 
-### [Vagrant скрипты, разворачивающие готовый Single Master Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
+### [Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
 
 ### [Persistent Volumes и Claims в Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/persistence/)
 
