@@ -29,7 +29,3 @@ docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins
 
 ### [Примеры использования](https://github.com/marley-nodejs/Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker)
 
-
-<br/>
-
-### [JenkinsFile для развертывания приложения в Docker контейнере (не тестировалось)](https://github.com/serg4kostiuk/voting-game/blob/master/Jenkinsfile)
