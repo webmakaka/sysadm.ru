@@ -34,6 +34,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ### [Setup Lets Encrypt cert-manager in Kubernetes Bare Metal](/linux/servers/containers/kubernetes/kubeadm/lets-encrypt/)
 
+### [Istio](/linux/servers/containers/kubernetes/kubeadm/istio/)
+
 <br/>
 
 ## Изучаем установку и настройку Kubernetes Cluster

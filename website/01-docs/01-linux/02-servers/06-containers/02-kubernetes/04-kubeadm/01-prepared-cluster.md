@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 
 Делаю  
-04.10.2019
+08.10.2019
 
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
@@ -144,7 +144,6 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
 <br/>
 
 ### Если что-то не так
-
 
     $ kubectl get nodes
     NAME         STATUS     ROLES    AGE   VERSION

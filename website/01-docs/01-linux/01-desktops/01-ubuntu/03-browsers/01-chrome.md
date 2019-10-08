@@ -17,7 +17,18 @@ permalink: /linux/desktops/ubuntu/browsers/chrome/
 
 ### Дополнительные Плагины
 
-Data Saver, Quick JavaScript Switcher, Доступ рутрекер, EditThisCookie, SetupVPN
+* Quick JavaScript Switcher
+* EditThisCookie
+* SetupVPN
+* Доступ рутрекер
+* LanguageToolPlus
+
+<!-- 
+
+Data Saver
+LanguageToolPlus.com
+
+-->
 
 <br/>
 

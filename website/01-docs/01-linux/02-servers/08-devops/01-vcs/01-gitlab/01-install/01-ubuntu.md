@@ -134,7 +134,7 @@ http://gitlab.local
 
 <br/>
 
-    // Получить информацию по установленно версии gitlab
+    // Получить информацию по установленной версии gitlab
     $ sudo gitlab-rake gitlab:env:info
 
 ```

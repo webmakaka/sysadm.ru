@@ -61,16 +61,4 @@ minikube version: v1.2.0
 
 <br/>
 
-### Install Helm (что-то вроде package manager). (Устанавливать при необходимости).
-
-    // Посмотреть релизы
-    https://github.com/helm/helm/releases
-
-    $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
-
-    $ helm version --short --client
-    Client: v2.13.1+g618447c
-
-<br/>
-
 ### [Варианты инсталляции kubernetes](/linux/servers/containers/kubernetes/install-types/)

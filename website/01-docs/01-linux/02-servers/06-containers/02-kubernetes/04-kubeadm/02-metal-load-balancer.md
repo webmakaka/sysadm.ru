@@ -6,13 +6,24 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/
 
 # MetalLB Load Balancer in Kubernetes
 
-Делаю: 18.04.2019
 
 <br/>
 
-По материалам из видео индуса.
+Делаю:  
+08.10.2019
+
+<br/>
+
+По материалам из видео индуса:
 
 https://www.youtube.com/watch?v=xYiYIjlAgHY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0&index=34
+
+<br/>
+
+    $ kubectl version --short
+    Client Version: v1.16.1
+    Server Version: v1.16.1
+
 
 <br/>
 
@@ -26,7 +37,7 @@ https://metallb.universe.tf/installation/
 
 <br/>
 
-    $ kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifests/metallb.yaml
+    $ kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.8.1/manifests/metallb.yaml
 
 <br/>
 
@@ -35,7 +46,6 @@ https://metallb.universe.tf/configuration/
 <br/>
 
 ```
-
 $ cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: ConfigMap
@@ -59,25 +69,17 @@ EOF
 
 <br/>
 
-    $ kubectl get all -n metallb-system
-    NAME                             READY   STATUS    RESTARTS   AGE
-    pod/controller-cd8657667-h7flh   1/1     Running   0          10m
-    pod/speaker-5g5cv                1/1     Running   0          10m
-    pod/speaker-b7nd7                1/1     Running   0          10m
-
-    NAME                     DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
-    daemonset.apps/speaker   2         2         2       2            2           <none>          10m
-
-    NAME                         READY   UP-TO-DATE   AVAILABLE   AGE
-    deployment.apps/controller   1/1     1            1           10m
-
-    NAME                                   DESIRED   CURRENT   READY   AGE
-    replicaset.apps/controller-cd8657667   1         1         1       10m
+    $ kubectl get pods -n metallb-system
+    NAME                          READY   STATUS    RESTARTS   AGE
+    controller-6bcfdfd677-bxrzd   1/1     Running   0          34s
+    speaker-8xhxl                 1/1     Running   0          34s
+    speaker-f6vx5                 1/1     Running   0          34s
+    speaker-gbz9s                 1/1     Running   0          34s
 
 <br/>
 
     // логи если что
-    $ kubectl describe pod speaker-5g5cv -n metallb-system
+    $ kubectl describe pod speaker-f6vx5 -n metallb-system
 
 <br/>
 
@@ -94,16 +96,16 @@ EOF
 <br/>
 
     $ kubectl get svc
-    NAME                     TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)        AGE
-    docker-hello-world-svc   ClusterIP      10.97.30.103     <none>         8088/TCP       30m
-    kubernetes               ClusterIP      10.96.0.1        <none>         443/TCP        43m
-    nginx                    LoadBalancer   10.101.185.186   192.168.0.20   80:30181/TCP   68s
-    nginx2                   LoadBalancer   10.100.94.249    192.168.0.21   80:31269/TCP   62s
+    NAME         TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)        AGE
+    kubernetes   ClusterIP      10.96.0.1        <none>         443/TCP        94m
+    nginx        LoadBalancer   10.109.226.170   192.168.0.21   80:30212/TCP   10s
+    nginx2       LoadBalancer   10.98.147.33     192.168.0.22   80:31590/TCP   5s
+
 
 <br/>
 
-    $ curl 192.168.0.20
     $ curl 192.168.0.21
+    $ curl 192.168.0.22
     OK
 
 <br/>
