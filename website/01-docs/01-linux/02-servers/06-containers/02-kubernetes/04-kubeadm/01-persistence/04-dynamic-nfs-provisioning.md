@@ -6,7 +6,15 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-
 
 # Dynamically NFS provisioning
 
-Делаю: 06.04.2019
+Делаю:   
+12.10.2019
+
+<br/>
+
+    $ kubectl version --short
+    Client Version: v1.16.1
+    Server Version: v1.16.1
+
 
 <br/>
 
@@ -41,8 +49,6 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
     $ rm -rf ~/tmp/k8s/dynamic-nfs-provisioning/ && mkdir -p ~/tmp/k8s/dynamic-nfs-provisioning/ && cd ~/tmp/k8s/dynamic-nfs-provisioning/
 
 <br/>
-
-<!-- $ kubectl create -f https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/class.yaml -->
 
     $ curl -LJO https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/class.yaml
 
@@ -84,7 +90,7 @@ parameters:
 
 <br/>
 
-    $ curl -LJO https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/deployment.yaml
+    $ curl -LJO https://bitbucket.org/sysadm-ru/kubernetes/raw/71509f958c946bf0173392801a7fba45941f5397/yamls/nfs-provisioner/deployment.yaml
 
 <br/>
 
@@ -99,17 +105,18 @@ parameters:
 <br/>
 
     $ kubectl get all
-    NAME                                          READY   STATUS    RESTARTS   AGE
-    pod/nfs-client-provisioner-67cd85d66d-sw4cm   1/1     Running   0          19s
+    NAME                                         READY   STATUS    RESTARTS   AGE
+    pod/nfs-client-provisioner-b48654857-tmdrm   1/1     Running   0          2m34s
 
     NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-    service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   41m
+    service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   46m
 
     NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE
-    deployment.apps/nfs-client-provisioner   1/1     1            1           19s
+    deployment.apps/nfs-client-provisioner   1/1     1            1           2m34s
 
-    NAME                                                DESIRED   CURRENT   READY   AGE
-    replicaset.apps/nfs-client-provisioner-67cd85d66d   1         1         1       19s
+    NAME                                               DESIRED   CURRENT   READY   AGE
+    replicaset.apps/nfs-client-provisioner-b48654857   1         1         1       2m34s
+
 
 <br/>
 
@@ -183,6 +190,8 @@ spec:
       mountPath: /mydata
 
 ```
+
+<br/>
 
     $ kubectl create -f 4-busybox-pv-hostpath.yaml
 

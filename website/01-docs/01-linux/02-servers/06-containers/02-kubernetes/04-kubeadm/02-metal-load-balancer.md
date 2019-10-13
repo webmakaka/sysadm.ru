@@ -10,7 +10,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/
 <br/>
 
 Делаю:  
-08.10.2019
+13.10.2019
 
 <br/>
 
@@ -154,7 +154,7 @@ EOF
 
 ```
 $ cat <<EOF | kubectl apply -f -
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: docker-hello-world
@@ -235,9 +235,20 @@ status:
 
 ### Еще одно приложение
 
+Делаю:   
+12.10.2019
+
+<br/>
+
+    $ kubectl version --short
+    Client Version: v1.16.1
+    Server Version: v1.16.1
+
+<br/>
+
 ```
 $ cat <<EOF | kubectl apply -f -
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cats-app-yyy2
@@ -245,6 +256,9 @@ metadata:
     app: cats-app-yyy2
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: cats-app-yyy2
   template:
     metadata:
       labels:
@@ -262,8 +276,9 @@ EOF
 <br/>
 
     $ kubectl get deploy
-    NAME                 READY   UP-TO-DATE   AVAILABLE   AGE
-    docker-hello-world   3/3     3            3           30s
+    NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+    cats-app-yyy2   3/3     3            3           73s
+
 
 <br/>
 
@@ -271,45 +286,89 @@ EOF
 
 <br/>
 
-    $ kubectl get svc docker-hello-world
-    NAME                 TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)        AGE
-    docker-hello-world   LoadBalancer   10.106.144.165   192.168.0.20   80:30502/TCP   25s
+    $ kubectl get svc cats-app-yyy2
+    NAME            TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)          AGE
+    cats-app-yyy2   LoadBalancer   10.104.207.45   192.168.0.20   8080:32202/TCP   74s
+
 
 <br/>
 
-    $ curl 192.168.0.20
-    <h1>Hello webhook world from: docker-hello-world-6c88876fcd-x89cj</h1>
+    $ curl -I 192.168.0.20:8080
+    HTTP/1.1 200 OK
+    X-Powered-By: Express
+    Content-Type: text/html; charset=utf-8
+    Content-Length: 1019
+    Date: Sat, 12 Oct 2019 20:16:36 GMT
+    Connection: keep-alive
+
 
 <br/>
 
-    $ kubectl edit svc docker-hello-world
+    http://192.168.0.20:8080/
+    OK
+
+<br/>
+
+    $ kubectl edit svc cats-app-yyy2
 
 ```
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: "2019-04-18T14:05:22Z"
+  creationTimestamp: "2019-10-12T20:13:27Z"
   labels:
-    app: docker-hello-world
-  name: docker-hello-world
+    app: cats-app-yyy2
+  name: cats-app-yyy2
   namespace: default
-  resourceVersion: "1376"
-  selfLink: /api/v1/namespaces/default/services/docker-hello-world
-  uid: 017f1cb2-61e3-11e9-8231-525400261060
+  resourceVersion: "56321"
+  selfLink: /api/v1/namespaces/default/services/cats-app-yyy2
+  uid: 127ab8d8-f360-494a-a9c0-7fb35769755d
 spec:
-  clusterIP: 10.106.144.165
+  clusterIP: 10.104.207.45
   externalTrafficPolicy: Cluster
   ports:
-  - nodePort: 30502
-    port: 80
+  - nodePort: 32202
+    port: 8080
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   selector:
-    app: docker-hello-world
+    app: cats-app-yyy2
   sessionAffinity: None
   type: LoadBalancer
 status:
   loadBalancer:
     ingress:
     - ip: 192.168.0.20
+
+```
+
+// Удалить все это добро
+
+    $ kubectl delete svc cats-app-yyy2
+
+```
+$ cat <<EOF | kubectl delete -f -
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cats-app-yyy2
+  labels:
+    app: cats-app-yyy2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cats-app-yyy2
+  template:
+    metadata:
+      labels:
+        app: cats-app-yyy2
+    spec:
+      containers:
+      - name: cats-app-yyy2
+        image: marley/nodejs-cats-app:latest
+        ports:
+        - containerPort: 8080
+EOF
+
 ```

@@ -6,7 +6,16 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/nfs/
 
 # NFS Persistent Volume in Kubernetes Cluster
 
-Делаю: 06.04.2019
+Делаю:  
+13.10.2019
+
+<br/>
+
+    $ kubectl version --short
+    Client Version: v1.16.1
+    Server Version: v1.16.1
+
+<br/>
 
 По материалам индуса:
 
@@ -18,17 +27,17 @@ https://www.youtube.com/watch?v=to14wmNmRCI&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Добавляю еще 1 виртуалку на которой будет смонтирован еще 1 раздел.
+Добавляю еще 1 виртуалку на которой будет смонтирован NFS раздел.
 
     $ rm -rf ~/vagrant-kubernetes-nfs-serv && mkdir ~/vagrant-kubernetes-nfs-serv && cd ~/vagrant-kubernetes-nfs-serv
 
 <br/>
 
-    $ vi Vagrantfile
-
-Виртуалка для NFS
+// Создаем Vagrantfile для виртуалки
 
 ```
+$ cat <<EOF >> Vagrantfile
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -49,6 +58,7 @@ Vagrant.configure(2) do |config|
     c.vm.network "private_network", ip: "192.168.0.6"
   end
 end
+EOF
 ```
 
 <br/>
@@ -74,7 +84,7 @@ end
     $ ping 192.168.0.10
     ok
 
-    $ sudo yum install nfs-utils
+    $ sudo yum install -y nfs-utils
 
     $ sudo systemctl enable nfs-server
     $ sudo systemctl start nfs-server
@@ -86,13 +96,18 @@ end
 
 <br/>
 
-Для демо, не для продуктового использования! Мне сейчас не до правильных настроек на тестовом сервере.
+**Для демо, не для продуктового использования! Мне сейчас не до правильных настроек на тестовом сервере.**
 
     $ sudo vi /etc/exports
 
-    /srv/nfs/kubedata *(rw,sync,no_subtree_check,no_root_squash,no_all_squash,insecure)
+```
+/srv/nfs/kubedata *(rw,sync,no_subtree_check,no_root_squash,no_all_squash,insecure)
+```
 
+<!--
 На youtube под видео, индусы предлагают решение, чтобы не использовать insecure.
+
+-->
 
     $ sudo exportfs -rav
 

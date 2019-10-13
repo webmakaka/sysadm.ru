@@ -6,8 +6,14 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/ingress/nginxinc-kuberne
 
 # Создаем NginxInc Kubernetes Ingress контроллер
 
-Делаю  
-13.05.2019
+Делаю:  
+13.10.2019
+
+<br/>
+
+    $ kubectl version --short
+    Client Version: v1.16.1
+    Server Version: v1.16.1
 
 <br/>
 
@@ -40,9 +46,10 @@ https://github.com/nginxinc/kubernetes-ingress
 
     $ kubectl -n nginx-ingress get all
     NAME                      READY   STATUS    RESTARTS   AGE
-    pod/nginx-ingress-ddp5g   1/1     Running   0          26s
-    pod/nginx-ingress-hgz4z   1/1     Running   0          26s
+    pod/nginx-ingress-blx2t   1/1     Running   0          17s
+    pod/nginx-ingress-mpbbf   1/1     Running   0          17s
 
     NAME                           DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
-    daemonset.apps/nginx-ingress   2         2         2       2            2           <none>          26s
+    daemonset.apps/nginx-ingress   2         2         2       2            2           <none>          17s
+
 

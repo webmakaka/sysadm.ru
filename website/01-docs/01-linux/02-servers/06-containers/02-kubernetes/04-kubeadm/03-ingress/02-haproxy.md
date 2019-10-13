@@ -6,8 +6,16 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/ingress/haproxy/
 
 # Устанавливаем и настраиваем HAProxy для Kuberntes (тестовые задачи)
 
-Делаю  
-13.05.2019
+<br/>
+
+Делаю:  
+13.10.2019
+
+<br/>
+
+    $ kubectl version --short
+    Client Version: v1.16.1
+    Server Version: v1.16.1
 
 <br/>
 
@@ -25,9 +33,13 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-    $ vi Vagrantfile
+
+
+// Создаем Vagrantfile для виртуалки
 
 ```
+$ cat <<EOF >> Vagrantfile
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -48,11 +60,14 @@ Vagrant.configure(2) do |config|
     c.vm.network "private_network", ip: "192.168.0.5"
   end
 end
+EOF
 ```
 
 <br/>
 
     $ vagrant up
+
+<br/>
 
     $ vagrant ssh haproxy.k8s
 

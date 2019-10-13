@@ -40,11 +40,11 @@ https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 https://istio.io/docs/setup/
 
-    $ curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.3.1 sh -
+    $ curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.3.2 sh -
 
 <br/>
 
-    $ cd istio-1.3.1
+    $ cd istio-1.3.2
 
     $ sudo mv bin/istioctl /usr/local/bin
 
@@ -59,7 +59,7 @@ https://istio.io/docs/setup/install/helm/#option-2-install-with-helm-and-tiller-
 
 
     $ pwd
-    /home/marley/istio-1.3.1
+    /home/marley/istio-1.3.2
 
     $ helm install install/kubernetes/helm/istio-init --name istio-init --namespace istio-system
 
@@ -79,7 +79,7 @@ https://istio.io/docs/setup/install/helm/#option-2-install-with-helm-and-tiller-
 
 Исправляю:
 
-    $ cd /home/marley/istio-1.3.1/install/kubernetes/helm/istio/charts/pilot
+    $ cd /home/marley/istio-1.3.2/install/kubernetes/helm/istio/charts/pilot
 
     $ vi values.yaml
 
@@ -158,7 +158,7 @@ https://istio.io/docs/examples/bookinfo/
 
 
     $ pwd
-    /home/marley/istio-1.3.1
+    /home/marley/istio-1.3.2
 
 <br/>
 

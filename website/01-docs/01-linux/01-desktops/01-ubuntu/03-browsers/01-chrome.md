@@ -22,6 +22,7 @@ permalink: /linux/desktops/ubuntu/browsers/chrome/
 * SetupVPN
 * Доступ рутрекер
 * LanguageToolPlus
+* Nimbus Screenshoot & Screen Video Recorder
 
 <!-- 
 

@@ -8,7 +8,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/rolling-updates/
 
 <br/>
 
-Делаю: 10.04.2019
+Делаю:  
+10.04.2019
 
 <br/>
 

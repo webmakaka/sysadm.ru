@@ -8,17 +8,27 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/grider-multi-pod-app/
 
 <br/>
 
-Делаю: 18.04.2019
+Делаю:  
+13.10.2019
 
 <br/>
 
-**Обращаю внимание, что используется:**
+### Что-то на backend не заработало! (Нужно разбираться)
+
+<br/>
+
+    $ kubectl version --short
+    Client Version: v1.16.1
+    Server Version: v1.16.1
+
+<br/>
+
+**Обращаю внимание, что используется:**  
 nginxinc-kubernetes-ingress
 
 <br/>
 
-**Ссылка на github:**
-
+**Ссылка на github:**  
 https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
 
 <br/>
@@ -46,17 +56,23 @@ https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
 
     $ kubectl create -f .
 
-    NAME                                      READY   STATUS    RESTARTS   AGE
-    client-deployment-bfb978799-pbtdn         1/1     Running   0          2m55s
-    client-deployment-bfb978799-t76p5         1/1     Running   0          2m55s
-    client-deployment-bfb978799-vz7m9         1/1     Running   0          2m55s
-    nfs-client-provisioner-67cd85d66d-blc55   1/1     Running   0          8m6s
-    postgres-deployment-6d85895ff4-6bwlh      1/1     Running   0          2m54s
-    redis-deployment-74bb8bb895-hc6m7         1/1     Running   0          2m54s
-    server-deployment-79cdbdb6fb-47kll        1/1     Running   0          2m54s
-    server-deployment-79cdbdb6fb-k7wgf        1/1     Running   0          2m54s
-    server-deployment-79cdbdb6fb-zdb7q        1/1     Running   0          2m54s
-    wroker-deployment-6f79d4f66b-rfmrm        1/1     Running   0          2m54s
+    $ kubectl get pods
+    NAME                                     READY   STATUS    RESTARTS   AGE
+    client-deployment-5ccb9bf4d-6687s        1/1     Running   0          68s
+    client-deployment-5ccb9bf4d-95d2l        1/1     Running   0          68s
+    client-deployment-5ccb9bf4d-xkn4d        1/1     Running   0          68s
+    nfs-client-provisioner-b48654857-tmdrm   1/1     Running   0          6m46s
+    postgres-deployment-789f77969f-pn7lf     1/1     Running   0          68s
+    redis-deployment-5f458546b8-nwdcr        1/1     Running   0          68s
+    server-deployment-9c87878c7-424rj        1/1     Running   0          68s
+    server-deployment-9c87878c7-d5mv2        1/1     Running   0          68s
+    server-deployment-9c87878c7-vcfg9        1/1     Running   0          68s
+    wroker-deployment-97554b959-4nqkw        1/1     Running   0          68s
+
+
+<br/>
+
+Установили и настроили HAProxy как <a href="/linux/servers/containers/kubernetes/kubeadm/ingress/haproxy/">здесь</a>.
 
 <br/>
 
