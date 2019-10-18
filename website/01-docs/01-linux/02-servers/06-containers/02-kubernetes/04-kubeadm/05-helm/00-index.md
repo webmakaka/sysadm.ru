@@ -6,7 +6,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/heml/
 
 # Kubernetes Package Manager (Helm)
 
-### [Подготовка и установка helm](/linux/servers/containers/kubernetes/kubeadm/heml/install/)
+### [Подготовка и установка Helm/Tiller](/linux/servers/containers/kubernetes/kubeadm/heml/install/)
 
 ### [Запуск Jenkins в kuberntes с помощью heml](/linux/servers/containers/kubernetes/kubeadm/heml/jenkins/)
 

@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/install/
 # Инсталляция kubectl и minikube
 
 Делаю:  
-04.10.2019
+18.10.2019
 
 <br/>
 
@@ -21,7 +21,7 @@ VirtualBox должен быть установлен. Используется 
 
 ```shell
 
--- Текущая стабильная версия kubernetes (v1.16.1)
+-- Текущая стабильная версия kubernetes (v1.16.2)
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 

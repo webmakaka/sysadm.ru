@@ -8,6 +8,12 @@ permalink: /linux/servers/devops/automation/ansible/videos/
 
 <br/>
 
+### Ansible На Русском Языке
+
+https://www.youtube.com/playlist?list=PLg5SS_4L6LYufspdPupdynbMQTBnZd31N
+
+<br/>
+
 ### Автоматизация администрирования. Ansible. (Linux-2018-07)
 
 <br/>

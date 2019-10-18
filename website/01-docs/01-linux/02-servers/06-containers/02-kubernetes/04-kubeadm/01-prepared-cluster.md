@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 
 Делаю  
-13.10.2019
+18.10.2019
 
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
@@ -91,20 +91,25 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
     // Пароль root: kubeadmin
     $ scp root@master:/etc/kubernetes/admin.conf ~/.kube/config
 
+<!--
+    $ yes | scp root@master:/etc/kubernetes/admin.conf ~/.kube/config
+-->
+
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.16.1
-    Server Version: v1.16.1
+    Client Version: v1.16.2
+    Server Version: v1.16.2
 
 
 <br/>
 
     $ kubectl get nodes
     NAME         STATUS   ROLES    AGE    VERSION
-    master.k8s   Ready    master   9m6s   v1.16.1
-    node1.k8s    Ready    <none>   6m5s   v1.16.1
-    node2.k8s    Ready    <none>   3m9s   v1.16.1
+    master.k8s   Ready    master   13m    v1.16.2
+    node1.k8s    Ready    <none>   10m    v1.16.2
+    node2.k8s    Ready    <none>   7m3s   v1.16.2
+
 
 <br/>
 
@@ -120,18 +125,19 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
 
     $ kubectl get po -n kube-system
     NAME                                 READY   STATUS    RESTARTS   AGE
-    coredns-5644d7b6d9-sx4tr             1/1     Running   0          7m57s
-    coredns-5644d7b6d9-z7rkq             1/1     Running   0          7m57s
-    etcd-master.k8s                      1/1     Running   0          7m12s
-    kube-apiserver-master.k8s            1/1     Running   0          7m11s
-    kube-controller-manager-master.k8s   1/1     Running   0          7m14s
-    kube-flannel-ds-amd64-dqwxj          1/1     Running   0          7m57s
-    kube-flannel-ds-amd64-m57cq          1/1     Running   0          4m43s
-    kube-flannel-ds-amd64-q2m5n          1/1     Running   0          91s
-    kube-proxy-7ztrf                     1/1     Running   0          7m57s
-    kube-proxy-fzm95                     1/1     Running   0          4m43s
-    kube-proxy-nxwhq                     1/1     Running   0          91s
-    kube-scheduler-master.k8s            1/1     Running   0          7m14s
+    coredns-5644d7b6d9-kj86n             1/1     Running   0          13m
+    coredns-5644d7b6d9-pz26w             1/1     Running   0          13m
+    etcd-master.k8s                      1/1     Running   0          13m
+    kube-apiserver-master.k8s            1/1     Running   0          13m
+    kube-controller-manager-master.k8s   1/1     Running   0          13m
+    kube-flannel-ds-amd64-68r2l          1/1     Running   0          11m
+    kube-flannel-ds-amd64-q6vhm          1/1     Running   2          7m40s
+    kube-flannel-ds-amd64-zbjfx          1/1     Running   0          13m
+    kube-proxy-bj6n6                     1/1     Running   0          11m
+    kube-proxy-fg5rf                     1/1     Running   0          13m
+    kube-proxy-t2dbc                     1/1     Running   0          7m40s
+    kube-scheduler-master.k8s            1/1     Running   0          13m
+
 
 
 <br/>

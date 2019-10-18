@@ -7,13 +7,13 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-
 # Dynamically NFS provisioning
 
 Делаю:   
-12.10.2019
+18.10.2019
 
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.16.1
-    Server Version: v1.16.1
+    Client Version: v1.16.2
+    Server Version: v1.16.2
 
 
 <br/>
@@ -56,7 +56,7 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
     $ vi class.yaml
 
-Делаем, что storageclass будет по умолчанию, добавив аннотацию
+Делаем, что storageclass будет по умолчанию, добавив аннотацию в блок metadata.
 
 ```
 annotations:

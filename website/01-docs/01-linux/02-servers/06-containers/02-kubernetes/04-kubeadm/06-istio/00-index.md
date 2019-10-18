@@ -9,10 +9,16 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/istio/
 ### НЕ РАБОТАЕТ. НУЖНО ВЕРНУТЬСЯ ПОПОЗЖЕ И ПОПРОБОВАТЬ СНОВА!!!
 ### ИЛИ ЖДУ ПОДСКАЗОК
 
+Нужно как минимум, чтобы node виртуалок были по 4GB, а не по 2GB, как у меня по умолчанию!
+
+<br/>
+
+Сейчас падают pod с istio-policy и istio-telemetry. Проверка какой-то хрени не проходит. Я не очень понимаю как лечится, да и как это вообще все должно работать.
+
 <br/>
 
 Делаю:  
-08.10.2019
+18.10.2019
 
 <br/>
 
@@ -23,15 +29,17 @@ https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.16.1
-    Server Version: v1.16.1
+    Client Version: v1.16.2
+    Server Version: v1.16.2
 
 
 <br/>
 
-### [Устанавливаем helm и tiller](/linux/servers/containers/kubernetes/kubeadm/heml/install/)
+### [Устанавливаем Helm и Tiller](/linux/servers/containers/kubernetes/kubeadm/heml/install/)
 
 ### [Устанавливаем MetalLB](/linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/)
+
+### Подняли Dynamic NFS как<a href="/linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-provisioning/">здесь</a>
 
 
 <br/>
@@ -40,11 +48,11 @@ https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 https://istio.io/docs/setup/
 
-    $ curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.3.2 sh -
+    $ curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.3.3 sh -
 
 <br/>
 
-    $ cd istio-1.3.2
+    $ cd ~/istio-1.3.3
 
     $ sudo mv bin/istioctl /usr/local/bin
 
@@ -59,7 +67,7 @@ https://istio.io/docs/setup/install/helm/#option-2-install-with-helm-and-tiller-
 
 
     $ pwd
-    /home/marley/istio-1.3.2
+    /home/marley/istio-1.3.3
 
     $ helm install install/kubernetes/helm/istio-init --name istio-init --namespace istio-system
 
@@ -69,47 +77,19 @@ https://istio.io/docs/setup/install/helm/#option-2-install-with-helm-and-tiller-
 
 <br/>
 
+    // Жду пока не появится 23
     $ kubectl get crds | grep istio | wc -l
     23
 
 
 <br/>
 
-**Была ошибка "istio-pilot 0/3 nodes are available: 1 Insufficient cpu, 3 Insufficient memory"**
-
-Исправляю:
-
-    $ cd /home/marley/istio-1.3.2/install/kubernetes/helm/istio/charts/pilot
-
-    $ vi values.yaml
-
-
-```
-resources:
-  requests:
-    cpu: 500m
-    memory: 2048Mi
-```
-
-
-Указал.
-
-```
-resources:
-  requests:
-    cpu: 100m
-    memory: 1048Mi
-```
-
-Иначе ошибка
-
-<br/>
-
     $ kubectl get pods -n istio-system
-    NAME                                     READY   STATUS      RESTARTS   AGE
-    ***
-    istio-pilot-6c7b5ccb46-2p2gb             0/2     Pending     0          36m
-    ***
+    NAME                            READY   STATUS      RESTARTS   AGE
+    istio-init-crd-10-1.3.3-fp979   0/1     Completed   0          2m13s
+    istio-init-crd-11-1.3.3-65zcs   0/1     Completed   0          2m13s
+    istio-init-crd-12-1.3.3-cm9dt   0/1     Completed   0          2m13s
+
 
 <br/>
 
@@ -117,8 +97,26 @@ resources:
 
 <br/>
 
-    $ kubectl get pods -n istio-system
     $ kubectl get svc -n istio-system
+
+<br/>
+
+        $ kubectl get pods -n istio-system
+        NAME                                      READY   STATUS             RESTARTS   AGE
+        istio-citadel-67f6594c46-g59xf            1/1     Running            0          14m
+        istio-galley-6c7fcf86d4-82hk9             1/1     Running            0          14m
+        istio-ingressgateway-6d68548679-tkshm     0/1     Running            0          14m
+        istio-init-crd-10-1.3.3-97brz             0/1     Completed          0          14m
+        istio-init-crd-11-1.3.3-p8pw2             0/1     Completed          0          14m
+        istio-init-crd-12-1.3.3-qj7lp             0/1     Completed          0          14m
+        istio-pilot-5cd79c98b9-gck5l              1/2     Running            0          14m
+        istio-policy-59d8f8c9f8-2p6jz             1/2     CrashLoopBackOff   9          14m
+        istio-sidecar-injector-6d967869b5-qs6vl   1/1     Running            0          14m
+        istio-telemetry-646f74c6bf-qzrmb          1/2     CrashLoopBackOff   9          14m
+        prometheus-6f74d6f76d-n5dfm               1/1     Running            0          14m
+
+
+
 
 <br/>
 
@@ -130,7 +128,7 @@ resources:
 
 <br/>
 
-### Удаление Istio
+### Если понадобится удалить Istio
 
     $ helm delete --purge istio
     $ helm delete --purge istio-init
@@ -158,7 +156,7 @@ https://istio.io/docs/examples/bookinfo/
 
 
     $ pwd
-    /home/marley/istio-1.3.2
+    /home/marley/istio-1.3.3
 
 <br/>
 
@@ -203,3 +201,72 @@ https://istio.io/docs/examples/bookinfo/
 <br/>
 
 http://192.168.0.20/productpage
+
+
+
+
+
+<br/>
+
+### Ошибки istio-pilot
+
+Нужно установить 4GB оперативной памяти и все будет ок.
+
+<br/>
+
+    $ kubectl describe pod istio-pilot-789d4748b-glttm -n istio-system
+
+<br/>
+
+    Events:
+    Type     Reason            Age        From               Message
+    ----     ------            ----       ----               -------
+    Warning  FailedScheduling  <unknown>  default-scheduler  0/3 nodes are available: 1 Insufficient cpu, 3 Insufficient memory.
+    Warning  FailedScheduling  <unknown>  default-scheduler  0/3 nodes are available: 1 Insufficient cpu, 3 Insufficient memory.
+
+<br/>
+
+Исправляю:
+
+    $ cd /home/marley/istio-1.3.3/install/kubernetes/helm/istio/charts/pilot
+
+    $ cp values.yaml values.yaml.orig
+
+    $ vi values.yaml
+
+
+```
+resources:
+  requests:
+    cpu: 500m
+    memory: 2048Mi
+```
+
+
+Указал.
+
+```
+resources:
+  requests:
+    cpu: 400m
+    memory: 1500Mi
+```
+
+Не помогло.
+
+<br/>
+
+    $ helm delete --purge istio
+    $ helm delete --purge istio-init
+
+<br/>
+
+    $ cd ~/istio-1.3.3/
+
+    $ helm install install/kubernetes/helm/istio-init --name istio-init --namespace istio-system
+
+    $ helm install install/kubernetes/helm/istio --name istio --namespace istio-system
+
+    $ kubectl get pods -n istio-system
+
+

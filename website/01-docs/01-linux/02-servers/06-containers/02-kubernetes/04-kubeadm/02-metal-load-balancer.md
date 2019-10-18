@@ -10,7 +10,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/
 <br/>
 
 Делаю:  
-13.10.2019
+18.10.2019
 
 <br/>
 
@@ -21,8 +21,8 @@ https://www.youtube.com/watch?v=xYiYIjlAgHY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.16.1
-    Server Version: v1.16.1
+    Client Version: v1.16.2
+    Server Version: v1.16.2
 
 
 <br/>
@@ -83,7 +83,7 @@ EOF
 
 <br/>
 
-### Запуск
+### Примеры запуска приложений
 
     $ kubectl run nginx --image nginx
     $ kubectl run nginx2 --image nginx

@@ -26,6 +26,10 @@ permalink: /linux/servers/devops/automation/ansible/
 
 ### [Обучающие видео по работе с Ansible](/linux/servers/devops/automation/ansible/videos/)
 
+<br/>
+
+### [Ansible применительно к сетям](https://pyneng.github.io/pyneng-5/lecture-19/)
+
 
 <br/>
 

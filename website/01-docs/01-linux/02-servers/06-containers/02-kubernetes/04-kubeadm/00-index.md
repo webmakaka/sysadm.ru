@@ -8,6 +8,12 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 ## Практические задачи
 
+Deprecated конфиги можно автоматически проапгдейдить командой:
+
+    $ kubectl confert -f my-old-config.yaml > my-new-config.yaml
+
+<br/>
+
 ### [Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox](/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/)
 
 ### [Persistent Volumes и Claims в Kubernetes Cluster](/linux/servers/containers/kubernetes/kubeadm/persistence/)
