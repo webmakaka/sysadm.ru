@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 
 Делаю  
-18.10.2019
+22.10.2019
 
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
@@ -35,7 +35,6 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
     $ vagrant plugin install vagrant-hostmanager
 
 <br/>
-
 
     $ mkdir ~/vagrant-kubernetes && cd ~/vagrant-kubernetes
 
@@ -90,10 +89,6 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
     // Копируем конфиг файл
     // Пароль root: kubeadmin
     $ scp root@master:/etc/kubernetes/admin.conf ~/.kube/config
-
-<!--
-    $ yes | scp root@master:/etc/kubernetes/admin.conf ~/.kube/config
--->
 
 <br/>
 

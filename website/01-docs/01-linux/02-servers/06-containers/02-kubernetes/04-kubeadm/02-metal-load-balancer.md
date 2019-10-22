@@ -10,7 +10,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/
 <br/>
 
 Делаю:  
-18.10.2019
+22.10.2019
 
 <br/>
 
@@ -58,7 +58,7 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 192.168.0.20-192.168.0.50
+      - 192.168.0.21-192.168.0.50
 EOF
 
 ```

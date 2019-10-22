@@ -8,9 +8,6 @@ permalink: /linux/servers/devops/
 
 Хотелось бы для приложений на java, python, go, node.js и т.д. подготовить скрипты для развертывания их на серверах с помощью таких средств как ansible, docker, kubernets. Если интересно, подключайтесь. 
 
-
-Можете добавиться в чат наш телеграм чат https://t.me/devops_community для обсуждения вопросов связанных с автоматизацией развертывания приложений.
-
 <br/>
 
 ### [Системы управления версиями (Version Control System, VCS)](/linux/servers/devops/vcs/)

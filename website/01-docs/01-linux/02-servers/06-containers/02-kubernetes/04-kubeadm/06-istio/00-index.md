@@ -15,6 +15,20 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/istio/
 
 Сейчас падают pod с istio-policy и istio-telemetry. Проверка какой-то хрени не проходит. Я не очень понимаю как лечится, да и как это вообще все должно работать.
 
+
+    $ kubectl describe pod istio-telemetry-646f74c6bf-qzrmb -n istio-system
+
+```
+***
+Warning  Unhealthy  7m (x42 over 31m)   kubelet, node2.k8s  Liveness probe failed: Get http://10.244.2.5:15014/version: dial tcp 10.244.2.5:15014: connect: connection refused
+Warning  BackOff    2m (x123 over 30m)  kubelet, node2.k8s  Back-off restarting failed container
+```
+
+    $ kubectl logs istio-telemetry-646f74c6bf-qzrmb  -n istio-system -c mixer
+
+    $ kubectl logs istio-telemetry-646f74c6bf-qzrmb  -n istio-system -c istio-proxy
+
+
 <br/>
 
 Делаю:  
@@ -101,21 +115,19 @@ https://istio.io/docs/setup/install/helm/#option-2-install-with-helm-and-tiller-
 
 <br/>
 
-        $ kubectl get pods -n istio-system
-        NAME                                      READY   STATUS             RESTARTS   AGE
-        istio-citadel-67f6594c46-g59xf            1/1     Running            0          14m
-        istio-galley-6c7fcf86d4-82hk9             1/1     Running            0          14m
-        istio-ingressgateway-6d68548679-tkshm     0/1     Running            0          14m
-        istio-init-crd-10-1.3.3-97brz             0/1     Completed          0          14m
-        istio-init-crd-11-1.3.3-p8pw2             0/1     Completed          0          14m
-        istio-init-crd-12-1.3.3-qj7lp             0/1     Completed          0          14m
-        istio-pilot-5cd79c98b9-gck5l              1/2     Running            0          14m
-        istio-policy-59d8f8c9f8-2p6jz             1/2     CrashLoopBackOff   9          14m
-        istio-sidecar-injector-6d967869b5-qs6vl   1/1     Running            0          14m
-        istio-telemetry-646f74c6bf-qzrmb          1/2     CrashLoopBackOff   9          14m
-        prometheus-6f74d6f76d-n5dfm               1/1     Running            0          14m
-
-
+    $ kubectl get pods -n istio-system
+    NAME                                      READY   STATUS             RESTARTS   AGE
+    istio-citadel-67f6594c46-g59xf            1/1     Running            0          14m
+    istio-galley-6c7fcf86d4-82hk9             1/1     Running            0          14m
+    istio-ingressgateway-6d68548679-tkshm     0/1     Running            0          14m
+    istio-init-crd-10-1.3.3-97brz             0/1     Completed          0          14m
+    istio-init-crd-11-1.3.3-p8pw2             0/1     Completed          0          14m
+    istio-init-crd-12-1.3.3-qj7lp             0/1     Completed          0          14m
+    istio-pilot-5cd79c98b9-gck5l              1/2     Running            0          14m
+    istio-policy-59d8f8c9f8-2p6jz             1/2     CrashLoopBackOff   9          14m
+    istio-sidecar-injector-6d967869b5-qs6vl   1/1     Running            0          14m
+    istio-telemetry-646f74c6bf-qzrmb          1/2     CrashLoopBackOff   9          14m
+    prometheus-6f74d6f76d-n5dfm               1/1     Running            0          14m
 
 
 <br/>
