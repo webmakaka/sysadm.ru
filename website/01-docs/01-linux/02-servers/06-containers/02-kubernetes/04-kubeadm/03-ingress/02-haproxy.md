@@ -9,13 +9,8 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/ingress/haproxy/
 <br/>
 
 Делаю:  
-13.10.2019
+24.10.2019
 
-<br/>
-
-    $ kubectl version --short
-    Client Version: v1.16.1
-    Server Version: v1.16.1
 
 <br/>
 
@@ -29,7 +24,7 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-    $ mkdir ~/vagrant-kubernetes-haproxy && cd ~/vagrant-kubernetes-haproxy
+    $ rm -rf ~/vagrant-kubernetes-haproxy && mkdir ~/vagrant-kubernetes-haproxy && cd ~/vagrant-kubernetes-haproxy
 
 <br/>
 
@@ -111,7 +106,7 @@ backend http_back
 
 <br/>
 
-Предварительно заменив адреса узлов кластера на нужные.
+Предварительно заменив ip адреса узлов кластера на нужные.
 
 <br/>
 
@@ -122,5 +117,5 @@ backend http_back
 
 <br/>
 
-// Убедиться, что слушается порт
+    // Убедиться, что слушается порт
     # netstat -nltp

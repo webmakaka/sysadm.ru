@@ -8,7 +8,15 @@ permalink: /linux/servers/containers/kubernetes/minikube/grider-multi-pod-app-mi
 
 <br/>
 
-Делаю: 17.04.2019
+Делаю:  
+25.10.2019
+
+
+<br/>
+
+    $ minikube version
+    minikube version: v1.4.0
+    commit: 7969c25a98a018b94ea87d949350f3271e9d64b6
 
 <br/>
 
@@ -16,8 +24,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/grider-multi-pod-app-mi
 
 <br/>
 
-**Ссылка на github:**
-
+**Ссылка на github:**  
 https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
 
 <br/>
@@ -38,9 +45,9 @@ https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
     $ kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asdf
 
     $ cd ~/tmp
-    $ git clone https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide.git
+    $ git clone https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only
 
-    $ cd ~/tmp/Docker-and-Kubernetes-The-Complete-Guide/14_A_Multi_Container_App_with_Kubernetes
+    $ cd ~/tmp/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only/kubernetes/
 
     $ kubectl create -f .
 
@@ -60,14 +67,57 @@ https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
 
 ### KubernetesInc Ingress Nginx
 
-    $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
+    // Обязательный для работы набор чего-то
+    $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml
 
-    $ cd ~/tmp/Docker-and-Kubernetes-The-Complete-Guide/15_Handling_Traffic_with_Ingress_Controllers/
 
-    $ kubectl apply -f ingress-service.yaml
+<br/>
+
+
+```
+$ cat <<EOF | kubectl apply -f -
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-service
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /?(.*)
+            backend:
+              serviceName: client-cluster-ip-service
+              servicePort: 3000
+          - path: /api/?(.*)
+            backend:
+              serviceName: server-cluster-ip-service
+              servicePort: 5000
+EOF
+```
+
+<br/>
+
+
+    $ kubectl get ingress
+    NAME              HOSTS   ADDRESS     PORTS   AGE
+    ingress-service   *       10.0.2.15   80      2m9s
+
+
+
+<br/>
 
     $ minikube ip
     192.168.99.120
+
+<br/>
+
+    http://192.168.99.120
+
+
 
 <br/>
 

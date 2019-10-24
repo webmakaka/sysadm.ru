@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Инсталляция kubectl и minikube в ubuntu 18.04
+title: Инсталляция kubectl ubuntu 18.04
 permalink: /linux/servers/containers/kubernetes/install/
 ---
 
-# Инсталляция kubectl и minikube
+# Инсталляция kubectl ubuntu 18.04
 
 Делаю:  
 18.10.2019
@@ -34,20 +34,6 @@ $ sudo rm -rf /usr/local/bin/kubectl
 ```
 
 <br/>
-
-### Инсталляция minikube (виртуальная машина для изучения и тестов) (Устанавливать при необходимости). Лучше сразу ставить кластер.
-
-```shell
--- Последняя версия (v1.2.0):
-$ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
-
--- Установка
-$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
-
-$ minikube version
-minikube version: v1.2.0
-
-```
 
 ### [Kuberneters на локальном хосте (minikube, kubectl и virtualbox)](/linux/servers/containers/kubernetes/minikube/)
 

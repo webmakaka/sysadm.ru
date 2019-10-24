@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-
 # Dynamically NFS provisioning
 
 Делаю:   
-18.10.2019
+24.10.2019
 
 <br/>
 
@@ -50,22 +50,19 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
+
+<!--
+
     $ curl -LJO https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/class.yaml
 
 <br/>
 
-    $ vi class.yaml
+-->
 
-Делаем, что storageclass будет по умолчанию, добавив аннотацию в блок metadata.
 
-```
-annotations:
-  storageclass.kubernetes.io/is-default-class: "true"
-```
-
-Получаем:
 
 ```
+$ cat <<EOF >> class.yaml
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
@@ -75,18 +72,19 @@ metadata:
 provisioner: example.com/nfs
 parameters:
   archiveOnDelete: "false"
-
+EOF
 ```
 
 <br/>
 
-    $ kubectl create -f class.yaml
+    $ kubectl apply -f class.yaml
 
 <br/>
 
     $ kubectl get storageclass
     NAME                            PROVISIONER       AGE
-    managed-nfs-storage (default)   example.com/nfs   7s
+    managed-nfs-storage (default)   example.com/nfs   10s
+
 
 <br/>
 
@@ -100,7 +98,7 @@ parameters:
 
 <br/>
 
-    $ kubectl create -f deployment.yaml
+    $ kubectl apply -f deployment.yaml
 
 <br/>
 

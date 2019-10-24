@@ -10,7 +10,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/
 <br/>
 
 Делаю:  
-22.10.2019
+23.10.2019
 
 <br/>
 

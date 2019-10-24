@@ -18,7 +18,9 @@ permalink: /linux/servers/containers/kubernetes/minikube/
 
 ### Начинаем работать
 
-[Инсталляция kubectl и minikube в ubuntu 18.04](/linux/servers/containers/kubernetes/install/)
+[Инсталляция kubectl ubuntu 18.04](/linux/servers/containers/kubernetes/install/)
+
+[Инсталляция minikube в ubuntu 18.04](/linux/servers/containers/kubernetes/minikube/install/)
 
 [Запуск приложения в minikube](/linux/servers/containers/kubernetes/minikube/run-application/)
 

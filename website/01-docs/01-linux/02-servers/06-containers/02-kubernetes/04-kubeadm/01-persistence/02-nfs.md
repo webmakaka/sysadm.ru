@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/nfs/
 # NFS Persistent Volume in Kubernetes Cluster
 
 Делаю:  
-18.10.2019
+24.10.2019
 
 <br/>
 

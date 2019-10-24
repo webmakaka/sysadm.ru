@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 
 Делаю  
-22.10.2019
+24.10.2019
 
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
@@ -41,7 +41,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
     $ git clone https://bitbucket.org/sysadm-ru/kubernetes .
 
     // Скрипты для установки актуальной версии kubernetes сluster
-    $ cd vagrant-provisioning/
+    $ cd ~/vagrant-kubernetes/vagrant-provisioning/
 
     // Обновить образы виртуальных машин virtualbox
     $ vagrant box update
