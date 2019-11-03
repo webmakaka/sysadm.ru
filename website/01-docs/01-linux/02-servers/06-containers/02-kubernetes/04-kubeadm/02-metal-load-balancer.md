@@ -6,11 +6,10 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/
 
 # MetalLB Load Balancer in Kubernetes
 
-
 <br/>
 
 Делаю:  
-23.10.2019
+02.11.2019
 
 <br/>
 
@@ -23,7 +22,6 @@ https://www.youtube.com/watch?v=xYiYIjlAgHY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
     $ kubectl version --short
     Client Version: v1.16.2
     Server Version: v1.16.2
-
 
 <br/>
 
@@ -60,7 +58,6 @@ data:
       addresses:
       - 192.168.0.21-192.168.0.50
 EOF
-
 ```
 
 <br/>
@@ -100,7 +97,6 @@ EOF
     kubernetes   ClusterIP      10.96.0.1        <none>         443/TCP        94m
     nginx        LoadBalancer   10.109.226.170   192.168.0.21   80:30212/TCP   10s
     nginx2       LoadBalancer   10.98.147.33     192.168.0.22   80:31590/TCP   5s
-
 
 <br/>
 
@@ -235,7 +231,7 @@ status:
 
 ### Еще одно приложение
 
-Делаю:   
+Делаю:  
 12.10.2019
 
 <br/>
@@ -279,7 +275,6 @@ EOF
     NAME            READY   UP-TO-DATE   AVAILABLE   AGE
     cats-app-yyy2   3/3     3            3           73s
 
-
 <br/>
 
     $ kubectl expose deploy cats-app-yyy2 --port 8080 --type LoadBalancer
@@ -290,7 +285,6 @@ EOF
     NAME            TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)          AGE
     cats-app-yyy2   LoadBalancer   10.104.207.45   192.168.0.20   8080:32202/TCP   74s
 
-
 <br/>
 
     $ curl -I 192.168.0.20:8080
@@ -300,7 +294,6 @@ EOF
     Content-Length: 1019
     Date: Sat, 12 Oct 2019 20:16:36 GMT
     Connection: keep-alive
-
 
 <br/>
 

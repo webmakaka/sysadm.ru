@@ -10,11 +10,13 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 **Последний раз аналогичная проблема:**<br/>
 
-16.10.2019 - 3 часа, 18 минут
+26.10.2019 - 4 часа, 2 минуты
 
 <br/>
 
 Ранее:<br/>
+
+16.10.2019 - 3 часа, 18 минут
 
 02.09.2019 - 2 часа 15 минут
 
@@ -42,7 +44,7 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 Итого на чей стороне проблемы:
 
-2 (Me) : 6 (Beeline)
+2 (Me) : 7 (Beeline)
 
 <br/>
 
@@ -66,7 +68,7 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 <br/>
 
-    #show dhcp lease
+    # show dhcp lease
     Temp IP addr: 0.0.0.0  for peer on Interface: GigabitEthernet0/0
     Temp  sub net mask: 0.0.0.0
        DHCP Lease server: 0.0.0.0, state: 3 Selecting

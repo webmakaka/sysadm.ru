@@ -9,8 +9,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/grider-multi-pod-app-mi
 <br/>
 
 Делаю:  
-25.10.2019
-
+03.11.2019
 
 <br/>
 
@@ -31,7 +30,7 @@ https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
 
 **Само приложение:**
 
-![Docker and Kubernetes The Complete Guide](https://raw.githubusercontent.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-01.png "Docker and Kubernetes The Complete Guide"){: .center-image }
+![Docker and Kubernetes The Complete Guide](https://raw.githubusercontent.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-01.png 'Docker and Kubernetes The Complete Guide'){: .center-image }
 
 <br/>
 
@@ -42,12 +41,12 @@ https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
 
 ### Разворачиваем приложение
 
-    $ kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asdf
-
     $ cd ~/tmp
     $ git clone https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only
 
     $ cd ~/tmp/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only/kubernetes/
+
+    $ kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asdf
 
     $ kubectl create -f .
 
@@ -67,12 +66,123 @@ https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
 
 ### KubernetesInc Ingress Nginx
 
+```
+$ cat <<EOF | kubectl apply -f -
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+  - host: hello-world.info
+    http:
+      paths:
+      - path: /?(.*)
+        backend:
+          serviceName: client-cluster-ip-service
+          servicePort: 3000
+      - path: /api(/|$)(.*)
+        backend:
+          serviceName: server-cluster-ip-service
+          servicePort: 5000
+EOF
+```
+
+<br/>
+
+    // Ждем адрес
+    $ kubectl get ingress
+    NAME              HOSTS              ADDRESS     PORTS   AGE
+    example-ingress   hello-world.info   10.0.2.15   80      44s
+
+<br/>
+
+    $ minikube ip
+    192.168.99.120
+
+<br/>
+
+    $ sudo vi /etc/hosts
+    192.168.99.120 hello-world.info
+
+<br/>
+
+    http://hello-world.info
+
+<br/>
+
+**Ошибка!!!**
+
+<br/>
+
+При обращении к адресам
+
+http://hello-world.info/api/values/current
+http://hello-world.info/api/values/all
+
+Не должно показываться: Hi http://hello-world.info/
+
+Какой-то баг в ingress
+
+<br/>
+
+### Debug
+
+В общем я уже нашел причину. По какой-то причине ключ rewrite-target не сохраняется.
+
+    $ kubectl describe ingress example-ingress
+
+    $ kubectl get ingress -o json
+
+    $ kubectl edit ingress -o json
+
+<br/>
+
+    "nginx.ingress.kubernetes.io/rewrite-target": "/"
+
+<br/>
+
+Меняю на:
+
+    "nginx.ingress.kubernetes.io/rewrite-target": "/$2"
+
+<br/>
+
+Приложение должно работать.
+
+<br/>
+
+**Ожидаемый результат:**
+
+![Docker and Kubernetes The Complete Guide](https://raw.githubusercontent.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-05.png 'Docker and Kubernetes The Complete Guide'){: .center-image }
+
+<br/>
+
+### Удаляем, если не нужно
+
+    $ minikube stop
+    $ minikube delete
+
+<!--
+
+minikube stop && minikube delete && minikube start
+
+-->
+
+<!--
+
+Уже не нужно устанавливать.
+
     // Обязательный для работы набор чего-то
     $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml
 
 
-<br/>
 
+Оригинальный конфиг из курса.
+
+<br/>
 
 ```
 $ cat <<EOF | kubectl apply -f -
@@ -98,36 +208,4 @@ spec:
               servicePort: 5000
 EOF
 ```
-
-<br/>
-
-
-    $ kubectl get ingress
-    NAME              HOSTS   ADDRESS     PORTS   AGE
-    ingress-service   *       10.0.2.15   80      2m9s
-
-
-
-<br/>
-
-    $ minikube ip
-    192.168.99.120
-
-<br/>
-
-    http://192.168.99.120
-
-
-
-<br/>
-
-**Ожидаемый результат:**
-
-![Docker and Kubernetes The Complete Guide](https://raw.githubusercontent.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-05.png "Docker and Kubernetes The Complete Guide"){: .center-image }
-
-<br/>
-
-### Удаляем, если не нужно
-
-    $ minikube stop
-    $ minikube delete
+-->

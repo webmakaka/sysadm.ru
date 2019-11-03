@@ -9,8 +9,6 @@ permalink: /clouds/aws/qwiklabs/maintaining-high-availability-with-auto-scaling/
 https://www.qwiklabs.com/focuses/303?parent=catalog
 
 
-
-
 <h3>Retrieve your host’s public DNS address</h3>
 <ol start="3">
 <li>On the <span style="background-color:#232f3e;font-weight:bold;font-size:90%;color:white;padding-top:3px;padding-bottom:3px;padding-left:10px;padding-right:10px;">Services</span> menu, click <strong>EC2</strong>.</li>
@@ -27,8 +25,6 @@ https://www.qwiklabs.com/focuses/303?parent=catalog
 
     // $ ssh -i ~/<Downloads/qwiklab-l33-5018.pem> ec2-user@<public DNS>
     $ ssh -i /mnt/dsk1/qwikLABS-L251-6901459.pem  ec2-user@ec2-34-219-67-4.us-west-2.compute.amazonaws.com
-
-
 
 
 <br/>

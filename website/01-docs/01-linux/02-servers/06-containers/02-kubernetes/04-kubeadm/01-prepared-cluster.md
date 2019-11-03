@@ -7,8 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 
 Делаю  
-24.10.2019
-
+02.11.2019
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
 
@@ -56,8 +55,6 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
     node1.k8s                 running (virtualbox)
     node2.k8s                 running (virtualbox)
 
-
-
 <br/>
 
 P.S.
@@ -68,10 +65,9 @@ P.S.
 
 <br/>
 
-Если coredns-* не будут стартовать, обновить файл kube-flannel.yml, скачав его по ссылке с сайта:
+Если coredns-\* не будут стартовать, обновить файл kube-flannel.yml, скачав его по ссылке с сайта:
 
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
-
 
 <br/>
 
@@ -96,7 +92,6 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
     Client Version: v1.16.2
     Server Version: v1.16.2
 
-
 <br/>
 
     $ kubectl get nodes
@@ -104,7 +99,6 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
     master.k8s   Ready    master   13m    v1.16.2
     node1.k8s    Ready    <none>   10m    v1.16.2
     node2.k8s    Ready    <none>   7m3s   v1.16.2
-
 
 <br/>
 
@@ -133,14 +127,29 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
     kube-proxy-t2dbc                     1/1     Running   0          7m40s
     kube-scheduler-master.k8s            1/1     Running   0          13m
 
-
-
 <br/>
 
     $ kubectl cluster-info
     Kubernetes master is running at https://192.168.0.10:6443
     KubeDNS is running at https://192.168.0.10:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
+<br/>
+
+### Настройка, чтобы использовался гугловский DNS вместо resolv.conf на worker'ах
+
+    $ kubectl edit cm -n kube-system coredns
+
+<br/>
+
+```
+forward . /etc/resolv.conf
+```
+
+Меняем на
+
+```
+forward . 8.8.8.8:53
+```
 
 <br/>
 
@@ -158,7 +167,6 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
 
     $ kubectl describe nodes master.k8s
 
-
 <br/>
 
 ```
@@ -166,7 +174,6 @@ Ready            False   Sun, 22 Sep 2019 10:27:17 +0300   Sun, 22 Sep 2019 09:5
 ```
 
 <br/>
-
 
 ```
 $ kubectl get pods --all-namespaces

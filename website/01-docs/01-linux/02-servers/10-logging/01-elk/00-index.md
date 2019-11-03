@@ -25,8 +25,3 @@ permalink: /linux/servers/logging/elk/
 **Offtopic docker-compose для версии elk 7.0.1)**  
 https://bitbucket.org/sysadm-ru/elk-v2/src/master/
 
-<br/>
-
-И еще 1 скриптик:
-
-https://gist.githubusercontent.com/nipua/4e4be403c25e9704cf9bace76782aa2d/raw/ba1b8b59a3812179b7861991447e6e2d3115b026/gistfile1.txt

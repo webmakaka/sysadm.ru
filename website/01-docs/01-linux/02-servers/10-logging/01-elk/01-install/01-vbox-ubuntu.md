@@ -9,7 +9,7 @@ permalink: /linux/servers/logging/elk/install/vbox-ubuntu/
 <br/>
 
 Делаю  
-28.04.2019
+25.10.2019
 
 По материалам видеокурса:  
 **[Sundog Education by Frank Kane] Elasticsearch 6 and Elastic Stack - In Depth and Hands On!**
@@ -79,24 +79,52 @@ https://sundog-education.com/elasticsearch/
     $ sudo /bin/systemctl enable elasticsearch.service
     $ sudo /bin/systemctl start elasticsearch.service
 
+<br/>
+
+Можно выполнять с localhost
+
     $  curl 127.0.0.1:9200
-    {
-      "name" : "38RQTxH",
-      "cluster_name" : "elasticsearch",
-      "cluster_uuid" : "DHDz5r2jRCyHJrqFSTjVbA",
-      "version" : {
-        "number" : "6.7.1",
-        "build_flavor" : "default",
-        "build_type" : "deb",
-        "build_hash" : "2f32220",
-        "build_date" : "2019-04-02T15:59:27.961366Z",
-        "build_snapshot" : false,
-        "lucene_version" : "7.7.0",
-        "minimum_wire_compatibility_version" : "5.6.0",
-        "minimum_index_compatibility_version" : "5.0.0"
-      },
-      "tagline" : "You Know, for Search"
-    }
+
+<br/>
+
+
+```
+$ curl -XGET "http://localhost:9200/_search" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match_all": {}
+  }
+}'
+```
+
+
+<br/>
+
+### Kibana
+
+    $ sudo apt-get install kibana
+
+    $ sudo vi /etc/kibana/kibana.yml
+
+// Утанавливаю
+server.host: 0.0.0.0
+
+    $ sudo /bin/systemctl daemon-reload
+    $ sudo /bin/systemctl enable kibana.service
+    $ sudo /bin/systemctl start kibana.service
+
+
+<!--
+
+    $ curl -H 'Content-Type: application/json' -XPOST 127.0.0.1:9200/product/default/_bulk/pretty" --data-binary @11.2 test-data.json.json
+
+    GET /_cat/health?v
+    GET /_cat/nodes?v
+    GET /_cat/indices?v
+    GET /_cat/allocation?v
+    GET /_cat/shards?v
+
+-->
 
 <br/>
 
