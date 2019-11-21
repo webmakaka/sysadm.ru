@@ -14,4 +14,6 @@ permalink: /linux/servers/containers/kubernetes/minikube/run-application/
 Все описано здесь.
 2 Приложения уже работают. 3-е в разработке.
 
+Буквально парой команд в minikube стартует контейнер с приложением.
+
 https://github.com/marley-nodejs/The-React-Practice-Course-Learn-by-Building-Projects

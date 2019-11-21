@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Запуск приложения в minikube
-permalink: /linux/servers/containers/kubernetes/minikube/run-application/
+permalink: /linux/servers/containers/kubernetes/minikube/run-application-archive/
 ---
 
 # Запуск приложения в minikube
