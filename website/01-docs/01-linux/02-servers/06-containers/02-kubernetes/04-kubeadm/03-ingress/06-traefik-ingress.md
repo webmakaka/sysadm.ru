@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=A_PjjCM1eLA
 Рисунок индуса:
 <br/>
 
-![kubernetes ingress](/img/linux/servers/containers/kubernetes/kubeadm/ingress/ingress.png "kubernetes ingress"){: .center-image }
+![kubernetes ingress](/img/linux/servers/containers/kubernetes/kubeadm/ingress/ingress.png 'kubernetes ingress'){: .center-image }
 
 <br/>
 
@@ -265,3 +265,10 @@ spec:
     $ curl blue.nginx.example.com
     $ curl green.nginx.example.com
     OK
+
+<br/>
+
+### Возможно, полезные материалы
+
+Kubernetes Ingress Explained  
+https://www.youtube.com/watch?v=izWCkcJAzBw

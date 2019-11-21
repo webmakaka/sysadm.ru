@@ -16,7 +16,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/
 
 <br/>
 
-### Начинаем работать
+### Базовые вещи, чтобы ознакомиться как это все работает
 
 [Инсталляция kubectl ubuntu 18.04](/linux/servers/containers/kubernetes/install/)
 
@@ -24,18 +24,24 @@ permalink: /linux/servers/containers/kubernetes/minikube/
 
 [Запуск приложения в minikube](/linux/servers/containers/kubernetes/minikube/run-application/)
 
+<br/>
+
+### Более продвинутые примеры
+
 [Предоставление внешним клиентам доступа к службам](/linux/servers/containers/kubernetes/minikube/svc/)
 
 [Пример Ingress в minikube (Nginx)](/linux/servers/containers/kubernetes/kubeadm/minikube-ingress-nginx/)
 
 [Пример Ingress в minikube (Nginx) + TLS](/linux/servers/containers/kubernetes/kubeadm/minikube-ingress-nginx/tls/)
 
-[Разворачиваем многоуровневое приложение в minikube](/linux/servers/containers/kubernetes/minikube/multi-tier-application/)
-
 [Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]](/linux/servers/containers/kubernetes/minikube/grider-multi-pod-app-minikube/)
 
 <br/>
 
-### Курсы
+### Архив
+
+[Запуск приложения в minikube](/linux/servers/containers/kubernetes/minikube/run-application-archive/)
+
+[Разворачиваем многоуровневое приложение в minikube](/linux/servers/containers/kubernetes/minikube/multi-tier-application/)
 
 [Материал из курса: Learn DevOps: The Complete Kubernetes Course](/linux/servers/containers/kubernetes/minikube/learn-devops-the-complete-kubernetes-course/)

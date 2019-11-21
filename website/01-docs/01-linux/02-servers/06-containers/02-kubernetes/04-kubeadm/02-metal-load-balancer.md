@@ -9,7 +9,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/
 <br/>
 
 Делаю:  
-02.11.2019
+22.11.2019
 
 <br/>
 
@@ -20,8 +20,8 @@ https://www.youtube.com/watch?v=xYiYIjlAgHY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.16.2
-    Server Version: v1.16.2
+    Client Version: v1.16.3
+    Server Version: v1.16.3
 
 <br/>
 
@@ -35,7 +35,7 @@ https://metallb.universe.tf/installation/
 
 <br/>
 
-    $ kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.8.1/manifests/metallb.yaml
+    $ kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.8.3/manifests/metallb.yaml
 
 <br/>
 

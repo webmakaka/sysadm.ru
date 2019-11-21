@@ -7,7 +7,7 @@ permalink: /linux/servers/virtual/vagrant/install/ubuntu/
 # Инсталляция Vargant в Ubuntu 18.04
 
 Делаю  
-02.03.2019
+03.11.2019
 
 <br/>
 
@@ -18,18 +18,24 @@ https://www.vagrantup.com/downloads.html
 
 ### Инсталляция Vagrant
 
+    $ sudo su -
     # cd /tmp
-    # wget https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
+    # wget https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.deb
 
-    # dpkg -i vagrant_2.2.4_x86_64.deb
+    # dpkg -i vagrant_2.2.6_x86_64.deb
 
     # vagrant -v
-    Vagrant 2.2.4
+    Vagrant 2.2.6
+
+<br/>
+
+### Работа с plugin в Vagrant
 
     $ vagrant plugin update
+    $ vagrant plugin list
 
 <br/>
 
 ### Удалить Vagrant
 
-    # apt remove -y vagrant
+    $ sudo apt remove -y vagrant

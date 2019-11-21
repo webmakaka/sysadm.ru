@@ -4,7 +4,7 @@ title: Разворачиваем приложение из видео курс�
 permalink: /linux/servers/containers/kubernetes/kubeadm/grider-multi-pod-app/
 ---
 
-# Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]
+# Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2019, ENG]
 
 <br/>
 

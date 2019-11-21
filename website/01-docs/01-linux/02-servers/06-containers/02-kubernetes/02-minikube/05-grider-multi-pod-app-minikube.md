@@ -9,7 +9,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/grider-multi-pod-app-mi
 <br/>
 
 Делаю:  
-03.11.2019
+09.11.2019
 
 <br/>
 
@@ -24,7 +24,7 @@ permalink: /linux/servers/containers/kubernetes/minikube/grider-multi-pod-app-mi
 <br/>
 
 **Ссылка на github:**  
-https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide
+https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only
 
 <br/>
 
@@ -71,12 +71,39 @@ $ cat <<EOF | kubectl apply -f -
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: example-ingress
+  name: grider-app-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
 spec:
   rules:
-  - host: hello-world.info
+  - host: grider-app.com
+    http:
+      paths:
+      - path: /?(.*)
+        backend:
+          serviceName: client-cluster-ip-service
+          servicePort: 3000
+      - path: /api/?(.*)
+        backend:
+          serviceName: server-cluster-ip-service
+          servicePort: 5000
+EOF
+```
+
+<!--
+```
+$ cat <<EOF | kubectl apply -f -
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: grider-app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+spec:
+  rules:
+  - host: grider-app.com
     http:
       paths:
       - path: /?(.*)
@@ -88,14 +115,14 @@ spec:
           serviceName: server-cluster-ip-service
           servicePort: 5000
 EOF
-```
+``` -->
 
 <br/>
 
     // Ждем адрес
     $ kubectl get ingress
     NAME              HOSTS              ADDRESS     PORTS   AGE
-    example-ingress   hello-world.info   10.0.2.15   80      44s
+    example-ingress   grider-app.com   10.0.2.15   80      44s
 
 <br/>
 
@@ -105,11 +132,11 @@ EOF
 <br/>
 
     $ sudo vi /etc/hosts
-    192.168.99.120 hello-world.info
+    192.168.99.120 grider-app.com
 
 <br/>
 
-    http://hello-world.info
+    http://grider-app.com
 
 <br/>
 
@@ -119,10 +146,10 @@ EOF
 
 При обращении к адресам
 
-http://hello-world.info/api/values/current
-http://hello-world.info/api/values/all
+http://grider-app.com/api/values/current
+http://grider-app.com/api/values/all
 
-Не должно показываться: Hi http://hello-world.info/
+Не должно показываться: Hi http://grider-app.com/
 
 Какой-то баг в ingress
 
@@ -131,6 +158,8 @@ http://hello-world.info/api/values/all
 ### Debug
 
 В общем я уже нашел причину. По какой-то причине ключ rewrite-target не сохраняется.
+
+    $ kubectl get ingress
 
     $ kubectl describe ingress example-ingress
 
@@ -146,7 +175,7 @@ http://hello-world.info/api/values/all
 
 Меняю на:
 
-    "nginx.ingress.kubernetes.io/rewrite-target": "/$2"
+    "nginx.ingress.kubernetes.io/rewrite-target": "/$1"
 
 <br/>
 

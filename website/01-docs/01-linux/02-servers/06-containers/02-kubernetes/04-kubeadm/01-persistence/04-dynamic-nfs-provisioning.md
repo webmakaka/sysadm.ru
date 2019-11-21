@@ -6,15 +6,14 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-
 
 # Dynamically NFS provisioning
 
-Делаю:   
-24.10.2019
+Делаю:  
+22.11.2019
 
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.16.2
-    Server Version: v1.16.2
-
+    Client Version: v1.16.3
+    Server Version: v1.16.3
 
 <br/>
 
@@ -50,7 +49,6 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-
 <!--
 
     $ curl -LJO https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/nfs-provisioner/class.yaml
@@ -58,8 +56,6 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 <br/>
 
 -->
-
-
 
 ```
 $ cat <<EOF >> class.yaml
@@ -84,7 +80,6 @@ EOF
     $ kubectl get storageclass
     NAME                            PROVISIONER       AGE
     managed-nfs-storage (default)   example.com/nfs   10s
-
 
 <br/>
 
@@ -114,7 +109,6 @@ EOF
 
     NAME                                               DESIRED   CURRENT   READY   AGE
     replicaset.apps/nfs-client-provisioner-b48654857   1         1         1       2m34s
-
 
 <br/>
 

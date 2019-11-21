@@ -36,11 +36,21 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [Horizontal Pod Autoscaler in Kubernetes](/linux/servers/containers/kubernetes/kubeadm/horizontal-pod-autoscaler/)
 
-### [Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]](/linux/servers/containers/kubernetes/kubeadm/grider-multi-pod-app/)
-
 ### [Setup Lets Encrypt cert-manager in Kubernetes Bare Metal](/linux/servers/containers/kubernetes/kubeadm/lets-encrypt/)
 
 ### [Istio](/linux/servers/containers/kubernetes/kubeadm/istio/)
+
+<br/>
+
+### Ci/CD
+
+### [Introduction to Argo CD : Kubernetes DevOps CI/CD]](https://www.youtube.com/watch?v=2WSJF7d8dUg)
+
+<br/>
+
+### Examples
+
+### [Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2019, ENG]](/linux/servers/containers/kubernetes/kubeadm/grider-multi-pod-app/)
 
 <br/>
 

@@ -9,7 +9,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/heml/install/
 <br/>
 
 Делаю:  
-18.10.2019
+22.11.2019
 
 <br/>
 
@@ -27,13 +27,11 @@ https://www.youtube.com/watch?v=ObGR0EfVPlg&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 https://www.youtube.com/watch?v=dfQIzPUW8mQ
 
-
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.16.2
-    Server Version: v1.16.2
-
+    Client Version: v1.16.3
+    Server Version: v1.16.3
 
 <br/>
 
@@ -45,7 +43,6 @@ https://www.youtube.com/watch?v=dfQIzPUW8mQ
 
 Подняли Dynamic NFS как<a href="/linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-provisioning/">здесь</a>
 
-
 <br/>
 
 ### Инсталляция Helm на хост машине
@@ -53,10 +50,23 @@ https://www.youtube.com/watch?v=dfQIzPUW8mQ
     // Посмотреть релизы
     https://github.com/helm/helm/releases
 
+<br/>
+
+### Инсталляция версии 3 (Пока юзаю версию 2)
+
+    $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+    $ helm version --short --client
+    v3.0.0+ge29ce2a
+
+<br/>
+
+### Инсталляция версии 2
+
     $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
 
     $ helm version --short --client
-    Client: v2.14.3+g0e7f3b6
+    Client: v2.16.1+gbbdfe5e
 
 <br/>
 
@@ -66,25 +76,7 @@ https://www.youtube.com/watch?v=dfQIzPUW8mQ
 
     $ kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
 
-    // До версии v1.16
     $ helm init --service-account tiller
-
-    // От версии v1.16
-
-Ошибка из-за обновившегося Kubernetes (попозже должны будут поправить)
-
-    $HELM_HOME has been configured at /home/marley/.helm.
-    Error: error installing: the server could not find the requested resource
-
-<br/>
-
-    $ helm init --service-account tiller --override spec.selector.matchLabels.'name'='tiller',spec.selector.matchLabels.'app'='helm' --output yaml | sed 's@apiVersion: extensions/v1beta1@apiVersion: apps/v1@' | kubectl apply -f -
-
-    // P.S. можно тоже самое сделать руками
-    $ helm init --service-account tiller --output yaml > /tmp/helm.yaml
-
-
-Продолжаем:
 
     $ kubectl -n kube-system get pods | grep tiller
     tiller-deploy-8458f6c667-nm6c8       1/1     Running   0          36s
@@ -98,3 +90,23 @@ https://www.youtube.com/watch?v=dfQIzPUW8mQ
 <br/>
 
     $ helm search nginx
+
+<br/>
+
+### [Error] Error: error installing: the server could not find the requested resource
+
+Вроде исправили и уже не должна кого-либо беспокоить.
+
+    $ helm init --service-account tiller
+
+Ошибка из-за обновившегося Kubernetes (попозже должны будут поправить)
+
+    $HELM_HOME has been configured at /home/marley/.helm.
+    Error: error installing: the server could not find the requested resource
+
+<br/>
+
+    $ helm init --service-account tiller --override spec.selector.matchLabels.'name'='tiller',spec.selector.matchLabels.'app'='helm' --output yaml | sed 's@apiVersion: extensions/v1beta1@apiVersion: apps/v1@' | kubectl apply -f -
+
+    // P.S. можно тоже самое сделать руками
+    $ helm init --service-account tiller --output yaml > /tmp/helm.yaml

@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 
 Делаю  
-02.11.2019
+22.11.2019
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
 
@@ -89,16 +89,16 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.16.2
-    Server Version: v1.16.2
+    Client Version: v1.16.3
+    Server Version: v1.16.3
 
 <br/>
 
     $ kubectl get nodes
-    NAME         STATUS   ROLES    AGE    VERSION
-    master.k8s   Ready    master   13m    v1.16.2
-    node1.k8s    Ready    <none>   10m    v1.16.2
-    node2.k8s    Ready    <none>   7m3s   v1.16.2
+    NAME         STATUS   ROLES    AGE     VERSION
+    master.k8s   Ready    master   8m17s   v1.16.3
+    node1.k8s    Ready    <none>   5m23s   v1.16.3
+    node2.k8s    Ready    <none>   2m23s   v1.16.3
 
 <br/>
 
@@ -150,6 +150,12 @@ forward . /etc/resolv.conf
 ```
 forward . 8.8.8.8:53
 ```
+
+<br/>
+
+Проверить, возможно можно подключившись к pod и выполнив внутри:
+
+    nslookup kubernetes.default
 
 <br/>
 

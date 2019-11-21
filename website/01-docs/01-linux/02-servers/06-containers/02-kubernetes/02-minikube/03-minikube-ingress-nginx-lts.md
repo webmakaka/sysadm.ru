@@ -230,6 +230,8 @@ EOF
 
 ```
 
+<br/>
+
     $ kubectl get certificate
     NAME
     example-com

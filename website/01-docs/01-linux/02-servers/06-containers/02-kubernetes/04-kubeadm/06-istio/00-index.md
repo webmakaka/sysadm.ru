@@ -6,33 +6,10 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/istio/
 
 # Istio
 
-### НЕ РАБОТАЕТ. НУЖНО ВЕРНУТЬСЯ ПОПОЗЖЕ И ПОПРОБОВАТЬ СНОВА!!!
-### ИЛИ ЖДУ ПОДСКАЗОК
-
-Нужно как минимум, чтобы node виртуалок были по 4GB, а не по 2GB, как у меня по умолчанию!
-
-<br/>
-
-Сейчас падают pod с istio-policy и istio-telemetry. Проверка какой-то хрени не проходит. Я не очень понимаю как лечится, да и как это вообще все должно работать.
-
-
-    $ kubectl describe pod istio-telemetry-646f74c6bf-qzrmb -n istio-system
-
-```
-***
-Warning  Unhealthy  7m (x42 over 31m)   kubelet, node2.k8s  Liveness probe failed: Get http://10.244.2.5:15014/version: dial tcp 10.244.2.5:15014: connect: connection refused
-Warning  BackOff    2m (x123 over 30m)  kubelet, node2.k8s  Back-off restarting failed container
-```
-
-    $ kubectl logs istio-telemetry-646f74c6bf-qzrmb  -n istio-system -c mixer
-
-    $ kubectl logs istio-telemetry-646f74c6bf-qzrmb  -n istio-system -c istio-proxy
-
-
 <br/>
 
 Делаю:  
-18.10.2019
+22.11.2019
 
 <br/>
 
@@ -42,10 +19,13 @@ https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-    $ kubectl version --short
-    Client Version: v1.16.2
-    Server Version: v1.16.2
+**Нужно как минимум, чтобы node виртуалок были по 4GB, а не по 2GB, как у меня по умолчанию!**
 
+<br/>
+
+    $ kubectl version --short
+    Client Version: v1.16.3
+    Server Version: v1.16.3
 
 <br/>
 
@@ -55,23 +35,21 @@ https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 ### Подняли Dynamic NFS как<a href="/linux/servers/containers/kubernetes/kubeadm/persistence/dynamic-nfs-provisioning/">здесь</a>
 
-
 <br/>
 
 ### Инсталляция istioctl (На host машине)
 
 https://istio.io/docs/setup/
 
-    $ curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.3.3 sh -
+    $ curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.4.0 sh -
 
 <br/>
 
-    $ cd ~/istio-1.3.3
+    $ cd ~/istio-1.4.0
 
     $ sudo mv bin/istioctl /usr/local/bin
 
     $ istioctl verify-install
-
 
 <br/>
 
@@ -79,9 +57,8 @@ https://istio.io/docs/setup/
 
 https://istio.io/docs/setup/install/helm/#option-2-install-with-helm-and-tiller-via-helm-install
 
-
     $ pwd
-    /home/marley/istio-1.3.3
+    /home/marley/istio-1.4.0
 
     $ helm install install/kubernetes/helm/istio-init --name istio-init --namespace istio-system
 
@@ -95,15 +72,13 @@ https://istio.io/docs/setup/install/helm/#option-2-install-with-helm-and-tiller-
     $ kubectl get crds | grep istio | wc -l
     23
 
-
 <br/>
 
     $ kubectl get pods -n istio-system
     NAME                            READY   STATUS      RESTARTS   AGE
-    istio-init-crd-10-1.3.3-fp979   0/1     Completed   0          2m13s
-    istio-init-crd-11-1.3.3-65zcs   0/1     Completed   0          2m13s
-    istio-init-crd-12-1.3.3-cm9dt   0/1     Completed   0          2m13s
-
+    istio-init-crd-10-1.4.0-2fq5s   0/1     Completed   0          45s
+    istio-init-crd-11-1.4.0-jr8xq   0/1     Completed   0          45s
+    istio-init-crd-14-1.4.0-7b428   0/1     Completed   0          45s
 
 <br/>
 
@@ -129,14 +104,11 @@ https://istio.io/docs/setup/install/helm/#option-2-install-with-helm-and-tiller-
     istio-telemetry-646f74c6bf-qzrmb          1/2     CrashLoopBackOff   9          14m
     prometheus-6f74d6f76d-n5dfm               1/1     Running            0          14m
 
-
 <br/>
 
     // Нужно, чтобы MetalLB присвоил ip для LoadBalancer
     $ kubectl get svc -n istio-system | grep LoadBalancer
     istio-ingressgateway     LoadBalancer   10.103.246.44    192.168.0.20   15020:30965/TCP,80:31380/TCP,443:31390/TCP,31400:31400/TCP,15029:30373/TCP,15030:31943/TCP,15031:32735/TCP,15032:31756/TCP,15443:31777/TCP   43m
-
-    
 
 <br/>
 
@@ -145,13 +117,11 @@ https://istio.io/docs/setup/install/helm/#option-2-install-with-helm-and-tiller-
     $ helm delete --purge istio
     $ helm delete --purge istio-init
 
-
 <br/>
 
 ### [ Kube 51 ] Istio Deploying sample Bookinfo application (НЕ ЗАРАБОТАЛО!!!)
 
 https://istio.io/docs/examples/bookinfo/
-
 
     $ kubectl label namespace default istio-injection=enabled
 
@@ -166,9 +136,8 @@ https://istio.io/docs/examples/bookinfo/
 
 <br/>
 
-
     $ pwd
-    /home/marley/istio-1.3.3
+    /home/marley/istio-1.4.0
 
 <br/>
 
@@ -176,21 +145,29 @@ https://istio.io/docs/examples/bookinfo/
 
     $ kubectl get services
 
-    $ kubectl get pods
-
-    $ kubectl get all
+    $  kubectl get pods
+    NAME                                     READY   STATUS    RESTARTS   AGE
+    details-v1-78d78fbddf-d9wkr              2/2     Running   0          2m17s
+    nfs-client-provisioner-b48654857-6j2tz   1/1     Running   0          10m
+    productpage-v1-596598f447-fm4dt          2/2     Running   0          2m17s
+    ratings-v1-6c9dbf6b45-pmckx              2/2     Running   0          2m17s
+    reviews-v1-7bb8ffd9b6-dh8b5              2/2     Running   0          2m17s
+    reviews-v2-d7d75fff8-cszfw               2/2     Running   0          2m18s
+    reviews-v3-68964bc4c8-rx4qc              2/2     Running   0          2m18s
 
 <br/>
 
     $ kubectl get deployments
-    NAME             READY   UP-TO-DATE   AVAILABLE   AGE
-    details-v1       0/1     0            0           16m
-    productpage-v1   0/1     0            0           16m
-    ratings-v1       0/1     0            0           16m
-    reviews-v1       0/1     0            0           16m
-    reviews-v2       0/1     0            0           16m
-    reviews-v3       0/1     0            0           16m
+    NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+    details-v1               1/1     1            1           2m36s
+    nfs-client-provisioner   1/1     1            1           11m
+    productpage-v1           1/1     1            1           2m36s
+    ratings-v1               1/1     1            1           2m36s
+    reviews-v1               1/1     1            1           2m36s
+    reviews-v2               1/1     1            1           2m36s
+    reviews-v3               1/1     1            1           2m36s
 
+<!--
 <br/>
 
     $ kubectl describe deployments productpage-v1
@@ -201,22 +178,27 @@ https://istio.io/docs/examples/bookinfo/
 
 <br/>
 
+-->
+
     $ kubectl create -f samples/bookinfo/networking/bookinfo-gateway.yaml
     $ kubectl get gateway
     $ kubectl describe gateway bookinfo-gateway
 
-
 <br/>
 
     $ kubectl -n istio-system get svc istio-ingressgateway
+    NAME                   TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)                                                                                                                                      AGE
+    istio-ingressgateway   LoadBalancer   10.102.200.254   192.168.0.21   15020:30509/TCP,80:31380/TCP,443:31390/TCP,31400:31400/TCP,15029:31067/TCP,15030:30711/TCP,15031:30863/TCP,15032:32006/TCP,15443:31001/TCP   7m10s
 
 <br/>
 
-http://192.168.0.20/productpage
+http://192.168.0.21/productpage
 
+<br/>
 
+![Istio](/img/linux/servers/containers/kubernetes/kubeadm/istio/pic-01.png "Istio"){: .center-image }
 
-
+<!--
 
 <br/>
 
@@ -246,14 +228,12 @@ http://192.168.0.20/productpage
 
     $ vi values.yaml
 
-
 ```
 resources:
   requests:
     cpu: 500m
     memory: 2048Mi
 ```
-
 
 Указал.
 
@@ -282,3 +262,4 @@ resources:
     $ kubectl get pods -n istio-system
 
 
+-->

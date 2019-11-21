@@ -4,13 +4,10 @@ title: MySQL - Конфигурирование пользователей по�
 permalink: /linux/servers/databases/mysql/installation/users/
 ---
 
-
 # MySQL - Конфигурирование пользователей после инсталляции
-
 
     // Login as root database admin to MySQL server:
     # mysql -u root
-
 
 <br/>
 
@@ -26,7 +23,6 @@ permalink: /linux/servers/databases/mysql/installation/users/
 
     mysql> quit;
 
-
 <br/>
 
 ### Дополнительно для большей безопасности можно настроить следующее:
@@ -34,7 +30,7 @@ permalink: /linux/servers/databases/mysql/installation/users/
 <br/>
 
     // Delete ALL users who are not root:
-    mysql> delete from mysql.user where not (host="localhost" and user="root");
+    mysql> DELETE FROM mysql.user WHERE NOT (host="localhost" AND user="root");
 
 <br/>
 
@@ -43,10 +39,9 @@ permalink: /linux/servers/databases/mysql/installation/users/
 
 <br/>
 
-___
+---
 
 <br/>
-
 
     // Можно переименовать root
     // Change root username to something less guessable for higher security.
@@ -56,7 +51,6 @@ ___
 
     // Add a new user with database admin privs for all databases:
     mysql> GRANT ALL PRIVILEGES ON *.* TO 'sysdba'@'localhost' IDENTIFIED BY 'mypass' WITH GRANT OPTION;
-
 
 <br/>
 
@@ -72,12 +66,10 @@ ___
 
     mysql> GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'%';
 
-
 <br/>
 
     // Add a new user with database admin privs for a specific database, in this case the database is called “bugzilla”: (note: The ‘bugzilla’ database must first be added, see below.)
     mysql> GRANT ALL PRIVILEGES ON bugzilla.* TO 'dba'@'localhost' IDENTIFIED BY 'mypass';
-
 
 <br/>
 
@@ -85,11 +77,10 @@ ___
 
     mysql> select User,Host from mysql.user;
 
-<br/>    
+<br/>
 
     mysql> SELECT CONCAT(QUOTE(user),'@',QUOTE(host)) UserAccount FROM mysql.user;
 
-
 <br/>
 
-    mysql> SHOW GRANTS FOR 'username'@'%';        
+    mysql> SHOW GRANTS FOR 'username'@'%';
