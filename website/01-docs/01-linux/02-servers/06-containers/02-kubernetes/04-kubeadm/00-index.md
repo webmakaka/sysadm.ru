@@ -10,7 +10,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/
 
 Deprecated конфиги можно автоматически проапгдейдить командой:
 
-    $ kubectl confert -f my-old-config.yaml > my-new-config.yaml
+    $ kubectl convert -f my-old-config.yaml > my-new-config.yaml
 
 <br/>
 
@@ -45,6 +45,8 @@ Deprecated конфиги можно автоматически проапгде
 ### Ci/CD
 
 ### [Introduction to Argo CD : Kubernetes DevOps CI/CD]](https://www.youtube.com/watch?v=2WSJF7d8dUg)
+
+### [How to deploy Jenkins on Kubernetes for CI/CD]](https://www.youtube.com/watch?v=eRWIJGF3Y2g)
 
 <br/>
 

@@ -22,6 +22,8 @@ permalink: /linux/servers/containers/kubernetes/minikube/
 
 [Инсталляция minikube в ubuntu 18.04](/linux/servers/containers/kubernetes/minikube/install/)
 
+[Запуск и останов minikube](/linux/servers/containers/kubernetes/minikube/run-stop-minikube/)
+
 [Запуск приложения в minikube](/linux/servers/containers/kubernetes/minikube/run-application/)
 
 <br/>
