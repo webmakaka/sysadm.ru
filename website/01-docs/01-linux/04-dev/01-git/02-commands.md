@@ -19,7 +19,6 @@ permalink: /linux/dev/git/commands/
     $ git config --global user.name "your_username"
     $ git config --global user.email "your_email"
 
-
 <br/>
 
 // Посмотреть текущие параметры
@@ -29,6 +28,10 @@ permalink: /linux/dev/git/commands/
     $ git config user.name
     $ git config user.email
 
+<br/>
+
+// Сделать VSCODE редактором по умолчанию
+\$ git config --global core.editor "code --wait"
 
 <br/>
 
@@ -56,7 +59,6 @@ permalink: /linux/dev/git/commands/
 
     $ git log -p имя_файла
 
-
 <br/>
 
     $ git log --name-only
@@ -67,10 +69,9 @@ permalink: /linux/dev/git/commands/
 
     $ git log --graph --all --oneline --decorate -20
 
-
 <br/>
 
-###  Закоммитить все и отправить на сервер
+### Закоммитить все и отправить на сервер
 
     $ git status
     $ git add --all
@@ -81,7 +82,6 @@ permalink: /linux/dev/git/commands/
 
     $ git push --all -u
 
-
 <br/>
 
 ### Показать все файлы которые могут быть добавлены в коммит.
@@ -90,7 +90,7 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
-###  Забрать git из удаленного репозитория (один из вариантов)
+### Забрать git из удаленного репозитория (один из вариантов)
 
     $ git init
 
@@ -102,15 +102,13 @@ permalink: /linux/dev/git/commands/
 
     $ git checkout myProject_branch
 
-
 <br/>
 
-###  Создать новый бранч и отправить этот бранч на удаленный git сервер
+### Создать новый бранч и отправить этот бранч на удаленный git сервер
 
 // Создать новый бранч
 
     $ git checkout -b my_new_branch
-
 
 // Отправить этот бранч на удаленный git сервер
 
@@ -120,16 +118,13 @@ permalink: /linux/dev/git/commands/
 
     $ git push --set-upstream origin my_new_branch
 
-
-
 <br/>
 
-###  Посмотреть что поменялось
+### Посмотреть что поменялось
 
 -- посмотреть изменения в файле
 
     $ git diff website/01-docs/02-linux/08-containers/02-docker/00-index.md
-
 
 -- посмотреть изменения только названия фалов
 
@@ -137,25 +132,24 @@ permalink: /linux/dev/git/commands/
 
 <br/>
 
-###  Отменить сделанные изменения (все данные потеряются)
+### Отменить сделанные изменения (все данные потеряются)
 
     $ git reset --hard
 
-
 <br/>
 
-###  Удалить untracked files
+### Удалить untracked files
 
     $ git clean -fd
 
 <br/>
 
-###  Добавить изменения в мастер ветку
+### Добавить изменения в мастер ветку
 
     $ git checkout master
     $ git merge --no-ff my_new_branch
 
---no-ff -- no fast forward    
+--no-ff -- no fast forward
 
 <br/>
 
@@ -180,22 +174,23 @@ permalink: /linux/dev/git/commands/
 
     $ git push -u origin master
 
-
-
 <br/>
 
 ### Объединить несколько коммитов в 1 с помощью rebase
 
-// Объединить 5 последних коммитов
+    // Объединить последние коммит к определенному коммиту
+    $ git rebase -i fe2aeafe3403901e37a01a7f403cee01801830c6
 
+<br/>
+
+    // Объединить 5 последних коммитов
     $ git rebase -i HEAD~5
 
-заменить pick на squash для всех кроме первого.
+заменить pick на squash для всех кроме первого (сверху).
 
 Подробнее:
 
 https://ru.stackoverflow.com/questions/462251/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D1%8A%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%82%D1%8C-%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D0%BE%D0%B2-%D0%B2-%D0%BE%D0%B4%D0%B8%D0%BD
-
 
 <br/>
 
@@ -237,13 +232,11 @@ This is pretty drastic, so make sure you really want to wipe everything out like
 
 https://stackoverflow.com/questions/10697463/resolve-git-merge-conflicts-in-favor-of-their-changes-during-a-pull
 
-
 <br/>
 
 ### Выделение цветом
 
     $ git config --global color.ui true
-
 
 Можно также посмотреть здесь:  
 https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
@@ -270,23 +263,31 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 
 <br/>
 
-### Для версиии 1.x сделать push как и в версии Git 2.0
-
--- я пользуюсь этим
-
-  git config --global push.default simple
-
--- наоборот
-
-  git config --global push.default matching
-
-
-
-<br/>
-
-
 ### Откатить файлы к определенному коммиту
 
     git checkout a82de97faaafee458d47c60a51e12f7d7c7dba13 file_path/file_name
 
     git rebase -i HEAD~2
+
+
+<br/>
+
+### Если на github появился submodule, содержимое которого нельзя посмотреть
+
+Я удалял этот submodule
+
+    $ rm ./project2-graphql-apollo/app/client/.git
+    $ git rm --cached ./project2-graphql-apollo/app/client/
+
+
+<br/>
+
+### Для версиии GIT 1.x сделать push как и в версии Git 2.0
+
+-- я пользуюсь этим
+
+git config --global push.default simple
+
+-- наоборот
+
+git config --global push.default matching    

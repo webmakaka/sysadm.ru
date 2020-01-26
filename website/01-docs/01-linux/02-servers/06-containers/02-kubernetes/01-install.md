@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/install/
 # Инсталляция kubectl ubuntu 18.04
 
 Делаю:  
-22.11.2019
+10.12.2019
 
 <br/>
 
@@ -21,7 +21,7 @@ VirtualBox должен быть установлен. Используется 
 
 ```shell
 
--- Текущая стабильная версия kubernetes (v1.16.2)
+-- Текущая стабильная версия kubernetes (v1.17.0)
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 

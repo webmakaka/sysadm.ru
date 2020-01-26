@@ -7,7 +7,7 @@ permalink: /linux/servers/containers/kubernetes/kubeadm/prepared-cluster/
 # Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 
 Делаю  
-22.11.2019
+10.12.2019
 
 Предполагается что уже установлен <a href="/linux/servers/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/servers/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/linux/servers/containers/kubernetes/install/">kubectl</a>.
 
@@ -89,16 +89,17 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.16.3
-    Server Version: v1.16.3
+    Client Version: v1.17.0
+    Server Version: v1.17.0
 
 <br/>
 
     $ kubectl get nodes
     NAME         STATUS   ROLES    AGE     VERSION
-    master.k8s   Ready    master   8m17s   v1.16.3
-    node1.k8s    Ready    <none>   5m23s   v1.16.3
-    node2.k8s    Ready    <none>   2m23s   v1.16.3
+    master.k8s   Ready    master   9m45s   v1.17.0
+    node1.k8s    Ready    <none>   6m47s   v1.17.0
+    node2.k8s    Ready    <none>   3m48s   v1.17.0
+
 
 <br/>
 
@@ -159,52 +160,4 @@ forward . 8.8.8.8:53
 
 <br/>
 
-### Если что-то не так
-
-    $ kubectl get nodes
-    NAME         STATUS     ROLES    AGE   VERSION
-    master.k8s   NotReady   master   30m   v1.16.0
-    node1.k8s    NotReady   <none>   26m   v1.16.0
-    node2.k8s    NotReady   <none>   23m   v1.16.0
-
-<br/>
-
-, начинаем поиск
-
-    $ kubectl describe nodes master.k8s
-
-<br/>
-
-```
-Ready            False   Sun, 22 Sep 2019 10:27:17 +0300   Sun, 22 Sep 2019 09:56:54 +0300   KubeletNotReady              runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady message:docker: network plugin is not ready: cni config uninitialized
-```
-
-<br/>
-
-```
-$ kubectl get pods --all-namespaces
-NAMESPACE     NAME                                 READY   STATUS    RESTARTS   AGE
-kube-system   coredns-5644d7b6d9-kgv52             0/1     Pending   0          43m
-kube-system   coredns-5644d7b6d9-zlxbc             0/1     Pending   0          43m
-kube-system   etcd-master.k8s                      1/1     Running   0          43m
-kube-system   kube-apiserver-master.k8s            1/1     Running   0          42m
-kube-system   kube-controller-manager-master.k8s   1/1     Running   0          42m
-kube-system   kube-flannel-ds-amd64-95z5w          1/1     Running   0          43m
-kube-system   kube-flannel-ds-amd64-97ssr          1/1     Running   0          37m
-kube-system   kube-flannel-ds-amd64-xdj4c          1/1     Running   0          40m
-kube-system   kube-proxy-8cjsl                     1/1     Running   0          37m
-kube-system   kube-proxy-mp87t                     1/1     Running   0          43m
-kube-system   kube-proxy-vdhvn                     1/1     Running   0          40m
-kube-system   kube-scheduler-master.k8s            1/1     Running   0          43m
-```
-
-<br/>
-
-    $ kubectl describe pod coredns.... -n kube-system
-    $ kubectl delete pod coredns.... -n kube-system
-
-<br/>
-
-Описание решения данной ошибки:
-
-https://stackoverflow.com/questions/58037620/how-to-fix-flannel-cni-plugin-error-plugin-flannel-does-not-support-config-ve
+###  <a href="/linux/servers/containers/kubernetes/kubeadm/prepared-cluster-error/">Если что-то не так</a>

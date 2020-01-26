@@ -26,15 +26,17 @@ permalink: /linux/servers/devops/automation/terraform/install/
 
 <br/>
 
-**0.12.1**
+**0.12.20**
 
-**Provider "google" v1.20.0 is not compatible with Terraform 0.12.1.**
+**Provider "google" v1.20.0 is not compatible with Terraform 0.12.20.**
 
-    $ wget https://releases.hashicorp.com/terraform/0.12.1/terraform_0.12.1_linux_amd64.zip
+    $ cd ~/tmp
 
-    $ unzip terraform_0.12.1_linux_amd64.zip
+    $ wget https://releases.hashicorp.com/terraform/0.12.20/terraform_0.12.20_linux_amd64.zip
+
+    $ unzip terraform_0.12.20_linux_amd64.zip
 
     $ sudo mv terraform /usr/local/bin/
 
     $ terraform version
-    Terraform v0.12.1
+    Terraform v0.12.20

@@ -81,14 +81,24 @@ export DOCKER_CERT_PATH="/home/marley/.minikube/certs"
 
 <br/>
 
+```
+// Расположение профайлов
+~/.minikube/profiles
+
+// outputs the current profile
+$ minikube profile
+
+// lists all existing profiles
+$ minikube profile list
+
+```
+
 <!--
 
     $ minikube profile default
 
 ```
-minikube profile: outputs the current profile
 
-minikube list: lists all existing profiles
 
 minikube describe <profile>: outputs the JSON config of <profile>
 
@@ -96,7 +106,7 @@ minikube create <profile>: creates a new profile named, <profile>, and the assoc
 
 minikube delete <profile>: delete <profile>, the associated cluster, k8s context, and the ~/.minikube/profiles/<profile> subfolder.
 
-The script assumes that your Minikube configuration is stored in the~/.minikube/ folder and that your environment has jq installed.
+
 ```
 
 -->
