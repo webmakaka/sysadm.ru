@@ -7,7 +7,7 @@ permalink: /windows/servers/containers/docker/first-look/
 # Docker в Windows первое знакомство
 
 Offtopic:  
-[Docker в Linux](/linux/servers/containers/docker/)
+[Docker в Linux](/linux/containers/docker/)
 
 
 ### Это просто пиздец, товарищи! В версии 1.12 под windows не работает редактор vi и vim. Да нахуя он тогда нужен этот ваш Docker под Windows?

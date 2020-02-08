@@ -6,7 +6,7 @@ permalink: /linux/dev/
 
 # Программирование в Linux
 
-### [Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/desktops/code/editors/)
+### [Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/code/editors/)
 
 ### [GIT](/linux/dev/git/)
 

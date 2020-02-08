@@ -8,7 +8,7 @@ permalink: /linux/dev/ruby-on-rails/
 # Программирование в Linux на Ruby on Rails
 
 
-Я активно использую контейрены docker. Думаю, лучше всего инсталляцию всего что нужно для разработки, можно посмотреть в файле для создания  <a href="/linux/servers/containers/docker/dockerfile/my-dockerfile-for-ruby-on-rails/">контейнера</a>.
+Я активно использую контейрены docker. Думаю, лучше всего инсталляцию всего что нужно для разработки, можно посмотреть в файле для создания  <a href="/linux/containers/docker/dockerfile/my-dockerfile-for-ruby-on-rails/">контейнера</a>.
 
 
 <br/>

@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Kuberneters в облаках Google (GKE)
+title: Kuberneters в облаках Google (Google Kubernetes Engine) (GKE)
 permalink: /clouds/google/gke/
 ---
 
-# Kuberneters в облаках Google (GKE)
+# Kuberneters в облаках Google (Google Kubernetes Engine) (GKE)
 
 <br/>
 
@@ -17,4 +17,9 @@ permalink: /clouds/google/gke/
 <br/>
 
 ### [Запуск приложения с котиками в GKE (Load Balancer)](/clouds/google/gke/google/cats-app/)
+
+<br/>
+
+### [Запуск приложения в GKE (Load Balancer)](/clouds/google/gke/google/golang-app/)
+
 

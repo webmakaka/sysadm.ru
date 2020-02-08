@@ -8,6 +8,12 @@
 
         <!-- Google Analitics -->
 
+        <div align="center">
+            {% if page.keywords %}
+              <p><strong>Tags:</strong> {{ page.keywords | strip_html | strip_newlines | truncate: 160 }}
+            {% endif %}</p>
+        </div>
+
         <h2 class="footer-heading">
             Системный Администратор <br />
             {{ site.title }}

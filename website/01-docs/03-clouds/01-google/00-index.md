@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Google (GCP)
+title: Google Cloud Platform (GCP)
 permalink: /clouds/google/
 ---
 
-# Google (GCP)
+# Google Cloud Platform (GCP)
 
 <br/>
 
