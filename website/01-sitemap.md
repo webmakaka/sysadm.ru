@@ -23,7 +23,7 @@ permalink: /sitemap/
 
 # Облака:
 
-### [Clouds](/clouds/)
+### [Clouds](/devops/clouds/)
 
 
 <br/>
