@@ -16,7 +16,7 @@ https://medium.com/@sathishvj/qwiklabs-free-codes-gcp-and-aws-e40f3855ffdb
 
 <br/>
 
-### [Google (GCP)](/clouds/google/)
+### [Google Cloud Platform (GCP)](/clouds/google/)
 
 ### [Amazon Web Services (AWS)](/clouds/aws/)
 

@@ -1,0 +1,49 @@
+---
+layout: page
+title: Kuberneters на локальном хосте (minikube, kubectl и virtualbox)
+permalink: /devops/containers/kubernetes/minikube/
+---
+
+# Kuberneters на локальном хосте (minikube, kubectl и virtualbox)
+
+<br/>
+
+![your computer](/img/devops/containers/kubernetes/your-computer.png "your computer"){: .center-image }
+
+<br/>
+
+![Local Kubernetes Development](/img/devops/containers/kubernetes/local-kubernetes-development.png "Local Kubernetes Development"){: .center-image }
+
+<br/>
+
+### Базовые вещи, чтобы ознакомиться как это все работает
+
+[Инсталляция kubectl ubuntu 18.04](/devops/containers/kubernetes/install/)
+
+[Инсталляция minikube в ubuntu 18.04](/devops/containers/kubernetes/minikube/install/)
+
+[Запуск и останов minikube](/devops/containers/kubernetes/minikube/run-stop-minikube/)
+
+[Запуск приложения в minikube](/devops/containers/kubernetes/minikube/run-application/)
+
+<br/>
+
+### Более продвинутые примеры
+
+[Предоставление внешним клиентам доступа к службам](/devops/containers/kubernetes/minikube/svc/)
+
+[Пример Ingress в minikube (Nginx)](/devops/containers/kubernetes/kubeadm/minikube-ingress-nginx/)
+
+[Пример Ingress в minikube (Nginx) + TLS](/devops/containers/kubernetes/kubeadm/minikube-ingress-nginx/tls/)
+
+[Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]](/devops/containers/kubernetes/minikube/grider-multi-pod-app-minikube/)
+
+<br/>
+
+### Архив
+
+[Запуск приложения в minikube](/devops/containers/kubernetes/minikube/run-application-archive/)
+
+[Разворачиваем многоуровневое приложение в minikube](/devops/containers/kubernetes/minikube/multi-tier-application/)
+
+[Материал из курса: Learn DevOps: The Complete Kubernetes Course](/devops/containers/kubernetes/minikube/learn-devops-the-complete-kubernetes-course/)

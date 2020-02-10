@@ -46,7 +46,7 @@ The pod-labeler deployment creates a single pod that watches all other pods in t
 
 <br/>
 
-### [Install Terraform](/linux/devops/automation/terraform/install/)
+### [Install Terraform](/devops/automation/terraform/install/)
 
 <br>
 

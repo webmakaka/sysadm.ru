@@ -34,7 +34,7 @@ Within the cluster, provision three workloads:
 
 <br/>
 
-### [Install Terraform](/linux/devops/automation/terraform/install/)
+### [Install Terraform](/devops/automation/terraform/install/)
 
 <br>
 

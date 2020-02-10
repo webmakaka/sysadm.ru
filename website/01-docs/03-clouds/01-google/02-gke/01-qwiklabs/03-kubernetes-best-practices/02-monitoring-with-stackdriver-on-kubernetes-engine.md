@@ -31,7 +31,7 @@ This lab will create a Kubernetes Engine cluster that has a sample application d
 
 <br/>
 
-### [Install Terraform](/linux/devops/automation/terraform/install/)
+### [Install Terraform](/devops/automation/terraform/install/)
 
 <br/>
 

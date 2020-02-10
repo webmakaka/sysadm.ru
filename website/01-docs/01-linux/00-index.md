@@ -45,11 +45,11 @@ permalink: /linux/
 
 ### [Proxy Servers](/linux/proxy/)
 
-### [Базы данных](/linux/databases/)
+### [Базы данных](/databases/)
 
 ### [Виртуализация](/linux/virtual/)
 
-### [Контейнеры](/linux/containers/)
+### [Контейнеры](/devops/containers/)
 
 ### [Кластеризация](/linux/clustering/)
 
@@ -57,7 +57,7 @@ permalink: /linux/
 
 ### [Logging](/linux/logging/)
 
-### [DevOps](/linux/devops/)
+### [DevOps](/devops/)
 
 <br/>
 
@@ -71,7 +71,7 @@ permalink: /linux/
 
 # Программирование:
 
-### [Программирование](/linux/dev/)
+### [Программирование](/dev/)
 
 ---
 

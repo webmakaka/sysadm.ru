@@ -40,7 +40,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 
 <br/>
 
-Инсталлируем <a href="/linux/containers/docker/install/ubuntu/">docker</a> и <a href="/linux/containers/docker/tools/docker-compose/install/ubuntu/">docker-compose</a>.
+Инсталлируем <a href="/devops/containers/docker/install/ubuntu/">docker</a> и <a href="/devops/containers/docker/tools/docker-compose/install/ubuntu/">docker-compose</a>.
 
 <br/>
 
