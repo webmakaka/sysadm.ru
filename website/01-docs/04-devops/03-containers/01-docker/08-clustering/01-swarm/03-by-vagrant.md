@@ -15,7 +15,7 @@ permalink: /devops/containers/docker/clustering/swarm/by-vagrant/
 
 
 Разворачиваю в swarm вот это приложение:  
-https://github.com/marley-nodejs/Projects-in-Docker
+https://github.com/webmakaka/Projects-in-Docker
 
 
 Делаю с помощью  <a href="/linux/virtual/vagrant/">Vagrant</a>, т.к. при использовании docker-machine я не смог установить внутри виртуалок пакеты для поднятия NFS (Network file system).
@@ -397,7 +397,7 @@ service1
 на manager1
 
     $ cd ~
-    $ git clone https://github.com/marley-nodejs/Projects-in-Docker
+    $ git clone https://github.com/webmakaka/Projects-in-Docker
     $ cd Projects-in-Docker/Docker\ Swarm/
 
     $ cd mydb/
@@ -526,4 +526,4 @@ manager1, manager2, service1
 
 ### Можно тоже самое сделать с помощью .yml файла
 
-https://github.com/marley-nodejs/Projects-in-Docker/blob/master/Docker%20Swarm/blog_swarm.yml
+https://github.com/webmakaka/Projects-in-Docker/blob/master/Docker%20Swarm/blog_swarm.yml

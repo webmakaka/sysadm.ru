@@ -8,4 +8,4 @@ permalink: /devops/containers/kubernetes/kubeadm/grider-multi-pod-app/
 
 <br/>
 
-Все перенесено на <a href="https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only">github</a>
+Все перенесено на <a href="https://github.com/webmakaka/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only">github</a>

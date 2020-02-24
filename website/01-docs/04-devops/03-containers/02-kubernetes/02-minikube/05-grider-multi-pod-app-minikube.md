@@ -24,7 +24,7 @@ permalink: /devops/containers/kubernetes/minikube/grider-multi-pod-app-minikube/
 <br/>
 
 **Ссылка на github:**  
-https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only
+https://github.com/webmakaka/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only
 
 <br/>
 
@@ -42,7 +42,7 @@ https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide-Deploy
 ### Разворачиваем приложение
 
     $ cd ~/tmp
-    $ git clone https://github.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only
+    $ git clone https://github.com/webmakaka/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only
 
     $ cd ~/tmp/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-Local-Kubernetes-Cluster-Only/kubernetes/
 

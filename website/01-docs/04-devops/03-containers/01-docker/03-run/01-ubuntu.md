@@ -12,7 +12,7 @@ permalink: /devops/containers/docker/run/
 
 **Само приложение:**
 
-https://github.com/marley-nodejs/voting-game
+https://github.com/webmakaka/voting-game
 
 <br/>
 

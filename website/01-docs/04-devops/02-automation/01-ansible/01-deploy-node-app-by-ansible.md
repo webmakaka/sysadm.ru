@@ -11,4 +11,4 @@ permalink: /devops/automation/ansible/deploy-node-app-by-ansible/
 
 В общем Readme.md все описано
 
-https://github.com/marley-nodejs/cats-app-ansible
+https://github.com/webmakaka/cats-app-ansible

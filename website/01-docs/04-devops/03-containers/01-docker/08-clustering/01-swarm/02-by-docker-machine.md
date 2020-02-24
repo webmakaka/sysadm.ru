@@ -15,7 +15,7 @@ permalink: /devops/containers/docker/clustering/swarm/by-docker-machine/
 Делаю в конце апреля 2018
 
 Разворачиваю в swarm вот это приложение:  
-https://github.com/marley-nodejs/Projects-in-Docker
+https://github.com/webmakaka/Projects-in-Docker
 
 
     $ mkdir ~/docker-swarm-scripts

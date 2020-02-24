@@ -119,7 +119,7 @@ apt update && apt upgrade -y
     exit
 
     $ cd ~
-    $ git clone --depth=1 https://github.com/marley-nodejs/Hands-On-DevOps-with-Ansible/
+    $ git clone --depth=1 https://github.com/webmakaka/Hands-On-DevOps-with-Ansible/
 
 <br/>
 

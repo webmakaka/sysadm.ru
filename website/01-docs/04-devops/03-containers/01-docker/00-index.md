@@ -99,7 +99,7 @@ https://docs.docker.com/engine/userguide/networking/
 
 ### Работа с официальными и не только контейнерами
 
-[Пример запуска веб проекта в контейнерах Docker](https://github.com/marley-nodejs/Projects-in-Docker)
+[Пример запуска веб проекта в контейнерах Docker](https://github.com/webmakaka/Projects-in-Docker)
 
 [Lamp Server](/devops/containers/docker/lamp/)
 
