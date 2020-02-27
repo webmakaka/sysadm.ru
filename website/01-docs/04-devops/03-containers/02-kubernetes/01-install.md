@@ -1,17 +1,16 @@
 ---
 layout: page
 title: Инсталляция kubectl ubuntu 18.04
+description: Инсталляция kubectl ubuntu 18.04
+keywords: linux, kubectl, install
 permalink: /devops/containers/kubernetes/install/
 ---
 
 # Инсталляция kubectl ubuntu 18.04
 
 Делаю:  
-10.12.2019
+26.02.2020
 
-<br/>
-
-VirtualBox должен быть установлен. Используется версия VirtualBox 6.0.4
 
 <br/>
 
@@ -21,7 +20,7 @@ VirtualBox должен быть установлен. Используется 
 
 ```shell
 
--- Текущая стабильная версия kubernetes (v1.17.0)
+-- Текущая стабильная версия kubernetes (v1.17.3)
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 

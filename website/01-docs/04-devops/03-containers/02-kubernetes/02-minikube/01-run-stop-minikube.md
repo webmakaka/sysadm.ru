@@ -9,7 +9,25 @@ permalink: /devops/containers/kubernetes/minikube/run-stop-minikube/
 Можно запускать с параметрами по умолчанию, не задавая никаких профилей.
 Так даже проще.
 
-## Запуск minikube
+<br/>
+
+    $ minikube start 
+
+<br/>
+
+    $ kubectl get nodes
+    NAME       STATUS   ROLES    AGE   VERSION
+    minikube   Ready    master   80s   v1.17.3
+
+<br/>
+
+    $ minikube stop 
+    $ minikube delete
+
+
+<br/>
+
+### Запуск minikube с параметрами
 
 ```
 $ minikube --profile my-profile config set memory 4096

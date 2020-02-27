@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Подготовка и установка Helm Tiller
+description: Подготовка и установка Helm Tiller
+keywords: linux, helm, tiller, install
 permalink: /devops/containers/kubernetes/kubeadm/heml/install/
 ---
 
@@ -66,7 +68,7 @@ https://www.youtube.com/watch?v=dfQIzPUW8mQ
     $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
 
     $ helm version --short --client
-    Client: v2.16.1+gbbdfe5e
+    Client: v2.16.3+g1ee0254
 
 <br/>
 
