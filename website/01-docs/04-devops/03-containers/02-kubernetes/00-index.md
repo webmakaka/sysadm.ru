@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Kubernetes
+description: Kubernetes
+keywords: Kubernetes
 permalink: /devops/containers/kubernetes/
 ---
 

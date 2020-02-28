@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция и Upgrade Docker в Ubuntu 18.04.1 bionic64
+description: Инсталляция и Upgrade Docker в Ubuntu 18.04.1 bionic64
+keywords: docker, docker-compose, инсталляция, linux, ubuntu, bash скрипт
 permalink: /devops/containers/docker/install/ubuntu/
 ---
 
@@ -15,19 +17,20 @@ permalink: /devops/containers/docker/install/ubuntu/
 
 **Вариант 1: Одним скриптом устанавливаем docker и docker-compose:**
 
-    $ sudo su -
+```
+$ sudo su -
 
-    # cd /tmp/
+# cd /tmp/
 
-    # curl -LJO https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%201/Video%201.3/install-docker-and-docker-compose.sh
+# curl -LJO https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%201/Video%201.3/install-docker-and-docker-compose.sh
 
-    # chmod +x ./install-docker-and-docker-compose.sh
+# chmod +x ./install-docker-and-docker-compose.sh
 
-    # ./install-docker-and-docker-compose.sh
+# ./install-docker-and-docker-compose.sh
 
-    # docker -v
-    Docker version 19.03.1, build 74b1e89
-
+# docker -v
+Docker version 19.03.1, build 74b1e89
+```
 
 <!-- <br/>
 
@@ -57,27 +60,43 @@ permalink: /devops/containers/docker/install/ubuntu/
 
 **Вариант 2: Нет, я лучше сам буду выполнять команды**
 
-    # apt install -y \
-        apt-transport-https \
-        ca-certificates \
-        curl \
-        software-properties-common
+
+```
+# apt install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+
+
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# apt-key fingerprint 0EBFCD88
+
+# add-apt-repository \
+"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) \
+stable"
+
+# apt update && apt install -y docker-ce
+
+# docker -v
+Docker version 18.09.6, build 481bc77
+```
 
 <br/>
 
-    # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+**docker-compose**
 
-    # apt-key fingerprint 0EBFCD88
+```
+$ DOCKER_COMPOSE_LATEST_RELEASE=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 
-    # add-apt-repository \
-    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-    $(lsb_release -cs) \
-    stable"
+$ sudo curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_LATEST_RELEASE}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-    # apt update && apt install -y docker-ce
+$ sudo chmod +x /usr/local/bin/docker-compose
 
-    # docker -v
-    Docker version 18.09.6, build 481bc77
+$ sudo docker-compose --version
+```
 
 <br/>
 

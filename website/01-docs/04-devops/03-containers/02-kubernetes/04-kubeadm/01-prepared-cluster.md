@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
+description: Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
+keywords: Kubernetes, virtualbox
 permalink: /devops/containers/kubernetes/kubeadm/prepared-cluster/
 ---
 
