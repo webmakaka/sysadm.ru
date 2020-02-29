@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Vagrant в Linux
+description: Vagrant в Linux
+keywords: linux, ubuntu, vagrant
 permalink: /linux/virtual/vagrant/
 ---
 
@@ -10,27 +12,12 @@ permalink: /linux/virtual/vagrant/
 
 Разумеется можно сделать образы и при необходимости их можно каждый раз импортировать, но раз есть инструмент, который с помощью одной команды может поднимать одну или несколько виртуальных машин, почему бы его не использовать.
 
-<br/>
-
-### [Traversy Media] Vagrant Crash Course (ENG, May 2, 2018)
-
-<br/>
-
-LAMP в Vagrant
-
-<br/>
-
-<div align="center">
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/vBreXjkizgo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
-
-<br/>
-
-https://github.com/bradtraversy/vagrant_lamp_traversy/blob/master/Vagrantfile
 
 <br/>
 
 ### Наработки админа сайта
+
+[Знакомство с Vagrant](/linux/virtual/vagrant/crash-course/)
 
 [Инсталляция Vargant в Ubuntu 18.04](/linux/virtual/vagrant/install/ubuntu/)
 

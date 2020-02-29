@@ -21,7 +21,7 @@ permalink: /linux/ubuntu/browsers/chrome/
 * EditThisCookie
 * SetupVPN
 * Доступ рутрекер
-* LanguageToolPlus
+* LanguageTool
 * Nimbus Screenshoot & Screen Video Recorder
 
 <!-- 
@@ -53,4 +53,4 @@ https://adblockplus.org/
 
 ### Отключить всплывающие уведомления
 
-Edit --> Settings --> Advanced --> Content Settings --> Notifications --> Disable
+Edit --> Settings --> Advanced --> Site Settings --> Notifications --> Disable

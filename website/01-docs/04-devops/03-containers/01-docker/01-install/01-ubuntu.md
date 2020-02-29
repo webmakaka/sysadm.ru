@@ -9,7 +9,7 @@ permalink: /devops/containers/docker/install/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 18.04.1 bionic64
 
 Делаю:  
-11.08.2019
+29.02.2020
 
 <br/>
 
@@ -18,18 +18,23 @@ permalink: /devops/containers/docker/install/ubuntu/
 **Вариант 1: Одним скриптом устанавливаем docker и docker-compose:**
 
 ```
-$ sudo su -
 
-# cd /tmp/
+$ mkdir ~/tmp
 
-# curl -LJO https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%201/Video%201.3/install-docker-and-docker-compose.sh
+$ cd ~/tmp
 
-# chmod +x ./install-docker-and-docker-compose.sh
+$ curl -LJO https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%201/Video%201.3/install-docker-and-docker-compose.sh
 
-# ./install-docker-and-docker-compose.sh
+$ chmod +x ./install-docker-and-docker-compose.sh
 
-# docker -v
-Docker version 19.03.1, build 74b1e89
+$ sudo ./install-docker-and-docker-compose.sh
+
+$ docker -v
+Docker version 19.03.6, build 369ce74a3c
+
+$ docker-compose --version
+docker-compose version 1.25.4, build 8d51620a
+
 ```
 
 <!-- <br/>
@@ -58,7 +63,7 @@ Docker version 19.03.1, build 74b1e89
 
 <br/>
 
-**Вариант 2: Нет, я лучше сам буду выполнять команды**
+**Вариант 2: Придется самостоятельно выполнять команды выполнять команды**
 
 
 ```
@@ -116,11 +121,11 @@ https://download.docker.com/linux/ubuntu/dists/bionic/stable/binary-amd64/
 
 ### Предоставить пользователю права для работы с docker
 
-    # usermod -aG docker <username>
+    $ sudo usermod -aG docker <username>
 
 в группе docker должен появиться этот пользователь
 
-    # cat /etc/group | grep docker
+    $ cat /etc/group | grep docker
         docker:x:126:username
 
 Перелогиниваемся, иначе не будет работать

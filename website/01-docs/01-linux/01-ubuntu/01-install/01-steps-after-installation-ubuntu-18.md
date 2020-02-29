@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Шаги после инсталляции Ubuntu 18 (для себя)
+description: Шаги после инсталляции Ubuntu 18 (для себя)
+keywords: ubuntu, install
 permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
 ---
 
@@ -12,7 +14,7 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
 
     $ sudo su -
     # apt update && apt-get upgrade -y
-    # apt-get install -y curl git
+    # apt install -y curl git
 
 
 <br/>
@@ -28,6 +30,8 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
     $ sudo apt-get install apt-transport-https
     $ sudo apt-get update
     $ sudo apt-get install code
+
+<br/>
 
     https://code.visualstudio.com/docs/setup/linux
 
@@ -112,10 +116,7 @@ LC_TIME="en_GB.UTF-8"
 LC_PAPER="en_GB.UTF-8"
 LC_MEASUREMENT="en_GB.UTF-8"
 
-
-
-
-     -->
+-->
 
 <br/>
 
@@ -140,12 +141,23 @@ System --> Logout
 
 ### Отключить противный звук при ошибке в консоли
 
+Terminal --> Preferences
+
 ![Отключить противный звук при ошибке в консоли](/img/linux/ubuntu/install/disable-sound-when-error-in-the-console.png "Отключить противный звук при ошибке в консоли"){: .center-image }
+
+
+<br/>
+
+### Не спрашивать каждый раз пароль при комаде с sudo
+
+[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/small-improvements/)  
 
 <br/>
 
 ### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
+
+$ sudo vi /etc/hosts
 
 
 ```
@@ -191,8 +203,6 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
     # cat ./badwebsites.txt >> /etc/hosts
 
 
-
-
 <br/>
 
 ### Дополнительное ПО
@@ -203,6 +213,13 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 <br/>
 
 ### Автозапуск telegram
+
+
+    $ sudo mkdir -p /opt/telegram
+    $ sudo mv Telegram /opt/telegram/
+
+<br/>
+
 
 Applications --> System Tools --> Preferences --> Startup Applications
 
