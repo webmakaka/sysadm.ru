@@ -57,6 +57,8 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
     openssh-server \
     traceroute \
     vlc \
+    mpv \
+    ffmpegthumbnailer \
     net-tools \
     rar unrar-free
 
@@ -243,3 +245,33 @@ Power Saving --> Blank screen --> Never
 ### Еще дополнительне ПО
 
     $ sudo apt install -y transmission whois
+
+
+<br/>
+
+### VLC намертво вешает весь Desktop Environment
+
+Что даже ctrl+alt+f5 не срабатывало.
+
+Возможное решение.
+
+```
+Menu Tools -> Preferences >
+
+... -> Click radio button to Show Settings = ALL instead of SIMPLE
+
+... -> Input/Codecs > Demuxers >
+
+at very bottom of drop down list:
+
+... -> Avformat Demuxer > Save, exit and restart VLC
+
+```
+
+<br/>
+
+И еще делал:
+
+Tools -> Preferences > Video > Output > X11 video output (XCB)
+
+Вроде перестало.

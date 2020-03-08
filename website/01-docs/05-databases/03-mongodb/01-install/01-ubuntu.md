@@ -1,10 +1,15 @@
 ---
 layout: page
 title: MongoDB инсталляция в Ubuntu 18.04.1
+description: MongoDB инсталляция в Ubuntu 18.04.1
+keywords: linux, ubuntu, mongodb, install
 permalink: /databases/mongodb/install/ubuntu/
 ---
 
 # MongoDB инсталляция в Ubuntu 18.04.1
+
+**Актуальная версия MongoDB 4.2**
+
 
 Делаю!  
 19.08.2018

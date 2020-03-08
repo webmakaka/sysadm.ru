@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Основные команды GIT
+description: Основные команды GIT
+keywords: git, commands
 permalink: /dev/git/commands/
 ---
 

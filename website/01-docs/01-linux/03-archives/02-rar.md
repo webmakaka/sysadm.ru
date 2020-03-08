@@ -36,13 +36,15 @@ permalink: /linux/archives/rar/
 
 ### Работа с архиватором rar
 
-    // Извлечь .rar в текущий каталог:
-    $ unrar e archiveName.rar
+    // Извлечь .rar в каталог с текущим именем архива
+    $ unrar x Archive.part1.rar
 
 <br/>
 
-    // Извлечь .rar в каталог с текущим именем архива:
-    $ unrar x Archive.part1.rar
+    // Извлечь .rar в текущий каталог (Получается каша)
+    $ unrar e archiveName.rar
+
+
 
 <br/>
 
