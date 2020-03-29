@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Cisco Router 1941
+description: Cisco Router 1941
+keywords: Cisco Router 1941
 permalink: /devices/cisco/routers/1941/
 ---
 
 # Cisco Router 1941
-
 
 <br/>
 

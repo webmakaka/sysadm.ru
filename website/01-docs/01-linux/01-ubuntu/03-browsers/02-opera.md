@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция Opera в Ubuntu
+description: Инсталляция Opera в Ubuntu
+keywords: linux, ubuntu, opera, browser, инсталляция
 permalink: /linux/ubuntu/browsers/opera/
 ---
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Скачать playlist с youtube в Ubuntu Linux
+description: Скачать playlist с youtube в Ubuntu Linux
+keywords: linux, ubuntu, youtube, скачать, playlist, youtube-dl
 permalink: /linux/ubuntu/download-youtube-playlist/
 ---
 
@@ -21,7 +23,7 @@ permalink: /linux/ubuntu/download-youtube-playlist/
 Т.к. 4k video downloader имеет ограничение на размер плейлиста. Буду юзать программу которая скачивает плейлисты в командной строке.
 
 Делаю:  
-30.03.2019
+13.03.2020
 
 **Программа: **
 https://rg3.github.io/youtube-dl/download.html
@@ -30,20 +32,22 @@ https://rg3.github.io/youtube-dl/download.html
 
 **Установить ffmpeg - иначе могут быть видео и аудио отдельно!**
 
-    # apt install ffmpeg
+    $ sudo apt install -y ffmpeg
+
+<br/>
+
+    $ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+    $ sudo chmod a+rx /usr/local/bin/youtube-dl
+
+
+<!--
 
 <br/>
 
 Можно установить ее с помощью pip3:
-
     $ sudo pip3 install youtube-dl --upgrade
 
-<br/>
-
-Или с помощью curl
-
-    $ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-    $ sudo chmod a+rx /usr/local/bin/youtube-dl
+-->
 
 <br/>
 

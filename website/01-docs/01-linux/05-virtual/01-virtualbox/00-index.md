@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Virtual Box
+title: VirtualBox
+description: VirtualBox
+keywords: linux, VirtualBox
 permalink: /linux/virtual/virtualbox/
 ---
 

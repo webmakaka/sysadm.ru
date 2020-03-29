@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция браузера в Ubuntu
+description: Инсталляция браузера в Ubuntu
+keywords: linux, ubuntu, browser, google chrome, opera
 permalink: /linux/ubuntu/browsers/
 ---
 

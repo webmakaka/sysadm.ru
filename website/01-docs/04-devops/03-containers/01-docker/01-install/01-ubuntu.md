@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Инсталляция и Upgrade Docker в Ubuntu 18.04.1 bionic64
-description: Инсталляция и Upgrade Docker в Ubuntu 18.04.1 bionic64
+title: Инсталляция и Upgrade Docker в Ubuntu 18.04.4 bionic64
+description: Инсталляция и Upgrade Docker в Ubuntu 18.04.4 bionic64
 keywords: docker, docker-compose, инсталляция, linux, ubuntu, bash скрипт
 permalink: /devops/containers/docker/install/ubuntu/
 ---
 
-# Инсталляция / Upgrade Docker в Ubuntu 18.04.1 bionic64
+# Инсталляция / Upgrade Docker в Ubuntu 18.04.4 bionic64
 
 Делаю:  
-29.02.2020
+11.03.2020
 
 <br/>
 
@@ -29,12 +29,16 @@ $ chmod +x ./install-docker-and-docker-compose.sh
 
 $ sudo ./install-docker-and-docker-compose.sh
 
+```
+
+<br/>
+
+```
 $ docker -v
-Docker version 19.03.6, build 369ce74a3c
+Docker version 19.03.7, build 7141c199a2
 
 $ docker-compose --version
 docker-compose version 1.25.4, build 8d51620a
-
 ```
 
 <!-- <br/>

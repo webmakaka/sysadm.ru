@@ -14,7 +14,14 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
 
     $ sudo su -
     # apt update && apt-get upgrade -y
-    # apt install -y curl git
+    # apt install -y vim curl git
+
+
+<br/>
+
+### Не спрашивать каждый раз пароль при комаде с sudo
+
+[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/small-improvements/)  
 
 
 <br/>
@@ -48,19 +55,22 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
 
 ### Устанавливаем дополнительное ПО
 
-    # apt install -y ubuntu-restricted-extras
+    $ sudo apt install -y ubuntu-restricted-extras
 
 <br/>
 
-    # apt install -y \
+    $ sudo apt install -y \
     vim \
     openssh-server \
     traceroute \
     vlc \
     mpv \
+    transmission \
+    whois \
     ffmpegthumbnailer \
     net-tools \
-    rar unrar-free
+    rar unrar-free \
+    wakeonlan
 
 <br/>
 
@@ -150,12 +160,6 @@ Terminal --> Preferences
 
 <br/>
 
-### Не спрашивать каждый раз пароль при комаде с sudo
-
-[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/small-improvements/)  
-
-<br/>
-
 ### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
 
@@ -200,7 +204,8 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 <br/>
 
-    # curl https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt --output badwebsites.txt
+    $ cd /tmp
+    $ curl https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt --output badwebsites.txt
 
     # cat ./badwebsites.txt >> /etc/hosts
 
@@ -239,39 +244,3 @@ Command: /opt/telegram/Telegram -startintray
 Applications --> System Tools --> Preferences --> Settings --> Power
 
 Power Saving --> Blank screen --> Never
-
-<br/>
-
-### Еще дополнительне ПО
-
-    $ sudo apt install -y transmission whois
-
-
-<br/>
-
-### VLC намертво вешает весь Desktop Environment
-
-Что даже ctrl+alt+f5 не срабатывало.
-
-Возможное решение.
-
-```
-Menu Tools -> Preferences >
-
-... -> Click radio button to Show Settings = ALL instead of SIMPLE
-
-... -> Input/Codecs > Demuxers >
-
-at very bottom of drop down list:
-
-... -> Avformat Demuxer > Save, exit and restart VLC
-
-```
-
-<br/>
-
-И еще делал:
-
-Tools -> Preferences > Video > Output > X11 video output (XCB)
-
-Вроде перестало.

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Cisco Router 1941 отвалился интернет в локальной сети Билайн
+description: Cisco Router 1941 отвалился интернет в локальной сети Билай
+keywords: Cisco Router 1941, Билайн
 permalink: /devices/cisco/routers/1941/beeline-not-works/
 ---
 

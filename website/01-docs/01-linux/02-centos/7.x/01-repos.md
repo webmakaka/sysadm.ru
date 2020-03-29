@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Публичные репозитории Centos 7
+description: Публичные репозитории Centos 7
+keywords: linux, centos, repositories, epel
 permalink: /linux/centos/7.x/repos/
 ---
 
@@ -33,6 +35,12 @@ enabled=1
 
 <br/>
 
+    // Оказывается достаточно
+    # yum install epel-release
+
+<br/>
+
+    // Но можно и руками
     # vi /etc/yum.repos.d/Epel-Centos7.repo
 
 <br/>

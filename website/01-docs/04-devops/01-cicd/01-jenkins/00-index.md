@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Jenkins
+description: Jenkins
+keywords: Jenkins, cicd, инсталляция, linux
 permalink: /devops/cicd/jenkins/
 ---
 

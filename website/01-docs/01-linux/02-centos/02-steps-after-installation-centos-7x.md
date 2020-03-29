@@ -24,6 +24,10 @@ permalink: /linux/install/centos/6/steps-after-installation-centos-7x/
 
     # yum install -y screen
 
+// lsof
+
+    # yum install -y lsof
+
 
 
 <br/>

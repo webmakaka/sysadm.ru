@@ -9,7 +9,7 @@ permalink: /devops/containers/kubernetes/install/
 # Инсталляция kubectl ubuntu 18.04
 
 Делаю:  
-26.02.2020
+26.03.2020
 
 
 <br/>
@@ -20,7 +20,7 @@ permalink: /devops/containers/kubernetes/install/
 
 ```shell
 
--- Текущая стабильная версия kubernetes (v1.17.3)
+-- Текущая стабильная версия kubernetes (v1.18.0)
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 

@@ -12,9 +12,15 @@ permalink: /linux/ubuntu/small-improvements/
 ### Не спрашивать каждый раз пароль при комаде с sudo
 
     -- добавить при необходимости пользователя в группу sudo
-    # sudo usermod -aG sudo <username>
+    $ sudo usermod -aG sudo <username>
+
+<br/>
+
+    $ sudo su -
 
     # vi /etc/sudoers
+
+<br/>
 
     %sudo   ALL=(ALL:ALL) ALL
 

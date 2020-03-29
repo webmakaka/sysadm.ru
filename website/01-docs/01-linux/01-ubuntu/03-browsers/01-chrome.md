@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция Google Chrome в Ubuntu
+description: Инсталляция Google Chrome в Ubuntu
+keywords: linux, ubuntu, browser, google chrome, инсталляция
 permalink: /linux/ubuntu/browsers/chrome/
 ---
 
@@ -20,16 +22,9 @@ permalink: /linux/ubuntu/browsers/chrome/
 * Quick JavaScript Switcher
 * EditThisCookie
 * SetupVPN
-* Доступ рутрекер
 * LanguageTool
 * Nimbus Screenshoot & Screen Video Recorder
-
-<!-- 
-
-Data Saver
-LanguageToolPlus.com
-
--->
+* Доступ рутрекер
 
 <br/>
 
@@ -51,6 +46,14 @@ https://adblockplus.org/
 
 <br/>
 
-### Отключить всплывающие уведомления
+### Отключить всплывающие уведомления и всякую слежку
 
-Edit --> Settings --> Advanced --> Site Settings --> Notifications --> Disable
+Settings --> Advanced --> Privacy and Security --> Site Settings:
+
+```
+Location --> Blocked
+Camera --> Blocked
+Microphone --> Blocked
+Notifications --> Blocked
+Payment Handlers --> Blocked
+```

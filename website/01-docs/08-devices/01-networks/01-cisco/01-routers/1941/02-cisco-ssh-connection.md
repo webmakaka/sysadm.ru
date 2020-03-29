@@ -6,7 +6,7 @@ permalink: /devices/cisco/routers/1941/cisco-ssh-connection/
 
 # Cisco Router 1941 настройка SSH
 
-<pre>
+```
 cisco-router-1941>en
 cisco-router-1941#
 cisco-router-1941#conf t
@@ -45,4 +45,4 @@ cisco-router-1941#
 marley@workstation:~$ telnet 192.168.2.100
 Trying 192.168.2.100...
 telnet: Unable to connect to remote host: Connection refused
-</pre>
+```

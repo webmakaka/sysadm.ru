@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция SopCast и ACE плеера в Ubuntu
+description: Инсталляция SopCast и ACE плеера в Ubuntu
+keywords: linux, ubuntu, SopCast, ACE плеера
 permalink: /linux/ubuntu/sopcast-ace-player-install/
 ---
 
@@ -22,10 +24,10 @@ permalink: /linux/ubuntu/sopcast-ace-player-install/
 
 <br/>
 
-### Инсталляция ACE плеера в Ubuntu 16.04 / 18.04.1
+### Инсталляция ACE плеера в Ubuntu 16.04 / 18.04.4
 
 Делаю:  
-13.02.2019
+09.03.2019
 
     $ sudo snap install acestreamplayer
     $ acestreamplayer

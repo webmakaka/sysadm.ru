@@ -9,7 +9,7 @@ permalink: /devops/containers/kubernetes/kubeadm/prepared-cluster/
 # Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 
 Делаю  
-10.12.2019
+26.03.2019
 
 Предполагается что уже установлен <a href="/linux/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/devops/containers/kubernetes/install/">kubectl</a>.
 
@@ -39,10 +39,10 @@ permalink: /devops/containers/kubernetes/kubeadm/prepared-cluster/
 
     $ mkdir ~/vagrant-kubernetes && cd ~/vagrant-kubernetes
 
-    $ git clone https://bitbucket.org/sysadm-ru/kubernetes .
+    $ git clone https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7 .
 
     // Скрипты для установки актуальной версии kubernetes сluster
-    $ cd ~/vagrant-kubernetes/vagrant-provisioning/
+    $ cd ~/vagrant-kubernetes-3-node-cluster-centos/latest
 
     // Обновить образы виртуальных машин virtualbox
     $ vagrant box update
@@ -59,17 +59,23 @@ permalink: /devops/containers/kubernetes/kubeadm/prepared-cluster/
 
 <br/>
 
+<!--
+
 P.S.
 
     // Если нужно установить по какой-то причине старую версию kubernetes
     // В следующем каталоге лежат скрипты для установки kubernetes сluster (1.11.6)
     $ cd misc/vagrant-provisioning-by-version/
 
+-->
+
+
 <br/>
 
 Если coredns-\* не будут стартовать, обновить файл kube-flannel.yml, скачав его по ссылке с сайта:
 
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+
 
 <br/>
 
@@ -80,7 +86,7 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
 <br/>
 
     // Если каталог не создан
-    $ mkdir -p ~/.kube/config
+    $ mkdir -p ~/.kube
 
 <br/>
 
@@ -91,44 +97,49 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
 <br/>
 
     $ kubectl version --short
-    Client Version: v1.17.0
-    Server Version: v1.17.0
+    Client Version: v1.18.0
+    Server Version: v1.18.0
+
 
 <br/>
 
     $ kubectl get nodes
-    NAME         STATUS   ROLES    AGE     VERSION
-    master.k8s   Ready    master   9m45s   v1.17.0
-    node1.k8s    Ready    <none>   6m47s   v1.17.0
-    node2.k8s    Ready    <none>   3m48s   v1.17.0
+    NAME         STATUS   ROLES    AGE    VERSION
+    master.k8s   Ready    master   161m   v1.18.0
+    node1.k8s    Ready    <none>   158m   v1.18.0
+    node2.k8s    Ready    <none>   155m   v1.18.0
 
 
 <br/>
 
 ### Получить дополнительную информацию по кластеру
 
-    $  kubectl get cs
-    NAME                 AGE
-    scheduler            <unknown>
-    controller-manager   <unknown>
-    etcd-0               <unknown>
+    $ kubectl get cs
+    NAME                 STATUS    MESSAGE             ERROR
+    controller-manager   Healthy   ok                  
+    scheduler            Healthy   ok                  
+    etcd-0               Healthy   {"health":"true"}   
+
+
 
 <br/>
 
     $ kubectl get po -n kube-system
     NAME                                 READY   STATUS    RESTARTS   AGE
-    coredns-5644d7b6d9-kj86n             1/1     Running   0          13m
-    coredns-5644d7b6d9-pz26w             1/1     Running   0          13m
-    etcd-master.k8s                      1/1     Running   0          13m
-    kube-apiserver-master.k8s            1/1     Running   0          13m
-    kube-controller-manager-master.k8s   1/1     Running   0          13m
-    kube-flannel-ds-amd64-68r2l          1/1     Running   0          11m
-    kube-flannel-ds-amd64-q6vhm          1/1     Running   2          7m40s
-    kube-flannel-ds-amd64-zbjfx          1/1     Running   0          13m
-    kube-proxy-bj6n6                     1/1     Running   0          11m
-    kube-proxy-fg5rf                     1/1     Running   0          13m
-    kube-proxy-t2dbc                     1/1     Running   0          7m40s
-    kube-scheduler-master.k8s            1/1     Running   0          13m
+    coredns-66bff467f8-pwclq             1/1     Running   0          161m
+    coredns-66bff467f8-s9k8w             1/1     Running   0          161m
+    etcd-master.k8s                      1/1     Running   0          161m
+    kube-apiserver-master.k8s            1/1     Running   0          161m
+    kube-controller-manager-master.k8s   1/1     Running   0          161m
+    kube-flannel-ds-amd64-vsk5p          1/1     Running   0          158m
+    kube-flannel-ds-amd64-z4mdr          1/1     Running   0          161m
+    kube-flannel-ds-amd64-zb9hq          1/1     Running   0          156m
+    kube-proxy-gcg5d                     1/1     Running   0          161m
+    kube-proxy-wl4qd                     1/1     Running   0          158m
+    kube-proxy-xk2bf                     1/1     Running   0          156m
+    kube-scheduler-master.k8s            1/1     Running   0          161m
+
+
 
 <br/>
 
@@ -136,9 +147,10 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
     Kubernetes master is running at https://192.168.0.10:6443
     KubeDNS is running at https://192.168.0.10:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
+
 <br/>
 
-### Настройка, чтобы использовался гугловский DNS вместо resolv.conf на worker'ах
+### Если нужно, чтобы кластер использовал гугловский DNS вместо resolv.conf на worker'ах
 
     $ kubectl edit cm -n kube-system coredns
 
