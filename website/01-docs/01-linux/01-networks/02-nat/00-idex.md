@@ -17,6 +17,7 @@ permalink: /linux/networks/nat/centos/nat/
 
 
 <!--
+
 <pre>
 
 # cp /etc/sysconfig/iptables /etc/sysconfig/iptables.bkp
@@ -74,12 +75,12 @@ iptables -A FORWARD -i eth0 -o eth1 -j REJECT</code>
 
 
 <pre class="blue_border">
-<strong class="userinput"># <code>chmod +x iptables</code></strong>
+    <strong class="userinput"># <code>chmod +x iptables</code></strong>
 </pre>
 
 
 <pre class="blue_border">
-<strong class="userinput"># <code>./iptables</code></strong>
+    <strong class="userinput"># <code>./iptables</code></strong>
 </pre>
 
 <br/>
@@ -90,13 +91,12 @@ iptables -A FORWARD -i eth0 -o eth1 -j REJECT</code>
 -- При обращении к серверу 192.168.1.34 по протоколу tcp на порт 8000 интерфейса eth0, перенаправлять запросы на сервер 192.168.2.5 порт 8000
 
 <pre class="blue_border">
-<strong class="userinput"># <code>iptables -t nat -A PREROUTING --dst 192.168.1.34 -i eth0 -p tcp --dport 8000 -j DNAT --to-destination 192.168.2.5:8000</code></strong>
+    <strong class="userinput"># <code>iptables -t nat -A PREROUTING --dst 192.168.1.34 -i eth0 -p tcp --dport 8000 -j DNAT --to-destination 192.168.2.5:8000</code></strong>
 </pre>
 
 <pre class="blue_border">
-<strong class="userinput"># <code>iptables -I FORWARD 1 -i eth0 -o eth1 -d 192.168.2.5 -p tcp -m tcp --dport 8000 -j ACCEPT</code></strong>
+    <strong class="userinput"># <code>iptables -I FORWARD 1 -i eth0 -o eth1 -d 192.168.2.5 -p tcp -m tcp --dport 8000 -j ACCEPT</code></strong>
 </pre>
-
 
 
 <!--
@@ -122,8 +122,6 @@ iptables: Проброс RDP наружу или форвард портов м�
 http://mnorin.com/iptables-probros-rdp-naruzhu-ili-forvard-portov-m.html<br/>
 http://redhat-club.org/2011/%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-nat-%D0%B2-rhel-centos-fedora<br/>
 http://habrahabr.ru/post/205460/
-
-<!--
 
 
  Дебаг правил iptables в CentOS 6.2

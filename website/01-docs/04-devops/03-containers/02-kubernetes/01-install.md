@@ -9,7 +9,7 @@ permalink: /devops/containers/kubernetes/install/
 # Инсталляция kubectl ubuntu 18.04
 
 Делаю:  
-26.03.2020
+29.03.2020
 
 
 <br/>

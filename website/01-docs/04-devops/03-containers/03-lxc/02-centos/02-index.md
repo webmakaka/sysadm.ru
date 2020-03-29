@@ -8,7 +8,7 @@ permalink: /devops/containers/lxc/centos/
 
 <pre>
 
-№№№№№№№№№№№№№№№№№№№№№№№№№№№№
+##############################
 ### Создание моста
 
 ### Инсталляция необходимых пакетов
@@ -69,7 +69,7 @@ br0		8000.08002774f2c7	no		eth0
 
 
 
-№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№
+##################################################
 
 
 <strong>
@@ -498,9 +498,6 @@ rtt min/avg/max/mdev = 6.772/10.618/17.241/4.703 ms
 
 <!--
 
-
-
-
 root@notebook:~# route add -host 192.168.1.101 gw 192.168.1.11
 или ?
 root@notebook:~# route add -host 192.168.1.101 gw 192.168.1.1
@@ -582,7 +579,6 @@ iptables -P OUTPUT ACCEPT
 # sysctl -p /etc/sysctl.conf
 # service libvirtd reload
 
-<!--
 
 ip route add 192.168.1.101 via 192.168.1.11 dev br0
 
@@ -595,11 +591,6 @@ route add -host 192.168.1.21 gw 192.168.1.11
 tcpdump -n -vv -i eth1 icmp
 
 $ ping 192.168.1.21
-
-
-
-
-
 
 
 -->
@@ -631,8 +622,6 @@ EOF
 
 
 # service libvirtd reload
-
-
 
 
 # ip neigh
@@ -672,7 +661,6 @@ EOF
 
 (Кривые руки + нужны библиотеки кторорые нужно также компилить, которые ссылаются на другие и сообщения об ошибках, которое лично мне ничего не говорят).
 
-
 </pre>
 
 <pre>
@@ -709,5 +697,3 @@ http://openadmins.ru/blog/kvm-network-iptables
 http://linuxforum.ru/viewtopic.php?id=33307
 http://linuxforum.ru/viewtopic.php?id=34269
 </pre>
-
-</div>
