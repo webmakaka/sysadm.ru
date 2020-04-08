@@ -51,7 +51,7 @@ https://www.youtube.com/watch?v=MoyixCuN3UQ&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Меняю версию nginx.
+Меняю версию nginx.  
 nginx:1.14.2
 
 Добавляю аннотацию.

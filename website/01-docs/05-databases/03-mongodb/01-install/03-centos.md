@@ -1,6 +1,8 @@
 ---
 layout: page
 title: MongoDB инсталляция в Centos 6.X
+description: MongoDB инсталляция в Centos 6.X
+keywords: linux, centos, mongodb, install
 permalink: /databases/mongodb/install/centos/
 ---
 
@@ -56,6 +58,9 @@ enabled=1
 
     # mongo
 
+
+<br/>
+
 ### Конфиг
 
 /etc/mongod.conf
@@ -77,9 +82,6 @@ enabled=1
     chmod a+x mongod-start
     ./mongod-start
 
-<br/>
-
-### GUI Клиент для подключения к MongoDB в Ubuntu - RoboMongo
 
 <br/>
 

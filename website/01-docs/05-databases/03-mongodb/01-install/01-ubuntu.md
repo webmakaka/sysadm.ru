@@ -48,12 +48,11 @@ build environment:
 
 Мне нужна именно версия v3.6
 
-Если нужна какая-нибудь другая, см. инстркцию, ссылка внизу.
+Если нужна какая-нибудь другая, см. инструкцию, ссылка внизу.
 
     # apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 91FA4AD5
 
     # bash -c 'echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.6.list'
-
 
     -- Если нужно удалить репо
     # rm /etc/apt/sources.list.d/mongodb*.list

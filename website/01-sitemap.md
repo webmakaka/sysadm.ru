@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Карта Сайта
+description: Карта Сайта
+keywords: Карта Сайта
 permalink: /sitemap/
 ---
 
