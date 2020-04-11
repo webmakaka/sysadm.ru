@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Настройка статической адресации сетевых интерфейсов в ubuntu 18.04 в командной строке
+description: Настройка статической адресации сетевых интерфейсов в ubuntu 18.04 в командной строке
+keywords: ubuntu, network, static ip
 permalink: /linux/ubuntu/network/static-ip/
 ---
 

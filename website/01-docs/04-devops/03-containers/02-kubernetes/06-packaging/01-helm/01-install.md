@@ -3,7 +3,7 @@ layout: page
 title: Подготовка и установка Helm Tiller
 description: Подготовка и установка Helm Tiller
 keywords: linux, helm, tiller, install
-permalink: /devops/containers/kubernetes/kubeadm/heml/install/
+permalink: /devops/containers/kubernetes/packaging/heml/install/
 ---
 
 # Подготовка и установка Helm/Tiller

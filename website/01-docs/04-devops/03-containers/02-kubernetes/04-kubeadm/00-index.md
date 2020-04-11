@@ -22,7 +22,7 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [Ingress](/devops/containers/kubernetes/kubeadm/ingress/)
 
-### [Kubernetes Package Manager (Helm)](/devops/containers/kubernetes/kubeadm/heml/)
+### [Kubernetes Package Manager (Helm)](/devops/containers/kubernetes/packaging/heml/)
 
 ### [Устанавливаем WEB GUI для управления Kubernetes кластером (Rancher)](/devops/containers/kubernetes/kubeadm/gui/rancher/)
 

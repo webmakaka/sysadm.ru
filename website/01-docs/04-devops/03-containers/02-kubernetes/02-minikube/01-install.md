@@ -16,10 +16,10 @@ minikube - подготовленная виртуальная машина с �
 <br/>
 
 Делаю:  
-23.03.2020
+11.04.2020
 
 ```shell
--- Последняя версия (v1.8.2):
+-- Последняя версия (v1.9.2):
 $ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 
 -- Установка
@@ -31,6 +31,5 @@ $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/mini
 
 ```
 $ minikube version
-minikube version: v1.8.2
-commit: eb13446e786c9ef70cb0a9f85a633194e62396a1
+minikube version: v1.9.2
 ```

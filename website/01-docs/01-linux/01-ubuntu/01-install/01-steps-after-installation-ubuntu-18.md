@@ -66,11 +66,11 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
     vlc \
     mpv \
     transmission \
-    whois \
     ffmpegthumbnailer \
     net-tools \
     rar unrar-free \
-    wakeonlan
+    wakeonlan \
+    whois
 
 <br/>
 

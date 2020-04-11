@@ -1,22 +1,28 @@
 ---
 layout: page
-title: Cisco Router 1941 отвалился интернет в локальной сети Билайн
-description: Cisco Router 1941 отвалился интернет в локальной сети Билай
-keywords: Cisco Router 1941, Билайн
+title: Cisco Router 1941 не работает интернет в локальной сети Билайн
+description: Cisco Router 1941 не работает интернет в локальной сети Билай
+keywords: Cisco Router 1941, Билайн, проблемы с интернетом, dhcp
 permalink: /devices/cisco/routers/1941/beeline-not-works/
 ---
 
-# Cisco Router 1941 отвалился интернет в локальной сети Билайн
+# Cisco Router 1941 не работает интернет в локальной сети Билайн
 
 <br/>
 
 **Последний раз аналогичная проблема:**<br/>
 
-26.10.2019 - 4 часа, 2 минуты
+
+11.04.2020 - 8 minutes
+
+10.04.2020 - 2 часа 40 минут
+
 
 <br/>
 
 Ранее:<br/>
+
+26.10.2019 - 4 часа, 2 минуты
 
 16.10.2019 - 3 часа, 18 минут
 
@@ -24,7 +30,7 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 02.04.2019 - 15 минут
 
-05.03.2019 - Интернета не было > 12 часов
+05.03.2019 - Более 12 часов
 
 <br/>
 <br/>
@@ -44,13 +50,15 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 <br/>
 
-Итого на чей стороне проблемы:
+**Итого на чей стороне проблемы:**
 
-2 (Me) : 7 (Beeline)
+2 (Me) : 9 (Beeline)
 
 <br/>
 
 ### Что делаем в таких случаях
+
+    $ ssh -c aes256-cbc 192.168.1.1
 
     cisco-router-1941> en
 

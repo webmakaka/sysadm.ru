@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Сеть в Ubuntu
+description: Сеть в Ubuntu
+keywords: ubuntu, network
 permalink: /linux/ubuntu/network/
 ---
 

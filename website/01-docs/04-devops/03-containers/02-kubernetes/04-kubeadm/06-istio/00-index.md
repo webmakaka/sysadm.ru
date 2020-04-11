@@ -29,7 +29,7 @@ https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-### [Устанавливаем Helm и Tiller](/devops/containers/kubernetes/kubeadm/heml/install/)
+### [Устанавливаем Helm и Tiller](/devops/containers/kubernetes/packaging/heml/install/)
 
 ### [Устанавливаем MetalLB](/devops/containers/kubernetes/kubeadm/metal-load-balancer/)
 
