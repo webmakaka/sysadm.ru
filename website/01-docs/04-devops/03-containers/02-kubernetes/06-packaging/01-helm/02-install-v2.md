@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Подготовка и установка Helm Tiller
-description: Подготовка и установка Helm Tiller
-keywords: linux, helm, tiller, install
-permalink: /devops/containers/kubernetes/packaging/heml/install/
+title: Подготовка и установка Helm2/Tiller
+description: Подготовка и установка Helm2/Tiller
+keywords: linux, helm2, tiller, install
+permalink: /devops/containers/kubernetes/packaging/heml2/install/
 ---
 
-# Подготовка и установка Helm/Tiller
+# Подготовка и установка Helm2/Tiller
 
 <br/>
 
@@ -52,14 +52,6 @@ https://www.youtube.com/watch?v=dfQIzPUW8mQ
     // Посмотреть релизы
     https://github.com/helm/helm/releases
 
-<br/>
-
-### Инсталляция версии 3 (Пока юзаю версию 2)
-
-    $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-
-    $ helm version --short --client
-    v3.0.0+ge29ce2a
 
 <br/>
 

@@ -1,23 +1,33 @@
 ---
 layout: page
 title: Запуск и останов minikube
+description: Запуск и останов minikube
+keywords: linux, minikube, start, stop, delete
 permalink: /devops/containers/kubernetes/minikube/run-stop-minikube/
 ---
 
 # Запуск и останов minikube
+
+UPD. Если установить в системе docker. То для запуска minikube будет использоваться он, а не VirtualBox. 
+
+Как следствие команды для работы с VirtualBox работать не будут.
+
+
+<br/>
 
 Можно запускать с параметрами по умолчанию, не задавая никаких профилей.
 Так даже проще.
 
 <br/>
 
-    $ minikube start 
+    $ minikube start --memory 4096 --cpus 2
 
 <br/>
 
     $ kubectl get nodes
-    NAME       STATUS   ROLES    AGE   VERSION
-    minikube   Ready    master   80s   v1.17.3
+    NAME       STATUS     ROLES    AGE   VERSION
+    minikube   NotReady   master   14s   v1.18.0
+
 
 <br/>
 
@@ -38,6 +48,7 @@ $ minikube --profile my-profile config set cpus 2
 $ minikube --profile my-profile config set vm-driver virtualbox
 
 // Если нужно задать определенную версию kubernetes
+// $ minikube --profile my-profile config set kubernetes-version v1.16.8
 $ minikube --profile my-profile config set kubernetes-version v1.14.0
 $ minikube --profile my-profile config set dashboard false
 $ minikube start --profile my-profile

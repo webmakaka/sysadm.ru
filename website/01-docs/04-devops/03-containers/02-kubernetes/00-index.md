@@ -27,7 +27,7 @@ Kubernets он как квантовая механика. Стоит пол г�
 
 <br/>
 
-### Толковые (мне нравятся) и актуальные (на 2019) видео по Kubernetes от индуса
+### Толковые (мне нравятся) и актуальные (на 2019) видео по Kubernetes от индуса по имени Venkat
 
 <div align="center">
     <iframe width="853" height="480" src="https://www.youtube.com/embed/YzaYqxW0wGs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

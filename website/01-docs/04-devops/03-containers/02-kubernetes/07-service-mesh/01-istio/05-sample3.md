@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Istio
-permalink: /devops/containers/kubernetes/kubeadm/istio/
+title: Istio в локальном kubernetes кластере
+description: Istio в локальном kubernetes кластере
+keywords: linux, kubernetes, Istio
+permalink: /devops/containers/kubernetes/service-mesh/istio/sample3/
 ---
 
-# Istio
+# Istio в локальном kubernetes кластере
 
 <br/>
 
@@ -13,7 +15,7 @@ permalink: /devops/containers/kubernetes/kubeadm/istio/
 
 <br/>
 
-По материалам из видео индуса:
+По материалам из видео индуса Венката:
 
 https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0&index=53
 
@@ -119,7 +121,7 @@ https://istio.io/docs/setup/install/helm/#option-2-install-with-helm-and-tiller-
 
 <br/>
 
-### [ Kube 51 ] Istio Deploying sample Bookinfo application (НЕ ЗАРАБОТАЛО!!!)
+### [ Kube 51 ] Istio Deploying sample Bookinfo application
 
 https://istio.io/docs/examples/bookinfo/
 
@@ -196,7 +198,7 @@ http://192.168.0.21/productpage
 
 <br/>
 
-![Istio](/img/devops/containers/kubernetes/kubeadm/istio/pic-01.png "Istio"){: .center-image }
+![Istio](/img/devops/containers/kubernetes/service-mesh/istio/pic-01.png "Istio"){: .center-image }
 
 <!--
 

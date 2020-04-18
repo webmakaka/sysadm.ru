@@ -30,6 +30,7 @@ Replica Sets и Replication Controller считаются устаревшими
 
 ### [Services: ClusterIP, NodePort, LoadBalancer, Ingress](/devops/containers/kubernetes/basics/services/)
 
+
 <br/>
 
     -- Get the token

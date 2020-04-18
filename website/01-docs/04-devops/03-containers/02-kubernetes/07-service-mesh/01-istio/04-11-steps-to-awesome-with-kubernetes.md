@@ -1,10 +1,12 @@
 ---
 layout: page
 title: Istio в minikube
-permalink: /devops/containers/kubernetes/minikube/istio/
+description: Istio в minikube
+keywords: linux, kubernetes, Istio, MiniKube
+permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/11-steps-to-awesome-with-kubernetes/
 ---
 
-# Istio в minikube
+# Istio в minikube. Примеры из курса "11 Steps to Awesome with Kubernetes, Istio, and Knative LiveLessons"
 
 Делаю:  
 01.12.2019
@@ -44,7 +46,6 @@ $ export PATH=$ISTIO_HOME/bin:$PATH
 $ cd $ISTIO_HOME
 
 $ for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
-
 
 $ kubectl apply -f install/kubernetes/istio-demo.yaml
 
@@ -155,7 +156,7 @@ customer-gateway   [customer-gateway]   [*]     2m57s
 
 ```
 
-$ kubectl get services -n istio-system
+  $ kubectl get services -n istio-system
 
 Видим
 istio-ingressgateway -> 31380/TCP
@@ -303,7 +304,3 @@ $ while true; do curl curl 192.168.99.164:31380/customer; sleep .3; done
 
 ```
 
-<br/>
-<br/>
-
-Взято из видеокурса: "11 Steps to Awesome with Kubernetes, Istio, and Knative LiveLessons"

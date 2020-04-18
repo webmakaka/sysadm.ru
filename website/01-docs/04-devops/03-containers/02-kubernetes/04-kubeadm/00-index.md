@@ -38,15 +38,15 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [Setup Lets Encrypt cert-manager in Kubernetes Bare Metal](/devops/containers/kubernetes/kubeadm/lets-encrypt/)
 
-### [Istio](/devops/containers/kubernetes/kubeadm/istio/)
+### [Istio](/devops/containers/kubernetes/service-mesh/istio/)
 
 <br/>
 
 ### Ci/CD
 
-### [Introduction to Argo CD : Kubernetes DevOps CI/CD]](https://www.youtube.com/watch?v=2WSJF7d8dUg)
+### [YouTube - Introduction to Argo CD : Kubernetes DevOps CI/CD]](https://www.youtube.com/watch?v=2WSJF7d8dUg)
 
-### [How to deploy Jenkins on Kubernetes for CI/CD]](https://www.youtube.com/watch?v=eRWIJGF3Y2g)
+### [YouTube - How to deploy Jenkins on Kubernetes for CI/CD]](https://www.youtube.com/watch?v=eRWIJGF3Y2g)
 
 <br/>
 
