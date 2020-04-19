@@ -26,7 +26,7 @@ https://www.youtube.com/watch?v=CmPdyvgmw-A&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 -   Подняли Dynamic NFS
 -   Инсталлировали helm
 
-как <a href="/devops/containers/kubernetes/packaging/heml/install/">здесь</a>
+как <a href="/devops/containers/kubernetes/packaging/heml2/install/">здесь</a>
 
 <br/>
 
