@@ -7,15 +7,15 @@ permalink: /devops/containers/kubernetes/minikube/svc/load-balancer/
 # Создание службы LoadBalancer
 
 Делаю:  
-02.03.2019
+21.04.2020
 
-Replica Set созданы как<a href="/devops/containers/kubernetes/minikube/svc/nodeport/">здесь</a>
+Deployment создан как<a href="/devops/containers/kubernetes/minikube/svc/nodeport/">здесь</a>
 
 <br/>
 
-    $ vi nodejs-casts-app-svc-loadbalancer.yaml
 
 ```
+$ cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: Service
 metadata:
@@ -25,25 +25,50 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
+    nodePort: 30123
   selector:
-    app: nodejs-casts-app
+    app: nodejs-cats-app
+    env: dev
+EOF
 ```
 
-<br/>
-
-    $ kubectl create -f nodejs-casts-app-svc-loadbalancer.yaml
 
 <br/>
 
     $ kubectl get svc
-    NAME                              TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
-    kubernetes                        ClusterIP      10.96.0.1       <none>        443/TCP        9m15s
-    nodejs-casts-app-loadbalancer   LoadBalancer   10.104.16.155   <pending>     80:30340/TCP   11s
+    NAME                            TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+    nodejs-casts-app-loadbalancer   LoadBalancer   10.104.115.199   <pending>     80:30123/TCP   55s
 
 <br/>
 
-    $ echo $(minikube service nodejs-casts-app-loadbalancer --url)
-    http://192.168.99.105:30340
+
+    $ kubectl describe svc nodejs-casts-app-loadbalancer
+    Name:                     nodejs-casts-app-loadbalancer
+    Namespace:                demo
+    Labels:                   <none>
+    Annotations:              Selector:  app=nodejs-cats-app,env=dev
+    Type:                     LoadBalancer
+    IP:                       10.104.115.199
+    Port:                     <unset>  80/TCP
+    TargetPort:               8080/TCP
+    NodePort:                 <unset>  30123/TCP
+    Endpoints:                172.17.0.4:8080,172.17.0.5:8080,172.17.0.6:8080
+    Session Affinity:         None
+    External Traffic Policy:  Cluster
+    Events:                   <none>
+
+
+<br/>
+
+Чтобы работало, нужно чтобы в Endpoints были перечислены IP виртуальных подов и порты запущенных приложений.
+
+
+<br/>
+
+    // Если не используется профиль, удалить
+    // Если не используется namespace, таке можно убрать -n default
+    $ echo $(minikube --profile my-profile service nodejs-casts-app-loadbalancer -n default --url)
+    http://192.168.99.113:30123
 
 <br/>
 

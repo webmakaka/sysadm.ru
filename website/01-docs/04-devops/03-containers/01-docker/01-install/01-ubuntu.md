@@ -23,7 +23,7 @@ $ mkdir ~/tmp
 
 $ cd ~/tmp
 
-$ curl -LJO https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%201/Video%201.3/install-docker-and-docker-compose.sh
+$ curl -LJO https://raw.githubusercontent.com/webmakaka/Learning-GitLab/master/Section%201/Video%201.3/install-docker-and-docker-compose.sh
 
 $ chmod +x ./install-docker-and-docker-compose.sh
 
@@ -47,7 +47,7 @@ docker-compose version 1.25.4, build 8d51620a
 
     $ sudo su -
 
-    # curl -LJO https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%201/Video%201.3/install-docker.sh
+    # curl -LJO https://raw.githubusercontent.com/webmakaka/Learning-GitLab/master/Section%201/Video%201.3/install-docker.sh
 
     # chmod +x ./install-docker.sh
 
@@ -58,7 +58,7 @@ docker-compose version 1.25.4, build 8d51620a
 **+ сразу docker-compose**
 
 
-    # curl -LJO https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%201/Video%201.3/install-docker-compose.sh
+    # curl -LJO https://raw.githubusercontent.com/webmakaka/Learning-GitLab/master/Section%201/Video%201.3/install-docker-compose.sh
 
     # chmod +x ./install-docker-compose.sh
 

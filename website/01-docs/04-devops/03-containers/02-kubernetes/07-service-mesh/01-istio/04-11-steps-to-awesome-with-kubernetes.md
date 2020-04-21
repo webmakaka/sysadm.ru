@@ -176,7 +176,6 @@ customer => preference => recommendation v1 from '7d55547f-mg2r8': 205
 ```
 $ while true; do curl curl 192.168.99.164:31380/customer; sleep .3; done
 
-
 ```
 
 <br/>

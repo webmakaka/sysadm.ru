@@ -18,7 +18,7 @@ permalink: /devops/clouds/google/gke/google/cats-app/
 
 <br/>
 
-    $ kubectl apply -f https://raw.githubusercontent.com/marley-nodejs/cats-app/master/minikube/minikube-cats-app-deployment.yaml
+    $ kubectl apply -f https://raw.githubusercontent.com/webmakaka/cats-app/master/minikube/minikube-cats-app-deployment.yaml
 
 
 <br/>

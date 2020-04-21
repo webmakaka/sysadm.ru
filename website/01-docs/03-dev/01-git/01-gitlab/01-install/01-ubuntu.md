@@ -351,7 +351,7 @@ https://www.alibabacloud.com/blog/up-and-running-with-gitlab-ci%2Fcd-on-alibaba-
 
 **Добавляю в корень проекта .gitlab-ci.yml:**
 
-https://raw.githubusercontent.com/marley-nodejs/Learning-GitLab/master/Section%203/Video%203.1/.gitlab-ci.yml
+https://raw.githubusercontent.com/webmakaka/Learning-GitLab/master/Section%203/Video%203.1/.gitlab-ci.yml
 
 <br/>
 

@@ -53,6 +53,10 @@ minikube start --profile my-profile
 
 ### Запуск сервисов istio
 
+UPD. Окалазось istio уже есть среди предустановленных расширений на minikube, и можно просто активироваь.
+
+<br/>
+
 https://istio.io/docs/setup/additional-setup/config-profiles/
 
 

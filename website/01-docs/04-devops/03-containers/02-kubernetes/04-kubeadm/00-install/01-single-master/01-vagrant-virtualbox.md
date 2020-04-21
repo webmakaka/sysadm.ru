@@ -185,7 +185,7 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
 
 ### Запуск приложения в созданном кластере
 
-    $ kubectl run nodejs-cats-app --image=marley/nodejs-cats-app --port=8080 --generator=run/v1
+    $ kubectl run nodejs-cats-app --image=webmakaka/cats-app --port=8080 --generator=run/v1
 
 <br/>
 

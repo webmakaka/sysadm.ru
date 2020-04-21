@@ -123,7 +123,7 @@ EOF
 
 ### Еще одно приложение на 8080 порту
 
-    $ kubectl run cats-app-xxx2 --replicas=5 --labels="run=load-balancer-example" --image=marley/nodejs-cats-app:latest
+    $ kubectl run cats-app-xxx2 --replicas=5 --labels="run=load-balancer-example" --image=webmakaka/cats-app:latest
 
     $ kubectl expose deployment cats-app-xxx2 --type=LoadBalancer --name=cats-app-xxx2-service --port=8080
 
@@ -136,7 +136,7 @@ EOF
 
 ### Еще одно приложение на 80 порту
 
-    $ kubectl run cats-app-m3 --replicas=5 --labels="run=load-balancer-example" --image=marley/nodejs-cats-app:latest
+    $ kubectl run cats-app-m3 --replicas=5 --labels="run=load-balancer-example" --image=webmakaka/cats-app:latest
 
     $ kubectl expose deployment cats-app-m3 --type=LoadBalancer --name=cats-app-m3-service --target-port=8080 --port=80
 
@@ -262,7 +262,7 @@ spec:
     spec:
       containers:
       - name: cats-app-yyy2
-        image: marley/nodejs-cats-app:latest
+        image: webmakaka/cats-app:latest
         ports:
         - containerPort: 8080
 EOF
@@ -359,7 +359,7 @@ spec:
     spec:
       containers:
       - name: cats-app-yyy2
-        image: marley/nodejs-cats-app:latest
+        image: webmakaka/cats-app:latest
         ports:
         - containerPort: 8080
 EOF

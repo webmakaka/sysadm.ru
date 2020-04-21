@@ -12,7 +12,6 @@ permalink: /devops/containers/kubernetes/minikube/run-application/
 <br/>
 
 Все описано здесь.
-2 Приложения уже работают. 3-е в разработке.
 
 Буквально парой команд в minikube стартует контейнер с приложением.
 

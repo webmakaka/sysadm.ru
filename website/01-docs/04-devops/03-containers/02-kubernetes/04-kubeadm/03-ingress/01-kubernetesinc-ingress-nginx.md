@@ -117,7 +117,7 @@ spec:
     spec:
       containers:
       - name: nodejs-cats-app
-        image: marley/nodejs-cats-app:latest
+        image: webmakaka/cats-app:latest
 ---
 apiVersion: v1
 kind: Service

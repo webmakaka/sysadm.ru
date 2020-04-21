@@ -15,6 +15,27 @@ UPD. Если установить в системе docker. То для зап�
 
 <br/>
 
+### Запуск по умолчанию для своих примеров:
+
+```
+$ {
+minikube --profile my-profile config set memory 8192
+minikube --profile my-profile config set cpus 4
+
+minikube --profile my-profile config set vm-driver virtualbox
+// minikube --profile my-profile config set vm-driver docker
+
+minikube --profile my-profile config set kubernetes-version v1.16.1
+
+minikube --profile my-profile config set dashboard false
+
+minikube start --profile my-profile
+}
+```
+
+
+<br/>
+
 Можно запускать с параметрами по умолчанию, не задавая никаких профилей.
 Так даже проще.
 

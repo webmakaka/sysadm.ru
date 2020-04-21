@@ -109,7 +109,7 @@ spec:
     spec:
       containers:
       - name: nodejs-cats-app
-        image: marley/nodejs-cats-app
+        image: webmakaka/cats-app
 ```
 
 <br/>

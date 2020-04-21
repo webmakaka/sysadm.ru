@@ -10,9 +10,15 @@ Replica Sets и Replication Controller считаются устаревшими
 
 <br/>
 
-### [Kubernetes Pods, Replicasets & Deployments](/devops/containers/kubernetes/basics/pods-replicasets-deployments/)
-
 ### [Kubernetes Namespaces & Contexts](/devops/containers/kubernetes/basics/namespaces-and-contexts/)
+
+### [Pods](/devops/containers/kubernetes/basics/pods/)
+
+### [ReplicaSets (считается устаревшей. Рекомендуется использовать Deployments)](/devops/containers/kubernetes/basics/replicasets/)
+
+### [Deployments](/devops/containers/kubernetes/basics/deployments/)
+
+### [Services: ClusterIP, NodePort, LoadBalancer, Ingress](/devops/containers/kubernetes/basics/services/)
 
 ### [Node Selector in Kubernetes](/devops/containers/kubernetes/basics/node-selector/)
 
@@ -27,8 +33,6 @@ Replica Sets и Replication Controller считаются устаревшими
 ### [Init Containers in Kubernetes Cluster](/devops/containers/kubernetes/basics/init-containers/)
 
 ### [Resource Quotas & Limits in Kubernetes](/devops/containers/kubernetes/basics/resource-quotas-and-limits/)
-
-### [Services: ClusterIP, NodePort, LoadBalancer, Ingress](/devops/containers/kubernetes/basics/services/)
 
 
 <br/>

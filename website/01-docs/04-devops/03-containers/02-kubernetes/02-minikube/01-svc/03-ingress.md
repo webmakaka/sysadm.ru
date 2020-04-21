@@ -7,9 +7,9 @@ permalink: /devops/containers/kubernetes/minikube/svc/ingress/
 # Создание службы Ingress
 
 Делаю:  
-02.03.2019
+21.04.2020
 
-Replica Set и NodePort уже созданы как <a href="/devops/containers/kubernetes/minikube/svc/nodeport/">здесь</a>
+Deployment и NodePort уже созданы как <a href="/devops/containers/kubernetes/minikube/svc/nodeport/">здесь</a>
 
 <br/>
 
@@ -17,24 +17,23 @@ Replica Set и NodePort уже созданы как <a href="/devops/containers
 
 <br/>
 
-    $ minikube addons list
+    $ minikube --profile my-profile addons list
     - ingress: disabled
 
     // Включение функционала Ingress в Minikube
-    $ minikube addons enable ingress
+    $ minikube addons --profile my-profile enable ingress
 
     $ kubectl get po --all-namespaces | grep ingres
-    kube-system   nginx-ingress-controller-7c66d668b-l7vdr   1/1
+    kube-system   nginx-ingress-controller-6fc5bcc8c9-rplp8   0/1     ContainerCreating   0          12s
+
 
 <br/>
 
 ### Запускаем приложение
 
-<br/>
-
-    $ vi nodejs-cats-app-svc-ingress.yaml
 
 ```
+$ cat <<EOF | kubectl apply -f -
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -48,28 +47,27 @@ spec:
         backend:
           serviceName: nodejs-cats-app-nodeport
           servicePort: 80
+EOF
 ```
 
-<br/>
-
-    $ kubectl create -f nodejs-cats-app-svc-ingress.yaml
 
 <br/>
 
     $ kubectl get ingresses
-    NAME                         HOSTS                            ADDRESS   PORTS   AGE
-    nodejs-cats-app-ingress   nodejs-cats-app.example.com             80      7s
+    NAME                      HOSTS                         ADDRESS   PORTS   AGE
+    nodejs-cats-app-ingress   nodejs-cats-app.example.com             80      23s
+
 
 <br/>
 
-    $ minikube ip
-    192.168.99.105
+    $ minikube --profile my-profile ip
+    192.168.99.113
 
 <br/>
 
-    # vi /etc/hosts
+    $ sudo vi /etc/hosts
 
-    192.168.99.105 nodejs-cats-app.example.com
+    192.168.99.113 nodejs-cats-app.example.com
 
 <br/>
 
@@ -79,5 +77,13 @@ http://nodejs-cats-app.example.com
 
 <br/>
 
-    // Если не нужно, удалить
+Все работает!
+
+<br/>
+
+    // Удалить ingress
     $ kubectl delete ingress nodejs-cats-app-ingress
+
+    // И остальное
+    $ kubectl delete svc nodejs-cats-app-nodeport
+    $ kubectl delete deployment nodejs-cats-app

@@ -30,7 +30,7 @@ https://github.com/webmakaka/Docker-and-Kubernetes-The-Complete-Guide-Deploy-on-
 
 **Само приложение:**
 
-![Docker and Kubernetes The Complete Guide](https://raw.githubusercontent.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-01.png 'Docker and Kubernetes The Complete Guide'){: .center-image }
+![Docker and Kubernetes The Complete Guide](https://raw.githubusercontent.com/webmakaka/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-01.png 'Docker and Kubernetes The Complete Guide'){: .center-image }
 
 <br/>
 
@@ -185,7 +185,7 @@ http://grider-app.com/api/values/all
 
 **Ожидаемый результат:**
 
-![Docker and Kubernetes The Complete Guide](https://raw.githubusercontent.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-05.png 'Docker and Kubernetes The Complete Guide'){: .center-image }
+![Docker and Kubernetes The Complete Guide](https://raw.githubusercontent.com/webmakaka/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-05.png 'Docker and Kubernetes The Complete Guide'){: .center-image }
 
 <br/>
 

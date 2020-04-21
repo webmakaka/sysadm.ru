@@ -6,8 +6,8 @@ permalink: /devops/containers/kubernetes/minikube/svc/nodeport/
 
 # Создание службы Nodeport
 
-Делаю:  
-02.03.2019
+Обновлено:  
+21.04.2020
 
 <br/>
 
@@ -19,11 +19,11 @@ permalink: /devops/containers/kubernetes/minikube/svc/nodeport/
 
 <br/>
 
-    $ vi nodejs-cats-app-replicaset.yaml
 
 ```
-apiVersion: apps/v1beta2
-kind: ReplicaSet
+$ cat <<EOF | kubectl apply -f -
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: nodejs-cats-app
 spec:
@@ -35,19 +35,22 @@ spec:
     metadata:
       labels:
         app: nodejs-cats-app
+        env: dev
     spec:
       containers:
       - name: nodejs-cats-app
-        image: marley/nodejs-cats-app
+        image: webmakaka/cats-app
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+EOF
 ```
-
-    $ kubectl create -f nodejs-cats-app-replicaset.yaml
 
 <br/>
 
-    $ vi nodejs-cats-app-svc-nodeport.yaml
 
 ```
+$ cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: Service
 metadata:
@@ -60,7 +63,15 @@ spec:
     nodePort: 30123
   selector:
     app: nodejs-cats-app
+EOF
 ```
+
+<br/>
+
+    port: 80 - хз для чего задаем.
+    targetPort: 8080 - порт на котором работает приложение внутри pod. Или, наверное даже это из deployment.
+    nodePort: 30123 - то к какому порту обращаться на этот под.
+
 
 <br/>
 
@@ -69,22 +80,26 @@ spec:
 <br/>
 
     $ kubectl get pods
-    NAME                       READY   STATUS    RESTARTS   AGE
-    nodejs-cats-app-5z649   1/1     Running   0          35s
-    nodejs-cats-app-9kfc6   1/1     Running   0          35s
-    nodejs-cats-app-wsll5   1/1     Running   0          35s
+    NAME                               READY   STATUS    RESTARTS   AGE
+    nodejs-cats-app-774f89d47b-2tbrj   1/1     Running   0          61s
+    nodejs-cats-app-774f89d47b-8hjrv   1/1     Running   0          61s
+    nodejs-cats-app-774f89d47b-lwc85   1/1     Running   0          61s
+
 
 <br/>
 
     $ kubectl get svc
-    NAME                          TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
-    kubernetes                    ClusterIP   10.96.0.1      <none>        443/TCP        5m20s
-    nodejs-cats-app-nodeport   NodePort    10.111.60.77   <none>        80:30123/TCP   31s
+    NAME                       TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+    nodejs-cats-app-nodeport   NodePort   10.109.227.32   <none>        80:30123/TCP   22s
+
 
 <br/>
 
-    $ echo $(minikube service nodejs-cats-app-nodeport --url)
-    http://192.168.99.105:30123
+    // Если не используется профиль, удалить
+    // Если не используется namespace, таке можно убрать -n default
+    $ echo $(minikube --profile my-profile service nodejs-cats-app-nodeport -n default --url)
+    http://192.168.99.113:30123
+
 
 <br/>
 
@@ -94,4 +109,4 @@ spec:
 
     // Если понадобится удалить
     $ kubectl delete svc nodejs-cats-app-nodeport
-    $ kubectl delete rs nodejs-cats-app
+    $ kubectl delete deployment nodejs-cats-app

@@ -40,7 +40,7 @@ permalink: /devops/containers/kubernetes/minikube/run-application-archive/
 ### Запуск без конфигов JSON / YAML
 
     // Делал с ключом run-pod, были какие-то проблемы
-    $ kubectl run nodejs-cats-app --image=marley/nodejs-cats-app --port=8080 --generator=run/v1
+    $ kubectl run nodejs-cats-app --image=webmakaka/cats-app --port=8080 --generator=run/v1
 
     kubectl run --generator=run/v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
     replicationcontroller/nodejs-cats-app created

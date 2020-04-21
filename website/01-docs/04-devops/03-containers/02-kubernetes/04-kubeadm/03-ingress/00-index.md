@@ -10,7 +10,7 @@ permalink: /devops/containers/kubernetes/kubeadm/ingress/
 
 <br/>
 
-![Kubernetes Ingress](https://raw.githubusercontent.com/marley-nodejs/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-02.png "Kubernetes Ingress"){: .center-image }
+![Kubernetes Ingress](https://raw.githubusercontent.com/webmakaka/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-02.png "Kubernetes Ingress"){: .center-image }
 
 <br/>
 

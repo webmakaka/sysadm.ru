@@ -18,11 +18,11 @@ permalink: /devops/containers/kubernetes/kubeadm/minikube-ingress-nginx/
 
     $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
 
-    $ kubectl apply -f https://raw.githubusercontent.com/marley-nodejs/cats-app/master/minikube-cats-app-deployment.yaml
+    $ kubectl apply -f https://raw.githubusercontent.com/webmakaka/cats-app/master/minikube-cats-app-deployment.yaml
 
-    $ kubectl apply -f https://raw.githubusercontent.com/marley-nodejs/cats-app/master/minikube-cats-app-cluster-ip-service.yaml
+    $ kubectl apply -f https://raw.githubusercontent.com/webmakaka/cats-app/master/minikube-cats-app-cluster-ip-service.yaml
 
-    $ kubectl apply -f https://raw.githubusercontent.com/marley-nodejs/cats-app/master/minikube-cats-app-ingress-service.yaml
+    $ kubectl apply -f https://raw.githubusercontent.com/webmakaka/cats-app/master/minikube-cats-app-ingress-service.yaml
 
 <br/>
 
