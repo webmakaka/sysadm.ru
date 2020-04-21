@@ -14,7 +14,7 @@ Deprecated конфиги можно автоматически проапгде
 
 <br/>
 
-### [Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox](/devops/containers/kubernetes/kubeadm/prepared-cluster/)
+### [Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox](/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/)
 
 ### [Persistent Volumes и Claims в Kubernetes Cluster](/devops/containers/kubernetes/kubeadm/persistence/)
 

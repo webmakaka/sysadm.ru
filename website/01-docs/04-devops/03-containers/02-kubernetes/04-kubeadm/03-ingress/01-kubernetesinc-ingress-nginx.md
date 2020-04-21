@@ -11,7 +11,7 @@ permalink: /devops/containers/kubernetes/kubeadm/ingress/kubernetesinc-ingress-n
 
 # Пример из видеокурса Learn DevOps The Complete Kubernetes Course
 
-Подготовили кластер и окружение как <a href="/devops/containers/kubernetes/kubeadm/prepared-cluster/">здесь</a>.
+Подготовили кластер и окружение как <a href="/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/">здесь</a>.
 
 <br/>
 

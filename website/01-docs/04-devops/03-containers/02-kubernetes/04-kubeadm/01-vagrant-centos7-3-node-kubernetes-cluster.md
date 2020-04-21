@@ -2,8 +2,8 @@
 layout: page
 title: Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 description: Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
-keywords: Kubernetes, virtualbox
-permalink: /devops/containers/kubernetes/kubeadm/prepared-cluster/
+keywords: Kubernetes, virtualbox, centos7
+permalink: /devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/
 ---
 
 # Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
@@ -174,4 +174,4 @@ forward . 8.8.8.8:53
 
 <br/>
 
-###  <a href="/devops/containers/kubernetes/kubeadm/prepared-cluster-error/">Если что-то не так</a>
+###  <a href="/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster-error/">Если что-то не так</a>

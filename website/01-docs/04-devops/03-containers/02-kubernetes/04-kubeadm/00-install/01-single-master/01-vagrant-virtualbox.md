@@ -11,7 +11,7 @@ permalink: /devops/containers/kubernetes/kubeadm/install/single-master/vagrant-v
 
 <br/>
 
-Есть уже <a href="/devops/containers/kubernetes/kubeadm/prepared-cluster/">подготовленный вариант</a> развертывания kubernetes скриптами, где не нужно самому что-либо делать. Здесь информация, если хочется поднять самостоятельно.
+Есть уже <a href="/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/">подготовленный вариант</a> развертывания kubernetes скриптами, где не нужно самому что-либо делать. Здесь информация, если хочется поднять самостоятельно.
 
 <br/>
 

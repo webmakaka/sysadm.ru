@@ -41,7 +41,7 @@ https://www.youtube.com/watch?v=dfQIzPUW8mQ
 
 <br/>
 
-Подготовили кластер и окружение как <a href="/devops/containers/kubernetes/kubeadm/prepared-cluster/">здесь</a>.
+Подготовили кластер и окружение как <a href="/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/">здесь</a>.
 
 Подняли Dynamic NFS как<a href="/devops/containers/kubernetes/kubeadm/persistence/dynamic-nfs-provisioning/">здесь</a>
 

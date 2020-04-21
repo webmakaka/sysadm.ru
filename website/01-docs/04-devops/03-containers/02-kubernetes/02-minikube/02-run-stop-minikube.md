@@ -33,8 +33,14 @@ minikube start --profile my-profile
 }
 ```
 
+<br/>
+
+    // Удалить
+    // $ minikube --profile my-profile stop && minikube --profile my-profile delete
+
 
 <br/>
+
 
 Можно запускать с параметрами по умолчанию, не задавая никаких профилей.
 Так даже проще.

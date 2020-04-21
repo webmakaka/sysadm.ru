@@ -38,7 +38,7 @@ $ sudo rm -rf /usr/local/bin/kubectl
 
 <br/>
 
-### [Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster](/devops/containers/kubernetes/kubeadm/prepared-cluster/)
+### [Vagrant Скрипты разворачивающие Single Master Kubernetes Cluster](/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/)
 
 <br/>
 

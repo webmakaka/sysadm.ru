@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
-permalink: /devops/containers/kubernetes/kubeadm/prepared-cluster-error/
+title: Ошибки, возникавшие при работе с Single Master Kubernetes Cluster в VirtualBox
+description: Ошибки, возникавшие при работе с Single Master Kubernetes Cluster в VirtualBox
+keywords: Kubernetes, virtualbox, centos7, errors
+permalink: /devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster-error/
 ---
-
 
 <br/>
 
-# Если что-то не так
+# Ошибки, возникавшие при работе с Single Master Kubernetes Cluster в VirtualBox
 
     $ kubectl get nodes
     NAME         STATUS     ROLES    AGE   VERSION

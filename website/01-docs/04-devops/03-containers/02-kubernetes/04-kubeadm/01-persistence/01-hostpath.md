@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=I9GMUn15Nes&index=14&list=PL34sAs7_26wNBRWM6BDhn
 
 Смысл показать, что если данные хранятся на одной ноде, а потом кластер переключится на другую. То данные автоматически не перенесутся и у приложения не будет каких-либо данных.
 
-Подготовили кластер как <a href="/devops/containers/kubernetes/kubeadm/prepared-cluster/">здесь</a>.
+Подготовили кластер как <a href="/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/">здесь</a>.
 
 <br/>
 
