@@ -9,7 +9,7 @@ permalink: /devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernet
 # Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 
 Делаю  
-10.04.2019
+10.04.2020
 
 Предполагается что уже установлен <a href="/linux/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/devops/containers/kubernetes/install/">kubectl</a>.
 

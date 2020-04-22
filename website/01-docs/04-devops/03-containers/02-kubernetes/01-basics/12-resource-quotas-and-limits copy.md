@@ -120,7 +120,6 @@ spec:
       limits:
         memory: "100Mi"
 EOF
-
 ```
 
 <br/>

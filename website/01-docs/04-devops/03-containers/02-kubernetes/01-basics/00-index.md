@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Основы Kubernets
+description: Основы Kubernets
+keywords: linux, kubernetes
 permalink: /devops/containers/kubernetes/basics/
 ---
 
@@ -20,13 +22,13 @@ Replica Sets и Replication Controller считаются устаревшими
 
 ### [Services: ClusterIP, NodePort, LoadBalancer, Ingress](/devops/containers/kubernetes/basics/services/)
 
-### [Node Selector in Kubernetes](/devops/containers/kubernetes/basics/node-selector/)
-
-### [Jobs & Cronjobs in Kubernetes](/devops/containers/kubernetes/basics/jobs-and-cronjobs/)
+### [ConfigMaps in Kubernetes](/devops/containers/kubernetes/basics/config-maps/)
 
 ### [Secrets in Kubernetes](/devops/containers/kubernetes/basics/secrets/)
 
-### [ConfigMaps in Kubernetes](/devops/containers/kubernetes/basics/config-maps/)
+### [Node Selector in Kubernetes](/devops/containers/kubernetes/basics/node-selector/)
+
+### [Jobs & Cronjobs in Kubernetes](/devops/containers/kubernetes/basics/jobs-and-cronjobs/)
 
 ### [DaemonSets](/devops/containers/kubernetes/basics/daemon-sets/)
 
@@ -34,6 +36,9 @@ Replica Sets и Replication Controller считаются устаревшими
 
 ### [Resource Quotas & Limits in Kubernetes](/devops/containers/kubernetes/basics/resource-quotas-and-limits/)
 
+### [Blue / Green deployment](/devops/containers/kubernetes/basics/blue-green-deployment/)
+
+<!--
 
 <br/>
 
@@ -49,3 +54,6 @@ Replica Sets и Replication Controller считаются устаревшими
     $ echo $APISERVER
 
     $ curl $APISERVER --header "Authorization: Bearer $TOKEN" --insecure
+
+
+-->

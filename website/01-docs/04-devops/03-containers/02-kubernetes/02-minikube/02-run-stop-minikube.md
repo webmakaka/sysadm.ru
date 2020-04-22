@@ -25,10 +25,7 @@ minikube --profile my-profile config set cpus 4
 minikube --profile my-profile config set vm-driver virtualbox
 // minikube --profile my-profile config set vm-driver docker
 
-minikube --profile my-profile config set kubernetes-version v1.16.1
-
-minikube --profile my-profile config set dashboard false
-
+minikube --profile my-profile config set kubernetes-version v1.16.9
 minikube start --profile my-profile
 }
 ```

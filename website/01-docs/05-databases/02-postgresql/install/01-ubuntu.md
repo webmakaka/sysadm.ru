@@ -10,6 +10,8 @@ permalink: /databases/postgresql/install/ubuntu/
 
 19.08.2018
 
+
+
 ```
 
 $ sudo su -
@@ -35,6 +37,28 @@ $ PG_VERSION=9.6
 # systemctl enable postgresql
 
 ```
+
+<br/>
+
+Если нужно установить только psql клиент
+
+    $ sudo apt-get install -y postgresql-client
+    $ psql --version
+    PostgreSQL) 10.12 (Ubuntu 10.12-0ubuntu0.18.04.1)
+
+
+<br/>
+
+Можно также запустить pgadmin4 webclient
+
+```
+$ docker run -e PGADMIN_DEFAULT_EMAIL='username' -e PGADMIN_DEFAULT_PASSWORD='password' -p 5555:80 --name pgadmin dpage/pgadmin4
+```
+
+<br/>
+
+http://localhost:5555/
+
 
 <br/>
 

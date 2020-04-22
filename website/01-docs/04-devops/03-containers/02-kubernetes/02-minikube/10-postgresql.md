@@ -7,23 +7,11 @@ permalink: /devops/containers/kubernetes/minikube/postgresql/
 # Запуск базы postgresql в minikube
 
 Делаю:  
-30.11.2019
+21.04.2020
 
-kubernetes v1.16.2
+kubernetes v1.16.1
 
-```
-$ eval $(minikube docker-env)
-
-$ docker pull postgres:10.5
-
-$ kubectl get pv --all-namespaces
-No resources found
-
-$ kubectl get pvc --all-namespaces
-No resources found
-
-
-```
+https://github.com/burrsutter/9stepsawesome/blob/master/9_databases.adoc
 
 <br/>
 
@@ -46,7 +34,6 @@ spec:
   hostPath:
     path: "/data/mypostgresdata/"
 EOF
-
 ```
 
 <br/>
@@ -77,6 +64,14 @@ EOF
 $ kubectl get pv/postgres-pv
 NAME          CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                  STORAGECLASS   REASON   AGE
 postgres-pv   2Gi        RWO            Retain           Bound    default/postgres-pvc   mystorage               4m8s
+```
+
+<br/>
+
+```
+$ kubectl get pvc
+NAME           STATUS   VOLUME        CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+postgres-pvc   Bound    postgres-pv   2Gi        RWO            mystorage      73s
 ```
 
 <br/>
@@ -136,13 +131,46 @@ postgres-6df5c4bc5d-vmj2z   1/1     Running   0          73s
 <br/>
 
 ```
-$ kubectl port-forward <posgtres-pod> 5433:5432
+$ kubectl port-forward <posgtres-pod> 5432:5432
 
 ```
 
 <br/>
 
+    $ telnet localhost 5432
+    Trying 127.0.0.1...
+
+<br/>
+
+    // если нужен клиент psql
+    $ sudo apt-get install -y postgresql-client
+
+<br/>
+
+    // password - adminS3cret
+    $ psql -h localhost -p 5432 -U admin -W postgresdb
+
+OK
+
+<!--
+
+<br/>
+
+**Запускаю pgAdmin**
+
+```
+$ docker run -e PGADMIN_DEFAULT_EMAIL='username' -e PGADMIN_DEFAULT_PASSWORD='password' -p 5555:80 --name pgadmin dpage/pgadmin4
+```
+
+
+<br/>
+
 Запускаю в виртуалке minikube
+
+    $ minikube --profile my-profile ssh
+
+
+<br/>
 
 ```
 $ docker run -e PGADMIN_DEFAULT_EMAIL='username' -e PGADMIN_DEFAULT_PASSWORD='password' -p 5555:80 --name pgadmin dpage/pgadmin4
@@ -150,8 +178,14 @@ $ docker run -e PGADMIN_DEFAULT_EMAIL='username' -e PGADMIN_DEFAULT_PASSWORD='pa
 
 <br/>
 
-http://192.168.99.159:5555/
+    $ minikube --profile my-profile ip
+    192.168.99.115
+
+
 
 <br/>
 
-https://github.com/burrsutter/9stepsawesome/blob/master/9_databases.adoc
+http://192.168.99.115:5555/
+
+
+-->

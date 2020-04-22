@@ -33,7 +33,7 @@ https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 ### [Устанавливаем Helm и Tiller](/devops/containers/kubernetes/packaging/heml2/install/)
 
-### [Устанавливаем MetalLB](/devops/containers/kubernetes/kubeadm/metal-load-balancer/)
+### [Устанавливаем MetalLB](/devops/containers/kubernetes/kubeadm/metal-lb/)
 
 ### Подняли Dynamic NFS как<a href="/devops/containers/kubernetes/kubeadm/persistence/dynamic-nfs-provisioning/">здесь</a>
 

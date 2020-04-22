@@ -24,6 +24,43 @@ https://www.youtube.com/watch?v=ch9YlQZ4xTc&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 ### Secrets
 
+
+<br/>
+
+### Создать в командной строке
+
+    $ kubectl create secret generic secret-demo --from-literal=username='kubeadmin' --from-literal=password='mypassword'
+
+    $ kubectl get secrets
+    NAME                  TYPE                                  DATA   AGE
+    default-token-sljtn   kubernetes.io/service-account-token   3      26m
+    secret-demo           Opaque                                2      12s
+
+    $ kubectl describe secret secret-demo
+
+    $ kubectl get secrets -o yaml
+
+    $ echo 'bXlwYXNzd29yZA==' | base64 --decode
+    mypassword
+
+
+
+<br/>
+
+### Создать из файлов
+
+    $ vi username
+    username
+
+    $ vi password
+    password
+
+    $ kubectl create secret generic secret-demo --from-file=username=./username --from-file=password
+
+<br/>
+
+### Закодировать переменные
+
     $ echo -n 'kubeadmin' | base64
     a3ViZWFkbWlu
 
@@ -89,23 +126,7 @@ data:
 
     $ kubectl delete secret secret-demo
 
-<br/>
 
-### Создать в командной строке
-
-    $ kubectl create secret generic secret-demo --from-literal=username=kubeadmin --from-literal=password=mypassword
-
-<br/>
-
-### Создать из файлов
-
-    $ vi username
-    username
-
-    $ vi password
-    password
-
-    $ kubectl create secret generic secret-demo --from-file=username=./username --from-file=password
 
 <br/>
 

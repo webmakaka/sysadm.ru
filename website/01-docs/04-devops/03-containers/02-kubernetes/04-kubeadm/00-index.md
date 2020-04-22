@@ -1,9 +1,11 @@
 ---
 layout: page
 title: Kuberneters в виртуальных машинах и контейнерах
+description: Kuberneters в виртуальных машинах и контейнерах
+keywords: linux, kubernetes, kubeadm
 permalink: /devops/containers/kubernetes/kubeadm/
 ---
-
+ 
 # Kuberneters в виртуальных машинах и контейнерах
 
 ## Практические задачи
@@ -18,7 +20,7 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [Persistent Volumes и Claims в Kubernetes Cluster](/devops/containers/kubernetes/kubeadm/persistence/)
 
-### [MetalLB Load Balancer in Kubernetes](/devops/containers/kubernetes/kubeadm/metal-load-balancer/)
+### [MetalLB Load Balancer in Kubernetes](/devops/containers/kubernetes/kubeadm/metal-lb/)
 
 ### [Ingress](/devops/containers/kubernetes/kubeadm/ingress/)
 

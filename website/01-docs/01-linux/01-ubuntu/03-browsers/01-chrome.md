@@ -17,7 +17,7 @@ permalink: /linux/ubuntu/browsers/chrome/
 
 <br/>
 
-### Дополнительные Плагины
+### Дополнительные плагины
 
 * Quick JavaScript Switcher
 * EditThisCookie
@@ -25,6 +25,19 @@ permalink: /linux/ubuntu/browsers/chrome/
 * LanguageTool
 * Nimbus Screenshoot & Screen Video Recorder
 * Доступ рутрекер
+
+<br/>
+
+### Дополнительные плагины для GitHub
+
+* GitHub dark theme
+* Octotree
+* Enchanced GitHub
+* File icon for Github and Gitlab
+* Octolinker
+* Sourcegraph
+
+https://www.youtube.com/watch?v=0r2JwANUZwo
 
 <br/>
 

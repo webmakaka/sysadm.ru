@@ -26,7 +26,7 @@ minikube --profile my-profile config set cpus 4
 minikube --profile my-profile config set vm-driver virtualbox
 // minikube --profile my-profile config set vm-driver docker
 
-minikube --profile my-profile config set kubernetes-version v1.16.1
+minikube --profile my-profile config set kubernetes-version v1.16.9
 minikube start --profile my-profile
 }
 ```
@@ -40,7 +40,7 @@ minikube start --profile my-profile
 
     $ kubectl version --short
     Client Version: v1.18.1
-    Server Version: v1.16.1
+    Server Version: v1.16.9
 
 
 <br/>
@@ -54,6 +54,11 @@ minikube start --profile my-profile
 ### Запуск сервисов istio
 
 UPD. Окалазось istio уже есть среди предустановленных расширений на minikube, и можно просто активироваь.
+
+    $ minikube addons --profile my-profile enable istio
+
+Но чего-то не заработало из коробки на 16.9.
+
 
 <br/>
 

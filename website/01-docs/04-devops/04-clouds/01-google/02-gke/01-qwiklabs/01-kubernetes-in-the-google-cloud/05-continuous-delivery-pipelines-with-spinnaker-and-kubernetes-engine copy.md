@@ -221,7 +221,6 @@ halyard:
           --project $PROJECT \
           --message-format GCR
 EOF
-
 ```
 
 <br/>
