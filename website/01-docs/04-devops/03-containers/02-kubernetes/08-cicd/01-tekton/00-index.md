@@ -8,7 +8,6 @@ permalink: /devops/containers/kubernetes/cicd/tekton/
 
 # TekTon
 
-
 https://github.com/tektoncd/pipeline/blob/master/docs/install.md#installing-tekton-pipelines-on-kubernetes
 
 
@@ -19,22 +18,11 @@ https://github.com/tektoncd/pipeline/blob/master/docs/install.md#installing-tekt
 https://github.com/tektoncd/cli
 
 
-
     # Get the tar.xz
     $ curl -LO https://github.com/tektoncd/cli/releases/download/v0.8.0/tkn_0.8.0_Linux_x86_64.tar.gz
 
     # Extract tkn to your PATH (e.g. /usr/local/bin)
     $ sudo tar xvzf tkn_0.8.0_Linux_x86_64.tar.gz -C /usr/local/bin/ tkn
-
-<!--
-
-    $ sudo apt update;
-    $ sudo apt install -y gnupg
-    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3EFE0E0A2F2F60AA
-    $ echo "deb http://ppa.launchpad.net/tektoncd/cli/ubuntu eoan main"|sudo tee /etc/apt/sources.list.d/tektoncd-ubuntu-cli.list
-    $ sudo apt update && sudo apt install -y tektoncd-cli
-
--->
 
 
 <br/>
@@ -107,8 +95,19 @@ EOF
     $ tkn taskrun logs echo-hello-world-task-run
 
 
+
 <br/>
 
-### Пример с ютуба
+### Еще примерчик
 
-https://github.com/tektoncd/pipeline/tree/master/examples/v1beta1/
+https://github.com/webmakaka/tekton
+
+
+
+<br/>
+
+### Еще примерчик
+
+https://meteatamel.wordpress.com/2019/08/28/migrating-from-knative-build-to-tekton-pipelines/
+
+

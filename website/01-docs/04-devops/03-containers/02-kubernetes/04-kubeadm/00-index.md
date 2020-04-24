@@ -24,7 +24,6 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [Ingress](/devops/containers/kubernetes/kubeadm/ingress/)
 
-### [Kubernetes Package Manager (Helm)](/devops/containers/kubernetes/packaging/heml/)
 
 ### [Устанавливаем WEB GUI для управления Kubernetes кластером (Rancher)](/devops/containers/kubernetes/kubeadm/gui/rancher/)
 
@@ -40,15 +39,7 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [Setup Lets Encrypt cert-manager in Kubernetes Bare Metal](/devops/containers/kubernetes/kubeadm/lets-encrypt/)
 
-### [Istio](/devops/containers/kubernetes/service-mesh/istio/)
 
-<br/>
-
-### Ci/CD
-
-### [YouTube - Introduction to Argo CD : Kubernetes DevOps CI/CD]](https://www.youtube.com/watch?v=2WSJF7d8dUg)
-
-### [YouTube - How to deploy Jenkins on Kubernetes for CI/CD]](https://www.youtube.com/watch?v=eRWIJGF3Y2g)
 
 <br/>
 

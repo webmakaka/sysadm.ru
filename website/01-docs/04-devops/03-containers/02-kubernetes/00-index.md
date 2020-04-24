@@ -52,7 +52,7 @@ Kubernets он как квантовая механика. Стоит пол г�
 
 ### [Kuberneters в виртуальных машинах и контейнерах](/devops/containers/kubernetes/kubeadm/)
 
-### [Kuberneters в облаках](/devops/containers/kubernetes/devops/clouds/)
+### [Kuberneters в облаках](/devops/containers/kubernetes/clouds/)
 
 <br/>
 
@@ -65,3 +65,16 @@ http://kubernetes.io/docs/tutorials/
 
 **Kubernetes The Hard Way**  
 https://github.com/kelseyhightower/kubernetes-the-hard-way
+
+
+<br/>
+
+### [Kubernetes Package Manager (Helm)](/devops/containers/kubernetes/packaging/heml/)
+
+### [Service Mesh (ISTIO)](/devops/containers/kubernetes/service-mesh/istio/)
+
+<br/>
+
+### CI/CD
+
+### [CI/CD (Tekton)](/devops/containers/kubernetes/cicd/)

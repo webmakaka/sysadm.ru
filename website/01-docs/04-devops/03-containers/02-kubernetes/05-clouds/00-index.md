@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kuberneters в облаках
-permalink: /devops/containers/kubernetes/devops/clouds/
+permalink: /devops/containers/kubernetes/clouds/
 ---
 
 # Kuberneters в облаках

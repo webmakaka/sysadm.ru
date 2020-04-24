@@ -6,7 +6,9 @@ keywords: linux, kubernetes, Istio, MiniKube
 permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/11-steps-to-awesome-with-kubernetes/
 ---
 
-# Istio в minikube. Примеры из курса "11 Steps to Awesome with Kubernetes, Istio, and Knative LiveLessons"
+# Istio в minikube. 
+
+**Примеры из курса "11 Steps to Awesome with Kubernetes, Istio, and Knative LiveLessons"**
 
 Делаю:  
 22.04.2020

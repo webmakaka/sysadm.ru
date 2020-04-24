@@ -11,10 +11,22 @@ permalink: /devops/containers/kubernetes/packaging/heml3/install/
 <br/>
 
 Делаю:  
-16.04.2020
+23.04.2020
 
 
     $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
     $ helm version --short --client
-    v3.1.2+gd878d4d
+    v3.2.0+ge11b7ce
+
+
+<br/>
+
+    $ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+
+    // To remove
+    // $ helm repo remove stable
+
+    $ helm repo update
+
+
