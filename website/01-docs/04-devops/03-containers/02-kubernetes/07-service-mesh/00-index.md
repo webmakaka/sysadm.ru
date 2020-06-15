@@ -13,3 +13,10 @@ permalink: /devops/containers/kubernetes/service-mesh/
 ### [Linkerd]
 
 ### [App Mesh]
+
+<br/>
+
+**Некоторые аббревиатуры:**
+
+    get virtualservices (get vs)
+    get destinationrules (get dr)

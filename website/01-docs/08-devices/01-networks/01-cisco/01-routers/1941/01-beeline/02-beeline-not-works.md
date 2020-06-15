@@ -12,6 +12,7 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 **Последний раз аналогичная проблема:**<br/>
 
+25.04.2020 - 55 minutes
 
 11.04.2020 - 8 minutes
 
@@ -52,7 +53,7 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 **Итого на чей стороне проблемы:**
 
-2 (Me) : 9 (Beeline)
+2 (Me) : 10 (Beeline)
 
 <br/>
 

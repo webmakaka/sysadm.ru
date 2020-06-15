@@ -6,16 +6,30 @@ permalink: /devops/containers/kubernetes/minikube/svc/nodeport/
 
 # Создание службы Nodeport
 
+
 Обновлено:  
 21.04.2020
 
 <br/>
 
-    $ mkdir ~/nodejs-cats-app && cd ~/nodejs-cats-app
+**Nodeport используют в разработке. В остальных случаях, рекомендуют использовать LoadBalancer.**
 
 <br/>
 
-    $ minikube start
+**Запуск minikube**
+
+```
+$ {
+minikube --profile my-profile config set memory 8192
+minikube --profile my-profile config set cpus 4
+
+minikube --profile my-profile config set vm-driver virtualbox
+// minikube --profile my-profile config set vm-driver docker
+
+minikube --profile my-profile config set kubernetes-version v1.16.9
+minikube start --profile my-profile
+}
+```
 
 <br/>
 
@@ -73,9 +87,6 @@ EOF
     nodePort: 30123 - то к какому порту обращаться на этот под.
 
 
-<br/>
-
-    $ kubectl create -f nodejs-cats-app-svc-nodeport.yaml
 
 <br/>
 

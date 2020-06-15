@@ -26,6 +26,16 @@ permalink: /linux/ubuntu/browsers/chrome/
 * Nimbus Screenshoot & Screen Video Recorder
 * Доступ рутрекер
 
+<!--
+hola vpn
+-->
+
+<br/>
+
+### Могут понадобиться, но необязательные
+
+* cookies.txt
+
 <br/>
 
 ### Дополнительные плагины для GitHub

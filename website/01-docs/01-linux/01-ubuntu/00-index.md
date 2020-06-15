@@ -16,6 +16,8 @@ permalink: /linux/ubuntu/
 
 ### [Инсталляция SopCast и ACE плеера в Ubuntu](/linux/ubuntu/sopcast-ace-player-install/)
 
+### [Запись с экрана монитора в GIF](/linux/ubuntu/how-to-record-from-desktop-to-gif/)
+
 ### [Скачать playlist с youtube](/linux/ubuntu/download-youtube-playlist/)
 
 ### [Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.](/linux/ubuntu/download-from-file-hostings/)

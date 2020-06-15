@@ -25,7 +25,9 @@ minikube --profile my-profile config set cpus 4
 minikube --profile my-profile config set vm-driver virtualbox
 // minikube --profile my-profile config set vm-driver docker
 
-minikube --profile my-profile config set kubernetes-version v1.16.9
+minikube --profile my-profile config set disk-size 20g
+
+minikube --profile my-profile config set kubernetes-version v1.18.2
 minikube start --profile my-profile
 }
 ```
@@ -92,25 +94,35 @@ $ minikube --profile my-profile config view
 
 ```
 
+<br/>
+
 ```
 // Подключиться к виртуальной машине
 $ minikube --profile my-profile ssh
 ```
+
+<br/>
 
 ```
 $ minikube --profile my-profile ip
 192.168.99.155
 ```
 
+<br/>
+
 ```
 $ kubectl get events
 $ kubectl get events --sort-by=.metadata.creationTimestamp
 ```
 
+<br/>
+
 ```
 // Editor по умолчанию vscode
 $ export KUBE_EDITOR="code -w"
 ```
+
+<br/>
 
 ```
 $ minikube docker-env

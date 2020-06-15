@@ -32,8 +32,8 @@ permalink: /dev/git/commands/
 
 <br/>
 
-// Сделать VSCODE редактором по умолчанию
-\$ git config --global core.editor "code --wait"
+    // Задать VSCODE редактором по умолчанию
+    $ git config --global core.editor "code --wait"
 
 <br/>
 
