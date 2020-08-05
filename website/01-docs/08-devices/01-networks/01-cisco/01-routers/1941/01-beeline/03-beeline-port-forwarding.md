@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Cisco Router 1941 Проброс порта в локальную сеть Билайн
+description: Cisco Router 1941 Проброс порта в локальную сеть Билайн
+keywords: Cisco Router 1941, Проброс порта в локальную сеть Билайн
 permalink: /devices/cisco/routers/1941/beeline-port-forwarding/
 ---
 
@@ -9,6 +11,8 @@ permalink: /devices/cisco/routers/1941/beeline-port-forwarding/
 <strong>Проброс порта в локальную сеть.</strong>
 Для примера, пусть это будет вебсервер, который работает на хосте 192.168.1.101 и слушает порт 80.
 
+    // Коннект к cisco по ssh
+    $ ssh -c aes256-cbc 192.168.1.1
 
     cisco-router-1941> en
     cisco-router-1941# conf t
