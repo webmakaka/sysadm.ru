@@ -9,7 +9,7 @@ permalink: /devops/containers/docker/install/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 18.04.4 bionic64
 
 Делаю:  
-11.03.2020
+17.08.2020
 
 <br/>
 
@@ -23,7 +23,34 @@ $ mkdir ~/tmp
 
 $ cd ~/tmp
 
-$ curl -LJO https://raw.githubusercontent.com/webmakaka/Learning-GitLab/master/Section%201/Video%201.3/install-docker-and-docker-compose.sh
+$ vi install-docker-and-docker-compose.sh
+
+```
+# Install Docker
+
+sudo apt-get update
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt-get update
+sudo apt-get install -y docker-ce
+
+
+# Install Docker-Compose
+
+LATEST_VERSION=$(curl --silent "https://api.github.com/repos/docker/compose/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
+
+sudo curl -L "https://github.com/docker/compose/releases/download/${LATEST_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
 
 $ chmod +x ./install-docker-and-docker-compose.sh
 

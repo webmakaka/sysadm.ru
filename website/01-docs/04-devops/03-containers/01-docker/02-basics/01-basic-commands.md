@@ -191,7 +191,7 @@ https://hub.docker.com
 
     $ docker rm $(docker ps -qa --no-trunc --filter "status=exited")
 
-// Удалить все образы:
+// Удалить все images:
 
     # docker rmi $(docker images -q)
 

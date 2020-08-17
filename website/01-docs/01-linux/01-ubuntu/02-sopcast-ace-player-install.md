@@ -91,3 +91,13 @@ http://info.acestream.org/#/test
 -   pimpletv(.)ru
 -   livesport(.)ws (На них наехали, за РПФЛ обещали посадить на бутылку, а потом еще и РКН напал. В общем, спасибо РКН за блокировку сайта. Благодаря ей, трансляции возобновились)
 -   football-russia(.)tv (Похоже, здесь уже нечего ловить)
+
+
+<br/>
+
+## 07. Go Chaincode Stub
+
+<br/>
+
+### 03. Hands On Using functions for accessing Proposal elements
+

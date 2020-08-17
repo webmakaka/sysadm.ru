@@ -23,6 +23,12 @@ https://gitlab.com/rvasily/msu-go-11/tree/master
 
 **Инсталляция:**
 
+Вариант 1:
+
+    $ sudo apt install golang
+
+Вариант 2:
+
     # cd /tmp/
     # wget --no-check-certificate https://dl.google.com/go/go1.11.5.linux-amd64.tar.gz
     # tar -C /usr/local -xzf go1.11.5.linux-amd64.tar.gz
@@ -108,17 +114,15 @@ https://gitlab.com/rvasily/msu-go-11/tree/master
 
 <br/>
 
-{% highlight bash %}
-
-#### GO 1.9.2
+```
+#### GO 1.9.2 ########################
 
     export GO_HOME=/opt/go/current
     export GOPATH=$HOME/go
     export PATH=${GO_HOME}/bin:$PATH
 
 #######################################
-
-{% endhighlight %}
+```
 
 <br/>
 
