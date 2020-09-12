@@ -68,6 +68,7 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
     transmission \
     ffmpegthumbnailer \
     net-tools \
+    iputils-ping \
     rar unrar-free \
     wakeonlan \
     whois

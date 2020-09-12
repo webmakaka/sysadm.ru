@@ -69,19 +69,16 @@ https://gitlab.com/rvasily/msu-go-11/tree/master
 
 <br/>
 
-    # cd /tmp/
-    # wget --no-check-certificate https://redirector.gvt1.com/edgedl/go/go1.9.2.linux-amd64.tar.gz
+    $ cd ~/tmp/
+    $ wget --no-check-certificate https://golang.org/dl/go1.15.linux-amd64.tar.gz
 
 <br/>
 
-    # tar -xvzpf go1.9.2.linux-amd64.tar.gz
-    # mkdir -p /opt/go/1.9.2
-    # mv go/* /opt/go/1.9.2/
-    # ln -s /opt/go/1.9.2 /opt/go/current
+    $ tar -xvzpf go1.15.linux-amd64.tar.gz
+    $ sudo mkdir -p /opt/go.1.15
+    $ sudo mv go/* /opt/go.1.15/
+    $ sudo ln -s /opt/go.1.15/ /opt/go
 
-<br/>
-
-    # su - ${username}
 
 <br/>
 
@@ -106,36 +103,28 @@ https://gitlab.com/rvasily/msu-go-11/tree/master
 
     $ vi ~/.bash_profile
 
-<br/>
-
-После
-
-    # User specific environment and startup programs
 
 <br/>
 
 ```
-#### GO 1.9.2 ########################
+#### GO 1.15 ########################
 
-    export GO_HOME=/opt/go/current
-    export GOPATH=$HOME/go
+    export GO_HOME=/opt/go
     export PATH=${GO_HOME}/bin:$PATH
 
-#######################################
+#### GO 1.15 ########################
 ```
 
 <br/>
 
-     $ source ~/.bash_profile
+    $ source ~/.bash_profile
 
-<br/>
-
-    $ mkdir -p $GOPATH/src
 
 <br/>
 
     $ go version
-    go version go1.9.2 linux/amd64
+    go version go1.15 linux/amd64
+
 
 <br/>
 
