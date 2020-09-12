@@ -10,8 +10,14 @@ permalink: /linux/ubuntu/install/
 
 
 <ul>
-    <li><a href="/linux/ubuntu/install/steps-after-installation-ubuntu-18/">Шаги после инсталляции Ubuntu 18</a>
+    <li><a href="/linux/ubuntu/install/steps-after-installation-ubuntu-20.04-lts/">Шаги после инсталляции Ubuntu 20.04 LTS</a>
     </li>
+
+<!--
+
     <li><a href="/linux/ubuntu/install/steps-after-installation-ubuntu-14/">Шаги после инсталляции Ubuntu 14</a>
     </li>
+
+-->
+
 </ul>

@@ -204,7 +204,7 @@ Edit --> Keyboard shortcuts
 
 ### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
-https://sysadm.ru/linux/ubuntu/install/steps-after-installation-ubuntu-18/
+https://sysadm.ru/linux/ubuntu/install/steps-after-installation-ubuntu-20.04-lts/
 
 <br/>
 

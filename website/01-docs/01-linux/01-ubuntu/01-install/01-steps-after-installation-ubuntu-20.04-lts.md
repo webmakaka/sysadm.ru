@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Шаги после инсталляции Ubuntu 18 (для себя)
-description: Шаги после инсталляции Ubuntu 18 (для себя)
+title: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
+description: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 keywords: ubuntu, install
-permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
+permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-20.04-lts/
 ---
 
-# Шаги после инсталляции Ubuntu 18 (для себя)
+# Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 
 <br/>
 
@@ -15,13 +15,6 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
     $ sudo su -
     # apt update && apt-get upgrade -y
     # apt install -y vim curl git
-
-
-<br/>
-
-### Не спрашивать каждый раз пароль при комаде с sudo
-
-[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/small-improvements/)  
 
 
 <br/>
@@ -60,18 +53,18 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
 <br/>
 
     $ sudo apt install -y \
-    vim \
-    openssh-server \
-    traceroute \
-    vlc \
-    mpv \
-    transmission \
-    ffmpegthumbnailer \
-    net-tools \
-    iputils-ping \
-    rar unrar-free \
-    wakeonlan \
-    whois
+        vim \
+        openssh-server \
+        traceroute \
+        vlc \
+        mpv \
+        transmission \
+        ffmpegthumbnailer \
+        net-tools \
+        iputils-ping \
+        rar unrar-free \
+        wakeonlan \
+        whois
 
 <br/>
 
@@ -82,6 +75,15 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
     # reboot
 
 Перезагружаемся, при старте выбираем - gnome (Metacity)
+
+
+<br/>
+
+### Установить нормальный background
+
+    $ gsettings set org.gnome.desktop.background picture-options 'none'
+
+    $ gsettings set org.gnome.desktop.background primary-color '#548080'
 
 <br/>
 
@@ -94,52 +96,25 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-18/
 
 <br/>
 
+Keyboard & Mouse --> Switching to another layout --> Alt + Shift
+
+<br/>
+
 ### Установить формат дат в консоли на английский
 
 <br/>
 
     Applications --> System Tools --> System Settings --> Region & Language --> Formats --> United States
 
-<!-- <br/>
-
-### Первый день недели - понедельник
-
-    $ cd ~
-    $ cp .pam_environment .pam_environment.orig
-    $ vi .pam_environment
-
-добавить:
-
-    #Change first day of week to Monday
-    export LC_TIME=en_GB.UTF-8
-    #Change to metric system
-    export LC_MEASUREMENT=en_GB.UTF-8
-
-
-
-Вариант 2
-
-https://askubuntu.com/questions/6016/how-to-set-monday-as-the-first-day-of-the-week-in-gnome-calendar-applet
-
-/etc/default/locale
-
-LANG=en_US.UTF-8
-LANGUAGE=en_US
-LC_TIME="en_GB.UTF-8"
-LC_PAPER="en_GB.UTF-8"
-LC_MEASUREMENT="en_GB.UTF-8"
-
--->
-
 <br/>
 
 ### ПО CTRL + ALT + DELETE показывать текущие процессы
 
-Applications --> System Tools --> Preferences --> Settings --> Devices --> Keyboard
+Applications --> System Tools --> Preferences --> Settings --> Keyboard Shortcuts
 
 System --> Logout
 
-    Убрираем
+    Убираем
 
 <br/>
 
@@ -157,6 +132,12 @@ System --> Logout
 Terminal --> Preferences
 
 ![Отключить противный звук при ошибке в консоли](/img/linux/ubuntu/install/disable-sound-when-error-in-the-console.png "Отключить противный звук при ошибке в консоли"){: .center-image }
+
+<br/>
+
+### Не спрашивать каждый раз пароль при комаде с sudo
+
+[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/small-improvements/)  
 
 
 <br/>
@@ -205,6 +186,10 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 <br/>
 
+**Для этого:**
+
+<br/>
+
     $ cd /tmp
     $ curl https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt --output badwebsites.txt
 
@@ -218,6 +203,13 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 [Chrome](/linux/ubuntu/browsers/chrome/)  
 [Opera](/linux/ubuntu/browsers/opera/)
 
+
+<br/>
+
+Snap -> Telegram -> прописать автозапуск в gnome-tweaks
+
+<!--
+
 <br/>
 
 ### Автозапуск telegram
@@ -229,7 +221,7 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 <br/>
 
 
-Applications --> System Tools --> Preferences --> Startup Applications
+Applications -> System Tools -> Preferences -> Startup Applications
 
 <br/>
 
@@ -238,6 +230,8 @@ Command: /opt/telegram/Telegram -startintray
 
 ![Автозапуск telegram](/img/linux/ubuntu/install/autostart-telegram.png "Автозапуск telegram"){: .center-image }
 
+-->
+
 <br/>
 
 ### Убрать автовыключение монитора
@@ -245,3 +239,7 @@ Command: /opt/telegram/Telegram -startintray
 Applications --> System Tools --> Preferences --> Settings --> Power
 
 Power Saving --> Blank screen --> Never
+
+
+
+
