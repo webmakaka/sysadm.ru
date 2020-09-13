@@ -20,9 +20,9 @@ permalink: /devops/containers/kubernetes/minikube/
 
 ### Базовые вещи, чтобы ознакомиться как это все работает
 
-[Инсталляция kubectl ubuntu 18.04](/devops/containers/kubernetes/install/)
+[Инсталляция kubectl ubuntu 20.04.1](/devops/containers/kubernetes/install/)
 
-[Инсталляция minikube в ubuntu 18.04](/devops/containers/kubernetes/minikube/install/)
+[Инсталляция minikube в ubuntu 20.04.1](/devops/containers/kubernetes/minikube/install/)
 
 [Запуск и останов minikube](/devops/containers/kubernetes/minikube/run-stop-minikube/)
 
