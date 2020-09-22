@@ -14,7 +14,7 @@ permalink: /linux/ubuntu/
 
 ### [Инсталляция Libre Office](/linux/ubuntu/libreoffice/)
 
-### [Инсталляция SopCast и ACE плеера в Ubuntu](/linux/ubuntu/sopcast-ace-player-install/)
+### [Инсталляция ACE Stream и SopCast плеера в Ubuntu](/linux/ubuntu/ace-stream-sopcast-player-install/)
 
 ### [Запись с экрана монитора в GIF](/linux/ubuntu/how-to-record-from-desktop-to-gif/)
 

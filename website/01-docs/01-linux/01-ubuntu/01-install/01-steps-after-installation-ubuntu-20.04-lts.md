@@ -33,7 +33,8 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-20.04-lts/
 
 <br/>
 
-    https://code.visualstudio.com/docs/setup/linux
+Дока:  
+https://code.visualstudio.com/docs/setup/linux
 
 <br/>
 
@@ -53,7 +54,6 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-20.04-lts/
 <br/>
 
     $ sudo apt install -y \
-        vim \
         openssh-server \
         traceroute \
         vlc \
@@ -64,17 +64,25 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-20.04-lts/
         iputils-ping \
         rar unrar-free \
         wakeonlan \
-        whois
+        whois \
+        gimp
 
 <br/>
 
 ### Gnome Panel
 
-    # apt install -y gnome-panel
+    $ sudo apt install -y gnome-panel
 
-    # reboot
+    $ sudo reboot
 
 Перезагружаемся, при старте выбираем - gnome (Metacity)
+
+
+<br/>
+
+### Не спрашивать каждый раз пароль при комаде с sudo
+
+[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/small-improvements/)  
 
 
 <br/>
@@ -96,7 +104,10 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-20.04-lts/
 
 <br/>
 
-Keyboard & Mouse --> Switching to another layout --> Alt + Shift
+Keyboard & Mouse --> Additional Layout Options --> Switching to another layout --> Alt + Shift
+
+Appearance --> Theme -- Yaru-dark
+
 
 <br/>
 
@@ -104,15 +115,19 @@ Keyboard & Mouse --> Switching to another layout --> Alt + Shift
 
 <br/>
 
-    Applications --> System Tools --> System Settings --> Region & Language --> Formats --> United States
+    Applications --> Preferences --> System
+    
+    Region & Language --> Formats --> United States
 
 <br/>
 
 ### ПО CTRL + ALT + DELETE показывать текущие процессы
 
-Applications --> System Tools --> Preferences --> Settings --> Keyboard Shortcuts
+    Applications --> Preferences --> System
+    
+    Keyboard Shortcuts
 
-System --> Logout
+    System --> Logout
 
     Убираем
 
@@ -133,11 +148,14 @@ Terminal --> Preferences
 
 ![Отключить противный звук при ошибке в консоли](/img/linux/ubuntu/install/disable-sound-when-error-in-the-console.png "Отключить противный звук при ошибке в консоли"){: .center-image }
 
+Color --> Built-in schemes: Black on white
+
 <br/>
 
-### Не спрашивать каждый раз пароль при комаде с sudo
+### Убрать автовыключение монитора
 
-[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/small-improvements/)  
+    Applications --> Preferences --> System
+    Power --> Power Saving --> Blank screen --> Never
 
 
 <br/>
@@ -193,6 +211,9 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
     $ cd /tmp
     $ curl https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt --output badwebsites.txt
 
+    $ sudo su -
+    # cd /tmp
+
     # cat ./badwebsites.txt >> /etc/hosts
 
 
@@ -206,7 +227,14 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 <br/>
 
+**Telegram**
+
 Snap -> Telegram -> прописать автозапуск в gnome-tweaks
+
+    $ sudo mv Telegram /opt/telegram
+
+    $ gnome-tweaks
+
 
 <!--
 
@@ -232,13 +260,7 @@ Command: /opt/telegram/Telegram -startintray
 
 -->
 
-<br/>
 
-### Убрать автовыключение монитора
-
-Applications --> System Tools --> Preferences --> Settings --> Power
-
-Power Saving --> Blank screen --> Never
 
 
 

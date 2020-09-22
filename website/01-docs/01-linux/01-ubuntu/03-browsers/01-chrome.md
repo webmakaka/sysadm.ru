@@ -24,6 +24,7 @@ permalink: /linux/ubuntu/browsers/chrome/
 * SetupVPN
 * LanguageTool
 * Nimbus Screenshoot & Screen Video Recorder
+* GitHub dark theme
 * Доступ рутрекер
 
 <!--
@@ -41,13 +42,6 @@ hola vpn
 ### Дополнительные плагины для GitHub
 
 * GitHub dark theme
-* Octotree
-* Enchanced GitHub
-* File icon for Github and Gitlab
-* Octolinker
-* Sourcegraph
-
-https://www.youtube.com/watch?v=0r2JwANUZwo
 
 <br/>
 

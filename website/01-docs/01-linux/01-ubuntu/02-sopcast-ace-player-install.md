@@ -1,33 +1,19 @@
 ---
 layout: page
-title: Инсталляция SopCast и ACE плеера в Ubuntu
-description: Инсталляция SopCast и ACE плеера в Ubuntu
-keywords: linux, ubuntu, SopCast, ACE плеера
-permalink: /linux/ubuntu/sopcast-ace-player-install/
+title: Инсталляция ACE Stream и SopCast плеера в Ubuntu
+description: Инсталляция ACE Stream и SopCast плеера в Ubuntu
+keywords: linux, ubuntu, инсталляция, ACE Stream плеер, SopCast плеер
+permalink: /linux/ubuntu/ace-stream-sopcast-player-install/
 ---
 
-# Инсталляция SopCast и ACE плеера в Ubuntu
+# Инсталляция ACE Stream и SopCast плеера в Ubuntu
 
 <br/>
 
-### Инсталляция SopCast плеера в Ubuntu 18.04.1 (Чего-то к трансляциям этим плеером не особо подключается в последнее время)
+### Инсталляция ACE Stream плеера в Ubuntu 20.04.01 / 16.04 / 18.04.4
 
 Делаю:  
-16.04.2019
-
-    $ sudo add-apt-repository ppa:linuxthebest.net/sopcast
-    $ sudo apt-get update
-    $ sudo apt-get install -y sopcast-player
-    $ sopcast-player
-
-Пока писал эти 4 команды, Месси забил 2 мяча МЮ в ЛЧ.
-
-<br/>
-
-### Инсталляция ACE плеера в Ubuntu 16.04 / 18.04.4
-
-Делаю:  
-09.03.2019
+13.09.2020
 
     $ sudo snap install acestreamplayer
     $ acestreamplayer
@@ -47,42 +33,21 @@ https://snapcraft.io/acestreamplayer
 Проверить работу Ace плеера:  
 http://info.acestream.org/#/test
 
-<br/>
 
-### Инсталляция ACE плеера в Ubuntu 14.04
 
 <br/>
 
-    $ sudo su -
+### Инсталляция SopCast плеера в Ubuntu 18.04.1 (Чего-то к трансляциям этим плеером не особо подключается в последнее время). Да и с инсталляцией в версии 20.04.01 возникли проблемы
 
-    # echo "deb http://repo.acestream.org/ubuntu/ trusty main" >> /etc/apt/sources.list.d/ace_stream.list
+Делаю:  
+16.04.2019
 
-<br/>
+    $ sudo add-apt-repository ppa:linuxthebest.net/sopcast
+    $ sudo apt-get update
+    $ sudo apt-get install -y sopcast-player
+    $ sopcast-player
 
-    # wget -O - http://repo.acestream.org/keys/acestream.public.key | sudo apt-key add -
-
-<br/>
-
-    # apt-get update
-    # apt-get install -y acestream-full
-
-<br/>
-
-Далее, запустить плеер можете в списке программ "Музыка и видео", или в командной строке:
-
-    $ acestreamplayer
-
-<br/>
-
-Пока писал, какой голешник забили!
-
-<br/>
-
-![Установка Ace плеера в Ubuntu](/img/linux/ubuntu/ace-player-installation/ace-01.png "Установка Ace плеера в Ubuntu"){: .center-image }
-
-![Установка Ace плеера в Ubuntu](/img/linux/ubuntu/ace-player-installation/ace-02.png "Установка Ace плеера в Ubuntu"){: .center-image }
-
-![Установка Ace плеера в Ubuntu](/img/linux/ubuntu/ace-player-installation/ace-03.png "Установка Ace плеера в Ubuntu"){: .center-image }
+Пока писал эти 4 команды, Месси забил 2 мяча МЮ в ЛЧ.
 
 <br/>
 
