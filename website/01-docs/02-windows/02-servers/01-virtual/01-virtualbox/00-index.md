@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Virtualbox в Windows
+description: Virtualbox в Windows
+keywords: Virtualbox в Windows
 permalink: /windows/servers/virtual/virtualbox/
 ---
 
@@ -9,7 +11,6 @@ permalink: /windows/servers/virtual/virtualbox/
 <br/>
 
 ### Ошибки
-
 
 <ul>
     <li><a href="/windows/servers/virtual/virtualbox/errors/">Ошибки Virtualbox в Windows</a></li>

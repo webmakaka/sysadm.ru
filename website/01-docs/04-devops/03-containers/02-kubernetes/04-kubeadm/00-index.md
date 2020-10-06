@@ -2,10 +2,10 @@
 layout: page
 title: Kuberneters в виртуальных машинах и контейнерах
 description: Kuberneters в виртуальных машинах и контейнерах
-keywords: linux, kubernetes, kubeadm
+keywords: devops, linux, kubernetes, kubeadm
 permalink: /devops/containers/kubernetes/kubeadm/
 ---
- 
+
 # Kuberneters в виртуальных машинах и контейнерах
 
 ## Практические задачи
@@ -24,7 +24,6 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [Ingress](/devops/containers/kubernetes/kubeadm/ingress/)
 
-
 ### [Устанавливаем WEB GUI для управления Kubernetes кластером (Rancher)](/devops/containers/kubernetes/kubeadm/gui/rancher/)
 
 ### [Переименование узлов Kubernetes Cluster](/devops/containers/kubernetes/kubeadm/renaming-kubernetes-nodes/)
@@ -38,8 +37,6 @@ Deprecated конфиги можно автоматически проапгде
 ### [Horizontal Pod Autoscaler in Kubernetes](/devops/containers/kubernetes/kubeadm/horizontal-pod-autoscaler/)
 
 ### [Setup Lets Encrypt cert-manager in Kubernetes Bare Metal](/devops/containers/kubernetes/kubeadm/lets-encrypt/)
-
-
 
 <br/>
 

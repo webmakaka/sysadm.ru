@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Запуск GO программ в контейнере Docker
+description: Запуск GO программ в контейнере Docker
+keywords: Запуск GO программ в контейнере Docker
 permalink: /dev/go/go-inside-docker/
 ---
 

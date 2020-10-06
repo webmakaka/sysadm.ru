@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Ошибка при попытке установить Ubuntu на внешний жесткий диск
+description: Ошибка при попытке установить Ubuntu на внешний жесткий диск
+keywords: Ошибка при попытке установить Ubuntu на внешний жесткий диск
 permalink: /linux/hardware/hdd/partition-may-lead-to-very-poor-performance/
 ---
 
@@ -10,10 +12,7 @@ permalink: /linux/hardware/hdd/partition-may-lead-to-very-poor-performance/
 
 <br/>
 
-
-
-![The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance](/img/linux/hardware/hdd/partition-may-lead-to-very-poor-performance.jpg "The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance"){: .center-image }
-
+![The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance](/img/linux/hardware/hdd/partition-may-lead-to-very-poor-performance.jpg 'The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance'){: .center-image }
 
 <br/>
 
@@ -24,7 +23,6 @@ permalink: /linux/hardware/hdd/partition-may-lead-to-very-poor-performance/
 Решение проблемы следующее:
 
 Загрузился в Ubuntu, установил gparted. С помощью gparted создал разделы следующим образом.
-
 
     After booting into live LL, open GParted.
 
@@ -84,7 +82,6 @@ permalink: /linux/hardware/hdd/partition-may-lead-to-very-poor-performance/
     Near bottom of window, "Device for boot loader installation" should be set to "/dev/sdb".  I'm assuming that the external drive is /dev/sdb here.  If it is something else (eg. /dev/sdc, or sdd) change that "b" to whatever it should be.  Also note, there is no partition number after the "b" in "/dev/sdb".  That will aim grub's first stage of boot loader to the MBR of the drive making it bootable when you tell computer to boot from it.
 
     Click "Finish" button to complete the installation
-
 
 Повторил. Все установилось.
 

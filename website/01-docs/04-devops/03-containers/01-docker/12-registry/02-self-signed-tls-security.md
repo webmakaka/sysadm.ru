@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Собственный Docker Registry с самоподписанным TLS сертификатом
+description: Собственный Docker Registry с самоподписанным TLS сертификатом
+keywords: devops, docker, Собственный Docker Registry с самоподписанным TLS сертификатом
 permalink: /devops/containers/docker/registry/self-signed-tls-security/
 ---
 
@@ -25,7 +27,6 @@ permalink: /devops/containers/docker/registry/self-signed-tls-security/
 <!-- <br/>
 
 https://192.168.0.11/v2/_catalog -->
-
 
 <br/>
 
@@ -53,7 +54,6 @@ https://192.168.0.11/v2/_catalog -->
 
     $ curl --insecure https://registry.local/v2/_catalog
     {"repositories":["busybox"]}
-
 
 <br/>
 

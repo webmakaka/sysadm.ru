@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Работа для системного администратора Linux
+description: Работа для системного администратора Linux
+keywords: Работа для системного администратора Linux
 permalink: /job/
 ---
 
@@ -83,7 +85,7 @@ Windows переустановить и office поставить, и компь
 ### Контакты:
 
 email:  
-![Marley](/img/a3333333mail.gif "Marley")
+![Marley](/img/a3333333mail.gif 'Marley')
 
 <br/><br/>
 <br/><br/>

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Запуск приложения в minikube
+description: Запуск приложения в minikube
+keywords: devops, linux, kubernetes,  Запуск приложения в minikube
 permalink: /devops/containers/kubernetes/minikube/run-application-archive/
 ---
 
@@ -81,7 +83,7 @@ rc - replicationcontroller
 
 <br/>
 
-![Cats inside minikube](/img/devops/containers/kubernetes/nodejs-cats-app.png "Cats inside minikube"){: .center-image }
+![Cats inside minikube](/img/devops/containers/kubernetes/nodejs-cats-app.png 'Cats inside minikube'){: .center-image }
 
 <br/>
 
@@ -121,7 +123,7 @@ rc - replicationcontroller
 
 <br/>
 
-![minikube dashboard](/img/devops/containers/kubernetes/dashboard.png "minikube dashboard"){: .center-image }
+![minikube dashboard](/img/devops/containers/kubernetes/dashboard.png 'minikube dashboard'){: .center-image }
 
 <br/>
 

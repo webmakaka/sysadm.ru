@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Ubuntu Unable to locate package
+description: Ubuntu Unable to locate package
+keywords: Ubuntu Unable to locate package
 permalink: /linux/ubuntu/install-package-for-missing-libraries/
 ---
 
@@ -8,14 +10,12 @@ permalink: /linux/ubuntu/install-package-for-missing-libraries/
 
 E: Unable to locate package libstdc++.so.6 (FOR example)
 
-
-	$ sudo apt-get install apt-file
-	$ sudo apt-file update
-	$ sudo apt-file find libstdc++.so.6
-	$ sudo apt-get install libstdc++6
+    $ sudo apt-get install apt-file
+    $ sudo apt-file update
+    $ sudo apt-file find libstdc++.so.6
+    $ sudo apt-get install libstdc++6
 
 Подробнее:  
 http://askubuntu.com/questions/409821/install-package-for-missing-libraries
-
 
 В RedHat дистрибутивах, можно поискать на rpmfind.net

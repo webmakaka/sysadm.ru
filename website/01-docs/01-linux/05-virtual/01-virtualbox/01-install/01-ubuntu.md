@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 18.04
 description: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 18.04
 keywords: linux, ubuntu, virtualbox, installation, command line
-permalink: /linux/virtual/virtualbox/install/ubuntu/18.04/
+permalink: /linux/virtual/virtualbox/install/ubuntu/
 ---
 
 # Инсталляция VirtualBox 6.X в командной строке в Ubuntu 18.04
@@ -31,7 +31,6 @@ permalink: /linux/virtual/virtualbox/install/ubuntu/18.04/
 <br/>
 
     # echo 'deb http://download.virtualbox.org/virtualbox/debian bionic contrib' >> /etc/apt/sources.list.d/virtualbox.list
-
 
 <br/>
 
@@ -67,7 +66,6 @@ permalink: /linux/virtual/virtualbox/install/ubuntu/18.04/
 
 Мне иногда нужна для удаленного доступа, поэтому обычно устанавливаю сразу вместе с virtualbox
 
-
     -- если нужно удалить старый
     $ VBoxManage extpack uninstall  "Oracle VM VirtualBox Extension Pack"
 
@@ -91,12 +89,11 @@ permalink: /linux/virtual/virtualbox/install/ubuntu/18.04/
     Pack no. 0:   Oracle VM VirtualBox Extension Pack
     Version:      6.0.10
     Revision:     132072
-    Edition:      
+    Edition:
     Description:  USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe.
     VRDE Module:  VBoxVRDP
-    Usable:       true 
-    Why unusable: 
-
+    Usable:       true
+    Why unusable:
 
 <br/>
 
@@ -106,7 +103,6 @@ permalink: /linux/virtual/virtualbox/install/ubuntu/18.04/
     $ sudo apt-cache search virtualbox
     $ sudo apt-get install -y virtualbox-6.0
     $ vboxmanage --version
-
 
 <br/>
 
@@ -125,6 +121,7 @@ permalink: /linux/virtual/virtualbox/install/ubuntu/18.04/
 {% highlight shell %}
 
 ###############################
+
 # USER DEFINED
 
 . ~/.bash_profile
@@ -157,7 +154,6 @@ permalink: /linux/virtual/virtualbox/install/ubuntu/18.04/
 
     $ source ~/.bash_profile
 
-
 <br/>
 
 ### Инсталляция Guest Additions в командной строке
@@ -165,7 +161,7 @@ permalink: /linux/virtual/virtualbox/install/ubuntu/18.04/
 Делаю:  
 26.09.2019
 
-**Нужно устанавливать в виртуальной машине!** 
+**Нужно устанавливать в виртуальной машине!**
 
 Я забыл об этом и долго тупил с ошибкой. **modprobe vboxguest failed**
 
@@ -205,8 +201,6 @@ http://www.virtualbox.org/manual/ch04.html#idp11277648
 
     # reboot
 
-
-
 <!--
 
 <br/>
@@ -230,7 +224,7 @@ http://www.virtualbox.org/manual/ch04.html#idp11277648
 Не помогло.
 
     # /sbin/rcvboxadd quicksetup all
-    
+
  -->
 
 <!-- <br/>
@@ -243,10 +237,9 @@ http://www.virtualbox.org/manual/ch04.html#idp11277648
     # modprobe vboxdrv
     # modprobe vboxvideo
     # modprobe vboxsf
-    
+
 
     # ./VBoxLinuxAdditions.run -->
-
 
 <!--
 

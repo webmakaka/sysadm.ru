@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Собственный Docker Registry без Security
+description: Собственный Docker Registry без Security
+keywords: devops, docker, Собственный Docker Registry без Security
 permalink: /devops/containers/docker/registry/no-security/
 ---
 
@@ -15,7 +17,6 @@ permalink: /devops/containers/docker/registry/no-security/
 
 # Deploying Your First Registry to Distribute Images
 
-
 <br/>
 
     # vi /etc/hosts
@@ -24,9 +25,7 @@ permalink: /devops/containers/docker/registry/no-security/
 
 <br/>
 
-
     $ docker run -it -d -p 5000:5000 --restart=always --name registry_local -v registry-data:/var/lib/registry registry:2
-
 
 <!-- <br/>
 
@@ -64,7 +63,6 @@ permalink: /devops/containers/docker/registry/no-security/
 
     192.168.0.11 registry.local
 
-
 <br/>
 
     $ curl registry.local:5000/v2/_catalog
@@ -96,4 +94,3 @@ permalink: /devops/containers/docker/registry/no-security/
     127.0.0.0/8
 
     $ docker pull registry.local:5000/mongo
-

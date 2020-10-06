@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Создание службы Nodeport
+description: Создание службы Nodeport
+keywords: devops, linux, kubernetes, Создание службы Nodeport
 permalink: /devops/containers/kubernetes/minikube/svc/nodeport/
 ---
 
 # Создание службы Nodeport
-
 
 Обновлено:  
 21.04.2020
@@ -32,7 +33,6 @@ minikube start --profile my-profile
 ```
 
 <br/>
-
 
 ```
 $ cat <<EOF | kubectl apply -f -
@@ -62,7 +62,6 @@ EOF
 
 <br/>
 
-
 ```
 $ cat <<EOF | kubectl apply -f -
 apiVersion: v1
@@ -86,8 +85,6 @@ EOF
     targetPort: 8080 - порт на котором работает приложение внутри pod. Или, наверное даже это из deployment.
     nodePort: 30123 - то к какому порту обращаться на этот под.
 
-
-
 <br/>
 
     $ kubectl get pods
@@ -96,13 +93,11 @@ EOF
     nodejs-cats-app-774f89d47b-8hjrv   1/1     Running   0          61s
     nodejs-cats-app-774f89d47b-lwc85   1/1     Running   0          61s
 
-
 <br/>
 
     $ kubectl get svc
     NAME                       TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
     nodejs-cats-app-nodeport   NodePort   10.109.227.32   <none>        80:30123/TCP   22s
-
 
 <br/>
 
@@ -110,7 +105,6 @@ EOF
     // Если не используется namespace, таке можно убрать -n default
     $ echo $(minikube --profile my-profile service nodejs-cats-app-nodeport -n default --url)
     http://192.168.99.113:30123
-
 
 <br/>
 

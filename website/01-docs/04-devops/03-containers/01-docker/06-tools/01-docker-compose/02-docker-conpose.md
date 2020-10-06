@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Линковка Docker контейнеров с помощью Docker Compose
+description: Линковка Docker контейнеров с помощью Docker Compose
+keywords: devops, docker, Линковка Docker контейнеров с помощью Docker Compose
 permalink: /devops/containers/docker/tools/docker-compose/
 ---
 
@@ -8,10 +10,8 @@ permalink: /devops/containers/docker/tools/docker-compose/
 
 С помощью Docker Compose создаем файл YML с инструкциями о том, какие контейнеры запускать и как линковать их между собой.
 
-
     # docker-compose -v
     docker-compose version: 1.5.1
-
 
 <br/>
 
@@ -39,12 +39,11 @@ permalink: /devops/containers/docker/tools/docker-compose/
     $ docker-compose -f docker-compose.yml ps
 
 
-        Name             Command       State            Ports          
+        Name             Command       State            Ports
     -------------------------------------------------------------------
     tmp_tomcatapp_1   catalina.sh run   Up      0.0.0.0:32768->8080/tcp
 
 <br/>
-
 
     $ docker-compose -f docker-compose.yml logs
     $ docker-compose -f docker-compose.yml stop
@@ -58,15 +57,11 @@ permalink: /devops/containers/docker/tools/docker-compose/
 
 http://localhost:32768/
 
-
-
 <br/>
 
 ### Посложнее пример
 
-
     $ vi compose-ex2.yml
-
 
 К сожалению у меня нет этого war
 
@@ -94,7 +89,6 @@ http://localhost:32768/
       image: tomcat
       volumes:
        - sample.war:/usr/local/tomcat/webapps/sample.war
-
 
 <br/>
 
@@ -171,11 +165,9 @@ http://localhost:32768/
 
     $ docker-compose stop
 
-
 <br/>
 
 ### Еще 1 пример конфига
-
 
     $ vi docker-compose.yml
 
@@ -209,12 +201,11 @@ http://localhost:32768/
        - "5432:5432"
       environment:
         POSTGRES_PASSWORD: "$POSTGRES_PASSWORD"
-        POSTGRES_USER: "$POSTGRES_USER"  
+        POSTGRES_USER: "$POSTGRES_USER"
 
     redis:
       image: redis:latest
       command: redis-server --appendonly yes
-
 
 <br/>
 
@@ -223,6 +214,5 @@ http://localhost:32768/
 или
 
     $ docker-compose up --no-deps -d postgres
-
 
 http://dou.ua/lenta/articles/docker/

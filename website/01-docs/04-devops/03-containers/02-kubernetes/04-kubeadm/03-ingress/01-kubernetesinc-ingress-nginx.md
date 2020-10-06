@@ -1,6 +1,8 @@
 ---
 layout: page
 title: KubernetesInc Ingress Nginx
+description: KubernetesInc Ingress Nginx
+keywords: devops, linux, kubernetes, KubernetesInc Ingress Nginx
 permalink: /devops/containers/kubernetes/kubeadm/ingress/kubernetesinc-ingress-nginx/
 ---
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Устанавливаем WEB GUI для управления Kubernetes кластером (Rancher)
+description: Устанавливаем WEB GUI для управления Kubernetes кластером (Rancher)
+keywords: devops, linux, kubernetes, Устанавливаем WEB GUI для управления Kubernetes кластером (Rancher)
 permalink: /devops/containers/kubernetes/kubeadm/gui/rancher/
 ---
 
@@ -36,23 +38,23 @@ http://localhost
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-01.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-01.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-02.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-02.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-03.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-03.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-04.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-04.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-05.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-05.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
@@ -80,48 +82,48 @@ http://localhost
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-06.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-06.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-07.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-07.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-08.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-08.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-09.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-09.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-10.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-10.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-11.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-11.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-12.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-12.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-13.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-13.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-14.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-14.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-15.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-15.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-16.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-16.png 'kubernetes GUI Rancher'){: .center-image }
 
 <br/>
 
-![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-17.png "kubernetes GUI Rancher"){: .center-image }
+![kubernetes GUI Rancher](/img/devops/containers/kubernetes/kubeadm/gui/rancher/rancher-17.png 'kubernetes GUI Rancher'){: .center-image }

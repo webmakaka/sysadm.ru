@@ -6,7 +6,7 @@ keywords: linux, kubernetes, Istio, MiniKube
 permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/11-steps-to-awesome-with-kubernetes/
 ---
 
-# Istio в minikube. 
+# Istio в minikube.
 
 **Примеры из курса "11 Steps to Awesome with Kubernetes, Istio, and Knative LiveLessons"**
 
@@ -16,7 +16,6 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/11-steps-to
 https://github.com/redhat-developer-demos/istio-tutorial
 
 http://github.com/burrsutter/scripts-istio
-
 
 <br/>
 
@@ -46,7 +45,6 @@ minikube start --profile my-profile
     Client Version: v1.18.1
     Server Version: v1.16.9
 
-
 <br/>
 
     $ istioctl manifest apply --set profile=demo
@@ -54,7 +52,6 @@ minikube start --profile my-profile
 <br/>
 
     $ kubectl label namespace default istio-injection=enabled
-
 
 <!--
 
@@ -96,19 +93,14 @@ $ kubectl apply -f install/kubernetes/istio-demo.yaml
     kiali-696bb665-l2fz4                    1/1     Running   0          5m7s
     prometheus-6c88c4cb8-6ghq5              2/2     Running   0          5m7s
 
-
-
 <br/>
 
 ### Deploy with Istio Envoy Sidecars
 
-
     $ kubectl create namespace tutorial
     $ kubectl config set-context $(kubectl config current-context) --namespace=tutorial
 
-
 <br/>
-
 
     $ mkdir -p ~/tmp/istio && cd ~/tmp/istio
 
@@ -119,20 +111,15 @@ $ kubectl apply -f install/kubernetes/istio-demo.yaml
     $ istioctl kube-inject -f customer/kubernetes/Deployment.yml
     $ kubectl label namespace tutorial istio-injection=enabled
 
-
 <br/>
-
 
     $ kubectl get namespaces --show-labels
     ***
     tutorial          Active   8m33s   istio-injection=enabled
 
-
 <br/>
 
-
     $ kubectl apply -f customer/kubernetes/Deployment.yml
-
 
 <br/>
 
@@ -140,9 +127,7 @@ $ kubectl apply -f install/kubernetes/istio-demo.yaml
     NAME                        READY   STATUS    RESTARTS   AGE
     customer-6948b8b959-v4cg8   2/2     Running   0          26s
 
-
 <br/>
-
 
     $ kubectl apply -f customer/kubernetes/Service.yml
     $ kubectl apply -f customer/kubernetes/Gateway.yml
@@ -153,8 +138,6 @@ $ kubectl apply -f install/kubernetes/istio-demo.yaml
     $ kubectl apply -f recommendation/kubernetes/Deployment.yml
     $ kubectl apply -f recommendation/kubernetes/Service.yml
 
-
-
 <br/>
 
     $ kubectl get services
@@ -162,7 +145,6 @@ $ kubectl apply -f install/kubernetes/istio-demo.yaml
     customer         ClusterIP   10.110.254.99    <none>        8080/TCP   39s
     preference       ClusterIP   10.108.86.218    <none>        8080/TCP   24s
     recommendation   ClusterIP   10.111.135.119   <none>        8080/TCP   18s
-
 
 <br/>
 
@@ -174,13 +156,10 @@ $ kubectl apply -f install/kubernetes/istio-demo.yaml
 
     $ kubectl get service -n istio-system istio-ingressgateway
 
-
 Вижу -> 30850/TCP
-
 
     $ minikube --profile my-profile ip
     192.168.99.120
-
 
 ```
 $ while true; do curl 192.168.99.120:30850/customer; sleep .3; done
@@ -200,14 +179,11 @@ customer => preference => recommendation v1 from 'f11b097f1dd0': 24
 customer => preference => recommendation v1 from 'f11b097f1dd0': 25
 ```
 
-
-
 <br/>
 
 ### Shift traffic with VirtualService and DestinationRule
 
 https://redhat-developer-demos.github.io/istio-tutorial/istio-tutorial/1.3.x/4simple-routerules.html
-
 
     $ kubectl apply -f recommendation/kubernetes/Deployment-v2.yml
 
@@ -228,14 +204,12 @@ https://redhat-developer-demos.github.io/istio-tutorial/istio-tutorial/1.3.x/4si
     customer => preference => recommendation v1 from 'f11b097f1dd0': 32
     customer => preference => recommendation v2 from '3cbba7a9cde5': 8
 
-
 <br/>
 
     $ kubectl get pods --show-labels
     ***
     recommendation-v1-69db8d6c48-2x244   2/2     Running   0          15m     app=recommendation,pod-template-hash=69db8d6c48,security.istio.io/tlsMode=istio,service.istio.io/canonical-name=recommendation,service.istio.io/canonical-revision=v1,version=v1
     recommendation-v2-6c5b86bbd8-q9gtv   2/2     Running   0          2m42s   app=recommendation,pod-template-hash=6c5b86bbd8,security.istio.io/tlsMode=istio,service.istio.io/canonical-name=recommendation,service.istio.io/canonical-revision=v2,version=v2
-
 
 <br/>
 
@@ -288,14 +262,13 @@ customer => preference => recommendation v2 from '3cbba7a9cde5': 24
 
     $ kubectl describe vs recommendation
 
-Weight:    100
+Weight: 100
 
 <br/>
 
     $ kubectl edit vs/recommendation
 
 subset: version-v1
-
 
 ```
 $ while true; do curl 192.168.99.120:30850/customer; sleep .3; done
@@ -321,11 +294,9 @@ customer => preference => recommendation v1 from 'f11b097f1dd0': 40
 
     $ kubectl delete -f istiofiles/destination-rule-recommendation-v1-v2.yml -n tutorial
 
-
 <br/>
 
 ### Perform smarter canary deployments
-
 
     $ kubectl apply -f istiofiles/destination-rule-recommendation-v1-v2.yml -n tutorial
     $ kubectl apply -f istiofiles/virtual-service-recommendation-v1_and_v2.yml -n tutorial
@@ -372,14 +343,11 @@ customer => preference => recommendation v1 from 'f11b097f1dd0': 57
 
 https://redhat-developer-demos.github.io/istio-tutorial/istio-tutorial/1.3.x/4advanced-routerules.html
 
-
 <br/>
 
 ### Practice mirroring and the dark launch
 
 https://redhat-developer-demos.github.io/istio-tutorial/istio-tutorial/1.3.x/4advanced-routerules.html#mirroringtraffic
-
-
 
     $ kubectl create -f istiofiles/destination-rule-recommendation-v1-v2.yml -n tutorial
 
@@ -400,11 +368,9 @@ customer => preference => recommendation v1 from 'f11b097f1dd0': 111
 
 В общем, если правильно понял. v2 отработает только в случае ошибки.
 
-
 <br/>
 
 ### Explore observability - Grafana, Jaeger, Kiali
-
 
 <!--
 
@@ -413,21 +379,18 @@ customer => preference => recommendation v1 from 'f11b097f1dd0': 111
 
 -->
 
-$ {
+\$ {
 kubectl patch service/grafana -p '{"spec":{"type":"NodePort"}}' -n istio-system
 
 echo http://$(minikube --profile my-profile ip):$(kubectl get svc grafana -n istio-system -o 'jsonpath={.spec.ports[0].nodePort}')
-
 
 kubectl patch service/jaeger-query -p '{"spec":{"type":"NodePort"}}' -n istio-system
 
 echo http://$(minikube --profile my-profile ip):$(kubectl get svc jaeger-query -n istio-system -o 'jsonpath={.spec.ports[0].nodePort}')
 
-
 kubectl patch service/prometheus -p '{"spec":{"type":"NodePort"}}' -n istio-system
 
 echo http://$(minikube --profile my-profile ip):$(kubectl get svc prometheus -n istio-system -o 'jsonpath={.spec.ports[0].nodePort}')
-
 
 kubectl patch service/kiali -p '{"spec":{"type":"NodePort"}}' -n istio-system
 
@@ -467,14 +430,11 @@ https://redhat-developer-demos.github.io/istio-tutorial/istio-tutorial/1.3.x/6fa
         kubectl delete -f istiofiles/virtual-service-recommendation-delay.yml -n tutorial
     }
 
-
 <br/>
 
 ### Add resiliency
 
-
 https://redhat-developer-demos.github.io/istio-tutorial/istio-tutorial/1.3.x/5circuit-breaker.html#timeout
-
 
     $ kubectl edit deployment recommendation-v2
 
@@ -494,13 +454,11 @@ https://redhat-developer-demos.github.io/istio-tutorial/istio-tutorial/1.3.x/5ci
 
     istio-tutorial-recommendation:v2.1-timeout
 
-
 <br/>
 
 ### Add security
 
 https://github.com/burrsutter/scripts-istio/tree/master/egress_demo
-
 
 // Create a namespace and make it "sticky"
 
@@ -514,7 +472,6 @@ https://github.com/burrsutter/scripts-istio/tree/master/egress_demo
     mode: ALLOW_ANY
 
 // Create a Deployment and find its Pod
-
 
     $ kubectl create deployment nginx --image=nginx
     $ NGINXPOD=$(kubectl get pods -l app=nginx -o 'jsonpath={.items[0].metadata.name}')

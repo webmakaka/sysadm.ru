@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, kubectl)
+description: Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, kubectl)
+keywords: devops, linux, kubernetes,  Single Master Kubernetes Cluster в виртуальных машинах (vagrant, kubeadm, kubectl)
 permalink: /devops/containers/kubernetes/kubeadm/install/single-master/vagrant-virtualbox/
 ---
 

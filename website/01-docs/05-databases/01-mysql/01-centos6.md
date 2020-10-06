@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Инсталляция MySQL в Centos 6.X
-description: нсталляция MySQL в Centos 6.X
-keywords: нсталляция MySQL в Centos 6.X
+description: Инсталляция MySQL в Centos 6.X
+keywords: Инсталляция MySQL в Centos 6.X
 permalink: /databases/mysql/installation/
 ---
 

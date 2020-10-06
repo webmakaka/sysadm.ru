@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция Docker в Windows
+description: Инсталляция Docker в Windows
+keywords: Инсталляция Docker в Windows
 permalink: /windows/servers/containers/docker/installation/
 ---
 
@@ -9,15 +11,14 @@ permalink: /windows/servers/containers/docker/installation/
 Get Started with Docker for Windows  
 https://docs.docker.com/windows/
 
+1. Устанавливаю Docker Toolbox  
+   https://www.docker.com/products/docker-toolbox
 
-1) Устанавливаю Docker Toolbox  
-https://www.docker.com/products/docker-toolbox
+2. Запускаю через консоль для поиска: Docker QuickStart Terminal
 
-2) Запускаю через консоль для поиска: Docker QuickStart Terminal
+3. Проверяю (от нечего делать):
 
-3) Проверяю (от нечего делать):
-
-    $ docker pull hello-world
+    \$ docker pull hello-world
     Using default tag: latest
     latest: Pulling from library/hello-world
     03f4658f8b78: Pull complete

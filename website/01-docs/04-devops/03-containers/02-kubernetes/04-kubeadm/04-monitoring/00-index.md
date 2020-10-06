@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Визуализация и Мониторинг в Kubernetes
+description: Визуализация и Мониторинг в Kubernetes
+keywords: devops, linux, kubernetes, Визуализация и Мониторинг в Kubernetes
 permalink: /devops/containers/kubernetes/kubeadm/monitoring/
 ---
 

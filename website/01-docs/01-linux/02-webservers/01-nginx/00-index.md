@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Nginx сервер
+description: Nginx сервер
+keywords: Nginx сервер
 permalink: /linux/webservers/nginx/
 ---
 

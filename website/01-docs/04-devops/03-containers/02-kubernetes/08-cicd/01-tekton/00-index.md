@@ -10,20 +10,17 @@ permalink: /devops/containers/kubernetes/cicd/tekton/
 
 https://github.com/tektoncd/pipeline/blob/master/docs/install.md#installing-tekton-pipelines-on-kubernetes
 
-
 <br/>
 
 ### TekTon CLI
 
 https://github.com/tektoncd/cli
 
-
     # Get the tar.xz
     $ curl -LO https://github.com/tektoncd/cli/releases/download/v0.8.0/tkn_0.8.0_Linux_x86_64.tar.gz
 
     # Extract tkn to your PATH (e.g. /usr/local/bin)
     $ sudo tar xvzf tkn_0.8.0_Linux_x86_64.tar.gz -C /usr/local/bin/ tkn
-
 
 <br/>
 
@@ -34,7 +31,6 @@ https://github.com/tektoncd/cli
 
     $ kubectl get pods --namespace tekton-pipelines --watch
 
-
 <br/>
 
     $ kubectl api-resources | grep tekton
@@ -44,7 +40,6 @@ https://github.com/tektoncd/cli
 ### Пробуем
 
 https://github.com/tektoncd/pipeline/blob/master/docs/tutorial.md
-
 
 ```
 $ cat << EOF | kubectl apply -f -
@@ -81,7 +76,6 @@ spec:
 EOF
 ```
 
-
     $ tkn taskrun describe echo-hello-world-task-run
 
 <br/>
@@ -94,20 +88,14 @@ EOF
 
     $ tkn taskrun logs echo-hello-world-task-run
 
-
-
 <br/>
 
 ### Еще примерчик
 
 https://github.com/webmakaka/tekton
 
-
-
 <br/>
 
 ### Еще примерчик
 
 https://meteatamel.wordpress.com/2019/08/28/migrating-from-knative-build-to-tekton-pipelines/
-
-

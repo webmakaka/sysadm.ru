@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Команды Vagrant
+description: Команды Vagrant
+keywords: Команды Vagrant
 permalink: /linux/virtual/vagrant/commands/
 ---
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Kubernetes Package Manager (Helm)
+description: Kubernetes Package Manager (Helm)
+keywords: devops, linux, kubernetes, helm
 permalink: /devops/containers/kubernetes/packaging/heml/
 ---
 

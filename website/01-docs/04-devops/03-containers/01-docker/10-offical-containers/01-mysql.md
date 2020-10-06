@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Работа с официальным mysql Docker контейнером
+description: Работа с официальным mysql Docker контейнером
+keywords: devops, docker, Работа с официальным mysql Docker контейнером
 permalink: /devops/containers/docker/official/containers/mysql/
 ---
 
 # Работа с официальным mysql Docker контейнером
 
 https://hub.docker.com/_/mysql/
-
 
     $ docker pull mysql
 
@@ -21,12 +22,9 @@ https://hub.docker.com/_/mysql/
     CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
     726bc4c2433a        mysql               "/entrypoint.sh mysql"   9 seconds ago       Up 9 seconds        3306/tcp            mysql_server
 
-
-
 <br/>
 
 ### С помощью Docker compose
-
 
     $ cd ~/
 
@@ -36,22 +34,18 @@ https://hub.docker.com/_/mysql/
 
 <br/>
 
-
     mysql_server:
       container_name: mysql_serv
       image: mysql:latest
       environment:
          - MYSQL_ALLOW_EMPTY_PASSWORD=yes
 
-
 <br/>
-
 
 Другие варианты:
 
     - MYSQL_ROOT_PASSWORD=P@SSW0RD
     - MYSQL_RANDOM_ROOT_PASSWORD=yes
-
 
 Если задать пароль, то лично мне пришлось его вводить с кавычками. Т.е. "P@SSW0RD"
 Хотел использовать пароль как P@$$W0RD, но похоже, что $$ имеет особое значение и двойной знак доллара заменяется одинарным.

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Запускаем приложение с использованием NginxInc Kubernetes Ingress
+description: Запускаем приложение с использованием NginxInc Kubernetes Ingress
+keywords: devops, linux, kubernetes, Запускаем приложение с использованием NginxInc Kubernetes Ingress
 permalink: /devops/containers/kubernetes/kubeadm/ingress/nginxinc-kubernets-ingress/
 ---
 
@@ -17,7 +19,7 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-![kubernetes ingress](/img/devops/containers/kubernetes/kubeadm/ingress/ingress.png "kubernetes ingress"){: .center-image }
+![kubernetes ingress](/img/devops/containers/kubernetes/kubeadm/ingress/ingress.png 'kubernetes ingress'){: .center-image }
 
 <br/>
 

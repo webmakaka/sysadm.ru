@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Шаги после инсталляции Ubuntu 14 (для себя)
+description: Шаги после инсталляции Ubuntu 14 (для себя)
+keywords: Шаги после инсталляции Ubuntu 14 (для себя)
 permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-14/
 ---
 
@@ -97,7 +99,7 @@ menu:minimize,maximize,close
 
 <br/>
 
-![Ubuntu Region Formats](/img/linux/ubuntu/install/regional-formats.png "Ubuntu Region Formats"){: .center-image }
+![Ubuntu Region Formats](/img/linux/ubuntu/install/regional-formats.png 'Ubuntu Region Formats'){: .center-image }
 
 <br/>
 

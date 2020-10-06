@@ -1,17 +1,16 @@
 ---
 layout: page
 title: Отправить docker image на hub.docker.com
+description: Отправить docker image на hub.docker.com
+keywords: devops, docker, Отправить docker image на hub.docker.com
 permalink: /devops/containers/docker/basics/push-and-pull-docker-image-to-hub/
 ---
-
-
 
 # Отправить docker image на hub.docker.com
 
 Создали репо на hub.docker.com
 
 container_id и container_name как и для image в данном случае одно и тоже.
-
 
 Если нужно сделать из контейнера image, сначала нужно выполнить эту команду.
 
@@ -25,15 +24,12 @@ container_id и container_name как и для image в данном случа
 
     $ docker tag <image_name> <your_docker_hub_login>/<image_name>:<image_version>
 
-
 <br/>
-
 
 ### Отправка image на docker-hub
 
     $ docker login
     $ docker push <your_docker_hub_login>/<image_name>
-
 
 <br/>
 
@@ -41,11 +37,9 @@ container_id и container_name как и для image в данном случа
 
     $ doceker pull <your_docker_hub_login>/<image_name>
 
-
-
 <br/>
 
-### Конкретный пример. 
+### Конкретный пример.
 
 **Делаю 3.12.2017**<br/>
 **Последний раз делал и все ок 16.04.2018**
@@ -55,14 +49,11 @@ container_id и container_name как и для image в данном случа
     Есть уже готовый image нужно его перенести на hub.docker.com <br/>
     Я зашел через веб интерфейс и добавил новый репо руками.
 
-
 <br/>
 
     $ docker -v
     Docker version 17.03.0-ce, build 60ccb22
 
-
-    
 <br/>
     
     -- Переименовываю имидж. Чтобы контейнер на hub.docker.com начинался с моего username на этом сайте.
@@ -73,22 +64,17 @@ container_id и container_name как и для image в данном случа
     $ docker images
     REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
     marley/centos6-for-jekyll   latest              522e5166515e        17 minutes a
-    
 
 <br/>
 
     $ docker login
     $ docker push marley/centos6-for-jekyll
 
-
 <br/>
 
 Забрать теперь можно командой:
 
     $ docker pull marley/centos6-for-jekyll
-
-
-
 
 <br/>
 
@@ -105,7 +91,6 @@ container_id и container_name как и для image в данном случа
 
     $ docker login
     $ docker push marley/nginx_server:1
-
 
 <br/>
 

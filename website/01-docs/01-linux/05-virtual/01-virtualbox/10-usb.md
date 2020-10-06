@@ -1,15 +1,14 @@
 ---
 layout: page
 title: VirtialBox Подключение USB устройств
+description: VirtialBox Подключение USB устройств
+keywords: VirtialBox Подключение USB устройств
 permalink: /linux/virtual/virtualbox/usb/
 ---
 
-
 # VirtialBox Подключение USB устройств
 
-
 Работал с USB устройствами на виртуальной машине не очень много. Похоже, каждый раз для подключения usb устройства приходится удалять в консоли предыдущее значение и указывать новое (если меняется устройство).
-
 
 // Проверяю, установлен ли Extension Pack
 
@@ -23,7 +22,7 @@ permalink: /linux/virtual/virtualbox/usb/
 
     Revision:         82870
 
-    Edition:          
+    Edition:
 
     Description:  USB 2.0 Host Controller, VirtualBox RDP, PXE ROM with E1000 support.
 
@@ -33,13 +32,11 @@ permalink: /linux/virtual/virtualbox/usb/
 
     Why unusable:
 
-
 <br/>
 
 // Включаю
 
     $ VBoxManage modifyvm ${vm} --usb on --usbehci on
-
 
 <br/>
 
@@ -47,7 +44,6 @@ permalink: /linux/virtual/virtualbox/usb/
     Host USB Devices:
 
     <none>
-
 
 <br/>
 
@@ -69,7 +65,6 @@ permalink: /linux/virtual/virtualbox/usb/
     Bus 008 Device 003: ID 046e:5503 Behavior Tech. Computer Corp.
     Bus 009 Device 002: ID 18d1:4ee1 Google Inc.
     Bus 009 Device 003: ID 0458:010e KYE Systems Corp. (Mouse Systems)
-
 
 <br/>
 
@@ -104,7 +99,6 @@ permalink: /linux/virtual/virtualbox/usb/
     Address:                sysfs:/sys/devices/pci0000:00/0000:00:02.0/0000:02:00.0/usb9/9-1//device:/dev/vboxusb/009/004
 
     Current State:          Busy
-
 
 <br/>
 

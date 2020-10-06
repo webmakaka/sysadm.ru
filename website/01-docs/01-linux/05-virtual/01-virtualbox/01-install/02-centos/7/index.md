@@ -1,15 +1,15 @@
 ---
 layout: page
 title: Инсталляция VirtualBox в командной строке в Centos / Oracle Linux
+description: Инсталляция VirtualBox в командной строке в Centos / Oracle Linux
+keywords: Инсталляция VirtualBox в командной строке в Centos / Oracle Linux
 permalink: /linux/virtual/virtualbox/install/centos/7/
 ---
 
 # Инсталляция VirtualBox в командной строке в Centos / Oracle Linux
 
-
     # yum install -y dnf
     # dnf update -y
-
 
 <br/>
 
@@ -37,8 +37,6 @@ permalink: /linux/virtual/virtualbox/install/centos/7/
     -- последняя версия в репо 5.2
     # yum install -y VirtualBox-5.2.x86_64
 
-
-
 <br/>
 
 ### The vboxdrv kernel module is not loaded.
@@ -51,7 +49,6 @@ permalink: /linux/virtual/virtualbox/install/centos/7/
                sudo /sbin/vboxconfig
 
              You will not be able to start VMs until this problem is fixed.
-
 
 <br/>
 
@@ -87,8 +84,6 @@ permalink: /linux/virtual/virtualbox/install/centos/7/
     # vboxmanage --version
     5.2.0r118431
 
-
-
 <br/>
 
 ### Инсталляция Extension Pack
@@ -107,13 +102,11 @@ permalink: /linux/virtual/virtualbox/install/centos/7/
     Pack no. 0:   Oracle VM VirtualBox Extension Pack
     Version:      5.2.0
     Revision:     118431
-    Edition:      
+    Edition:
     Description:  USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe.
     VRDE Module:  VBoxVRDP
     Usable:       true
     Why unusable:
-
-
 
 <br/>
 
@@ -129,12 +122,9 @@ permalink: /linux/virtual/virtualbox/install/centos/7/
 
     # usermod -G vboxusers vmadm
 
-
-
 <br/>
 
 ### Запрет входа root по SSH
-
 
     # cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bkp
 
@@ -154,12 +144,9 @@ permalink: /linux/virtual/virtualbox/install/centos/7/
 
     # service sshd restart
 
-
-
 <br/>
 
 ### Настройка параметров учетной записи для работы с виртуальными машинами
-
 
     # su - vmadm
 
@@ -181,7 +168,6 @@ permalink: /linux/virtual/virtualbox/install/centos/7/
 
     ############################################
 
-
 Применить новые параметры:
 
     $ source ~/.bash_profile
@@ -192,15 +178,11 @@ permalink: /linux/virtual/virtualbox/install/centos/7/
     $ mkdir -p ${VM_BACKUPS}
     $ mkdir -p ${VM_ISO}
 
-
 Далее создаем виртуальную машину
-
-
 
 <br/>
 
 ### Понадобился hostonly интерфейс. Он сам автоматом не создался
-
 
     $ vboxmanage list hostonlyifs
 
@@ -216,7 +198,7 @@ permalink: /linux/virtual/virtualbox/install/centos/7/
     DHCP:            Disabled
     IPAddress:       192.168.56.1
     NetworkMask:     255.255.255.0
-    IPV6Address:     
+    IPV6Address:
     IPV6NetworkMaskPrefixLength: 0
     HardwareAddress: 0a:00:27:00:00:00
     MediumType:      Ethernet
@@ -230,8 +212,6 @@ permalink: /linux/virtual/virtualbox/install/centos/7/
     $ sudo ifconfig vboxnet0 up
 
     $ ifconfig vboxnet0
-
-
 
 <br/>
 

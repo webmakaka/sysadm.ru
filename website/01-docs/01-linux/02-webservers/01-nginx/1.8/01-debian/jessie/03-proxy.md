@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Настройка Nginx как proxy сервера
+description: Настройка Nginx как proxy сервера
+keywords: Настройка Nginx как proxy сервера
 permalink: /linux/webservers/nginx/1.8/debian/jessie/proxy/
 ---
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция VirtualBox в командной строке в RedHat/Centos
+description: Инсталляция VirtualBox в командной строке в RedHat/Centos
+keywords: Инсталляция VirtualBox в командной строке в RedHat/Centos
 permalink: /linux/virtual/virtualbox/install/centos/6/
 ---
 

@@ -2,7 +2,7 @@
 layout: page
 title: Kuberneters на локальном хосте (minikube, kubectl и virtualbox)
 description: Kuberneters на локальном хосте (minikube, kubectl и virtualbox)
-keywords: linux, minikube
+keywords: devops, linux, minikube
 permalink: /devops/containers/kubernetes/minikube/
 ---
 
@@ -10,11 +10,11 @@ permalink: /devops/containers/kubernetes/minikube/
 
 <br/>
 
-![your computer](/img/devops/containers/kubernetes/your-computer.png "your computer"){: .center-image }
+![your computer](/img/devops/containers/kubernetes/your-computer.png 'your computer'){: .center-image }
 
 <br/>
 
-![Local Kubernetes Development](/img/devops/containers/kubernetes/local-kubernetes-development.png "Local Kubernetes Development"){: .center-image }
+![Local Kubernetes Development](/img/devops/containers/kubernetes/local-kubernetes-development.png 'Local Kubernetes Development'){: .center-image }
 
 <br/>
 

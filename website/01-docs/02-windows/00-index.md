@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Windows
+description: Windows
+keywords: Windows
 permalink: /windows/
 ---
 
@@ -9,7 +11,6 @@ permalink: /windows/
 # Рабочие станции:
 
 ### [Рабочие станции](/windows/desktops/)
-
 
 <br/>
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Пример Ingress в minikube (Nginx) + TLS
+description: Пример Ingress в minikube (Nginx) + TLS
+keywords: devops, linux, kubernetes,  Пример Ingress в minikube (Nginx) + TLS
 permalink: /devops/containers/kubernetes/kubeadm/minikube-ingress-nginx/tls/
 ---
 

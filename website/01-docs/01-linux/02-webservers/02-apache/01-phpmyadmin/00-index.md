@@ -1,12 +1,12 @@
 ---
 layout: page
 title: PHPMyAdmin показывает белый экран, без какого либо кода
+description: PHPMyAdmin показывает белый экран, без какого либо кода
+keywords: PHPMyAdmin показывает белый экран, без какого либо кода
 permalink: /linux/webservers/apache/phpmyadmin/
 ---
 
-
-
-# Php MyAdmin показывает белый экран, без какого либо кода.
+# PHPMyAdmin показывает белый экран, без какого либо кода
 
 <br/>
 
@@ -19,24 +19,18 @@ permalink: /linux/webservers/apache/phpmyadmin/
 
     PHP Fatal error:  Call to undefined function mb_detect_encoding()
 
-
 <br/>
 
     # yum install -y php-mbstring
     # service httpd restart
 
-
 Заработало!
-
 
 Понадобилось инсталлировать mysqli
 
     # yum install php-mysqli
 
-
-
 ### The mcrypt extension is missing. Please check your PHP configuration.
-
 
     For me the answer was:
 
@@ -68,9 +62,7 @@ sudo service httpd restart
 
 -->
 
-
 ### date_default_timezone_get(): It is not safe to rely on the system's timezone settings.
-
 
     # php -i
 
@@ -93,18 +85,14 @@ sudo service httpd restart
 
     **********
 
-
 <br/>
 
     # cp /etc/php.ini /etc/php.ini.orig.$(date +%Y-%m-%d)
     # vi /etc/php.ini
 
-
 <br/>
 
     date.timezone = Europe/Moscow
-
-
 
 <!--
 	wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm

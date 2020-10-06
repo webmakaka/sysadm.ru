@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Менеджер пакетов helm (начинаем разбираться)
+description: Менеджер пакетов helm (начинаем разбираться)
+keywords: devops, linux, kubernetes, Менеджер пакетов helm (начинаем разбираться)
 permalink: /devops/containers/kubernetes/basics/init-containers/
 ---
 

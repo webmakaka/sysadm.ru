@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Resource Quotas & Limits in Kubernetes
+description: Resource Quotas & Limits in Kubernetes
+keywords: devops, linux, kubernetes, Resource Quotas & Limits in Kubernetes
 permalink: /devops/containers/kubernetes/basics/resource-quotas-and-limits/
 ---
 

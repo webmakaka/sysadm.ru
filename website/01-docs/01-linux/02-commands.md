@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Незапоминаемые команды в принципе
+description: Незапоминаемые команды в принципе
+keywords: Незапоминаемые команды в принципе
 permalink: /linux/commands/
 ---
 
@@ -16,11 +18,9 @@ permalink: /linux/commands/
 
     # du | sort -nr | cut -f2- | xargs du -hs
 
-
 Найти рекурсивно файлы размером более 100 Мб
 
     find . -size +100000k -exec du -h {} \;
-
 
 Найти в файлах содержимое текста
 
@@ -55,41 +55,31 @@ ps -ef | grep java | grep "netcracker/config" | sed 's/^[a-zA-Z]\{1,\}[[:space:]
     $ cat /etc/hosts | wc -l
     19
 
-
-
 вывести начиня с 4 строки 4 строки текста
 
     head -n4 /etc/squid/squid.conf | tail -n4
-
 
 Найти в файле все строки начинающиеся на http_access
 
     grep '^http_access' /etc/squid/squid.conf
 
-
 Locat / Foreign Address, Состояние, Протокол, Название программы, Порт
 
     $ netstat -tanp
-
 
 открыт ли порт 4848 на сервере
 
     netstat -lpna | grep 4848
 
-
 Список подключенных хостов
 
     $ netstat -lantp | grep ESTABLISHED |awk '{print $5}' | awk -F: '{print $1}' | sort -u
-
 
 <br/>
 
     $ ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
 
-
-![mtaalamu](/img/mtaalamu.png "mtaalamu"){: .center-image }
-
-
+![mtaalamu](/img/mtaalamu.png 'mtaalamu'){: .center-image }
 
 Проще
 
@@ -107,7 +97,6 @@ Locat / Foreign Address, Состояние, Протокол, Название 
     │   ├── console.perms
     │   ├── console.perms.d
     │   ├── group.conf
-
 
 <br/>
 

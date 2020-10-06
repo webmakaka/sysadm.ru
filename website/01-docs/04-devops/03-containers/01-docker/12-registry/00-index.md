@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Собственный Docker Registry
+description: Собственный Docker Registry
+keywords: devops, docker, Собственный Docker Registry
 permalink: /devops/containers/docker/registry/
 ---
 
 # Собственный Docker Registry
-
 
 [Собственный Docker Registry без Security](/devops/containers/docker/registry/no-security/)
 

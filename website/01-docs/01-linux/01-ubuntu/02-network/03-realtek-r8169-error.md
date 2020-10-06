@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Ubuntu, Realtek RTL-8110SC/8169SC - отваливается сетевой интерфейс на ubuntu 14.04.5 lts
+description: Ubuntu, Realtek RTL-8110SC/8169SC - отваливается сетевой интерфейс на ubuntu 14.04.5 lts
+keywords: Ubuntu, Realtek RTL-8110SC/8169SC - отваливается сетевой интерфейс на ubuntu 14.04.5 lts
 permalink: /linux/ubuntu/network/realtek-r8169-error/
 ---
 
+# [Ubuntu, Realtek RTL-8110SC/8169SC] отваливается сетевой интерфейс на ubuntu 14.04.5 lts
 
-#  [Ubuntu, Realtek RTL-8110SC/8169SC] отваливается сетевой интерфейс на ubuntu 14.04.5 lts
-
-Стал отваливаться сетевой интерфейс. Особенно, если включить трансляции с twitch или youtube. 
-
+Стал отваливаться сетевой интерфейс. Особенно, если включить трансляции с twitch или youtube.
 
 В логах dmesg:
 
@@ -21,7 +21,6 @@ permalink: /linux/ubuntu/network/realtek-r8169-error/
     [ 2511.033211] r8169 0000:07:01.0 enp7s1: rtl_counters_cond == 1 (loop: 1000, delay: 10).
     [ 2511.044531] r8169 0000:07:01.0 enp7s1: rtl_counters_cond == 1 (loop: 1000, delay: 10).
 
-
 <br/>
 
 В dmesg лучше искать командой:
@@ -33,8 +32,6 @@ permalink: /linux/ubuntu/network/realtek-r8169-error/
 **Ubuntu 18**
 
     # dmesg | grep -e enp7s1 -e r8169
-
-
 
 При перезагрузке какое-то время сеть работает. Потом опять перестает работать.
 
@@ -51,7 +48,6 @@ permalink: /linux/ubuntu/network/realtek-r8169-error/
     # echo 1 >/sys/devices/pci0000:00/0000:00:1e.0/0000:07:01.0/remove
     # echo 1 >/sys/devices/pci0000:00/0000:00:1e.0/rescan
 
-
 <br/>
 
 **ubuntu 18**
@@ -67,7 +63,7 @@ permalink: /linux/ubuntu/network/realtek-r8169-error/
 <br/>
 
     # lsmod | grep r8169
-    r8169                  86016  0 
+    r8169                  86016  0
     mii                    16384  1 r8169
 
 <br/>
@@ -75,7 +71,7 @@ permalink: /linux/ubuntu/network/realtek-r8169-error/
     # modinfo r8169 | grep -i version
     version:        2.3LK-NAPI
     srcversion:     3CDA56D002C01D874AD1DCD
-    vermagic:       4.4.0-141-generic SMP mod_unload modversions retpoline 
+    vermagic:       4.4.0-141-generic SMP mod_unload modversions retpoline
 
 <br/>
 
@@ -83,13 +79,12 @@ permalink: /linux/ubuntu/network/realtek-r8169-error/
     # find /lib/modules/$(uname -r) -name r8169.ko
     /lib/modules/4.4.0-141-generic/kernel/drivers/net/ethernet/realtek/r8169.ko
 
-
 <br/>
 
     # ethtool -i eth0
     driver: r8169
     version: 2.3LK-NAPI
-    firmware-version: 
+    firmware-version:
     bus-info: 0000:07:01.0
     supports-statistics: yes
     supports-test: no
@@ -97,12 +92,10 @@ permalink: /linux/ubuntu/network/realtek-r8169-error/
     supports-register-dump: yes
     supports-priv-flags: no
 
-
 <br/>
 
 Вроде здесь есть исходники для самостоятельной сборки драйверов.  
 https://elixir.bootlin.com/linux/v4.20/source/drivers/net/ethernet/realtek/r8169.c
-
 
 <br/>
 

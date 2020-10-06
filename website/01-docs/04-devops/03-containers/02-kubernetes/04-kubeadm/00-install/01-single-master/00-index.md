@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Изучаем установку и настройку Kubernetes Cluster в виртуальных машинах и контейнерах Single Master
+description: Изучаем установку и настройку Kubernetes Cluster в виртуальных машинах и контейнерах Single Master
+keywords: devops, linux, kubernetes,  Изучаем установку и настройку Kubernetes Cluster в виртуальных машинах и контейнерах Single Master
 permalink: /devops/containers/kubernetes/kubeadm/install/single-master/
 ---
 

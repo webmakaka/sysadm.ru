@@ -1,18 +1,18 @@
 ---
 layout: page
 title: Инсталляция Nginx 1.6 сервера на Debian из пакетов
+description: Инсталляция Nginx 1.6 сервера на Debian из пакетов
+keywords: Инсталляция Nginx 1.6 сервера на Debian из пакетов
 permalink: /linux/webservers/nginx/1.6/debian/jessie/installation/
 ---
 
 # Инсталляция Nginx 1.6 сервера на Debian из пакетов
-
 
 <br/>
 
     # apt-get update -y && apt-get upgrade -y
     # apt-get install -y vim curl links
     # apt-get install -y nginx
-
 
 <br/>
 
@@ -32,21 +32,17 @@ permalink: /linux/webservers/nginx/1.6/debian/jessie/installation/
     ETag: "56ffaa98-363"
     Accept-Ranges: bytes
 
-<br/>   
+<br/>
 
     # links http://localhost
 
-
 ### Настройка конфигов
-
 
     # vi /etc/hosts
 
     127.0.0.1 sysadm.ru
 
-
 <br/>
-
 
     # cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
 
@@ -69,16 +65,13 @@ permalink: /linux/webservers/nginx/1.6/debian/jessie/installation/
         }
     }
 
-
 <br/>
-
 
 ### Добавление сайта во включенные
 
     # cd /etc/nginx/sites-enabled/
     # ln -s /etc/nginx/sites-available/sysadm.ru.config
     # service nginx restart
-
 
 <br/>
 
@@ -99,7 +92,6 @@ permalink: /linux/webservers/nginx/1.6/debian/jessie/installation/
     127.0.0.1 - - [06/Feb/2016:16:24:49 +0000] "HEAD / HTTP/1.1" 200 0 "-" "curl/7.38.0"
     127.0.0.1 - - [06/Feb/2016:16:24:56 +0000] "GET / HTTP/1.1" 200 27 "-" "curl/7.38.0"
 
-
-<br/>  
+<br/>
 
 Если все OK. Можно из hosts убрать запись, что 127.0.0.1 это sysadm.ru

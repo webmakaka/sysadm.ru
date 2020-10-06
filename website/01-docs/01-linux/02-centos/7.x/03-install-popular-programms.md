@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция популярных программ в Centos 7.x
+description: Инсталляция популярных программ в Centos 7.x
+keywords: Инсталляция популярных программ в Centos 7.x
 permalink: /linux/centos/7.x/install-popular-programms/
 ---
 
@@ -57,7 +59,6 @@ enabled=1
 gpgcheck=1
 gpgkey=https://repo.skype.com/data/SKYPE-GPG-KEY
 ```
-
 
 <br/>
 

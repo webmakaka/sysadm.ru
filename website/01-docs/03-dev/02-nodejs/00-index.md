@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Программирование в Linux Node.JS
+description: Программирование в Linux Node.JS
+keywords: dev, nodejs, Программирование в Linux Node.JS
 permalink: /dev/nodejs/
 ---
 

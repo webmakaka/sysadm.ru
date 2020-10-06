@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция Docker в CentOS 7
+description: Инсталляция Docker в CentOS 7
+keywords: DevOps, Инсталляция Docker в CentOS 7
 permalink: /devops/containers/docker/install/centos/7/
 ---
 
@@ -8,7 +10,6 @@ permalink: /devops/containers/docker/install/centos/7/
 
 Устанавливаю с нуля: 21 ноября 2017  
 Добавляю исправления: 29 января 2018
-
 
 Похоже, что все опять поменялось. Я не успеваю менять инструкции по инсталляции. А все почему? Потому, что владельцы Docker похоже хотят заработать и начинают навязывать платную версию продукта.
 
@@ -27,11 +28,9 @@ permalink: /devops/containers/docker/install/centos/7/
 
 https://docs.docker.com/engine/installation/linux/docker-ce/centos/#uninstall-old-versions
 
-
 Требуется пакет container-selinux
 
     # dnf install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.21-1.el7.noarch.rpm
-
 
 <br/>
 
@@ -78,7 +77,6 @@ https://docs.docker.com/engine/installation/linux/docker-ce/centos/#uninstall-ol
 <br/>
 
     Log out and log back in.
-
 
 <br/>
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Vagrant c Docker внутри
+description: Vagrant c Docker внутри
+keywords: Vagrant c Docker внутри
 permalink: /linux/virtual/vagrant/vagrant-with-docker/
 ---
 

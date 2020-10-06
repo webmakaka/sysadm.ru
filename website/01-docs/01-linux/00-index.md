@@ -26,7 +26,6 @@ permalink: /linux/
 
 ### [Развернуть видео на 90 градусов в ubuntu (в командной строке)](/linux/editors/)
 
-
 <br/>
 
 # [Ubuntu](/linux/ubuntu/)
@@ -75,11 +74,15 @@ permalink: /linux/
 
 ---
 
+<!--
+
 <br/>
 
 # 1C:
 
 ### [1С:Предприятие 8.3 + PostgreSQL 9.4 на базе Debian 8 «Jessie»](http://nixway.org/2015/11/10/1c-predpriyatie-8-3+postgresql-na-baze-debian-8-jessie/)
+
+-->
 
 ---
 

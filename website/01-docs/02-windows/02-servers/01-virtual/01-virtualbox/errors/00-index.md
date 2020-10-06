@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Ошибки Virtualbox в Windows
+description: Ошибки Virtualbox в Windows
+keywords: Ошибки Virtualbox в Windows
 permalink: /windows/servers/virtual/virtualbox/errors/
 ---
 

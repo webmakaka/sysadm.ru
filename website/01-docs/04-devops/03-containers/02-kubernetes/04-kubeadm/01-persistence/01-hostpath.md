@@ -1,6 +1,8 @@
 ---
 layout: page
 title: HostPath
+description: HostPath
+keywords: devops, linux, kubernetes, HostPath
 permalink: /devops/containers/kubernetes/kubeadm/persistence/hostpath/
 ---
 

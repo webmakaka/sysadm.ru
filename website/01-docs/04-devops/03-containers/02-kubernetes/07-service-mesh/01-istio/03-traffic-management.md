@@ -8,7 +8,6 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/traffic-management/
 
 # Istio Traffic Management
 
-
 Поднята виртуальная машина с minikube <a href="/devops/containers/kubernetes/service-mesh/istio/minikube/env/">следующим образом</a>.
 
 <br/>
@@ -16,11 +15,9 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/traffic-management/
 Делаю:  
 18.04.2020
 
-
 https://www.youtube.com/watch?v=AbCiCXIHr_4
 
 https://github.com/carnage-sh/cloud-for-fun/
-
 
 <br/>
 
@@ -35,7 +32,6 @@ istio-ingressgateway   LoadBalancer   10.99.75.170   192.168.99.96   15020:32025
     // Export External-IP
     $ export GW=192.168.99.96
 
-    
 <br/>
 
     $ cd ~/tmp
@@ -44,7 +40,7 @@ istio-ingressgateway   LoadBalancer   10.99.75.170   192.168.99.96   15020:32025
 
 <br/>
 
-    $ kubectl apply -f 01-application.yml 
+    $ kubectl apply -f 01-application.yml
 
 <br/>
 
@@ -54,11 +50,10 @@ istio-ingressgateway   LoadBalancer   10.99.75.170   192.168.99.96   15020:32025
     recursed-v2-b4b8dcd74-jxt5t    2/2     Running   0          80s
     recursed-v3-5f849d97c5-s5b9z   2/2     Running   0          80s
 
-
 <br/>
 
-    $ kubectl apply -f 02-gateway.yml 
-    $ kubectl apply -f 03-route-all.yml 
+    $ kubectl apply -f 02-gateway.yml
+    $ kubectl apply -f 03-route-all.yml
 
 <br/>
 
@@ -75,7 +70,6 @@ istio-ingressgateway   LoadBalancer   10.99.75.170   192.168.99.96   15020:32025
     {"hostname": "recursed-v2-b4b8dcd74-jxt5t", "delay": 2000, "version": "v2"}
     {"hostname": "recursed-v1-74d5694cb6-pd8d2", "delay": 0, "version": "v1"}
     {"hostname": "recursed-v3-5f849d97c5-s5b9z", "delay": 0, "version": "v3"}
-
 
 <br/>
 
@@ -83,21 +77,18 @@ istio-ingressgateway   LoadBalancer   10.99.75.170   192.168.99.96   15020:32025
 
 <br/>
 
-    $ kubectl apply -f 04-destinationrule.yml 
-    $ kubectl apply -f 05-route-v1.yml 
-    $ kubectl apply -f 06-route-v2.yml 
-    $ kubectl apply -f 07-route-v1-v3.yml 
+    $ kubectl apply -f 04-destinationrule.yml
+    $ kubectl apply -f 05-route-v1.yml
+    $ kubectl apply -f 06-route-v2.yml
+    $ kubectl apply -f 07-route-v1-v3.yml
 
 <br/>
 
     $ kubectl apply -f 08-route-v1-mirror-v3.yml
-    $ kubectl apply -f 09-route-v1-fault.yml 
-    $ kubectl apply -f 10-route-timeout.yml 
-    $ kubectl apply -f 11-dr-circuitbreaker.yml 
-
+    $ kubectl apply -f 09-route-v1-fault.yml
+    $ kubectl apply -f 10-route-timeout.yml
+    $ kubectl apply -f 11-dr-circuitbreaker.yml
 
 <br/>
 
     $ kubectl delete -f .
-
-

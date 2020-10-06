@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Single Master Kubernetes Cluster в lxc контейнерах
+description: Single Master Kubernetes Cluster в lxc контейнерах
+keywords: devops, linux, kubernetes,  Single Master Kubernetes Cluster в lxc контейнерах
 permalink: /devops/containers/kubernetes/kubeadm/install/single-master/lxc/
 ---
 

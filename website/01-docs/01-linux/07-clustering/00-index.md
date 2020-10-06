@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Кластеризация
+description: Кластеризация в Linux
+keywords: Кластеризация в Linux
 permalink: /linux/clustering/
 ---
 
-# Кластеризация
-
+# Кластеризация в Linux
 
 <div align="center">
 
@@ -13,11 +14,10 @@ permalink: /linux/clustering/
 
 </div>
 
-
 <br/>
 <br/>
 
-### [DRBD](http://odba.ru/showthread.php?t=474)  
+### [DRBD](http://odba.ru/showthread.php?t=474)
 
 ### [DRBD 4 node cluster](http://odba.ru/showthread.php?t=525)
 

@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Virtual Box Основные команды
+title: VirtualBox Основные команды
+description: VirtualBox Основные команды
+keywords: VirtualBox Основные команды
 permalink: /linux/virtual/virtualbox/commands/
 ---
 
-# Virtual Box Основные команды
+# VirtualBox Основные команды
 
 -- Получить список всех виртуальных машин
 
@@ -17,8 +19,6 @@ permalink: /linux/virtual/virtualbox/commands/
 -- Удалить виртуальную машину
 
     $ vboxmanage unregistervm vm_oel7.3_oracle_db_12.2 --delete
-
-
 
 <br/>
 
@@ -36,11 +36,9 @@ Reset виртуальной машины
 
     $ VBoxManage controlvm ${vm} poweroff
 
-
 <br/>
 
 ### Получить помощь по командам:
-
 
     $ vboxmanage help
 

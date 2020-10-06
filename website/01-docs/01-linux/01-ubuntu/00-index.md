@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Ubuntu
+description: Ubuntu
+keywords: Ubuntu
 permalink: /linux/ubuntu/
 ---
-
-<br/>
 
 # Ubuntu
 

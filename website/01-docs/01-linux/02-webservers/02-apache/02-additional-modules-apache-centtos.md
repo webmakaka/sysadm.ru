@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Apache Httpd сервер модули mod_ssl, mod_security, mod_python (Centos 6.6)
+description: Apache Httpd сервер модули mod_ssl, mod_security, mod_python (Centos 6.6)
+keywords: Apache Httpd сервер модули mod_ssl, mod_security, mod_python (Centos 6.6)
 permalink: /linux/webservers/apache/mods/
 ---
 

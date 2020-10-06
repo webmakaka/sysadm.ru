@@ -1,10 +1,14 @@
 ---
 layout: page
 title: Пример линковки контейнеров для их совместной работы
+description: Пример линковки контейнеров для их совместной работы
+keywords: devops, docker, Пример линковки контейнеров для их совместной работы
 permalink: /devops/containers/docker/linking-containers/manual-linking/
 ---
 
 # Пример линковки контейнеров для их совместной работы
+
+**!!! Было актуально когда-то давно**
 
 <strong>Создаем контейнер с сервером</strong>
 
@@ -23,7 +27,6 @@ permalink: /devops/containers/docker/linking-containers/manual-linking/
     EXPOSE 3306
     CMD ["/usr/bin/mysqld_safe"]
 
-
 <br/>
 
     $ docker build -rm -t centos6/mysql_server:v01 .
@@ -39,9 +42,7 @@ permalink: /devops/containers/docker/linking-containers/manual-linking/
 
 ### Создаем контейнер с клиентом
 
-
     vi Dockerfile
-
 
 <br/>
 
@@ -57,14 +58,11 @@ permalink: /devops/containers/docker/linking-containers/manual-linking/
 
 <br/>
 
-
 --link name:alias
 
 Where name is the name of the container we're linking to and alias is an alias for the link name.
 
-
     $ docker run -t -i --link mysql_server:mysql_server 4a173a15faa5
-
 
 <br/>
 
@@ -95,17 +93,12 @@ Where name is the name of the container we're linking to and alias is an alias f
     ff02::2	ip6-allrouters
     172.17.1.14	mysql_server
 
-
 <br/>
-
 
 Взято:  
 http://alexecollins.com/docker-linking-containers/
 
-
 https://docs.docker.com/userguide/dockerlinks/#docker-container-linking
-
-
 
 <!--
 

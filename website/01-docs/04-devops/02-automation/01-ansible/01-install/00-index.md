@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция Ansible
+description: Инсталляция Ansible
+keywords: Инсталляция Ansible
 permalink: /devops/automation/ansible/install/
 ---
 

@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes Custom Resource Definitions
 description: Kubernetes Custom Resource Definitions
-keywords: linux, kubernetes, Custom Resource Definitions, crds
+keywords: devops, linux, kubernetes, Custom Resource Definitions, crds
 permalink: /devops/containers/kubernetes/basics/custom-resource-definitions/
 ---
 
@@ -10,7 +10,7 @@ permalink: /devops/containers/kubernetes/basics/custom-resource-definitions/
 
 <br/>
 
-Делаю: 
+Делаю:
 22.04.2020
 
 <br/>
@@ -75,7 +75,7 @@ kind: Pizza
 metadata:
   name: burrcheese
 spec:
-  toppings: 
+  toppings:
   - mozzarella
   sauce: regular
 EOF
@@ -93,7 +93,6 @@ EOF
     $ kubectl api-resources | grep burr
     pizzas                            pz           mykubernetes.burrsutter.com    true         Pizza
 
-
 <br/>
 
 **Make more Pizzas**
@@ -105,7 +104,7 @@ kind: Pizza
 metadata:
   name: burrmeats
 spec:
-  toppings: 
+  toppings:
   - mozzarella
   - pepperoni
   - sausage
@@ -114,7 +113,6 @@ spec:
 EOF
 ```
 
-
 ```
 $ cat <<EOF | kubectl apply -f -
 apiVersion: mykubernetes.burrsutter.com/v1beta2
@@ -122,7 +120,7 @@ kind: Pizza
 metadata:
   name: burrveggie2
 spec:
-  toppings: 
+  toppings:
   - mozzarella
   - black olives
   sauce: extra
@@ -156,7 +154,6 @@ EOF
     NAME               READY   STATUS    RESTARTS   AGE
     metacontroller-0   1/1     Running   0          2m26s
 
-
 ```
 $ cat <<EOF | kubectl apply -f -
 apiVersion: metacontroller.k8s.io/v1alpha1
@@ -180,7 +177,7 @@ spec:
 EOF
 ```
 
-    $ touch ~/tmp/sync.py 
+    $ touch ~/tmp/sync.py
 
 ```
 $ cat > ~/tmp/sync.py << EOF
@@ -190,7 +187,7 @@ import logging
 
 class Controller(BaseHTTPRequestHandler):
   def sync(self, parent, children):
-    
+
     # Compute status based on observed state.
     desired_status = {
        "pods": 1
@@ -206,11 +203,11 @@ class Controller(BaseHTTPRequestHandler):
       print(topping)
 
     stuff = ' ' + sauce + ' ' + ' '.join(toppings) + ' of ' + name
-   
+
     print stuff
 
     # Generate the desired child object(s)
-    
+
     desired_pods = [
       {
         "apiVersion": "v1",
@@ -235,7 +232,7 @@ class Controller(BaseHTTPRequestHandler):
 
   def do_POST(self):
     # Serve the sync() function as a JSON webhook.
-    
+
     observed = json.loads(self.rfile.read(int(self.headers.getheader("content-length"))))
     desired = self.sync(observed["parent"], observed["children"])
 
@@ -251,8 +248,6 @@ EOF
     $ kubectl -n pizzahat create configmap pizza-controller --from-file=/home/marley/tmp/sync.py
 
     $ kubectl -n pizzahat apply -f webhook-py.yaml
-
-
 
 ```
 $ cat <<EOF | kubectl apply -f -
@@ -280,7 +275,7 @@ spec:
       volumes:
       - name: hooks
         configMap:
-          name: pizza-controller        
+          name: pizza-controller
 ---
 apiVersion: v1
 kind: Service
@@ -290,13 +285,11 @@ spec:
   selector:
     app: pizza-controller
   ports:
-  - port: 8080        
+  - port: 8080
 EOF
 ```
 
-
 **Deploy some Pizzas**
-
 
 ```
 $ cat <<EOF | kubectl -n pizzahat  apply -f -
@@ -305,13 +298,11 @@ kind: Pizza
 metadata:
   name: burrcheese
 spec:
-  toppings: 
+  toppings:
   - mozzarella
   sauce: regular
 EOF
 ```
-
-
 
 ```
 $ cat <<EOF | kubectl -n pizzahat  apply -f -
@@ -320,7 +311,7 @@ kind: Pizza
 metadata:
   name: burrmeats
 spec:
-  toppings: 
+  toppings:
   - mozzarella
   - pepperoni
   - sausage
@@ -329,7 +320,6 @@ spec:
 EOF
 ```
 
-
 ```
 $ cat <<EOF | kubectl -n pizzahat  apply -f -
 apiVersion: mykubernetes.burrsutter.com/v1beta2
@@ -337,7 +327,7 @@ kind: Pizza
 metadata:
   name: burrveggie2
 spec:
-  toppings: 
+  toppings:
   - mozzarella
   - black olives
   sauce: extra
@@ -345,7 +335,6 @@ EOF
 ```
 
 Ничего не заработало! pizza-controller не запустился!
-
 
     $ kubectl logs burrveggie -n pizzahat
     $ kubectl delete pizza burrveggie
@@ -356,7 +345,6 @@ EOF
 ### Kafka via OperatorHub
 
 http://operatorhub.io/
-
 
     $ kubectl create namespace franz
 
@@ -382,7 +370,6 @@ http://operatorhub.io/
     NAME           DESIRED KAFKA REPLICAS   DESIRED ZK REPLICAS
     burr-cluster   3                        3
 
-
 <br/>
 
     $ kubectl get pods
@@ -394,7 +381,6 @@ http://operatorhub.io/
     burr-cluster-zookeeper-0                       2/2     Running   0          4m38s
     burr-cluster-zookeeper-1                       2/2     Running   0          4m38s
     burr-cluster-zookeeper-2                       2/2     Running   0          4m38s
-
 
 <br/>
 

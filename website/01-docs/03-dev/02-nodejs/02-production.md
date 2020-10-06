@@ -1,6 +1,8 @@
 ---
 layout: page
 title: How To Set Up a Node.js Application for Production on Ubuntu 16.04
+description: How To Set Up a Node.js Application for Production on Ubuntu 16.04
+keywords: dev, nodejs, How To Set Up a Node.js Application for Production on Ubuntu 16.04
 permalink: /dev/nodejs/production/
 ---
 

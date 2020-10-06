@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Попытка исключения использования бэд блоков файловой системой в Ubuntu
+description: Попытка исключения использования бэд блоков файловой системой в Ubuntu
+keywords: Попытка исключения использования бэд блоков файловой системой в Ubuntu
 permalink: /linux/hardware/hdd/bad-blocks/
 ---
 
 # Попытка исключения использования бэд блоков файловой системой в Ubuntu
 
-
 ### Советую внимательно смотреть на название диска и его разделы.
-
 
     # apt-get install -y smartmontools
 
@@ -212,56 +212,46 @@ permalink: /linux/hardware/hdd/bad-blocks/
       After scanning selected spans, do NOT read-scan remainder of disk.
     If Selective self-test is pending on power-up, resume after 0 minute delay.
 
-
-
 <br/><br/>
 
 Если верить написанному в интернете:
 
     1    Raw_Read_Error_Rate
 
-* VALUE это текущее значение (остаток здоровья)
-* WORST - худшее количество здоровья за все время.
-* THRESH - это значение при котором диск можно считать покойником.
-
+-   VALUE это текущее значение (остаток здоровья)
+-   WORST - худшее количество здоровья за все время.
+-   THRESH - это значение при котором диск можно считать покойником.
 
 <br/>
 
 TYPE - тип атрибута:
 
-* Pre-fail - критический атрибут.
-* Old_age - некритический атрибут.
-
+-   Pre-fail - критический атрибут.
+-   Old_age - некритический атрибут.
 
 <br/>
 
 **Почитать, если что:**
 
-https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html  
-
+https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
 
 <!--
     https://unix.community/resources/47/
 -->
 
-
 <br/>
 
-
 ### Может DD сможет забить диск нулями? И вдруг окажется, что никаких критических ошибок на диске на самом деле нет?
-
 
 Хотя на таком диске ничего уже хранить важного я бы не стал. С него можно, например, торренты раздавать, хранить индийские фильмы.
 
 Я в этом также разбираюсь, как свинья в апельсинах!
-
 
     # dd if=/dev/zero of=/dev/sdb
     dd: writing to ‘/dev/sdb’: Input/output error
     1871049+0 records in
     1871048+0 records out
     957976576 bytes (958 MB) copied, 8600,9 s, 111 kB/s
-
 
 Лучше запускать, чтобы было видно прогресс.
 
@@ -272,7 +262,6 @@ https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
 <br/>
 
 В общем команда dd только подтвердила, что диску не хорошо. Впринципе, она ничем и не помогла.
-
 
 <br/>
 
@@ -305,7 +294,6 @@ https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
     Command (m for help): w
     The partition table has been altered!
 
-
 <br/>
 
     # mkfs.ext4 /dev/sdb1
@@ -327,13 +315,12 @@ https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
     	4096000, 7962624, 11239424, 20480000, 23887872, 71663616, 78675968,
     	102400000, 214990848
 
-    Allocating group tables: done                            
-    Writing inode tables: done                            
+    Allocating group tables: done
+    Writing inode tables: done
     Creating journal (32768 blocks): done
-    Writing superblocks and filesystem accounting information:            
+    Writing superblocks and filesystem accounting information:
 
     done
-
 
 <br/>
 
@@ -341,11 +328,9 @@ https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
 
     # badblocks -s /dev/sdb1 > ~/badblocks_sdb1.txt
 
-
 Пометка бэд блоков (в дальнейшем помеченные блоки будут игнорироваться):
 
     # e2fsck -l ~/badblocks_sdb1.txt /dev/sdb1
-
 
 <br/>
 
@@ -357,10 +342,8 @@ https://www.opennet.ru/base/sys/smart_hdd_mon.txt.html
 
 Как-то не особо хотелось им заниматься и я забил.
 
-
 В общем 2TB диск **Seagate Barracuda ST2000DM001-9YN164** помер.  
 Он прожил яркую жизнь без сбоев и умер совсем молодым, практически сразу после окончания гарантии (на самом деле диск бы не мой и я ничего не знаю о гарантии). **Ему было всего 3.34 года** (29238 часов / 24 / 365). (если я правильно понимаю и считаю).
-
 
 Если было бы очень нужно его заставить работать, я бы попытался создать на нем разделы. И те разделы, в которых бы были бэд блоки я бы постарался не использовать. Но это все достаточно трудозатратно по времени.
 

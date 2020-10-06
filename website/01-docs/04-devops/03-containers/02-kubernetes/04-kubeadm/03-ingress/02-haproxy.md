@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Устанавливаем и настраиваем HAProxy для Kuberntes (тестовые задачи)
+description: Устанавливаем и настраиваем HAProxy для Kuberntes (тестовые задачи)
+keywords: devops, linux, kubernetes, Устанавливаем и настраиваем HAProxy для Kuberntes (тестовые задачи)
 permalink: /devops/containers/kubernetes/kubeadm/ingress/haproxy/
 ---
 
@@ -10,7 +12,6 @@ permalink: /devops/containers/kubernetes/kubeadm/ingress/haproxy/
 
 Делаю:  
 24.10.2019
-
 
 <br/>
 
@@ -27,8 +28,6 @@ https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
     $ rm -rf ~/vagrant-kubernetes-haproxy && mkdir ~/vagrant-kubernetes-haproxy && cd ~/vagrant-kubernetes-haproxy
 
 <br/>
-
-
 
 // Создаем Vagrantfile для виртуалки
 
@@ -113,7 +112,6 @@ backend http_back
     # systemctl enable haproxy
     # systemctl start haproxy
     # systemctl status haproxy
-
 
 <br/>
 

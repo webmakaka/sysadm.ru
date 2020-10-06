@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Донастройка программ
+description: Донастройка программ
+keywords: Донастройка программ
 permalink: /windows/desktops/tweaks/
 ---
 

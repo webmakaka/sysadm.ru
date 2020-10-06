@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Мелкие улучшения
+title: Мелкие улучшения в Ubuntu
+description: Мелкие улучшения в Ubuntu
+keywords: Мелкие улучшения в Ubuntu
 permalink: /linux/ubuntu/small-improvements/
 ---
 
-# Мелкие улучшения
-
+# Мелкие улучшения в Ubuntu
 
 <br/>
 
@@ -29,16 +30,15 @@ permalink: /linux/ubuntu/small-improvements/
 ```shell
 #%sudo   ALL=(ALL:ALL) ALL
 %sudo   ALL=(ALL:ALL) NOPASSWD:ALL
-```    
+```
 
-<!-- 
+<!--
     root    ALL=(ALL:ALL) ALL
 
     меняю на
 
     root    ALL=(ALL:ALL) ALL
     <username>    ALL=(ALL:ALL) NOPASSWD:ALL -->
-
 
 <br/>
 
@@ -47,8 +47,6 @@ permalink: /linux/ubuntu/small-improvements/
 
     $ sudo whoami
     root
-
-
 
 <br/>
 
@@ -79,5 +77,3 @@ permalink: /linux/ubuntu/small-improvements/
 <br/>
 
     # systemctl restart ssh
-        
-        

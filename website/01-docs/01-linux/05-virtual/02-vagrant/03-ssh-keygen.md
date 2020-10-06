@@ -1,6 +1,8 @@
 ---
 layout: page
 title: SSH keys
+description: SSH keys
+keywords: SSH keys
 permalink: /linux/virtual/vagrant/ssh-keygen/
 ---
 

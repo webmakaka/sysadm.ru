@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Создание загрузочной USB флешки в Linux
+description: Создание загрузочной USB флешки в Linux
+keywords: Создание загрузочной USB флешки в Linux
 permalink: /linux/linux-live-usb-flash/
 ---
 
 # Создание загрузочной USB флешки в Linux
-
 
 Как оказалось, в убунту записать образ Centos с помощью "Startup Disk Creator" нельзя. Не помню, вроде раньше было можно?
 
@@ -26,11 +27,9 @@ permalink: /linux/linux-live-usb-flash/
 
     # dd if=./CentOS-7-x86_64-DVD-1810.iso of=/dev/sdf
 
-
 **С дебианом тоже работает**
 
     # dd if=./debian-8.6.0-amd64-DVD-1.iso of=/dev/sdg
-
 
 **С ubuntu тоже работает**
 

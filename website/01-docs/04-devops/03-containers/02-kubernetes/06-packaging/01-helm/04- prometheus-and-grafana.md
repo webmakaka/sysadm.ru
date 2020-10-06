@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml
+description: Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml
+keywords: devops, linux, kubernetes, Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml
 permalink: /devops/containers/kubernetes/packaging/heml/prometheus-and-grafana/
 ---
 
@@ -18,7 +20,7 @@ https://www.youtube.com/watch?v=CmPdyvgmw-A&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-![prometheus and grafana 01](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-01.png "prometheus and grafana 01"){: .center-image }
+![prometheus and grafana 01](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-01.png 'prometheus and grafana 01'){: .center-image }
 
 <br/>
 
@@ -103,7 +105,7 @@ http://node1:32323
 
 <br/>
 
-![prometheus and grafana 02](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-02.png "prometheus and grafana 02"){: .center-image }
+![prometheus and grafana 02](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-02.png 'prometheus and grafana 02'){: .center-image }
 
 <br/>
 
@@ -160,23 +162,23 @@ http://node1:32324
 
 <br/>
 
-![prometheus and grafana 03](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-03.png "prometheus and grafana 03"){: .center-image }
+![prometheus and grafana 03](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-03.png 'prometheus and grafana 03'){: .center-image }
 
 <br/>
 
-![prometheus and grafana 04](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-04.png "prometheus and grafana 04"){: .center-image }
+![prometheus and grafana 04](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-04.png 'prometheus and grafana 04'){: .center-image }
 
 <br/>
 
-![prometheus and grafana 05](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-05.png "prometheus and grafana 05"){: .center-image }
+![prometheus and grafana 05](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-05.png 'prometheus and grafana 05'){: .center-image }
 
 <br/>
 
-![prometheus and grafana 06](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-06.png "prometheus and grafana 06"){: .center-image }
+![prometheus and grafana 06](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-06.png 'prometheus and grafana 06'){: .center-image }
 
 <br/>
 
-![prometheus and grafana 07](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-07.png "prometheus and grafana 07"){: .center-image }
+![prometheus and grafana 07](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-07.png 'prometheus and grafana 07'){: .center-image }
 
 <br/>
 
@@ -185,15 +187,15 @@ https://grafana.com/dashboards/8588
 
 <br/>
 
-![prometheus and grafana 08](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-08.png "prometheus and grafana 08"){: .center-image }
+![prometheus and grafana 08](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-08.png 'prometheus and grafana 08'){: .center-image }
 
 <br/>
 
-![prometheus and grafana 09](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-09.png "prometheus and grafana 09"){: .center-image }
+![prometheus and grafana 09](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-09.png 'prometheus and grafana 09'){: .center-image }
 
 <br/>
 
-![prometheus and grafana 10](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-10.png "prometheus and grafana 10"){: .center-image }
+![prometheus and grafana 10](/img/devops/containers/kubernetes/kubeadm/helm/prometheus-and-grafana/prometheus-and-grafana-10.png 'prometheus and grafana 10'){: .center-image }
 
 <br/>
 

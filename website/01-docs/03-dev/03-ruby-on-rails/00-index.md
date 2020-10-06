@@ -1,19 +1,18 @@
 ---
 layout: page
 title: Программирование в Linux на Ruby on Rails
+description: Программирование в Linux на Ruby on Rails
+keywords: dev, ruby on rails, Программирование в Linux на Ruby on Rails
 permalink: /dev/ruby-on-rails/
 ---
 
-
 # Программирование в Linux на Ruby on Rails
 
-
-Я активно использую контейрены docker. Думаю, лучше всего инсталляцию всего что нужно для разработки, можно посмотреть в файле для создания  <a href="/devops/containers/docker/dockerfile/my-dockerfile-for-ruby-on-rails/">контейнера</a>.
-
+Я активно использую контейрены docker. Думаю, лучше всего инсталляцию всего что нужно для разработки, можно посмотреть в файле для создания <a href="/devops/containers/docker/dockerfile/my-dockerfile-for-ruby-on-rails/">контейнера</a>.
 
 <br/>
 
-### Скрипт установки ruby в ubuntu bionic 
+### Скрипт установки ruby в ubuntu bionic
 
 ```bash
 
@@ -31,7 +30,6 @@ bundle -v
 
 ```
 
-
 <br/>
 
 ### [Инсталляция Ruby on Rails в Centos 6.X](/dev/ruby-on-rails/installation/centos/6.X/)
@@ -39,4 +37,3 @@ bundle -v
 <br/>
 
 ### [Сервера приложений для Ruby on Rails проектов](/dev/ruby-on-rails/app-servers/)
-

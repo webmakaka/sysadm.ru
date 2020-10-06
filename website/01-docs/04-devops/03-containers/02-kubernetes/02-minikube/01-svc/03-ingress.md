@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Создание службы Ingress
+description: Создание службы Ingress
+keywords: devops, linux, kubernetes, Создание службы Ingress
 permalink: /devops/containers/kubernetes/minikube/svc/ingress/
 ---
 
@@ -26,11 +28,9 @@ Deployment и NodePort уже созданы как <a href="/devops/containers/
     $ kubectl get po --all-namespaces | grep ingres
     kube-system   nginx-ingress-controller-6fc5bcc8c9-rplp8   0/1     ContainerCreating   0          12s
 
-
 <br/>
 
 ### Запускаем приложение
-
 
 ```
 $ cat <<EOF | kubectl apply -f -
@@ -50,13 +50,11 @@ spec:
 EOF
 ```
 
-
 <br/>
 
     $ kubectl get ingresses
     NAME                      HOSTS                         ADDRESS   PORTS   AGE
     nodejs-cats-app-ingress   nodejs-cats-app.example.com             80      23s
-
 
 <br/>
 

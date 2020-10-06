@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Horizontal Pod Autoscaler in Kubernetes
+description: Horizontal Pod Autoscaler in Kubernetes
+keywords: devops, linux, kubernetes, Horizontal Pod Autoscaler in Kubernetes
 permalink: /devops/containers/kubernetes/kubeadm/horizontal-pod-autoscaler/
 ---
 
@@ -23,7 +25,7 @@ https://www.youtube.com/watch?v=uxuyPru3_Lc&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 Рисунок индуса:
 
-![Horizontal Pod Autoscaler](/img/devops/containers/kubernetes/kubeadm/Horizontal-Pod-Autoscaler.png "Horizontal Pod Autoscaler"){: .center-image }
+![Horizontal Pod Autoscaler](/img/devops/containers/kubernetes/kubeadm/Horizontal-Pod-Autoscaler.png 'Horizontal Pod Autoscaler'){: .center-image }
 
 <br/>
 

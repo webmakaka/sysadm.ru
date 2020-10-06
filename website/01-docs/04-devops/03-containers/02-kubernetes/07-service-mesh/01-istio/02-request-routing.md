@@ -8,7 +8,6 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/request-routing/
 
 # Istio Request Routing
 
-
 Поднята виртуальная машина с minikube <a href="/devops/containers/kubernetes/service-mesh/istio/minikube/env/">следующим образом</a>.
 
 <br/>
@@ -16,12 +15,9 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/request-routing/
 Делаю:  
 17.04.2020
 
-
 https://www.youtube.com/watch?v=a0Mu0hQ9zzI
 
 https://github.com/carnage-sh/cloud-for-fun/tree/master/blog/istio-routing
-
-
 
 <br/>
 
@@ -37,7 +33,6 @@ https://github.com/carnage-sh/cloud-for-fun/tree/master/blog/istio-routing
     $ kubectl apply -f helloworld-gateway-v1.yaml
 
 <br/>
-
 
     $ kubectl convert -f helloworld-v2.yaml > helloworld-v2.1.yaml
 
@@ -65,11 +60,9 @@ https://github.com/carnage-sh/cloud-for-fun/tree/master/blog/istio-routing
 
 <br/>
 
-
     $ kubectl get vs
     NAME         GATEWAYS               HOSTS   AGE
     helloworld   [helloworld-gateway]   [*]     3m44s
-
 
 <br/>
 

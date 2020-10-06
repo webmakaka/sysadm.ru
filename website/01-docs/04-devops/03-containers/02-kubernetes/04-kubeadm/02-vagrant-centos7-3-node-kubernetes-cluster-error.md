@@ -2,7 +2,7 @@
 layout: page
 title: Ошибки, возникавшие при работе с Single Master Kubernetes Cluster в VirtualBox
 description: Ошибки, возникавшие при работе с Single Master Kubernetes Cluster в VirtualBox
-keywords: Kubernetes, virtualbox, centos7, errors
+keywords: devops, kubernetes, virtualbox, centos7, errors
 permalink: /devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster-error/
 ---
 

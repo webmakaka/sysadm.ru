@@ -1,32 +1,28 @@
 ---
 layout: page
 title: Работа с железками в linux
+description: Работа с железками в linux
+keywords: Работа с железками в linux
 permalink: /linux/hardware/
 ---
 
 # Работа с железками в linux
 
-
 ### Информация по имеющемуся оборудованию
 
 [Команды для получения информации по оборудованию в linux](/linux/hardware/info/)
-
 
 <br/>
 
 ### MotherBoard
 
-[Upgrade BIOS в linux](/linux/hardware/motherboard/bios-upgrade/)  
-
+[Upgrade BIOS в linux](/linux/hardware/motherboard/bios-upgrade/)
 
 <br/>
 
 ### HDD / SSD и другие блочные устройства
 
 [HDD / SSD и другие блочные устройства в Linux](/linux/hardware/hdd/)
-
-
-
 
 <br/>
 
@@ -41,14 +37,11 @@ permalink: /linux/hardware/
     SwapTotal:       4718588 kB
     SwapFree:        1245060 kB
 
-
-
 <br/>
 
 ### VideoCard
 
 [Установить в Ubuntu nvidia драйвера вместо opensource](/linux/hardware/videocard/ubuntu/drivers/nvidia/)
-
 
 // Узнать сколько видеокарта использует GPU памяти
 
@@ -56,9 +49,9 @@ permalink: /linux/hardware/
 
 <br/>
 
-    Thu May 11 21:42:29 2017       
-    +------------------------------------------------------+                       
-    | NVIDIA-SMI 340.101    Driver Version: 340.101        |                       
+    Thu May 11 21:42:29 2017
+    +------------------------------------------------------+
+    | NVIDIA-SMI 340.101    Driver Version: 340.101        |
     |-------------------------------+----------------------+----------------------+
     | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
     | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
@@ -73,9 +66,6 @@ permalink: /linux/hardware/
     |=============================================================================|
     |    0            Not Supported                                               |
     +-----------------------------------------------------------------------------+
-
-
-
 
 <br/>
 

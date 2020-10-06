@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Ingress
+description: Ingress
+keywords: devops, linux, kubernetes, Ingress
 permalink: /devops/containers/kubernetes/kubeadm/ingress/
 ---
 
@@ -10,7 +12,7 @@ permalink: /devops/containers/kubernetes/kubeadm/ingress/
 
 <br/>
 
-![Kubernetes Ingress](https://raw.githubusercontent.com/webmakaka/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-02.png "Kubernetes Ingress"){: .center-image }
+![Kubernetes Ingress](https://raw.githubusercontent.com/webmakaka/Docker-and-Kubernetes-The-Complete-Guide/master/img/pic-15-02.png 'Kubernetes Ingress'){: .center-image }
 
 <br/>
 

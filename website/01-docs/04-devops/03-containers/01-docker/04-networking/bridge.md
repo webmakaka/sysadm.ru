@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Настройка моста для работы с Docker в Ubuntu
+description: Настройка моста для работы с Docker в Ubuntu
+keywords: devops, docker, Настройка моста для работы с Docker в Ubuntu
 permalink: /devops/containers/docker/networking/ubuntu-bridge/
 ---
 
 # Настройка моста для работы с Docker в Ubuntu
-
 
 Делалось для Docker версии 1.X
 
@@ -28,7 +29,6 @@ permalink: /devops/containers/docker/networking/ubuntu-bridge/
     sudo brctl addbr bridge0
     sudo ip addr add 192.168.0.1/24 dev brigde0
     sudo ip link set dev bridge0 up
-
 
 <br/>
 

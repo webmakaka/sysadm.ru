@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Программирование в Linux
+description: Программирование в Linux
+keywords: Программирование в Linux
 permalink: /dev/
 ---
 

@@ -1,19 +1,18 @@
 ---
 layout: page
 title: Настройка сети
+description: Настройка сети
+keywords: Настройка сети
 permalink: /linux/networks/
 ---
 
-
 # Настройка сети
-
 
 <br/>
 
 ## Centos 6.x
 
 ### [Настройка сети в centos 6.X](/linux/networks/ip/centos/6.x/)
-
 
 <br/>
 

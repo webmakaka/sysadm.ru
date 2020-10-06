@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Разворачиваем Gitlab с помощью ansible-galaxy и ansible-playbook
+description: Разворачиваем Gitlab с помощью ansible-galaxy и ansible-playbook
+keywords: Разворачиваем Gitlab с помощью ansible-galaxy и ansible-playbook
 permalink: /devops/automation/ansible/gitlab/
 ---
 

@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Centos
+description: Centos
+keywords: Centos
 permalink: /linux/centos/
 ---
-
 
 # Centos
 
@@ -19,12 +20,9 @@ permalink: /linux/centos/
 
 ### [Смонтировать NTFS в Centos 7.x](/linux/centos/7.x/mount-ntfs/)
 
-
-
 <br/>
 
 ## Шаги после инсталляции Centos
-
 
 <ul>
     <li>
@@ -34,6 +32,3 @@ permalink: /linux/centos/
         <a href="/linux/install/centos/6/steps-after-installation-centos-7x/">Centos 7 нужные мне для работы пакеты</a>
     </li>
 </ul>
-
-
-

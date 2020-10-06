@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Переименование узлов Kubernetes Cluster
+description: Переименование узлов Kubernetes Cluster
+keywords: devops, linux, kubernetes, Переименование узлов Kubernetes Cluster
 permalink: /devops/containers/kubernetes/kubeadm/renaming-kubernetes-nodes/
 ---
 

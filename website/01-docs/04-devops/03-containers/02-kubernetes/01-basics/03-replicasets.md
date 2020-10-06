@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes ReplicaSets
 description: Kubernetes ReplicaSets
-keywords: linux, kubernetes, Kubernetes ReplicaSets
+keywords: devops, linux, kubernetes, Kubernetes ReplicaSets
 permalink: /devops/containers/kubernetes/basics/replicasets/
 ---
 

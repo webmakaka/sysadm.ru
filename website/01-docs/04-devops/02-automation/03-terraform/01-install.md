@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Install Terraform (Google cloud)
+description: Install Terraform (Google cloud)
+keywords: Install Terraform (Google cloud)
 permalink: /devops/automation/terraform/install/
 ---
 
@@ -8,7 +10,6 @@ permalink: /devops/automation/terraform/install/
 
 Делаю:  
 08.06.2019
-
 
 <br/>
 
@@ -22,7 +23,6 @@ permalink: /devops/automation/terraform/install/
 
     $ terraform version
     Terraform v0.11.14
-
 
 <br/>
 

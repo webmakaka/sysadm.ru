@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Docker Machine
+description: Docker Machine
+keywords: devops, docker, Docker Machine
 permalink: /devops/containers/docker/docker-machine/
 ---
 
@@ -8,11 +10,9 @@ permalink: /devops/containers/docker/docker-machine/
 
 https://docs.docker.com/machine/install-machine/
 
-
 Я пока до конца не разобрался, для чего нужена Docker Machine. И без нее все нормально работает.
 
 Если все правильно понимаю, то для запуска Docker контейнеров с использованием драйвера virtualbox и virtualbox виртуалок. Понятно, что это нужно, когда, например приходится делать это в Windows. Но под linux не вижу особой в этом необходимости.
-
 
 Делаю:  
 03.04.2018
@@ -20,16 +20,13 @@ https://docs.docker.com/machine/install-machine/
 Смотрю последний релиз (сегодня это 0.14):
 https://github.com/docker/machine/releases/
 
-
     # curl -L https://github.com/docker/machine/releases/download/v0.14.0/docker-machine-`uname -s`-`uname -m` > /usr/local/bin/docker-machine && \
     chmod +x /usr/local/bin/docker-machine
-
 
 <br/>
 
     # docker-machine -v
     docker-machine version 0.14.0, build 89b8332
-
 
 <br/>
 
@@ -39,8 +36,7 @@ https://github.com/docker/machine/releases/
 
     $ docker-machine ls
     NAME       ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER        ERRORS
-    docker01   -        virtualbox   Running   tcp://192.168.99.100:2376           v18.03.0-ce   
-
+    docker01   -        virtualbox   Running   tcp://192.168.99.100:2376           v18.03.0-ce
 
 <br/>
 
@@ -49,24 +45,21 @@ https://github.com/docker/machine/releases/
     export DOCKER_HOST="tcp://192.168.99.100:2376"
     export DOCKER_CERT_PATH="/home/marley/.docker/machine/machines/docker01"
     export DOCKER_MACHINE_NAME="docker01"
-    # Run this command to configure your shell: 
+    # Run this command to configure your shell:
     # eval $(docker-machine env docker01)
-
-
 
 <br/>
 
-    -- Run this command to configure your shell: 
+    -- Run this command to configure your shell:
     $ eval $(docker-machine env docker01)
-    
+
 <br/>
 
     -- Переключиться на активную машину. Т.е. та с которой нужно работать должна быть помечена *. Переключиться можно командой выше.
-    
+
     $ docker-machine ls
     NAME       ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER        ERRORS
-    docker01   *        virtualbox   Running   tcp://192.168.99.100:2376           v18.03.0-ce   
-
+    docker01   *        virtualbox   Running   tcp://192.168.99.100:2376           v18.03.0-ce
 
 <br/>
 
@@ -77,7 +70,6 @@ https://github.com/docker/machine/releases/
     $ docker ps
     CONTAINER ID        IMAGE               COMMAND                  CREATED                  STATUS              PORTS                NAMES
     9ba0e3e27b77        nginx:alpine        "nginx -g 'daemon of…"   Less than a second ago   Up 5 seconds        0.0.0.0:80->80/tcp   nginnx
-
 
 <br/>
 
@@ -99,9 +91,8 @@ https://github.com/docker/machine/releases/
 
 <br/>
 
-
     # apt-get install -y jq
-    
+
 
     $ docker-machine inspect docker01 | jq .
     {
@@ -208,11 +199,9 @@ https://github.com/docker/machine/releases/
     Boot2Docker version 18.03.0-ce, build HEAD : 404ee40 - Thu Mar 22 17:12:23 UTC 2018
     Docker version 18.03.0-ce, build 0520e24
 
-
 <br/>
 
     $ docker-machine stop docker01
-
 
 <br/>
 

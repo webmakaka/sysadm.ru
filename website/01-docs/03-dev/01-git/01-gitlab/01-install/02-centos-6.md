@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция GITLAB в centos 6 из пакетов
+description: Инсталляция GITLAB в centos 6 из пакетов
+keywords: Инсталляция GITLAB в centos 6 из пакетов
 permalink: /dev/git/gitlab/install/centos/6/
 ---
 
@@ -47,5 +49,3 @@ permalink: /dev/git/gitlab/install/centos/6/
 
 По материалам сайта:  
 http://blog.asidorov.name/2014/07/gitlab.html
-
-

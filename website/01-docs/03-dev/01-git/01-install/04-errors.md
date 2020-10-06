@@ -1,13 +1,12 @@
 ---
 layout: page
 title: Ошибки при работе с GIT
+description: Ошибки при работе с GIT
+keywords: Ошибки при работе с GIT
 permalink: /dev/git/errors/
 ---
 
-
 # Ошибки при работе с GIT
-
-
 
 <br/>
 
@@ -15,7 +14,6 @@ permalink: /dev/git/errors/
 
     $ git pull
     fatal: unable to access 'https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git/': SSL connect error
-
 
 <br/>
 
@@ -36,9 +34,3 @@ permalink: /dev/git/errors/
 ### Исправилась выполнением команды:
 
     # yum update -y nss curl
-
-
-
-
-
-

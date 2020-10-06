@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes Pods
 description: Kubernetes Pods
-keywords: linux, kubernetes, Kubernetes Pods
+keywords: devops, linux, kubernetes, Kubernetes Pods
 permalink: /devops/containers/kubernetes/basics/pods/
 ---
 
@@ -39,7 +39,6 @@ EOF
     NAME           READY   STATUS    RESTARTS   AGE
     quarkus-demo   1/1     Running   0          72s
 
-
 <br/>
 
     $ kubectl describe pod quarkus-demo
@@ -52,4 +51,3 @@ EOF
 <br/>
 
     $ kubectl delete pod quarkus-demo
-

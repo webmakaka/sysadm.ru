@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Export и Import виртуальных машин VirtualBox
+description: Export и Import виртуальных машин VirtualBox
+keywords: Export и Import виртуальных машин VirtualBox
 permalink: /linux/virtual/virtualbox/export-import/
 ---
-
 
 # Export и Import виртуальных машин VirtualBox
 
@@ -25,11 +26,9 @@ permalink: /linux/virtual/virtualbox/export-import/
 <br/>
 
     $ export VM_BACKUPS=${VM_HOME}/backup
-    
+
     $ echo ${VM_BACKUPS}
     /mnt/dsk1/machines/backups
-
-
 
 <br/>
 
@@ -56,7 +55,6 @@ permalink: /linux/virtual/virtualbox/export-import/
 
     $ VBoxManage controlvm ${vm} resume
 
-
 <br/>
 
 ### Команды Export'a виртуальной машины
@@ -68,8 +66,6 @@ permalink: /linux/virtual/virtualbox/export-import/
 // Экспортировать виртуальную машину
 
     $ VBoxManage export ${vm} -o ${VM_BACKUPS}/${vm}/${vm}.ovf
-
-
 
 ### Подготовка к Import виртуальной машины
 
@@ -88,7 +84,6 @@ permalink: /linux/virtual/virtualbox/export-import/
 Посмотреть переменные
 
     $ vboxmanage list systemproperties | grep folder
-
 
 ### Import виртуальной машины
 

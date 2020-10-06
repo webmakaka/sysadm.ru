@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Разворачиваем многоуровневое приложение в minikube
+description: Разворачиваем многоуровневое приложение в minikubes
+keywords: devops, linux, kubernetes,  Разворачиваем многоуровневое приложение в minikubes
 permalink: /devops/containers/kubernetes/minikube/multi-tier-application/
 ---
 

@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Команды запуска сервисов systemd (systemctl)
+description: Команды запуска сервисов systemd (systemctl)
+keywords: Команды запуска сервисов systemd (systemctl)
 permalink: /linux/systemctl/
 ---
-
 
 # Команды запуска сервисов systemd (systemctl)
 
@@ -38,8 +39,6 @@ WantedBy=multi-user.target
     # systemctl list-units hello.service
 
     # systemctl status hello.service
-
-
 
 <br/>
 

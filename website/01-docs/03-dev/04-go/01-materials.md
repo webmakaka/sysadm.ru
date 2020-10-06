@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Программирование на GO - материалы для изучения языка
+description: Программирование на GO - материалы для изучения языка
+keywords: Программирование на GO - материалы для изучения языка
 permalink: /dev/go/materials/
 ---
 
@@ -8,7 +10,7 @@ permalink: /dev/go/materials/
 
 <br/>
 
-Взято из курса для изучающих язык программирования от чела из mail.ru.  <br/>
+Взято из курса для изучающих язык программирования от чела из mail.ru. <br/>
 https://www.coursera.org/learn/golang-webservices-1/
 
 <br/>

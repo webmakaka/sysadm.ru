@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Создание службы LoadBalancer
+description: Создание службы LoadBalancers
+keywords: devops, linux, kubernetes, Создание службы LoadBalancers
 permalink: /devops/containers/kubernetes/minikube/svc/load-balancer/
 ---
 
@@ -12,7 +14,6 @@ permalink: /devops/containers/kubernetes/minikube/svc/load-balancer/
 Deployment создан как<a href="/devops/containers/kubernetes/minikube/svc/nodeport/">здесь</a>
 
 <br/>
-
 
 ```
 $ cat <<EOF | kubectl apply -f -
@@ -32,7 +33,6 @@ spec:
 EOF
 ```
 
-
 <br/>
 
     $ kubectl get svc
@@ -40,7 +40,6 @@ EOF
     nodejs-casts-app-loadbalancer   LoadBalancer   10.104.115.199   <pending>     80:30123/TCP   55s
 
 <br/>
-
 
     $ kubectl describe svc nodejs-casts-app-loadbalancer
     Name:                     nodejs-casts-app-loadbalancer
@@ -57,11 +56,9 @@ EOF
     External Traffic Policy:  Cluster
     Events:                   <none>
 
-
 <br/>
 
 Чтобы работало, нужно чтобы в Endpoints были перечислены IP виртуальных подов и порты запущенных приложений.
-
 
 <br/>
 

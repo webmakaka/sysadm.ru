@@ -1,15 +1,15 @@
 ---
 layout: page
 title: VBoxManage error Nonexistent host networking interface name eth0 (VERR_INTERNAL_ERROR)
+description: VBoxManage error Nonexistent host networking interface name eth0 (VERR_INTERNAL_ERROR)
+keywords: VBoxManage error Nonexistent host networking interface name eth0 (VERR_INTERNAL_ERROR)
 permalink: /linux/virtual/virtualbox/network/nonexistent-host-networking-interface/
 ---
 
 # VBoxManage: error: Nonexistent host networking interface, name 'eth0' (VERR_INTERNAL_ERROR)
 
-
 Делаю:  
 11.08.2019
-
 
 Делаю импорт виртуальной машины с одного хоста на другой. Был centos 6.x стала ubuntu 18.04
 
@@ -37,7 +37,7 @@ permalink: /linux/virtual/virtualbox/network/nonexistent-host-networking-interfa
 
 <br/>
 
-(Мой компьютер подключен к маршрутизатору (обычный домашний роутер). Обмен данных между моим компьютером и виртуальной машиной будет проходить через него. 
+(Мой компьютер подключен к маршрутизатору (обычный домашний роутер). Обмен данных между моим компьютером и виртуальной машиной будет проходить через него.
 
 Наберите команду:
 
@@ -47,9 +47,7 @@ permalink: /linux/virtual/virtualbox/network/nonexistent-host-networking-interfa
 
     Name:            enp4s0
 
-
 Я использую enp4s0 как основной физический интерфейс, который будут использовать виртуальные машины в качестве моста.
-
 
     $ VBoxManage modifyvm ${vm} \
     --nictype1 82540EM \

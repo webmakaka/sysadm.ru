@@ -1,16 +1,16 @@
 ---
 layout: page
 title: Windows - Рабочие станции
+description: Windows - Рабочие станции
+keywords: Windows - Рабочие станции
 permalink: /windows/desktops/
 ---
 
 # Windows - Рабочие станции
 
-
 <br/>
 
 ### [Донастройка программ](/windows/desktops/tweaks/)
-
 
 <br/>
 

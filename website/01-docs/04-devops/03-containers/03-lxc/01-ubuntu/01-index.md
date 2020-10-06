@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Ubuntu Linux Containers (lxc) (Наверное устарело по большей части)
+description: Ubuntu Linux Containers (lxc) (Наверное устарело по большей части)
+keywords: DevOps, Ubuntu Linux Containers (lxc) (Наверное устарело по большей части)
 permalink: /devops/containers/lxc/ubuntu/archive/
 ---
 
 # Ubuntu: Linux Containers (lxc) (Наверное устарело по большей части)
 
 <pre>
-
 
 $ sudo su -
 root@webserv:~# apt-get update

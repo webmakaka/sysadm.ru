@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Соединение точка-точка (ad-hoc) по WiFi между Ubuntu Linux и Windows XP
+description: Соединение точка-точка (ad-hoc) по WiFi между Ubuntu Linux и Windows XP18.04 в командной строке
+keywords: Соединение точка-точка (ad-hoc) по WiFi между Ubuntu Linux и Windows XP
 permalink: /linux/ubuntu/network/ad-hoc/
 ---
-
 
 # Соединение точка-точка (ad-hoc) по WiFi между Ubuntu Linux и Windows XP
 

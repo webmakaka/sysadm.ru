@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Centos 7 VBoxManage hostonlyif create - /dev/vboxnetctl No such file or directory
+description: Centos 7 VBoxManage hostonlyif create - /dev/vboxnetctl No such file or directory
+keywords: Centos 7 VBoxManage hostonlyif create - /dev/vboxnetctl No such file or directory
 permalink: /linux/virtual/virtualbox/network/centos-dev-vboxnetctl-no-such-file-or-directory/
 ---
 
 # Oracle linux 7 (тоже что и Centos 7): VBoxManage hostonlyif create - /dev/vboxnetctl No such file or directory
 
-
 Делаю: 15.02.2018
-
 
     # VBoxManage -v
     5.2.6r120293
@@ -28,7 +28,6 @@ permalink: /linux/virtual/virtualbox/network/centos-dev-vboxnetctl-no-such-file-
     $ ls /dev/vboxnetctl
     ls: cannot access /dev/vboxnetctl: No such file or directory
 
-
 <br/>
 
     # /sbin/rcvboxdrv setup
@@ -39,7 +38,6 @@ permalink: /linux/virtual/virtualbox/network/centos-dev-vboxnetctl-no-such-file-
     for adding new hardware support to the system.
     The distribution packages containing the headers are probably:
         kernel-uek-devel kernel-uek-devel-4.1.12-112.14.13.el7uek.x86_64
-
 
 <br/>
 

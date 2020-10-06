@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes Namespaces & Contexts
 description: Kubernetes Namespaces & Contexts
-keywords: linux, kubernetes, Namespaces & Contexts
+keywords: devops, linux, kubernetes, Namespaces & Contexts
 permalink: /devops/containers/kubernetes/basics/namespaces-and-contexts/
 ---
 
@@ -56,8 +56,6 @@ https://www.youtube.com/watch?v=2h6TAJirDqI&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
     $ kubectl config set-context --current --namespace=demo
 
     // $ kubectl delete namespace demo
-
-
 
 <br/>
 

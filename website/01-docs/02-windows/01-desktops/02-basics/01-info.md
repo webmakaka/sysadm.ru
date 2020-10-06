@@ -1,16 +1,16 @@
 ---
 layout: page
 title: Информация о железках и windows
+description: Информация о железках и windows
+keywords: Информация о железках и windows
 permalink: /windows/desktops/basics/info/
 ---
 
 # Информация о железках и windows
 
-
 ### Информация о Windows в командной строке
 
      C:\>systeminfo
-
 
 <br/>
 
@@ -23,7 +23,6 @@ permalink: /windows/desktops/basics/info/
     msinfo32
 
 Далее: System Summary --> Bios Version
-
 
 <br/>
 

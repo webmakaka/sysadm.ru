@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Docker Swarm первый взгляд
+description: Docker Swarm первый взгляд
+keywords: devops, docker, Docker Swarm первый взгляд
 permalink: /devops/containers/docker/clustering/swarm/first-look/
 ---
 
@@ -10,8 +12,8 @@ permalink: /devops/containers/docker/clustering/swarm/first-look/
 
 **ПО**
 
-- <a href="/linux/virtual/vagrant/">Vagrant</a>
-- <a href="/dev/git/">git</a>
+-   <a href="/linux/virtual/vagrant/">Vagrant</a>
+-   <a href="/dev/git/">git</a>
 
 <br/>
 
@@ -28,7 +30,7 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
     $ cd native-docker-clustering
     $ vagrant box update
     $ vagrant up
-    
+
 <br/>
 
     $ vagrant status
@@ -41,7 +43,6 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
     core-05                   running (virtualbox)
     core-06                   running (virtualbox)
     core-07                   running (virtualbox)
-
 
 <br/>
 
@@ -68,14 +69,13 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
     $ docker run swarm -v
     swarm version 1.2.8 (48d86b1)
 
-
 <br/>
 
 ### core-01
 
     $ docker swarm init --advertise-addr <MANAGER-IP>
 
-    $ docker swarm init --advertise-addr 172.17.8.101     
+    $ docker swarm init --advertise-addr 172.17.8.101
     Swarm initialized: current node (1j517f9tyh969t51ap4uzknc4) is now a manager.
 
     To add a worker to this swarm, run the following command:
@@ -86,7 +86,6 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
 
     To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 
-
 <br/>
 
 ### core-02, core-03, ....
@@ -95,7 +94,6 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
     --token SWMTKN-1-2pz4il4gexlaan2ik825mr5xdxmpllbqxhmhhf6x6z8kvcf889-ekfm7so78lcqgy06eqvanudcg \
     172.17.8.101:2377
 
-
 <br/>
 
 ### core-01
@@ -103,9 +101,8 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
     $ docker node ls
     ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS
     jy14pbjj9e6hfm7ltebjg68oy *   core-01             Ready               Active              Leader
-    5bant3omhyf5pjmft849b70gd     core-02             Ready               Active              
-    v9k79tqie9oos1x9sytr3vvw3     core-03             Ready               Active   
-
+    5bant3omhyf5pjmft849b70gd     core-02             Ready               Active
+    v9k79tqie9oos1x9sytr3vvw3     core-03             Ready               Active
 
 <br/>
 
@@ -118,7 +115,6 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
       --publish=8080:8080/tcp \
       --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
       dockersamples/visualizer
-
 
 <br/>
 
@@ -133,25 +129,24 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
 
     $ docker service ps viz
     ID                  NAME                IMAGE                             NODE                DESIRED STATE       CURRENT STATE                ERROR               PORTS
-    ba11rp3bfn9t        viz.1               dockersamples/visualizer:latest   core-02             Running             Running about a minute ago                       
-    j9tp5lfp930c        viz.2               dockersamples/visualizer:latest   core-01             Running             Running 55 seconds ago                           
-    t5zpsoshkvg2        viz.3               dockersamples/visualizer:latest   core-02             Running             Running 57 seconds ago                           
-    nju79l93cdxh        viz.4               dockersamples/visualizer:latest   core-03             Running             Running 33 seconds ago                           
-    n21y9evs773b        viz.5               dockersamples/visualizer:latest   core-01             Running             Running 55 seconds ago                           
-    upd0ajc2679m        viz.6               dockersamples/visualizer:latest   core-02             Running             Running 57 seconds ago                           
-    z7pwn0toygjk        viz.7               dockersamples/visualizer:latest   core-01             Running             Running 56 seconds ago                           
-    mcfqzprv3kbp        viz.8               dockersamples/visualizer:latest   core-03             Running             Running 33 seconds ago                           
-    14m0p2dbt6e7        viz.9               dockersamples/visualizer:latest   core-03             Running             Running 33 seconds ago                           
-    e94x2rbahfit        viz.10              dockersamples/visualizer:latest   core-03             Running             Running 36 seconds ago    
+    ba11rp3bfn9t        viz.1               dockersamples/visualizer:latest   core-02             Running             Running about a minute ago
+    j9tp5lfp930c        viz.2               dockersamples/visualizer:latest   core-01             Running             Running 55 seconds ago
+    t5zpsoshkvg2        viz.3               dockersamples/visualizer:latest   core-02             Running             Running 57 seconds ago
+    nju79l93cdxh        viz.4               dockersamples/visualizer:latest   core-03             Running             Running 33 seconds ago
+    n21y9evs773b        viz.5               dockersamples/visualizer:latest   core-01             Running             Running 55 seconds ago
+    upd0ajc2679m        viz.6               dockersamples/visualizer:latest   core-02             Running             Running 57 seconds ago
+    z7pwn0toygjk        viz.7               dockersamples/visualizer:latest   core-01             Running             Running 56 seconds ago
+    mcfqzprv3kbp        viz.8               dockersamples/visualizer:latest   core-03             Running             Running 33 seconds ago
+    14m0p2dbt6e7        viz.9               dockersamples/visualizer:latest   core-03             Running             Running 33 seconds ago
+    e94x2rbahfit        viz.10              dockersamples/visualizer:latest   core-03             Running             Running 36 seconds ago
 
 <br/>
-
 
 http://172.17.8.101:8080/
 
 <br/>
 
-![Визуализация Docker Swarm](/img/devops/containers//docker/clustering/swarm/swarm-visualizer.png "Визуализация Docker Swarm"){: .center-image }
+![Визуализация Docker Swarm](/img/devops/containers//docker/clustering/swarm/swarm-visualizer.png 'Визуализация Docker Swarm'){: .center-image }
 
 <br/>
 

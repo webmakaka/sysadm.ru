@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция Ruby on Rails в Centos 6.X
+description: Инсталляция Ruby on Rails в Centos 6.X
+keywords: dev, ruby on rails, Инсталляция Ruby on Rails в Centos 6.X
 permalink: /dev/ruby-on-rails/installation/centos/6.X/
 ---
 
@@ -22,7 +24,6 @@ permalink: /dev/ruby-on-rails/installation/centos/6.X/
     git \
     gcc
 
-
 Создаю пользователя developer.
 
     # useradd \
@@ -37,7 +38,6 @@ permalink: /dev/ruby-on-rails/installation/centos/6.X/
 
     # mkdir /rails_projects
     # chown -R developer /rails_projects/
-
 
 <br/>
 
@@ -70,14 +70,11 @@ permalink: /dev/ruby-on-rails/installation/centos/6.X/
     $ rbenv versions
     2.2.3
 
-
 <br/>
 
     $ rbenv global 2.2.3
     $ ruby -v
     ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-linux]
-
-
 
 <br/>
 
@@ -85,7 +82,6 @@ permalink: /dev/ruby-on-rails/installation/centos/6.X/
 
     $ gem -v
     2.4.5.1
-
 
 <br/>
 

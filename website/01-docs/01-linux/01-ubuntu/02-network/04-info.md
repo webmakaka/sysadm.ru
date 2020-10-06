@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Информация по сетевому адаптеру
+description: Информация по сетевому адаптеру
+keywords: Информация по сетевому адаптеру
 permalink: /linux/ubuntu/network/info/
 ---
 
+# Информация по сетевому адаптеру
 
-#  ИИнформация по сетевому адаптеру
-
-
-    # cat /sys/class/net/enp7s1/speed 
+    # cat /sys/class/net/enp7s1/speed
     1000
 
 <br/>
@@ -18,25 +18,24 @@ permalink: /linux/ubuntu/network/info/
 
 <br/>
 
-
     # ethtool enp7s1
     Settings for enp7s1:
         Supported ports: [ TP MII ]
-        Supported link modes:   10baseT/Half 10baseT/Full 
-                                100baseT/Half 100baseT/Full 
-                                1000baseT/Half 1000baseT/Full 
+        Supported link modes:   10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Half 1000baseT/Full
         Supported pause frame use: No
         Supports auto-negotiation: Yes
         Supported FEC modes: Not reported
-        Advertised link modes:  10baseT/Half 10baseT/Full 
-                                100baseT/Half 100baseT/Full 
-                                1000baseT/Half 1000baseT/Full 
+        Advertised link modes:  10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Half 1000baseT/Full
         Advertised pause frame use: Symmetric Receive-only
         Advertised auto-negotiation: Yes
         Advertised FEC modes: Not reported
-        Link partner advertised link modes:  10baseT/Half 10baseT/Full 
-                                            100baseT/Half 100baseT/Full 
-                                            1000baseT/Full 
+        Link partner advertised link modes:  10baseT/Half 10baseT/Full
+                                            100baseT/Half 100baseT/Full
+                                            1000baseT/Full
         Link partner advertised pause frame use: No
         Link partner advertised auto-negotiation: Yes
         Link partner advertised FEC modes: Not reported
@@ -52,11 +51,10 @@ permalink: /linux/ubuntu/network/info/
                     drv probe ifdown ifup
         Link detected: yes
 
-
 <br/>
 
     # lshw -C network
-    *-network                 
+    *-network
         description: Ethernet interface
         product: RTL-8110SC/8169SC Gigabit Ethernet
         vendor: Realtek Semiconductor Co., Ltd.

@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
+description: Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
+keywords: Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
 permalink: /linux/virtual/virtualbox/vm/centos-6/
 ---
 
-
 # Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
-
 
 Имеем ноутбук, подключенный по WI-FI.
 На него нужно установить виртуальную машину с Centos.
@@ -23,19 +23,16 @@ permalink: /linux/virtual/virtualbox/vm/centos-6/
 
 <br/>
 
-
     $ vm=vm_serv_1_centos_66
 
     $ echo $vm
     vm_serv_1_centos_66
 
-Создаем каталоги для виртуальной машины  и для snapshots
+Создаем каталоги для виртуальной машины и для snapshots
 
     $ mkdir -p ${VM_HOME}/${vm}/snapshots
 
-
 ### Создание и регистрация виртуальной машины:
-
 
 Узнать список поддерживаемых операционных систем
 
@@ -51,45 +48,32 @@ permalink: /linux/virtual/virtualbox/vm/centos-6/
 
     Virtual machine 'vm_serv_1_centos_66' is created and registered.
 
-
-
 ### Устанавливаем планку оперативной памяти:
-
 
     $ VBoxManage modifyvm ${vm} --memory 1024
 
-
 ### Подключаю видеокарту на 32 MB:
 
-
     $ VBoxManage modifyvm ${vm} --vram 32
-
 
 ### Снимаю sound карту, вытаскиваем дисковвод:
 
     $ VBoxManage modifyvm ${vm} --floppy disabled --audio none
 
-
 <br/>
 
 ### Подключаю контроллер жестких дисков (SAS):
-
 
     $ VBoxManage storagectl ${vm} \
     --add sas \
     --name "SAS Controller" \
     --controller LSILogicSAS
 
-
 Если понадобится удалить:
 
     $ VBoxManage storagectl ${vm} --name "SAS Controller" --remove
 
-
-
-
 ### Создание и подключение жестких дисков:
-
 
 Создаю виртуальные жесткие диски. Размер (size), рекомендуется задавать согласно имеющихся ресурсов. Иначе возможны проблемы и крах виртуальной машины):
 
@@ -101,9 +85,7 @@ permalink: /linux/virtual/virtualbox/vm/centos-6/
     --format VDI \
     --variant Standard
 
-
 ### Подключаю диски к SAS контроллеру:
-
 
     $ VBoxManage storageattach ${vm} \
     --storagectl "SAS Controller" \
@@ -115,14 +97,11 @@ permalink: /linux/virtual/virtualbox/vm/centos-6/
 
 ### Подключаю IDE контроллер к которому будет позднее подключен DVD-ROM:
 
-
     $ VBoxManage storagectl ${vm} \
     --add ide \
     --name "IDE Controller"
 
-
 ### Подключаю к IDE контроллеру DVD образ инсталлируемой операционной системы:
-
 
     $ VBoxManage storageattach ${vm} \
     --storagectl "IDE Controller" \
@@ -131,34 +110,28 @@ permalink: /linux/virtual/virtualbox/vm/centos-6/
     --type dvddrive \
     --medium  ~/ISO/CentOS-6.6-x86_64-bin-DVD1to2/CentOS-6.6-x86_64-bin-DVD1.iso
 
-
 <br/>
 
 ### Определяем порядок устройств, с которых будет произведена попытка стартовать систему:
-
 
     $ VBoxManage modifyvm ${vm} \
     --boot1 disk \
     --boot2 dvd
 
-
 ### Определяем каталог для снапшотов:
-
 
     $ VBoxManage modifyvm ${vm} \
     --snapshotfolder ${VM_HOME}/${vm}/snapshots
-
 
 <br/>
 
 ### Подключение сетевых интерфейсов:
 
-Мне понадобился 1  адаптер с NAT, чтобы компьютер мог выходить в интернет.
+Мне понадобился 1 адаптер с NAT, чтобы компьютер мог выходить в интернет.
 
     $ VBoxManage modifyvm ${vm} \
     --nictype1 82540EM \
     --nic1 nat
-
 
 И понадобился 1 hostonly адаптер для подключения к виртуальной машине по SSH с хоста.
 
@@ -174,7 +147,6 @@ ifconfig на хост машине должен выводить vboxnet0.
 vboxnet0 - виртуальный адаптер хостовой машины.
 
 Если виртуального адаптера нет, нуно его самостоятельно создать.
-
 
     $ VBoxManage hostonlyif create
 
@@ -201,17 +173,13 @@ vboxnet0 - виртуальный адаптер хостовой машины.
 
     $ sudo ifconfig vboxnet0 up
 
-
 Если что-то пошло не так, можно удалить созданный интерфейс командой:
 
     $ VBoxManage modifyvm ${vm} --nic2 none
 
-
-
 <br/>
 
 ### Предоставим возможность подключения к машине по RDP:
-
 
     $ VBoxManage modifyvm ${vm} \
     --vrde on \
@@ -220,19 +188,16 @@ vboxnet0 - виртуальный адаптер хостовой машины.
     --vrdeaddress 192.168.1.5 \
     --vrdeport 3389
 
-Здесь мы указываем:  
+Здесь мы указываем:
 
 --vrdeaddress - ip адрес машины, на которой установлен vitrualbox  
 --vrdeauthtype null - аутентификация не требуется.  
 --vrdemulticon on - разрешено множественное подключение к виртуальным машинам.  
---vrdeport порт к которому можно будет подключиться при старте виртуальной машины.  
-
-
+--vrdeport порт к которому можно будет подключиться при старте виртуальной машины.
 
 ### Показать результат созданной виртаульной машины:
 
     $ VBoxManage showvminfo ${vm}
-
 
 <br/>
 
@@ -242,23 +207,17 @@ vboxnet0 - виртуальный адаптер хостовой машины.
 
 ### Стартуем виртуальную машину с возможностью подключения по RDP:
 
-
     $ VBoxHeadless --startvm ${vm} &
 
 Или
 
     $ vboxmanage startvm ${vm} -type headless &
 
-
-(В centos лучше запускать с nohup  $ nohup vboxmanage startvm ${vm} -type headless &, иначе при закрытии сессии, вируальная машина будет убита).
-
-
+(В centos лучше запускать с nohup $ nohup vboxmanage startvm ${vm} -type headless &, иначе при закрытии сессии, вируальная машина будет убита).
 
 ### Посмотреть стартованные виртуальные машины можно командой:
 
-
     $ vboxmanage list runningvms
-
 
 ### Подключиться к виртуальной машине:
 
@@ -272,16 +231,14 @@ vboxnet0 - виртуальный адаптер хостовой машины.
     -g  1600x1024 \
     192.168.1.5:3389
 
-
-Иногда следует использовать и другие ключи:  
+Иногда следует использовать и другие ключи:
 
 -f полноэкранный режим. Для выхода из него CTRL+ALT+ENTER  
--k en-ru  указать явно раскладку клавиатуры.  
+-k en-ru указать явно раскладку клавиатуры.
 
+rdesktop - всевозможные ключи:
 
-rdesktop - всевозможные ключи:  
-
-http://manpages.ubuntu.com/manpages/lucid/man1/rdesktop.1.html  
+http://manpages.ubuntu.com/manpages/lucid/man1/rdesktop.1.html
 
 В Windows для этого вполне подойдет Remote Desktop Connecton (mstsc.exe)
 
@@ -289,23 +246,21 @@ http://manpages.ubuntu.com/manpages/lucid/man1/rdesktop.1.html
 
 Далее я обычно нажимаю tab [Enter] и дописываю linux text [Enter]
 
-
 <br/>
 
 ### Могут понадобиться следующие команды:
 
     sysadm.ru/linux/virtual/virtualbox/commands/
 
-
 <br/>
 
 ### Постинсталляционные донастройки после инсталляции операционной системы
 
-1) Disable SE если он не нужен.
+1. Disable SE если он не нужен.
 
     # sed -i.bkp -e "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
 
-2) Настройка сетевых интерфейсов.
+2. Настройка сетевых интерфейсов.
 
 Разумеется, для начала их нужно активировать и прописать нужные конфиги.
 
@@ -317,9 +272,7 @@ http://manpages.ubuntu.com/manpages/lucid/man1/rdesktop.1.html
     $ route delete default gw 192.168.56.1 eth1
     $ route add default gw 10.0.2.2 eth0
 
-
 Чтобы после каждой перезагрузки не делать эти же команды каждый раз. (Не заработало у меня)
-
 
     # vi /etc/sysconfig/static-routes
 

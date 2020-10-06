@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Пакеты которые нужно установить после установки чистой операционнй системы для комфортной работы
+description: Пакеты которые нужно установить после установки чистой операционнй системы для комфортной работы
+keywords: Пакеты которые нужно установить после установки чистой операционнй системы для комфортной работы
 permalink: /linux/install/centos/6/steps-after-installation-centos-6x/
 ---
-
 
 # Пакеты которые нужно установить после установки чистой операционнй системы для комфортной работы
 
@@ -46,11 +47,9 @@ permalink: /linux/install/centos/6/steps-after-installation-centos-6x/
     # service ntpd start
     # ntpdate pool.ntp.org
 
-
 <br/>
 
 ### Какие-то настройки для SSH
-
 
     # cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bkp
 

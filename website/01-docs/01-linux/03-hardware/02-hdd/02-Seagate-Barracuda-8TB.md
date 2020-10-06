@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Подключаем диск 8TB в Centos 6.X
+description: Подключаем диск 8TB в Centos 6.X
+keywords: Подключаем диск 8TB в Centos 6.X
 permalink: /linux/hardware/hdd/seagate/8tb/
 ---
 
@@ -15,7 +17,6 @@ permalink: /linux/hardware/hdd/seagate/8tb/
 
 В общем для нормальной работы дисков большего объема, придется использовать parted.
 
-
     # fdisk -l /dev/sdc
 
     Disk /dev/sdc: 8001.6 GB, 8001563222016 bytes
@@ -27,11 +28,9 @@ permalink: /linux/hardware/hdd/seagate/8tb/
 
        Device Boot      Start         End      Blocks   Id  System
 
-
 <br/>
 
     # yum install -y parted
-
 
 <br/>
 
@@ -42,11 +41,11 @@ permalink: /linux/hardware/hdd/seagate/8tb/
 GNU Parted 2.1
 Using /dev/sdc
 Welcome to GNU Parted! Type 'help' to view a list of commands.
-(parted)  
+(parted)
 
 <br/>
 
-(parted) mklabel gpt                                                      
+(parted) mklabel gpt
 Warning: The existing disk label on /dev/sdc will be destroyed and all data on
 this disk will be lost. Do you want to continue?
 Yes/No? yes
@@ -61,7 +60,7 @@ Yes/No? yes
 
 <br/>
 
-(parted) print                                                            
+(parted) print
 Model: ATA ST8000AS0002-1NA (scsi)
 Disk /dev/sdc: 8.00TB
 Sector size (logical/physical): 512B/4096B
@@ -81,26 +80,21 @@ Number  Start   End     Size    File system  Name     Flags
 
     # mkfs.ext4 /dev/sdc1
 
-
 <br>
 
 Получаю UUID диска.
 
-
     # blkid /dev/sdc1
     /dev/sdc1: UUID="8e53f2c6-0c0c-4db5-89ed-4935d89c11de" TYPE="ext4"
-
 
 Добавляю запись в fstab, чтобы после перезагрузки раздел диска автоматически смонтировался в файловой системе.
 
     # vi /etc/fstab
 
-
 Собственно запись
 
     # 8 TB HDD
     UUID=8e53f2c6-0c0c-4db5-89ed-4935d89c11de /mnt/dsk4 ext4 defaults 0 0
-
 
 Далее уже команды как вводил в консоль.
 
@@ -113,13 +107,11 @@ Number  Start   End     Size    File system  Name     Flags
     /dev/sdc1             7.2T   51M  6.8T   1% /mnt/dsk4
     ***
 
-
 Чего-то овердохуя потеряно места!
 
 Причины следующие;
 
 В первую очередь это из-за того, что по умолчанию при создании файловой системы ext4 резервируется 5% раздела, доступные только root. Нужно, чтобы пользователи не забили всё место, если это системный диск.
-
 
 Отменяем резервирование 5% для суперпользователя следующей командой.
 

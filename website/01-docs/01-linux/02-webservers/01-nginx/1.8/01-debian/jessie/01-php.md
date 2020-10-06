@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция PHP и настройка для работы с Nginx 1.8
+description: Инсталляция PHP и настройка для работы с Nginx 1.8
+keywords: Инсталляция PHP и настройка для работы с Nginx 1.8
 permalink: /linux/webservers/nginx/1.8/debian/jessie/php/
 ---
 

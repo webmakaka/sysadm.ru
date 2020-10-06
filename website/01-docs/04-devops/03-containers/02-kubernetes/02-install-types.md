@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Варианты инсталляции kubernetes
+description: Варианты инсталляции kubernetes
+keywords: devops, kubernetes, Варианты инсталляции kubernetes
 permalink: /devops/containers/kubernetes/install-types/
 ---
 

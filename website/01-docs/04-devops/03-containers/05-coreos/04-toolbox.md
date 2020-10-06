@@ -8,6 +8,8 @@ permalink: /devops/containers/coreos/toolbox/
 
 # TOOLBOX
 
+<br/>
+
 ### Fedora - по умолчанию
 
     # toolbox

@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Базы Данных
+title: Базы Данных в Windows
+description: Базы Данных в Windows
+keywords: Базы Данных в Windows
 permalink: /windows/databases/
 ---
 
-# Базы Данных
+# Базы Данных в Windows
 
-[Oracle](http://oracle-dba.ru/database/installation/)  
+[Oracle](http://oracle-dba.ru/database/installation/)

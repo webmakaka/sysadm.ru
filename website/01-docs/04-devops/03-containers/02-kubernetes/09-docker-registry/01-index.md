@@ -8,10 +8,8 @@ permalink: /devops/containers/kubernetes/docker-registry-2/
 
 # Kubernetes Docker Registry
 
-
 **Из примера с katacoda:**  
 https://www.katacoda.com/javajon/courses/kubernetes-pipelines/registries
-
 
 <br/>
 
@@ -33,7 +31,6 @@ minikube start --profile my-profile
     // Удалить
     // $ minikube --profile my-profile stop && minikube --profile my-profile delete
 
-
 <br/>
 
     $ minikube --profile my-profile ssh
@@ -44,10 +41,8 @@ minikube start --profile my-profile
     $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
     $ export PATH=$PATH:/usr/local/bin/
     $ sudo su -
-    /bin/toolbox 
+    /bin/toolbox
     # dnf install -y curl
-
-
 
 <br/>
 
@@ -88,7 +83,6 @@ minikube start --profile my-profile
 <br/>
 
     $ curl $REGISTRY/v2/_catalog
-
 
 <br/>
 
@@ -164,22 +158,20 @@ EOF
     $ curl $REGISTRY/v2/_catalog
     {"repositories":["dockerfilelint","max-breast-cancer-mitosis-detector"]}
 
-
-
 <br/>
 
 ### Pull the Container
 
-  $ cd ~ && envsubst < max-breast-cancer-mitosis-detector.yaml > max-breast-cancer-mitosis-detector-modified.yaml
+\$ cd ~ && envsubst < max-breast-cancer-mitosis-detector.yaml > max-breast-cancer-mitosis-detector-modified.yaml
 
-  $ kubectl apply -f max-breast-cancer-mitosis-detector-modified.yaml
+\$ kubectl apply -f max-breast-cancer-mitosis-detector-modified.yaml
 
-  $ kubectl get deployments,pods,services
+\$ kubectl get deployments,pods,services
 
-  $ export APP=http://127.0.0.1:32500/
+\$ export APP=http://127.0.0.1:32500/
 
-  $ cd ~/MAX-Breast-Cancer-Mitosis-Detector
+\$ cd ~/MAX-Breast-Cancer-Mitosis-Detector
 
-  $ curl -F image=@samples/true.png -XPOST "${APP}model/predict"
+$ curl -F image=@samples/true.png -XPOST "${APP}model/predict"
 
-  $ curl -F image=@samples/false.png -XPOST "${APP}model/predict"
+$ curl -F image=@samples/false.png -XPOST "${APP}model/predict"

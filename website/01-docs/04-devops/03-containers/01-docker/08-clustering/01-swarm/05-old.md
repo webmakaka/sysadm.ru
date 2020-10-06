@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Какие-то старые записи по Docker Swarm (устаревшие, позде будут выпилены)
+description: Какие-то старые записи по Docker Swarm (устаревшие, позде будут выпилены)
+keywords: devops, docker, Какие-то старые записи по Docker Swarm (устаревшие, позде будут выпилены)
 permalink: /devops/containers/docker/clustering/swarm/old/
 ---
 
@@ -22,17 +24,13 @@ permalink: /devops/containers/docker/clustering/swarm/old/
 
     $ docker rm -f $(docker ps -aq)
 
-
 <br/>
-
 
 **strategy binpacking** (default) (в зависимости от памяти хост машины)
 
 убили swarm процесс
 
-
     swarm manage token://<token> -H 0.0.0.0:4243 --strategy binpacking &
-
 
 <br/>
 
@@ -44,24 +42,20 @@ permalink: /devops/containers/docker/clustering/swarm/old/
     docker run -d --name c4 -e affinity:container==c1 nginx
     docker run -d --name c5 -e affinity:container!=c1 nginx
 
-
 <br/>
 
 **Standard Constraints**
-
 
     docker -H two:2375 info
 
     docker run -d --name c1 -e constraint:operatingsystem==Deb* nginx
     docker run -d --name c2 -e constraint:operatingsystem==fedora* nginx (Ошибка!)
 
-
 <br/>
 
 **Custom Constraints**
 
 two:
-
 
     vi /etc/default/docker
 
@@ -71,7 +65,6 @@ two:
     docker -H two:2375 info
     (появились label)
 
-
 three:
 
     vi /etc/default/docker
@@ -79,7 +72,6 @@ three:
     DOCKER_OPTS="-H 192.168.56.185:2375 -H unix:///var/run/docker.sock --label zone=prod --label site=london"
     service docker restart
     docker -H three:2375 info
-
 
 two:
 
@@ -89,26 +81,20 @@ two:
     docker run -d --name londprod2 -e constraint:site==london -e constraint:zone!=prod nginx
     docker ps
 
-
 <br/>
-
 
 **Resourse Constraints**
 
-
     docker run -d -p 8080:80 nginx
     docker run -d -p 8080:80 nginx
     docker run -d -p 8080:80 nginx
-
 
 на каждом из хостов создаст по контейнеру.
 Если попытаться выполнить команду 4-й раз получим ошибку, т.к. ресурсов больше нет.
 
-
 <br/>
 
 ### Пример
-
 
     $ docker-machine create --driver virtualbox dev1
 
@@ -128,7 +114,6 @@ two:
     $ echo $sid
     d3af6d950956757646273019a8792b53
 
-
 <br/>
 
 ### Create the Swarm Manager
@@ -137,20 +122,19 @@ two:
 
     $ docker-machine ls
     NAME           ACTIVE   DRIVER       STATE     URL                         SWARM                   DOCKER    ERRORS
-    swarm-master   -        virtualbox   Running   tcp://192.168.99.100:2376   swarm-master (master)   v1.10.3   
+    swarm-master   -        virtualbox   Running   tcp://192.168.99.100:2376   swarm-master (master)   v1.10.3
 
 
     $ eval "$(docker-machine env swarm-master)"
 
     $ docker-machine ls
     NAME           ACTIVE   DRIVER       STATE     URL                         SWARM                   DOCKER    ERRORS
-    swarm-master   *        virtualbox   Running   tcp://192.168.99.100:2376   swarm-master (master)   v1.10.3   
+    swarm-master   *        virtualbox   Running   tcp://192.168.99.100:2376   swarm-master (master)   v1.10.3
 
 
     $ docker info
 
 <br/>
-
 
 ### Create Swarm Nodes
 
@@ -164,10 +148,10 @@ two:
 
     $ docker-machine ls
     NAME            ACTIVE   DRIVER       STATE     URL                         SWARM                   DOCKER    ERRORS
-    swarm-master    *        virtualbox   Running   tcp://192.168.99.100:2376   swarm-master (master)   v1.10.3   
-    swarm-node-01   -        virtualbox   Running   tcp://192.168.99.101:2376   swarm-master            v1.10.3   
-    swarm-node-02   -        virtualbox   Running   tcp://192.168.99.102:2376   swarm-master            v1.10.3   
-    swarm-node-03   -        virtualbox   Running   tcp://192.168.99.103:2376   swarm-master            v1.10.3   
+    swarm-master    *        virtualbox   Running   tcp://192.168.99.100:2376   swarm-master (master)   v1.10.3
+    swarm-node-01   -        virtualbox   Running   tcp://192.168.99.101:2376   swarm-master            v1.10.3
+    swarm-node-02   -        virtualbox   Running   tcp://192.168.99.102:2376   swarm-master            v1.10.3
+    swarm-node-03   -        virtualbox   Running   tcp://192.168.99.103:2376   swarm-master            v1.10.3
 
 <br/>
 
@@ -180,7 +164,7 @@ two:
     # Run this command to configure your shell:
     # eval $(docker-machine env --swarm swarm-master)
 
-<br/>    
+<br/>
 
     $ eval "$(docker-machine env --swarm swarm-master)"
 
@@ -234,9 +218,7 @@ two:
     Total Memory: 4.085 GiB
     Name: swarm-master
 
-
 <br/>
-
 
     $ docker run swarm list token://$sid
     192.168.99.103:2376
@@ -244,11 +226,9 @@ two:
     192.168.99.101:2376
     192.168.99.100:2376
 
-
 <br/>
 
     $ docker ps     #(no containers are running in the swarm)
-
 
 <br/>
 
@@ -265,7 +245,6 @@ Look at the Four Nodes
     f15c66f10765        swarm:latest        "/swarm join --advert"   17 minutes ago      Up 17 minutes                           swarm-agent
     4f81fcef587e        swarm:latest        "/swarm manage --tlsv"   17 minutes ago      Up 17 minutes                           swarm-agent-master
 
-
 <br/>
 
     $ eval "$(docker-machine env swarm-node-01)"
@@ -275,7 +254,6 @@ Look at the Four Nodes
     $ docker ps
     CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
     8891322a859d        swarm:latest        "/swarm join --advert"   10 minutes ago      Up 10 minutes                           swarm-agent
-
 
 <br/>
 
@@ -303,7 +281,6 @@ Running Docker Instances with Swarm (explain Spead vs Binpack
     CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
     f0c59feb6763        ubuntu              "/bin/bash"         26 seconds ago      Up 23 seconds                           swarm-node-02/engmgr
 
-
 <br/>
 
     $ for i in `seq 1 6`; do docker run -itd -e constraint:itype!=frontend --name eng$i ubuntu; done
@@ -320,11 +297,9 @@ Running Docker Instances with Swarm (explain Spead vs Binpack
     5c64c2a5621c        ubuntu              "/bin/bash"         32 seconds ago      Up 30 seconds                           swarm-node-03/eng1
     f0c59feb6763        ubuntu              "/bin/bash"         2 minutes ago       Up 2 minutes                            swarm-node-02/engmgr
 
-
 <br/>
 
     $ docker run -itd --name engmgr-c -e affinity:container==engmgr ubuntu
-
 
 <br/>
 

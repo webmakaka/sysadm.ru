@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Docker в Windows
+description: Docker в Windows
+keywords: Docker в Windows
 permalink: /windows/servers/containers/docker/
 ---
 
 # Docker в Windows
-
 
 <br/>
 
@@ -19,20 +20,15 @@ permalink: /windows/servers/containers/docker/
 
 [Запустить asp.net приложение в docker контейнере](/windows/servers/containers/docker/run-asp-net-app-in-docker/)
 
-
-
-
 <br/>
 
 ### Ошибки:
 
 [Ошибки при работе с Docker в Windows](/windows/servers/containers/docker/errors/)
 
-
 <br/>
 
 ### Еще есть какой-то nanoserver от Microsoft.
-
 
 https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10
 
@@ -43,7 +39,6 @@ https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/qu
     $ powershell.exe Add-Content C:\helloworld.ps1 'Write-Host "Hello World"'
 
 Оказывается, там есть какие-то переключатели между Windows и Linux контейнерами, Все это добро работает пока в режиме беты. Если что, можно полистать материалы следующего блога.
-
 
 <br/>
 

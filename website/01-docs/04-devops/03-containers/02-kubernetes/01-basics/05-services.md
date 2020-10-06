@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Services - ClusterIP, NodePort, LoadBalancer, Ingress
+description: Services - ClusterIP, NodePort, LoadBalancer, Ingress
+keywords: devops, linux, kubernetes, Services - ClusterIP, NodePort, LoadBalancer, Ingress
 permalink: /devops/containers/kubernetes/basics/services/
 ---
 
@@ -16,14 +18,13 @@ permalink: /devops/containers/kubernetes/basics/services/
 
 </div>
 
-![kubernetes Services](/img/devops/containers/kubernetes/basics/services/services.png "kubernetes Services"){: .center-image }
-
+![kubernetes Services](/img/devops/containers/kubernetes/basics/services/services.png 'kubernetes Services'){: .center-image }
 
 <br/>
 
 ### ClusterIP
 
-![kubernetes ClusterIP](/img/devops/containers/kubernetes/basics/services/clusterIP.png "kubernetes ClusterIP"){: .center-image }
+![kubernetes ClusterIP](/img/devops/containers/kubernetes/basics/services/clusterIP.png 'kubernetes ClusterIP'){: .center-image }
 
 <br/>
 
@@ -47,8 +48,7 @@ spec:
 
 ### NodePort
 
-![kubernetes NodePort](/img/devops/containers/kubernetes/basics/services/NodePort.png "kubernetes NodePort"){: .center-image }
-
+![kubernetes NodePort](/img/devops/containers/kubernetes/basics/services/NodePort.png 'kubernetes NodePort'){: .center-image }
 
 <br/>
 
@@ -123,8 +123,7 @@ EOF
 
 ### LoadBalancer
 
-![kubernetes LoadBalancer](/img/devops/containers/kubernetes/basics/services/LoadBalancer.png "kubernetes LoadBalancer"){: .center-image }
-
+![kubernetes LoadBalancer](/img/devops/containers/kubernetes/basics/services/LoadBalancer.png 'kubernetes LoadBalancer'){: .center-image }
 
 ```
 cat <<EOF | kubectl apply -f -
@@ -149,7 +148,6 @@ spec:
         - containerPort: 8000
 EOF
 ```
-
 
 <br/>
 
@@ -176,7 +174,6 @@ spec:
         - containerPort: 8000
 EOF
 ```
-
 
 <br/>
 
@@ -238,7 +235,6 @@ EOF
     mynode-deployment     1/1     1            1           2m5s
     mypython-deployment   1/1     1            1           10m
 
-
 <br/>
 
     $ IP=$(minikube --profile my-profile ip)
@@ -251,14 +247,13 @@ EOF
     $ while true; do curl $IP:$PORT; sleep .5; done
     Python Hello on mypython-deployment-6874f84d85-kh4g7
     Go Hello on mygo-deployment-6d944c5c69-qx2s6
-    Node Hello on mynode-deployment-fb5457c5-hmf67 0 
-    Node Hello on mynode-deployment-fb5457c5-hmf67 1 
+    Node Hello on mynode-deployment-fb5457c5-hmf67 0
+    Node Hello on mynode-deployment-fb5457c5-hmf67 1
     Go Hello on mygo-deployment-6d944c5c69-qx2s6
     Python Hello on mypython-deployment-6874f84d85-kh4g7
     Python Hello on mypython-deployment-6874f84d85-kh4g7
     Python Hello on mypython-deployment-6874f84d85-kh4g7
     Go Hello on mygo-deployment-6d944c5c69-qx2s6
-
 
 <br/>
 
@@ -281,7 +276,6 @@ EOF
     External Traffic Policy:  Cluster
     Events:                   <none>
 
-
 <br/>
 
     $ kubectl get pods -o wide
@@ -289,7 +283,6 @@ EOF
     mygo-deployment-6d944c5c69-qx2s6       1/1     Running   0          18m   172.17.0.6   my-profile   <none>           <none>
     mynode-deployment-fb5457c5-hmf67       1/1     Running   0          12m   172.17.0.7   my-profile   <none>           <none>
     mypython-deployment-6874f84d85-kh4g7   1/1     Running   0          27m   172.17.0.5   my-profile   <none>           <none>
-
 
 <!--
 <br/>
@@ -317,7 +310,7 @@ spec:
 
 ### Ingress
 
-![kubernetes Ingress](/img/devops/containers/kubernetes/basics/services/Ingress.png "kubernetes Ingress"){: .center-image }
+![kubernetes Ingress](/img/devops/containers/kubernetes/basics/services/Ingress.png 'kubernetes Ingress'){: .center-image }
 
 <br/>
 

@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes Blue Green deployment
 description: Kubernetes Blue Green deployment
-keywords: linux, kubernetes, Blue / Green deployment
+keywords: devops, linux, kubernetes, Blue / Green deployment
 permalink: /devops/containers/kubernetes/basics/blue-green-deployment/
 ---
 
@@ -10,13 +10,12 @@ permalink: /devops/containers/kubernetes/basics/blue-green-deployment/
 
 <br/>
 
-Делаю: 
+Делаю:
 21.04.2020
 
 <br/>
 
 https://github.com/burrsutter/9stepsawesome/blob/master/8_deployment_techniques.adoc
-
 
 Подняли 2 версии приложения на разных deployment.
 

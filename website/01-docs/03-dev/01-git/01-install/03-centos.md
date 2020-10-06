@@ -1,18 +1,16 @@
 ---
 layout: page
 title: Инсталляция GIT из исходников в Centos
+description: Инсталляция GIT из исходников в Centos
+keywords: Инсталляция GIT из исходников в Centos
 permalink: /dev/git/install/centos/
 ---
 
-
 # Инсталляция GIT из исходников в Centos 6.x / 7.x
-
 
 Если git из стандартных репозиториев не устраивает. Например не пушит на github.
 
-
 <h3>git 2.x</h3>
-
 
     # yum install -y git
     # yum install -y tar gcc
@@ -53,7 +51,6 @@ permalink: /dev/git/install/centos/
 
     # make prefix=/opt/git/2.13.0 all
     # make prefix=/opt/git/2.13.0 install
-
 
 <br/>
 

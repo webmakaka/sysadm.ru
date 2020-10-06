@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Proxy Servers
+description: Proxy Servers
+keywords: Proxy Servers
 permalink: /linux/proxy/
 ---
 
@@ -8,11 +10,9 @@ permalink: /linux/proxy/
 
 <br/>
 
-
 ### SQUID
 
 **Using Linux As A Proxy Cache Server | Complete Project | Eduonix**
-
 
 <div align="center">
 

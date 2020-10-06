@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Создание сервера GIT в centos 6
+description: Создание сервера GIT в centos 6
+keywords: Создание сервера GIT в centos 6
 permalink: /dev/git/git-server/centos/6/ver1/
 ---
 
@@ -25,7 +27,6 @@ permalink: /dev/git/git-server/centos/6/ver1/
 
     # passwd git
 
-
 <br/>
 
     # su - git
@@ -36,15 +37,11 @@ permalink: /dev/git/git-server/centos/6/ver1/
 
     $ git init --bare --shared my-project.git
 
-
 Удалённый репозиторий — это обычно голый (чистый, bare) репозиторий — Git-репозиторий, не имеющий рабочего каталога. Поскольку этот репозиторий используется только для обмена, нет причин создавать рабочую копию на диске, и он содержит только данные Git'а. Проще говоря, голый репозиторий содержит только каталог .git вашего проекта и ничего больше.
-
-
 
 <br/>
 
 ### На клиенте c Windows запускаю Git Bash:
-
 
     $ git config --global user.name "dev"
     $ git config --global user.email dev@example.com

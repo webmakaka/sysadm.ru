@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Настройка сети в centos 6
+description: Настройка сети в centos 6
+keywords: Настройка сети в centos 6
 permalink: /linux/networks/ip/centos/6.x/
 ---
-
 
 # Настройка сети в centos 6
 
     # vi /etc/sysconfig/network-scripts/ifcfg-eth0
-
 
 <br/>
 
@@ -48,9 +48,7 @@ permalink: /linux/networks/ip/centos/6.x/
     NETMASK=255.255.255.0
     GATEWAY=192.168.1.1
 
-
 Если вы подключились к серверу по RDP, я бы рекомендовал после ввода настроек сетевого интерфейса, перестартовать службу network и подключиться к серверу по ssh. И дальнейшие команды выполнять командами copy + paste.
-
 
 Перестартовать службы отвечающую за параметры сетевых интерфейсов, можно с помощью команды:
 
@@ -60,18 +58,15 @@ permalink: /linux/networks/ip/centos/6.x/
 
     $ ssh root@192.168.1.11
 
-
 <br/>
 
 ### Продолжаем настраивать параметры сетевого окружения
-
 
 Необходимо выбрать подходящее имя для сервера, которое бы отражало его роль и назначение в сети.
 
 Для этого, с помощью редактора (например, vi) отредактируйте файл /etc/sysconfig/network
 
-
-Не рекомендуется в hostname использовать знак нижнего подчеркивания (_).(Enterprise Manager и другие web приложения не смогут подключиться к базе по http/https)
+Не рекомендуется в hostname использовать знак нижнего подчеркивания (\_).(Enterprise Manager и другие web приложения не смогут подключиться к базе по http/https)
 
     # vi /etc/sysconfig/network
 
@@ -86,7 +81,6 @@ permalink: /linux/networks/ip/centos/6.x/
     # vi /etc/resolv.conf
 
     nameserver 192.168.1.1
-
 
 <br/>
 

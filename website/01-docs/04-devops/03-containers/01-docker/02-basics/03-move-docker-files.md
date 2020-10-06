@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Переместить файлы Docker в другой каталог
+description: Переместить файлы Docker в другой каталог
+keywords: devops, docker, Переместить файлы Docker в другой каталог
 permalink: /devops/containers/docker/basics/move-docker-files/
 ---
 
@@ -20,18 +22,15 @@ permalink: /devops/containers/docker/basics/move-docker-files/
     12G	/var/lib/docker/aufs
     15G	/var/lib/docker/
 
-
 <br/>
 
 ### Вариант который использую сейчас
-
 
     # service docker stop
 
 <br/>
 
     # mv /var/lib/docker /mnt/dsk2/docker
-
 
 <br/>
 
@@ -45,17 +44,14 @@ permalink: /devops/containers/docker/basics/move-docker-files/
 
     # service docker start
 
-
 <br/><br/>
 
-Если не заработает, есть еще 1 конфиг файл.   
+Если не заработает, есть еще 1 конфиг файл.  
 Может он заработает /etc/default/docker.io
-
 
 <br/>
 
 ### И еще 1 вариант - задать явно, какой файл с конфигом использовать
-
 
     # vi /lib/systemd/system/docker.service
 
@@ -74,9 +70,7 @@ permalink: /devops/containers/docker/basics/move-docker-files/
     root     23246  0.1  0.0 258492 13032 ?        Ssl  11:51   0:00 /usr/bin/docker -d -g /mnt/dsk1/docker
     root     23450  0.0  0.0  17156   936 pts/14   S+   11:55   0:00 grep --color=auto docker
 
-
 <br/>
-
 
 Если используется systemd:  
 http://stackoverflow.com/questions/30127580/docker-opts-in-etc-default-docker-ignored

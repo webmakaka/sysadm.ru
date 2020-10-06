@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Знакомство с ipfs
+description: Знакомство с ipfs
+keywords: Знакомство с ipfs
 permalink: /linux/ubuntu/ipfs/
 ---
 
@@ -9,15 +11,11 @@ permalink: /linux/ubuntu/ipfs/
 Делаю впервые:  
 03.01.2019
 
-
 Делал на примере этого ролика:
 
 https://www.youtube.com/watch?v=I4HunE6Txcg&t=309s
 
-
-
 ### Создание сервиса:
-
 
     # snap install go --classic
     # go get -u github.com/ipfs/ipfs-update
@@ -46,16 +44,13 @@ WantedBy=multi-user.target
 
 ```
 
-
     # systemctl enable ipfsd.service
     # systemctl start  ipfsd.service
     # systemctl status ipfsd.service
 
-
 <br/>
 
 ### Загрузка каталога в ipfs
-
 
     $ mkdir -p upload
     $ copy some_sheet ./upload
@@ -68,14 +63,11 @@ WantedBy=multi-user.target
 
     $ ipfs ls QmRwbCSp2mvC9onyt7cyeXzZV1sxK97QegZFAcx2qdCHnC
 
-
 <br/>
 
     https://gateway.ipfs.io/ipfs/QmRwbCSp2mvC9onyt7cyeXzZV1sxK97QegZFAcx2qdCHnC
 
-
 <br/>
-
 
 Какой-то официальный ролик от создалелей:
 

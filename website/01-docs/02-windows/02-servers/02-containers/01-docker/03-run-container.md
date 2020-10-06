@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Практический пример запуска приложения в docker под Windows
+description: Практический пример запуска приложения в docker под Windows
+keywords: Практический пример запуска приложения в docker под Windows
 permalink: /windows/servers/containers/docker/run-container/
 ---
 
@@ -8,14 +10,12 @@ permalink: /windows/servers/containers/docker/run-container/
 
 Пусть это будет контейнер от проекта по обучению Angularjs 2 от поискового гиганта.
 
-
 ### !!! Чуть ли не 1GB скачается из интернета на диск.
 
 По крайней мере, я вижу следующее:
 
     REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
     ng2-quickstart      latest              dd42c5d97b57        About an hour ago   934.4 MB
-
 
 <br/>
 
@@ -39,16 +39,21 @@ permalink: /windows/servers/containers/docker/run-container/
 {% highlight bash linenos %}
 
 # To build and run with Docker:
+
 #
-#  $ docker build -t ng2-quickstart .
-#  $ docker run -it --rm -p 3000:3000 -p 3001:3001 ng2-quickstart
+
+# \$ docker build -t ng2-quickstart .
+
+# \$ docker run -it --rm -p 3000:3000 -p 3001:3001 ng2-quickstart
+
 #
+
 FROM node:latest
 
 RUN mkdir -p /quickstart /home/nodejs && \
-    groupadd -r nodejs && \
-    useradd -r -g nodejs -d /home/nodejs -s /sbin/nologin nodejs && \
-    chown -R nodejs:nodejs /home/nodejs
+ groupadd -r nodejs && \
+ useradd -r -g nodejs -d /home/nodejs -s /sbin/nologin nodejs && \
+ chown -R nodejs:nodejs /home/nodejs
 
 WORKDIR /quickstart
 COPY package.json typings.json /quickstart/
@@ -71,9 +76,7 @@ CMD npm start
     $ docker build -t ng2-quickstart .
     $ docker run -it --rm -p 3000:3000 -p 3001:3001 ng2-quickstart
 
-
 Коннектиться нужно не к localhost а к виртуальной машине virtualbox.
-
 
     $ docker-machine env default
     export DOCKER_TLS_VERIFY="1"
@@ -115,7 +118,6 @@ CMD npm start
 <br/>
 
 -->
-
 
 Подключаюсь браузером:  
 http://192.168.99.100:3000/

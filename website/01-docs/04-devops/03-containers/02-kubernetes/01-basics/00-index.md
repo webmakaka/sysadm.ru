@@ -2,7 +2,7 @@
 layout: page
 title: Основы Kubernets
 description: Основы Kubernets
-keywords: linux, kubernetes
+keywords: devops, linux, kubernetes
 permalink: /devops/containers/kubernetes/basics/
 ---
 

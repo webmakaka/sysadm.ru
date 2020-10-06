@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Kubernetes DaemonSets
+description: Kubernetes DaemonSets
+keywords: devops, linux, kubernetes, Kubernetes DaemonSets
 permalink: /devops/containers/kubernetes/basics/daemon-sets/
 ---
 

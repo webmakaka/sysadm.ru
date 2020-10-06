@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Linux Containers (LXC)
+description: Linux Containers (LXC)
+keywords: DevOps, Linux Containers (LXC)
 permalink: /devops/containers/lxc/
 ---
 

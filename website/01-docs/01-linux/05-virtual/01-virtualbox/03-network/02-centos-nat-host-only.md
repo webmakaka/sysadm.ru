@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Oracle Linux 7 (ака Centos 7) Создание hostonly интерфейса руками, если он по какой-то причине не создался сам
+description: Oracle Linux 7 (ака Centos 7) Создание hostonly интерфейса руками, если он по какой-то причине не создался сам
+keywords: Oracle Linux 7 (ака Centos 7) Создание hostonly интерфейса руками, если он по какой-то причине не создался сам
 permalink: /linux/virtual/virtualbox/network/centos-nat-host-only/
 ---
 
-
 # Oracle Linux 7 (ака Centos 7): Создание hostonly интерфейса руками, если он по какой-то причине не создался сам
-
 
 Делаю: 15.02.2018
 
@@ -29,7 +29,6 @@ vboxnet0 - виртуальный адаптер хостовой машины.
 <br/>
 
 Если виртуального адаптера нет, нуно его самостоятельно создать.
-
 
     $ VBoxManage hostonlyif create
 

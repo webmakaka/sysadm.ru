@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Создаем NginxInc Kubernetes Ingress контроллер
+description: Создаем NginxInc Kubernetes Ingress контроллер
+keywords: devops, linux, kubernetes, Создаем NginxInc Kubernetes Ingress контроллер
 permalink: /devops/containers/kubernetes/kubeadm/ingress/nginxinc-kubernets-ingress-install/
 ---
 
@@ -51,4 +53,3 @@ https://github.com/nginxinc/kubernetes-ingress
 
     NAME                           DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
     daemonset.apps/nginx-ingress   2         2         2       2            2           <none>          21s
-

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Traefik ingress
+description: Traefik ingress
+keywords: devops, linux, kubernetes, Traefik ingress
 permalink: /devops/containers/kubernetes/kubeadm/ingress/traefik-ingress/
 ---
 

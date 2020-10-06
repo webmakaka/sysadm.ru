@@ -1,20 +1,19 @@
 ---
 layout: page
 title: IPTABLES NAT
+description: IPTABLES NAT
+keywords: IPTABLES NAT
 permalink: /linux/networks/nat/centos/nat/
 ---
 
 # IPTABLES NAT
-
 
 Есть несколько способов добавить правила в таблицы.<br/>
 Здесь представлен самый простой способ и он полностью удаляет настройки по умолчанию.
 
 Если вы перестартуете iptables, вернутся значения по умолчанию.
 
-
 Не советую бездумно выполнять этот скрипт на важных серверах. Особенное, если они не расположены в шаговой доступности.
-
 
 <!--
 
@@ -36,7 +35,6 @@ permalink: /linux/networks/nat/centos/nat/
 # INT_IF=eth1 - внутренний интерфейс шлюза, с адресом $INT_IP
 
 -->
-
 
 <pre class="blue_border">
 <strong class="userinput"># <code>vi iptables</code></strong>
@@ -73,11 +71,9 @@ iptables -A FORWARD -i eth0 -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -i eth0 -o eth1 -j REJECT</code>
 </pre>
 
-
 <pre class="blue_border">
     <strong class="userinput"># <code>chmod +x iptables</code></strong>
 </pre>
-
 
 <pre class="blue_border">
     <strong class="userinput"># <code>./iptables</code></strong>
@@ -86,7 +82,6 @@ iptables -A FORWARD -i eth0 -o eth1 -j REJECT</code>
 <br/>
 
 ### Опубликовать сервер во внешней сети
-
 
 -- При обращении к серверу 192.168.1.34 по протоколу tcp на порт 8000 интерфейса eth0, перенаправлять запросы на сервер 192.168.2.5 порт 8000
 
@@ -97,7 +92,6 @@ iptables -A FORWARD -i eth0 -o eth1 -j REJECT</code>
 <pre class="blue_border">
     <strong class="userinput"># <code>iptables -I FORWARD 1 -i eth0 -o eth1 -d 192.168.2.5 -p tcp -m tcp --dport 8000 -j ACCEPT</code></strong>
 </pre>
-
 
 <!--
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Запуск базы postgresql в minikube
+description: Запуск базы postgresql в minikube
+keywords: devops, linux, kubernetes,  Запуск базы postgresql в minikube
 permalink: /devops/containers/kubernetes/minikube/postgresql/
 ---
 

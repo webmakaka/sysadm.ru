@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes Deployments
 description: Kubernetes Deployments
-keywords: linux, kubernetes, Kubernetes Deployments
+keywords: devops, linux, kubernetes, Kubernetes Deployments
 permalink: /devops/containers/kubernetes/basics/deployments/
 ---
 
@@ -11,8 +11,6 @@ permalink: /devops/containers/kubernetes/basics/deployments/
 Делаю: 21.04.2020
 
 https://github.com/burrsutter/9stepsawesome/blob/master/2_building_running.adoc
-
-
 
 <br/>
 
@@ -52,7 +50,6 @@ EOF
     quarkus-demo-deployment-5979886fb7-nrptt   1/1     Running   0          2m29s   app=quarkus-demo,env=dev,pod-template-hash=5979886fb7
     quarkus-demo-deployment-5979886fb7-ntrpd   1/1     Running   0          2m29s   app=quarkus-demo,env=dev,pod-template-hash=5979886fb7
 
-
 <br/>
 
     $ kubectl get deployments
@@ -66,7 +63,6 @@ EOF
     quarkus-demo-deployment-5979886fb7   3         3         3       3m52s
 
 <br/>
-
 
     $ kubectl scale deploy quarkus-demo-deployment --replicas=6
 

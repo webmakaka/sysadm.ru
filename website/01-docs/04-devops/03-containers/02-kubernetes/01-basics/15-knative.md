@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes KNative
 description: Kubernetes KNative
-keywords: linux, kubernetes, Custom Resource Definitions, KNative
+keywords: devops, linux, kubernetes, Custom Resource Definitions, KNative
 permalink: /devops/containers/kubernetes/basics/knative/
 ---
 
@@ -12,7 +12,7 @@ permalink: /devops/containers/kubernetes/basics/knative/
 
 <br/>
 
-Делаю: 
+Делаю:
 23.04.2020
 
 <br/>
@@ -29,7 +29,6 @@ https://github.com/burrsutter/scripts-knative
 https://github.com/burrsutter/sidebyside
 
 <br/>
-
 
 С v1.16.9 были какие-то проблемы. Не заработало.  
 v1.14.0 норм.
@@ -50,7 +49,7 @@ minikube --profile my-profile config set kubernetes-version v1.14.0
 
 
 minikube start --profile my-profile  --extra-config='apiserver.enable-admission-plugins=LimitRanger,NamespaceExists,NamespaceLifecycle,ResourceQuota,ServiceAccount,DefaultStorageClass,MutatingAdmissionWebhook' \
-  --insecure-registry='10.0.0.0/24' 
+  --insecure-registry='10.0.0.0/24'
 
 }
 ```
@@ -66,7 +65,6 @@ minikube start --profile my-profile  --extra-config='apiserver.enable-admission-
 **По следующей доке:**  
 https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial-basics/0.7.x/01-setup.html
 
-
 <br/>
 
 ### Install Istio
@@ -75,21 +73,18 @@ https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial-basic
 
     $ kubectl apply --filename https://raw.githubusercontent.com/knative/serving/v0.7.1/third_party/istio-1.1.7/istio-lean.yaml
 
-
 <br/>
-
 
 Если нужно конвертануть:
 
     $ cd ~/tmp
     $ wget https://raw.githubusercontent.com/knative/serving/v0.7.1/third_party/istio-1.1.7/istio-lean.yaml
 
-    $ kubectl convert -f istio-lean.yaml > istio-lean1.yaml  
+    $ kubectl convert -f istio-lean.yaml > istio-lean1.yaml
 
-    $ kubectl apply -f istio-lean1.yaml 
+    $ kubectl apply -f istio-lean1.yaml
 
 <br/>
-
 
     $ kubectl get pods -n istio-system
     NAME                                     READY   STATUS      RESTARTS   AGE
@@ -99,11 +94,9 @@ https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial-basic
     istio-init-crd-11-6786q                  0/1     Completed   0          20m
     istio-pilot-5bdbcdd9bc-84glc             1/1     Running     0          11m
 
-
 <br/>
 
 ### Install Custom Resource Definitions
-
 
     $ kubectl apply --selector knative.dev/crd-install=true \
       --filename https://github.com/knative/serving/releases/download/v0.7.1/serving.yaml \
@@ -134,13 +127,10 @@ https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial-basic
     subscriptions.eventing.knative.dev                   2020-04-23T01:44:33Z
     triggers.eventing.knative.dev                        2020-04-23T01:44:33Z
 
-
-
 <br/>
 
     $ kubectl apply --selector networking.knative.dev/certificate-provider!=cert-manager \
       --filename https://github.com/knative/serving/releases/download/v0.7.1/serving.yaml
-
 
 <br/>
 
@@ -153,7 +143,6 @@ https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial-basic
     webhook-7884ddd64f-sn2tx            1/1     Running   0          47s
 
 <br/>
-
 
     $ kubectl apply --selector networking.knative.dev/certificate-provider!=cert-manager \
     --filename https://github.com/knative/eventing/releases/download/v0.7.1/release.yaml
@@ -170,8 +159,6 @@ https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial-basic
     in-memory-channel-dispatcher-98d7fcdf6-5fkf5   1/1     Running   0          43s
     sources-controller-84b9cb88cd-6cwh5            1/1     Running   0          44s
 
-
-
 <br/>
 
 ## Learn Knative Serving
@@ -182,15 +169,12 @@ https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial-basic
     routes.serving.knative.dev                           2020-04-23T00:28:05Z
     services.serving.knative.dev                         2020-04-23T00:28:05Z
 
-
 <br/>
 
 ## Prepare and deploy a Knative Service
 
-
     $ kubectl create namespace knativetutorial
     $ kubectl config set-context --current --namespace=knativetutorial
-
 
 ```
 $ cat <<EOF | kubectl apply -f -
@@ -230,7 +214,6 @@ EOF
 
     $ kubectl get deployment
 
-
 <br/>
 
     $ kubectl exec -it greeter-v1-deployment-567fd49555-mxfkb /bin/bash
@@ -241,16 +224,14 @@ EOF
     $ curl localhost:8080
     $ curl localhost:8080
 
-
 <br/>
 
     $ kubectl get ksvc
     NAME      URL                                          LATESTCREATED   LATESTREADY   READY   REASON
-    greeter   http://greeter.knativetutorial.example.com   greeter-v1      greeter-v1    True    
+    greeter   http://greeter.knativetutorial.example.com   greeter-v1      greeter-v1    True
 
     $ kubectl describe ksvc
     $ kubectl describe ksvc greeter
-
 
 <br/>
 
@@ -262,8 +243,7 @@ EOF
 
     $ kubectl get ksvc
     NAME      URL                                          LATESTCREATED   LATESTREADY   READY   REASON
-    greeter   http://greeter.knativetutorial.example.com   greeter-v1      greeter-v1    True    
-
+    greeter   http://greeter.knativetutorial.example.com   greeter-v1      greeter-v1    True
 
 <br/>
 
@@ -275,14 +255,11 @@ EOF
 
 <br/>
 
-
 ## Autoscaling HTTP
 
-
-  $ kubectl delete ksvc greeter
+\$ kubectl delete ksvc greeter
 
 https://github.com/redhat-developer-demos/knative-tutorial/blob/release/0.7.x/04-scaling/knative/service-10.yaml
-
 
 <br/>
 
@@ -315,10 +292,9 @@ EOF
 
 <br/>
 
-  $ kubectl get deployments
-  NAME                            READY   UP-TO-DATE   AVAILABLE   AGE
-  prime-generator-v1-deployment   0/0     0            0           2m34s
-
+\$ kubectl get deployments
+NAME READY UP-TO-DATE AVAILABLE AGE
+prime-generator-v1-deployment 0/0 0 0 2m34s
 
 <br/>
 
@@ -326,13 +302,11 @@ Deployment поломалась. Ничего не работает.
 
 <br/>
 
-  $ kubectl get events
-
+\$ kubectl get events
 
 <br/>
 
-2m48s       Warning   InternalError        route/prime-generator                                 Operation cannot be fulfilled on clusteringresses.networking.internal.knative.dev "route-bb5458d0-8506-11ea-ad4a-0800277556f1": the object has been modified; please apply your changes to the latest version and try again
-
+2m48s Warning InternalError route/prime-generator Operation cannot be fulfilled on clusteringresses.networking.internal.knative.dev "route-bb5458d0-8506-11ea-ad4a-0800277556f1": the object has been modified; please apply your changes to the latest version and try again
 
 <br/>
 
@@ -347,7 +321,6 @@ Deployment поломалась. Ничего не работает.
 
 <br/>
 
-  $ kubectl delete ksvc prime-generator
+\$ kubectl delete ksvc prime-generator
 
 <br/>
-

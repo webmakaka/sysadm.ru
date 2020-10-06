@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Ansible
+description: Ansible
+keywords: Ansible
 permalink: /devops/automation/ansible/
 ---
 
@@ -30,7 +32,6 @@ permalink: /devops/automation/ansible/
 
 ### [Ansible применительно к сетям](https://pyneng.github.io/pyneng-5/lecture-19/)
 
-
 <br/>
 
 ## Тестовые задания для DevOps по работе с Ansible
@@ -38,5 +39,3 @@ permalink: /devops/automation/ansible/
 ### [Задание 1](https://bitbucket.org/sysadm-ru/artem-ansible/src/master/)
 
 ### [Задание 2](https://github.com/edvegas/ssoft-test)
-
-

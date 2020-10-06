@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Скопировать Docker Images на другой Host
+description: Скопировать Docker Images на другой Host
+keywords: devops, docker, Скопировать Docker Images на другой Host
 permalink: /devops/containers/docker/basics/copying-images-to-other-hosts/
 ---
 
@@ -25,12 +27,10 @@ Host 1:
 
     $ ls -lh /tmp/<new_image_name>.tar
 
-
 <br/>
 
 Host 2:  
 (Старые версии docker, до веррии 1.4 так не умеют. Врочем все, что меньше 18, наверное уже старье)
-
 
 <!--
     // Посмотреть всяку ерунду в контейнере

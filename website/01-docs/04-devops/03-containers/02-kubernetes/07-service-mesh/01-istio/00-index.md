@@ -18,11 +18,10 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/
 
 ### [Istio в локальном kubernetes кластере](/devops/containers/kubernetes/service-mesh/istio/sample3/)
 
-
 <br/>
 
 **Istio работает:**
 
-* Monitoring - Prometheus/Grafana
-* Logging - Fluentd
-* Tracing - OpenTracing
+-   Monitoring - Prometheus/Grafana
+-   Logging - Fluentd
+-   Tracing - OpenTracing

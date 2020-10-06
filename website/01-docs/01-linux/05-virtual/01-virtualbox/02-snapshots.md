@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Работа со снапшотами
+title: Работа со снапшотами в VirtualBox
+description: Работа со снапшотами в VirtualBox
+keywords: Работа со снапшотами в VirtualBox
 permalink: /linux/virtual/virtualbox/snapshots/
 ---
 
-# Работа со снапшотами
-
+# Работа со снапшотами в VirtualBox
 
 <br/>
 
@@ -23,7 +24,6 @@ permalink: /linux/virtual/virtualbox/snapshots/
 
     $ VBoxManage snapshot ${vm} take snapshot_name --description snapshot_description
 
-
 <br/>
 
 ### Восстановление:
@@ -36,7 +36,7 @@ permalink: /linux/virtual/virtualbox/snapshots/
 
 Snapshots:
 
-  Name: snapshot_name (UUID: 85e68d6b-bfc0-492d-8e05-e56aab773a33) *
+Name: snapshot_name (UUID: 85e68d6b-bfc0-492d-8e05-e56aab773a33) \*
 
     $ VBoxManage snapshot ${vm} restore 85e68d6b-bfc0-492d-8e05-e56aab773a33
 
@@ -44,7 +44,6 @@ Snapshots:
 
     Restoring snapshot 85e68d6b-bfc0-492d-8e05-e56aab773a33
     0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-
 
 <br/>
 

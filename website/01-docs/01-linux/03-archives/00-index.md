@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Архиваторы и работа с архивами в Linux
+description: Архиваторы и работа с архивами в Linux
+keywords: Архиваторы и работа с архивами в Linux
 permalink: /linux/archives/
 ---
 

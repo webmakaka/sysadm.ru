@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Основные команды Docker
+description: Основные команды Docker
+keywords: devops, Основные команды Docker
 permalink: /devops/containers/docker/basics/basic-commands/
 ---
 
@@ -202,7 +204,6 @@ https://hub.docker.com
 // Удалить неиспользуемые образы:
 
     $ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
-
 
 <br/>
 

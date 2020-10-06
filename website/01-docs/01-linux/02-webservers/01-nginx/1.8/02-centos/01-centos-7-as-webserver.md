@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Инсталляция Nginx как web сервер из пакетов в Centos 7
+description: Инсталляция Nginx как web сервер из пакетов в Centos 7
+keywords: Инсталляция Nginx как web сервер из пакетов в Centos 7
 permalink: /linux/webservers/nginx/1.8/centos/7/webserver/
 ---
 
-
 # Инсталляция Nginx как web сервер из пакетов в Centos 7
-
 
     # yum update -y
 
@@ -27,8 +27,7 @@ permalink: /linux/webservers/nginx/1.8/centos/7/webserver/
 
 <br/>
 
-
-    # curl -I http://localhost:80  
+    # curl -I http://localhost:80
     HTTP/1.1 200 OK
     Server: nginx/1.8.1
     Date: Sat, 02 Apr 2016 10:44:17 GMT
@@ -38,7 +37,6 @@ permalink: /linux/webservers/nginx/1.8/centos/7/webserver/
     Connection: keep-alive
     ETag: "56a78acd-264"
     Accept-Ranges: bytes
-
 
 <br/>
 

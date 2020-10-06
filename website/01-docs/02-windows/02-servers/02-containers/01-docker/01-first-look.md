@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Docker в Windows первое знакомство
+description: Docker в Windows первое знакомство
+keywords: Docker в Windows первое знакомство
 permalink: /windows/servers/containers/docker/first-look/
 ---
 
@@ -8,7 +10,6 @@ permalink: /windows/servers/containers/docker/first-look/
 
 Offtopic:  
 [Docker в Linux](/devops/containers/docker/)
-
 
 ### Это просто пиздец, товарищи! В версии 1.12 под windows не работает редактор vi и vim. Да нахуя он тогда нужен этот ваш Docker под Windows?
 
@@ -33,7 +34,6 @@ Docker в Windows - это таже виртуализация и не дает 
 И да, на рутрекере модераторы и администраторы тоже мудаки. Забанили мой 10 летний аккаунт. А я там всякие полезные материалы выкладывал.
 
 <br/>
-
 
 <div align="center">
 

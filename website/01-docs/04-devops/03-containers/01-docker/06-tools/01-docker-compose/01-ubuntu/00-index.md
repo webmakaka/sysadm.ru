@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция Docker-Compose в Ubuntu 18.04.1
+description: Инсталляция Docker-Compose в Ubuntu 18.04.1
+keywords: devops, docker, Инсталляция Docker-Compose в Ubuntu 18.04.1
 permalink: /devops/containers/docker/tools/docker-compose/install/ubuntu/
 ---
 

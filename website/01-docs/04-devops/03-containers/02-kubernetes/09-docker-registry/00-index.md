@@ -8,10 +8,8 @@ permalink: /devops/containers/kubernetes/docker-registry/
 
 # Kubernetes Docker Registry
 
-
 **Из примера с katacoda:**  
 https://www.katacoda.com/javajon/courses/kubernetes-pipelines/tekton
-
 
 <br/>
 
@@ -45,7 +43,6 @@ minikube start --profile my-profile
 
     $ helm install private stable/docker-registry --namespace kube-system
 
-
 <br/>
 
 ### Install Registry Proxies as Node Daemons
@@ -58,16 +55,13 @@ minikube start --profile my-profile
 
 <br/>
 
-
 Pods can pull images from the registry at http://localhost:5000 and the proxies resolve the requests to https://private-docker-registry.kube-system:5000.
-
 
 <br/>
 
 ### Install Registry UI
 
 https://github.com/Joxit/docker-registry-ui
-
 
 <br/>
 
@@ -123,7 +117,6 @@ EOF
     $ kubectl get svc -n kube-system | grep private-docker-registry
     private-docker-registry   ClusterIP   10.102.91.197   <none>        5000/TCP                 17m
 
-
 <br/>
 
     $ minikube --profile my-profile ip
@@ -132,7 +125,6 @@ EOF
 <br/>
 
 http://192.168.99.130:31000/
-
 
 <br/>
 
@@ -164,17 +156,14 @@ http://192.168.99.130:31000/
     # Extract tkn to your PATH (e.g. /usr/local/bin)
     $ sudo tar xvzf tkn_0.8.0_Linux_x86_64.tar.gz -C /usr/local/bin/ tkn
 
-
 <br/>
 
 ### Clone Example Node.js App
 
-
     $ cd ~/tmp/
     $ git clone https://github.com/javajon/node-js-tekton
-    
-    $ cd node-js-tekton
 
+    $ cd node-js-tekton
 
 <br/>
 
@@ -188,7 +177,6 @@ http://192.168.99.130:31000/
     NAME              SECRETS   AGE
     default           1         52m
     service-account   1         16s
-
 
 ### Declare Pipeline Resources
 
@@ -215,7 +203,7 @@ EOF
     $ tkn resources list
     NAME   TYPE   DETAILS
     git    git    url: https://github.com/javajon/node-js-tekton
-    marley@workstation:~/projects/dev/devops/voting-tekton$ 
+    marley@workstation:~/projects/dev/devops/voting-tekton$
 
 <br/>
 
@@ -223,9 +211,8 @@ EOF
 
 For our pipeline, we have defined two tasks.
 
-* task-build-src clones the source, builds the Node.js based container, and pushed the image to a registry.
-* task-deploy pulls the container image from the private registry and runs it on this Kubernetes cluster.
-
+-   task-build-src clones the source, builds the Node.js based container, and pushed the image to a registry.
+-   task-deploy pulls the container image from the private registry and runs it on this Kubernetes cluster.
 
 <br/>
 
@@ -239,7 +226,6 @@ For our pipeline, we have defined two tasks.
     build-image-from-source   1 minute ago
     deploy-application        2 seconds ago
 
-
 <br/>
 
 ### Declare Pipeline
@@ -250,12 +236,9 @@ For our pipeline, we have defined two tasks.
     NAME                   AGE              LAST RUN   STARTED   DURATION   STATUS
     application-pipeline   13 seconds ago   ---        ---       ---        ---
 
-
-
 <br/>
 
 ### Declare Runner for Pipeline
-
 
 **pipeline/pipeline-run.yaml**
 
@@ -288,11 +271,10 @@ EOF
 <br/>
 
     $ tkn pipelineruns list
-    NAME                       STARTED          DURATION   STATUS             
-    application-pipeline-run   56 seconds ago   ---        Running   
+    NAME                       STARTED          DURATION   STATUS
+    application-pipeline-run   56 seconds ago   ---        Running
 
 <br/>
-
 
 ```
 $ tkn pipelineruns describe application-pipeline-run
@@ -324,11 +306,9 @@ STARTED        DURATION   STATUS
  NAME                                                       TASK NAME                 STARTED          DURATION     STATUS
  ∙ application-pipeline-run-deploy-application-qd79d        deploy-application        36 seconds ago   18 seconds   Succeeded
  ∙ application-pipeline-run-build-image-from-source-txgvx   build-image-from-source   1 minute ago     52 seconds   Succeeded
- ```
-
+```
 
 <br/>
-
 
 ### Access Application
 

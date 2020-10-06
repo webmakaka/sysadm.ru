@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Информация о железках, удаленная перезагрузка в Windows
+description: Информация о железках, удаленная перезагрузка в Windows
+keywords: Информация о железках, удаленная перезагрузка в Windows
 permalink: /windows/desktops/basics/
 ---
 

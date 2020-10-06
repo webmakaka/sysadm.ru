@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Linux - Disable Ubuntu motd spam
+description: Linux - Disable Ubuntu motd spam
+keywords: Linux - Disable Ubuntu motd spam
 permalink: /linux/disable-ubuntu-motd/
 ---
 

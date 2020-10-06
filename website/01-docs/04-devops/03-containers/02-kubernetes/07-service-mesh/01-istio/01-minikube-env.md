@@ -17,7 +17,6 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/env/
 
 https://istio.io/docs/setup/getting-started/#download
 
-
 ```
 $ {
 minikube --profile my-profile config set memory 8192
@@ -41,7 +40,6 @@ minikube start --profile my-profile
     $ kubectl version --short
     Client Version: v1.18.1
     Server Version: v1.16.9
-
 
 <br/>
 
@@ -68,15 +66,12 @@ UPD. Окалазось istio уже есть среди предустанов�
 **Дока:**  
 https://istio.io/docs/setup/additional-setup/config-profiles/
 
-
     // $ istioctl manifest apply --set profile=demo
     $ istioctl manifest apply --set profile=default
 
 <br/>
 
     $ kubectl label namespace default istio-injection=enabled
-
-
 
 <br/>
 

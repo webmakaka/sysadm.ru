@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Docker Swarm
+description: Docker Swarm
+keywords: devops, docker, Docker Swarm
 permalink: /devops/containers/docker/clustering/swarm/
 ---
 
@@ -8,10 +10,8 @@ permalink: /devops/containers/docker/clustering/swarm/
 
 https://docs.docker.com/swarm/
 
-
 **Official repository:**  
 https://hub.docker.com/_/swarm/
-
 
 **Swarm tutorial:**  
 https://docs.docker.com/engine/swarm/swarm-tutorial/
@@ -20,14 +20,13 @@ https://docs.docker.com/engine/swarm/swarm-tutorial/
 
 **Альтернативы:**
 
-- Kubernetes
-- Mesosphere
-- Apache Mesos
+-   Kubernetes
+-   Mesosphere
+-   Apache Mesos
 
 <br/>
 
 **Не рекомендую изучать материалы ранее 2017 года.**
-
 
 <br/>
 
@@ -35,14 +34,11 @@ https://docs.docker.com/engine/swarm/swarm-tutorial/
 
 [здесь](/devops/containers/docker/clustering/swarm/first-look/)
 
-
-
 <br/>
 
 ### Docker Swarm - кластер с использованием docker-machine (без сохранения данных после перезагрузки)
 
 [здесь](/devops/containers/docker/clustering/swarm/by-docker-machine/)
-
 
 <br/>
 
@@ -50,13 +46,11 @@ https://docs.docker.com/engine/swarm/swarm-tutorial/
 
 [здесь](/devops/containers/docker/clustering/swarm/by-vagrant/)
 
-
 <br/>
 
 ### [Packt Publishing] Docker Swarm [August 31, 2017] (Имеет смысл смотреть, чтобы понять как делать обновления контейнеров)
 
 [здесь](/devops/containers/docker/clustering/swarm/packt-publishing-docker-swarm/)
-
 
 <br/>
 

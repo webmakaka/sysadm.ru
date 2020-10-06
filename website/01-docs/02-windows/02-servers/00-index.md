@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Администрирование серверов Windows
+description: Администрирование серверов Windows
+keywords: Администрирование серверов Windows
 permalink: /windows/servers/
 ---
 

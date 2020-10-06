@@ -2,7 +2,7 @@
 layout: page
 title: Инсталляция minikube в ubuntu 20.04.1
 description: Инсталляция minikube в ubuntu 20.04.1
-keywords: linux, minikube
+keywords: devops, linux, minikube
 permalink: /devops/containers/kubernetes/minikube/install/
 ---
 

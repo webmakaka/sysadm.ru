@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Docker registry frontend (WEB GUI для registry)
+description: Docker registry frontend (WEB GUI для registry)
+keywords: devops, docker, Docker registry frontend (WEB GUI для registry)
 permalink: /devops/containers/docker/registry/web-gui/
 ---
-
 
 # Docker registry frontend (WEB GUI для registry)
 
@@ -21,5 +22,3 @@ $ docker run \
 ```
 
 http://192.168.0.11:8080/home
-
-

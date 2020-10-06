@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Upgrade Kubernetes Cluster
+description: Upgrade Kubernetes Cluster
+keywords: devops, linux, kubernetes, Upgrade Kubernetes Cluster
 permalink: /devops/containers/kubernetes/kubeadm/upgrade-kubernetes-cluster/
 ---
 

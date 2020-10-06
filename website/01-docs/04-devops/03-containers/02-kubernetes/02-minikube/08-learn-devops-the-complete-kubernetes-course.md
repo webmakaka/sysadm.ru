@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Материал из курса - Learn DevOps - The Complete Kubernetes Course
+description: Материал из курса - Learn DevOps - The Complete Kubernetes Course
+keywords: devops, linux, kubernetes,  Материал из курса - Learn DevOps - The Complete Kubernetes Course
 permalink: /devops/containers/kubernetes/minikube/learn-devops-the-complete-kubernetes-course/
 ---
 

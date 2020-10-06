@@ -1,15 +1,14 @@
 ---
 layout: page
-title: Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.
+title: Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc
+description: Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc
+keywords: Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc
 permalink: /linux/ubuntu/download-from-file-hostings/
 ---
 
-
 # Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.
 
-
 jdownloader (jdownloader.org)
-
 
 <br/>
 
@@ -17,14 +16,12 @@ jdownloader (jdownloader.org)
     <img src="http://storage6.static.itmages.ru/i/18/0412/h_1523516754_7360888_d0fa6ee52b.png" border="0" alt="Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.">
 </div>
 
-
 <br/><br/>
 
-- Проверяет доступны ли файлы. 
-- Сама считает время. 
-- Подает звук, когда пришло время ввести капчу. 
-- Может работать с купленными ключами. 
-
+-   Проверяет доступны ли файлы.
+-   Сама считает время.
+-   Подает звук, когда пришло время ввести капчу.
+-   Может работать с купленными ключами.
 
 **Требуеся установленная java**
 

@@ -1,15 +1,15 @@
 ---
 layout: page
 title: Конвертировать wmdk в vdi
+description: Конвертировать wmdk в vdi
+keywords: Конвертировать wmdk в vdi
 permalink: /linux/virtual/virtualbox/convert-vmdk-vdi/
 ---
 
-
 # Конвертировать wmdk в vdi
 
-wmdk - vmware   
-vdi - virtualbox  
-
+wmdk - vmware  
+vdi - virtualbox
 
 В Windows
 

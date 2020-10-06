@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Docker Registry Mirroring
+description: Docker Registry Mirroring
+keywords: devops, docker, Docker Registry Mirroring
 permalink: /devops/containers/docker/registry/mirroring/
 ---
 
@@ -61,4 +63,3 @@ https://bitbucket.org/sysadm-ru/self-hosted-docker-registry/raw/a901328b13688d3f
     $ time docker image pull node
     ***
     real	0m21.755s
-

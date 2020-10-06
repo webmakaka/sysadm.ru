@@ -29,8 +29,6 @@ permalink: /linux/webservers/apache/install/
     # chkconfig httpd on
     # service httpd start
 
-
-
 FIREWALL
 
     # cp /etc/sysconfig/iptables /etc/sysconfig/iptables.bkp

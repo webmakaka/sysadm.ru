@@ -2,7 +2,7 @@
 layout: page
 title: Контейнеры в Linux
 description: Контейнеры в Linux
-keywords: Контейнеры в Linux
+keywords: DevOps, Контейнеры в Linux
 permalink: /devops/containers/
 ---
 

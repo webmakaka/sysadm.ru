@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Получить информацию о запущенных Docker контейнерах c помощью sysdig
+description: Получить информацию о запущенных Docker контейнерах c помощью sysdig
+keywords: devops, docker, Получить информацию о запущенных Docker контейнерах c помощью sysdig
 permalink: /devops/containers/docker/sysdig/
 ---
-
 
 # Получить информацию о запущенных Docker контейнерах c помощью sysdig
 
@@ -11,9 +12,7 @@ permalink: /devops/containers/docker/sysdig/
 
     # curl -s https://s3.amazonaws.com/download.draios.com/stable/install-sysdig | sudo bash
 
-
 <br/>
-
 
     # sysdig -cl
 
@@ -111,15 +110,12 @@ permalink: /devops/containers/docker/sysdig/
 
     Use the -i flag to get detailed information about a specific chisel
 
-
 <br/>
 
     # sysdig -pc -c lscontainers
     container.type container.image container.name      container.id
     -------------- --------------- ------------------- ------------
     docker         debian          fervent_hoover      ab4082d2b4fc
-
-
 
 <br/>
 

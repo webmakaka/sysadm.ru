@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Подготовка окружения для программирование в Linux на GO
+description: Подготовка окружения для программирование в Linux на GO
+keywords: Подготовка окружения для программирование в Linux на GO
 permalink: /dev/go/env/
 ---
 
@@ -79,7 +81,6 @@ https://gitlab.com/rvasily/msu-go-11/tree/master
     $ sudo mv go/* /opt/go.1.15/
     $ sudo ln -s /opt/go.1.15/ /opt/go
 
-
 <br/>
 
     $  vi ~/.bashrc
@@ -103,7 +104,6 @@ https://gitlab.com/rvasily/msu-go-11/tree/master
 
     $ vi ~/.bash_profile
 
-
 <br/>
 
 ```
@@ -119,12 +119,10 @@ https://gitlab.com/rvasily/msu-go-11/tree/master
 
     $ source ~/.bash_profile
 
-
 <br/>
 
     $ go version
     go version go1.15 linux/amd64
-
 
 <br/>
 

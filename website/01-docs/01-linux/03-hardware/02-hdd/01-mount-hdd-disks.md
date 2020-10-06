@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Монтирование hdd
+title: Монтирование жесткого диска в linux
+description: Монтирование жесткого диска в linux
+keywords: Монтирование жесткого диска в linux
 permalink: /linux/hardware/hdd/mount-disks/
 ---
 
-
-# Монтирование hdd
+# Монтирование жесткого диска в linux
 
 Делаю!  
 11.08.2019
@@ -52,33 +53,23 @@ permalink: /linux/hardware/hdd/mount-disks/
 
 <br/>
 
-
     # ls /dev/sd*
     /dev/sda  /dev/sda1  /dev/sda2  /dev/sdb  /dev/sdb1
 
-
-
 <br/>
-
 
     # mkdir /mnt/dsk1
 
-
- <br/>  
-
+ <br/>
 
     # blkid /dev/sdb1
     /dev/sdb1: UUID="66bda136-6e40-478b-87cd-f80e871b5ac3" TYPE="ext4" PARTUUID="8f991ad1-bb8b-f843-853a-946142c288b3"
-
-
 
 или
 
      # blkid
     /dev/sdb1: UUID="66bda136-6e40-478b-87cd-f80e871b5ac3" TYPE="ext4" PARTUUID="8f991ad1-bb8b-f843-853a-946142c288b3"
     ***
-
-
 
 <br/>
 
@@ -92,7 +83,6 @@ permalink: /linux/hardware/hdd/mount-disks/
 <br/>
 
 ### Запись в fstab (чтобы после каждой загрузки не монтировать заново)
-
 
     # vi /etc/fstab
 
@@ -113,13 +103,11 @@ UUID=66bda136-6e40-478b-87cd-f80e871b5ac3 /mnt/dsk1 ext4 defaults 0 0
 
     # tune2fs /dev/sdb1 -m 0
 
-
 <br/>
 
     # df -h
     ***
     /dev/sdb1       916G   77M  916G   1% /mnt/dsk1
-
 
 <br/>
 

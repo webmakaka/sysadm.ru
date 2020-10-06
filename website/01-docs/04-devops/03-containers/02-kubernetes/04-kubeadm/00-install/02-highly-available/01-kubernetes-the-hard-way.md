@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Kubernetes The Hard Way
+description: Kubernetes The Hard Way
+keywords: devops, linux, kubernetes,   Kubernetes The Hard Way
 permalink: /devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/
 ---
 
@@ -19,32 +21,30 @@ https://www.youtube.com/watch?v=NvQY5tuxALY
 
 <br/>
 
+![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic01.png 'Kubernetes The Hard Way'){: .center-image }
 
-![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic01.png "Kubernetes The Hard Way"){: .center-image }
+![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic02.png 'Kubernetes The Hard Way'){: .center-image }
 
-![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic02.png "Kubernetes The Hard Way"){: .center-image }
+![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic03.png 'Kubernetes The Hard Way'){: .center-image }
 
-![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic03.png "Kubernetes The Hard Way"){: .center-image }
+![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic04.png 'Kubernetes The Hard Way'){: .center-image }
 
-![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic04.png "Kubernetes The Hard Way"){: .center-image }
+![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic05.png 'Kubernetes The Hard Way'){: .center-image }
 
-![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic05.png "Kubernetes The Hard Way"){: .center-image }
+![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic06.png 'Kubernetes The Hard Way'){: .center-image }
 
-![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic06.png "Kubernetes The Hard Way"){: .center-image }
+![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic07.png 'Kubernetes The Hard Way'){: .center-image }
 
-![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic07.png "Kubernetes The Hard Way"){: .center-image }
+![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic08.png 'Kubernetes The Hard Way'){: .center-image }
 
-![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic08.png "Kubernetes The Hard Way"){: .center-image }
+![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic09.png 'Kubernetes The Hard Way'){: .center-image }
 
-![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic09.png "Kubernetes The Hard Way"){: .center-image }
-
-![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic10.png "Kubernetes The Hard Way"){: .center-image }
-
+![Kubernetes The Hard Way](/img/devops/containers/kubernetes/kubeadm/install/highly-available/kubernetes-the-hard-way/pic10.png 'Kubernetes The Hard Way'){: .center-image }
 
 <br/>
 
     $ lxc launch images:centos/7 haproxy
-    
+
     $ lxc launch ubuntu:18.04 controller-0 --profile k8s
     $ lxc launch ubuntu:18.04 controller-1 --profile k8s
     $ lxc launch ubuntu:18.04 controller-2 --profile k8s
@@ -118,7 +118,6 @@ backend k8s
 
 ### На хост машине
 
-
 https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/02-client-tools.md
 
 <br/>
@@ -140,12 +139,10 @@ https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/02-c
     Revision: dev
     Runtime: go1.6
 
-
 kubectl уже инсталлирован.
 
     $ kubectl version --short --client
     Client Version: v1.14.1
-
 
 <br/>
 
@@ -155,11 +152,10 @@ https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/04-c
 
 <br/>
 
-    $ mkdir play 
+    $ mkdir play
     $ cd play
 
 <br/>
-
 
 **Certificate Authority**
 
@@ -292,7 +288,6 @@ done
     -rw-r--r-- 1 marley marley 1484 May 28 02:42 worker-1.pem
     -rw------- 1 marley marley 1679 May 28 02:42 worker-2-key.pem
     -rw-r--r-- 1 marley marley 1484 May 28 02:42 worker-2.pem
-
 
 <br/>
 
@@ -446,7 +441,6 @@ cfssl gencert \
 }
 ```
 
-
 <br/>
 
 **The Service Account Key Pair**
@@ -483,7 +477,6 @@ cfssl gencert \
 }
 ```
 
-
 <br/>
 
     $ ls
@@ -502,7 +495,6 @@ cfssl gencert \
     kube-controller-manager.pem       service-account-csr.json  worker-2.pem
     kube-proxy.csr                    service-account-key.pem
 
-
 <br/>
 
 **Distribute the Client and Server Certificates**
@@ -520,12 +512,12 @@ cfssl gencert \
 
 <br/>
 
-    $ lxc exec worker-0 ls 
+    $ lxc exec worker-0 ls
     ca.pem	worker-0-key.pem  worker-0.pem
- 
+
 <br/>
 
-    $ lxc exec controller-0 ls                
+    $ lxc exec controller-0 ls
     ca-key.pem  kubernetes-key.pem	service-account-key.pem
     ca.pem	    kubernetes.pem	service-account.pem
 
@@ -536,7 +528,6 @@ cfssl gencert \
 <br/>
 
 **The kubelet Kubernetes Configuration File**
-
 
 ```
 for instance in worker-0 worker-1 worker-2; do
@@ -564,7 +555,6 @@ done
 <br/>
 
 **The kube-proxy Kubernetes Configuration File**
-
 
 ```
 {
@@ -674,11 +664,9 @@ done
 
 **Distribute the Kubernetes Configuration Files**
 
-
     $ for instance in worker-0 worker-1 worker-2; do
       lxc file push ${instance}.kubeconfig kube-proxy.kubeconfig ${instance}/root/
     done
-
 
 <br/>
 
@@ -711,6 +699,7 @@ resources:
       - identity: {}
 EOF
 ```
+
 <br/>
 
     $ for instance in controller-0 controller-1 controller-2; do
@@ -745,10 +734,10 @@ EOF
 }
 
 ```
+
     // IP меняется для каждого контроллера
     $ INTERNAL_IP=10.81.125.195
     $ ETCD_NAME=$(hostname -s)
-
 
 Вносим изменения в файл.
 
@@ -784,14 +773,14 @@ RestartSec=5
 WantedBy=multi-user.target
 EOF
 ```
+
 <br/>
 
 {
-  sudo systemctl daemon-reload
-  sudo systemctl enable etcd
-  sudo systemctl start etcd
+sudo systemctl daemon-reload
+sudo systemctl enable etcd
+sudo systemctl start etcd
 }
-
 
 <br/>
 
@@ -968,6 +957,7 @@ WantedBy=multi-user.target
 EOF
 
 ```
+
 <br/>
 
     # {
@@ -976,29 +966,24 @@ EOF
       systemctl start kube-apiserver kube-controller-manager kube-scheduler
     }
 
-
-
 На каком-нибудь контроллере сделать проверку
 
 Одна нода не поднялась.
 
-
     # kubectl get componentstatuses --kubeconfig admin.kubeconfig
-    
-    NAME                 STATUS      MESSAGE                                                                                                      ERROR
-    etcd-1               Unhealthy   Get https://:2379/health: tls: either ServerName or InsecureSkipVerify must be specified in the tls.Config   
-    etcd-2               Healthy     {"health":"true"}                                                                                            
-    controller-manager   Healthy     ok                                                                                                           
-    scheduler            Healthy     ok                                                                                                           
-    etcd-0               Healthy     {"health":"true"}                              
 
+    NAME                 STATUS      MESSAGE                                                                                                      ERROR
+    etcd-1               Unhealthy   Get https://:2379/health: tls: either ServerName or InsecureSkipVerify must be specified in the tls.Config
+    etcd-2               Healthy     {"health":"true"}
+    controller-manager   Healthy     ok
+    scheduler            Healthy     ok
+    etcd-0               Healthy     {"health":"true"}
 
 <br/>
 
 ### Выполнить на одной ноде
 
 **RBAC**
-
 
 ```
 cat <<EOF | kubectl apply --kubeconfig admin.kubeconfig -f -
@@ -1062,7 +1047,6 @@ EOF
 
 <br/>
 
-
     # wget -q --show-progress --https-only --timestamping \
       https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.12.0/crictl-v1.12.0-linux-amd64.tar.gz \
       https://storage.googleapis.com/kubernetes-the-hard-way/runsc-50c283b9f56bb7200938d9e207355f05f79f0d17 \
@@ -1105,7 +1089,6 @@ EOF
 
     // для worker-2
     # POD_CIDR=10.200.2.0/24
-
 
 <br/>
 
@@ -1195,6 +1178,7 @@ LimitCORE=infinity
 WantedBy=multi-user.target
 EOF
 ```
+
 <br/>
 
     # {
@@ -1228,6 +1212,7 @@ tlsCertFile: "/var/lib/kubelet/${HOSTNAME}.pem"
 tlsPrivateKeyFile: "/var/lib/kubelet/${HOSTNAME}-key.pem"
 EOF
 ```
+
 <br/>
 
 Внесли имзенение в оригинальный файл.
@@ -1296,6 +1281,7 @@ RestartSec=5
 WantedBy=multi-user.target
 EOF
 ```
+
 <br/>
 
     {
@@ -1316,7 +1302,7 @@ EOF
     $ lxc file pull controller-0/root/admin.kubeconfig ~/.kube/config
     $ vi ~/.kube/config
 
-Вместо 
+Вместо
 
     server: https://127.0.0.1:6443
 
@@ -1340,16 +1326,15 @@ EOF
     worker-1   Ready    <none>   4m6s   v1.12.0
     worker-2   Ready    <none>   13s    v1.12.0
 
-
 <br/>
 
     $ kubectl get cs
     NAME                 STATUS      MESSAGE                                                                                                      ERROR
-    etcd-1               Unhealthy   Get https://:2379/health: tls: either ServerName or InsecureSkipVerify must be specified in the tls.Config   
-    scheduler            Healthy     ok                                                                                                           
-    controller-manager   Healthy     ok                                                                                                           
-    etcd-0               Healthy     {"health":"true"}                                                                                            
-    etcd-2               Healthy     {"health":"true"}                                                                                            
+    etcd-1               Unhealthy   Get https://:2379/health: tls: either ServerName or InsecureSkipVerify must be specified in the tls.Config
+    scheduler            Healthy     ok
+    controller-manager   Healthy     ok
+    etcd-0               Healthy     {"health":"true"}
+    etcd-2               Healthy     {"health":"true"}
 
 <br/>
 
@@ -1408,11 +1393,9 @@ EOF
     NAME                                 DESIRED   CURRENT   READY   AGE
     replicaset.apps/coredns-699f8ddd77   2         2         2       30s
 
-
 <br/>
 
 **Smoke Test**
-
 
     $ kubectl create secret generic kubernetes-the-hard-way \
       --from-literal="mykey=mydata"
@@ -1428,9 +1411,7 @@ EOF
       --key=/etc/etcd/kubernetes-key.pem\
       /registry/secrets/default/kubernetes-the-hard-way | hexdump -C
 
-
 Увидели справа k8s:enc. Оч. обрадовались.
-
 
     # exit
 
@@ -1444,7 +1425,6 @@ EOF
 
 
     $ kubectl port-forward nginx-dbddb74b8-9mw8k 8080:80
-
 
 http://localhost:8080/
 
@@ -1476,7 +1456,6 @@ OK
 
 http://worker-ip:exposed_port
 
-
 <br/>
 
 ### Удаление всего
@@ -1499,8 +1478,6 @@ http://worker-ip:exposed_port
     }
 
     $ lxc list
-
-
 
 <br/>
 

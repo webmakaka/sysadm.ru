@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Docker Swarm - кластер с использованием docker-machine
+description: Docker Swarm - кластер с использованием docker-machine
+keywords: devops, docker, Docker Swarm - кластер с использованием docker-machine
 permalink: /devops/containers/docker/clustering/swarm/by-docker-machine/
 ---
 
-
 # Docker Swarm - кластер с использованием docker-machine (без сохранения данных после перезагрузки)
 
-Не рекомендую делать так.   
+Не рекомендую делать так.  
 При остановке сервера базы данных, данные пропадают.
 
 По материалам видеокурса: Projects-in-Docker
@@ -16,7 +17,6 @@ permalink: /devops/containers/docker/clustering/swarm/by-docker-machine/
 
 Разворачиваю в swarm вот это приложение:  
 https://github.com/webmakaka/Projects-in-Docker
-
 
     $ mkdir ~/docker-swarm-scripts
     $ cd ~/docker-swarm-scripts
@@ -36,7 +36,7 @@ https://github.com/webmakaka/Projects-in-Docker
 <br/>
 
     $ vi destroy-machine.sh
-    
+
 <br/>
 
     #!/bin/bash
@@ -45,38 +45,37 @@ https://github.com/webmakaka/Projects-in-Docker
         docker-machine rm -f swarm-$i
     done
 
-
 <br/>
 
     $ source ./destroy-machine.sh
-    
+
     $ docker-machine ls
-    
+
     никаких машин не возвращает
-    
-    
-    $ source ./create-machine.sh 
-    
-    
+
+
+    $ source ./create-machine.sh
+
+
     $ eval $(docker-machine env swarm-1)
-    
+
     $ docker-machine ls
     NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER        ERRORS
-    swarm-1   *        virtualbox   Running   tcp://192.168.99.100:2376           v18.04.0-ce   
-    swarm-2   -        virtualbox   Running   tcp://192.168.99.101:2376           v18.04.0-ce   
-    swarm-3   -        virtualbox   Running   tcp://192.168.99.102:2376           v18.04.0-ce   
+    swarm-1   *        virtualbox   Running   tcp://192.168.99.100:2376           v18.04.0-ce
+    swarm-2   -        virtualbox   Running   tcp://192.168.99.101:2376           v18.04.0-ce
+    swarm-3   -        virtualbox   Running   tcp://192.168.99.102:2376           v18.04.0-ce
 
 <br/>
     
     $ docker swarm init --advertise-addr $(docker-machine ip swarm-1)
 
     $ docker swarm join-token manager
-    
+
     $ docker swarm join-token worker
 
     $ JOIN_TOKEN=$(docker swarm join-token -q worker)
     $ echo $JOIN_TOKEN
-    
+
     $ docker node ls
     ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
     muvi5yxed9q4iieutf96l58ic *   swarm-1             Ready               Active              Leader              18.04.0-ce
@@ -84,31 +83,29 @@ https://github.com/webmakaka/Projects-in-Docker
 
 
     $ eval $(docker-machine env swarm-2)
-    
+
     $ docker swarm join --token $JOIN_TOKEN \
     --advertise-addr $(docker-machine ip swarm-2) \
     $(docker-machine ip swarm-1):2377
-    
-    
+
+
     $ eval $(docker-machine env swarm-3)
-    
+
     $ docker swarm join --token $JOIN_TOKEN \
     --advertise-addr $(docker-machine ip swarm-3) \
     $(docker-machine ip swarm-1):2377
-    
-    
-    
+
+
+
     $ eval $(docker-machine env swarm-1)
-    
+
     $ docker node ls
     ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
     muvi5yxed9q4iieutf96l58ic *   swarm-1             Ready               Active              Leader              18.04.0-ce
     ifswsuffyd7y6x6vhqv0ashm3     swarm-2             Ready               Active                                  18.04.0-ce
     pboiazm2mfrfdm9b02o5iu836     swarm-3             Ready               Active                                  18.04.0-ce
 
-
 <br/>
-
 
 ### Сеть
 
@@ -121,7 +118,6 @@ https://github.com/webmakaka/Projects-in-Docker
 
 <br/>
 
-
 ### Подготовка имиджей
 
     $ cd mydb
@@ -132,18 +128,17 @@ https://github.com/webmakaka/Projects-in-Docker
 
     $ cd mywebserver/
     $ docker build -t marley/mywebserver --build-arg PASSWORD=pass123 .
-    
-    
+
 Чтобы запустить контейнер в swarm, его нужно куда-то положить. То что он лежит локально на хост машине, ничего незначит. Виртуалки не знают ничего об этом. Я решил, что проще всего положить их на docker hub.
 
 Захожу на docker hub, создаю репо. (мб. уже и не нужно создавать в веб интерфейсе. хз)
-    
+
     $ docker login
     $ docker push marley/mydb
     $ docker push marley/myapp
     $ docker push marley/mywebserver
 
-<br/> 
+<br/>
 
 ### Запуск сервисов
 
@@ -153,7 +148,7 @@ https://github.com/webmakaka/Projects-in-Docker
     --network blog_network \
     --mount type=volume,source=database_volume,destination=/data/db \
     marley/mydb
-    
+
 <br/>
     
     $ docker service create \
@@ -190,10 +185,10 @@ https://github.com/webmakaka/Projects-in-Docker
 
     $ curl -I http://$(docker-machine ip swarm-1):8080
     OK
-    
+
     $ echo http://$(docker-machine ip swarm-1):8080
     http://192.168.99.100:8080
-    
+
 <br/>
     
     http://192.168.99.100:8080/create.html#/
@@ -201,16 +196,12 @@ https://github.com/webmakaka/Projects-in-Docker
     login: user
     pass: pass123
 
-    
-    
-
 <br/>
 
 ### Тоже самое с помощью yml файла
 
-
     $ vi blog_swarm.yml
-    
+
     version: "3"
     services:
       db_server:
@@ -219,7 +210,7 @@ https://github.com/webmakaka/Projects-in-Docker
           - blog_network
         deploy:
           replicas: 1
-          restart_policy: 
+          restart_policy:
             condition: on-failure
         volumes:
           - database_volume:/data/db
@@ -252,9 +243,7 @@ https://github.com/webmakaka/Projects-in-Docker
 
     volumes:
       database_volume:
-    
 
 <br/>
 
     $ docker stack deploy -c blog_swarm.yml blog_swarm
-    

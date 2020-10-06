@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Install Kubernetes Dashboard Web UI
+description: Install Kubernetes Dashboard Web UI
+keywords: devops, linux, kubernetes, Install Kubernetes Dashboard Web UI
 permalink: /devops/containers/kubernetes/kubeadm/gui/dashboard/
 ---
 
@@ -75,16 +77,16 @@ https://node1:32323
 
 <br/>
 
-![kubernetes Dashboard 01](/img/devops/containers/kubernetes/kubeadm/gui/dashboard/dashboard-01.png "kubernetes Dashboard 01"){: .center-image }
+![kubernetes Dashboard 01](/img/devops/containers/kubernetes/kubeadm/gui/dashboard/dashboard-01.png 'kubernetes Dashboard 01'){: .center-image }
 
 <br/>
 
-![kubernetes Dashboard 02](/img/devops/containers/kubernetes/kubeadm/gui/dashboard/dashboard-02.png "kubernetes Dashboard 02"){: .center-image }
+![kubernetes Dashboard 02](/img/devops/containers/kubernetes/kubeadm/gui/dashboard/dashboard-02.png 'kubernetes Dashboard 02'){: .center-image }
 
 <br/>
 
-![kubernetes Dashboard 03](/img/devops/containers/kubernetes/kubeadm/gui/dashboard/dashboard-03.png "kubernetes Dashboard 03"){: .center-image }
+![kubernetes Dashboard 03](/img/devops/containers/kubernetes/kubeadm/gui/dashboard/dashboard-03.png 'kubernetes Dashboard 03'){: .center-image }
 
 <br/>
 
-![kubernetes Dashboard 04](/img/devops/containers/kubernetes/kubeadm/gui/dashboard/dashboard-04.png "kubernetes Dashboard 04"){: .center-image }
+![kubernetes Dashboard 04](/img/devops/containers/kubernetes/kubeadm/gui/dashboard/dashboard-04.png 'kubernetes Dashboard 04'){: .center-image }

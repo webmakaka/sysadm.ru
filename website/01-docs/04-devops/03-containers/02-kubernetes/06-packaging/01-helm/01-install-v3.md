@@ -13,12 +13,10 @@ permalink: /devops/containers/kubernetes/packaging/heml3/install/
 Делаю:  
 23.04.2020
 
-
     $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
     $ helm version --short --client
     v3.2.0+ge11b7ce
-
 
 <br/>
 
@@ -28,5 +26,3 @@ permalink: /devops/containers/kubernetes/packaging/heml3/install/
     // $ helm repo remove stable
 
     $ helm repo update
-
-

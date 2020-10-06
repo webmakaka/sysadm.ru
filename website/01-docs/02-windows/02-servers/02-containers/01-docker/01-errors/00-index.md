@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Ошибки при работе с Docker в Windows
+description: Ошибки при работе с Docker в Windows
+keywords: Ошибки при работе с Docker в Windows
 permalink: /windows/servers/containers/docker/errors/
 ---
 
 # Ошибки при работе с Docker в Windows
-
 
 <ul>
 

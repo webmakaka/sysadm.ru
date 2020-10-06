@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Dynamically NFS provisioning
+description: Dynamically NFS provisioning
+keywords: devops, linux, kubernetes, Dynamically NFS provisioning
 permalink: /devops/containers/kubernetes/kubeadm/persistence/dynamic-nfs-provisioning/
 ---
 
@@ -23,7 +25,7 @@ https://www.youtube.com/watch?v=AavnQzWDTEk&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-![kubernetes NFS provisioning](/img/devops/containers/kubernetes/kubeadm/persistence/NFS-provisioning.png "kubernetes NFS provisioning"){: .center-image }
+![kubernetes NFS provisioning](/img/devops/containers/kubernetes/kubeadm/persistence/NFS-provisioning.png 'kubernetes NFS provisioning'){: .center-image }
 
 <br/>
 

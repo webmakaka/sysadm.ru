@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Команды работы с архивами в Linux
+description: Команды работы с архивами в Linux
+keywords: Команды работы с архивами в Linux
 permalink: /linux/archives/other/
 ---
 
@@ -37,7 +39,6 @@ tar: .: Not found in archive
     // Создать zip архив кучи файлов по маске:
     $ for i in $(find ./logs/ -name "*") ;do zip ./weblogic_logs.zip $i; done
 
-
 <br/>
 
 ### tar
@@ -49,6 +50,5 @@ tar: .: Not found in archive
 
 ### .tgz
 
-    // Извлечь .tgz:   
+    // Извлечь .tgz:
     $ tar xf FileName.tgz -C ./
-

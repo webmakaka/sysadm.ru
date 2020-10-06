@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Docker в Linux
+description: Docker в Linux
+keywords: devops, docker, Docker в Linux
 permalink: /devops/containers/docker/
 ---
 
@@ -44,7 +46,6 @@ https://quay.io
 На hub.docker.com можно делать автоматически собираемые image. Для этого необходимо указать сервису проект с Dockerfile. При внесении изменений в проект, image собирается заново.
 
 **Можно также создать свой Registry**
-
 
 <br/><br/>
 
@@ -131,13 +132,11 @@ https://docs.docker.com/engine/userguide/networking/
 
 [здесь](/devops/containers/docker/dockerfile/)
 
-
 <br/>
 
 ### Self-hosted Registry (Свой dockerhub)
 
 [Self-hosted Registry](/devops/containers/docker/registry/)
-
 
 <br/>
 

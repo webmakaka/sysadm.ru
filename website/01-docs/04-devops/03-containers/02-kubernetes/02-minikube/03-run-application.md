@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Запуск приложения в minikube
+description: Запуск приложения в minikube
+keywords: devops, linux, kubernetes,  Запуск приложения в minikube
 permalink: /devops/containers/kubernetes/minikube/run-application/
 ---
 

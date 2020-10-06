@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Инсталляция node.js, bower в centos 6.X
+description: Инсталляция node.js, bower в centos 6.X
+keywords: dev, nodejs, Инсталляция node.js, bower в centos 6.X
 permalink: /dev/nodejs/installation/centos/
 ---
 
 # Инсталляция node.js, bower в centos 6.X
 
 (Материал устарел. Требует обновления.)
-
 
     # curl -sL https://rpm.nodesource.com/setup | bash -
     # yum install -y nodejs npm
@@ -25,7 +26,6 @@ permalink: /dev/nodejs/installation/centos/
     # bower --version
     1.3.12
 
-
 <br/>
 
     // устанавливаю глобально nodemon
@@ -38,7 +38,6 @@ permalink: /dev/nodejs/installation/centos/
 <br/>
 
 // Создание пользователя, который будет работать с проектом
-
 
     # useradd developer
 
@@ -55,13 +54,13 @@ permalink: /dev/nodejs/installation/centos/
     	"directory": "public/vendor/lib"
     }
 
-<br/>  
+<br/>
 
     $ cd /projects/myproject/
 
 <br/>
 
-//  Инициализация проекта. Описание проекта, будет храниться в файле package.json
+// Инициализация проекта. Описание проекта, будет храниться в файле package.json
 
     $ npm init
 
@@ -72,7 +71,7 @@ permalink: /dev/nodejs/installation/centos/
 
 
     // Установить все зависимости проекта, которые описаны в файле package.json
-    $ npm install   
+    $ npm install
 
 <br/>
 
@@ -82,12 +81,11 @@ permalink: /dev/nodejs/installation/centos/
     // twitter bootstrap
     $ bower install --save bootstrap
 
-    // jquery  
+    // jquery
     $ bower install --save jquery
 
     // angular.js
     $ bower install --save angular
-
 
 <br/>
 
@@ -106,7 +104,6 @@ permalink: /dev/nodejs/installation/centos/
     # node -v
     v6.2.2
 
-
 <br/>
 
 ### Обновление NPM на Centos 6.X
@@ -118,8 +115,6 @@ permalink: /dev/nodejs/installation/centos/
 
     # npm -v
     3.10.2
-
-
 
 <!--
 
@@ -142,11 +137,11 @@ permalink: /dev/nodejs/installation/centos/
     fs.readFile('./index.html', function (err, html) {
         if (err) {
             throw err;
-        }       
-        http.createServer(function(request, response) {  
-            response.writeHeader(200, {"Content-Type": "text/html"});  
-            response.write(html);  
-            response.end();  
+        }
+        http.createServer(function(request, response) {
+            response.writeHeader(200, {"Content-Type": "text/html"});
+            response.write(html);
+            response.end();
         }).listen(8000);
     });
 

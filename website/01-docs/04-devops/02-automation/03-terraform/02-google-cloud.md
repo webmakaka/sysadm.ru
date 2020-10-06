@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Terraform Google Cloud
+description: Terraform Google Cloud
+keywords: Terraform Google Cloud
 permalink: /devops/automation/terraform/google-cloud/
 ---
 
@@ -10,14 +12,12 @@ permalink: /devops/automation/terraform/google-cloud/
 04.05.2019
 
 В облаках google
- 
 
 Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing, popular service providers as well as custom in-house solutions.
 
 Configuration files describe to Terraform the components needed to run a single application or your entire datacenter. Terraform generates an execution plan describing what it will do to reach the desired state, and then executes it to build the described infrastructure. As the configuration changes, Terraform is able to determine what changed and create incremental execution plans which can be applied.
 
 The infrastructure Terraform can manage includes low-level components such as compute instances, storage, and networking, as well as high-level components such as DNS entries, SaaS features, etc.
-
 
 Key Features
 
@@ -40,7 +40,6 @@ Complex changesets can be applied to your infrastructure with minimal human inte
 <br/>
 
 ### [Install Terraform](/devops/automation/terraform/install/)
-
 
 <br/>
 
@@ -80,7 +79,6 @@ resource "google_compute_instance" "default" {
     $ terraform apply
     $ terraform show
 
-
 <br/>
 
 ### Deploy Kubernetes Load Balancer Service with Terraform
@@ -100,6 +98,7 @@ gke_username = "admin"
 gke_password = "$(openssl rand -base64 16)"
 EOF
 ```
+
 <br/>
 
     $ terraform init
@@ -133,8 +132,6 @@ EOF
 <br/>
 
 http://35.199.150.232/
-
-
 
 <br/>
 

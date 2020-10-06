@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Node Selector in Kubernetes
+description: Node Selector in Kubernetes
+keywords: devops, linux, kubernetes, Node Selector in Kubernetes
 permalink: /devops/containers/kubernetes/basics/node-selector/
 ---
 

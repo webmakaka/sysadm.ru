@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Настройка виртуальных хостов
+description: Настройка виртуальных хостов
+keywords: Настройка виртуальных хостов
 permalink: /linux/webservers/apache/virtual-hosts/
 ---
 
@@ -9,7 +11,6 @@ permalink: /linux/webservers/apache/virtual-hosts/
     $ cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.backup.$(date +%Y-%m-%d)
 
 <br/>
-
 
     $ mkdir /etc/httpd/conf/websites/_IT/
     $ vi /etc/httpd/conf/httpd.conf
@@ -44,7 +45,6 @@ permalink: /linux/webservers/apache/virtual-hosts/
         </Directory>
 
     </VirtualHost>
-
 
 При ошибке:
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Настройка работы своего сайта Nginx 1.6, PHP
+description: Настройка работы своего сайта Nginx 1.6, PHP
+keywords: Настройка работы своего сайта Nginx 1.6, PHP
 permalink: /linux/webservers/nginx/1.6/debian/jessie/mysite/
 ---
 
@@ -10,7 +12,6 @@ permalink: /linux/webservers/nginx/1.6/debian/jessie/mysite/
 
 Пусть при обращении по url обращается к локальному сайту.  
 Добавляю в hosts.
-
 
     # vi /etc/hosts
 
@@ -50,9 +51,7 @@ permalink: /linux/webservers/nginx/1.6/debian/jessie/mysite/
        }
     }
 
-
 <br/>
-
 
 ### Добавление сайта во включенные
 
@@ -64,7 +63,6 @@ permalink: /linux/webservers/nginx/1.6/debian/jessie/mysite/
 
     # ln -s /etc/nginx/sites-available/sysadm.ru.config
     # service nginx restart
-
 
 <br/>
 
@@ -85,7 +83,6 @@ permalink: /linux/webservers/nginx/1.6/debian/jessie/mysite/
     127.0.0.1 - - [02/Apr/2016:12:09:07 +0000] "GET / HTTP/1.1" 200 43 "-" "curl/7.38.0"
     127.0.0.1 - - [02/Apr/2016:12:10:34 +0000] "GET / HTTP/1.1" 200 43 "-" "curl/7.38.0"
     127.0.0.1 - - [02/Apr/2016:12:10:44 +0000] "GET / HTTP/1.1" 200 37 "-" "curl/7.38.0"
-
 
 <br/>
 

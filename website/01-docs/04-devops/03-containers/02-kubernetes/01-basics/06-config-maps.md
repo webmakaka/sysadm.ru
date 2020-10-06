@@ -1,6 +1,8 @@
 ---
 layout: page
 title: ConfigMaps in Kubernetes
+description: ConfigMaps in Kubernetes
+keywords: devops, linux, kubernetes, ConfigMaps in Kubernetes
 permalink: /devops/containers/kubernetes/basics/config-maps/
 ---
 

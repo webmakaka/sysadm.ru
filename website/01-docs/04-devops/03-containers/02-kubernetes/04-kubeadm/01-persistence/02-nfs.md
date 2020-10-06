@@ -1,6 +1,8 @@
 ---
 layout: page
 title: NFS Persistent Volume in Kubernetes Cluster
+description: NFS Persistent Volume in Kubernetes Cluster
+keywords: devops, linux, kubernetes, NFS Persistent Volume in Kubernetes Cluster
 permalink: /devops/containers/kubernetes/kubeadm/persistence/nfs/
 ---
 

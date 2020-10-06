@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Разворачиваем приложение из видео курса Stephen Grider Docker and Kubernetes The Complete Guide
+description: Разворачиваем приложение из видео курса Stephen Grider Docker and Kubernetes The Complete Guide
+keywords: devops, linux, kubernetes, Разворачиваем приложение из видео курса Stephen Grider Docker and Kubernetes The Complete Guide
 permalink: /devops/containers/kubernetes/kubeadm/grider-multi-pod-app-v2/
 ---
 

@@ -2,7 +2,7 @@
 layout: page
 title: Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
 description: Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox
-keywords: Kubernetes, virtualbox, centos7
+keywords: devops, kubernetes, virtualbox, centos7
 permalink: /devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/
 ---
 
@@ -69,13 +69,11 @@ P.S.
 
 -->
 
-
 <br/>
 
 Если coredns-\* не будут стартовать, обновить файл kube-flannel.yml, скачав его по ссылке с сайта:
 
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
-
 
 <br/>
 
@@ -100,7 +98,6 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
     Client Version: v1.18.1
     Server Version: v1.18.1
 
-
 <br/>
 
     $ kubectl get nodes
@@ -109,18 +106,15 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
     node1.k8s    Ready    <none>   9m12s   v1.18.1
     node2.k8s    Ready    <none>   6m5s    v1.18.1
 
-
 <br/>
 
 ### Получить дополнительную информацию по кластеру
 
     $ kubectl get cs
     NAME                 STATUS    MESSAGE             ERROR
-    controller-manager   Healthy   ok                  
-    scheduler            Healthy   ok                  
-    etcd-0               Healthy   {"health":"true"}   
-
-
+    controller-manager   Healthy   ok
+    scheduler            Healthy   ok
+    etcd-0               Healthy   {"health":"true"}
 
 <br/>
 
@@ -139,14 +133,11 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
     kube-proxy-xk2bf                     1/1     Running   0          156m
     kube-scheduler-master.k8s            1/1     Running   0          161m
 
-
-
 <br/>
 
     $ kubectl cluster-info
     Kubernetes master is running at https://192.168.0.10:6443
     KubeDNS is running at https://192.168.0.10:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-
 
 <br/>
 
@@ -174,4 +165,4 @@ forward . 8.8.8.8:53
 
 <br/>
 
-###  <a href="/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster-error/">Если что-то не так</a>
+### <a href="/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster-error/">Если что-то не так</a>

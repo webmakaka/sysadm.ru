@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Обновление контейнеров (Rolling Updates) в Kubernetes
+description: Обновление контейнеров (Rolling Updates) в Kubernetes
+keywords: devops, linux, kubernetes, Обновление контейнеров (Rolling Updates) в Kubernetes
 permalink: /devops/containers/kubernetes/kubeadm/rolling-updates/
 ---
 

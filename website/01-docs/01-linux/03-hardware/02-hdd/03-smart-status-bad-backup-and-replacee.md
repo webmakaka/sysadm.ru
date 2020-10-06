@@ -1,11 +1,12 @@
 ---
 layout: page
 title: S.M.A.R.T. status bad backup and replace
-permalink: /linux/hardware/hdd/SMART_status_bad_backup_and_replace/
+description: S.M.A.R.T. status bad backup and replace
+keywords: S.M.A.R.T. status bad backup and replace
+permalink: /linux/hardware/hdd/smart-status-bad-backup-and-replace/
 ---
 
 # S.M.A.R.T. status bad backup and replace
-
 
 По содержанию все было понятно.
 Но было непонятно о каком диске идеть речь.
@@ -26,8 +27,6 @@ permalink: /linux/hardware/hdd/SMART_status_bad_backup_and_replace/
     === START OF READ SMART DATA SECTION ===
     SMART overall-health self-assessment test result: PASSED
 
-
-
 <br/>
 
 **Вывод данных с диска с ошибкой:**
@@ -42,7 +41,6 @@ permalink: /linux/hardware/hdd/SMART_status_bad_backup_and_replace/
     Failed Attributes:
     ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
       5 Reallocated_Sector_Ct   0x0033   019   019   036    Pre-fail  Always   FAILING_NOW 3339
-
 
 <br/>
 
@@ -67,8 +65,6 @@ permalink: /linux/hardware/hdd/SMART_status_bad_backup_and_replace/
 <br/>
 
 Перекидываем все содержимое на другой диск, а дальше посмотрим.
-
-
 
 <br/>
 
@@ -100,12 +96,9 @@ permalink: /linux/hardware/hdd/SMART_status_bad_backup_and_replace/
     SMART support is: Available - device has SMART capability.
     SMART support is: Enabled
 
-
 <br/>
 
-
 ### Более подробный вывод, может кому полезно будет
-
 
     # smartctl -a /dev/sde
     smartctl 6.2 2013-07-26 r3841 [x86_64-linux-4.4.0-53-generic] (local build)

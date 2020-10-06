@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Rar в Linux
+description: Rar в Linux
+keywords: linux, Rar в Linux
 permalink: /linux/archives/rar/
 ---
 
@@ -43,8 +45,6 @@ permalink: /linux/archives/rar/
 
     // Извлечь .rar в текущий каталог (Получается каша)
     $ unrar e archiveName.rar
-
-
 
 <br/>
 

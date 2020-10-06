@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция Nginx 1.X сервера на Ubuntu из пакетов
+description: Инсталляция Nginx 1.X сервера на Ubuntu из пакетов
+keywords: Инсталляция Nginx 1.X сервера на Ubuntu из пакетов
 permalink: /linux/webservers/nginx/1.x/ubuntu/installation/
 ---
 

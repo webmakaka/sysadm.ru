@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes
 description: Kubernetes
-keywords: Kubernetes
+keywords: DevOps, Kubernetes
 permalink: /devops/containers/kubernetes/
 ---
 
@@ -20,10 +20,9 @@ k8s = "k" followed by 8 letters followed by "s" (same as i18n = internationaliza
 
 Kubernets он как квантовая механика. Стоит пол года не касаться и уже почти ничего не помнишь. Надо записывать.
 
-
 <br/>
 
-![working with kubernetes](/img/devops/containers/kubernetes/working-with-kubernetes.png "working with kubernetes"){: .center-image }
+![working with kubernetes](/img/devops/containers/kubernetes/working-with-kubernetes.png 'working with kubernetes'){: .center-image }
 
 <br/>
 
@@ -32,7 +31,6 @@ Kubernets он как квантовая механика. Стоит пол г�
 <div align="center">
     <iframe width="853" height="480" src="https://www.youtube.com/embed/YzaYqxW0wGs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 <br/>
 
@@ -65,7 +63,6 @@ http://kubernetes.io/docs/tutorials/
 
 **Kubernetes The Hard Way**  
 https://github.com/kelseyhightower/kubernetes-the-hard-way
-
 
 <br/>
 

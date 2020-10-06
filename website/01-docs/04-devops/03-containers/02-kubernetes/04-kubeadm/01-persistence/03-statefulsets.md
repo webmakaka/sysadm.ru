@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Kubernetes Statefulsets
+description: Kubernetes Statefulsets
+keywords: devops, linux, kubernetes, Kubernetes Statefulsets
 permalink: /devops/containers/kubernetes/kubeadm/persistence/statefulsets/
 ---
 
@@ -16,7 +18,7 @@ https://www.youtube.com/watch?v=r_ZEpPTCcPE&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-![kubernetes Statefulsets](/img/devops/containers/kubernetes/kubeadm/persistence/Statefulsets.png "kubernetes Statefulsets"){: .center-image }
+![kubernetes Statefulsets](/img/devops/containers/kubernetes/kubeadm/persistence/Statefulsets.png 'kubernetes Statefulsets'){: .center-image }
 
 <br/>
 

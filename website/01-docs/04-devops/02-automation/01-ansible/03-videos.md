@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Обучающие видео по работе с Ansible
+description: Обучающие видео по работе с Ansible
+keywords: Обучающие видео по работе с Ansible
 permalink: /devops/automation/ansible/videos/
 ---
 

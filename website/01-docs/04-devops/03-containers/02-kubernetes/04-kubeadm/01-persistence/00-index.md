@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Persistent Volumes и Claims в Kubernetes Cluster
+description: Persistent Volumes и Claims в Kubernetes Cluster
+keywords: devops, linux, kubernetes, Persistent Volumes и Claims в Kubernetes Cluster
 permalink: /devops/containers/kubernetes/kubeadm/persistence/
 ---
 

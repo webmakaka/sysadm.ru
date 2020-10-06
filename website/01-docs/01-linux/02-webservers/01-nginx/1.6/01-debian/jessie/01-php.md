@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Инсталляция PHP и настройка для работы с Nginx 1.6
+description: Инсталляция PHP и настройка для работы с Nginx 1.6
+keywords: Инсталляция PHP и настройка для работы с Nginx 1.6
 permalink: /linux/webservers/nginx/1.6/debian/jessie/php/
 ---
 
 # Инсталляция PHP и настройка для работы с Nginx 1.6
-
 
     # apt-cache search php5
 
@@ -33,22 +34,18 @@ permalink: /linux/webservers/nginx/1.6/debian/jessie/php/
 
 <br/>
 
-
     # rm index.nginx-debian.html
     # vi index.php
 
     <?php phpinfo(); ?>
 
-
 <br/>
 
     # cd /etc/nginx/sites-available/
 
-
 <br/>
 
     # vi default
-
 
 <br/>
 
@@ -67,14 +64,13 @@ permalink: /linux/webservers/nginx/1.6/debian/jessie/php/
          fastcgi_index index.php;
 
          fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-   }
 
+}
 
 <br/>
 
     # service php5-fpm restart
     # service nginx restart
-
 
 <br/>
 

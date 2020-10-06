@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Secrets in Kubernetes
+description: Secrets in Kubernetess
+keywords: devops, linux, kubernetes, Secrets in Kubernetess
 permalink: /devops/containers/kubernetes/basics/secrets/
 ---
 
@@ -24,7 +26,6 @@ https://www.youtube.com/watch?v=ch9YlQZ4xTc&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 ### Secrets
 
-
 <br/>
 
 ### Создать в командной строке
@@ -42,8 +43,6 @@ https://www.youtube.com/watch?v=ch9YlQZ4xTc&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
     $ echo 'bXlwYXNzd29yZA==' | base64 --decode
     mypassword
-
-
 
 <br/>
 
@@ -125,8 +124,6 @@ data:
 <br/>
 
     $ kubectl delete secret secret-demo
-
-
 
 <br/>
 

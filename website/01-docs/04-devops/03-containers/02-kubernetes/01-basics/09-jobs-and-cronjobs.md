@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Jobs & Cronjobs in Kubernetes
+description: Jobs & Cronjobs in Kubernetes
+keywords: devops, linux, kubernetes, Jobs & Cronjobs in Kubernetes
 permalink: /devops/containers/kubernetes/basics/jobs-and-cronjobs/
 ---
 

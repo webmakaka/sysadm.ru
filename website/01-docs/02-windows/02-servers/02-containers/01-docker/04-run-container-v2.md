@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Запустить docker контейнер и выполнить команду npm start
+description: Запустить docker контейнер и выполнить команду npm start
+keywords: Запустить docker контейнер и выполнить команду npm start
 permalink: /windows/servers/containers/docker/run-container-v2/
 ---
 

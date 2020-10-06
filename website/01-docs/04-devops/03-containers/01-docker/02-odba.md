@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Перенос форума в контейнеры Docker
+description: Перенос форума в контейнеры Docker
+keywords: devops, docker, Перенос форума в контейнеры Docker
 permalink: /devops/containers/docker/odba/
 ---
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)
+description: Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)
+keywords: Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)
 permalink: /linux/code/editors/
 ---
 
@@ -99,7 +101,6 @@ Edit --> Preferences --> Editor
 **Быстро найти файл по имени:**
 
 CTRL + T и начать набирать название файла в проекте.
-
 
 <br/>
 

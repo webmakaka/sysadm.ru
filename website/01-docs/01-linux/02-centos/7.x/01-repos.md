@@ -6,10 +6,7 @@ keywords: linux, centos, repositories, epel
 permalink: /linux/centos/7.x/repos/
 ---
 
-<br/>
-
 # Публичные репозитории Centos 7
-
 
 <br/>
 
@@ -29,7 +26,6 @@ enabled=1
 ```
 
 <br/>
-
 
 ### EPEL Repository
 
@@ -66,17 +62,13 @@ enabled=1
 
     # yum localinstall -y --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
 
-
 Подробнее:
 
     https://rpmfusion.org/Configuration/
 
-
 <br/>
 
 **RPMForge умер! Вместо него рекомендуют использовать EPEL**
-
-
 
 <br/>
 
@@ -95,7 +87,6 @@ enabled=1
 
     # yum info vlc
 
-
 <br/>
 
 -- удалить репо
@@ -110,12 +101,10 @@ enabled=1
 
     # yum clean all && yum update
 
-
 <br/>
 
 -- найти из какого репозитория установлен пакет
 
     # find-repos-of-install p7zip
-
 
 https://habrahabr.ru/post/301292/

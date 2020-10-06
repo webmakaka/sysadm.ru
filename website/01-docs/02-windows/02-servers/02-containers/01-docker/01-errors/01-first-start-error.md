@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Ошибки при работе с Docker в Windows - Ошибка при запуске Docker Quick Start Terminal
+description: Ошибки при работе с Docker в Windows - Ошибка при запуске Docker Quick Start Terminal
+keywords: Ошибки при работе с Docker в Windows - Ошибка при запуске Docker Quick Start Terminal
 permalink: /windows/servers/containers/docker/errors/first-start-error/
 ---
 

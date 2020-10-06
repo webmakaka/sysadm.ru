@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Команды для получения информации по оборудованию в linux
+description: Команды для получения информации по оборудованию в linux
+keywords: Команды для получения информации по оборудованию в linux
 permalink: /linux/hardware/info/
 ---
 
@@ -57,19 +59,16 @@ permalink: /linux/hardware/info/
     model		: 23
     model name	: Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz
 
-
 <br/>
 
 ### Версия BIOS
 
     # dmidecode -s bios-version
-    1402   
-
+    1402
 
 <br/>
 
 ### Остальное:
-
 
     # dmidecode -t memory
 
@@ -84,14 +83,12 @@ permalink: /linux/hardware/info/
     connector
     slot
 
-
 <br/>
 
 ### Сетевые интерфейсы:
 
     # yum install -y lshw
     # lshw -class network
-
 
 <br/>
 
@@ -103,13 +100,11 @@ permalink: /linux/hardware/info/
 
     # lshw -class disk -class storage
 
-
 <br/>
 
 ### Видеокарта
 
     /usr/bin/lspci | grep VGA
-
 
 <br/>
 
@@ -120,7 +115,6 @@ permalink: /linux/hardware/info/
 // Видео
 
     #  lshw -c video
-
 
 <br/>
 
@@ -142,18 +136,16 @@ permalink: /linux/hardware/info/
     proc_list[proc "," 1],proc); }}' | sort -n | tail -n 10 | sort -rn \
     | awk '{$1/=1024;printf "%.0fMB\t",$1}{print $2}'
 
-
 <br/>
 
 ### Узнать температуру процессора, материнской платы
 
-
     -- ubuntu like
     # apt-get install -y lm-sensors
-    
+
     -- redhat like
     # yum install lm_sensors
-    
+
     # sensors
 
     atk0110-acpi-0
@@ -174,16 +166,12 @@ permalink: /linux/hardware/info/
 Дополнительно:
 http://help.ubuntu.ru/wiki/lm_sensors
 
-
-
 <br/>
-
 
 ### Данные об операционной системе:
 
     $ cat /proc/version
     Linux version 3.0.0-32-server (buildd@allspice) (gcc version 4.6.1 (Ubuntu/Linaro 4.6.1-9ubuntu3) ) #51-Ubuntu SMP Thu Mar 21 16:09:49 UTC 2013
-
 
 <br/>
 
@@ -194,17 +182,14 @@ http://help.ubuntu.ru/wiki/lm_sensors
     Release:	11.10
     Codename:	oneiric
 
-
 <br/>
 
     $ lspci -k
-
 
 <br/>
 
     $ uname -a
     Linux appserv 3.0.0-32-server #51-Ubuntu SMP Thu Mar 21 16:09:49 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
-
 
 <br/>
 
@@ -212,6 +197,5 @@ Ubuntu
 Какие репозитории подключены
 
     grep -v '^#\|^$' /etc/apt/sources.list{,.d/*.list}
-
 
 http://repogen.simplylinux.ch/

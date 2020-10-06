@@ -198,7 +198,7 @@ http://192.168.0.21/productpage
 
 <br/>
 
-![Istio](/img/devops/containers/kubernetes/service-mesh/istio/pic-01.png "Istio"){: .center-image }
+![Istio](/img/devops/containers/kubernetes/service-mesh/istio/pic-01.png 'Istio'){: .center-image }
 
 <!--
 

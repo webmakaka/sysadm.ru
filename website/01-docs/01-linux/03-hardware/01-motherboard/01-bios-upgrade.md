@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Upgrade BIOS в linux
+description: Upgrade BIOS в linux
+keywords: Upgrade BIOS в linux
 permalink: /linux/hardware/motherboard/bios-upgrade/
 ---
 
@@ -10,7 +12,6 @@ permalink: /linux/hardware/motherboard/bios-upgrade/
 Простого способа прошить, выбрать Azeru или как он там называется не было.
 
 Т.к. у меня на этом компьютере были проблемы с жесткими дисками, я для этого стартовал Ubuntu c флешки.
-
 
 Смотрим какая версия биоса текущая:
 
@@ -36,7 +37,6 @@ permalink: /linux/hardware/motherboard/bios-upgrade/
 // Резервная копия текущего биос
 
     # flashrom --programmer internal -r MYBIOS.ROM
-
 
 // Прошивка
 
@@ -545,11 +545,9 @@ permalink: /linux/hardware/motherboard/bios-upgrade/
     Verifying flash... VERIFIED.
     Restoring PCI config space for 00:01:0 reg 0x6d
 
-
 Далее зашел в биос и сбросил все параметры на значения по умолчанию.
 
 Все прошилось, но мне, к сожалению, это никак не помогло.
-
 
 Supported hardware:  
 https://www.flashrom.org/Supported_hardware

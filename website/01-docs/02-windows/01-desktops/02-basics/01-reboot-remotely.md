@@ -1,10 +1,12 @@
 ---
 layout: page
 title: Перезагрузить / выключить компьютер в командной строке Windows
+description: Перезагрузить / выключить компьютер в командной строке Windows
+keywords: Перезагрузить / выключить компьютер в командной строке Windows
 permalink: /windows/desktops/basics/reboot-remotely/
 ---
 
-### Перезагрузить / выключить компьютер в командной строке Windows
+# Перезагрузить / выключить компьютер в командной строке Windows
 
 Немедленная перезагрузка:
 
@@ -13,7 +15,6 @@ permalink: /windows/desktops/basics/reboot-remotely/
 Немедленное выключение:
 
     shutdown -s -t 0
-
 
 <br/>
 

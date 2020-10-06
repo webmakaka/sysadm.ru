@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Проверка возможности подключения к базе postgresql
+description: Проверка возможности подключения к базе postgresql
+keywords: Проверка возможности подключения к базе postgresql
 permalink: /dev/go/postgresql/
 ---
 

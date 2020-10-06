@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Transcend 8GB USB MP3 Player работает в режиме только для чтения
+description: Transcend 8GB USB MP3 Player работает в режиме только для чтения
+keywords: Transcend 8GB USB MP3 Player работает в режиме только для чтения
 permalink: /linux/hardware/hdd/transcend-usb-flash-read-only/
 ---
-
 
 # Transcend 8GB USB MP3 Player работает в режиме только для чтения
 
@@ -15,7 +16,6 @@ permalink: /linux/hardware/hdd/transcend-usb-flash-read-only/
 Я попробовал в Windows, не получилось.
 
 В Linux уже несколько раз делал. Чтобы в следующий раз, когда такое произойдет не вспоминать команды, пожалуй запишу их здесь.
-
 
 Главное не перепутать диск и не отформатировать коллекцию фильмов.
 
@@ -32,7 +32,6 @@ permalink: /linux/hardware/hdd/transcend-usb-flash-read-only/
 
     # apt-get install -y pv
     # dd if=/dev/zero | pv | dd of=/dev/sde
-
 
 И забивается нулями флешка, часов за 6.
 
@@ -90,7 +89,6 @@ permalink: /linux/hardware/hdd/transcend-usb-flash-read-only/
 
     # mkfs.vfat /dev/sde1
     mkfs.fat 3.0.26 (2014-03-07)
-
 
 Все.  
 Можно пользоваться.

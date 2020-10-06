@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Инсталляция GIT из исходников в Ubuntu
+description: Инсталляция GIT из исходников в Ubuntu
+keywords: Инсталляция GIT из исходников в Ubuntu
 permalink: /dev/git/install/ubuntu/
 ---
 
-
 # Инсталляция GIT из исходников в Ubuntu
-
 
     # apt-get install -y git
     # git --version
@@ -31,7 +31,6 @@ permalink: /dev/git/install/ubuntu/
     # make prefix=/opt/git/2.14 all
     # make prefix=/opt/git/2.14 install
 
-
 <br/>
 
     # /opt/git/2.14/bin/git --version
@@ -41,7 +40,6 @@ permalink: /dev/git/install/ubuntu/
 
     # apt-get remove -y git
 
-
 <br/>
 
     # su - <user_name>
@@ -49,7 +47,6 @@ permalink: /dev/git/install/ubuntu/
 <br/>
 
     # ln -s /opt/git/2.14 /opt/git/current
-
 
 <br/>
 

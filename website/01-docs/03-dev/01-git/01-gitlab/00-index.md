@@ -1,6 +1,8 @@
 ---
 layout: page
 title: GitLab в Linux
+description: GitLab в Linux
+keywords: GitLab в Linux
 permalink: /dev/git/gitlab/
 ---
 

@@ -1,20 +1,19 @@
 ---
 layout: page
-title: Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)
+title: Настройка VPN подключения l2tp на сервере Centos 6.5
+description: Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)
+keywords: Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)
 permalink: /linux/networks/vpn/xl2tp/centos/6/
 ---
 
-
 # Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)
-
 
 <br/>
 <strong>Offtopic:</strong>
 <br/>
 
-
 <p style="padding:10px; border:thin solid black;">
-Нашел в сети статью о настройке <strong><a href="http://habrahabr.ru/post/128599/">VPN-сервер в стиле how-to (pptpd+mysql+radius) на CentOS6</a></strong>. 
+Нашел в сети статью о настройке <strong><a href="http://habrahabr.ru/post/128599/">VPN-сервер в стиле how-to (pptpd+mysql+radius) на CentOS6</a></strong>.
 
 <br/>
 Если я все правильно понимаю, схема приблизительно похожа на ту, что создают у себя провайдеры. <br/>
@@ -23,7 +22,6 @@ permalink: /linux/networks/vpn/xl2tp/centos/6/
 </p>
 
 <br/>
-
 
 <div align="center" style="border-width: 4px; padding: 10px; border-style: inset; border-color: red; ">
 
@@ -34,7 +32,6 @@ permalink: /linux/networks/vpn/xl2tp/centos/6/
 Удалять не буду, может когда еще понадобится настроить для какой-нибудь другой задачи!
 
 </div>
-
 
 <br/>
 
@@ -56,16 +53,13 @@ eth1 - внутренняя сеть
 Для доступа в локальную сеть, необходимо, чтобы интерфейс eth0 получил по DHCP провайдера ip адрес и локальные маршруты.<br/><br/>
 Для доступа в интернет, необходимо авторизоваться на сервере провайдера. Для этого создается виртуальный интерфейс ppp, устанавливается ПО для авторизации.
 
-
 <strong>UPD 1:</strong> появилось ощущение, что слишком много раз приходится сообщать login пользователя в конфигах! (Не странно, т.к. конфиги собирались из уже готовых примеров в интернете.) По хорошему, нужно это исправить.
-
 
 <strong>UPD 2:</strong> Брас (или как он там правильно называется) tp.corbina.net,
 который верой и правдой служил долгие коды (а тот который рекомендовали сотрудники биллайна не работал как нужно) в последнее время (2014 год.) стал работать
 намного хуже. Сидишь копаешься в интернете, бац и разрыв. Бац опять разрыв. Да блять, да каждый вечер разрыв,
 после которого маршрутизатор (речь не про тот, что настраивается в статье) сам не поднимается и его нужно ребутить.
 В общем, чтобы не было ни единого разрыва, нужно правильно выбрать сервер для авторизации. Поменял брас, стало намного лучше.
-
 
 <br/>
 
@@ -83,11 +77,9 @@ BOOTPROTO=dhcp
 ONBOOT=yes</code>
 </pre>
 
-
 <pre class="blue_border">
 <strong class="userinput"># <code>service network restart</code></strong>
 </pre>
-
 
 <pre class="blue_border">
 <strong class="userinput"># <code>host tp.corbina.net</code></strong>
@@ -97,7 +89,6 @@ ONBOOT=yes</code>
 tp.corbina.net has address 85.21.0.255
 </pre>
 
-
 <pre class="blue_border">
 <strong class="userinput"># <code>host tp.internet.beeline.ru</code></strong>
 </pre>
@@ -105,7 +96,6 @@ tp.corbina.net has address 85.21.0.255
 <pre class="gray_border">
 tp.internet.beeline.ru has address 85.21.0.50
 </pre>
-
 
 <br/>
 
@@ -154,11 +144,9 @@ tp.internet.beeline.ru has address 85.21.0.50
 <strong class="userinput"># <code>yum install -y xl2tpd</code></strong>
 </pre>
 
-
 <pre class="blue_border">
 <strong class="userinput"># <code>chkconfig --level 345 xl2tpd on</code></strong>
 </pre>
-
 
 ### Настройка
 
@@ -168,11 +156,9 @@ tp.internet.beeline.ru has address 85.21.0.50
 <strong class="userinput"># <code>cp /etc/xl2tpd/xl2tpd.conf /etc/xl2tpd/xl2tpd.conf.bkp</code></strong>
 </pre>
 
-
 <pre class="blue_border">
 <strong class="userinput"># <code>vi /etc/xl2tpd/xl2tpd.conf</code></strong>
 </pre>
-
 
 <pre class="white_border">
 <code>[global]
@@ -196,7 +182,6 @@ tx bps = 100000000
 flow bit = no</code>
 </pre>
 
-
 <pre class="blue_border">
 <strong class="userinput"># <code>cp /etc/ppp/options.xl2tpd /etc/ppp/options.xl2tpd.bkp</code></strong>
 </pre>
@@ -204,7 +189,6 @@ flow bit = no</code>
 <pre class="blue_border">
 <strong class="userinput"># <code>vi /etc/ppp/options.xl2tpd</code></strong>
 </pre>
-
 
 <pre class="white_border">
 <code>asyncmap 0000
@@ -238,16 +222,13 @@ unit 0</code>
 <strong class="userinput"># <code>vi /etc/ppp/chap-secrets</code></strong>
 </pre>
 
-
 <pre class="white_border">
 <code>имя_пользователя * пароль *</code>
 </pre>
 
-
 <pre class="blue_border">
 <strong class="userinput"># <code>service xl2tpd start</code></strong>
 </pre>
-
 
 **Ждем получения ip адреса (по разному от сразу до 3-х минут).**
 
@@ -259,7 +240,6 @@ unit 0</code>
 <code>Jan  5 21:00:07 gateway pppd[7958]: local  IP address 95.31.31.8
 Jan  5 21:00:07 gateway pppd[7958]: remote IP address 85.21.0.243</code>
 </pre>
-
 
 **Появляется интерфейс ppp0**
 
@@ -277,8 +257,6 @@ Jan  5 21:00:07 gateway pppd[7958]: remote IP address 85.21.0.243</code>
           RX bytes:30 (30.0 b)  TX bytes:39058515021 (36.3 GiB)</code>
 </pre>
 
-
-
 **Таблица маршрутизации выглядит следующим образом**
 
 <pre class="blue_border">
@@ -295,10 +273,6 @@ link-local      *               255.255.0.0     U     1002   0        0 eth0
 link-local      *               255.255.0.0     U     1003   0        0 eth1
 default         10.111.0.1      0.0.0.0         UG    0      0        0 eth0</code>
 </pre>
-
-
-
-
 
 <!--
 
@@ -324,7 +298,6 @@ default         10.111.0.1      0.0.0.0         UG    0      0        0 eth0</co
 
 -->
 
-
 **Получаю данные о присвоенном Default Gateway**
 
 <pre class="blue_border">
@@ -339,7 +312,6 @@ default         10.111.0.1      0.0.0.0         UG    0      0        0 eth0</co
 <code>10.111.0.1</code>
 </pre>
 
-
 **Получаю данные о присвоенном нам сервере авторизации L2TP**
 
 <pre class="blue_border">
@@ -353,7 +325,6 @@ default         10.111.0.1      0.0.0.0         UG    0      0        0 eth0</co
 <pre class="gray_border">
 <code>85.21.0.243</code>
 </pre>
-
 
 <br/><br/>
 
@@ -373,7 +344,6 @@ route add -host 85.21.192.5 gw $eth0_gw
 <strong class="userinput"># <code>route del default</code></strong>
 </pre>
 
-
 <pre class="blue_border">
 <strong class="userinput"># <code>route add default dev ppp0</code></strong>
 </pre>
@@ -382,11 +352,9 @@ route add -host 85.21.192.5 gw $eth0_gw
 <strong class="userinput"># <code>route add -host $vpn_server gw $eth0_gw</code></strong>
 </pre>
 
-
 Вот что получилось. (Поднят ppp интерфейс и по умолчанию пакеты отправляются ему).<br/>
 При этом маршрут до L2TP сервера должен быть прописан. (Иначе, сервер не знает где ему авторизовываться,
 интерфейс ppp падает, все перестает работать).
-
 
 <pre class="blue_border">
 <strong class="userinput"># <code>route -n</code></strong>
@@ -404,9 +372,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 <strong>0.0.0.0         0.0.0.0         0.0.0.0         U     0      0        0 ppp0</strong></code>
 </pre>
 
-
 **Пинг пошел**
-
 
 <pre class="blue_border">
 <strong class="userinput"># <code>ping ya.ru</code></strong>
@@ -422,13 +388,11 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 Остается только настроить <a href="/linux/networks/nat/centos/nat/">NAT</a>.
 <br/><br/>
 
------------------------------------------------------
+---
 
 Моя задача потренироваться была выполнена.<br/>
 Автоматизировать процесс изменения маршрутов в зависимости от того, поднят ли ppp интерфейс не пытался.<br/>
 В списке "почитать" первая ссылка, там все это описывается.<br/>
-
-
 
 <pre>
 
@@ -457,9 +421,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 85.21.192.5 via 10.111.0.1
 </pre>
 
-
 <strong>Если кто напишет, как доделать, исправить, сделать лучше, чтобы было все по феншую, пишите я внесу исправления.</strong>
-
 
 <!--
 
@@ -572,14 +534,9 @@ Jan  5 17:11:04 gateway pppd[1522]: Failed to open /dev/pts/2: No such file or d
 
 -->
 
-
-
 Если на клиенте не все сайты открываются, а на сервере все ок. (Например yandex и google открываются, а множество других нет, хотя и нормально пингуются). Проблемы скорее всего в настройкам MTU.
 
-
 Следует создать правило в iptables
-
-
 
 <pre class="blue_border">
 <strong class="userinput"># <code>iptables -I FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu</code></strong>
@@ -589,7 +546,6 @@ Jan  5 17:11:04 gateway pppd[1522]: Failed to open /dev/pts/2: No such file or d
 
 Подробности здесь:<br/>
 http://www.opennet.ru/base/net/pppoe_mtu.txt.html
-
 
 Возможно, что здесь лучше описано решение точно такой же задачи:<br/>
 http://linuxdata.ru/questions/q48.html
@@ -611,7 +567,6 @@ http://homenet.beeline.ru/index.php?showforum=629<br/>
 http://archlinux.org.ru/forum/topic/7000/<br/>
 http://www.linux.org.ru/forum/general/9315021<br/>
 http://linuxoid.in/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BA_ISP_%22Corbina%22_%28%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%29#.D0.9D.D0.B0.D1.81.D1.82.D1.80.D0.BE.D0.B9.D0.BA.D0.B0_.D1.80.D0.BE.D1.83.D1.82.D0.B8.D0.BD.D0.B3.D0.B0
-
 
 Нужно посмотреть для Centos 7 (пока не смотрел)<br/>
 http://homenet.beeline.ru/index.php?showtopic=320882

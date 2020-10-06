@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Microk8s (в виртуальных машинах)
+description: Microk8s (в виртуальных машинах)
+keywords: devops, linux, kubernetes,  Microk8s (в виртуальных машинах)
 permalink: /devops/containers/kubernetes/microk8s/
 ---
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция GITLAB в Ubuntu 18.04 из пакетов
+description: Инсталляция GITLAB в Ubuntu 18.04 из пакетов
+keywords: Инсталляция GITLAB в Ubuntu 18.04 из пакетов
 permalink: /dev/git/gitlab/install/ubuntu/
 ---
 
@@ -22,11 +24,9 @@ permalink: /dev/git/gitlab/install/ubuntu/
 
 ### Для начала в hosts клиента пропишу
 
-
     # vi /etc/hosts
 
     127.0.0.1 gitlab.local
-
 
 <br/>
 
@@ -37,7 +37,6 @@ permalink: /dev/git/gitlab/install/ubuntu/
     $ git clone https://bitbucket.org/sysadm-ru/vagrant.git
 
     $ cd vagrant/vagrantfiles/ubuntu18/
-
 
 <br/>
 
@@ -50,19 +49,17 @@ permalink: /dev/git/gitlab/install/ubuntu/
 
 <br/>
 
-    $ vi Vagrantfile 
+    $ vi Vagrantfile
 
 Задаю размер памяти >= 4G
 
     v.memory = 4096
-
 
 <br/>
 
     $ vagrant up
 
     $ vagrant ssh
-
 
 <br/>
 
@@ -109,13 +106,11 @@ http://gitlab.local
 Поменять пароль.
 Далее зайти под root с зданным паролем.
 
-
 <br/>
 
 # Gitlab Registry (собственное хранилище docker контейнеров)
 
-### Не заработало!!! При запуске gitlab, он пытается использовать порт от docker registry. И не стартует. 
-
+### Не заработало!!! При запуске gitlab, он пытается использовать порт от docker registry. И не стартует.
 
     # gitlab-ctl tail nginx
 
@@ -162,7 +157,7 @@ HTTP Clone URL:	http://gitlab.local/some-group/some-project.git
 SSH Clone URL:	git@gitlab.local:some-group/some-project.git
 Using LDAP:	no
 Using Omniauth:	yes
-Omniauth Providers: 
+Omniauth Providers:
 
 GitLab Shell
 Version:	9.0.0
@@ -176,10 +171,9 @@ Git:		/opt/gitlab/embedded/bin/git
 
 Жду предложение по решению проблемы. Сам устал искать решение.
 
-
 <br/>
 
-Поднимал на разных хостах gitlab и registry. При добавлении контейнера в registry все время было сообщение no **"container images stored for this project"**. Насколько понял из поисков,чтобы работало, нужно, чтобы gitlab и registry были на одном хосте. 
+Поднимал на разных хостах gitlab и registry. При добавлении контейнера в registry все время было сообщение no **"container images stored for this project"**. Насколько понял из поисков,чтобы работало, нужно, чтобы gitlab и registry были на одном хосте.
 
 <br/>
 
@@ -207,7 +201,6 @@ Git:		/opt/gitlab/embedded/bin/git
 <br/>
 
 **Вариант без security**
-
 
 ```
 registry_external_url 'http://registry.local:5000'
@@ -251,7 +244,6 @@ http://gitlab.local
     // Должен loging проходить.
     # docker login gitlab.local
 
-
 <br/>
 
 Генерятся конфиги. В том числе для nginx:
@@ -259,7 +251,6 @@ http://gitlab.local
     /var/opt/gitlab/nginx/conf/nginx.conf
     /var/opt/gitlab/nginx/conf/gitlab-http.conf
     /var/opt/gitlab/nginx/conf/gitlab-registry.conf
-
 
 <!-- <br/>
 
@@ -274,12 +265,11 @@ http://gitlab.local
 
 <br/>
 
-<!-- 
+<!--
 
     $ docker login registry.gitlab.local
 
 -->
-
 
 <!-- <br/>
 
@@ -302,8 +292,6 @@ registry:
 
     # gitlab-ctl restart -->
 
-
-
 <!-- https://www.digitalocean.com/community/tutorials/how-to-build-docker-images-and-host-a-docker-image-repository-with-gitlab
 
 Создаем runner
@@ -318,8 +306,7 @@ sudo gitlab-runner register -n \
   --docker-privileged
 ``` -->
 
-
-<!-- 
+<!--
 // Запуск registry
 
 https://docs.docker.com/registry/deploying/
@@ -329,7 +316,6 @@ https://docs.docker.com/registry/deploying/
 
 <br/> -->
 
-
 <br/>
 
 ### Пример Gitlab Runner shell executor без использования Docker
@@ -338,14 +324,12 @@ http://gitlab.local
 
 Создаем любой проект. Заходим в него.
 
-
-<!-- https://github.com/do-community/hello_hapi 
+<!-- https://github.com/do-community/hello_hapi
 
 
 https://www.alibabacloud.com/blog/up-and-running-with-gitlab-ci%2Fcd-on-alibaba-cloud_594044
 
 -->
-
 
 <br/>
 
@@ -369,25 +353,25 @@ Settings --> CI/CD --> Runners
     $ sudo gitlab-runner register
 
     Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
-    [http://gitlab.local/][Enter] 
+    [http://gitlab.local/][Enter]
 
     Please enter the gitlab-ci token for this runner:
-    [bCZh-V_zyksxUPipzYoB][Enter] 
+    [bCZh-V_zyksxUPipzYoB][Enter]
 
     Please enter the gitlab-ci description for this runner:
-    [This is gitlab CI/CD tutorial][Enter] 
+    [This is gitlab CI/CD tutorial][Enter]
 
     Please enter the gitlab-ci tags for this runner (comma separated):
-    [stage,qu,build,deploy][Enter] 
+    [stage,qu,build,deploy][Enter]
 
     Whether to run untagged builds [true/false]:
-    [true]: [Enter] 
+    [true]: [Enter]
 
     Whether to lock the Runner to current project [true/false]:
     [true]: [Enter]
 
     Please enter the executor: docker-ssh, virtualbox, docker+machine, docker, shell, ssh, docker-ssh+machine, kubernetes, parallels:
-    [shell][Enter] 
+    [shell][Enter]
 
     Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
 
@@ -409,9 +393,7 @@ $ sudo gitlab-runner register -n \
 
     /etc/gitlab-runner/config.toml
 
-
-
-<!-- 
+<!--
 ```
 sudo gitlab-runner register -n \
   --url http://gitlab.local/ \
@@ -440,10 +422,9 @@ Settings --> CI/CD --> Pipelines --> Run Pipeline
 
 Можно, как вариант, в настройках runner указать галочку:
 
-Run untagged jobs: Indicates whether this runner can pick jobs without tags 
+Run untagged jobs: Indicates whether this runner can pick jobs without tags
 
-
-<!-- 
+<!--
 <br/>
 
 ### c Docker
@@ -459,7 +440,7 @@ $ sudo gitlab-runner register -n \
 ```
 
 
-CI/CD -- Pipelines -- Run 
+CI/CD -- Pipelines -- Run
 
 Run for: CI_CD_Using_SHELL_Executor
 
@@ -467,10 +448,9 @@ PASS -- MyPass --
 
 -->
 
-
 <br/>
 
-**По материалам:**  
+**По материалам:**
 
 <!--
 

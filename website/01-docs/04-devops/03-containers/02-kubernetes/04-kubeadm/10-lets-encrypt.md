@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Setup Lets Encrypt cert-manager in Kubernetes Bare Metal
+description: Setup Lets Encrypt cert-manager in Kubernetes Bare Metal
+keywords: devops, linux, kubernetes, Setup Lets Encrypt cert-manager in Kubernetes Bare Metal
 permalink: /devops/containers/kubernetes/kubeadm/lets-encrypt/
 ---
 
@@ -15,10 +17,9 @@ permalink: /devops/containers/kubernetes/kubeadm/lets-encrypt/
 
 https://www.youtube.com/watch?v=Hwqm1D2EfFU
 
-
 <br/>
 
-![Kubernetes Lets Encrypt](/img/devops/containers/kubernetes/kubeadm/lets-encrypt.png "Kubernetes Lets Encrypt"){: .center-image }
+![Kubernetes Lets Encrypt](/img/devops/containers/kubernetes/kubeadm/lets-encrypt.png 'Kubernetes Lets Encrypt'){: .center-image }
 
 <br/>
 
@@ -30,7 +31,7 @@ https://www.youtube.com/watch?v=Hwqm1D2EfFU
 
 <br/>
 
-Устанавливаем haproxy как <a href="/devops/containers/kubernetes/kubeadm/ingress/haproxy/">здесь</a>. 
+Устанавливаем haproxy как <a href="/devops/containers/kubernetes/kubeadm/ingress/haproxy/">здесь</a>.
 
 Только конфиг нужно подправить:
 
@@ -54,7 +55,7 @@ backend http_back
 
 <br/>
 
-Устанавливаем helm/tiller как <a href="/devops/containers/kubernetes/packaging/heml2/install/">здесь</a>. 
+Устанавливаем helm/tiller как <a href="/devops/containers/kubernetes/packaging/heml2/install/">здесь</a>.
 
 <br/>
 
@@ -70,10 +71,10 @@ http://hub.helm.sh/charts/jetstack/cert-manager
     $ helm repo add jetstack https://charts.jetstack.io
 
     $ helm repo list
-    NAME    	URL                                             
+    NAME    	URL
     stable  	https://kubernetes-charts.storage.googleapis.com
-    local   	http://127.0.0.1:8879/charts                    
-    jetstack	https://charts.jetstack.io             
+    local   	http://127.0.0.1:8879/charts
+    jetstack	https://charts.jetstack.io
 
 
     $ helm install --name cert-manager --namespace cert-manager jetstack/cert-manager
@@ -97,7 +98,6 @@ http://hub.helm.sh/charts/jetstack/cert-manager
     replicaset.apps/cert-manager-cainjector-78bbcdc47c   1         1         1       2m16s
     replicaset.apps/cert-manager-webhook-79d48667bd      1         1         1       2m16s
 
-
 <br/>
 
     $ kubectl get crds
@@ -108,9 +108,7 @@ http://hub.helm.sh/charts/jetstack/cert-manager
     issuers.certmanager.k8s.io          2019-05-13T11:38:53Z
     orders.certmanager.k8s.io           2019-05-13T11:38:53Z
 
-
 <br/>
-
 
 ### Cluster Issuer
 
@@ -167,14 +165,14 @@ https://docs.cert-manager.io/en/latest/tasks/issuers/setup-acme.html#creating-a-
     $ kubectl describe ing ingress-resource
     Name:             ingress-resource
     Namespace:        default
-    Address:          
+    Address:
     Default backend:  default-http-backend:80 (<none>)
     TLS:
       letsencrypt-staging terminates nginx.example.com
     Rules:
       Host               Path  Backends
       ----               ----  --------
-      nginx.example.com  
+      nginx.example.com
                             nginx:80 (10.244.1.5:80)
     Annotations:
       certmanager.k8s.io/cluster-issuer:  letsencrypt-staging

@@ -2,7 +2,7 @@
 layout: page
 title: Инсталляция kubectl ubuntu 18.04
 description: Инсталляция kubectl ubuntu 18.04
-keywords: linux, kubectl, install
+keywords: devops, linux, kubectl, install
 permalink: /devops/containers/kubernetes/install/
 ---
 

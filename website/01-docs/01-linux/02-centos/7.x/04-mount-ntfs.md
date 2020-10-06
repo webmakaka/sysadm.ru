@@ -1,15 +1,14 @@
 ---
 layout: page
 title: Смонтировать NTFS в Centos 7.x
+description: Смонтировать NTFS в Centos 7.x
+keywords: Смонтировать NTFS в Centos 7.x
 permalink: /linux/centos/7.x/mount-ntfs/
 ---
-
-<br/>
 
 # Смонтировать NTFS в Centos 7.x
 
 <br/>
-
 
     # wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 

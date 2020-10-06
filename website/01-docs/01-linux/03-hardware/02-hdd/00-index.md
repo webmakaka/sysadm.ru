@@ -1,17 +1,18 @@
 ---
 layout: page
 title: HDD / SSD и другие блочные устройства в Linux
+description: HDD / SSD и другие блочные устройства в Linux
+keywords: HDD / SSD и другие блочные устройства в Linux
 permalink: /linux/hardware/hdd/
 ---
 
 # HDD / SSD и другие блочные устройства в Linux
 
-
 [Монтирование hdd](/linux/hardware/hdd/mount-disks/)
 
 [Подключаем диск 8TB в Centos 6.X](/linux/hardware/hdd/seagate/8tb/)
 
-[S.M.A.R.T. status bad backup and replace](/linux/hardware/hdd/SMART_status_bad_backup_and_replace/)
+[S.M.A.R.T. status bad backup and replace](/linux/hardware/hdd/smart-status-bad-backup-and-replace/)
 
 [Попытка исключения использования бэд блоков файловой системой в Ubuntu ](/linux/hardware/hdd/bad-blocks/)
 

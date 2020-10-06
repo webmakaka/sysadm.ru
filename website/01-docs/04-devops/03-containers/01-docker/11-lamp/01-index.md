@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Docker Lamp Server
+description: Docker Lamp Server
+keywords: devops, docker, Docker Lamp Server
 permalink: /devops/containers/docker/lamp/
 ---
 
@@ -94,11 +96,11 @@ https://punbb.info/
 
 <br/>
 
-![lamp server inside docker](/img/devops/containers/docker/lamp/docker-lamp-1.png "lamp server inside docker"){: .center-image }
+![lamp server inside docker](/img/devops/containers/docker/lamp/docker-lamp-1.png 'lamp server inside docker'){: .center-image }
 
 <br/>
 
-![lamp server inside docker](/img/devops/containers/docker/lamp/docker-lamp-2.png "lamp server inside docker"){: .center-image }
+![lamp server inside docker](/img/devops/containers/docker/lamp/docker-lamp-2.png 'lamp server inside docker'){: .center-image }
 
 <br/>
 

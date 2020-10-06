@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Создание сервера GIT в centos 6
+description: Создание сервера GIT в centos 6
+keywords: Создание сервера GIT в centos 6
 permalink: /dev/git/git-server/centos/6/ver2/
 ---
 
 # Создание сервера GIT в centos 6
 
 Делаю на 1 виртуальной машите. Исключительно для теста.
-
 
 ### Server
 
@@ -49,13 +50,9 @@ permalink: /dev/git/git-server/centos/6/ver2/
 
     $ git init --bare --shared my-project.git
 
-
-
 <br/>
 
-
 ### Local PC User Dev2:
-
 
     $ su - dev1
 
