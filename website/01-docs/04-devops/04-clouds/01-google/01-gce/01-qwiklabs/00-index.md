@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Лабораторные из qwiklabs
+description: Лабораторные из qwiklabs
+keywords: Лабораторные из qwiklabs
 permalink: /devops/clouds/google/gce/qwiklabs/
 ---
 

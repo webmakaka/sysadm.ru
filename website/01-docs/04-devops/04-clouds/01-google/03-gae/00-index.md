@@ -1,16 +1,16 @@
 ---
 layout: page
 title: Google App Engine (GAE)
+description: Google App Engine (GAE)
+keywords: Google App Engine (GAE)
 permalink: /devops/clouds/google/gae/
 ---
 
 # Google App Engine (GAE)
 
-
 <br/>
 
 ### Пример
-
 
     $ git clone https://github.com/googlecodelabs/user-authentication-with-iap.git
 
@@ -23,5 +23,3 @@ permalink: /devops/clouds/google/gae/
     $ gcloud app browse
 
 Остается в браузере подключиться к приложению.
-
-

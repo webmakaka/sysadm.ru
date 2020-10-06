@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Kubernetes in the Google Cloud
+description: Kubernetes in the Google Cloud
+keywords: Kubernetes in the Google Cloud
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/
 ---
 
@@ -9,7 +11,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/
 <br/>
 
 https://www.qwiklabs.com/quests/45
-
 
 ### [Build a Slack Bot with Node.js on Kubernetes](/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/build-a-slack-bot-with-nodejs-on-kubernetes/)
 
@@ -28,5 +29,3 @@ https://www.qwiklabs.com/quests/45
 ### [Kubeflow End to End (ML)](https://matematika.org/clouds/google/qwiklabs/advanced-ml-infrastructure/kubeflow-end-to-end/)
 
 ### [Deploy a Web App on GKE with HTTPS Redirect using Lets Encrypt](/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/deploy-a-web-app-on-gke-with-https-redirect-using-lets-encrypt/)
-
-

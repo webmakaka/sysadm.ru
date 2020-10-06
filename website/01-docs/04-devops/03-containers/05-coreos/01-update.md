@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Update CoreOS
+description: Update CoreOS
+keywords: Update CoreOS
 permalink: /devops/containers/coreos/update/
 ---
 
 # Update CoreOS
-
 
 // Узнать Какая версия CoreOS установлена
 
@@ -20,9 +21,7 @@ permalink: /devops/containers/coreos/update/
     HOME_URL="https://coreos.com/"
     BUG_REPORT_URL="https://github.com/coreos/bugs/issues"
 
-
 <br/>
-
 
 // Обновление CoreOS
 
@@ -30,11 +29,9 @@ permalink: /devops/containers/coreos/update/
 
     $ update_engine_client -update
 
-
 Компьютер самостоятельно перезагрузился через 5 как закончилось обновление.
 
 <br/>
-
 
     $ cat /etc/os-release
     NAME=CoreOS

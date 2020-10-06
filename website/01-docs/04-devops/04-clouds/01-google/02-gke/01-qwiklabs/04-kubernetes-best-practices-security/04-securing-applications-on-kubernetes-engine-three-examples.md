@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Securing Applications on Kubernetes Engine - Three Examples
+description: Securing Applications on Kubernetes Engine - Three Examples
+keywords: Securing Applications on Kubernetes Engine - Three Examples
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/securing-applications-on-kubernetes-engine-three-examples/
 ---
 
@@ -11,9 +13,7 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security
 Делаю:  
 08.06.2019
 
-
 https://www.qwiklabs.com/focuses/5541?parent=catalog
-
 
 <br/>
 
@@ -23,10 +23,9 @@ In this lab you will learn how Kubernetes Engine security features can be used t
 
 When configuring security, applications should be granted the smallest set of privileges that still allows them to operate correctly. When applications have more privileges than they need, they are more dangerous when compromised. In a Kubernetes cluster, these privileges can be grouped into the following broad levels:
 
-* Host access: describes what permissions an application has on it's host node, outside of its container. This is controlled via Pod and Container security contexts, as well as app armor profiles.
-* Network access: describes what other resources or workloads an application can access via the network. This is controlled with NetworkPolicies.
-* Kubernetes API access: describes which API calls an application is allowed to make against. API access is controlled using the Role Based Access Control (RBAC) model via Role and RoleBinding definitions.
-
+-   Host access: describes what permissions an application has on it's host node, outside of its container. This is controlled via Pod and Container security contexts, as well as app armor profiles.
+-   Network access: describes what other resources or workloads an application can access via the network. This is controlled with NetworkPolicies.
+-   Kubernetes API access: describes which API calls an application is allowed to make against. API access is controlled using the Role Based Access Control (RBAC) model via Role and RoleBinding definitions.
 
 <br/>
 
@@ -43,7 +42,6 @@ Creates a daemonset responsible for loading (installing) the AppArmor profile ap
 Simplified Kubernetes Controller (Pod Labeler)
 The pod-labeler deployment creates a single pod that watches all other pods in the default namespace and periodically labels them. This requires access to the Kubernetes API server, which is configured via RBAC using a ServiceAccount, Role, and RoleMapping.
 
-
 <br/>
 
 ### [Install Terraform](/devops/automation/terraform/install/)
@@ -51,7 +49,6 @@ The pod-labeler deployment creates a single pod that watches all other pods in t
 <br>
 
 ### Lab setup
-
 
     $ gcloud config set compute/region us-central1
     $ gcloud config set compute/zone us-central1-a
@@ -75,7 +72,6 @@ The pod-labeler deployment creates a single pod that watches all other pods in t
 <br/>
 
     $ gcloud compute ssh gke-tutorial-bastion
-
 
 <br/>
 
@@ -195,7 +191,6 @@ You should see that while the pods have been created, they're in a Blocked state
 <br/>
 
 ### Set up AppArmor-loader
-
 
 In order to resolve this, the relevant AppArmor profile must be loaded. Because you don't know on which nodes the nginx pods will be allocated, you must deploy the AppArmor profile to all nodes. The way you'll deploy this, ensuring all nodes are covered, is via a daemonset https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/#what-is-a-daemonset.
 
@@ -362,6 +357,7 @@ spec:
   - from:
     - podSelector: {}
 ```
+
 <br/>
 
     // быстрее удалить
@@ -479,6 +475,5 @@ spec:
     nginx-64c7c7666-flhlt        1/1     Running   0          2m10s   app=nginx,pod-template-hash=64c7c7666,updated=1559958391.61
     nginx-64c7c7666-tf8l8        1/1     Running   0          2m10s   app=nginx,pod-template-hash=64c7c7666,updated=1559958391.62
     pod-labeler-5df9db46-vz6tz   1/1     Running   0          59s     app=pod-labeler,pod-template-hash=5df9db46,updated=1559958391.63
-
 
 And you'll see that the pods have an additional "updated=..." label. You may have to run this command a couple of times to see the new label.

@@ -1,17 +1,17 @@
 ---
 layout: page
 title: Deploy a Web App on GKE with HTTPS Redirect using Lets Encrypt
+description: Deploy a Web App on GKE with HTTPS Redirect using Lets Encrypt
+keywords: Deploy a Web App on GKE with HTTPS Redirect using Lets Encrypt
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/deploy-a-web-app-on-gke-with-https-redirect-using-lets-encrypt/
 ---
 
 # [GSP269] Deploy a Web App on GKE with HTTPS Redirect using Lets Encrypt
 
-
 <br/>
 
 Делаю:  
 31.05.2019
-
 
 https://www.qwiklabs.com/focuses/2771?parent=catalog
 
@@ -26,7 +26,6 @@ https://www.qwiklabs.com/focuses/2771?parent=catalog
 <br/>
 
 ### Configure Cloud Endpoints
-
 
     $ gcloud compute addresses create endpoints-ip --region us-central1
 
@@ -94,7 +93,7 @@ You will deploy an NGINX ingress using Helm to handle our HTTP to HTTPS redirect
 
 ### Deploy "Hello World" App
 
-    $ sed -i "s/\[MY-PROJECT\]/$PROJECT_ID/g" ./configmap.yaml 
+    $ sed -i "s/\[MY-PROJECT\]/$PROJECT_ID/g" ./configmap.yaml
     $ sed -i "s/\[MY-PROJECT\]/$PROJECT_ID/g" ./ingress.yaml
 
 <br/>
@@ -107,7 +106,6 @@ You will deploy an NGINX ingress using Helm to handle our HTTP to HTTPS redirect
     $ kubectl apply -f ingress.yaml
 
     $ echo http://api.endpoints.${PROJECT_ID}.cloud.goog
-
 
 <br/>
 

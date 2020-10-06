@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Setting up a Private Kubernetes Cluster 
+title: Setting up a Private Kubernetes Cluster
+description: Setting up a Private Kubernetes Cluster
+keywords: Setting up a Private Kubernetes Cluster
 permalink: /devops/clouds/google/gke/qwiklabs/setting-up-a-private-kubernetes-cluster/
 ---
 
 # [GSP178] Setting up a Private Kubernetes Cluster
-
 
 <br/>
 
@@ -21,7 +22,6 @@ In the Kubernetes Engine API, address ranges are expressed as Classless Inter-Do
 <br/>
 
 ### Creating a private cluster
-
 
     $ gcloud config set compute/zone us-central1-a
 
@@ -52,7 +52,6 @@ You'll create the private cluster by using the --private-cluster, --master-ipv4-
 
 ### Enabling master authorized networks
 
-
     $ gcloud compute instances create source-instance --zone us-central1-a --scopes 'https://www.googleapis.com/auth/cloud-platform'
 
     $ gcloud compute instances describe source-instance --zone us-central1-a | grep natIP
@@ -72,7 +71,6 @@ You'll create the private cluster by using the --private-cluster, --master-ipv4-
 
     // Enter through the passphrase questions.
     $ gcloud compute ssh source-instance --zone us-central1-a
-
 
 В виртуалке:
 
@@ -104,7 +102,6 @@ $ gcloud components install kubectl
 
 In the previous section Kubernetes Engine automatically created a subnetwork for you. In this section, you'll create your own custom subnetwork, and then create a private cluster. Your subnetwork has a primary address range and two secondary address ranges.
 
-
 Create a subnetwork and secondary ranges:
 
     $ gcloud compute networks subnets create my-subnet \
@@ -116,7 +113,6 @@ Create a subnetwork and secondary ranges:
 
 <br/>
 
-
 Create a private cluster that uses your subnetwork:
 
     $ gcloud beta container clusters create private-cluster2 \
@@ -126,7 +122,6 @@ Create a private cluster that uses your subnetwork:
         --subnetwork my-subnet \
         --services-secondary-range-name my-svc-range \
         --cluster-secondary-range-name my-pod-range
-
 
 <br/>
 
@@ -164,11 +159,10 @@ Authorize your external address range, replacing [MY_EXTERNAL_RANGE] with the CI
           - address: ""
             type: ExternalIP
 
-
 <br/>
 
 At this point, the only IP addresses that have access to the master are the addresses in these ranges:
 
-* The primary range of your subnetwork. This is the range used for nodes. In this example, the range for nodes is 10.0.4.0/22.
+-   The primary range of your subnetwork. This is the range used for nodes. In this example, the range for nodes is 10.0.4.0/22.
 
-* The secondary range of your subnetwork that is used for pods. In this example, the range for pods is 10.4.0.0/14.
+-   The secondary range of your subnetwork that is used for pods. In this example, the range for pods is 10.4.0.0/14.

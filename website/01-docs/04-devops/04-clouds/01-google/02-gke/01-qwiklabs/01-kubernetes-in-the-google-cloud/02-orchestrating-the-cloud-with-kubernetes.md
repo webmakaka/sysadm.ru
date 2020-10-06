@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Orchestrating the Cloud with Kubernetes
+description: Orchestrating the Cloud with Kubernetes
+keywords: Orchestrating the Cloud with Kubernetes
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/orchestrating-the-cloud-with-kubernetes/
 ---
-
 
 # [GSP021] Orchestrating the Cloud with Kubernetes
 
@@ -11,7 +12,7 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/orc
 
 <a href="https://hub.docker.com/r/kelseyhightower/monolith">kelseyhightower/monolith</a> - Monolith includes auth and hello services.
 <a href="https://hub.docker.com/r/kelseyhightower/auth">kelseyhightower/auth</a> - Auth microservice. Generates JWT tokens for authenticated users.
-<a href="https://hub.docker.com/r/kelseyhightower/hello">kelseyhightower/hello</a>  - Hello microservice. Greets authenticated users.
+<a href="https://hub.docker.com/r/kelseyhightower/hello">kelseyhightower/hello</a> - Hello microservice. Greets authenticated users.
 ngnix - Frontend to the auth and hello services.
 
 <br/>
@@ -25,7 +26,6 @@ ngnix - Frontend to the auth and hello services.
     $ kubectl expose deployment nginx --port 80 --type LoadBalancer
 
     $ kubectl get services
-
 
 <br/>
 
@@ -74,7 +74,6 @@ ngnix - Frontend to the auth and hello services.
     $ kubectl exec monolith --stdin --tty -c monolith /bin/sh
     # ping -c 3 google.com
     # exit
-
 
 <br>
 
@@ -139,7 +138,6 @@ ngnix - Frontend to the auth and hello services.
     $ kubectl describe services monolith | grep Endpoints
     Endpoints:                10.4.1.4:443
 
-
 <br/>
 
     $ gcloud compute instances list
@@ -151,7 +149,6 @@ ngnix - Frontend to the auth and hello services.
 <br/>
 
     $ curl -k https://10.4.1.4:31000
-
 
 <br/>
 
@@ -179,5 +176,5 @@ ngnix - Frontend to the auth and hello services.
     NAME       TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)         AGE
     frontend   LoadBalancer   10.7.250.249   35.188.84.62   443:32527/TCP   39s
 
-    $ curl -k https://35.188.84.62 
+    $ curl -k https://35.188.84.62
     {"message":"Hello"}

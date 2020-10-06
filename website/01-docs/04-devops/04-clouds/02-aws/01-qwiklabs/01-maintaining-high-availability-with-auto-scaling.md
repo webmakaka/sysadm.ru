@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Maintaining High Availability with Auto Scaling (for Linux)
+description: Maintaining High Availability with Auto Scaling (for Linux)
+keywords: Maintaining High Availability with Auto Scaling (for Linux)
 permalink: /devops/clouds/aws/qwiklabs/maintaining-high-availability-with-auto-scaling/
 ---
 
 # Maintaining High Availability with Auto Scaling (for Linux)
 
 https://www.qwiklabs.com/focuses/303?parent=catalog
-
 
 <h3>Retrieve your host’s public DNS address</h3>
 <ol start="3">
@@ -17,15 +18,13 @@ https://www.qwiklabs.com/focuses/303?parent=catalog
 <li><p>Copy the <strong>Public DNS (IPv4)</strong> value to your Clipboard. It will look something like <em>ec2-54-84-236-205.compute-1.amazonaws.com</em>.</p></li>
 </ol>
 
-
 <br/>
 
     // $ chmod 600 ~/<Downloads/qwiklab-l33-5018.pem>
-    $ chmod 600 /mnt/dsk1/qwikLABS-L251-6901459.pem 
+    $ chmod 600 /mnt/dsk1/qwikLABS-L251-6901459.pem
 
     // $ ssh -i ~/<Downloads/qwiklab-l33-5018.pem> ec2-user@<public DNS>
     $ ssh -i /mnt/dsk1/qwikLABS-L251-6901459.pem  ec2-user@ec2-34-219-67-4.us-west-2.compute.amazonaws.com
-
 
 <br/>
 
@@ -60,7 +59,7 @@ To find your Access Key and Secret Access Key:
 
     $ cat ~/.aws/credentials
     [default]
-    aws_access_key_id = 
+    aws_access_key_id =
 
 <br/>
 
@@ -70,7 +69,6 @@ To find your Access Key and Secret Access Key:
     $ aws autoscaling create-launch-configuration --image-id ami-f0091d91 --instance-type t2.micro --key-name qwikLABS-L251-6901459 --security-groups qls-6901459-efb8cfd841dcc951-Ec2SecurityGroup-1O5VSN9LPBJ9X --user-data file:///home/ec2-user/as-bootstrap.sh --launch-configuration-name lab-lc
 
     Partial credentials found in shared-credentials-file, missing: aws_secret_access_key
-
 
 <br/>
 
@@ -86,7 +84,7 @@ To find your Access Key and Secret Access Key:
 
 <br/>
 
-    $ cat /home/ec2-user/as-bootstrap.sh 
+    $ cat /home/ec2-user/as-bootstrap.sh
 
 ```
 #!/bin/sh
@@ -105,7 +103,6 @@ mv examplefiles-as/* /var/www/html
 
 In this section, you will create a new Auto Scaling group in your current region and Availability Zone. The group will ensure that there is always one server running by establishing a minimum Auto Scaling group size of one. You will also specify that the maximum number of servers in this group must not exceed five.
 
-
     // $ aws autoscaling create-auto-scaling-group --auto-scaling-group-name lab-as-group --availability-zones <PasteYourAvailabilityZoneHere> --launch-configuration-name lab-lc --load-balancer-names <PasteYourElasticLoadBalancerHere> --max-size 4 --min-size 1
 
 <br/>
@@ -115,7 +112,4 @@ In this section, you will create a new Auto Scaling group in your current region
 
     Partial credentials found in shared-credentials-file, missing: aws_secret_access_key
 
-
 <p><strong>Important</strong> Replace the &lt;PasteYourAvailabilityZoneHere&gt; placeholder from the Connection Details of the Qwiklabs page and also be sure to use the load balancer value returned by the cat ~/lab-details.txt command. This parameter is limited to 35 characters. If you use the fully qualified DNS name of the load balancer, your Auto Scaling group will not function properly.</p>
-
-

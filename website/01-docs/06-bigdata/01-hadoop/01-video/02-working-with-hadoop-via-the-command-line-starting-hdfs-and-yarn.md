@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Working with Hadoop via the Command Line Starting HDFS and Yarn
+description: Working with Hadoop via the Command Line Starting HDFS and Yarn
+keywords: Working with Hadoop via the Command Line Starting HDFS and Yarn
 permalink: /bigdata/hadoop/starting-hdfs-and-yarn/
 ---
 
@@ -16,7 +18,6 @@ permalink: /bigdata/hadoop/starting-hdfs-and-yarn/
 
     $ hadoop version
     Hadoop 2.5.2
-
 
 <br/>
 
@@ -40,9 +41,7 @@ permalink: /bigdata/hadoop/starting-hdfs-and-yarn/
 
     ./start-yarn.sh
 
-
 <br/>
-
 
     $ jps
     2511 DataNode
@@ -51,7 +50,6 @@ permalink: /bigdata/hadoop/starting-hdfs-and-yarn/
     2705 SecondaryNameNode
     2394 NameNode
     3291 Jps
-
 
 <br/>
 
@@ -67,8 +65,6 @@ permalink: /bigdata/hadoop/starting-hdfs-and-yarn/
      3324 JobHistoryServer
      2705 SecondaryNameNode
      2394 NameNode
-
-
 
 В браузере коннекчусь к
 

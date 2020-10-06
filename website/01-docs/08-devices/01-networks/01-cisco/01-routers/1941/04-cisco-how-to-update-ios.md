@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Cisco Router 1941 обновление IOS
+description: Cisco Router 1941 обновление IOS
+keywords: Cisco Router 1941 обновление IOS
 permalink: /devices/cisco/routers/1941/cisco-how-to-update-ios/
 ---
 
@@ -95,7 +97,6 @@ c1900-universalk9-mz.SPA.154-1.T.bin
 
 
 </pre>
-
 
 <br/>
 

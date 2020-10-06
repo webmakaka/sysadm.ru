@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Using Role-based Access Control in Kubernetes Engine
+description: Using Role-based Access Control in Kubernetes Engine
+keywords: Using Role-based Access Control in Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/using-role-based-access-control-in-kubernetes-engine/
 ---
 
@@ -11,12 +13,9 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security
 Делаю:  
 07.06.2019
 
-
 https://www.qwiklabs.com/focuses/5156?parent=catalog
 
-
-![Using Role-based Access Control in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/using-role-based-access-control-in-kubernetes-engine/pic1.png "Using Role-based Access Control in Kubernetes Engine"){: .center-image }
-
+![Using Role-based Access Control in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/using-role-based-access-control-in-kubernetes-engine/pic1.png 'Using Role-based Access Control in Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -25,7 +24,6 @@ https://www.qwiklabs.com/focuses/5156?parent=catalog
 <br>
 
 ### Lab setup
-
 
     $ gcloud config set compute/region us-central1
     $ gcloud config set compute/zone us-central1-a
@@ -48,14 +46,13 @@ While the resources are building, you can check on the progress in the Console b
     gke-tutorial-auditor                              us-central1-a  f1-micro                    10.0.96.4    35.238.157.159  RUNNING
     gke-tutorial-owner                                us-central1-a  f1-micro                    10.0.96.3    35.225.158.60   RUNNING
 
-
 <br>
 
 ### Validation
 
     $ make validate
 
-Navigation menu > Kubernetes Engine > Clusters 
+Navigation menu > Kubernetes Engine > Clusters
 
 Legacy Authorization должна быть выключена.
 
@@ -69,22 +66,20 @@ Legacy Authorization должна быть выключена.
 
 A role named kube-api-ro-xxxxxxxx has been created with the permissions below as part of the Terraform configuration in iam.tf. These permissions are the minimum required for any user that requires access to the Kubernetes API.
 
-* container.apiServices.get
-* container.apiServices.list
-* container.clusters.get
-* container.clusters.getCredentials
+-   container.apiServices.get
+-   container.apiServices.list
+-   container.clusters.get
+-   container.clusters.getCredentials
 
 <br/>
 
 ### Simulating users
 
-
 Three service accounts have been created to act as Test Users:
 
-* admin: has admin permissions over the cluster and all resources
-* owner: has read-write permissions over common cluster resources
-* auditor: has read-only permissions within the dev namespace only
-
+-   admin: has admin permissions over the cluster and all resources
+-   owner: has read-write permissions over common cluster resources
+-   auditor: has read-only permissions within the dev namespace only
 
 <br/>
 
@@ -99,16 +94,15 @@ Three service accounts have been created to act as Test Users:
 
 <br/>
 
-* gke-tutorial-admin: kubectl and gcloud are authenticated as a cluster administrator.
-* gke-tutorial-owner: simulates the 'owner' account
-* gke-tutorial-auditor: simulates the 'auditor'account
+-   gke-tutorial-admin: kubectl and gcloud are authenticated as a cluster administrator.
+-   gke-tutorial-owner: simulates the 'owner' account
+-   gke-tutorial-auditor: simulates the 'auditor'account
 
 <br/>
 
 ### Creating the RBAC rules
 
 Now you'll create the the namespaces, Roles, and RoleBindings by logging into the admin instance and applying the rbac.yaml manifest.
-
 
     $ gcloud compute ssh gke-tutorial-admin
     $ kubectl apply -f ./manifests/rbac.yaml
@@ -209,7 +203,6 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 
 ```
-
 
 <br/>
 
@@ -314,11 +307,9 @@ spec:
     prod        hello-server-c7665786b-hxlg2   1/1     Running   0          33s
     test        hello-server-c7665786b-qbhl7   1/1     Running   0          15s
 
-
 <br/>
 
 ### Viewing resources as the auditor
-
 
 <br/>
 
@@ -336,7 +327,6 @@ The error indicates that you don't have sufficient permissions. The auditor role
     NAME                           READY   STATUS    RESTARTS   AGE
     hello-server-c7665786b-xdcnt   1/1     Running   0          9m11s
 
-
 <br/>
 
     $ kubectl get pods -l app=hello-server --namespace=test
@@ -351,8 +341,6 @@ Finally, verify the that the auditor has read-only access by trying to create an
 
 <br/>
 
-
-
 ## Scenario 2: Assigning API permissions to a cluster application
 
 In this scenario you'll go through the process of deploying an application that requires access to the Kubernetes API as well as configure RBAC rules while troubleshooting some common use cases.
@@ -362,7 +350,6 @@ In this scenario you'll go through the process of deploying an application that 
 ### Deploying the sample application
 
 "Admin" instance
-
 
     $ kubectl apply -f manifests/pod-labeler.yaml
 
@@ -469,7 +456,6 @@ spec:
 
     $ cat manifests/pod-labeler-fix-1.yaml
 
-
 ```
 # Create a custom role in the default namespace that grants access to
 # list pods
@@ -548,13 +534,11 @@ spec:
 
 ```
 
-
     $ kubectl get deployment pod-labeler -oyaml
 
     $ kubectl get pods -l app=pod-labeler
 
 Ошибка
-
 
 <br/>
 
@@ -645,9 +629,7 @@ spec:
 
 ```
 
-
     $ kubectl delete pod -l app=pod-labeler
-
 
 <br/>
 
@@ -657,13 +639,12 @@ spec:
     NAME                         READY   STATUS    RESTARTS   AGE    LABELS
     pod-labeler-5df9db46-frf76   1/1     Running   0          110s   app=pod-labeler,pod-template-hash=5df9db46,updated=1559858449.38
 
-
 **Key take-aways**
 
-* Container and API server logs will be your best source of clues for diagnosing RBAC issues.
+-   Container and API server logs will be your best source of clues for diagnosing RBAC issues.
 
-* Use RoleBindings or ClusterRoleBindings to determine which role is specifying the permissions for a pod.
+-   Use RoleBindings or ClusterRoleBindings to determine which role is specifying the permissions for a pod.
 
-* API server logs can be found in stackdriver under the Kubernetes resource.
+-   API server logs can be found in stackdriver under the Kubernetes resource.
 
-* Not all API calls will be logged to stack driver. Frequent, or verbose payloads are omitted by the Kubernetes' audit policy used in Kubernetes Engine. The exact policy will vary by Kubernetes version, but can be found in the open source codebase.
+-   Not all API calls will be logged to stack driver. Frequent, or verbose payloads are omitted by the Kubernetes' audit policy used in Kubernetes Engine. The exact policy will vary by Kubernetes version, but can be found in the open source codebase.

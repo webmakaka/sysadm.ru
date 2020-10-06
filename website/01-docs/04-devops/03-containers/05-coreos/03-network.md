@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Настройка сетевых адаптеров в CoreOS
+description: Настройка сетевых адаптеров в CoreOS
+keywords: Настройка сетевых адаптеров в CoreOS
 permalink: /devops/containers/coreos/network/
 ---
-
 
 # Настройка сети в CoreOS
 
@@ -21,7 +22,6 @@ permalink: /devops/containers/coreos/network/
     Gateway=192.168.1.1
     DNS=192.168.1.1
 
-
 <br/>
 
     # systemctl restart systemd-networkd
@@ -38,6 +38,3 @@ permalink: /devops/containers/coreos/network/
     PING ya.ru (93.158.134.3) 56(84) bytes of data.
     64 bytes from ya.ru (93.158.134.3): icmp_seq=1 ttl=55 time=4.37 ms
     64 bytes from ya.ru (93.158.134.3): icmp_seq=2 ttl=55 time=2.39 ms
-
-
-

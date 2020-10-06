@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Monitoring with Stackdriver on Kubernetes Engine
+description: Monitoring with Stackdriver on Kubernetes Engine
+keywords: Monitoring with Stackdriver on Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/monitoring-with-stackdriver-on-kubernetes-engine/
 ---
 
@@ -10,7 +12,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/monitori
 
 Делаю:  
 04.05.2019
-
 
 https://www.qwiklabs.com/focuses/5157?parent=catalog
 
@@ -26,8 +27,7 @@ Stackdriver Kubernetes Monitoring is a new Stackdriver feature that more tightly
 
 This lab will create a Kubernetes Engine cluster that has a sample application deployed to it. The logging and metrics for the cluster are loaded into Stackdriver Logging by default. In the tutorial a Stackdriver Monitoring account will be setup to view the metrics captured.
 
-
-![Monitoring with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/monitoring-with-stackdriver-on-kubernetes-engine/pic1.png "Monitoring with Stackdriver on Kubernetes Engine"){: .center-image }
+![Monitoring with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/monitoring-with-stackdriver-on-kubernetes-engine/pic1.png 'Monitoring with Stackdriver on Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -54,15 +54,13 @@ Select the login credentials for this lab, and click Allow.
 
 Copy the code provided and paste it into the Cloud Shell prompt.
 
-
 <br/>
 
 ### Create Stackdriver workspace
- 
+
 GCP --> Monitoring
 
-![Monitoring with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/monitoring-with-stackdriver-on-kubernetes-engine/pic2.png "Monitoring with Stackdriver on Kubernetes Engine"){: .center-image }
-
+![Monitoring with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/monitoring-with-stackdriver-on-kubernetes-engine/pic2.png 'Monitoring with Stackdriver on Kubernetes Engine'){: .center-image }
 
 Нужно дождаться когда прогрузится, прежде чем переходить на следующий шаг. Первый раз не дождался. Была ошибка. (Впрочем может быть не из-за этого)
 
@@ -75,8 +73,8 @@ GCP --> Monitoring
 This will:
 
 1. Read your project & zone configuration to generate a couple config files:
-./terraform/terraform.tfvars for Terraform variables
-./manifests/prometheus-service-sed.yaml for the Prometeus policy to be created in Stackdriver
+   ./terraform/terraform.tfvars for Terraform variables
+   ./manifests/prometheus-service-sed.yaml for the Prometeus policy to be created in Stackdriver
 2. Run terraform init to prepare Terraform to create the infrastructure
 3. Run terraform apply to actually create the infrastructure & Stackdriver alert policy
 
@@ -84,16 +82,13 @@ If you need to override any of the defaults in the Terraform variables file, sim
 
 If no errors are displayed then after a few minutes you should see your Kubernetes Engine cluster in the GCP Console.
 
-
 <br/>
 
     $ make validate
 
 <br/>
 
-
-![Monitoring with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/monitoring-with-stackdriver-on-kubernetes-engine/pic3.png "Monitoring with Stackdriver on Kubernetes Engine"){: .center-image }
-
+![Monitoring with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/monitoring-with-stackdriver-on-kubernetes-engine/pic3.png 'Monitoring with Stackdriver on Kubernetes Engine'){: .center-image }
 
 <br/>
 

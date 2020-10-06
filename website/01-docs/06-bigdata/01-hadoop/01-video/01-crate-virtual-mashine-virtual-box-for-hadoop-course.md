@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Создание виртуальной машины virtual box для курса по hadoop
+description: Создание виртуальной машины virtual box для курса по hadoop
+keywords: Создание виртуальной машины virtual box для курса по hadoop
 permalink: /bigdata/hadoop/crate-virtual-machine-virtual-box-for-hadoop-course/
 ---
-
 
 # Создание виртуальной машины virtual box для курса по hadoop
 
 Настраивается, так как я всегда и настраиваю virtulabox машины. Кому нужно, смотрите подробности в разделе по virtualbox.
-
 
     $ vm=hadoop
 
@@ -96,9 +96,6 @@ permalink: /bigdata/hadoop/crate-virtual-machine-virtual-box-for-hadoop-course/
 
     $ remmina
 
-
-
 Далее установил Guest Additions.
-
 
 Рекомендую сделать точку отката. Сам не сделал, пришлось заново все ставить.

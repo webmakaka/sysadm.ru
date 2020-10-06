@@ -1,16 +1,14 @@
 ---
 layout: page
 title: Starting Units with Fleet
+description: Starting Units with Fleet
+keywords: Starting Units with Fleet
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/starting-units-with-fleet/
 ---
 
-
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster : Starting Units with Fleet
 
-
-
 ### Statring Units with Fleet
-
 
     $ ssh-add ~/.vagrant.d/insecure_private_key
 
@@ -20,25 +18,21 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
 
 <br/>
 
-    $ fleetctl list-machines  
+    $ fleetctl list-machines
     MACHINE		IP		METADATA
     3408f7ab...	172.17.8.103	-
     b2ca4512...	172.17.8.101	-
     db577263...	172.17.8.102	-
-
 
 <br/>
 
     $ fleetctl list-unit-files
     UNIT	HASH	DSTATE	STATE	TARGET
 
-
 <br/>
 
     $ fleetctl list-units
     UNIT	MACHINE	ACTIVE	SUB
-
-
 
 <br/>
 
@@ -57,7 +51,6 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
     ExecStart=/usr/bin/docker run --name hello-fleet busybox /bin/sh -c "while true; do echo Hello Fleet; sleep 1; done"
     ExecStop=-/usr/bin/docker rm -f hello-fleet
 
-
 <br/>
 
     $ fleetctl submit hellofleet.service
@@ -69,7 +62,6 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
     UNIT			HASH	DSTATE		STATE		TARGET
     hellofleet.service	9b0408f	inactive	inactive	-
 
-
 <br/>
 
     $ fleetctl cat hellofleet.service
@@ -79,16 +71,13 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
     $ fleetctl load hellofleet.service
     Unit hellofleet.service loaded on 3408f7ab.../172.17.8.103
 
-
 <br/>
 
-    $ fleetctl list-units     
+    $ fleetctl list-units
     UNIT			MACHINE				ACTIVE		SUB
     hellofleet.service	3408f7ab.../172.17.8.103	inactive	dead
 
-
 <br/>
-
 
     $ fleetctl start hellofleet
     Unit hellofleet.service launched on 3408f7ab.../172.17.8.103
@@ -98,7 +87,6 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
     $ fleetctl list-units
     UNIT			MACHINE				ACTIVE	SUB
     hellofleet.service	3408f7ab.../172.17.8.103	active	running
-
 
 <br/>
 
@@ -131,7 +119,6 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
     Nov 27 01:10:17 core-03 docker[1405]: Hello Fleet
     Nov 27 01:10:18 core-03 docker[1405]: Hello Fleet
 
-
 <br/>
 
     $ fleetctl journal hellofleet
@@ -147,7 +134,6 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
     Nov 27 01:11:38 core-03 docker[1405]: Hello Fleet
     Nov 27 01:11:39 core-03 docker[1405]: Hello Fleet
 
-
 <br/>
 
     $ fleetctl journal -f hellofleet
@@ -156,20 +142,15 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
 
     $ fleetctl stop hellofleet.service
 
-
 <br/>
 
-
-    $ fleetctl list-units     
+    $ fleetctl list-units
     UNIT			MACHINE				ACTIVE	SUB
     hellofleet.service	3408f7ab.../172.17.8.103	failed	failed
-
-
 
 <br/>
 
     $ fleetctl unload hellofleet.service
-
 
 <br/>
 

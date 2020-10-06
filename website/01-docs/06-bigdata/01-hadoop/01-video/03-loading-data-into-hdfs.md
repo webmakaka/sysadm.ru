@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Loading Data into HDFS
+description: Loading Data into HDFS
+keywords: Loading Data into HDFS
 permalink: /bigdata/hadoop/loading-data-into-hdfs/
 ---
 
@@ -13,7 +15,6 @@ user hadoop
 Re-format filesystem in Storage Directory /var/app/hadoop/data/dfs/name [Y]
 
     $ exit
-
 
 user student
 

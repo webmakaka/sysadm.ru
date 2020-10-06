@@ -1,16 +1,16 @@
 ---
 layout: page
 title: Hardware
+description: Hardware
+keywords: Hardware
 permalink: /hardware/
 ---
 
 # HardWare
 
-
 <br/>
 
 ### Процессоры и чипсеты Intel 1-8 поколений
-
 
 <br/>
 
@@ -25,14 +25,11 @@ permalink: /hardware/
     <li><a href="/img/hardware/cpu-chpisets-2.png" rel="nofollow">1366, 2011, 20011-3, 2066</a></li>
 </ul>
 
-
-
 <br/>
 
 <br/>
 
 ### Схемы материнских плат. Где искать. Чем смотреть
-
 
 <br/>
 

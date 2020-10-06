@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Запуск приложения с котиками в GKE (Load Balancer)
+description: Запуск приложения с котиками в GKE (Load Balancer)
+keywords: Запуск приложения с котиками в GKE (Load Balancer)
 permalink: /devops/clouds/google/gke/google/cats-app/
 ---
 
@@ -19,7 +21,6 @@ permalink: /devops/clouds/google/gke/google/cats-app/
 <br/>
 
     $ kubectl apply -f https://raw.githubusercontent.com/webmakaka/cats-app/master/minikube/minikube-cats-app-deployment.yaml
-
 
 <br/>
 

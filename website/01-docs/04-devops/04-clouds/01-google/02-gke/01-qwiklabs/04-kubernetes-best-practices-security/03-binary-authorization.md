@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Binary Authorization
+description: Binary Authorization
+keywords: Binary Authorization
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/binary-authorization/
 ---
 
@@ -10,7 +12,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security
 
 Делаю:  
 08.06.2019
-
 
 https://www.qwiklabs.com/focuses/5154?parent=catalog
 
@@ -22,10 +23,10 @@ Binary Authorization is a GCP managed service that works closely with GKE to enf
 
 The Binary Authorization and Container Analysis APIs are based upon the open source projects Grafeas and Kritis.
 
-* Grafeas defines an API spec for managing metadata about software resources, such as container images, Virtual Machine (VM) images, JAR files, and scripts. You can use Grafeas to define and aggregate information about your project’s components.
+-   Grafeas defines an API spec for managing metadata about software resources, such as container images, Virtual Machine (VM) images, JAR files, and scripts. You can use Grafeas to define and aggregate information about your project’s components.
 
-* Kritis defines an API for ensuring a deployment is prevented unless the artifact (container image) is conformant to central policy and optionally has the necessary attestations present.
-In a simplified container deployment pipeline such as this:
+-   Kritis defines an API for ensuring a deployment is prevented unless the artifact (container image) is conformant to central policy and optionally has the necessary attestations present.
+    In a simplified container deployment pipeline such as this:
 
 <br/>
 
@@ -56,12 +57,12 @@ Security > Binary Authorization > Configure Policy.
 
 Configure Policy
 
-* Change your project default rule to Disallow all images
-* Click down arrow in the Rules section, then click Add Rule.
-* In the Add cluster-specific rule field, enter your location and cluster name in the form location.clustername. e.g. us-central1-a.my-cluster-1 which corresponds to the zone us-central1-a and the cluster name my-cluster-1.
-* Select the default rule of Allow all images for your cluster.
-* Click Add.
-* Click Save Policy.
+-   Change your project default rule to Disallow all images
+-   Click down arrow in the Rules section, then click Add Rule.
+-   In the Add cluster-specific rule field, enter your location and cluster name in the form location.clustername. e.g. us-central1-a.my-cluster-1 which corresponds to the zone us-central1-a and the cluster name my-cluster-1.
+-   Select the default rule of Allow all images for your cluster.
+-   Click Add.
+-   Click Save Policy.
 
 <br/>
 
@@ -114,12 +115,11 @@ Important: Wait at least 30 seconds before proceeding to allow the policy to tak
 
 ### Смотрим логи
 
- Navigation menu > Logging --> Advanced Filter
+Navigation menu > Logging --> Advanced Filter
 
     resource.type="k8s_cluster" protoPayload.status.message="PERMISSION_DENIED"
 
 <br/>
-
 
     $ echo "gcr.io/${PROJECT_ID}/nginx*"
     gcr.io/qwiklabs-gcp-4d48b14a6965df4e/nginx*
@@ -130,7 +130,7 @@ Important: Wait at least 30 seconds before proceeding to allow the policy to tak
 
 Images exempt from deployment rules
 
-Add 
+Add
 
 Выполняем тот же скрипт. Все запустилось.
 
@@ -156,9 +156,7 @@ Add
 
 <br/>
 
-
 // Create the ATTESTATION note payload:
-
 
 ```
 $ cat > ${NOTE_PAYLOAD_PATH} << EOF
@@ -191,7 +189,6 @@ EOF
 
 <br/>
 
-
 ### Creating a PGP Signing Key
 
 Create a new PGP key and export the public PGP key.
@@ -204,14 +201,11 @@ Create a new PGP key and export the public PGP key.
     $ sudo rngd -r /dev/urandom
     $ gpg --quick-generate-key --yes ${ATTESTOR_EMAIL}
 
-
 Extract the public PGP key:
 
     $ gpg --armor --export "${ATTESTOR_EMAIL}" > ${PGP_PUB_KEY}
 
-
 Create the Attestor in the Binary Authorization API:
-
 
     $ gcloud --project="${PROJECT_ID}" \
         beta container binauthz attestors create "${ATTESTOR}" \
@@ -235,7 +229,6 @@ Add the PGP Key to the Attestor:
 <br/>
 
 ### "Signing" a Container Image
-
 
 The preceeding steps only need to be performed once. From this point on, this step is the only step that needs repeating for every new container image.
 
@@ -296,7 +289,6 @@ To change the policy to require attestation, run the following and then copy the
     $ echo "projects/${PROJECT_ID}/attestors/${ATTESTOR}"
     projects/qwiklabs-gcp-4d48b14a6965df4e/attestors/manually-verified
 
-
 <br/>
 
 Binary Authorization policy --> edit policy
@@ -314,7 +306,6 @@ Add by attestor resource ID.
 Submit, and finally Save Policy.
 
 <br/>
-
 
 The default policy should still show Disallow all images, but the cluster-specific rule should be requiring attestation.
 

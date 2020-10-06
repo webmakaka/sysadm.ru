@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Load balancing with HAPROXY & CONFD
+description: Load balancing with HAPROXY & CONFD
+keywords: Load balancing with HAPROXY & CONFD
 permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/load-balancing-with-haproxy-confd/
 ---
 
-
 # Load balancing with HAPROXY & CONFD
-
 
 Имеем:
 
@@ -23,7 +23,6 @@ permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database
     todo@2.service			db577263.../172.17.8.102	active	running
     todo@3.service			b2ca4512.../172.17.8.101	active	running
 
-
 <br/>
 
 Я заменил оригинальные image, своими. Они отличаются только IP адресом.
@@ -31,8 +30,7 @@ permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database
 
 <br/>
 
- **$ vi haproxy.service**
-
+**\$ vi haproxy.service**
 
 <br/>
 
@@ -57,9 +55,9 @@ ExecStartPre=-/usr/bin/docker rm %p-%i
 ExecStartPre=-/usr/bin/etcdctl mkdir /services/todo
 ExecStartPre=-/usr/bin/docker pull marley/coreos-haproxy
 ExecStart=/usr/bin/docker run --name %p-%i \
-      -h %H \
-      -p ${COREOS_PUBLIC_IP}:80:80 \
-      marley/coreos-haproxy
+ -h %H \
+ -p \${COREOS_PUBLIC_IP}:80:80 \
+ marley/coreos-haproxy
 ExecStop=-/usr/bin/docker kill %p-%i
 ExecStop=-/usr/bin/docker rm %p-%i
 
@@ -67,7 +65,6 @@ ExecStop=-/usr/bin/docker rm %p-%i
 Global=true
 
 {% endhighlight %}
-
 
 <br/>
 
@@ -92,7 +89,6 @@ Global=true
     todo@2.service			db577263.../172.17.8.102	active	running
     todo@3.service			b2ca4512.../172.17.8.101	active	running
 
-
 <br/>
 
     $ journalctl -f --lines=50 -u haproxy
@@ -103,9 +99,7 @@ Global=true
     http://172.17.8.102/
     http://172.17.8.103/
 
-
 Все работает!
-
 
 Если нужно остановить и выгрузить все, что касается сервиса:
 

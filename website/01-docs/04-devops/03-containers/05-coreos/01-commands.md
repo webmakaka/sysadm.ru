@@ -1,6 +1,8 @@
 ---
 layout: page
 title: CoreOS команды
+description: CoreOS команды
+keywords: CoreOS команды
 permalink: /devops/containers/coreos/commands/
 ---
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция MySQL в Centos 6.X
+description: нсталляция MySQL в Centos 6.X
+keywords: нсталляция MySQL в Centos 6.X
 permalink: /databases/mysql/installation/
 ---
 
@@ -28,7 +30,6 @@ permalink: /databases/mysql/installation/
 
     // Start MySQL server daemon (mysqld)
     # service mysqld start
-
 
 <br/><br/>
 
@@ -106,7 +107,6 @@ https://repo.mysql.com/yum/
 
     # mysql_secure_installation
 
-
 Логинюсь с этим хреновым паролем.
 
     # mysql -u root -p
@@ -126,8 +126,6 @@ https://repo.mysql.com/yum/
 Ура, я могу подкючаться к mysql как root/root.
 Вышли на победный!
 
-
-
 <br/>
 
 ### Инсталляция более поздних версий базы из пакетов (не из официального репо) (Устарело как гавно мамонта. Кому сейчас нужен mysql 5.5 ???)
@@ -136,7 +134,6 @@ https://repo.mysql.com/yum/
 
     # rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
     # yum install -y mysql55w mysql55w-server
-
 
 Удалить если что:
 

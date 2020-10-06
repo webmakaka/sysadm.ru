@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Hardening Default GKE Cluster Configurations
+description: Hardening Default GKE Cluster Configurations
+keywords: Hardening Default GKE Cluster Configurations
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/hardening-default-gke-cluster-configurations/
 ---
 
@@ -11,13 +13,11 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security
 Делаю:  
 09.06.2019
 
-
 https://www.qwiklabs.com/focuses/5158?parent=catalog
 
 <br>
 
 ### Lab setup
-
 
     $ export MY_ZONE=us-central1-a
     $ gcloud container clusters create simplecluster --zone $MY_ZONE --num-nodes 2
@@ -50,11 +50,11 @@ An internal user with the ability to create or exed into a pod
 
 ### Leverage the Permissions Assigned to this Node Pool's Service Account
 
-
     # curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/scopes
 
     # exit
-<!-- 
+
+<!--
 <br/>
 
 ### Deploy a pod that mounts the host filesystem
@@ -104,7 +104,6 @@ Enable Metadata Concealment - Passing an additional configuration during cluster
 
 Enable and configure PodSecurityPolicy - Configuring this option on a GKE cluster will add the PodSecurityPolicy Admission Controller which can be used to restrict the use of insecure settings during Pod creation. In this demo's case, preventing containers from running as the root user and having the ability to mount the underlying host filesystem.
 
-
 <br/>
 
 ### Deploy a second node pool
@@ -129,14 +128,12 @@ Enable and configure PodSecurityPolicy - Configuring this option on a GKE cluste
 
     $ curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/name
     Доступ получен
-    
-    $ exit
 
+    $ exit
 
 <br/>
 
 ### Deploy PodSecurityPolicy objects
-
 
     $ kubectl create clusterrolebinding clusteradmin --clusterrole=cluster-admin --user="$(gcloud config list account --format 'value(core.account)')"
 
@@ -285,12 +282,10 @@ spec:
     hostPath:
       path: /
 EOF
-``` 
+```
 
 // Так и должно быть
 Error from server (Forbidden): error when creating "STDIN": pods "hostpath" is forbidden: unable to validate against any pod security policy: [spec.volumes[0]: Invalid value: "hostPath": hostPath volumes are not allowed to be used
-
-
 
 <br/>
 
@@ -315,4 +310,3 @@ EOF
 <br/>
 
     $ kubectl get pod hostpath -o=jsonpath="{ .metadata.annotations.kubernetes\.io/psp }"
-

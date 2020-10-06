@@ -1,12 +1,12 @@
 ---
 layout: page
 title: TOOLBOX
+description: TOOLBOX
+keywords: TOOLBOX
 permalink: /devops/containers/coreos/toolbox/
 ---
 
-
 # TOOLBOX
-
 
 ### Fedora - по умолчанию
 

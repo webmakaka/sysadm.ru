@@ -1,6 +1,8 @@
 ---
 layout: page
 title: MySQL - Конфигурирование пользователей после инсталляции
+description: MySQL - Конфигурирование пользователей после инсталляции
+keywords: MySQL - Конфигурирование пользователей после инсталляции
 permalink: /databases/mysql/installation/users/
 ---
 

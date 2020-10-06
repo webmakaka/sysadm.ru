@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Running Dedicated Game Servers in Google Kubernetes Engine
+description: Running Dedicated Game Servers in Google Kubernetes Engine
+keywords: Running Dedicated Game Servers in Google Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/
 ---
 
@@ -11,18 +13,15 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-dedic
 Делаю:  
 27.05.2019
 
-
 https://www.qwiklabs.com/focuses/617?parent=catalog
 
 <br/>
 
-![Running Dedicated Game Servers in Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/app.png "Running Dedicated Game Servers in Google Kubernetes Engine"){: .center-image }
-
+![Running Dedicated Game Servers in Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/app.png 'Running Dedicated Game Servers in Google Kubernetes Engine'){: .center-image }
 
 <br/>
 
 ### Creating a dedicated game server binaries container image
-
 
 Google Cloud Console --> Compute Engine --> VM Instances --> Create
 
@@ -66,7 +65,6 @@ Exit from the SSH session then reconnect by clicking the SSH button for your VM 
 
     $ git clone https://github.com/GoogleCloudPlatform/gke-dedicated-game-server.git
 
-
 <br/>
 
 ## Creating a dedicated game server binaries container image
@@ -74,7 +72,6 @@ Exit from the SSH session then reconnect by clicking the SSH button for your VM 
     $ export PROJECT_ID=$(gcloud config get-value project)
     $ export GCR_REGION=us
     $ printf "$GCR_REGION \n$PROJECT_ID\n"
-
 
 <br/>
 
@@ -87,7 +84,6 @@ Exit from the SSH session then reconnect by clicking the SSH button for your VM 
 <br/>
 
 ### Generate an assets disk
-
 
 In most games binaries are orders of magnitude smaller than assets. Because of this fact, it makes sense to create a container image that only contains binaries; assets can be put on a persistent disk and attached to multiple VM instances that run the DGS container. This architecture saves money and eliminates the need to distribute assets to all VM instances.
 
@@ -106,14 +102,12 @@ Create an OpenArena asset disk by following these steps:
       --image-project debian-cloud \
       --zone ${zone_1}
 
-
 Create and attach an appropriately-sized persistent disk. The persistent disk must be separate from the boot disk, and should be configured to remain undeleted when the virtual machine is removed. Kubernetes persistentVolume functionality works best with persistent disks initialized according to the Compute Engine documentation consisting of a single ext4 file system without a partition table.
 
     $ gcloud compute disks create openarena-assets \
       --size=50GB --type=pd-ssd\
       --description="OpenArena data disk. Mount read-only at /usr/share/games/openarena/baseoa/" \
       --zone ${zone_1}
-
 
 Wait until the openarena-asset-builder instance has fully started up, then attach the persistent disk.
 
@@ -124,15 +118,13 @@ Once attached, you can SSH into the openarena-asset-builder VM instance and form
 
 <br/>
 
-
 ### Connect to the Asset Builder VM Instance using SSH
 
-![Running Dedicated Game Servers in Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/screen-01.png "Running Dedicated Game Servers in Google Kubernetes Engine"){: .center-image }
+![Running Dedicated Game Servers in Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/screen-01.png 'Running Dedicated Game Servers in Google Kubernetes Engine'){: .center-image }
 
 Создали новую виртуальную машину, к которой подключаемся по ssh
 
 Compute Engine --> VM Instances --> openarena-asset-builder --> ssh
-
 
 <br/>
 
@@ -146,7 +138,7 @@ Compute Engine --> VM Instances --> openarena-asset-builder --> ssh
 
     $ sudo mount -o discard,defaults /dev/sdb \
         /usr/share/games/openarena/baseoa/
-    
+
     $ sudo apt-get update
     $ sudo apt-get -y install openarena-server
 
@@ -162,7 +154,6 @@ The SSH console will now stop responding, this is expected.
 The persistent disk is ready to be used as a persistentVolume in Kubernetes and the instance can be safely deleted.
 
 <br/>
-
 
 ### Main VM
 
@@ -233,8 +224,7 @@ Enter Y when prompted to confirm the deletion.
 
     $ gcloud compute instance-groups managed list
 
-Copy the base instance name. (gke-openarena-cluster-default-pool-8eb88aad) 
-
+Copy the base instance name. (gke-openarena-cluster-default-pool-8eb88aad)
 
 <!--
 
@@ -242,8 +232,6 @@ Copy the base instance name. (gke-openarena-cluster-default-pool-8eb88aad)
     $ export GCR_REGION=us
 
 -->
-
-
 
     // Нужно оставить только последний ID.
     $ export GKE_BASE_INSTANCE_NAME=8eb88aad
@@ -266,19 +254,14 @@ Copy the base instance name. (gke-openarena-cluster-default-pool-8eb88aad)
     $ kubectl apply -f k8s/openarena-scaling-manager-deployment.yaml
     $ kubectl get pods
 
-
-
 ## Testing the setup
 
-
 ### Requesting a new DGS instance
-
 
     $ cd ~/gke-dedicated-game-server
 
     $ sed -i "s/\[GCR_REGION\]/$GCR_REGION/g" openarena/k8s/openarena-pod.yaml
     $ sed -i "s/\[PROJECT_ID\]/$PROJECT_ID/g" openarena/k8s/openarena-pod.yaml
-
 
 <br/>
 
@@ -298,7 +281,6 @@ Copy the base instance name. (gke-openarena-cluster-default-pool-8eb88aad)
     NAME                               READY   STATUS    RESTARTS   AGE
     openarena.dgs                      1/1     Running   0          33s
     scaling-manager-798947bd4c-gfm8r   3/3     Running   1          2m4s
-
 
 <br/>
 
@@ -326,18 +308,14 @@ Copy the base instance name. (gke-openarena-cluster-default-pool-8eb88aad)
 // Есть и другие операционки
 https://openarena.fandom.com/wiki/Manual/Install
 
-
     $ sudo apt-get install -y openarena
     $ openarena
 
-
 Multiplayer
 
-![Running Dedicated Game Servers in Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/screen-02.png "Running Dedicated Game Servers in Google Kubernetes Engine"){: .center-image }
-
+![Running Dedicated Game Servers in Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/screen-02.png 'Running Dedicated Game Servers in Google Kubernetes Engine'){: .center-image }
 
 Connect.
-
 
 К серверу подключился, но меня из игры выбрасывало. Наверное нужны особые настройки под железо.
 
@@ -348,7 +326,6 @@ Connect.
     Error from server (BadRequest): a container name must be specified for pod scaling-manager-798947bd4c-gfm8r, choose one of: [scaling-manager node-stopper kubectl-proxy]
 
 Играть не собираюсь, разбираться не стал.
-
 
 <br/>
 
@@ -364,8 +341,7 @@ In your own environment, make sure to set the match length in the server configu
 
 Google Cloud Platform --> Kubernetes Engine --> Workloads.
 
-
-![Running Dedicated Game Servers in Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/screen-03.png "Running Dedicated Game Servers in Google Kubernetes Engine"){: .center-image }
+![Running Dedicated Game Servers in Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-dedicated-game-servers-in-google-kubernetes-engine/screen-03.png 'Running Dedicated Game Servers in Google Kubernetes Engine'){: .center-image }
 
 You will see a sequence of workloads startup called openarena-dgs.s, openarena-dgs.2 up to openarena-dgs.15. Because there are a limited the number of vCPUs in this cluster, many of the test containers will initially show an error state with a status of "Unschedulable". As the startup load in each container reduces, some of the later game server containers will successfully start up. All containers will start after about 10 minutes.
 

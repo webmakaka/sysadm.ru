@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Cloud KMS
+title: Cloud SQL
+description: Cloud SQL
+keywords: Cloud SQL
 permalink: /devops/clouds/google/cloud-sql/
 ---
 
@@ -21,7 +23,7 @@ permalink: /devops/clouds/google/cloud-sql/
     $ gcloud sql instances patch flights --authorized-networks $ADDRESS
 
 
-    // Get the IP address of your Cloud SQL instance 
+    // Get the IP address of your Cloud SQL instance
     $ MYSQLIP=$(gcloud sql instances describe \
     flights --format="value(ipAddresses.ipAddress)")
 
@@ -32,15 +34,14 @@ permalink: /devops/clouds/google/cloud-sql/
     $ mysql --host=$MYSQLIP --user=root \
           --password --verbose < create_table.sql
 
-
 <br/>
 
     $ git clone \
       https://github.com/GoogleCloudPlatform/data-science-on-gcp/
 
     $ cd data-science-on-gcp/03_sqlstudio
- 
-    
+
+
     // Connect to the mysql command line interface:
     $ mysql --host=$MYSQLIP --user=root  --password
 

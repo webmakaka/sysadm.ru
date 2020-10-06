@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine
+description: Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine
+keywords: Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/
 ---
 
@@ -10,10 +12,9 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/con
 
 https://www.qwiklabs.com/focuses/552?parent=catalog
 
-
 <br/>
 
-Делаю!    
+Делаю!  
 03.10.2019
 
 <br/>
@@ -26,13 +27,13 @@ This hands-on lab shows you how to create a continuous delivery pipeline using G
 
 ### Objectives
 
-* Set up your environment by launching Google Cloud Shell, creating a Kubernetes Engine cluster, and configuring your identity and user management scheme.
-* Download a sample application, create a Git repository then upload it to a Google Cloud Source Repository.
-* Deploy Spinnaker to Kubernetes Engine using Helm.
-* Build your Docker image.
-* Create triggers to create Docker images when your application changes.
-* Configure a Spinnaker pipeline to reliably and continuously deploy your application to Kubernetes Engine.
-* Deploy a code change, triggering the pipeline, and watch it roll out to production.
+-   Set up your environment by launching Google Cloud Shell, creating a Kubernetes Engine cluster, and configuring your identity and user management scheme.
+-   Download a sample application, create a Git repository then upload it to a Google Cloud Source Repository.
+-   Deploy Spinnaker to Kubernetes Engine using Helm.
+-   Build your Docker image.
+-   Create triggers to create Docker images when your application changes.
+-   Configure a Spinnaker pipeline to reliably and continuously deploy your application to Kubernetes Engine.
+-   Deploy a code change, triggering the pipeline, and watch it roll out to production.
 
 <br/>
 
@@ -40,7 +41,7 @@ This hands-on lab shows you how to create a continuous delivery pipeline using G
 
 To continuously deliver application updates to your users, you need an automated process that reliably builds, tests, and updates your software. Code changes should automatically flow through a pipeline that includes artifact creation, unit testing, functional testing, and production rollout. In some cases, you want a code update to apply to only a subset of your users, so that it is exercised realistically before you push it to your entire user base. If one of these canary releases proves unsatisfactory, your automated procedure must be able to quickly roll back the software changes.
 
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic1.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic1.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 With Kubernetes Engine and Spinnaker you can create a robust continuous delivery flow that helps to ensure your software is shipped as quickly as it is developed and validated. Although rapid iteration is your end goal, you must first ensure that each application revision passes through a gamut of automated validations before becoming a candidate for production rollout. When a given change has been vetted through automation, you can also validate the application manually and conduct further pre-release testing.
 
@@ -52,9 +53,7 @@ After your team decides the application is ready for production, one of your tea
 
 In this lab you build the continuous delivery pipeline shown in the following diagram.
 
-
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic2.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
-
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic2.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -83,14 +82,12 @@ Upload your startup script to a Cloud Storage bucket by following these steps:
 
 <br/>
 
-
     // Store the service account email address and your current project ID in environment variables for use in later commands:
     $ export SA_EMAIL=$(gcloud iam service-accounts list \
         --filter="displayName:spinnaker-account" \
         --format='value(email)')
 
     $ export PROJECT=$(gcloud info --format='value(config.project)')
-
 
 <br/>
 
@@ -244,12 +241,11 @@ After the command completes, run the following command to set up port forwarding
 
 Note: This command can take several minutes to complete. Be sure to wait until you see that it has succeeded before proceeding.
 
-
 To open the Spinnaker user interface, click the Web Preview icon at the top of the Cloud Shell window and select Preview on port 8080.
 
 The welcome screen opens, followed by the Spinnaker user interface:
 
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic3.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic3.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 Leave this tab open, this is where you'll access the Spinnaker UI.
 
@@ -280,12 +276,11 @@ Set the username and email address for your Git commits in this repository. Repl
 
     $ git push origin master
 
-
 Check that you can see your source code in the Console by clicking Navigation Menu > Source Repositories.
 
 Click sample-app.
 
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic4.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic4.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -293,7 +288,7 @@ Click sample-app.
 
 Configure Container Builder to build and push your Docker images every time you push Git tags to your source repository. Container Builder automatically checks out your source code, builds the Docker image from the Dockerfile in your repository, and pushes that image to Google Cloud Container Registry.
 
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic5.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic5.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 In the Cloud Platform Console, click Navigation menu > Cloud Build > Triggers.
 
@@ -307,7 +302,7 @@ Name:sample-app-tags
 
 Trigger type: Tag
 
-Tag (regex): v.*
+Tag (regex): v.\*
 
 Build configuration: Cloud Build configuration file (yaml or json)
 
@@ -315,8 +310,7 @@ cloudbuild.yaml location: /cloudbuild.yaml
 
 Click Create trigger.
 
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic6.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
-
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic6.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 From now on, whenever you push a Git tag prefixed with the letter "v" to your source code repository, Container Builder automatically builds and pushes your application as a Docker image to Container Registry.
 
@@ -353,14 +347,13 @@ Push your first image using the following steps:
 
 Go to the GCP Console. Still in Cloud Build, click History in the left pane to check that the build has been triggered. If not, verify that the trigger was configured properly in the previous section.
 
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic7.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic7.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 Stay on this page and wait for the build to complete before going on to the next section.
 
 <br/>
 
 ## Configuring your deployment pipelines
-
 
 Now that your images are building automatically, you need to deploy them to the Kubernetes cluster.
 
@@ -380,7 +373,6 @@ spin is a command-line utility for managing Spinnaker's applications and pipelin
 
 ### Create the deployment pipeline
 
-
 Use spin to create an app called sample in Spinnaker. Set the owner email address for the app in Spinnaker:
 
     $ ./spin application save --application-name sample \
@@ -388,18 +380,16 @@ Use spin to create an app called sample in Spinnaker. Set the owner email addres
       --cloud-providers kubernetes \
       --gate-endpoint http://localhost:8080/gate
 
-
 Ignore the Could not read configuration file... output message.
 
 Next, you create the continuous delivery pipeline. In this tutorial, the pipeline is configured to detect when a Docker image with a tag prefixed with "v" has arrived in your Container Registry.
-
 
 From your sample-app source code directory, run the following command to upload an example pipeline to your Spinnaker instance:
 
     $ export PROJECT=$(gcloud info --format='value(config.project)')
 
     $ sed s/PROJECT/$PROJECT/g spinnaker/pipeline-deploy.json > pipeline.json
-    
+
     $ ./spin pipeline save --gate-endpoint http://localhost:8080/gate -f pipeline.json
 
 Ignore the Could not read configuration file... output message.
@@ -412,7 +402,7 @@ The configuration you just created uses notifications of newly tagged images bei
 
 In the Spinnaker UI and click Applications at the top of the screen to see your list of managed applications. sample is your application. If you don't see sample, try refreshing the Spinnaker Applications tab.
 
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic8.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic8.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 Click sample to view your application deployment.
 Click Pipelines at the top to view your applications pipeline status.
@@ -422,7 +412,7 @@ Click Run.
 
 Click Details to see more information about the pipeline's progress.
 
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic9.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic9.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 The progress bar shows the status of the deployment pipeline and its steps.
 
@@ -443,7 +433,7 @@ Scroll down the details pane on the right and copy your app's IP address by clic
 
 Paste the address into a new browser tab to view the production version of the application.
 
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic10.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic10.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 You have now manually triggered the pipeline to build, test, and deploy your application.
 
@@ -467,8 +457,7 @@ In the Console, in Cloud Build > History, wait a couple of minutes for the new b
 
 Return to the Spinnaker UI and click Pipelines to watch the pipeline start to deploy the image. The automatically triggered pipeline will take a few minutes to appear. You may need to refresh your page.
 
-![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic11.png "Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine"){: .center-image }
-
+![Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-pipelines-with-spinnaker-and-kubernetes-engine/pic11.png 'Continuous Delivery Pipelines with Spinnaker and Kubernetes Engine'){: .center-image }
 
 <br/>
 

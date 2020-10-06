@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Heroku clouds
+description: Heroku clouds
+keywords: Heroku clouds
 permalink: /devops/clouds/heroku/
 ---
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: How to Use a Network Policy on Google Kubernetes Engine
+description: How to Use a Network Policy on Google Kubernetes Engine
+keywords: How to Use a Network Policy on Google Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/how-to-use-a-network-policy-on-gke/
 ---
 
@@ -11,11 +13,9 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security
 Делаю:  
 07.06.2019
 
-
 https://www.qwiklabs.com/focuses/5572?parent=catalog
 
 <br/>
-
 
 ### Architecture
 
@@ -29,8 +29,7 @@ Within the cluster, provision three workloads:
 
 <br/>
 
-![How to Use a Network Policy on Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/how-to-use-a-network-policy-on-gke/pic1.png "How to Use a Network Policy on Google Kubernetes Engine"){: .center-image }
-
+![How to Use a Network Policy on Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/how-to-use-a-network-policy-on-gke/pic1.png 'How to Use a Network Policy on Google Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -39,7 +38,6 @@ Within the cluster, provision three workloads:
 <br>
 
 ### Lab setup
-
 
     $ gcloud config set compute/region us-central1
     $ gcloud config set compute/zone us-central1-a
@@ -58,8 +56,7 @@ Within the cluster, provision three workloads:
 
 <br/>
 
-![How to Use a Network Policy on Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/how-to-use-a-network-policy-on-gke/pic2.png "How to Use a Network Policy on Google Kubernetes Engine"){: .center-image }
-
+![How to Use a Network Policy on Google Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/how-to-use-a-network-policy-on-gke/pic2.png 'How to Use a Network Policy on Google Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -87,7 +84,6 @@ Within the cluster, provision three workloads:
     hello-client-blocked-758677d884-mpwgc   1/1     Running   0          13s
     hello-server-c7665786b-xjcgh            1/1     Running   0          13s
 
-
 <br>
 
 ### Confirming default access to the hello server
@@ -96,7 +92,6 @@ Within the cluster, provision three workloads:
     $ kubectl logs --tail 10 -f $(kubectl get pods -oname -l app=not-hello)
 
 Все работает, т.к. мы еще ничего ненастраивали.
-
 
 <br>
 
@@ -115,7 +110,6 @@ Now you will block access to the hello-server pod from all pods that are not lab
 
     $ kubectl delete -f ./manifests/network-policy.yaml
 
-
 You'll now modify the network policy to only allow traffic from a designated namespace, then you'll move the hello-allowed pod into that new namespace.
 
     $ kubectl create -f ./manifests/network-policy-namespaced.yaml
@@ -131,7 +125,6 @@ You'll now modify the network policy to only allow traffic from a designated nam
 Both clients are able to connect successfully because as of Kubernetes 1.10.x NetworkPolicies do not support restricting access to pods within a given namespace. You can whitelist by pod label, namespace label, or whitelist the union (i.e. OR) of both. But you cannot yet whitelist the intersection (i.e. AND) of pod labels and namespace labels.
 
     $ exit
-
 
 <br>
 

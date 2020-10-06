@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Лабораторные из qwiklabs - kuberneters в облаках Google (GKE) 
+title: Лабораторные из qwiklabs - kuberneters в облаках Google (GKE)
+description: Лабораторные из qwiklabs - kuberneters в облаках Google (GKE)
+keywords: Лабораторные из qwiklabs - kuberneters в облаках Google (GKE)
 permalink: /devops/clouds/google/gke/qwiklabs/
 ---
 
-# Лабораторные из qwiklabs - kuberneters в облаках Google (GKE) 
-
+# Лабораторные из qwiklabs - kuberneters в облаках Google (GKE)
 
 <br/>
 
@@ -14,7 +15,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/
 [Setting up a Private Kubernetes Cluster](/devops/clouds/google/gke/qwiklabs/setting-up-a-private-kubernetes-cluster/)
 
 [Deploying Memcached on Kubernetes Engine](/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/)
-
 
 <br/>
 
@@ -27,6 +27,3 @@ permalink: /devops/clouds/google/gke/qwiklabs/
 [Google Kubernetes Engine Best Practices](/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/)
 
 [Google Kubernetes Engine Best Practices: Security](/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/)
-
-
-

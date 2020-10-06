@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Clouds
+description: Clouds
+keywords: Clouds
 permalink: /devops/clouds/
 ---
 

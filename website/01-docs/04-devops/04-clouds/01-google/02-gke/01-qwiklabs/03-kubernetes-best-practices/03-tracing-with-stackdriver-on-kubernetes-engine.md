@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Tracing with Stackdriver on Kubernetes Engine
+description: Tracing with Stackdriver on Kubernetes Engine
+keywords: Tracing with Stackdriver on Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/tracing-with-stackdriver-on-kubernetes-engine/
 ---
 
@@ -11,12 +13,9 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/tracing-
 Делаю:  
 04.05.2019
 
-
 https://www.qwiklabs.com/focuses/5159?parent=catalog
 
-
-![Tracing with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/tracing-with-stackdriver-on-kubernetes-engine/pic1.png "Tracing with Stackdriver on Kubernetes Engine"){: .center-image }
-
+![Tracing with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/tracing-with-stackdriver-on-kubernetes-engine/pic1.png 'Tracing with Stackdriver on Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -66,12 +65,11 @@ GCP --> Monitoring
 
     http://35.226.121.116/?string=CustomMessage
 
-
 <br/>
 
 Stackdriver --> Trace > Trace list.
 
-![Tracing with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/tracing-with-stackdriver-on-kubernetes-engine/pic2.png "Tracing with Stackdriver on Kubernetes Engine"){: .center-image }
+![Tracing with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/tracing-with-stackdriver-on-kubernetes-engine/pic2.png 'Tracing with Stackdriver on Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -87,15 +85,12 @@ Stackdriver --> Trace > Trace list.
     │ Hello World   │ 570470803702509 │            │
     └───────────────┴─────────────────┴────────────┘
 
-
 <br/>
 
 ### Monitoring and Logging
 
 Stackdriver --> Resources > Metrics Explorer --> GKE Container
 
+![Tracing with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/tracing-with-stackdriver-on-kubernetes-engine/pic3.png 'Tracing with Stackdriver on Kubernetes Engine'){: .center-image }
 
-![Tracing with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/tracing-with-stackdriver-on-kubernetes-engine/pic3.png "Tracing with Stackdriver on Kubernetes Engine"){: .center-image }
-
-
-![Tracing with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/tracing-with-stackdriver-on-kubernetes-engine/pic4.png "Tracing with Stackdriver on Kubernetes Engine"){: .center-image }
+![Tracing with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/tracing-with-stackdriver-on-kubernetes-engine/pic4.png 'Tracing with Stackdriver on Kubernetes Engine'){: .center-image }

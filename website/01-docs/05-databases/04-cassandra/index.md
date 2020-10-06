@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Инсталляция Apache Cassandra (DataStax Community Edition) в Centos 6.7
+description: Инсталляция Apache Cassandra (DataStax Community Edition) в Centos 6.7
+keywords: Инсталляция Apache Cassandra (DataStax Community Edition) в Centos 6.7
 permalink: /databases/cassandra/centos/6.7/
 ---
-
 
 # Инсталляция Apache Cassandra (DataStax Community Edition) в Centos 6.7
 
@@ -12,7 +13,6 @@ permalink: /databases/cassandra/centos/6.7/
 http://www.planetcassandra.org/cassandra/
 
 http://docs.datastax.com/en/cassandra/2.1/cassandra/install/installRHEL_t.html
-
 
 <br/>
 
@@ -60,7 +60,6 @@ JDK должно быть установлено.
     $ cqlsh
 
 <br/>
-
 
     cqlsh> create KEYSPACE testdb WITH REPLICATION = {'class':'SimpleStrategy', 'replication_factor':3};
 

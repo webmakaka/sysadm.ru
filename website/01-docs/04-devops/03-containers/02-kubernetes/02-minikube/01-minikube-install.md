@@ -16,10 +16,10 @@ permalink: /devops/containers/kubernetes/minikube/install/
 <br/>
 
 Делаю:  
-13.09.2020
+28.09.2020
 
 ```shell
--- Последняя версия (v1.13.0):
+-- Последняя версия (v1.13.1):
 $ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 
 -- Установка
@@ -30,6 +30,6 @@ $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/mini
 <br/>
 
 ```
-$ minikube version
-minikube version: v1.13.0
+$ minikube version: v1.13.1
+commit: 1fd1f67f338cbab4b3e5a6e4c71c551f522ca138-dirty
 ```

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция Percona XtraDB в centos
+description: Инсталляция Percona XtraDB в centos
+keywords: Инсталляция Percona XtraDB в centos
 permalink: /databases/percona/install/centos/
 ---
 

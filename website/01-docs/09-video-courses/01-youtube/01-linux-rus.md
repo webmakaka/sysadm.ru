@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Видеокурсы для администраторов Linux на русском языке беспалтно
+description: Видеокурсы для администраторов Linux на русском языке беспалтно
+keywords: Видеокурсы для администраторов Linux на русском языке беспалтно
 permalink: /linux/video-courses/youtube/rus/
 ---
 

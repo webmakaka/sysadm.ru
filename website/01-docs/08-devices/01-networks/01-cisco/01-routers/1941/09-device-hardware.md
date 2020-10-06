@@ -1,19 +1,16 @@
 ---
 layout: page
 title: Cisco Router 1941 данные о железе
+description: Cisco Router 1941 данные о железе
+keywords: Cisco Router 1941 данные о железе
 permalink: /devices/cisco/routers/1941/device-hardware/
 ---
-
 
 # Cisco Router 1941 данные о железе
 
     # sh version
 
-
 Объем оперативной памяти - выводится в виде двух чисел: объема процессорной памяти (491520K) и памяти ввода-вывода (32768K). Общий размер RAM равен сумме этих двух (512M);
-
-
-
 
     cisco-router-1941#show file system
     File Systems:
@@ -38,9 +35,6 @@ permalink: /devices/cisco/routers/1941/device-hardware/
                  -             -    opaque     ro   tar:
                  -             -   network     rw   https:
                  -             -    opaque     ro   cns:
-
-
-
 
 <br/>
 

@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Запуск простейшего приложения в GKE
+description: Запуск простейшего приложения в GKE
+keywords: Запуск простейшего приложения в GKE
 permalink: /devops/clouds/google/gke/gke-simple-app/
 ---
 
 # Запуск простейшего приложения в GKE
-
 
 Делаю!  
 21.05.2019
@@ -15,7 +16,6 @@ permalink: /devops/clouds/google/gke/gke-simple-app/
 ### Немного отражает примеры из видео индуса:
 
 https://www.youtube.com/watch?v=5Cb8YrlpuYU&list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0&index=28
-
 
 <br/>
 
@@ -34,7 +34,6 @@ https://www.youtube.com/watch?v=5Cb8YrlpuYU&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 <br/>
 
     $ gcloud compute instances list
-
 
 <br/>
 
@@ -81,8 +80,7 @@ https://www.youtube.com/watch?v=5Cb8YrlpuYU&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 http://35.205.65.201:80
 
-
 <br/>
  
     // Если нужно удалить
-    $ gcloud container clusters delete quick-demo 
+    $ gcloud container clusters delete quick-demo

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Инсталляция GCloud CLI
+description: Инсталляция GCloud CLI
+keywords: Инсталляция GCloud CLI
 permalink: /devops/clouds/google/gcloud-cli/
 ---
 
@@ -14,7 +16,6 @@ http://cloud.google.com/sdk/
 <br/>
 
 ### Ubuntu 18.04
-
 
     $ export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 
@@ -56,13 +57,13 @@ Create Key --> JSON
 <br/>
 
     Pick configuration to use:
-    [1] Re-initialize this configuration [default] with new settings 
+    [1] Re-initialize this configuration [default] with new settings
     [2] Create a new configuration
     Please enter your numeric choice:  1
 
 <br/>
 
-    Choose the account you would like to use to perform operations for 
+    Choose the account you would like to use to perform operations for
     this configuration:
     [1] skd-service-account@qwiklabs-gcp-d8a61bdf964e52e3.iam.gserviceaccount.com
     [2] Log in with a new account
@@ -70,12 +71,11 @@ Create Key --> JSON
 
 <br/>
 
-    Pick cloud project to use: 
+    Pick cloud project to use:
     [1] qwiklabs-gcp-d8a61bdf964e52e3
     [2] Create a new project
-    Please enter numeric choice or text value (must exactly match list 
+    Please enter numeric choice or text value (must exactly match list
     item):  1
-
 
 <br/>
 
@@ -86,7 +86,6 @@ Create Key --> JSON
     $ gcloud info
 
 <br/>
-
 
 ### Некоторые команды
 
@@ -113,9 +112,7 @@ Create Key --> JSON
 
     // Подключиться к cloud-shell (Чтобы не рабать в браузерной командной строке)oud-shell ssh
 
-
-
-<!-- gcloud config configurations delete 
+<!-- gcloud config configurations delete
 
 
 

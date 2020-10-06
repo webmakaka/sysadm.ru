@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Базы Данных
+description: Базы Данных
+keywords: Базы Данных
 permalink: /databases/
 ---
 

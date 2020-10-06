@@ -1,6 +1,8 @@
 ---
 layout: page
 title: CoreOS cloud-config
+description: CoreOS cloud-config
+keywords: CoreOS cloud-config
 permalink: /devops/containers/coreos/cloud-config/
 ---
 

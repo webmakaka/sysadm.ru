@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Запуск приложения в GKE (Load Balancer)
+description: Запуск приложения в GKE (Load Balancer)
+keywords: Запуск приложения в GKE (Load Balancer)
 permalink: /devops/clouds/google/gke/google/golang-app/
 ---
 
 # Запуск приложения в GKE (Load Balancer)
-
 
 <br/>
 
@@ -20,12 +21,11 @@ $ gcloud container clusters create echo-cluster \
 
 <br/>
 
-### Скопировать приложение 
+### Скопировать приложение
 
     $ mkdir project && cd project
     $ gsutil cp gs://qwiklabs-gcp-03-8922069ccfc7/echo-web.tar.gz .
     $ tar -xvzpf echo-web.tar.gz ./
-
 
 <br>
 
@@ -36,7 +36,6 @@ $ gcloud container clusters create echo-cluster \
 
     $ docker build -t gcr.io/${PROJECT_ID}/echo-app:v1 .
     $ gcloud docker -- push gcr.io/${PROJECT_ID}/echo-app:v1
-
 
 <!--
 
@@ -76,11 +75,9 @@ spec:
 
     $ kubectl apply -f echo-web-app-deployment.yaml
 
-
 <br/>
 
     $ kubectl expose deployment echo-web --port 80 --target-port 8000 --type="LoadBalancer"
-
 
 <br/>
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Cisco Router 1941 Basics Commands
+description: Cisco Router 1941 Basics Commands
+keywords: Cisco Router 1941 Basics Commands
 permalink: /devices/cisco/routers/1941/basics-commands/
 ---
 
@@ -18,7 +20,6 @@ permalink: /devices/cisco/routers/1941/basics-commands/
     route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.100
     route del -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.100
 
-
 <pre>
 
 show ip route summary
@@ -32,7 +33,6 @@ Total           3           4           0           300         1920
 
 </pre>
 
-
 <pre>
 
 show ip route 0.0.0.0  
@@ -44,7 +44,6 @@ Routing entry for 0.0.0.0/0, supernet
 
 
 </pre>
-
 
     ip route 0.0.0.0 0.0.0.0 192.168.1.1
 

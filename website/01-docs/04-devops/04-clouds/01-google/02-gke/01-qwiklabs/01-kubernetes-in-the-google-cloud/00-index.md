@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Kubernetes in the Google Cloud
+description: Kubernetes in the Google Cloud
+keywords: Kubernetes in the Google Cloud
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/
 ---
 
@@ -10,7 +12,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/
 
 https://www.qwiklabs.com/quests/29
 
-
 ### [Kubernetes Engine: Qwik Start](/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/qwik-start/)
 
 ### [Orchestrating the Cloud with Kubernetes](/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/orchestrating-the-cloud-with-kubernetes/)
@@ -18,7 +19,6 @@ https://www.qwiklabs.com/quests/29
 ### [Managing Deployments Using Kubernetes Engine](/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/)
 
 ### [Continuous Delivery with Jenkins in Kubernetes Engine](/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/)
-
 
 <br/>
 

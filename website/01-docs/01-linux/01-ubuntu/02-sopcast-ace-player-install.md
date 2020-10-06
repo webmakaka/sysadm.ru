@@ -13,7 +13,7 @@ permalink: /linux/ubuntu/ace-stream-sopcast-player-install/
 ### Инсталляция ACE Stream плеера в Ubuntu 20.04.01 / 16.04 / 18.04.4
 
 Делаю:  
-13.09.2020
+22.09.2020
 
     $ sudo snap install acestreamplayer
     $ acestreamplayer

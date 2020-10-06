@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Improving local file security
+description: Improving local file security
+keywords: Improving local file security
 permalink: /databases/mysql/installation/security/
 ---
 
 # Improving local file security
-
 
     # vi /etc/my.cnf
 

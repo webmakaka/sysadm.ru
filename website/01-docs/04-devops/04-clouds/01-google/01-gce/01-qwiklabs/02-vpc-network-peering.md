@@ -1,11 +1,12 @@
 ---
 layout: page
 title: VPC Network Peering
+description: VPC Network Peering
+keywords: VPC Network Peering
 permalink: /devops/clouds/google/gce/qwiklabs/vpc-network-peering/
 ---
 
 # [GSP007] VPC Network Peering
-
 
 <br/>
 
@@ -18,9 +19,8 @@ https://www.qwiklabs.com/focuses/964?parent=catalog
 
 <br/>
 
-Открываем 2 консоли. 
+Открываем 2 консоли.
 Одна для project1, другая для project2
-
 
 <br/>
 
@@ -41,7 +41,6 @@ https://www.qwiklabs.com/focuses/964?parent=catalog
     // Run the following to enable SSH and icmp
     $ gcloud compute firewall-rules create network-a-fw --network network-a --allow tcp:22,icmp
 
-
 <br/>
 
 **Project-B:**
@@ -57,8 +56,6 @@ https://www.qwiklabs.com/focuses/964?parent=catalog
 
     $ gcloud compute firewall-rules create network-b-fw --network network-b --allow tcp:22,icmp
 
-
-
 <br/>
 
 **Project-A:**
@@ -73,7 +70,6 @@ VPC Network > VPC network peering
 6. Paste in the Project ID of the second project.
 7. Type in the VPC network name of the other network (network-b).
 8. Click Create.
-
 
 <br/>
 
@@ -103,7 +99,6 @@ Project-A
 Navigation Menu > Compute Engine > VM instances.
 
 Copy the INTERNAL_IP for vm-a. (35.193.65.173)
-
 
 Project-B
 

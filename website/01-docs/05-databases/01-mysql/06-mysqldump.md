@@ -1,6 +1,8 @@
 ---
 layout: page
 title: mysqldump
+description: mysqldump
+keywords: Linux, mysqldump
 permalink: /databases/mysql/mysqldump/
 ---
 
@@ -14,13 +16,10 @@ permalink: /databases/mysql/mysqldump/
     // backup с удаленного компьютера
     ssh root@192.168.2.20 /usr/bin/mysqldump --all-databases --user=dba --password=mypass -A > mysql_backup.dmp
 
-
 <br/>
 
 Создание бекапов, траблшутинг и т.д.  
 http://centoshelp.org/servers/database/installing-configuring-mysql-server/
-
-
 
 <br/>
 
@@ -34,9 +33,7 @@ import
 
     mysql -u [username] -p [database_name] < [dumpfilename.sql]
 
-
 Со сжатием:
-
 
 For Export:
 
@@ -45,8 +42,6 @@ For Export:
 For Import:
 
     gunzip < [compressed_filename.sql.gz]  | mysql -u [user] -p[password] [databasename]
-
-
 
 <!--
 

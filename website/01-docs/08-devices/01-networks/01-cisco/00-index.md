@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Cisco Devices
+description: Cisco Devices
+keywords: Cisco Devices
 permalink: /devices/cisco/
 ---
 

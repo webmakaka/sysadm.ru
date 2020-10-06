@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Cloud KMS
+description: Cloud KMS
+keywords: Cloud KMS
 permalink: /devops/clouds/google/cloud-kms/
 ---
 
@@ -21,7 +23,7 @@ Cloud KMS is a cryptographic key management service on GCP. Before using KMS you
 
 <br/>
 
- Navigation menu > IAM & Admin > Cryptogrphic keys
+Navigation menu > IAM & Admin > Cryptogrphic keys
 
 <br/>
 
@@ -48,9 +50,8 @@ Cloud KMS is a cryptographic key management service on GCP. Before using KMS you
     -d "{\"ciphertext\":\"$(cat 1.encrypted)\"}" \
     -H "Authorization:Bearer $(gcloud auth application-default print-access-token)"\
     -H "Content-Type:application/json" \
-  | jq .plaintext -r | base64 -d
 
-
+| jq .plaintext -r | base64 -d
 
 <br/>
 
@@ -67,5 +68,3 @@ Cloud KMS is a cryptographic key management service on GCP. Before using KMS you
     --location global \
     --member user:$USER_EMAIL \
     --role roles/cloudkms.cryptoKeyEncrypterDecrypter
-
-    

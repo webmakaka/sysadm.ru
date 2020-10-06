@@ -1,6 +1,8 @@
 ---
 layout: page
 title: GKE Migrating to Containers
+description: GKE Migrating to Containers
+keywords: GKE Migrating to Containers
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/gke-migrating-to-containers/
 ---
 
@@ -11,14 +13,11 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/gke-migr
 Делаю:  
 30.05.2019
 
-
 https://www.qwiklabs.com/focuses/5155?parent=catalog
-
 
 <br/>
 
 ### [Install Terraform](/devops/automation/terraform/install/)
-
 
 <br/>
 
@@ -38,7 +37,6 @@ https://www.qwiklabs.com/focuses/5155?parent=catalog
 
     // The setup of this demo does take up to 15 minutes
     $ make create
-
 
 The make create command calls the create.sh script which performs following tasks:
 
@@ -74,13 +72,13 @@ The make create command calls the create.sh script which performs following task
 
 ### Validation
 
-  $ make validate
+\$ make validate
 
 <br/>
 
 ### Load Testing
 
-    // IP address and port from your validation output 
+    // IP address and port from your validation output
     // ab -c 120 -t 60  http://<IP_ADDRESS>/prime/10000
     $ ab -c 120 -t 60  http://35.244.253.26/prime/10000
 
@@ -141,4 +139,3 @@ The make create command calls the create.sh script which performs following task
 ### Tear Down
 
     $ make teardown
-

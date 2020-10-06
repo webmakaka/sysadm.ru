@@ -6,9 +6,7 @@ permalink: /devices/cisco/routers/1941/beeline-l2tp-first-problem/
 
 # Cisco Router 1941 проблемы с подключением к сети Билайн по l2tp
 
-
 <br/>
-
 
 <div align="center" style="border-width: 4px; padding: 10px; border-style: inset; border-color: red; ">
 
@@ -18,7 +16,6 @@ permalink: /devices/cisco/routers/1941/beeline-l2tp-first-problem/
 
 <br/>
 
-
 <div align="center" style="border-width: 4px; padding: 10px; border-style: inset; border-color: red; ">
 
 Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее <a href="/devices/cisco/routers/1941/beeline/">здесь</a>
@@ -26,7 +23,6 @@ permalink: /devices/cisco/routers/1941/beeline-l2tp-first-problem/
 </div>
 
 <br/>
-
 
 <pre>
 
@@ -65,6 +61,5 @@ https://supportforums.cisco.com/thread/2036850
 что для моего роутера, необходима лицензия "data license"
 
 </pre>
-
 
 Далее делал, как <a href="/devices/cisco/routers/1941/cisco-licensing/">здесь</a>

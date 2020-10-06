@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Distributed Load Testing Using Kubernetes
+description: Distributed Load Testing Using Kubernetes
+keywords: Distributed Load Testing Using Kubernetes
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/
 ---
 
@@ -10,7 +12,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-l
 
 Делаю:  
 26.05.2019
-
 
 https://www.qwiklabs.com/focuses/967?parent=catalog
 
@@ -26,13 +27,9 @@ For this lab the system under test is a small web application deployed to Google
 Example workloads
 The application that you'll deploy is modeled after the backend service component found in many Internet-of-Things (IoT) deployments. Devices first register with the service and then begin reporting metrics or sensor readings, while also periodically re-registering with the service.
 
-Common backend service component interaction looks like this: 
+Common backend service component interaction looks like this:
 
-
-
-![Distributed Load Testing Using Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/pic1.png "Distributed Load Testing Using Kubernetes"){: .center-image }
-
-
+![Distributed Load Testing Using Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/pic1.png 'Distributed Load Testing Using Kubernetes'){: .center-image }
 
 To model this interaction, you'll use Locust, a distributed, Python-based load testing tool that is capable of distributing requests across multiple target paths. For example, Locust can distribute requests to the /login and /metrics target paths.
 
@@ -40,15 +37,15 @@ The workload is based on the interaction described above and is modeled as a set
 
 **Container-based computing**
 
-* The Locust container image is a Docker image that contains the Locust software.
+-   The Locust container image is a Docker image that contains the Locust software.
 
-* A container cluster consists of at least one cluster master and multiple worker machines called nodes. These master and node machines run the Kubernetes cluster orchestration system. For more information about clusters, see the Kubernetes Engine documentation
+-   A container cluster consists of at least one cluster master and multiple worker machines called nodes. These master and node machines run the Kubernetes cluster orchestration system. For more information about clusters, see the Kubernetes Engine documentation
 
-* A pod is one or more containers deployed together on one host, and the smallest compute unit that can be defined, deployed, and managed. Some pods contain only a single container. For example, in this lab, each of the Locust containers runs in its own pod.
+-   A pod is one or more containers deployed together on one host, and the smallest compute unit that can be defined, deployed, and managed. Some pods contain only a single container. For example, in this lab, each of the Locust containers runs in its own pod.
 
-* A Deployment controller provides declarative updates for Pods and ReplicaSets. This lab has two deployments: one for locust-master and other for locust-worker.
+-   A Deployment controller provides declarative updates for Pods and ReplicaSets. This lab has two deployments: one for locust-master and other for locust-worker.
 
-* Services
+-   Services
 
 A particular pod can disappear for a variety of reasons, including node failure or intentional node disruption for updates or maintenance. This means that the IP address of a pod does not provide a reliable interface for that pod. A more reliable approach would use an abstract representation of that interface that never changes, even if the underlying pod disappears and is replaced by a new pod with a different IP address. A Kubernetes Engine service provides this type of abstract interface by defining a logical set of pods and a policy for accessing them.
 
@@ -56,21 +53,17 @@ In this lab there are several services that represent pods or sets of pods. For 
 
 The following diagram shows the contents of the master and worker nodes:
 
-
-![Distributed Load Testing Using Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/pic2.png "Distributed Load Testing Using Kubernetes"){: .center-image }
-
+![Distributed Load Testing Using Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/pic2.png 'Distributed Load Testing Using Kubernetes'){: .center-image }
 
 **What you'll do**
 
-* Create a system under test i.e. a small web application deployed to Google App Engine.
-* Use Kubernetes Engine to deploy a distributed load testing framework.
-* Create load testing traffic for a simple REST-based API.
-
+-   Create a system under test i.e. a small web application deployed to Google App Engine.
+-   Use Kubernetes Engine to deploy a distributed load testing framework.
+-   Create load testing traffic for a simple REST-based API.
 
 <br/>
 
 ### Set project and zone
-
 
     $ PROJECT=$(gcloud config get-value project)
     $ REGION=us-central1
@@ -98,13 +91,11 @@ The sample-webapp folder contains a simple Google App Engine Python application 
 
     $ gcloud app deploy sample-webapp/app.yaml
 
-Please enter your numeric choice:  13 [Enter]
+Please enter your numeric choice: 13 [Enter]
 
-Do you want to continue (Y/n)?  Y [Enter]
-
+Do you want to continue (Y/n)? Y [Enter]
 
 # Deploy Kubernetes Cluster
-
 
     $ gcloud container clusters create $CLUSTER \
       --zone $ZONE \
@@ -129,19 +120,16 @@ Do you want to continue (Y/n)?  Y [Enter]
 
     $ kubectl get svc locust-master
 
-
 <br/>
 
 ### Load testing workers
-
 
     $ kubectl apply -f kubernetes-config/locust-worker-controller.yaml
     $ kubectl scale deployment/locust-worker --replicas=20
 
     $ kubectl get pods
 
-
-![Distributed Load Testing Using Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/pic3.png "Distributed Load Testing Using Kubernetes"){: .center-image }
+![Distributed Load Testing Using Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/pic3.png 'Distributed Load Testing Using Kubernetes'){: .center-image }
 
 <br/>
 
@@ -151,12 +139,11 @@ Do you want to continue (Y/n)?  Y [Enter]
 
     $ echo http://$EXTERNAL_IP:8089
 
+![Distributed Load Testing Using Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/screen-1.png 'Distributed Load Testing Using Kubernetes'){: .center-image }
 
-![Distributed Load Testing Using Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/screen-1.png "Distributed Load Testing Using Kubernetes"){: .center-image }
- 
 <br/><br/>
 
-![Distributed Load Testing Using Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/screen-2.png "Distributed Load Testing Using Kubernetes"){: .center-image }
+![Distributed Load Testing Using Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/distributed-load-testing-using-kubernetes/screen-2.png 'Distributed Load Testing Using Kubernetes'){: .center-image }
 
 <br/>
 

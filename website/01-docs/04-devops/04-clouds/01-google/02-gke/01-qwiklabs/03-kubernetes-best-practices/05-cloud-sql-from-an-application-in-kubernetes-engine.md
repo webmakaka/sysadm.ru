@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Connect to Cloud SQL from an Application in Kubernetes Engine
+description: Connect to Cloud SQL from an Application in Kubernetes Engine
+keywords: Connect to Cloud SQL from an Application in Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/connect-to-cloud-sql-from-an-application-in-kubernetes-engine/
 ---
 
@@ -11,7 +13,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/connect-
 Делаю:  
 04.05.2019
 
-
 https://www.qwiklabs.com/focuses/5625?parent=catalog
 
 <br/>
@@ -19,7 +20,6 @@ https://www.qwiklabs.com/focuses/5625?parent=catalog
 ### Overview
 
 This lab shows how easy it is to connect an application in Kubernetes Engine to a Cloud SQL instance using the Cloud SQL Proxy container as a sidecar container. You will deploy a Kubernetes Engine cluster and a Cloud SQL Postgres instance and use the Cloud SQL Proxy container to allow communication between them.
-
 
 <br/>
 
@@ -33,16 +33,13 @@ This lab shows how easy it is to connect an application in Kubernetes Engine to 
 
     $ cd gke-cloud-sql-postgres-demo
 
-
 <br/>
 
 ### Deployment
 
-
     // USER_PASSWORD=<password> PG_ADMIN_CONSOLE_PASSWORD=<password> ./create.sh <DATABASE_USER_NAME> <PGADMIN_USERNAME>
 
     $ USER_PASSWORD=mypassword PG_ADMIN_CONSOLE_PASSWORD=mypassword ./create.sh dbadmin pgadmin
-
 
 During the deployment, create.sh will run the following scripts:
 
@@ -74,7 +71,6 @@ Cloud Shell --> Preview on Port 8080
 
 Админка как-то криво установилась. Никаких работающих кнопок нет.
 Пробовал 2 раза. Не заработало.
-
 
 <br/>
 

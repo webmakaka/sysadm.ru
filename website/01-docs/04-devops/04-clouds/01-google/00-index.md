@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Google Cloud Platform (GCP)
+description: Google Cloud Platform (GCP)
+keywords: Google Cloud Platform (GCP)
 permalink: /devops/clouds/google/
 ---
 
@@ -28,6 +30,6 @@ permalink: /devops/clouds/google/
 
 <br/>
 
-* <a href="/devops/clouds/google/gce/">Google Compute Engine (GCE) (Виртуалки)</a>
-* <a href="/devops/clouds/google/gke/">Google Container Engine (GKE) (Kubernetes)</a>
-* <a href="/devops/clouds/google/gae/">Google App Engine (GAE)</a>
+-   <a href="/devops/clouds/google/gce/">Google Compute Engine (GCE) (Виртуалки)</a>
+-   <a href="/devops/clouds/google/gke/">Google Container Engine (GKE) (Kubernetes)</a>
+-   <a href="/devops/clouds/google/gae/">Google App Engine (GAE)</a>

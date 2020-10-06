@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Cisco Switches
+description: Cisco Switches
+keywords: Cisco Switches
 permalink: /devices/cisco/switches/
 ---
 

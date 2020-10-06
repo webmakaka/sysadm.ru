@@ -1,16 +1,16 @@
 ---
 layout: page
 title: PostgreSQL инсталляция в Ubuntu
+description: PostgreSQL
+keywords: Linux, PostgreSQL инсталляция в Ubuntu
 permalink: /databases/postgresql/install/ubuntu/
 ---
 
 # PostgreSQL инсталляция в Ubuntu
 
-Делаю:  
+Делаю:
 
 19.08.2018
-
-
 
 ```
 
@@ -46,7 +46,6 @@ $ PG_VERSION=9.6
     $ psql --version
     PostgreSQL) 10.12 (Ubuntu 10.12-0ubuntu0.18.04.1)
 
-
 <br/>
 
 Можно также запустить pgadmin4 webclient
@@ -59,25 +58,20 @@ $ docker run -e PGADMIN_DEFAULT_EMAIL='username' -e PGADMIN_DEFAULT_PASSWORD='pa
 
 http://localhost:5555/
 
-
 <br/>
 
 ### Подключение к базе
 
-
 # su - postgres
 
-$ psql
+\$ psql
 
 postgres-# \dx
-                 List of installed extensions
-  Name   | Version |   Schema   |         Description          
+List of installed extensions
+Name | Version | Schema | Description  
 ---------+---------+------------+------------------------------
- plpgsql | 1.0     | pg_catalog | PL/pgSQL procedural language
+plpgsql | 1.0 | pg_catalog | PL/pgSQL procedural language
 (1 row)
-
-
-
 
 <br/>
 
@@ -107,12 +101,11 @@ postgres-# \dx
     postgres=#
     postgres=# \dx
                      List of installed extensions
-      Name   | Version |   Schema   |         Description          
+      Name   | Version |   Schema   |         Description
     ---------+---------+------------+------------------------------
      jsonbx  | 1.0     | public     | Jsonb extension
      plpgsql | 1.0     | pg_catalog | PL/pgSQL procedural language
     (2 rows)
-
 
 <br/>
 
@@ -142,7 +135,6 @@ $ psql database_name < database_name_20160527.sql
 
 https://www.netguru.co/tips/how-to-dump-and-restore-postgresql-database
 
-
 <br/>
 
 ЕЩе есть такой вариант:
@@ -154,7 +146,6 @@ $ cd <db_dump_dir>
 -- Данные будут перезаписаны
 $ pg_restore -d <db_name> myDump.dump -j 4 -c
 ```
-
 
 <!--
 <br/>

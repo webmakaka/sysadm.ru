@@ -1,13 +1,12 @@
 ---
 layout: page
 title: Инсталляция MySQL на Centos 7 из пакетов
+description: Инсталляция MySQL на Centos 7 из пакетов
+keywords: Инсталляция MySQL на Centos 7 из пакетов
 permalink: /databases/mysql/installation/centos7/
 ---
 
-
-
 # Инсталляция MySQL на Centos 7 из пакетов
-
 
     # cd /tmp/
     # wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
@@ -52,7 +51,6 @@ permalink: /databases/mysql/installation/centos7/
 
     skip-grant-tables
 
-
 <br/>
 
     # systemctl start mysqld
@@ -61,12 +59,10 @@ permalink: /databases/mysql/installation/centos7/
 
     # mysql -u root
 
-
 <br/>
 
     flush privileges;
     SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root');
-
 
 <br/>
 
@@ -88,14 +84,11 @@ permalink: /databases/mysql/installation/centos7/
 
     Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-
 <br/><br/>
 
 Может есть вариант попроще? раньше же такого делать не приходилось.
 
-
 <br/><br/>
-
 
     mysql> SHOW VARIABLES LIKE 'validate_password%';
     +--------------------------------------+--------+

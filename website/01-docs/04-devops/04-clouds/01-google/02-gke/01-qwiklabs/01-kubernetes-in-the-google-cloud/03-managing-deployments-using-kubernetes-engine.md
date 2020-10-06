@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Managing Deployments Using Kubernetes Engine
+description: Managing Deployments Using Kubernetes Engine
+keywords: Managing Deployments Using Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/
 ---
 
@@ -13,7 +15,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/man
     $ cd orchestrate-with-kubernetes/kubernetes
 
     $ gcloud container clusters create bootcamp --num-nodes 5 --scopes "https://www.googleapis.com/auth/projecthosting,storage-rw"
-
 
 <br/>
 
@@ -50,7 +51,6 @@ containers:
     $ curl -ks https://`kubectl get svc frontend -o=jsonpath="{.status.loadBalancer.ingress[0].ip}"`
     {"message":"Hello"}
 
-
 <br/>
 
 **Scale a Deployment**
@@ -72,8 +72,7 @@ containers:
 
 **Rolling update**
 
-![Managing Deployments Using Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/pic1.png "Managing Deployments Using Kubernetes Engine"){: .center-image }
-
+![Managing Deployments Using Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/pic1.png 'Managing Deployments Using Kubernetes Engine'){: .center-image }
 
     $ kubectl edit deployment hello
 
@@ -116,7 +115,6 @@ containers:
     hello-677685c76-tj25x           kelseyhightower/hello:2.0.0
     hello-677685c76-vwd2l           kelseyhightower/hello:2.0.0
 
-
 <br/>
 
 **Resume a rolling update**
@@ -140,20 +138,17 @@ containers:
 
 <br/>
 
-
 ### Canary deployments
 
 When you want to test a new deployment in production with a subset of your users, use a canary deployment. Canary deployments allow you to release a change to a small subset of your users to mitigate risk associated with new releases.
 
 **Create a canary deployment**
 
-
-![Managing Deployments Using Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/pic2.png "Managing Deployments Using Kubernetes Engine"){: .center-image }
+![Managing Deployments Using Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/pic2.png 'Managing Deployments Using Kubernetes Engine'){: .center-image }
 
 <br/>
 
     $ vi deployments/hello-canary.yaml
-
 
 version: 1.0.0
 
@@ -187,11 +182,9 @@ spec:
     $ curl -ks https://`kubectl get svc frontend -o=jsonpath="{.status.loadBalancer.ingress[0].ip}"`/version
     {"version":"1.0.0"}
 
-
 В общем если повторять, то с вероятностью 25% можно получить версию 2.0.0
 
 <br/>
-
 
 **Blue-green deployments**
 
@@ -201,7 +194,7 @@ Kubernetes achieves this by creating two separate deployments; one for the old "
 
 <br/>
 
-![Managing Deployments Using Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/pic3.png "Managing Deployments Using Kubernetes Engine"){: .center-image }
+![Managing Deployments Using Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/managing-deployments-using-kubernetes-engine/pic3.png 'Managing Deployments Using Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -210,11 +203,9 @@ Kubernetes achieves this by creating two separate deployments; one for the old "
 
     $ curl -ks https://`kubectl get svc frontend -o=jsonpath="{.status.loadBalancer.ingress[0].ip}"`/version
 
-
 <br/>
 
     $ kubectl apply -f services/hello-green.yaml
-
 
 Теперь всегда будет использоваться версия 2.0.0
 
@@ -229,7 +220,6 @@ Kubernetes achieves this by creating two separate deployments; one for the old "
 А теперь все время 1.0.0
 
     $ curl -ks https://`kubectl get svc frontend -o=jsonpath="{.status.loadBalancer.ingress[0].ip}"`/version
-
 
 <br/>
 

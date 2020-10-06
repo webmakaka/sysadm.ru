@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Видеокурсы для админов
+description: Видеокурсы для админов
+keywords: Видеокурсы для админов
 permalink: /linux/video-courses/
 ---
 

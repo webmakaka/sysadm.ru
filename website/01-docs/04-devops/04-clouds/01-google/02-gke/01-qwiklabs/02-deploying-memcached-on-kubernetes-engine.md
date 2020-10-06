@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Deploying Memcached on Kubernetes Engine
+description: Deploying Memcached on Kubernetes Engine
+keywords: Deploying Memcached on Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/
 ---
 
@@ -11,9 +13,7 @@ permalink: /devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-
 Делаю:  
 01.08.2019
 
-
 https://www.qwiklabs.com/focuses/615?parent=catalog
-
 
 <br/>
 
@@ -25,9 +25,9 @@ In this lab you'll learn how to deploy a cluster of distributed Memcached server
 
 ### Objectives
 
-* Learn about some characteristics of Memcached's distributed architecture.
-* Deploy a Memcached service to Kubernetes Engine using Kubernetes and Helm.
-* Deploy Mcrouter, an open source Memcached proxy, to improve the system's performance.
+-   Learn about some characteristics of Memcached's distributed architecture.
+-   Deploy a Memcached service to Kubernetes Engine using Kubernetes and Helm.
+-   Deploy Mcrouter, an open source Memcached proxy, to improve the system's performance.
 
 <br/>
 
@@ -35,18 +35,18 @@ In this lab you'll learn how to deploy a cluster of distributed Memcached server
 
 Memcached has two main design goals:
 
-* Simplicity: Memcached functions like a large hash table and offers a simple API to store and retrieve arbitrarily shaped objects by key.
-* Speed: Memcached holds cache data exclusively in random-access memory (RAM), making data access extremely fast.
+-   Simplicity: Memcached functions like a large hash table and offers a simple API to store and retrieve arbitrarily shaped objects by key.
+-   Speed: Memcached holds cache data exclusively in random-access memory (RAM), making data access extremely fast.
 
 Memcached is a distributed system that allows its hash table capacity to scale horizontally across a pool of servers. Each Memcached server operates in complete isolation from the other servers in the pool. Therefore, the routing and load balancing between the servers must be done at the client level. Memcached clients apply a consistent hashing scheme to appropriately select the target servers. This scheme guarantees the following conditions:
 
-* The same server is always selected for the same key.
-* Memory usage is evenly balanced between the servers.
-* A minimum number of keys are relocated when the pool of servers is reduced or expanded.
+-   The same server is always selected for the same key.
+-   Memory usage is evenly balanced between the servers.
+-   A minimum number of keys are relocated when the pool of servers is reduced or expanded.
 
 The following diagram illustrates at a high level the interaction between a Memcached client and a distributed pool of Memcached servers.
 
-![Deploying Memcached on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/pic1.png "Deploying Memcached on Kubernetes Engine"){: .center-image }
+![Deploying Memcached on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/pic1.png 'Deploying Memcached on Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -94,7 +94,6 @@ This command makes the Helm binary discoverable from any directory during the cu
 
 The Memcached Helm chart uses a StatefulSet controller. One benefit of using a StatefulSet controller is that the pods' names are ordered and predictable. In this case, the names are mycache-memcached-{0..2}. This ordering makes it easier for Memcached clients to reference the servers.
 
-
     $ kubectl get pods
     NAME                  READY   STATUS    RESTARTS   AGE
     mycache-memcached-0   1/1     Running   0          40s
@@ -129,7 +128,6 @@ Retrieve the endpoints' IP addresses:
 
 Notice that each Memcached pod has a separate IP address. These IP addresses might differ for your own server instances. Each pod listens to port 11211, which is Memcached's default port.
 
-
 Test the deployment by opening a telnet session with one of the running Memcached servers on port 11211:
 
     $ kubectl run -it --rm alpine --image=alpine:3.6 --restart=Never telnet mycache-memcached-0.mycache-memcached.default.svc.cluster.local 11211
@@ -163,15 +161,13 @@ Quit the telnet session:
 
 Press Enter to close the session if it does not automatically exit.
 
-
 <br/>
 
 ## Implementing the service discovery logic
 
 You are now ready to implement the basic service discovery logic shown in the following diagram.
 
-![Deploying Memcached on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/pic2.png "Deploying Memcached on Kubernetes Engine"){: .center-image }
-
+![Deploying Memcached on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/pic2.png 'Deploying Memcached on Kubernetes Engine'){: .center-image }
 
 At a high level, the service discovery logic consists of the following steps:
 
@@ -220,20 +216,17 @@ Exit the Python console:
 
 Exit the pod's shell session by pressing Control+D.
 
-
 <br/>
 
 ## Enabling connection pooling
 
-As your caching needs grow, and the pool scales up to dozens, hundreds, or thousands of Memcached servers, you might run into some limitations. In particular, the large number of open connections from Memcached clients might place a heavy load on the servers, as the following diagram shows. 
+As your caching needs grow, and the pool scales up to dozens, hundreds, or thousands of Memcached servers, you might run into some limitations. In particular, the large number of open connections from Memcached clients might place a heavy load on the servers, as the following diagram shows.
 
-![Deploying Memcached on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/pic3.png "Deploying Memcached on Kubernetes Engine"){: .center-image }
-
+![Deploying Memcached on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/pic3.png 'Deploying Memcached on Kubernetes Engine'){: .center-image }
 
 To reduce the number of open connections, you must introduce a proxy to enable connection pooling, as in the following diagram.
 
-
-![Deploying Memcached on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/pic4.png "Deploying Memcached on Kubernetes Engine"){: .center-image }
+![Deploying Memcached on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/pic4.png 'Deploying Memcached on Kubernetes Engine'){: .center-image }
 
 Mcrouter (pronounced "mick router"), a powerful open source Memcached proxy, enables connection pooling. Integrating Mcrouter is seamless, because it uses the standard Memcached ASCII protocol. To a Memcached client, Mcrouter behaves like a normal Memcached server. To a Memcached server, Mcrouter behaves like a normal Memcached client.
 
@@ -269,11 +262,9 @@ Once you see the READY state of 1/1 the mycache-mcrouter proxy pods are now read
 
 Test this setup by connecting to one of the proxy pods. Use the telnet command on port 5000, which is Mcrouter's default port.
 
-
     $ MCROUTER_POD_IP=$(kubectl get pods -l app=mycache-mcrouter -o jsonpath="{.items[0].status.podIP}")
 
     $ kubectl run -it --rm alpine --image=alpine:3.6 --restart=Never telnet $MCROUTER_POD_IP 5000
-
 
 This will open a session to the telnet interface with no obvious prompt. It'll be ready right away.
 
@@ -293,7 +284,6 @@ Retrieve the key:
     get anotherkey
 
 Press Enter and you will see the response:
-
 
 ```
 VALUE anotherkey 0 15
@@ -319,8 +309,7 @@ To increase resilience, it is common practice to use a cluster with multiple nod
 
 You can reduce the latency risk by connecting client application pods only to a Memcached proxy pod that is on the same node. The following diagram illustrates this configuration which shows the topology for the interactions between application pods, Mcrouter pods, and Memcached pods across a cluster of three nodes.
 
-
-![Deploying Memcached on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/pic5.png "Deploying Memcached on Kubernetes Engine"){: .center-image }
+![Deploying Memcached on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/deploying-memcached-on-kubernetes-engine/pic5.png 'Deploying Memcached on Kubernetes Engine'){: .center-image }
 
 In a production environment, you would create this configuration as follows:
 
@@ -421,7 +410,6 @@ Quit the telnet session.
     quit
 
 Finally, to demonstrate using code, open up a shell on one of the application nodes and prepare an interactive Python session.
-
 
     $ kubectl exec -it $POD -- sh
     / # pip install pymemcache

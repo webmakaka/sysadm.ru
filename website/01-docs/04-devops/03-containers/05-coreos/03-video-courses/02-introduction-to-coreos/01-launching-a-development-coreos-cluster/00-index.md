@@ -1,17 +1,16 @@
 ---
 layout: page
 title: Launching A Development CoreOS Cluster
+description: Launching A Development CoreOS Cluster
+keywords: Launching A Development CoreOS Cluster
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/
 ---
 
-
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster
-
 
 <br/>
 
-
-[01 Install Dependencies And Boot Your First Cluster](/devops/containers/coreos/vagrant-coreos/)  
+[01 Install Dependencies And Boot Your First Cluster](/devops/containers/coreos/vagrant-coreos/)
 
 [02 systemd](/devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/systemd/)
 

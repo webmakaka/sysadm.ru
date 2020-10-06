@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Google Kubernetes Engine Best Practices (Security)
+description: Google Kubernetes Engine Best Practices (Security)
+keywords: Google Kubernetes Engine Best Practices (Security)
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/
 ---
 
@@ -9,7 +11,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security
 <br/>
 
 https://www.qwiklabs.com/quests/64
-
 
 ### [How to Use a Network Policy on Google Kubernetes Engine](/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/how-to-use-a-network-policy-on-gke/)
 

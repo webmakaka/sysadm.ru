@@ -1,19 +1,16 @@
 ---
 layout: page
 title: Global Units
+description: Global Units
+keywords: Global Units
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/Global_Units/
 ---
 
-
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster : Global Units
-
-
 
 ### Global Units
 
-
-$ vi ~/global.service
-
+    $ vi ~/global.service
 
     [Unit]
     Description=Global Hello Service
@@ -33,12 +30,11 @@ $ vi ~/global.service
 
 <br/>
 
-
     $ fleetctl start global.service
 
 <br/>
 
-    $ fleetctl list-units    
+    $ fleetctl list-units
     UNIT		MACHINE				ACTIVE	SUB
     global.service	3408f7ab.../172.17.8.103	active	running
     global.service	b2ca4512.../172.17.8.101	active	running
@@ -62,7 +58,6 @@ $ vi ~/global.service
     Nov 27 01:31:33 core-01 docker[3660]: Hello global-hello
     Nov 27 01:31:34 core-01 docker[3660]: Hello global-hello
     Nov 27 01:31:35 core-01 docker[3660]: Hello global-hello
-
 
 <br/>
 

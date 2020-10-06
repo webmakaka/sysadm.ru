@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Запуск CoreOS с помощью Vargrant
+description: Запуск CoreOS с помощью Vargrant
+keywords: Запуск CoreOS с помощью Vargrant
 permalink: /devops/containers/coreos/vagrant-coreos/
 ---
 

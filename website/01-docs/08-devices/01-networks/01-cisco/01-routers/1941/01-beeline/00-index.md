@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Cisco Router 1941 в домашней сети Билайн
+description: Cisco Router 1941 в домашней сети Билайн
+keywords: Cisco Router 1941 в домашней сети Билайн
 permalink: /devices/cisco/routers/1941/beeline/
 ---
 
@@ -18,7 +20,7 @@ permalink: /devices/cisco/routers/1941/beeline/
 
 <br/>
 
-![beeline login](/img/devices/cisco/routers/1941/beeline/login_beeline.png "beeline login"){: .center-image }
+![beeline login](/img/devices/cisco/routers/1941/beeline/login_beeline.png 'beeline login'){: .center-image }
 
 <br/>
 

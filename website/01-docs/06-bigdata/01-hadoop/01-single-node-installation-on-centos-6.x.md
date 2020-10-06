@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Hadoop Single Node Installation on Centos 6.X
+description: Hadoop Single Node Installation on Centos 6.X
+keywords: Hadoop Single Node Installation on Centos 6.X
 permalink: /bigdata/hadoop/single-node-installation-on-centos-6/
 ---
 
@@ -14,26 +16,24 @@ permalink: /bigdata/hadoop/single-node-installation-on-centos-6/
 
 <a href="https://javadev.org/devtools/jdk/install/linux/">Инсталляция JDK</a>
 
-
 <br/>
 
 ### Делаем возможность подключиться к localhost по SSH без пароля
 
-	$ ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
-	$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
-	$ chmod 0700 ~/.ssh/authorized_keys
+    $ ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
+    $ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+    $ chmod 0700 ~/.ssh/authorized_keys
 
 <br/>
-
 
 ### Hadoop Installation
 
-	# yum install -y \
-	openssh-clients
+    # yum install -y \
+    openssh-clients
 
 <br/>
 
-	# cd /tmp
+    # cd /tmp
     # wget http://apache.claz.org/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz
 
 <br/>
@@ -45,8 +45,8 @@ permalink: /bigdata/hadoop/single-node-installation-on-centos-6/
 <br/>
 
     # useradd hadoop
-	# passwd hadoop
-	# chown -R hadoop /opt/hadoop/
+    # passwd hadoop
+    # chown -R hadoop /opt/hadoop/
 
 <br/>
 
@@ -74,28 +74,26 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 <br/>
 
-	$ hadoop version
+    $ hadoop version
 
 <br/>
-
 
 ### Настройка конфигов
 
-	$ vi /opt/hadoop/2.7.1/etc/hadoop/hadoop-env.sh
+    $ vi /opt/hadoop/2.7.1/etc/hadoop/hadoop-env.sh
 
 <br/>
 
-	export JAVA_HOME=${JAVA_HOME}
+    export JAVA_HOME=${JAVA_HOME}
 
 меняю на
 
-	# export JAVA_HOME=${JAVA_HOME}
-	export JAVA_HOME=/opt/jdk/current
-
+    # export JAVA_HOME=${JAVA_HOME}
+    export JAVA_HOME=/opt/jdk/current
 
 <br/>
 
-	$ vi /opt/hadoop/2.7.1/etc/hadoop/core-site.xml
+    $ vi /opt/hadoop/2.7.1/etc/hadoop/core-site.xml
 
 <br/>
 
@@ -111,12 +109,12 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 <br/>
 
-	$ mkdir -p ~/hadoop_data/hdfs/namenode
-	$ mkdir -p ~/hadoop_data/hdfs/datanode
+    $ mkdir -p ~/hadoop_data/hdfs/namenode
+    $ mkdir -p ~/hadoop_data/hdfs/datanode
 
 <br/>
 
-	$ vi /opt/hadoop/2.7.1/etc/hadoop/hdfs-site.xml
+    $ vi /opt/hadoop/2.7.1/etc/hadoop/hdfs-site.xml
 
 <br/>
 
@@ -141,10 +139,9 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 ! Нужно посмотреть, возможно, что параметр должен называться dfs.datanode.data.dir
 
-
 <br/>
 
-	$ vi /opt/hadoop/2.7.1/etc/hadoop/yarn-site.xml
+    $ vi /opt/hadoop/2.7.1/etc/hadoop/yarn-site.xml
 
 <br/>
 
@@ -165,11 +162,11 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 <br/>
 
-	$ cp /opt/hadoop/2.7.1/etc/hadoop/mapred-site.xml.template /opt/hadoop/2.7.1/etc/hadoop/mapred-site.xml
+    $ cp /opt/hadoop/2.7.1/etc/hadoop/mapred-site.xml.template /opt/hadoop/2.7.1/etc/hadoop/mapred-site.xml
 
 <br/>
 
-	$ vi /opt/hadoop/2.7.1/etc/hadoop/mapred-site.xml
+    $ vi /opt/hadoop/2.7.1/etc/hadoop/mapred-site.xml
 
 <br/>
 
@@ -186,46 +183,44 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 ### Запуск демонов
 
-	$ hadoop namenode -format
-	$ hadoop-daemon.sh start datanode
-	$ hadoop-daemon.sh start namenode
+    $ hadoop namenode -format
+    $ hadoop-daemon.sh start datanode
+    $ hadoop-daemon.sh start namenode
 
 <br/>
 
-	$ jps
-	9506 DataNode
-	9704 NameNode
-	9789 Jps
+    $ jps
+    9506 DataNode
+    9704 NameNode
+    9789 Jps
 
 <br/>
 
-	$ yarn-daemon.sh start resourcemanager
-	$ yarn-daemon.sh start nodemanager
+    $ yarn-daemon.sh start resourcemanager
+    $ yarn-daemon.sh start nodemanager
 
 <br/>
 
-	$ jps
-	9506 DataNode
-	10164 Jps
-	10055 NodeManager
-	9704 NameNode
-	9817 ResourceManager
-
-
-<br/>
-
-	$ mr-jobhistory-daemon.sh start historyserver
+    $ jps
+    9506 DataNode
+    10164 Jps
+    10055 NodeManager
+    9704 NameNode
+    9817 ResourceManager
 
 <br/>
 
-	$ jps
-	9506 DataNode
-	10259 Jps
-	10195 JobHistoryServer
-	10055 NodeManager
-	9704 NameNode
-	9817 ResourceManager
+    $ mr-jobhistory-daemon.sh start historyserver
 
+<br/>
+
+    $ jps
+    9506 DataNode
+    10259 Jps
+    10195 JobHistoryServer
+    10055 NodeManager
+    9704 NameNode
+    9817 ResourceManager
 
 <br/>
 
@@ -233,20 +228,17 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 Summary
 
-	http://192.168.1.11:50070/
+    http://192.168.1.11:50070/
 
 All Applications
 
-	http://192.168.1.11:8088/
+    http://192.168.1.11:8088/
 
 job history
 
-	http://192.168.1.11:19888
-
-
+    http://192.168.1.11:19888
 
 <br/><br/><br/><br/>
-
 
 Links:
 

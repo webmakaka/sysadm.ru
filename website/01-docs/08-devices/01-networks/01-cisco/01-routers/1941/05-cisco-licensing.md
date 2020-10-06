@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Cisco Router 1941 Licensing
+description: Cisco Router 1941 Licensing
+keywords: Cisco Router 1941 Licensing
 permalink: /devices/cisco/routers/1941/cisco-licensing/
 ---
 

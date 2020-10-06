@@ -1,11 +1,12 @@
 ---
 layout: page
 title: IAM Custom Roles
+description: IAM Custom Roles
+keywords: IAM Custom Roles
 permalink: /devops/clouds/google/iam-custom-roles/
 ---
 
 # IAM Custom Roles
-
 
 Делаю!  
 30.05.2019
@@ -14,7 +15,6 @@ permalink: /devops/clouds/google/iam-custom-roles/
 
 Взято отсюда:  
 https://www.qwiklabs.com/focuses/1035?parent=catalog
-
 
 <br/>
 
@@ -69,7 +69,6 @@ includedPermissions:
 
 ### Create a custom role using flags
 
-
     $ gcloud iam roles create viewer --project $DEVSHELL_PROJECT_ID \
     --title "Role Viewer" --description "Custom role description." \
     --permissions compute.instances.get,compute.instances.list --stage ALPHA
@@ -77,7 +76,6 @@ includedPermissions:
 <br/>
 
 ### Listing the custom roles
-
 
     $ gcloud iam roles list --project $DEVSHELL_PROJECT_ID
     ---
@@ -99,9 +97,7 @@ includedPermissions:
 
 ### Editing an existing custom role
 
-
 **To update a custom role using a YAML file**
-
 
     // $ gcloud iam roles describe [ROLE_ID] --project $DEVSHELL_PROJECT_ID
     $ gcloud iam roles describe editor --project $DEVSHELL_PROJECT_ID
@@ -114,7 +110,6 @@ includedPermissions:
     stage: ALPHA
     title: Role Editor
 
-
 <br/>
 
     $ vi new-role-definition.yaml
@@ -122,8 +117,8 @@ includedPermissions:
 Вставляем содержимое предыдущего output.
 Добавляем:
 
-  - storage.buckets.get
-  - storage.buckets.list
+-   storage.buckets.get
+-   storage.buckets.list
 
 Получаем:
 
@@ -140,13 +135,11 @@ stage: ALPHA
 title: Role Editor
 ```
 
-
     // $ gcloud iam roles update [ROLE_ID] --project $DEVSHELL_PROJECT_ID
     --file new-role-definition.yaml
 
     $ gcloud iam roles update editor --project $DEVSHELL_PROJECT_ID \
     --file new-role-definition.yaml
-
 
 <br/>
 
@@ -174,10 +167,9 @@ title: Role Editor
 
     $ gcloud iam roles undelete viewer --project $DEVSHELL_PROJECT_ID
 
-
 <br/>
 
-# service-accounts 
+# service-accounts
 
 A service account is a special Google account that belongs to your application or a virtual machine (VM) instead of an individual end user. Your application uses the service account to call the Google API of a service, so that the users aren't directly involved.
 
@@ -195,7 +187,6 @@ A service account is identified by its email address, which is unique to the acc
     marley                                  marley@qwiklabs-gcp-f9fcfa2b4bf50fb7.iam.gserviceaccount.com                         False
     ql-api                                  qwiklabs-gcp-f9fcfa2b4bf50fb7@qwiklabs-gcp-f9fcfa2b4bf50fb7.iam.gserviceaccount.com  False
     App Engine default service account      qwiklabs-gcp-f9fcfa2b4bf50fb7@appspot.gserviceaccount.com                            False
-
 
 <br/>
 

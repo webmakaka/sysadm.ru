@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Hadoop
+description: Hadoop
+keywords: Hadoop
 permalink: /bigdata/hadoop/
 ---
 

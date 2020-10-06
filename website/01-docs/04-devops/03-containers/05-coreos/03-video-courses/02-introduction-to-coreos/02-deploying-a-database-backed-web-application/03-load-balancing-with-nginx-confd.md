@@ -1,17 +1,16 @@
 ---
 layout: page
 title: Load balancing with NGINX
+description: Load balancing with NGINX
+keywords: Load balancing with NGINX
 permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/load-balancing-with-nginx-confd/
 ---
 
-
 # Load balancing with NGINX
-
 
 <br/>
 
 core-01
-
 
     $ fleetctl list-units
     UNIT				MACHINE				ACTIVE	SUB
@@ -26,7 +25,6 @@ core-01
     todo@2.service			db577263.../172.17.8.102	active	running
     todo@3.service			b2ca4512.../172.17.8.101	active	running
 
-
 <br/>
 
 Я заменил оригинальные image, своими. Они отличаются пока только IP адресом.
@@ -34,10 +32,9 @@ core-01
 
 <br/>
 
- **$ vi nginx.service**
+**\$ vi nginx.service**
 
 <br/>
-
 
 {% highlight text %}
 
@@ -60,9 +57,9 @@ ExecStartPre=-/usr/bin/docker rm %p-%i
 ExecStartPre=-/usr/bin/etcdctl mkdir /services/todo
 ExecStartPre=-/usr/bin/docker pull marley/coreos-nginx-proxy
 ExecStart=/usr/bin/docker run --name %p-%i \
-      -h %H \
-      -p ${COREOS_PUBLIC_IP}:80:80 \
-      marley/coreos-nginx-proxy
+ -h %H \
+ -p \${COREOS_PUBLIC_IP}:80:80 \
+ marley/coreos-nginx-proxy
 ExecStop=-/usr/bin/docker kill %p-%i
 ExecStop=-/usr/bin/docker rm %p-%i
 
@@ -94,8 +91,6 @@ Global=true
     todo@2.service			db577263.../172.17.8.102	active	running
     todo@3.service			b2ca4512.../172.17.8.101	active	running
 
-
-
 <br/>
 
 // логи
@@ -104,17 +99,13 @@ Global=true
 
 <br/>
 
-
     http://172.17.8.101/
     http://172.17.8.102/
     http://172.17.8.103/
 
-
 Тоже самое, только на 80 порту а не на 3000
 
-
-![coreos cluster](/img/devops/containers/coreos/app7.png "coreos cluster"){: .center-image } 
-
+![coreos cluster](/img/devops/containers/coreos/app7.png 'coreos cluster'){: .center-image }
 
 Если нужно остановить и выгрузить все, что касается сервиса:
 

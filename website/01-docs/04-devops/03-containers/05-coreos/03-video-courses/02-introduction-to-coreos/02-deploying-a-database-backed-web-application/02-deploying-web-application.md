@@ -1,18 +1,16 @@
 ---
 layout: page
 title: Deploying Web Application
+description: Deploying Web Application
+keywords: Deploying Web Application
 permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/deploying-web-application/
 ---
 
-
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Deploying A DatabaseBacked Web Application : Deploying Web Application
-
 
 ### Deploying Web Application
 
-
 core-01
-
 
     $ fleetctl list-machines
     MACHINE		IP		METADATA
@@ -20,9 +18,7 @@ core-01
     b2ca4512...	172.17.8.101	-
     db577263...	172.17.8.102	-
 
-
 <br/>
-
 
     $ fleetctl list-units
     UNIT				MACHINE				ACTIVE	SUB
@@ -30,7 +26,6 @@ core-01
     rethinkdb-announce@2.service	b2ca4512.../172.17.8.101	active	running
     rethinkdb@1.service		3408f7ab.../172.17.8.103	active	running
     rethinkdb@2.service		b2ca4512.../172.17.8.101	active	running
-
 
 <br/>
 
@@ -40,17 +35,14 @@ core-01
     $ etcdctl get /services/rethinkdb/rethinkdb-2
     172.17.8.101
 
-
 <br/>
 
 Я заменил оригинальные image, своими. Они отличаются пока только IP адресом.
 С оригинальным у меня не заработало.
 
-
 <br/>
 
- **$ vi todo@.service**
-
+**\$ vi todo@.service**
 
 {% highlight text %}
 
@@ -71,25 +63,21 @@ ExecStartPre=-/usr/bin/docker kill %p-%i
 ExecStartPre=-/usr/bin/docker rm %p-%i
 ExecStartPre=/usr/bin/docker pull marley/coreos-todo-angular-express
 ExecStart=/usr/bin/docker run --name %p-%i \
-      -h %H \
-      -p ${COREOS_PUBLIC_IPV4}:3000:3000 \
-      -e INSTANCE=%p-%i \
-      marley/coreos-todo-angular-express
+ -h %H \
+ -p \${COREOS_PUBLIC_IPV4}:3000:3000 \
+ -e INSTANCE=%p-%i \
+ marley/coreos-todo-angular-express
 ExecStop=-/usr/bin/docker kill %p-%i
 ExecStop=-/usr/bin/docker rm %p-%i
 
 [X-Fleet]
-Conflicts=todo@*.service
-
+Conflicts=todo@\*.service
 
 {% endhighlight %}
 
-
-
 <br/>
 
- **$ vi todo-sk@.service**
-
+**\$ vi todo-sk@.service**
 
 {% highlight text %}
 
@@ -111,9 +99,9 @@ while true; do \
  port=$(docker inspect --format=\'{{(index (index .NetworkSettings.Ports "3000/tcp") 0).HostPort}}\' todo-%i); \
  curl -sf ${COREOS_PUBLIC_IPV4}:$port/ > /dev/null 2>&1; \
  if [ $? -eq 0 ]; then \
-   etcdctl set /services/todo/todo-%i ${COREOS_PUBLIC_IPV4}:$port --ttl 10; \
+ etcdctl set /services/todo/todo-%i ${COREOS_PUBLIC_IPV4}:$port --ttl 10; \
  else \
-   etcdctl rm /services/todo/todo-%i; \
+ etcdctl rm /services/todo/todo-%i; \
  fi; \
  sleep 5; \
  done'
@@ -122,7 +110,6 @@ ExecStop=/usr/bin/etcdctl rm /services/todo/todo-%i
 
 [X-Fleet]
 MachineOf=todo@%i.service
-
 
 {% endhighlight %}
 
@@ -133,7 +120,6 @@ MachineOf=todo@%i.service
 <br/>
 
     $ fleetctl start todo@{1..3} todo-sk@{1..3}
-
 
 <br/>
 
@@ -150,13 +136,10 @@ MachineOf=todo@%i.service
     todo@2.service			b2ca4512.../172.17.8.101	active	running
     todo@3.service			3408f7ab.../172.17.8.103	active	running
 
-
-
 <br/>
 
     $ fleetctl journal -f --lines=50 todo@1
     $ fleetctl journal -f --lines=50 todo-sk@1
-
 
 <br/>
 
@@ -185,13 +168,10 @@ MachineOf=todo@%i.service
     /foo/bar
     /foo/bar2
 
-
-
 <br/>
 
     $ etcdctl get /services/todo/todo-3
     172.17.8.101:3000
-
 
 <br/>
 
@@ -201,10 +181,7 @@ MachineOf=todo@%i.service
 
 <br/>
 
-
-![coreos cluster](/img/devops/containers/coreos/app6.png "coreos cluster"){: .center-image } 
-
-
+![coreos cluster](/img/devops/containers/coreos/app6.png 'coreos cluster'){: .center-image }
 
 <br/>
 

@@ -1,16 +1,15 @@
 ---
 layout: page
 title: systemd
+description: systemd
+keywords: systemd
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/systemd/
 ---
 
-
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster : systemd
-
 
     core@core-01 ~ $ sudo su -
     core-01 ~ # cd /etc/systemd/system
-
 
 ### Пример 1:
 
@@ -45,11 +44,9 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
 
     # systemctl stop helloworld.service
 
-
 <br/>
 
 ### Пример 2:
-
 
     # vi helloworld2@.service
 

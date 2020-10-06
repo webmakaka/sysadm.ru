@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Continuous Delivery with Jenkins in Kubernetes Engine
+description: Continuous Delivery with Jenkins in Kubernetes Engine
+keywords: Continuous Delivery with Jenkins in Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/
 ---
 
@@ -10,20 +12,16 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/con
 
 https://www.qwiklabs.com/quests/29
 
-
 <br/>
 
 Делаю!  
 23.05.2019
 
-
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-cloud.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
-
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-cloud.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }
 
 <br/>
 
 ### Clone Repository
-
 
     $ gcloud config set compute/zone us-central1-f
 
@@ -31,9 +29,7 @@ https://www.qwiklabs.com/quests/29
 
     $ cd continuous-deployment-on-kubernetes
 
-
 <br/>
-
 
 ### Provisioning Jenkins
 
@@ -49,7 +45,6 @@ https://www.qwiklabs.com/quests/29
     $ gcloud container clusters get-credentials jenkins-cd
 
     $ kubectl cluster-info
-
 
 <br/>
 
@@ -84,7 +79,7 @@ https://www.qwiklabs.com/quests/29
     $ kubectl get pods
 
     $ export POD_NAME=$(kubectl get pods -l "component=cd-jenkins-master" -o jsonpath="{.items[0].metadata.name}")
-    
+
     $ kubectl port-forward $POD_NAME 8080:8080 >> /dev/null &
 
     $ kubectl get svc
@@ -120,13 +115,12 @@ admin/пароль
 
 The application mimics a microservice by supporting two operation modes.
 
-* In backend mode: gceme listens on port 8080 and returns Compute Engine instance metadata in JSON format.
-* In frontend mode: gceme queries the backend gceme service and renders the resulting JSON in the user interface.
+-   In backend mode: gceme listens on port 8080 and returns Compute Engine instance metadata in JSON format.
+-   In frontend mode: gceme queries the backend gceme service and renders the resulting JSON in the user interface.
 
 <br/>
 
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-cloud-app.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
-
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-cloud-app.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -134,10 +128,10 @@ The application mimics a microservice by supporting two operation modes.
 
 You will deploy the application into two different environments:
 
-* Production: The live site that your users access.
-* Canary: A smaller-capacity site that receives only a percentage of your user traffic. Use this environment to validate your software with live traffic before it's released to all of your users.
+-   Production: The live site that your users access.
+-   Canary: A smaller-capacity site that receives only a percentage of your user traffic. Use this environment to validate your software with live traffic before it's released to all of your users.
 
-    $ cd sample-app
+    \$ cd sample-app
 
     $ kubectl create ns production
     $ kubectl apply -f k8s/production -n production
@@ -180,15 +174,13 @@ You will deploy the application into two different environments:
     $ curl http://$FRONTEND_SERVICE_IP/version
     1.0.0
 
-
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/app1.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/app1.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }
 
 <br/>
 
 <br/>
 
 ### Creating the Jenkins Pipeline
-
 
 Let's create a copy of the gceme sample app and push it to a Cloud Source Repository:
 
@@ -217,7 +209,7 @@ Step 1: In the Jenkins user interface, click Credentials in the left navigation.
 
 Step 2: Click Jenkins
 
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-1.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-1.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }
 
 Step 3: Click Global credentials (unrestricted).
 
@@ -227,7 +219,7 @@ Step 5: Select Google Service Account from metadata from the Kind drop-down and 
 
 The global credentials has been added. The name of the credential is the GCP Project ID found in the CONNECTION DETAILS section of the lab.
 
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-2.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-2.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -235,7 +227,7 @@ The global credentials has been added. The name of the credential is the GCP Pro
 
 Step 1: Click Jenkins > New Item in the left navigation:
 
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-3.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-3.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }
 
 Step 2: Name the project sample-app, then choose the Multibranch Pipeline option and click OK.
 
@@ -245,18 +237,17 @@ Step 4: Paste the HTTPS clone URL of your sample-app repo in Cloud Source Reposi
 
 https://source.developers.google.com/p/qwiklabs-gcp-08db4b7004575b72/r/default
 
-
 Step 5: From the Credentials drop-down, select the name of the credentials you created when adding your service account in the previous steps.
 
 Step 6: Under Scan Multibranch Pipeline Triggers section, check the Periodically if not otherwise run box and set the Interval value to 1 minute.
 
 Step 7: Your job configuration should look like this:
 
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-4.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-4.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }
 
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-5.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-5.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }
 
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-6.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-pic-6.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }
 
 Step 8: Click Save leaving all other options with their defaults
 
@@ -276,7 +267,6 @@ Creating a development branch
 
 Вместо REPLACE_WITH_YOUR_PROJECT_ID вставить реальный PROJECT_ID.
 
-
 <br/>
 
     $ vi html.go
@@ -285,7 +275,7 @@ Creating a development branch
 
     <div class="card blue">
 
- Меняем на 
+Меняем на
 
     <div class="card orange">
 
@@ -297,7 +287,7 @@ Creating a development branch
 
     const version string = "1.0.0"
 
-меняем на 
+меняем на
 
     const version string = "2.0.0"
 
@@ -336,8 +326,7 @@ Creating a development branch
 
 Ждем пока jenkins сделает свое дело.
 
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-final.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
-
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/jenkins-final.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }
 
     $ export FRONTEND_SERVICE_IP=$(kubectl get -o \
     jsonpath="{.status.loadBalancer.ingress[0].ip}" --namespace=production services gceme-frontend)
@@ -349,4 +338,4 @@ Creating a development branch
     NAME             TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
     gceme-frontend   LoadBalancer   10.11.240.107   35.232.28.72   80:32013/TCP   35m
 
-![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/app2.png "Continuous Delivery with Jenkins in Kubernetes Engine"){: .center-image }
+![Continuous Delivery with Jenkins in Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/continuous-delivery-with-jenkins-in-kubernetes/app2.png 'Continuous Delivery with Jenkins in Kubernetes Engine'){: .center-image }

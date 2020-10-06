@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Ubuntu 18.04 - ssh Cisco - no matching cipher found
+description: Ubuntu 18.04 - ssh Cisco - no matching cipher found
+keywords: Ubuntu 18.04 - ssh Cisco - no matching cipher found
 permalink: /devices/cisco/no-matching-cipher-found/
 ---
 
@@ -31,3 +33,20 @@ add command "ip ssh client algorithm encryption aes256-cbc" in your router confi
     cisco-router-1941(config)#ip ssh client algorithm encryption aes256-cbc
                                     ^
     % Invalid input detected at '^' marker.
+
+
+<br/>
+
+### В Ubuntu 20.04.01 теперь такое
+
+    $ ssh -c aes256-cbc 192.168.1.1
+    Unable to negotiate with 192.168.1.1 port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+
+<br/>
+
+Подключаюсь командой:
+
+    $ ssh \
+        -oKexAlgorithms=+diffie-hellman-group1-sha1 \
+        -c aes256-cbc \
+        192.168.1.1

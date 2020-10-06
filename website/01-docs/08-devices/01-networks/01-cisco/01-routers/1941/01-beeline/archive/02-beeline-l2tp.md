@@ -8,7 +8,6 @@ permalink: /devices/cisco/routers/1941/beeline-l2tp/
 
 <br/>
 
-
 <div align="center" style="border-width: 4px; padding: 10px; border-style: inset; border-color: red; ">
 
 Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее <a href="/devices/cisco/routers/1941/beeline/">здесь</a>
@@ -30,11 +29,9 @@ permalink: /devices/cisco/routers/1941/beeline-l2tp/
 85.21.0.109 - tp.corbina.net - как минимум не предоставляет маршруты после авторизации. (руками не пробовал прописывать)  
 85.21.0.65 - vpn.corbina.ru - как минимум не предоставляет маршруты после авторизации. (руками не пробовал прописывать)
 
-
 <br/>
 
 ### Базовая настройка роутера:
-
 
 IOS: c1900-universalk9-mz.SPA.152-4.M2.bin<br/>
 Последние версии ios крашились при попытке настроить NAT.
@@ -51,7 +48,6 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 <pre>
 <strong>cisco-router-1941# <code>conf t</code></strong>
 </pre>
-
 
 -- To enable the Domain Name System (DNS) server on a router
 
@@ -79,8 +75,6 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 <strong>cisco-router-1941(config)# <code>ntp server ru.pool.ntp.org</code></strong>
 </pre>
 
-
-
 <br/>
 
 -- удаляю прописанные ранее dns сервер и шлюз по умолчанию
@@ -93,18 +87,15 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 <strong>cisco-router-1941(config)# <code>no ip default-gateway 192.168.1.1</code></strong>
 </pre>
 
-
 <br/>
 
 ### Предварительная настройка интерфейсов
-
 
 -- GigabitEthernet0/0
 
 <pre>
 <strong>cisco-router-1941(config)# <code>interface GigabitEthernet0/0</code></strong>
 </pre>
-
 
 <pre>
 <strong>cisco-router-1941(config)# <code>ip address dhcp</code></strong>
@@ -118,7 +109,6 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 <strong>cisco-router-1941(config)# <code>description ISP-External-Local</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config)# <code>no shutdown</code></strong>
 </pre>
@@ -131,26 +121,21 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 
 -- GigabitEthernet0/1
 
-
 <pre>
 <strong>cisco-router-1941(config)# <code>interface GigabitEthernet0/1</code></strong>
 </pre>
-
 
 <pre>
 <strong>cisco-router-1941(config)# <code>ip address 192.168.1.1 255.255.255.0</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config)# <code>description Internal-NetWork</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config)# <code>no shutdown</code></strong>
 </pre>
-
 
 <pre>
 <strong>cisco-router-1941(config-if)# <code>exit</code></strong>
@@ -162,7 +147,7 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 
 <br/>
 
---  проверка получения ip адреса от провайдера
+-- проверка получения ip адреса от провайдера
 
 <pre>
 <strong>cisco-router-1941# <code>show dhcp lease</code></strong>
@@ -188,7 +173,6 @@ Temp ip static route1: dest 195.14.50.16 router 10.111.0.1
 <strong>cisco-router-1941# <code>show ip interface brief</code></strong>
 </pre>
 
-
 <pre class="gray_border">
 Interface                  IP-Address      OK? Method Status                Protocol
 Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down
@@ -196,44 +180,35 @@ GigabitEthernet0/0         10.111.0.8      YES DHCP   up                    up
 GigabitEthernet0/1         192.168.1.1     YES manual up                    up  
 </pre>
 
-
 <br/>
 
 ### Подготовка роутера к созданию l2tp соединения:
 
-
 <pre>
 <strong>cisco-router-1941# <code>conf t</code></strong>
 </pre>
-
 
 <pre>
 <strong>cisco-router-1941(config)# <code>l2tp-class DEFAULT-L2TP-CLASS</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config-l2tp-class)# <code>end</code></strong>
 </pre>
 
-
 <br/>
-
 
 <pre>
 <strong>cisco-router-1941# <code>conf t</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config)# <code>pseudowire-class PW-L2TP-GigabitEthernet0/0</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config-pw-class)# <code>encapsulation l2tpv2</code></strong>
 </pre>
-
 
 <pre>
 <strong>cisco-router-1941(config-pw-class)# <code>protocol l2tpv2 DEFAULT-L2TP-CLASS</code></strong>
@@ -243,31 +218,25 @@ GigabitEthernet0/1         192.168.1.1     YES manual up                    up
 <strong>cisco-router-1941(config-pw-class)# <code>ip local interface GigabitEthernet0/0</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config-pw-class)#  <code>end</code></strong>
 </pre>
-
 
 <br/>
 
 ### Создание туннельного интерфейса Virtual-PPP1:
 
-
 <pre>
 <strong>cisco-router-1941# <code>conf t</code></strong>
 </pre>
-
 
 <pre>
 <strong>cisco-router-1941(config)# <code>interface Virtual-PPP1</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config-if)# <code>description ISP-External-Internet</code></strong>
 </pre>
-
 
 <pre>
 <strong>cisco-router-1941(config-if)# <code>ip mtu 1460</code></strong>
@@ -285,11 +254,9 @@ PPS Поменял брас на "новый" 78.107.1.246 (tp.internet.beeline.
 <strong>cisco-router-1941(config-if)# <code>ip tcp adjust-mss 1420</code></strong>
 </pre>
 
-
 <br/>
 
 -- Данная функция позволяет предотвратить атаки связанные с фрагментацией пакетов, приводящая к переполнению буфера . Когда атакующим посылаются много незаконченных фрагментрированных пакетов и фаерволлу приходится их собирать, тратя на это память и время. В IOS с поддержкой безопасности включена по умолчанию.
-
 
 <pre>
 <strong>cisco-router-1941(config-if)# <code>no ip virtual-reassembly</code></strong>
@@ -303,21 +270,17 @@ PPS Поменял брас на "новый" 78.107.1.246 (tp.internet.beeline.
 <strong>cisco-router-1941(config-if)# <code>no peer neighbor-route</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config-if)# <code>no cdp enable</code></strong>
 </pre>
-
 
 <pre>
 <strong>cisco-router-1941(config-if)# <code>ip address negotiated</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config-if)# <code>no ppp authentication chap callin</code></strong>
 </pre>
-
 
 <br/>
 -- В следующих 2-х командах, нужно руками вводить свой логин и пароль для доступа в интернет.
@@ -330,7 +293,6 @@ PPS Поменял брас на "новый" 78.107.1.246 (tp.internet.beeline.
 <strong>cisco-router-1941(config-if)# <code>ppp chap password 'your-pass'</code></strong>
 </pre>
 
-
 -- Ну почему нельзя ввести какое-нибудь dns имя вместо IP?
 
 <br/>
@@ -340,21 +302,17 @@ PPS Поменял брас на "новый" 78.107.1.246 (tp.internet.beeline.
 <strong>cisco-router-1941(config-if)# <code>pseudowire 85.21.0.241 10 pw-class PW-L2TP-GigabitEthernet0/0</code></strong>
 </pre>
 
-
 <pre>
 <strong>cisco-router-1941(config-if-xconn)# <code>end</code></strong>
 </pre>
-
 
 <br/><br/>
 
 -- Virtual-PPP1 присвоен ожидаемый IP адрес.
 
-
 <pre>
 <strong>cisco-router-1941# <code>show ip interface brief</code></strong>
 </pre>
-
 
 <pre class="gray_border">
 Interface                  IP-Address      OK? Method Status                Protocol
@@ -363,7 +321,6 @@ GigabitEthernet0/0         10.111.0.8      YES DHCP   up                    up
 GigabitEthernet0/1         192.168.1.2     YES NVRAM  up                    up
 Virtual-PPP1               95.31.31.8      YES IPCP   up                    up  
 </pre>
-
 
 <br/>
 
@@ -375,7 +332,6 @@ Virtual-PPP1               95.31.31.8      YES IPCP   up                    up
 <strong>cisco-router-1941# <code> ping beeline.ru</code></strong>
 </pre>
 
-
 <pre class="gray_border">
 Translating "beeline.ru"...domain server (85.21.192.3) [OK]
 
@@ -386,15 +342,11 @@ Success rate is 100 percent (5/5), round-trip min/avg/max = 1/3/4 ms
 
 </pre>
 
-
-
-
 -- Проверили Интернет
 
 <pre>
 <strong>cisco-router-1941# <code> ping ya.ru source Virtual-PPP1</code></strong>
 </pre>
-
 
 <pre class="gray_border">
 Translating "ya.ru"...domain server (85.21.192.3) [OK]
@@ -405,7 +357,6 @@ Packet sent with a source address of 95.31.31.8
 !!!!!
 Success rate is 100 percent (5/5), round-trip min/avg/max = 4/19/80 ms
 </pre>
-
 
 <br/>
 
@@ -482,8 +433,6 @@ cisco-router-1941(config)#ip route 85.21.0.241 255.255.255.255 dhcp
 
 </pre>
 
-
-
 <pre>
 
 cisco-router-1941# show ip route
@@ -515,7 +464,6 @@ S        213.234.192.8 [1/0] via 10.111.0.1
 
 
 </pre>
-
 
 <strong>Почитать:</strong><br/><br/>
 http://homenet.beeline.ru/index.php?showtopic=206930&st=0<br/>

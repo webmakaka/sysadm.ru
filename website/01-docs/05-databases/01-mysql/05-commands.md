@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Команды для работы с базой данных MySQL
+description: Команды для работы с базой данных MySQL
+keywords: Команды для работы с базой данных MySQL
 permalink: /databases/mysql/commands/
 ---
 
@@ -14,12 +16,9 @@ permalink: /databases/mysql/commands/
 
     mysql> SELECT USER();
 
-
 Узнать текущую базу данных:
 
     mysql> SELECT DATABASE();
-
-
 
 <br/>
 

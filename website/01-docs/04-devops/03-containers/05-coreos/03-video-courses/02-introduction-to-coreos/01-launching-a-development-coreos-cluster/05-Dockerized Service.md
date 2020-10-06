@@ -1,19 +1,17 @@
 ---
 layout: page
 title: Dockerized Service
+description: Dockerized Service
+keywords: Dockerized Service
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/Dockerized_Service/
 ---
 
-
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster : Dockerized Service
-
-
 
 ### Dockerized Node.js Application
 
 App:  
 https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204/Dockerized_App
-
 
     $ docker run --rm -ti -p 3000:3000 -e INSTANCE=instance1 rosskukulinski/nodeapp1
 
@@ -22,7 +20,6 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
 
     $ curl 172.18.0.1:3000
     Hello from instance1 running on 405e83cdc97c
-
 
 <br/>
 
@@ -51,14 +48,13 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
     [X-Fleet]
     Conflicts=nodeapp@*.service
 
-
 <br/>
 
     $ fleetctl submit nodeapp@.service
 
 <br/>
 
-    $ fleetctl list-unit-files        
+    $ fleetctl list-unit-files
     UNIT			HASH	DSTATE		STATE		TARGET
     nodeapp@.service	6f4a424	inactive	inactive	-
 
@@ -77,8 +73,6 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
     nodeapp@1.service	6f4a424	launched	launched	3408f7ab.../172.17.8.103
     nodeapp@2.service	6f4a424	launched	launched	b2ca4512.../172.17.8.101
 
-
-
 <br/>
 
     $ fleetctl journal -f nodeapp@1
@@ -93,7 +87,6 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
     Nov 27 01:57:07 core-03 docker[2911]: Status: Downloaded newer image for rosskukulinski/nodeapp1:latest
     Nov 27 01:57:07 core-03 systemd[1]: Started Simple Node App 1.
     Nov 27 01:57:08 core-03 docker[2983]: listening on port 3000
-
 
 <br/>
 
@@ -110,10 +103,9 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
     Nov 27 02:13:43 core-01 systemd[1]: nodeapp@2.service: Unit entered failed state.
     Nov 27 02:13:43 core-01 systemd[1]: nodeapp@2.service: Failed with result 'exit-code'.
 
-
 <br/>
 
-    $ fleetctl list-units     
+    $ fleetctl list-units
     UNIT			MACHINE				ACTIVE	SUB
     nodeapp@1.service	3408f7ab.../172.17.8.103	active	running
     nodeapp@2.service	b2ca4512.../172.17.8.101	failed	failed
@@ -129,7 +121,6 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
 
     $ fleetctl stop nodeapp@{1..2}.service
 
-
 <br>
 <br>
 
@@ -138,7 +129,6 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
     $ vi nodeapp-v2@.service
 
 <br/>
-
 
     [Unit]
     Description=Simple Node App v2 %i
@@ -162,14 +152,13 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
     [X-Fleet]
     Conflicts=nodeapp-v2@*.service
 
-
 <br/>
 
     $ fleetctl submit nodeapp-v2\@.service
 
 <br/>
 
-    $ fleetctl list-unit-files        
+    $ fleetctl list-unit-files
 
 <br/>
 
@@ -177,13 +166,12 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
 
 <br/>
 
-    $ fleetctl list-units      
+    $ fleetctl list-units
     UNIT			MACHINE				ACTIVE		SUB
     nodeapp-v2@1.service	db577263.../172.17.8.102	activating	start-pre
     nodeapp-v2@2.service	3408f7ab.../172.17.8.103	failed		failed
     nodeapp@1.service	3408f7ab.../172.17.8.103	active		running
     nodeapp@2.service	b2ca4512.../172.17.8.101	failed		failed
-
 
 <br/>
 
@@ -195,16 +183,14 @@ https://github.com/rosskukulinski/Introduction_To_CoreOS/tree/master/Chapter%204
 
     $ fleetctl destroy nodeapp-v2@.service nodeapp-v2@{1..2}
     $ fleetctl submit nodeapp-v2\@.service
-    $ fleetctl start nodeapp-v2@{1..2}.service   
-
+    $ fleetctl start nodeapp-v2@{1..2}.service
 
 <br/>
 
-    $ fleetctl list-units  
+    $ fleetctl list-units
     UNIT			MACHINE				ACTIVE	SUB
     nodeapp-v2@1.service	db577263.../172.17.8.102	active	running
     nodeapp-v2@2.service	3408f7ab.../172.17.8.103	active	running
-
 
 <br/>
 

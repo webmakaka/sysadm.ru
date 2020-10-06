@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Build a Slack Bot with Node.js on Kubernetes
+description: Build a Slack Bot with Node.js on Kubernetes
+keywords: Build a Slack Bot with Node.js on Kubernetes
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/build-a-slack-bot-with-nodejs-on-kubernetes/
 ---
 
@@ -11,7 +13,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/build-a-slack
 Делаю:  
 24.05.2019
 
-
 https://www.qwiklabs.com/focuses/635?parent=catalog
 
 <br/>
@@ -21,7 +22,6 @@ https://www.qwiklabs.com/focuses/635?parent=catalog
 **Create a new Slack app**
 
 https://api.slack.com/apps
-
 
 Click the Create New App button.
 
@@ -49,10 +49,9 @@ Click Add Bot User.
 
 **Get the bot user OAuth access token**
 
-* Select OAuth & Permissions in the left pane.
-* Click Install App to Workplace. Click Authorize to confirm.
-* Click the Copy button to copy the Bot User OAuth Access Token text into your clipboard.
-
+-   Select OAuth & Permissions in the left pane.
+-   Click Install App to Workplace. Click Authorize to confirm.
+-   Click the Copy button to copy the Bot User OAuth Access Token text into your clipboard.
 
 <br/>
 
@@ -90,15 +89,11 @@ Click Add Bot User.
 
     $ kubectl apply -f slack-codelab-deployment.yaml
 
-
-
-![Build a Slack Bot with Node.js on Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/build-a-slack-bot-with-nodejs-on-kubernetes/google-clouds-slack-integration.png "Build a Slack Bot with Node.js on Kubernetes"){: .center-image }
-
+![Build a Slack Bot with Node.js on Kubernetes](/img/devops/clouds/google/gke/qwiklabs/kubernetes-solutions/build-a-slack-bot-with-nodejs-on-kubernetes/google-clouds-slack-integration.png 'Build a Slack Bot with Node.js on Kubernetes'){: .center-image }
 
 <br/>
 
 ### Extra Credit: Create an incoming webhook to Slack
-
 
 Go to the Slack apps management page. https://api.slack.com/apps
 
@@ -121,4 +116,3 @@ Copy the webhook URL and save it to your computer. You'll come back to this in a
     $ curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/${KEY}
 
 И появится сообщение в general чате.
-

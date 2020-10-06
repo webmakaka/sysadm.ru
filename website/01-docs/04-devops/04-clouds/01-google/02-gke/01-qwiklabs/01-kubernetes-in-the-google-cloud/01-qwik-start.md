@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Kubernetes Engine Qwik Start
+description: Kubernetes Engine Qwik Start
+keywords: Kubernetes Engine Qwik Start
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-in-the-google-cloud/qwik-start/
 ---
 
 # [GSP100] Kubernetes Engine: Qwik Start
-
 
 <br/>
 
@@ -40,4 +41,3 @@ http://35.238.204.137:8080/
 <br/>
 
     $ gcloud container clusters delete marleycluster1
-

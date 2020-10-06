@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Cisco Router 1941 backup конфигов на Linux с помощью scp
+description: Cisco Router 1941 backup конфигов на Linux с помощью scp
+keywords: Cisco Router 1941 backup конфигов на Linux с помощью scp
 permalink: /devices/cisco/routers/1941/backup-configs-to-linux-by-scp/
 ---
-
 
 # Cisco Router 1941 backup конфигов на Linux с помощью scp
 
@@ -11,12 +12,9 @@ permalink: /devices/cisco/routers/1941/backup-configs-to-linux-by-scp/
     cisco-router-1941(config)#ip scp server enable
     cisco-router-1941(config)#exit
 
-
 <br/>
 
-
 ### Backup Startup Config by SCP
-
 
     dir nvram:/
     Directory of nvram:/
@@ -30,10 +28,7 @@ permalink: /devices/cisco/routers/1941/backup-configs-to-linux-by-scp/
         6  -rw-         559                    <no date>  IOS-Self-Sig#1.cer
         7  -rw-          17                    <no date>  ecfm_ieee_mib
 
-
 <br/>
-
-
 
     cisco-router-1941# copy nvram:/startup-config scp://marley@192.168.1.5://home/marley/Documents/startup-config
 
@@ -45,7 +40,6 @@ permalink: /devices/cisco/routers/1941/backup-configs-to-linux-by-scp/
     ! Sink: C0644 1743 startup-config
 
     1743 bytes copied in 6.672 secs (261 bytes/sec)
-
 
 На вопросы отвечать Enter а не Y
 

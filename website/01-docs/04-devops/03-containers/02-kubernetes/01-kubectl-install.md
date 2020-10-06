@@ -9,7 +9,7 @@ permalink: /devops/containers/kubernetes/install/
 # Инсталляция kubectl ubuntu 18.04
 
 Делаю:  
-13.09.2020
+28.09.2020
 
 <br/>
 
@@ -19,7 +19,7 @@ permalink: /devops/containers/kubernetes/install/
 
 ```shell
 
-// Текущая стабильная версия kubernetes (v1.19.1)
+// Текущая стабильная версия kubernetes (v1.19.2)
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 
@@ -27,7 +27,7 @@ $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stab
 $ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
 
 $ kubectl version --client --short
-Client Version: v1.19.1
+Client Version: v1.19.2
 
 
 // Удалить

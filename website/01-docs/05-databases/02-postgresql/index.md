@@ -1,13 +1,15 @@
 ---
 layout: page
 title: PostgreSQL
+description: PostgreSQL
+keywords: Linux, PostgreSQL
 permalink: /databases/postgresql/
 ---
 
-# Инсталляция PostgreSQL 
+# Инсталляция PostgreSQL
 
 [Ubuntu](/databases/postgresql/install/ubuntu/)  
-[Centos](/databases/postgresql/install/centos/)  
+[Centos](/databases/postgresql/install/centos/)
 
 <br/>
 
@@ -29,4 +31,4 @@ permalink: /databases/postgresql/
 
 <br/>
 
-![no pg_hba.conf entry for host](/img/databases/postgresql/datagrip-postgresql-heroku.png "no pg_hba.conf entry for host"){: .center-image }
+![no pg_hba.conf entry for host](/img/databases/postgresql/datagrip-postgresql-heroku.png 'no pg_hba.conf entry for host'){: .center-image }

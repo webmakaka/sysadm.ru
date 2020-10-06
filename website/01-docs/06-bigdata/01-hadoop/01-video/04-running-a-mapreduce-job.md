@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Working with Hadoop via the Command Line Running a MapReduce Job
+description: Working with Hadoop via the Command Line Running a MapReduce Job
+keywords: Working with Hadoop via the Command Line Running a MapReduce Job
 permalink: /bigdata/hadoop/running-a-mapreduce-job/
 ---
 
@@ -8,12 +10,10 @@ permalink: /bigdata/hadoop/running-a-mapreduce-job/
 
     $ cd /srv/hadoop/share/hadoop/mapreduce/
 
-
 <br/>
 
     $ hadoop jar hadoop-mapreduce-examples-2.5.2.jar wordcount shakespeare/input shakespeare/output
     Error creating temp dir in hadoop.tmp.dir /var/app/hadoop/data due to Permission denied
-
 
 <br/>
 
@@ -24,14 +24,12 @@ permalink: /bigdata/hadoop/running-a-mapreduce-job/
     $ ls -la /var/app/hadoop/
     drwxrwx--x 4 hadoop hadoop 4096 Jan  7  2015 data
 
-<br/>  
-
+<br/>
 
     $ hadoop jar hadoop-mapreduce-examples-2.5.2.jar wordcount shakespeare/input shakespeare/output
 
     15/07/25 09:41:36 INFO client.RMProxy: Connecting to ResourceManager at localhost/127.0.0.1:8050
     org.apache.hadoop.security.AccessControlException: Permission denied: user=student, access=EXECUTE, inode="/tmp":hadoop:supergroup:drwxrwx---
-
 
 <br/>
 
@@ -39,9 +37,7 @@ permalink: /bigdata/hadoop/running-a-mapreduce-job/
 
     ls: Permission denied: user=student, access=READ_EXECUTE, inode="/tmp":hadoop:supergroup:drwxrwx---
 
-
 <br/>
-
 
     $ sudo su - hadoop
 
@@ -124,12 +120,9 @@ permalink: /bigdata/hadoop/running-a-mapreduce-job/
     	File Output Format Counters
     		Bytes Written=356409
 
-
-
 http://192.168.1.11:8088/
 
 Появилось какое-то приложение.
-
 
     $ hadoop fs -ls shakespeare/output
 
@@ -140,7 +133,6 @@ http://192.168.1.11:8088/
 <br/>
 
     $ hadoop fs -cat shakespeare/output/part-r-00000
-
 
 <br/>
 

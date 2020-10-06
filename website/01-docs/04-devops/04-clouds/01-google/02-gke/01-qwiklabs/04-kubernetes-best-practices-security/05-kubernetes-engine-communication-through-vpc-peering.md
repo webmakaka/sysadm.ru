@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Kubernetes Engine Communication Through VPC Peering
+description: Kubernetes Engine Communication Through VPC Peering
+keywords: Kubernetes Engine Communication Through VPC Peering
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/kubernetes-engine-communication-through-vpc-peering/
 ---
 
@@ -11,7 +13,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security
 Делаю:  
 09.06.2019
 
-
 https://www.qwiklabs.com/focuses/5540?parent=catalog
 
 <br/>
@@ -20,9 +21,7 @@ https://www.qwiklabs.com/focuses/5540?parent=catalog
 
 The execution of this code in the GCP environment creates two custom GCP networks connected via VPC peering. Each network will have two subnets - one in the us-central1 region and the other in the us-east1 region. Each of the subnets hosts a Kubernetes Engine cluster which has nginx pods and services to expose those pods across other clusters.
 
-
-![Kubernetes Engine Communication Through VPC Peering](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/kubernetes-engine-communication-through-vpc-peering/pic1.png "Kubernetes Engine Communication Through VPC Peering"){: .center-image }
-
+![Kubernetes Engine Communication Through VPC Peering](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices-security/kubernetes-engine-communication-through-vpc-peering/pic1.png 'Kubernetes Engine Communication Through VPC Peering'){: .center-image }
 
 <br>
 
@@ -72,22 +71,21 @@ http://35.232.246.213:8080/
 
 To make sure that there are no errors in the install script execution, go to the GCP Console.
 
-1. Verify that the CIDR ranges of subnet-us-west1 and subnet-us-east1 matches the specification.
-2. Click on Compute Engine > VM instances and verify that the node IP addresses are drawn from the subnet's CIDR.
-3. Click on Kubernetes Engine > Clusters to verify the 4 created clusters. Click on the cluster hyperlink and verify that "Service address range" matches the specified cluster-ipv4-cidr.
-4. Still on the Kubernetes Engine page, click on Workloads and verify that the status is OK for nginx pods.
-5. Now click on Services. Verify that the cluster ip nodeport, internal load balancer (ILB) and load balancer (LB) are created for cluster1.
-6. Verify that the cluster ip nodeport, LB and ingress services are created for cluster2.
-7. Verify that cluster IP address of all the services for a cluster are drawn from service-ipv4-cidr.
-8. Access the endpoint for URL for external load balancer to view the nginx pods.
-Still in the gke-to-gke-peering directory, run the validation script:
+1.  Verify that the CIDR ranges of subnet-us-west1 and subnet-us-east1 matches the specification.
+2.  Click on Compute Engine > VM instances and verify that the node IP addresses are drawn from the subnet's CIDR.
+3.  Click on Kubernetes Engine > Clusters to verify the 4 created clusters. Click on the cluster hyperlink and verify that "Service address range" matches the specified cluster-ipv4-cidr.
+4.  Still on the Kubernetes Engine page, click on Workloads and verify that the status is OK for nginx pods.
+5.  Now click on Services. Verify that the cluster ip nodeport, internal load balancer (ILB) and load balancer (LB) are created for cluster1.
+6.  Verify that the cluster ip nodeport, LB and ingress services are created for cluster2.
+7.  Verify that cluster IP address of all the services for a cluster are drawn from service-ipv4-cidr.
+8.  Access the endpoint for URL for external load balancer to view the nginx pods.
+    Still in the gke-to-gke-peering directory, run the validation script:
 
-    $ ./validate.sh
+        $ ./validate.sh
 
 <br/>
 
 ### Verify the pod-to-service communication
-
 
 Next you will run a pod-to-service validation script that does the following:
 
@@ -112,4 +110,3 @@ This script demonstrates how the pods in cluster1 can access the local Kubernete
 
     $ cd gke-to-gke-peering
     $ ./cleanup.sh
-

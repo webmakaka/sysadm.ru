@@ -1,14 +1,14 @@
 ---
 layout: page
 title: RKT (Roket)
+description: RKT (Roket)
+keywords: RKT (Roket)
 permalink: /devops/containers/krt/
 ---
 
 # RKT (Roket)
 
-
 На виртуальной машине с coreos:
-
 
     1.	 First, we need to trust the remote site before we download any ACI file from there, as rkt verifies signatures by default:
 

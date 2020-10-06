@@ -1,15 +1,14 @@
 ---
 layout: page
 title: CoreOS Видеокурсы
+description: CoreOS Видеокурсы
+keywords: CoreOS Видеокурсы
 permalink: /devops/containers/coreos/video-courses/
 ---
 
-
 # CoreOS Видеокурсы
 
-
 <br/>
-
 
 ### [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
 
@@ -17,9 +16,7 @@ permalink: /devops/containers/coreos/video-courses/
     <li><a href="/devops/containers/coreos/introduction-to-coreos/">[O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]</a></li>
 </ul>
 
-
 <br/>
-
 
 ### Getting Started with CoreOS [29 Nov 2016, ENG]
 
@@ -28,7 +25,6 @@ permalink: /devops/containers/coreos/video-courses/
 <ul>
     <li><a href="/devops/containers/coreos/getting-started-with-coreos/">Getting Started with CoreOS [29 Nov 2016, ENG]</a></li>
 </ul>
-
 
 <br/>
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: How to deploy mongodb replica set with authentification
+description: How to deploy mongodb replica set with authentification
+keywords: How to deploy mongodb replica set with authentification
 permalink: /databases/deploy-mongodb-replica-set-with-authentification/
 ---
 

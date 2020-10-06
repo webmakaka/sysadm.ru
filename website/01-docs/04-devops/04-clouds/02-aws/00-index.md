@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Amazon Web Services (AWS)
+description: Amazon Web Services (AWS)
+keywords: Amazon Web Services (AWS)
 permalink: /devops/clouds/aws/
 ---
 

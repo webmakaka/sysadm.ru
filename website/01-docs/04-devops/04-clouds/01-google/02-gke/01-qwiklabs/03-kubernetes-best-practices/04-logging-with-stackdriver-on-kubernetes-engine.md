@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Logging with Stackdriver on Kubernetes Engine
+description: Logging with Stackdriver on Kubernetes Engine
+keywords: Logging with Stackdriver on Kubernetes Engine
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/
 ---
 
@@ -11,13 +13,11 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-
 Делаю:  
 04.05.2019
 
-
 https://www.qwiklabs.com/focuses/5539?parent=catalog
-
 
 <br/>
 
-![Logging with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/pic1.png "Logging with Stackdriver on Kubernetes Engine"){: .center-image }
+![Logging with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/pic1.png 'Logging with Stackdriver on Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -48,7 +48,6 @@ http://35.225.188.57:8080/
 
 ### Generating Logs
 
-
 To get the URL for the application page, perform the following steps:
 
 1. In the GCP console, from the Navigation menu, go to the Networking section and click on Network services.
@@ -64,15 +63,13 @@ To get the URL for the application page, perform the following steps:
 
 Stackdriver --> Logging
 
- filter --> GKE Container > stackdriver-logging > default
+filter --> GKE Container > stackdriver-logging > default
 
- ![Logging with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/pic2.png "Logging with Stackdriver on Kubernetes Engine"){: .center-image }
-
+![Logging with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/pic2.png 'Logging with Stackdriver on Kubernetes Engine'){: .center-image }
 
 <br/>
 
 ### Viewing Log Exports
-
 
 The Terraform configuration built out two Log Export Sinks. To view the sinks perform the following steps:
 
@@ -86,8 +83,7 @@ The Terraform configuration built out two Log Export Sinks. To view the sinks pe
 
 5. Additionally, you could create additional custom export sinks by clicking on the Create Export option in the top of the navigation window.
 
- ![Logging with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/pic3.png "Logging with Stackdriver on Kubernetes Engine"){: .center-image }
-
+![Logging with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/pic3.png 'Logging with Stackdriver on Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -97,7 +93,7 @@ The Terraform configuration created a Cloud Storage Bucket named stackdriver-gke
 
 Navigation menu --> Storage --> stackdriver-gke-logging-<random-Id>
 
-![Logging with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/pic4.png "Logging with Stackdriver on Kubernetes Engine"){: .center-image }
+![Logging with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/pic4.png 'Logging with Stackdriver on Kubernetes Engine'){: .center-image }
 
 <br/>
 
@@ -107,9 +103,8 @@ The Terraform configuration will create a BigQuery DataSet named gke_logs_datase
 
 Navigation menu --> BigQuery --> gke_logs_dataset
 
-
-Query Table --> 
+Query Table -->
 
         SELECT * FROM `qwiklabs-gcp-b7f64a64ea05a0e9.gke_logs_dataset.fluentd_gcp_scaler_20190604`
 
-![Logging with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/pic5.png "Logging with Stackdriver on Kubernetes Engine"){: .center-image }
+![Logging with Stackdriver on Kubernetes Engine](/img/devops/clouds/google/gke/qwiklabs/kubernetes-best-practices/logging-with-stackdriver-on-kubernetes-engine/pic5.png 'Logging with Stackdriver on Kubernetes Engine'){: .center-image }

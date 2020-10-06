@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Set Up Network and HTTP Load Balancers
+description: Set Up Network and HTTP Load Balancers
+keywords: Set Up Network and HTTP Load Balancers
 permalink: /devops/clouds/google/gce/qwiklabs/set-up-network-and-http-load-balancers/
 ---
 
 # [GSP007] Set Up Network and HTTP Load Balancers
-
 
 <br/>
 
@@ -18,7 +19,6 @@ permalink: /devops/clouds/google/gce/qwiklabs/set-up-network-and-http-load-balan
 
     $ gcloud config set compute/zone us-central1-a
     $ gcloud config set compute/region us-central1
-
 
 ### Create multiple web server instances
 
@@ -143,13 +143,11 @@ You can then visit the load balancer from the browser http://IP_ADDRESS/ where I
 
 After creating the global forwarding rule, it can take several minutes for your configuration to propagate.
 
-
     $ gcloud compute forwarding-rules list
 
     NAME               REGION       IP_ADDRESS      IP_PROTOCOL  TARGET
     http-content-rule               35.201.127.153  TCP          http-lb-proxy
     nginx-lb           us-central1  35.238.83.178   TCP          us-central1/targetPools/nginx-pool
-
 
 Take note of the http-content-rule IP_ADDRESS for the forwarding rule.
 

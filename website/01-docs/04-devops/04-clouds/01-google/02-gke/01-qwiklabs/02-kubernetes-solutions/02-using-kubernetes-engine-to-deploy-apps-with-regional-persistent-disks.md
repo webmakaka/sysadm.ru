@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Using Kubernetes Engine to Deploy Apps with Regional Persistent Disks
+description: Using Kubernetes Engine to Deploy Apps with Regional Persistent Disks
+keywords: Using Kubernetes Engine to Deploy Apps with Regional Persistent Disks
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/using-kubernetes-engine-to-deploy-apps-with-regional-persistent-disks/
 ---
 
@@ -10,7 +12,6 @@ permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/using-kuberne
 
 Делаю:  
 24.05.2019
-
 
 https://www.qwiklabs.com/focuses/1050?parent=catalog
 
@@ -38,7 +39,7 @@ https://www.qwiklabs.com/focuses/1050?parent=catalog
 ### Install and initialize Helm
 
     $ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
-    
+
     $ chmod 700 get_helm.sh
 
     $ ./get_helm.sh
@@ -162,7 +163,6 @@ EOF
 
     $ kubectl describe pv $PV
 
-
 <br/>
 
 ```
@@ -171,6 +171,7 @@ Username: user
 Password: $(kubectl get secret --namespace default wp-repd-wordpress -o jsonpath="{.data.wordpress-password}" | base64 --decode)
 EOF
 ```
+
 <br/>
 
     $ echo http://$SERVICE_IP/admin
@@ -183,7 +184,6 @@ You now have a working deployment of WordPress that is backed by regional persis
 
 У меня все сломалось, ничего не поднялось. Разбираться сейчас не хочется!
 Контейнер не может подлючиться к MYSQL серверу.
-
 
     $ NODE=$(kubectl get pods -l app=wp-repd-wordpress -o jsonpath='{.items..spec.nodeName}')
 
@@ -224,4 +224,3 @@ Make sure the node that is displayed is different from the node in the previous 
     http://34.83.219.236/admin
 
 You have attached a regional persistent disk to a node that is in a different zone.
-

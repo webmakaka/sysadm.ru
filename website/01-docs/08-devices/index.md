@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Devices
+description: Devices
+keywords: Devices
 permalink: /devices/
 ---
 

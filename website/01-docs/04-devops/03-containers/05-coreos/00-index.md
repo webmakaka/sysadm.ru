@@ -1,6 +1,8 @@
 ---
 layout: page
 title: CoreOS
+description: CoreOS
+keywords: CoreOS
 permalink: /devops/containers/coreos/
 ---
 
@@ -58,7 +60,6 @@ permalink: /devops/containers/coreos/
 
 ### Примеры запуска
 
-
 -   Docker dev environment on laptop
 -   Small cluster
 -   Easy development/testing cluster
@@ -81,7 +82,6 @@ permalink: /devops/containers/coreos/
 **Easy development/testing cluster**
 
 <br/>
-
 
 [Пример 3 (Easy development/testing cluster)](/devops/containers/coreos/example/03/)
 

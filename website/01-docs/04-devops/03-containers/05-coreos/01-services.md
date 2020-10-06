@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Основные сервисы CoreOS
+description: Основные сервисы CoreOS
+keywords: Основные сервисы CoreOS
 permalink: /devops/containers/coreos/services/
 ---
 
@@ -30,17 +32,17 @@ Etcd - похоже на Consul и ZooKeeper. (Лично я ничего из �
 
 <br/>
 
-![etcd](/img/devops/containers/coreos/etcd.png "etcd"){: .center-image }
+![etcd](/img/devops/containers/coreos/etcd.png 'etcd'){: .center-image }
 
 <br/>
 
 <br/>
 
-![coreos cluster](/img/devops/containers/coreos/getting-started-with-coreos/pic1.png "coreos cluster"){: .center-image }
+![coreos cluster](/img/devops/containers/coreos/getting-started-with-coreos/pic1.png 'coreos cluster'){: .center-image }
 
 <br/>
 
-![coreos cluster](/img/devops/containers/coreos/getting-started-with-coreos/pic2.png "coreos cluster"){: .center-image }
+![coreos cluster](/img/devops/containers/coreos/getting-started-with-coreos/pic2.png 'coreos cluster'){: .center-image }
 
 <br/>
 
@@ -57,7 +59,7 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
 
 <br/>
 
-![fleetctl](/img/devops/containers/coreos/getting-started-with-coreos/pic3.png "fleetctl"){: .center-image }
+![fleetctl](/img/devops/containers/coreos/getting-started-with-coreos/pic3.png 'fleetctl'){: .center-image }
 
 <br/>
 
@@ -130,17 +132,17 @@ Fleetctl commands:
 
 flannel - виртуальная сеть, которая предоставляет подсеть, чтобы контейнеры могли между собой обмениваться пакетами. (я так перевел / понял)
 
-![fleetctl](/img/devops/containers/coreos/getting-started-with-coreos/pic5.png "fleetctl"){: .center-image }
+![fleetctl](/img/devops/containers/coreos/getting-started-with-coreos/pic5.png 'fleetctl'){: .center-image }
 
 <br/>
 
 <br/>
 
-![fleetctl](/img/devops/containers/coreos/getting-started-with-coreos/pic6.png "fleetctl"){: .center-image }
+![fleetctl](/img/devops/containers/coreos/getting-started-with-coreos/pic6.png 'fleetctl'){: .center-image }
 
 <br/>
 
-![fleetctl](/img/devops/containers/coreos/getting-started-with-coreos/pic7.png "fleetctl"){: .center-image }
+![fleetctl](/img/devops/containers/coreos/getting-started-with-coreos/pic7.png 'fleetctl'){: .center-image }
 
 <br/>
 

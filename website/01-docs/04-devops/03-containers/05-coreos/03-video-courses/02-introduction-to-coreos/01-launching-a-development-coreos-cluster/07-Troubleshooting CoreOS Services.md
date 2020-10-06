@@ -1,16 +1,14 @@
 ---
 layout: page
 title: Troubleshooting CoreOS Services
+description: Troubleshooting CoreOS Services
+keywords: Troubleshooting CoreOS Services
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/Troubleshooting_CoreOS_Services/
 ---
 
-
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster : Troubleshooting CoreOS Services
 
-
-
 ### Troubleshooting CoreOS Services
-
 
     $ systemctl status docker
     ● docker.service - Docker Application Container Engine
@@ -63,7 +61,6 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
     Nov 27 02:43:05 core-02 fleetd[831]: INFO reconcile.go:330: AgentReconciler comp
     Nov 27 02:43:05 core-02 fleetd[831]: INFO reconcile.go:330: AgentReconciler comp
 
-
 <br/>
 
     $ systemctl status -l etcd
@@ -96,8 +93,6 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
     Nov 27 03:36:55 core-01 etcd2[833]: server is likely overloaded
     Nov 27 03:36:55 core-01 etcd2[833]: failed to send out heartbeat on time (deadli
     Nov 27 03:36:55 core-01 etcd2[833]: server is likely overloaded
-
-
 
 <br/>
 

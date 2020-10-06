@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Cisco Routers
+description: Cisco Routers
+keywords: Cisco Routers
 permalink: /devices/cisco/routers/
 ---
 

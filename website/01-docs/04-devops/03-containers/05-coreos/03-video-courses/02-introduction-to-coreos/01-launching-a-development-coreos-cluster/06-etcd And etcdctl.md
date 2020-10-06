@@ -1,16 +1,14 @@
 ---
 layout: page
 title: etcd And etcdctl
+description: etcd And etcdctl
+keywords: etcd And etcdctl
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/etcd_And_etcdctl/
 ---
 
-
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster : etcd And etcdctl
 
-
-
 ### Interacting with ETCD
-
 
     $ etcdctl ls /
     /coreos.com
@@ -50,7 +48,6 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
 
     {"semaphore":1,"max":1,"holders":null}
 
-
 <br/>
 
     $ etcdctl mkdir /my_data
@@ -60,7 +57,7 @@ permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-developm
 
     $ etcdctl mk /my_data/key myvalue
 
-    $ etcdctl get /my_data/key       
+    $ etcdctl get /my_data/key
     myvalue
 
     $ etcdctl update /my_data/key myNewValue

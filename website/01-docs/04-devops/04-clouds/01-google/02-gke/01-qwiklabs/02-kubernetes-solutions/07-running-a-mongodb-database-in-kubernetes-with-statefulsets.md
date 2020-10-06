@@ -1,20 +1,19 @@
 ---
 layout: page
 title: Running a MongoDB Database in Kubernetes with StatefulSets
+description: Running a MongoDB Database in Kubernetes with StatefulSets
+keywords: Running a MongoDB Database in Kubernetes with StatefulSets
 permalink: /devops/clouds/google/gke/qwiklabs/kubernetes-solutions/running-a-mongodb-database-in-kubernetes-with-statefulsets/
 ---
 
 # [GSP022] Running a MongoDB Database in Kubernetes with StatefulSets
-
 
 <br/>
 
 Делаю:  
 29.05.2019
 
-
 https://www.qwiklabs.com/focuses/640?parent=catalog
-
 
 <br/>
 
@@ -28,10 +27,10 @@ https://www.qwiklabs.com/focuses/640?parent=catalog
 
 ### Plan
 
-* Download the MongoDB replica set/sidecar (or utility container in our cluster).
-* Instantiate a StorageClass.
-* Instantiate a headless service.
-* Instantiate a StatefulSet.
+-   Download the MongoDB replica set/sidecar (or utility container in our cluster).
+-   Instantiate a StorageClass.
+-   Instantiate a headless service.
+-   Instantiate a StatefulSet.
 
 <br/>
 
@@ -97,7 +96,6 @@ Finally, there is the volumeClaimTemplates. This is what talks to the StorageCla
 <br/>
 
 ### Scaling the MongoDB replica set
-
 
     $ kubectl scale --replicas=5 statefulset mongo
     $ kubectl get pods
