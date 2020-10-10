@@ -1,36 +1,25 @@
 ---
 layout: page
-title: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 18.04
-description: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 18.04
-keywords: linux, ubuntu, virtualbox, installation, command line
+title: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1
+description: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1
+keywords: linux, virtual, ubuntu, virtualbox, installation, command line
 permalink: /linux/virtual/virtualbox/install/ubuntu/
 ---
 
-# Инсталляция VirtualBox 6.X в командной строке в Ubuntu 18.04
+# Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1
 
 Делаю:  
-09.03.2020
+10.10.2020
 
 <br/>
 
     $ sudo su -
 
-<!--
-    # cp /etc/apt/sources.list /etc/apt/sources.list.orig
-
-<br/>
-
--- # echo 'deb http://download.virtualbox.org/virtualbox/debian bionic contrib' >> /etc/apt/sources.list
-
--->
-
 <br/>
 
     # cd /tmp
 
-<br/>
-
-    # echo 'deb http://download.virtualbox.org/virtualbox/debian bionic contrib' >> /etc/apt/sources.list.d/virtualbox.list
+    # echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" >> /etc/apt/sources.list.d/virtualbox.list
 
 <br/>
 
@@ -46,14 +35,41 @@ permalink: /linux/virtual/virtualbox/install/ubuntu/
 
 <br/>
 
-Последняя 6.1 ее и ставлю
+**Последняя 6.1 ее и ставлю**
 
     # apt install -y virtualbox-6.1
 
 <br/>
 
     # vboxmanage --version
-    6.1.4r136177
+    6.1.14r140239
+
+<br/>
+
+Если ошибка:
+
+```
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ virtualbox-6.1 : Depends: libvpx5 (>= 1.6.0) but it is not installable
+                  Recommends: libsdl-ttf2.0-0 but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+```
+
+Скорее всего, вы (как и я) указали неправильную версию дистрибутива.
+
+В файле /etc/apt/sources.list.d/virtualbox.list
+
+```
+Для 20.04 focal
+Для 18.04 bionic
+и т.д.
+```
 
 <br/>
 

@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Инсталляция Vargant в Ubuntu 18.04
-description: Инсталляция Vargant в Ubuntu 18.04
+title: Инсталляция Vargant в Ubuntu 20.04.1
+description: Инсталляция Vargant в Ubuntu 20.04.1
 keywords: linux, ubuntu, vagrant, install
 permalink: /linux/virtual/vagrant/install/ubuntu/
 ---
 
-# Инсталляция Vargant в Ubuntu 18.04
+# Инсталляция Vargant в Ubuntu 20.04.1
 
 Делаю  
-09.03.2020
+10.10.2020
 
 <br/>
 
@@ -21,12 +21,12 @@ https://www.vagrantup.com/downloads.html
 ### Инсталляция Vagrant
 
     $ cd /tmp
-    $ wget https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.deb
+    $ wget https://releases.hashicorp.com/vagrant/2.2.10/vagrant_2.2.10_x86_64.deb
 
-    $ sudo dpkg -i vagrant_2.2.7_x86_64.deb
+    $ sudo dpkg -i vagrant_2.2.10_x86_64.deb
 
     $ vagrant -v
-    Vagrant 2.2.7
+    Vagrant 2.2.10
 
 <br/>
 

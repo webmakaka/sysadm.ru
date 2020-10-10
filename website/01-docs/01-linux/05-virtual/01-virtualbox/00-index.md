@@ -16,11 +16,15 @@ Offtopic:
 
 <br/>
 
-[Основные команды](/linux/virtual/virtualbox/commands/)
-
-### Инсталляция VirtualBox
+### Инсталляция
 
 [Инсталляция VirtualBox](/linux/virtual/virtualbox/install/)
+
+<br/>
+
+### Команды
+
+[Основные команды](/linux/virtual/virtualbox/commands/)
 
 <br/>
 

@@ -2,7 +2,7 @@
 layout: page
 title: Установить в ubuntu nvidia драйвера вместо opensource
 description: Установить в ubuntu nvidia драйвера вместо opensource
-keywords: Установить в ubuntu nvidia драйвера вместо opensource
+keywords: ubuntu, nvidia, drivers
 permalink: /linux/hardware/videocard/ubuntu/drivers/nvidia/
 ---
 
@@ -48,7 +48,9 @@ permalink: /linux/hardware/videocard/ubuntu/drivers/nvidia/
     	Flags: bus master, fast devsel, latency 0, IRQ 37
     	Memory at fbcfc000 (32-bit, non-prefetchable) [size=16K]
 
-Обратить внимание на строчку:
+<br/>
+
+**Обратить внимание на строчку:**
 
     Kernel driver in use: nvidia
 
@@ -67,3 +69,13 @@ permalink: /linux/hardware/videocard/ubuntu/drivers/nvidia/
 
 Links:  
 http://www.binarytides.com/install-nvidia-drivers-ubuntu-14-04/
+
+<br/>
+
+<!--
+
+Возможно, нужно установить драйвера nvidia следующей командой
+
+    $ sudo ubuntu-drivers autoinstall
+
+-->

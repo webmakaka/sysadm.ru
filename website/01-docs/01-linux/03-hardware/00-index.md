@@ -2,7 +2,7 @@
 layout: page
 title: Работа с железками в linux
 description: Работа с железками в linux
-keywords: Работа с железками в linux
+keywords: linux, hardware
 permalink: /linux/hardware/
 ---
 

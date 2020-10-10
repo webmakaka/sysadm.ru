@@ -12,14 +12,13 @@ permalink: /linux/virtual/vagrant/
 
 Разумеется можно сделать образы и при необходимости их можно каждый раз импортировать, но раз есть инструмент, который с помощью одной команды может поднимать одну или несколько виртуальных машин, почему бы его не использовать.
 
-
 <br/>
 
 ### Наработки админа сайта
 
-[Знакомство с Vagrant](/linux/virtual/vagrant/crash-course/)
+[Инсталляция Vargant в Ubuntu 20.04.1](/linux/virtual/vagrant/install/ubuntu/)
 
-[Инсталляция Vargant в Ubuntu 18.04](/linux/virtual/vagrant/install/ubuntu/)
+[Знакомство с Vagrant](/linux/virtual/vagrant/crash-course/)
 
 [Команды Vagrant](/linux/virtual/vagrant/commands/)
 

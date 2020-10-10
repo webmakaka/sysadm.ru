@@ -8,7 +8,8 @@ permalink: /linux/virtual/vagrant/vagrant-gitlab/
 
 # Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами
 
-Делаю 22.03.2019
+Делаю  
+22.03.2019
 
 <br/>
 

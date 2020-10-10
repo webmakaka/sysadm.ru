@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Virtual Box
+description: Инсталляция VirtualBox
+keywords: linux, virtual, virtualbox, install
 permalink: /linux/virtual/virtualbox/install/
 ---
 
@@ -20,7 +22,7 @@ Offtopic:
 
 ### Инсталляция VirtualBox 6.X
 
-[Инсталляция VirtualBox 6.X в командной строке в Ubuntu 18](/linux/virtual/virtualbox/install/ubuntu/)
+[Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1](/linux/virtual/virtualbox/install/ubuntu/)
 
 <br/>
 
