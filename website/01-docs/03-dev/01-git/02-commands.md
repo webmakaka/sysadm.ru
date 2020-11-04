@@ -262,7 +262,6 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 
     $ export PS1='Geoff[\W]$(__git_ps1 "(%s)"): '
 
-
 <br/>
 
 ### Откатить файлы к определенному коммиту
@@ -270,7 +269,6 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
     git checkout a82de97faaafee458d47c60a51e12f7d7c7dba13 file_path/file_name
 
     git rebase -i HEAD~2
-
 
 <br/>
 
@@ -281,6 +279,7 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
     $ rm ./project2-graphql-apollo/app/client/.git
     $ git rm --cached ./project2-graphql-apollo/app/client/
 
+<!--
 
 <br/>
 
@@ -292,4 +291,6 @@ git config --global push.default simple
 
 -- наоборот
 
-git config --global push.default matching    
+git config --global push.default matching
+
+-->

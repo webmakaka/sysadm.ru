@@ -2,7 +2,7 @@
 layout: page
 title: Amazon Web Services (AWS)
 description: Amazon Web Services (AWS)
-keywords: Amazon Web Services (AWS)
+keywords: devops, clouds, aws
 permalink: /devops/clouds/aws/
 ---
 
@@ -38,3 +38,30 @@ permalink: /devops/clouds/aws/
 Когда хочется протестировать что-то предназначенное для AWS локально, можно посмотреть вот на эту штуку:
 
 https://github.com/localstack/localstack
+
+<br/>
+
+### Инсталляция AWS CLI
+
+    $ cd ~/tmp
+    $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+    $ unzip awscliv2.zip
+    $ sudo ./aws/install
+
+    $ aws --version
+    aws-cli/2.0.57 Python/3.7.3 Linux/5.4.0-51-generic exe/x86_64.ubuntu.20
+
+<br/>
+
+### Инсталляция Serverless Framework CLI
+
+    $ curl -o- -L https://slss.io/install | bash
+
+В новом терминале
+
+    $ sls --version
+    Framework Core: 2.8.0 (standalone)
+    Plugin: 4.1.1
+    SDK: 2.3.2
+    Components: 3.2.3

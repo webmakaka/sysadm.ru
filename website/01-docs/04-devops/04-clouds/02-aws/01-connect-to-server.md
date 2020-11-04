@@ -18,6 +18,8 @@ permalink: /devops/clouds/aws/connect-to-server/
 см:  
 http://www.youtube.com/watch?v=Ix5IDuyamuY
 
+<br/>
+
 ### Converting a ppk file to a pem file for accessing AWS ec2 instances on Linux
 
     $ sudo apt-get install putty-tools
