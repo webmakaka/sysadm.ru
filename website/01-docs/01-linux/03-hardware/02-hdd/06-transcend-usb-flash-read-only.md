@@ -48,19 +48,19 @@ permalink: /linux/hardware/hdd/transcend-usb-flash-read-only/
 
     Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
 
-    Command (m for help): n
+    Command (m for help): [n]
     Partition type:
        p   primary (0 primary, 0 extended, 4 free)
        e   extended
-    Select (default p): p
-    Partition number (1-4, default 1):
+    Select (default p): [p]
+    Partition number (1-4, default 1): [Enter]
     Using default value 1
-    First sector (1024-8148439, default 1024):
+    First sector (1024-8148439, default 1024): [Enter]
     Using default value 1024
-    Last sector, +sectors or +size{K,M,G} (1024-8148439, default 8148439):
+    Last sector, +sectors or +size{K,M,G} (1024-8148439, default 8148439): [Enter]
     Using default value 8148439
 
-    Command (m for help): w
+    Command (m for help): [w]
     The partition table has been altered!
 
     Calling ioctl() to re-read partition table.
@@ -70,12 +70,12 @@ permalink: /linux/hardware/hdd/transcend-usb-flash-read-only/
 
     # fdisk /dev/sde
 
-    Command (m for help): t
-    Selected partition 1
-    Hex code (type L to list codes): b
+    Command (m for help): [t]
+    Selected partition [1]
+    Hex code (type L to list codes): [b]
     Changed system type of partition 1 to b (W95 FAT32)
 
-    Command (m for help): w
+    Command (m for help): [w]
     The partition table has been altered!
 
     Calling ioctl() to re-read partition table.
@@ -92,3 +92,13 @@ permalink: /linux/hardware/hdd/transcend-usb-flash-read-only/
 
 Все.  
 Можно пользоваться.
+
+<br/>
+
+**Offtopic:**
+
+USB microsd SD Card на ~32 GB забивалась нулями: ~ 7 ч 15 минут
+
+```
+33554432000 bytes (34 GB, 31 GiB) copied, 26058,4 s, 1,3 MB/s
+```
