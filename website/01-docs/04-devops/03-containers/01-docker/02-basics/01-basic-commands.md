@@ -13,11 +13,17 @@ https://hub.docker.com
 
 ---
 
-\$ docker -v
+<br/>
+
+    $ docker -v
 
     Docker version 1.9.1, build a34a1d5
 
-\$ docker version
+<br/>
+
+    $ docker version
+
+<br/>
 
     Client:
      Version:      1.9.1
@@ -35,7 +41,11 @@ https://hub.docker.com
      Built:        Fri Nov 20 13:12:04 UTC 2015
      OS/Arch:      linux/amd64
 
-\$ docker info
+<br/>
+
+    $ docker info
+
+<br/>
 
     Containers: 3
     Images: 87

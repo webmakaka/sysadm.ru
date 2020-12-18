@@ -29,7 +29,7 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-20.04-lts/
 
     $ sudo apt-get install apt-transport-https
     $ sudo apt-get update
-    $ sudo apt-get install code
+    $ sudo apt-get install -y code
 
 <br/>
 

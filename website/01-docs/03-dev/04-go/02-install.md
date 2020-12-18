@@ -3,15 +3,61 @@ layout: page
 title: Подготовка окружения для программирование в Linux на GO
 description: Подготовка окружения для программирование в Linux на GO
 keywords: Подготовка окружения для программирование в Linux на GO
-permalink: /dev/go/env/
+permalink: /dev/go/install/
 ---
 
 # Подготовка окружения для программирование в Linux на GO
 
-**Делаю:**  
-02.02.2019
+<br/>
+
+### Мой вариант инсталляции GO (в каталог /opt)
 
 <br/>
+
+**Делаю:**  
+23.11.2020
+
+<br/>
+
+    $ cd ~/tmp/
+    $ wget --no-check-certificate https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
+
+<br/>
+
+    $ tar -xvzpf go1.15.5.linux-amd64.tar.gz
+    $ sudo mkdir -p /opt/go.1.15
+    $ sudo mv go/* /opt/go.1.15/
+    $ sudo ln -s /opt/go.1.15/ /opt/go
+
+<br/>
+
+    $ sudo vi /etc/profile.d/golang.sh
+
+<br/>
+
+```
+#### GO 1.15 ########################
+
+    export GO_HOME=/opt/go
+    export PATH=${GO_HOME}/bin:$PATH
+
+#### GO 1.15 ########################
+```
+
+    $ sudo chmod +x /etc/profile.d/golang.sh
+
+<br/>
+
+    $ source /etc/profile.d/golang.sh
+
+<br/>
+
+    $ go version
+    go version go1.15.5 linux/amd64
+
+<br/>
+
+### Какие-то другие варианты
 
 <div align="center">
     <iframe width="853" height="480" src="https://www.youtube.com/embed/9Pk7xAT_aCU" frameborder="0" allowfullscreen></iframe>
@@ -64,65 +110,6 @@ https://gitlab.com/rvasily/msu-go-11/tree/master
 
     # ./main
     Hello, World!
-
-<br/>
-
-### Мой вариант инсталляции GO (в каталог /opt)
-
-<br/>
-
-    $ cd ~/tmp/
-    $ wget --no-check-certificate https://golang.org/dl/go1.15.linux-amd64.tar.gz
-
-<br/>
-
-    $ tar -xvzpf go1.15.linux-amd64.tar.gz
-    $ sudo mkdir -p /opt/go.1.15
-    $ sudo mv go/* /opt/go.1.15/
-    $ sudo ln -s /opt/go.1.15/ /opt/go
-
-<br/>
-
-    $  vi ~/.bashrc
-
-<br/>
-
-Добавляю строку в конец.
-
-{% highlight shell linenos %}
-
-###############################
-
-# USER DEFINED
-
-. ~/.bash_profile
-###############################
-
-{% endhighlight %}
-
-<br/>
-
-    $ vi ~/.bash_profile
-
-<br/>
-
-```
-#### GO 1.15 ########################
-
-    export GO_HOME=/opt/go
-    export PATH=${GO_HOME}/bin:$PATH
-
-#### GO 1.15 ########################
-```
-
-<br/>
-
-    $ source ~/.bash_profile
-
-<br/>
-
-    $ go version
-    go version go1.15 linux/amd64
 
 <br/>
 

@@ -8,9 +8,9 @@ permalink: /dev/go/
 
 # Программирование в Linux на GoLang
 
-### [Программирование на GoLang - материалы для изучения языка](/dev/go/materials/)
+### [Подготовка окружения для программирование в Linux на GoLang](/dev/go/install/)
 
-### [Подготовка окружения для программирование в Linux на GoLang](/dev/go/env/)
+### [Программирование на GoLang - материалы для изучения языка](/dev/go/materials/)
 
 ### [Запуск GoLang программ в контейнере Docker](/dev/go/go-inside-docker/)
 

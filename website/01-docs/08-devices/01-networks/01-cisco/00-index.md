@@ -25,3 +25,9 @@ permalink: /devices/cisco/
 ### Errors:
 
 <a href="/devices/cisco/no-matching-cipher-found/">Cisco Ошибка "no matching cipher found" при подключении к устройству по ssh в Ubuntu 18.04</a>
+
+<br/>
+
+### Беслпатный тестовый экзамен по cisco
+
+https://www.learncisco.net/cisco-practice-tests.html

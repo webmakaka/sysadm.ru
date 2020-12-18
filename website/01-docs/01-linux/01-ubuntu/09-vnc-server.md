@@ -6,12 +6,16 @@ keywords: linux, vncserver, vncviewer
 permalink: /linux/ubuntu/vnc-server/
 ---
 
+# Рекомендация!
+
+Посмотреть видео с ютбуба внизу.
+
 # Удаленный рабочий стол в Ubuntu 18.04
 
 Последний раз делаю:  
 17.08.2019
 
-В общем у меня изначально было серое окно с курсором. И я ничего не мог с этим поделать. 
+В общем у меня изначально было серое окно с курсором. И я ничего не мог с этим поделать.
 
 Нашел рабочее решение с использованием xfce4
 
@@ -42,7 +46,6 @@ startxfce4 &
 
     $ vncserver
 
-
 <br/>
 
 На клиенте:
@@ -50,20 +53,17 @@ startxfce4 &
 // UPD Наверное, лучше вот этот использовать  
 https://www.realvnc.com/en/connect/download/viewer/linux/
 
-
 <br/>
 
     $ vncviewer
 
 Подключаемся к <ip_server>:5901
 
-
 <br/>
 
 **По материалам отсюда:**
 
 https://www.linuxbuzz.com/setup-vnc-server-ubuntu-18-04-debian-9/
-
 
 <br/>
 
@@ -72,13 +72,12 @@ https://www.linuxbuzz.com/setup-vnc-server-ubuntu-18-04-debian-9/
 Если знаете как победить, напишите.  
 Но менюшки и программы рабочие.
 
-    $ sudo apt-get install -y ubuntu-gnome-desktop 
+    $ sudo apt-get install -y ubuntu-gnome-desktop
 
     // Хз нужны или нет
     $ sudo apt-get install -y xfonts-100dpi xfonts-100dpi-transcoded xfonts-75dpi xfonts-75dpi-transcoded xfonts-base
 
     $ sudo apt install -y tightvncserver
-
 
 Далее, тоже самое, что и выше, только добавить вместо startxfce4 нужно:
 
@@ -94,8 +93,12 @@ gnome-terminal &
 Может здесь что лишнее, или чего-то не хватает.
 Пока буду юзать первый вариант. Но и второй победить бы тоже хотелось.
 
-
 **Наверное полезная статья:**
 
 https://www.digitalocean.com/community/tutorials/vnc-ubuntu-16-04-ru
 
+<br/>
+
+### Ubuntu VNC Server
+
+https://www.youtube.com/watch?v=3K1hUwxxYek
