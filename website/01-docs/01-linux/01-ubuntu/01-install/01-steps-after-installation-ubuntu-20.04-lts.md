@@ -16,7 +16,6 @@ permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-20.04-lts/
     # apt update && apt-get upgrade -y
     # apt install -y vim curl git
 
-
 <br/>
 
 ### Установка VSCODE
@@ -77,13 +76,11 @@ https://code.visualstudio.com/docs/setup/linux
 
 Перезагружаемся, при старте выбираем - gnome (Metacity)
 
-
 <br/>
 
 ### Не спрашивать каждый раз пароль при комаде с sudo
 
-[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/small-improvements/)  
-
+[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/small-improvements/)
 
 <br/>
 
@@ -108,7 +105,6 @@ Keyboard & Mouse --> Additional Layout Options --> Switching to another layout -
 
 Appearance --> Theme -- Yaru-dark
 
-
 <br/>
 
 ### Установить формат дат в консоли на английский
@@ -116,7 +112,7 @@ Appearance --> Theme -- Yaru-dark
 <br/>
 
     Applications --> Preferences --> System
-    
+
     Region & Language --> Formats --> United States
 
 <br/>
@@ -124,7 +120,7 @@ Appearance --> Theme -- Yaru-dark
 ### ПО CTRL + ALT + DELETE показывать текущие процессы
 
     Applications --> Preferences --> System
-    
+
     Keyboard Shortcuts
 
     System --> Logout
@@ -146,7 +142,7 @@ Appearance --> Theme -- Yaru-dark
 
 Terminal --> Preferences
 
-![Отключить противный звук при ошибке в консоли](/img/linux/ubuntu/install/disable-sound-when-error-in-the-console.png "Отключить противный звук при ошибке в консоли"){: .center-image }
+![Отключить противный звук при ошибке в консоли](/img/linux/ubuntu/install/disable-sound-when-error-in-the-console.png 'Отключить противный звук при ошибке в консоли'){: .center-image }
 
 Color --> Built-in schemes: Black on white
 
@@ -157,14 +153,11 @@ Color --> Built-in schemes: Black on white
     Applications --> Preferences --> System
     Power --> Power Saving --> Blank screen --> Never
 
-
 <br/>
 
 ### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
-
 $ sudo vi /etc/hosts
-
 
 ```
 0.0.0.0 blackhole.beeline.ru
@@ -188,19 +181,15 @@ $ sudo vi /etc/hosts
 0.0.0.0 winline.ru
 0.0.0.0 downloadtutorials.net
 
-0.0.0.0 content.mql5.com
-
-
 
 81.17.30.22 nnm-club.me
 
 ```
 
-+
+-
 
 Отсюда добавим кучу сайтов:  
 https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
-
 
 <br/>
 
@@ -216,6 +205,11 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
     # cat ./badwebsites.txt >> /etc/hosts
 
+<br/>
+
+И отсюда:
+
+https://gitlab.com/quidsup/ntrk-tracker-radar/-/blob/master/ddg_tracker_radar_confirmed.hosts
 
 <br/>
 
@@ -223,7 +217,6 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 [Chrome](/linux/ubuntu/browsers/chrome/)  
 [Opera](/linux/ubuntu/browsers/opera/)
-
 
 <br/>
 
@@ -234,7 +227,6 @@ Snap -> Telegram -> прописать автозапуск в gnome-tweaks
     $ sudo mv Telegram /opt/telegram
 
     $ gnome-tweaks
-
 
 <!--
 
@@ -253,15 +245,9 @@ Applications -> System Tools -> Preferences -> Startup Applications
 
 <br/>
 
-Name: Telegram  
+Name: Telegram
 Command: /opt/telegram/Telegram -startintray
 
 ![Автозапуск telegram](/img/linux/ubuntu/install/autostart-telegram.png "Автозапуск telegram"){: .center-image }
 
 -->
-
-
-
-
-
-

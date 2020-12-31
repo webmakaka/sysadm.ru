@@ -14,4 +14,10 @@ permalink: /devices/
 
 ### [Cisco: Switches and Routers](/devices/cisco/)
 
-______
+# KVM over IP
+
+### [Lantronix SecureLinx Spider](/devices/kvm-over-ip/networks/lantronix-securelinx-spider/)
+
+# Источники бесперебойного питания (ИБП)
+
+### [Источники бесперебойного питания](/devices/ups/)

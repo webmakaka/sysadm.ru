@@ -8,6 +8,8 @@ permalink: /dev/git/install/ubuntu/
 
 # Инсталляция GIT из исходников в Ubuntu
 
+<br/>
+
     # apt-get install -y git
     # git --version
     # cd /tmp

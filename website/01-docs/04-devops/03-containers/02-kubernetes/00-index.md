@@ -75,3 +75,9 @@ https://github.com/kelseyhightower/kubernetes-the-hard-way
 ### CI/CD
 
 ### [CI/CD (Tekton)](/devops/containers/kubernetes/cicd/)
+
+<br/>
+
+### Free SSL for Kubernetes with Cert-Manager
+
+https://www.youtube.com/watch?v=hoLUigg4V18
