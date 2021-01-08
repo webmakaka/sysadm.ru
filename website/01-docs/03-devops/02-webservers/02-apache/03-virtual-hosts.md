@@ -3,7 +3,7 @@ layout: page
 title: Настройка виртуальных хостов
 description: Настройка виртуальных хостов
 keywords: Настройка виртуальных хостов
-permalink: /linux/webservers/apache/virtual-hosts/
+permalink: /devops/webservers/apache/virtual-hosts/
 ---
 
 # Настройка виртуальных хостов

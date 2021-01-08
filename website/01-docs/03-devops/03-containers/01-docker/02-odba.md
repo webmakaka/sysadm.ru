@@ -58,7 +58,7 @@ permalink: /devops/containers/docker/odba/
 
 Настраиваю как здесь:
 
-http://sysadm.ru/linux/webservers/nginx/1.8/debian/jessie/install/
+http://sysadm.ru/devops/webservers/nginx/1.8/debian/jessie/install/
 
     $ docker commit nginx_server marley/nginx_server:1
 

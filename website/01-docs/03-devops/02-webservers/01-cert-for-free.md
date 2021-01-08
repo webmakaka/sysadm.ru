@@ -3,7 +3,7 @@ layout: page
 title: Бесплатные сертификаты для сайта
 description: Бесплатные сертификаты для сайта
 keywords: Бесплатные сертификаты для сайта
-permalink: /linux/webservers/cert-for-free/
+permalink: /devops/webservers/cert-for-free/
 ---
 
 # Бесплатные сертификаты для сайта

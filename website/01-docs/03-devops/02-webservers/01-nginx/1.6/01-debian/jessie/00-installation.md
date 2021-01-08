@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Nginx 1.6 сервера на Debian из пакетов
 description: Инсталляция Nginx 1.6 сервера на Debian из пакетов
 keywords: Инсталляция Nginx 1.6 сервера на Debian из пакетов
-permalink: /linux/webservers/nginx/1.6/debian/jessie/installation/
+permalink: /devops/webservers/nginx/1.6/debian/jessie/installation/
 ---
 
 # Инсталляция Nginx 1.6 сервера на Debian из пакетов

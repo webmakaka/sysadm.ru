@@ -3,7 +3,7 @@ layout: page
 title: Web Servers
 description: Web Servers
 keywords: Web Servers
-permalink: /linux/webservers/
+permalink: /devops/webservers/
 ---
 
 # Web Servers
@@ -12,13 +12,13 @@ permalink: /linux/webservers/
 
 ### Nginx
 
-[Nginx](/linux/webservers/nginx/)
+[Nginx](/devops/webservers/nginx/)
 
 <br/>
 
 ### Apache
 
-[Apache](/linux/webservers/apache/)
+[Apache](/devops/webservers/apache/)
 
 <br/>
 
@@ -42,7 +42,7 @@ permalink: /linux/webservers/
 
 ### Бесплатные сертификаты для сайта
 
-[Бесплатные сертификаты для сайта](/linux/webservers/cert-for-free/)
+[Бесплатные сертификаты для сайта](/devops/webservers/cert-for-free/)
 
 <!-- <br/>
 

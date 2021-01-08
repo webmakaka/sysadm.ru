@@ -3,7 +3,7 @@ layout: page
 title: Кластеризация
 description: Кластеризация в Linux
 keywords: Кластеризация в Linux
-permalink: /linux/clustering/
+permalink: /adm/linux/clustering/
 ---
 
 # Кластеризация в Linux

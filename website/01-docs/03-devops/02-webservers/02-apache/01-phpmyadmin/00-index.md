@@ -3,7 +3,7 @@ layout: page
 title: PHPMyAdmin показывает белый экран, без какого либо кода
 description: PHPMyAdmin показывает белый экран, без какого либо кода
 keywords: PHPMyAdmin показывает белый экран, без какого либо кода
-permalink: /linux/webservers/apache/phpmyadmin/
+permalink: /devops/webservers/apache/phpmyadmin/
 ---
 
 # PHPMyAdmin показывает белый экран, без какого либо кода

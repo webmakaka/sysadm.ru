@@ -3,12 +3,12 @@ layout: page
 title: Настройка Nginx как proxy сервера
 description: Настройка Nginx как proxy сервера
 keywords: Настройка Nginx как proxy сервера
-permalink: /linux/webservers/nginx/1.8/debian/jessie/proxy/
+permalink: /devops/webservers/nginx/1.8/debian/jessie/proxy/
 ---
 
 # Настройка Nginx как proxy сервера
 
-Устанавливаю также как <a href="/linux/webservers/nginx/1.8/debian/jessie/install/">здесь</a>
+Устанавливаю также как <a href="/devops/webservers/nginx/1.8/debian/jessie/install/">здесь</a>
 
 На 192.168.1.202 работает webserver и принимает и корректно обрабатывает запросы на обращение по адресу sysadm.ru на порту 8080.
 

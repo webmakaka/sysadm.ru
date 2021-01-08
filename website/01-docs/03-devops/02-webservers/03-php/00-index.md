@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция PHP на Centos 6.6 из пакетов
 description: Инсталляция PHP на Centos 6.6 из пакетов
 keywords: Инсталляция PHP на Centos 6.6 из пакетов
-permalink: /linux/webservers/apache/php/
+permalink: /devops/webservers/apache/php/
 ---
 
 # Инсталляция PHP на Centos 6.6 из пакетов
