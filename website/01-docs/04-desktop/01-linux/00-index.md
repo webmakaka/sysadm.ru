@@ -46,7 +46,7 @@ permalink: /desktop/linux/
 
 ### [Базы данных](/adm/databases/)
 
-### [Виртуализация](/devops/devops/linux/virtual/)
+### [Виртуализация](/devops/linux/virtual/)
 
 ### [Контейнеры](/devops/containers/)
 
