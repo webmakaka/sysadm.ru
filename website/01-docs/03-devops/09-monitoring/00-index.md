@@ -1,15 +1,15 @@
 ---
 layout: page
 title: Мониторинг серверов и рабочих станций в Linux
-permalink: /linux/monitoring/
+permalink: /devops/linux/monitoring/
 ---
 
 # Мониторинг серверов и рабочих станций в Linux
 
-### [Check_mk](/linux/monitoring/check-mk/)
+### [Check_mk](/devops/linux/monitoring/check-mk/)
 
-### [Zabbix](/linux/monitoring/zabbix/)
+### [Zabbix](/devops/linux/monitoring/zabbix/)
 
-### [Nagios](/linux/monitoring/nagios/)
+### [Nagios](/devops/linux/monitoring/nagios/)
 
-### [Icinga (Форк Nagios)](/linux/monitoring/icinga/)
+### [Icinga (Форк Nagios)](/devops/linux/monitoring/icinga/)

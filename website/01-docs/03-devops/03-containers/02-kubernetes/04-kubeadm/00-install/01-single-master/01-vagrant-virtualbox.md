@@ -27,7 +27,7 @@ permalink: /devops/containers/kubernetes/kubeadm/install/single-master/vagrant-v
 
 <br/>
 
-Это будет сделано с помощью <a href="/linux/virtual/vagrant/">Vagrant</a>
+Это будет сделано с помощью <a href="/devops/linux/virtual/vagrant/">Vagrant</a>
 
 <br/>
 

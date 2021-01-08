@@ -3,7 +3,7 @@ layout: page
 title: VirtualBox Основные команды
 description: VirtualBox Основные команды
 keywords: VirtualBox Основные команды
-permalink: /linux/virtual/virtualbox/commands/
+permalink: /devops/linux/virtual/virtualbox/commands/
 ---
 
 # VirtualBox Основные команды

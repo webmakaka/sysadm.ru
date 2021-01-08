@@ -13,7 +13,7 @@ permalink: /dev/git/gitlab/install/ubuntu/
 
 <br/>
 
-Предполагается что уже установлен <a href="/linux/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/virtual/vagrant/install/ubuntu/">Vagrant</a>.
+Предполагается что уже установлен <a href="/devops/linux/virtual/virtualbox/install/">VirtualBox</a>, <a href="/devops/linux/virtual/vagrant/install/ubuntu/">Vagrant</a>.
 
 <br/>
 

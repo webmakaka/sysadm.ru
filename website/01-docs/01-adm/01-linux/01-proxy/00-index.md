@@ -3,7 +3,7 @@ layout: page
 title: Proxy Servers
 description: Proxy Servers
 keywords: Proxy Servers
-permalink: /linux/proxy/
+permalink: /adm/linux/proxy/
 ---
 
 # Proxy Servers

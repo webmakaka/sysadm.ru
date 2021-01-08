@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Creating and Managing check_mk sites
-permalink: /linux/monitoring/check-mk/creating-and-managing-sites/
+permalink: /devops/linux/monitoring/check-mk/creating-and-managing-sites/
 ---
 
 # Creating and Managing check_mk sites
@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=VpjEZ_w4Nrw&list=PL34sAs7_26wODGPEgaHrhRiXkax0q7
 
 <br/>
 
-Предполагается что уже выполнены шаги по инсталляции  <a href="/linux/monitoring/check-mk/install/">check_mk</a>.
+Предполагается что уже выполнены шаги по инсталляции  <a href="/devops/linux/monitoring/check-mk/install/">check_mk</a>.
 
 <br/>
 

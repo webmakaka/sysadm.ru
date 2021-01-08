@@ -3,7 +3,7 @@ layout: page
 title: Работа со снапшотами в VirtualBox
 description: Работа со снапшотами в VirtualBox
 keywords: Работа со снапшотами в VirtualBox
-permalink: /linux/virtual/virtualbox/snapshots/
+permalink: /devops/linux/virtual/virtualbox/snapshots/
 ---
 
 # Работа со снапшотами в VirtualBox

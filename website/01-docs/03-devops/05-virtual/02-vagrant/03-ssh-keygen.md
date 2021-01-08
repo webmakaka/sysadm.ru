@@ -3,7 +3,7 @@ layout: page
 title: SSH keys
 description: SSH keys
 keywords: SSH keys
-permalink: /linux/virtual/vagrant/ssh-keygen/
+permalink: /devops/linux/virtual/vagrant/ssh-keygen/
 ---
 
 # SSH keys (По прошествию времени, у меня по поводу всего этого какие-то сомнения)

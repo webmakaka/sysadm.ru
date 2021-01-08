@@ -3,7 +3,7 @@ layout: page
 title: Подготовка окружения для программирование в Linux на GO
 description: Подготовка окружения для программирование в Linux на GO
 keywords: Подготовка окружения для программирование в Linux на GO
-permalink: /dev/go/install/
+permalink: /dev/go/setup/
 ---
 
 # Подготовка окружения для программирование в Linux на GO
@@ -15,16 +15,16 @@ permalink: /dev/go/install/
 <br/>
 
 **Делаю:**  
-23.11.2020
+08.01.2021
 
 <br/>
 
     $ cd ~/tmp/
-    $ wget --no-check-certificate https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
+    $ wget --no-check-certificate https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
 
 <br/>
 
-    $ tar -xvzpf go1.15.5.linux-amd64.tar.gz
+    $ tar -xvzpf go1.15.6.linux-amd64.tar.gz
     $ sudo mkdir -p /opt/go.1.15
     $ sudo mv go/* /opt/go.1.15/
     $ sudo ln -s /opt/go.1.15/ /opt/go
@@ -53,7 +53,7 @@ permalink: /dev/go/install/
 <br/>
 
     $ go version
-    go version go1.15.5 linux/amd64
+    go version go1.15.6 linux/amd64
 
 <br/>
 

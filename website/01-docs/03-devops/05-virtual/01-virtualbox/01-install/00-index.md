@@ -3,7 +3,7 @@ layout: page
 title: Virtual Box
 description: Инсталляция VirtualBox
 keywords: linux, virtual, virtualbox, install
-permalink: /linux/virtual/virtualbox/install/
+permalink: /devops/linux/virtual/virtualbox/install/
 ---
 
 # Virtual Box
@@ -16,24 +16,24 @@ Offtopic:
 
 <br/>
 
-[Основные команды](/linux/virtual/virtualbox/commands/)
+[Основные команды](/devops/linux/virtual/virtualbox/commands/)
 
 <br/>
 
 ### Инсталляция VirtualBox 6.X
 
-[Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1](/linux/virtual/virtualbox/install/ubuntu/)
+[Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1](/devops/linux/virtual/virtualbox/install/ubuntu/)
 
 <br/>
 
 ### Инсталляция VirtualBox 5.X
 
-[Инсталляция VirtualBox 5.x в командной строке в Centos / Oracle Linux 7](/linux/virtual/virtualbox/install/centos/7/)
+[Инсталляция VirtualBox 5.x в командной строке в Centos / Oracle Linux 7](/devops/linux/virtual/virtualbox/install/centos/7/)
 
-[Инсталляция VirtualBox 5.X в Fedora 28](/linux/virtual/virtualbox/install/fedora/)
+[Инсталляция VirtualBox 5.X в Fedora 28](/devops/linux/virtual/virtualbox/install/fedora/)
 
 <br/>
 
 ### Инсталляция VirtualBox 4.X
 
-[Инсталляция VirtualBox в командной строке в RedHat/Centos/Oracle Linux](/linux/virtual/virtualbox/install/centos/6/)
+[Инсталляция VirtualBox в командной строке в RedHat/Centos/Oracle Linux](/devops/linux/virtual/virtualbox/install/centos/6/)

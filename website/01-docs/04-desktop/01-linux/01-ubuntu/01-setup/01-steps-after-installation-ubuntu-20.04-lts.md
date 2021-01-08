@@ -53,6 +53,7 @@ https://code.visualstudio.com/docs/setup/linux
 <br/>
 
     $ sudo apt install -y \
+        make \
         openssh-server \
         traceroute \
         vlc \

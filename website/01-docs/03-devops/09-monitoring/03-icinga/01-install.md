@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Icinga в Ubuntu Linux (Xenial)
-permalink: /linux/monitoring/icinga/ubuntu/16.04/install/
+permalink: /devops/linux/monitoring/icinga/ubuntu/16.04/install/
 ---
 
 # Инсталляция Icinga в Ubuntu Linux (Xenial)

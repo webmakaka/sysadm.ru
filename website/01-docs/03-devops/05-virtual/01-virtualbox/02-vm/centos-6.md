@@ -3,7 +3,7 @@ layout: page
 title: Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
 description: Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
 keywords: Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
-permalink: /linux/virtual/virtualbox/vm/centos-6/
+permalink: /devops/linux/virtual/virtualbox/vm/centos-6/
 ---
 
 # Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
@@ -250,7 +250,7 @@ http://manpages.ubuntu.com/manpages/lucid/man1/rdesktop.1.html
 
 ### Могут понадобиться следующие команды:
 
-    sysadm.ru/linux/virtual/virtualbox/commands/
+    sysadm.ru/devops/linux/virtual/virtualbox/commands/
 
 <br/>
 

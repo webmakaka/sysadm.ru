@@ -3,16 +3,16 @@ layout: page
 title: Виртуализация в Linux
 description: Виртуализация в Linux
 keywords: Виртуализация в Linux
-permalink: /linux/virtual/
+permalink: /devops/linux/virtual/
 ---
 
 # Виртуализация в Linux
 
 <br/>
 
-### [Virtual Box](/linux/virtual/virtualbox/)
+### [Virtual Box](/devops/linux/virtual/virtualbox/)
 
-### [KVM на Centos 6](/linux/virtual/kvm/)
+### [KVM на Centos 6](/devops/linux/virtual/kvm/)
 
 ### [Proxmox](http://odba.ru/showthread.php?t=351)
 
@@ -20,4 +20,4 @@ permalink: /linux/virtual/
 
 ### Инструменты
 
-### [Vagrant](/linux/virtual/vagrant/)
+### [Vagrant](/devops/linux/virtual/vagrant/)

@@ -3,7 +3,7 @@ layout: page
 title: Возникавшие ошибки при работе с VirtualBox
 description: Возникавшие ошибки при работе с VirtualBox
 keywords: Возникавшие ошибки при работе с VirtualBox
-permalink: /linux/virtual/virtualbox/errors/
+permalink: /devops/linux/virtual/virtualbox/errors/
 ---
 
 # Возникавшие ошибки при работе с VirtualBox

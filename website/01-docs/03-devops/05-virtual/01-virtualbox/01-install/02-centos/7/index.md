@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция VirtualBox в командной строке в Centos / Oracle Linux
 description: Инсталляция VirtualBox в командной строке в Centos / Oracle Linux
 keywords: Инсталляция VirtualBox в командной строке в Centos / Oracle Linux
-permalink: /linux/virtual/virtualbox/install/centos/7/
+permalink: /devops/linux/virtual/virtualbox/install/centos/7/
 ---
 
 # Инсталляция VirtualBox в командной строке в Centos / Oracle Linux

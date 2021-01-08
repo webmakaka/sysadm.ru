@@ -12,7 +12,7 @@ permalink: /devops/containers/docker/clustering/swarm/first-look/
 
 **ПО**
 
--   <a href="/linux/virtual/vagrant/">Vagrant</a>
+-   <a href="/devops/linux/virtual/vagrant/">Vagrant</a>
 -   <a href="/dev/git/">git</a>
 
 <br/>

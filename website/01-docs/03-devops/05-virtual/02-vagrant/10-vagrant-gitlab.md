@@ -3,7 +3,7 @@ layout: page
 title: Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами
 description: Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами
 keywords: Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами
-permalink: /linux/virtual/vagrant/vagrant-gitlab/
+permalink: /devops/linux/virtual/vagrant/vagrant-gitlab/
 ---
 
 # Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами

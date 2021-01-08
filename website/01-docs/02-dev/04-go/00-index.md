@@ -8,7 +8,7 @@ permalink: /dev/go/
 
 # Программирование в Linux на GoLang
 
-### [Подготовка окружения для программирование в Linux на GoLang](/dev/go/install/)
+### [Подготовка окружения для программирование в Linux на GoLang](/dev/go/setup/)
 
 ### [Программирование на GoLang - материалы для изучения языка](/dev/go/materials/)
 

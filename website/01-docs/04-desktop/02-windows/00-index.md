@@ -16,4 +16,4 @@ permalink: /desktop/windows/
 
 # Администрирование серверов Windows:
 
-### [Администрирование серверов Windows](/desktop/windows/servers/)
+### [Администрирование серверов Windows](/adm/windows/servers/)

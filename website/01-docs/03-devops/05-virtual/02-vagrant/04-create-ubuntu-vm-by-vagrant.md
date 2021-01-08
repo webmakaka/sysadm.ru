@@ -3,7 +3,7 @@ layout: page
 title: Создание с помощью Vagrant виртуальной машины Ubuntu
 description: Создание с помощью Vagrant виртуальной машины Ubuntu
 keywords: Создание с помощью Vagrant виртуальной машины Ubuntu
-permalink: /linux/virtual/vagrant/create-ubuntu-vm-by-vagrant/
+permalink: /devops/linux/virtual/vagrant/create-ubuntu-vm-by-vagrant/
 ---
 
 # Создание с помощью Vagrant виртуальной машины Ubuntu

@@ -3,7 +3,7 @@ layout: page
 title: Export и Import виртуальных машин VirtualBox
 description: Export и Import виртуальных машин VirtualBox
 keywords: Export и Import виртуальных машин VirtualBox
-permalink: /linux/virtual/virtualbox/export-import/
+permalink: /devops/linux/virtual/virtualbox/export-import/
 ---
 
 # Export и Import виртуальных машин VirtualBox

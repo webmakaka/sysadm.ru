@@ -12,7 +12,7 @@ permalink: /dev/git/gitlab/
 
 ### [Инсталляция GITLAB в Ubuntu 18.04 из пакетов](/dev/git/gitlab/install/ubuntu/)
 
-### [Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](/linux/virtual/vagrant/vagrant-gitlab/)
+### [Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](/devops/linux/virtual/vagrant/vagrant-gitlab/)
 
 <br/>
 

@@ -3,7 +3,7 @@ layout: page
 title: Клонирование виртуальных машин VirtualBox в командной строке
 description: Клонирование виртуальных машин VirtualBox в командной строке
 keywords: Клонирование виртуальных машин VirtualBox в командной строке
-permalink: /linux/virtual/virtualbox/clone/
+permalink: /devops/linux/virtual/virtualbox/clone/
 ---
 
 # Клонирование виртуальных машин VirtualBox в командной строке

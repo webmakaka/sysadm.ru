@@ -3,7 +3,7 @@ layout: page
 title: Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux для инсталляции базы данных Oracle
 description: Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux для инсталляции базы данных Oracle
 keywords: Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux для инсталляции базы данных Oracle
-permalink: /linux/virtual/virtualbox/vm/oracle-linux-6/
+permalink: /devops/linux/virtual/virtualbox/vm/oracle-linux-6/
 ---
 
 # Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux для инсталляции базы данных Oracle

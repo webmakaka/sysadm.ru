@@ -3,7 +3,7 @@ layout: page
 title: KVM на Centos 6
 description: KVM на Centos 6
 keywords: KVM на Centos 6
-permalink: /linux/virtual/kvm/
+permalink: /devops/linux/virtual/kvm/
 ---
 
 # KVM на Centos 6
@@ -263,13 +263,13 @@ VMName_2 — имя новой виртуальной машины
 
 </pre>
 
-![Инсталляция KVM в CENTOS](/img/linux/virtual/kvm/remmina.png 'Инсталляция KVM в CENTOS'){: .center-image }
+![Инсталляция KVM в CENTOS](/img/devops/linux/virtual/kvm/remmina.png 'Инсталляция KVM в CENTOS'){: .center-image }
 
-![Инсталляция KVM в CENTOS](/img/linux/virtual/kvm/kvm_01.png 'Инсталляция KVM в CENTOS'){: .center-image }
+![Инсталляция KVM в CENTOS](/img/devops/linux/virtual/kvm/kvm_01.png 'Инсталляция KVM в CENTOS'){: .center-image }
 
-![Инсталляция KVM в CENTOS](/img/linux/virtual/kvm/kvm_02.png 'Инсталляция KVM в CENTOS'){: .center-image }
+![Инсталляция KVM в CENTOS](/img/devops/linux/virtual/kvm/kvm_02.png 'Инсталляция KVM в CENTOS'){: .center-image }
 
-![Инсталляция KVM в CENTOS](/img/linux/virtual/kvm/kvm_03.png 'Инсталляция KVM в CENTOS'){: .center-image }
+![Инсталляция KVM в CENTOS](/img/devops/linux/virtual/kvm/kvm_03.png 'Инсталляция KVM в CENTOS'){: .center-image }
 
 <br/><br/>
 

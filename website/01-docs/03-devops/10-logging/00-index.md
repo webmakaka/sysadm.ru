@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Logging
-permalink: /linux/logging/
+description: Logging
+keywords: devops, logging
+permalink: /devops/linux/logging/
 ---
 
 # Logging

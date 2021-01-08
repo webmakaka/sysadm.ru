@@ -3,7 +3,7 @@ layout: page
 title: VirtualBox
 description: VirtualBox
 keywords: linux, VirtualBox
-permalink: /linux/virtual/virtualbox/
+permalink: /devops/linux/virtual/virtualbox/
 ---
 
 # Virtual Box
@@ -18,55 +18,55 @@ Offtopic:
 
 ### Инсталляция
 
-[Инсталляция VirtualBox](/linux/virtual/virtualbox/install/)
+[Инсталляция VirtualBox](/devops/linux/virtual/virtualbox/install/)
 
 <br/>
 
 ### Команды
 
-[Основные команды](/linux/virtual/virtualbox/commands/)
+[Основные команды](/devops/linux/virtual/virtualbox/commands/)
 
 <br/>
 
 ### Регистрация виртуальной машины (если нужно заново зарегистрировать)
 
-[Регистрация виртуальной машины](/linux/virtual/virtualbox/register/)
+[Регистрация виртуальной машины](/devops/linux/virtual/virtualbox/register/)
 
 <br/>
 
 ### Создание виртуальных машин
 
-[Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux](/linux/virtual/virtualbox/vm/centos-6/) Nat + HostOnly Network
+[Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux](/devops/linux/virtual/virtualbox/vm/centos-6/) Nat + HostOnly Network
 
-[Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux](/linux/virtual/virtualbox/vm/oracle-linux-6/) Bridget Network
+[Создание виртуальной машины VirtualBox с Oracle Linux 6.X. в командной строке linux](/devops/linux/virtual/virtualbox/vm/oracle-linux-6/) Bridget Network
 
 <br/>
 
 ### Основные задачи по работе с виртуальными машинами
 
-[Работа со снапшотами](/linux/virtual/virtualbox/snapshots/)
+[Работа со снапшотами](/devops/linux/virtual/virtualbox/snapshots/)
 
-[Export и Import виртуальных машин VirtualBox](/linux/virtual/virtualbox/export-import/)
+[Export и Import виртуальных машин VirtualBox](/devops/linux/virtual/virtualbox/export-import/)
 
-[Клонирование виртуальных машин VirtualBox в командной строке](/linux/virtual/virtualbox/clone/)
+[Клонирование виртуальных машин VirtualBox в командной строке](/devops/linux/virtual/virtualbox/clone/)
 
-[Замена виртуального диска VirtualBox в командной строке](/linux/virtual/virtualbox/replace-disk/)
+[Замена виртуального диска VirtualBox в командной строке](/devops/linux/virtual/virtualbox/replace-disk/)
 
-[Уменьшить размер занимаемого виртуальной машиной дискового пространства](/linux/virtual/virtualbox/decrease-disk-space/)
+[Уменьшить размер занимаемого виртуальной машиной дискового пространства](/devops/linux/virtual/virtualbox/decrease-disk-space/)
 
-[Конвертировать wmdk в vdi](/linux/virtual/virtualbox/convert-vmdk-vdi/)
+[Конвертировать wmdk в vdi](/devops/linux/virtual/virtualbox/convert-vmdk-vdi/)
 
 <br/>
 
 ### Настрока сетевых интерфейсов:
 
-[Настрока сетевых интерфейсов](/linux/virtual/virtualbox/network/)
+[Настрока сетевых интерфейсов](/devops/linux/virtual/virtualbox/network/)
 
 <br/>
 
 ### Подключение USB устройств:
 
-[Подключение USB устройств](/linux/virtual/virtualbox/usb/)
+[Подключение USB устройств](/devops/linux/virtual/virtualbox/usb/)
 
 <br/>
 
@@ -78,4 +78,4 @@ Offtopic:
 
 ### Возникавшие ошибки при работе с VirtualBox
 
-<a href="/linux/virtual/virtualbox/errors/" rel="nofollow">osboxes</a>
+<a href="/devops/linux/virtual/virtualbox/errors/" rel="nofollow">osboxes</a>

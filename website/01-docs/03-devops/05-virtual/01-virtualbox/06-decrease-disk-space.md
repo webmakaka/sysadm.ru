@@ -3,7 +3,7 @@ layout: page
 title: Уменьшить размер занимаемого виртуальной машиной дискового пространства
 description: Уменьшить размер занимаемого виртуальной машиной дискового пространства
 keywords: Уменьшить размер занимаемого виртуальной машиной дискового пространства
-permalink: /linux/virtual/virtualbox/decrease-disk-space/
+permalink: /devops/linux/virtual/virtualbox/decrease-disk-space/
 ---
 
 # Уменьшить размер занимаемого виртуальной машиной дискового пространства

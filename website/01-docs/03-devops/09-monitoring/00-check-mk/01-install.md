@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Installing check_mk monitoring service in Linux
-permalink: /linux/monitoring/check-mk/install/
+permalink: /devops/linux/monitoring/check-mk/install/
 ---
 
 # Installing check_mk monitoring service in Linux
@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=fixkbancVc4&list=PL34sAs7_26wODGPEgaHrhRiXkax0q7
 
 <br/>
 
-Предполагается что уже установлен <a href="/linux/virtual/virtualbox/install/">VirtualBox</a>, <a href="/linux/virtual/vagrant/install/ubuntu/">Vagrant</a>.
+Предполагается что уже установлен <a href="/devops/linux/virtual/virtualbox/install/">VirtualBox</a>, <a href="/devops/linux/virtual/vagrant/install/ubuntu/">Vagrant</a>.
 
 <br/>
 

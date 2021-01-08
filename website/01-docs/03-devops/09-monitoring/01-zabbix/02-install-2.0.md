@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Инсталляция Zabbix 2.X в Ubuntu Linux 16.04 (Xenial)
-permalink: /linux/monitoring/zabbix/2.x/ubuntu/16.04/install/
+permalink: /devops/linux/monitoring/zabbix/2.x/ubuntu/16.04/install/
 ---
 
 # Инсталляция Zabbix 2.X в Ubuntu Linux 16.04 (Xenial)
