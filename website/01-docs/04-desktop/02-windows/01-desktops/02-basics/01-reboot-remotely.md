@@ -3,7 +3,7 @@ layout: page
 title: Перезагрузить / выключить компьютер в командной строке Windows
 description: Перезагрузить / выключить компьютер в командной строке Windows
 keywords: Перезагрузить / выключить компьютер в командной строке Windows
-permalink: /windows/desktops/basics/reboot-remotely/
+permalink: /desktop/windows/desktops/basics/reboot-remotely/
 ---
 
 # Перезагрузить / выключить компьютер в командной строке Windows

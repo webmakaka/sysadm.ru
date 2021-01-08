@@ -3,17 +3,17 @@ layout: page
 title: Windows
 description: Windows
 keywords: Windows
-permalink: /windows/
+permalink: /desktop/windows/
 ---
 
 # Windows
 
 # Рабочие станции:
 
-### [Рабочие станции](/windows/desktops/)
+### [Рабочие станции](/desktop/windows/desktops/)
 
 <br/>
 
 # Администрирование серверов Windows:
 
-### [Администрирование серверов Windows](/windows/servers/)
+### [Администрирование серверов Windows](/desktop/windows/servers/)

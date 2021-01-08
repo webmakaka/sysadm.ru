@@ -3,7 +3,7 @@ layout: page
 title: Настройка сети в centos 6
 description: Настройка сети в centos 6
 keywords: Настройка сети в centos 6
-permalink: /linux/networks/ip/centos/6.x/
+permalink: /desktop/linux/networks/ip/centos/6.x/
 ---
 
 # Настройка сети в centos 6

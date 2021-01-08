@@ -3,7 +3,7 @@ layout: page
 title: Установить в ubuntu nvidia драйвера вместо opensource
 description: Установить в ubuntu nvidia драйвера вместо opensource
 keywords: ubuntu, nvidia, drivers
-permalink: /linux/hardware/videocard/ubuntu/drivers/nvidia/
+permalink: /desktop/linux/hardware/videocard/ubuntu/drivers/nvidia/
 ---
 
 # Установить в ubuntu nvidia драйвера вместо opensource

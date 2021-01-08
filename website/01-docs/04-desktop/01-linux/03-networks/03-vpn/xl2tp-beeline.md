@@ -3,7 +3,7 @@ layout: page
 title: Настройка VPN подключения l2tp на сервере Centos 6.5
 description: Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)
 keywords: Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)
-permalink: /linux/networks/vpn/xl2tp/centos/6/
+permalink: /desktop/linux/networks/vpn/xl2tp/centos/6/
 ---
 
 # Настройка VPN подключения l2tp на сервере Centos 6.5 (Домашний интернет Билайн)
@@ -385,7 +385,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 </pre>
 
 <br/><br/>
-Остается только настроить <a href="/linux/networks/nat/centos/nat/">NAT</a>.
+Остается только настроить <a href="/desktop/linux/networks/nat/centos/nat/">NAT</a>.
 <br/><br/>
 
 ---

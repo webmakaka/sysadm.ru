@@ -3,33 +3,35 @@ layout: page
 title: Ubuntu
 description: Ubuntu
 keywords: Ubuntu
-permalink: /linux/ubuntu/
+permalink: /desktop/linux/ubuntu/
 ---
 
 # Ubuntu
 
-### [Шаги после инсталляции Ubuntu](/linux/ubuntu/setup/)
+### [Шаги после инсталляции Ubuntu](/desktop/linux/ubuntu/setup/)
 
-### [Инсталляция браузера в Ubuntu](/linux/ubuntu/browsers/)
+### [Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
 
-### [Инсталляция Libre Office](/linux/ubuntu/libreoffice/)
+### [Инсталляция браузеров в Ubuntu](/desktop/linux/ubuntu/setup/browsers/)
 
-### [Инсталляция ACE Stream и SopCast плеера в Ubuntu](/linux/ubuntu/ace-stream-sopcast-player-install/)
+### [Инсталляция Libre Office](/desktop/linux/ubuntu/libreoffice/)
 
-### [Запись с экрана монитора в GIF](/linux/ubuntu/how-to-record-from-desktop-to-gif/)
+### [Инсталляция ACE Stream и SopCast плеера в Ubuntu](/desktop/linux/ubuntu/ace-stream-sopcast-player-install/)
 
-### [Скачать playlist с youtube](/linux/ubuntu/download-youtube-playlist/)
+### [Запись с экрана монитора в GIF](/desktop/linux/ubuntu/how-to-record-from-desktop-to-gif/)
 
-### [Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.](/linux/ubuntu/download-from-file-hostings/)
+### [Скачать playlist с youtube](/desktop/linux/ubuntu/download-youtube-playlist/)
 
-### [Unable to locate package **\***.so.\*](/linux/ubuntu/install-package-for-missing-libraries/)
+### [Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.](/desktop/linux/ubuntu/download-from-file-hostings/)
 
-### [Команды запуска сервисов systemd (systemctl)](/linux/systemctl/)
+### [Unable to locate package **\***.so.\*](/desktop/linux/ubuntu/install-package-for-missing-libraries/)
 
-### [Мелкие улучшения](/linux/ubuntu/small-improvements/)
+### [Команды запуска сервисов systemd (systemctl)](/desktop/linux/systemctl/)
 
-### [Знакомство с ipfs](/linux/ubuntu/ipfs/)
+### [Подключение к серверу по SSH](/desktop/linux/ubuntu/setup-ssh-connection/)
 
-### [Удаленный рабочий стол в Ubuntu 18.04](/linux/ubuntu/vnc-server/)
+### [Знакомство с ipfs](/desktop/linux/ubuntu/ipfs/)
 
-### [Сеть в Ubuntu](/linux/ubuntu/network/)
+### [Удаленный рабочий стол в Ubuntu 18.04](/desktop/linux/ubuntu/vnc-server/)
+
+### [Сеть в Ubuntu](/desktop/linux/ubuntu/network/)

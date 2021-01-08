@@ -3,7 +3,7 @@ layout: page
 title: Мелкие улучшения в Ubuntu
 description: Мелкие улучшения в Ubuntu
 keywords: Мелкие улучшения в Ubuntu
-permalink: /linux/ubuntu/setup/do-not-ask-root-password/
+permalink: /desktop/linux/ubuntu/setup/do-not-ask-root-password/
 ---
 
 # Мелкие улучшения в Ubuntu

@@ -3,7 +3,7 @@ layout: page
 title: IPTABLES NAT
 description: IPTABLES NAT
 keywords: IPTABLES NAT
-permalink: /linux/networks/nat/centos/nat/
+permalink: /desktop/linux/networks/nat/centos/nat/
 ---
 
 # IPTABLES NAT

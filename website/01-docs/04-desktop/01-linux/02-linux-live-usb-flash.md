@@ -3,7 +3,7 @@ layout: page
 title: Создание загрузочной USB флешки в Linux
 description: Создание загрузочной USB флешки в Linux
 keywords: Создание загрузочной USB флешки в Linux
-permalink: /linux/linux-live-usb-flash/
+permalink: /desktop/linux/linux-live-usb-flash/
 ---
 
 # Создание загрузочной USB флешки в Linux

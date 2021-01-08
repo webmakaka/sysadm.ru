@@ -3,7 +3,7 @@ layout: page
 title: Centos 7 нужные мне для работы пакеты
 description: Centos 7 нужные мне для работы пакеты
 keywords: Centos 7 нужные мне для работы пакеты
-permalink: /linux/install/centos/6/steps-after-installation-centos-7x/
+permalink: /desktop/linux/install/centos/6/steps-after-installation-centos-7x/
 ---
 
 # Centos 7 нужные мне для работы пакеты

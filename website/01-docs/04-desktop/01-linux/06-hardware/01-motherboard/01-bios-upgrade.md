@@ -3,7 +3,7 @@ layout: page
 title: Upgrade BIOS в linux
 description: Upgrade BIOS в linux
 keywords: Upgrade BIOS в linux
-permalink: /linux/hardware/motherboard/bios-upgrade/
+permalink: /desktop/linux/hardware/motherboard/bios-upgrade/
 ---
 
 # Upgrade BIOS в linux

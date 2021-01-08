@@ -3,7 +3,7 @@ layout: page
 title: Удаленный рабочий стол в Ubuntu 18.04
 description: Удаленный рабочий стол в Ubuntu 18.04
 keywords: linux, vncserver, vncviewer
-permalink: /linux/ubuntu/vnc-server/
+permalink: /desktop/linux/ubuntu/vnc-server/
 ---
 
 # Рекомендация!
@@ -51,7 +51,7 @@ startxfce4 &
 На клиенте:
 
 // UPD Наверное, лучше вот этот использовать  
-https://www.realvnc.com/en/connect/download/viewer/linux/
+https://www.realvnc.com/en/connect/download/viewer/desktop/linux/
 
 <br/>
 

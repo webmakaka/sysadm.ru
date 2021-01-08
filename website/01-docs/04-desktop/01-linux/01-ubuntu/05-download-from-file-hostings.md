@@ -3,7 +3,7 @@ layout: page
 title: Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc
 description: Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc
 keywords: Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc
-permalink: /linux/ubuntu/download-from-file-hostings/
+permalink: /desktop/linux/ubuntu/download-from-file-hostings/
 ---
 
 # Программа для скачивания с файлопомоек, таких как Rapidgator, Nitroflare, Uploadgig etc.

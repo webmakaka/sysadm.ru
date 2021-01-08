@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Linux
-permalink: /linux/
+permalink: /desktop/linux/
 ---
 
 # Linux
@@ -12,49 +12,49 @@ permalink: /linux/
 
 # Базовые вещи
 
-### [ISO образы с Linux](/linux/distribs/)
+### [ISO образы с Linux](/desktop/linux/distribs/)
 
-### [Создание загрузочной USB флешки в Linux](/linux/linux-live-usb-flash/)
+### [Создание загрузочной USB флешки в Linux](/desktop/linux/linux-live-usb-flash/)
 
-### [Архиваторы и работа с архивами в Linux](/linux/archives/)
+### [Архиваторы и работа с архивами в Linux](/desktop/linux/archives/)
 
-### [Проверка MD5](/linux/md5/)
+### [Проверка MD5](/desktop/linux/md5/)
 
-### [Незапоминаемые команды в принципе](/linux/commands/)
+### [Незапоминаемые команды в принципе](/desktop/linux/commands/)
 
-### [Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/linux/code/editors/)
+### [Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](/desktop/linux/code/editors/)
 
-### [Развернуть видео на 90 градусов в ubuntu (в командной строке)](/linux/editors/)
-
-<br/>
-
-# [Ubuntu](/linux/ubuntu/)
+### [Развернуть видео на 90 градусов в ubuntu (в командной строке)](/desktop/linux/editors/)
 
 <br/>
 
-# [Centos](/linux/centos/)
+# [Ubuntu](/desktop/linux/ubuntu/)
+
+<br/>
+
+# [Centos](/desktop/linux/centos/)
 
 <br/>
 
 # Администрирование серверов:
 
-### [Networks](/linux/networks/)
+### [Networks](/desktop/linux/networks/)
 
-### [Web Servers](/linux/webservers/)
+### [Web Servers](/desktop/linux/webservers/)
 
-### [Proxy Servers](/linux/proxy/)
+### [Proxy Servers](/desktop/linux/proxy/)
 
 ### [Базы данных](/databases/)
 
-### [Виртуализация](/linux/virtual/)
+### [Виртуализация](/desktop/linux/virtual/)
 
 ### [Контейнеры](/devops/containers/)
 
-### [Кластеризация](/linux/clustering/)
+### [Кластеризация](/desktop/linux/clustering/)
 
-### [Мониторинг](/linux/monitoring/)
+### [Мониторинг](/desktop/linux/monitoring/)
 
-### [Logging](/linux/logging/)
+### [Logging](/desktop/linux/logging/)
 
 ### [DevOps](/devops/)
 
@@ -62,7 +62,7 @@ permalink: /linux/
 
 # Hardware:
 
-### [Работа с железками в linux](/linux/hardware/)
+### [Работа с железками в linux](/desktop/linux/hardware/)
 
 ---
 
@@ -90,4 +90,4 @@ permalink: /linux/
 
 # Документация, книги, презентации etc.:
 
-### [Книги по Linux](/linux/books/)
+### [Книги по Linux](/desktop/linux/books/)

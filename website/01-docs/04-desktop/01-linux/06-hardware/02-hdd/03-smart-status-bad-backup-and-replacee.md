@@ -3,7 +3,7 @@ layout: page
 title: S.M.A.R.T. status bad backup and replace
 description: S.M.A.R.T. status bad backup and replace
 keywords: S.M.A.R.T. status bad backup and replace
-permalink: /linux/hardware/hdd/smart-status-bad-backup-and-replace/
+permalink: /desktop/linux/hardware/hdd/smart-status-bad-backup-and-replace/
 ---
 
 # S.M.A.R.T. status bad backup and replace

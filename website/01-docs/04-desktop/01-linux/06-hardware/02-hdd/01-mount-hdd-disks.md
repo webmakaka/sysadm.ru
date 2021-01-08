@@ -3,7 +3,7 @@ layout: page
 title: Монтирование жесткого диска в linux
 description: Монтирование жесткого диска в linux
 keywords: Монтирование жесткого диска в linux
-permalink: /linux/hardware/hdd/mount-disks/
+permalink: /desktop/linux/hardware/hdd/mount-disks/
 ---
 
 # Монтирование жесткого диска в linux

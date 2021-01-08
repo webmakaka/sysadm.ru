@@ -3,7 +3,7 @@ layout: page
 title: Ubuntu, Realtek RTL-8110SC/8169SC - отваливается сетевой интерфейс на ubuntu 14.04.5 lts
 description: Ubuntu, Realtek RTL-8110SC/8169SC - отваливается сетевой интерфейс на ubuntu 14.04.5 lts
 keywords: Ubuntu, Realtek RTL-8110SC/8169SC - отваливается сетевой интерфейс на ubuntu 14.04.5 lts
-permalink: /linux/ubuntu/network/realtek-r8169-error/
+permalink: /desktop/linux/ubuntu/network/realtek-r8169-error/
 ---
 
 # [Ubuntu, Realtek RTL-8110SC/8169SC] отваливается сетевой интерфейс на ubuntu 14.04.5 lts
@@ -95,7 +95,7 @@ permalink: /linux/ubuntu/network/realtek-r8169-error/
 <br/>
 
 Вроде здесь есть исходники для самостоятельной сборки драйверов.  
-https://elixir.bootlin.com/linux/v4.20/source/drivers/net/ethernet/realtek/r8169.c
+https://elixir.bootlin.com/desktop/linux/v4.20/source/drivers/net/ethernet/realtek/r8169.c
 
 <br/>
 

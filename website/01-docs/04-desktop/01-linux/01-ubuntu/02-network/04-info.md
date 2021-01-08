@@ -3,7 +3,7 @@ layout: page
 title: Информация по сетевому адаптеру
 description: Информация по сетевому адаптеру
 keywords: Информация по сетевому адаптеру
-permalink: /linux/ubuntu/network/info/
+permalink: /desktop/linux/ubuntu/network/info/
 ---
 
 # Информация по сетевому адаптеру

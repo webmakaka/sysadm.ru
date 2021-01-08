@@ -3,15 +3,15 @@ layout: page
 title: Архиваторы и работа с архивами в Linux
 description: Архиваторы и работа с архивами в Linux
 keywords: Архиваторы и работа с архивами в Linux
-permalink: /linux/archives/
+permalink: /desktop/linux/archives/
 ---
 
 # Архиваторы и работа с архивами в Linux
 
 <br/>
 
-### [7zip](/linux/archives/7zip/)
+### [7zip](/desktop/linux/archives/7zip/)
 
-### [Rar](/linux/archives/rar/)
+### [Rar](/desktop/linux/archives/rar/)
 
-### [Остальные](/linux/archives/other/)
+### [Остальные](/desktop/linux/archives/other/)

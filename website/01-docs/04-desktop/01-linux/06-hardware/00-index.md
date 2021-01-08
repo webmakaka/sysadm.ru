@@ -3,26 +3,26 @@ layout: page
 title: Работа с железками в linux
 description: Работа с железками в linux
 keywords: linux, hardware
-permalink: /linux/hardware/
+permalink: /desktop/linux/hardware/
 ---
 
 # Работа с железками в linux
 
 ### Информация по имеющемуся оборудованию
 
-[Команды для получения информации по оборудованию в linux](/linux/hardware/info/)
+[Команды для получения информации по оборудованию в linux](/desktop/linux/hardware/info/)
 
 <br/>
 
 ### MotherBoard
 
-[Upgrade BIOS в linux](/linux/hardware/motherboard/bios-upgrade/)
+[Upgrade BIOS в linux](/desktop/linux/hardware/motherboard/bios-upgrade/)
 
 <br/>
 
 ### HDD / SSD и другие блочные устройства
 
-[HDD / SSD и другие блочные устройства в Linux](/linux/hardware/hdd/)
+[HDD / SSD и другие блочные устройства в Linux](/desktop/linux/hardware/hdd/)
 
 <br/>
 
@@ -41,7 +41,7 @@ permalink: /linux/hardware/
 
 ### VideoCard
 
-[Установить в Ubuntu nvidia драйвера вместо opensource](/linux/hardware/videocard/ubuntu/drivers/nvidia/)
+[Установить в Ubuntu nvidia драйвера вместо opensource](/desktop/linux/hardware/videocard/ubuntu/drivers/nvidia/)
 
 // Узнать сколько видеокарта использует GPU памяти
 
@@ -71,4 +71,4 @@ permalink: /linux/hardware/
 
 ### Wi-Fi адаптер
 
-[Мудацкий Realtek опять не работает в Ubuntu](/linux/hardware/wi-fi/ubuntu/realtek/)
+[Мудацкий Realtek опять не работает в Ubuntu](/desktop/linux/hardware/wi-fi/ubuntu/realtek/)

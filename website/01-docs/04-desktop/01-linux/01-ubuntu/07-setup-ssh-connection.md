@@ -3,7 +3,7 @@ layout: page
 title: Подключение к серверу по SSH
 description: Подключение к серверу по SSH
 keywords: Подключение к серверу по SSH
-permalink: /linux/ubuntu/setup-ssh-connection/
+permalink: /desktop/linux/ubuntu/setup-ssh-connection/
 ---
 
 # Подключение к серверу по SSH

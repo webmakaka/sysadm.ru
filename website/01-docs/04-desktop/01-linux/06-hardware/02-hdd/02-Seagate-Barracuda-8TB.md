@@ -3,7 +3,7 @@ layout: page
 title: Подключаем диск 8TB в Centos 6.X
 description: Подключаем диск 8TB в Centos 6.X
 keywords: Подключаем диск 8TB в Centos 6.X
-permalink: /linux/hardware/hdd/seagate/8tb/
+permalink: /desktop/linux/hardware/hdd/seagate/8tb/
 ---
 
 # Подключаем диск 8TB в Centos 6.X

@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Linux Книги и обучающие материалы
-permalink: /linux/books/
+permalink: /desktop/linux/books/
 ---
 
 # Linux Книги и обучающие материалы
 
 
-### [Advanced Bash-Scripting Guide Углубленное изучение искусства написания сценариев командной оболочки](/linux/books/advanced-bash-scripting-guide/)
+### [Advanced Bash-Scripting Guide Углубленное изучение искусства написания сценариев командной оболочки](/desktop/linux/books/advanced-bash-scripting-guide/)
 
 ### [SystemD для администраторов](/files/books/systemd-for-administrators.pdf)
 

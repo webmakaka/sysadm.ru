@@ -3,7 +3,7 @@ layout: page
 title: Незапоминаемые команды в принципе
 description: Незапоминаемые команды в принципе
 keywords: Незапоминаемые команды в принципе
-permalink: /linux/commands/
+permalink: /desktop/linux/commands/
 ---
 
 # Незапоминаемые команды в принципе

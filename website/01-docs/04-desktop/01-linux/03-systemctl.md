@@ -3,7 +3,7 @@ layout: page
 title: Команды запуска сервисов systemd (systemctl)
 description: Команды запуска сервисов systemd (systemctl)
 keywords: Команды запуска сервисов systemd (systemctl)
-permalink: /linux/systemctl/
+permalink: /desktop/linux/systemctl/
 ---
 
 # Команды запуска сервисов systemd (systemctl)

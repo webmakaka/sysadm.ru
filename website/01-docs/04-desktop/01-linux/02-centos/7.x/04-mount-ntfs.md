@@ -3,7 +3,7 @@ layout: page
 title: Смонтировать NTFS в Centos 7.x
 description: Смонтировать NTFS в Centos 7.x
 keywords: Смонтировать NTFS в Centos 7.x
-permalink: /linux/centos/7.x/mount-ntfs/
+permalink: /desktop/linux/centos/7.x/mount-ntfs/
 ---
 
 # Смонтировать NTFS в Centos 7.x

@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция популярных программ в Centos 7.x
 description: Инсталляция популярных программ в Centos 7.x
 keywords: Инсталляция популярных программ в Centos 7.x
-permalink: /linux/centos/7.x/install-popular-programms/
+permalink: /desktop/linux/centos/7.x/install-popular-programms/
 ---
 
 # Инсталляция популярных программ в Centos 7.x
@@ -21,10 +21,10 @@ permalink: /linux/centos/7.x/install-popular-programms/
 ```
 [google-chrome]
 name=google-chrome
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+baseurl=http://dl.google.com/desktop/linux/chrome/rpm/stable/$basearch
 enabled=1
 gpgcheck=1
-gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+gpgkey=https://dl-ssl.google.com/desktop/linux/linux_signing_key.pub
 ```
 
 <br/>
@@ -37,7 +37,7 @@ gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 
 Нужны репо epel, rpmfusion.
 
-[Как добавить репо](/linux/centos/7.x/repos/)
+[Как добавить репо](/desktop/linux/centos/7.x/repos/)
 
 <br/>
 
@@ -75,4 +75,4 @@ gpgkey=https://repo.skype.com/data/SKYPE-GPG-KEY
 
 ### Архиваторы
 
-<a href="/linux/archives/">здесь</a>
+<a href="/desktop/linux/archives/">здесь</a>

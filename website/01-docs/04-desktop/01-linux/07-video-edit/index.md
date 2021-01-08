@@ -3,7 +3,7 @@ layout: page
 title: Развернуть видео на 90 градусов в ubuntu
 description: Развернуть видео на 90 градусов в ubuntu
 keywords: Развернуть видео на 90 градусов в ubuntu
-permalink: /linux/editors/
+permalink: /desktop/linux/editors/
 ---
 
 # Развернуть видео на 90 градусов в ubuntu (в командной строке)

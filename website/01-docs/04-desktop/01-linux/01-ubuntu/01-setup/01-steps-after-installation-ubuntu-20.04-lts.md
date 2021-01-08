@@ -3,7 +3,7 @@ layout: page
 title: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 description: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 keywords: ubuntu, install
-permalink: /linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts/
+permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts/
 ---
 
 # Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
@@ -80,7 +80,7 @@ https://code.visualstudio.com/docs/setup/linux
 
 ### Не спрашивать каждый раз пароль при комаде с sudo
 
-[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/setup/do-not-ask-root-password/)
+[Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
 
 <br/>
 
@@ -142,7 +142,7 @@ Appearance --> Theme -- Yaru-dark
 
 Terminal --> Preferences
 
-![Отключить противный звук при ошибке в консоли](/img/linux/ubuntu/setup/disable-sound-when-error-in-the-console.png 'Отключить противный звук при ошибке в консоли'){: .center-image }
+![Отключить противный звук при ошибке в консоли](/img/desktop/linux/ubuntu/setup/disable-sound-when-error-in-the-console.png 'Отключить противный звук при ошибке в консоли'){: .center-image }
 
 Color --> Built-in schemes: Black on white
 
@@ -215,8 +215,8 @@ https://gitlab.com/quidsup/ntrk-tracker-radar/-/blob/master/ddg_tracker_radar_co
 
 ### Дополнительное ПО
 
-[Chrome](/linux/ubuntu/browsers/chrome/)  
-[Opera](/linux/ubuntu/browsers/opera/)
+[Chrome](/desktop/linux/ubuntu/setup/browsers/chrome/)  
+[Opera](/desktop/linux/ubuntu/setup/browsers/opera/)
 
 <br/>
 
@@ -248,6 +248,6 @@ Applications -> System Tools -> Preferences -> Startup Applications
 Name: Telegram
 Command: /opt/telegram/Telegram -startintray
 
-![Автозапуск telegram](/img/linux/ubuntu/setup/autostart-telegram.png "Автозапуск telegram"){: .center-image }
+![Автозапуск telegram](/img/desktop/linux/ubuntu/setup/autostart-telegram.png "Автозапуск telegram"){: .center-image }
 
 -->

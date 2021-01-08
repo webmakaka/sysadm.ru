@@ -3,7 +3,7 @@ layout: page
 title: Знакомство с ipfs
 description: Знакомство с ipfs
 keywords: Знакомство с ipfs
-permalink: /linux/ubuntu/ipfs/
+permalink: /desktop/linux/ubuntu/ipfs/
 ---
 
 # Знакомство с ipfs

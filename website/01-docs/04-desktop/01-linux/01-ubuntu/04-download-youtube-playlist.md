@@ -3,7 +3,7 @@ layout: page
 title: Скачать playlist с youtube в Ubuntu Linux
 description: Скачать playlist с youtube в Ubuntu Linux
 keywords: linux, ubuntu, youtube, скачать, playlist, youtube-dl
-permalink: /linux/ubuntu/download-youtube-playlist/
+permalink: /desktop/linux/ubuntu/download-youtube-playlist/
 ---
 
 # Скачать playlist с youtube в Ubuntu Linux

@@ -3,7 +3,7 @@ layout: page
 title: ISO образы с Linux
 description: ISO образы с Linux
 keywords: ISO образы с Linux
-permalink: /linux/distribs/
+permalink: /desktop/linux/distribs/
 ---
 
 # ISO образы с Linux
@@ -16,4 +16,4 @@ permalink: /linux/distribs/
 
 <br/>
 
-### [Создание загрузочной USB флешки в Linux](/linux/linux-live-usb-flash/)
+### [Создание загрузочной USB флешки в Linux](/desktop/linux/linux-live-usb-flash/)

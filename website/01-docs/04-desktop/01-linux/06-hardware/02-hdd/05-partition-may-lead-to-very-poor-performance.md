@@ -3,7 +3,7 @@ layout: page
 title: Ошибка при попытке установить Ubuntu на внешний жесткий диск
 description: Ошибка при попытке установить Ubuntu на внешний жесткий диск
 keywords: Ошибка при попытке установить Ubuntu на внешний жесткий диск
-permalink: /linux/hardware/hdd/partition-may-lead-to-very-poor-performance/
+permalink: /desktop/linux/hardware/hdd/partition-may-lead-to-very-poor-performance/
 ---
 
 # Ошибка при попытке установить Ubuntu на внешний жесткий диск
@@ -12,7 +12,7 @@ permalink: /linux/hardware/hdd/partition-may-lead-to-very-poor-performance/
 
 <br/>
 
-![The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance](/img/linux/hardware/hdd/partition-may-lead-to-very-poor-performance.jpg 'The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance'){: .center-image }
+![The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance](/img/desktop/linux/hardware/hdd/partition-may-lead-to-very-poor-performance.jpg 'The partition /dev/sdf1 assigned to / starts at an offset of 3584 bytes from the minimum alignment for this disk, which may lead to very poor performance'){: .center-image }
 
 <br/>
 

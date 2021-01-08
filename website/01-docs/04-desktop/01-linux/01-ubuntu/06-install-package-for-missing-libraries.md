@@ -3,7 +3,7 @@ layout: page
 title: Ubuntu Unable to locate package
 description: Ubuntu Unable to locate package
 keywords: Ubuntu Unable to locate package
-permalink: /linux/ubuntu/install-package-for-missing-libraries/
+permalink: /desktop/linux/ubuntu/install-package-for-missing-libraries/
 ---
 
 # Ubuntu Unable to locate package

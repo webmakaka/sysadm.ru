@@ -3,7 +3,7 @@ layout: page
 title: Команды работы с архивами в Linux
 description: Команды работы с архивами в Linux
 keywords: Команды работы с архивами в Linux
-permalink: /linux/archives/other/
+permalink: /desktop/linux/archives/other/
 ---
 
 # Команды работы с архивами в Linux

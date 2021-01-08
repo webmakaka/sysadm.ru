@@ -3,7 +3,7 @@ layout: page
 title: Публичные репозитории Centos 7
 description: Публичные репозитории Centos 7
 keywords: linux, centos, repositories, epel
-permalink: /linux/centos/7.x/repos/
+permalink: /desktop/linux/centos/7.x/repos/
 ---
 
 # Публичные репозитории Centos 7

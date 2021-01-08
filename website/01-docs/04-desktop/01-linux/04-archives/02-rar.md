@@ -3,7 +3,7 @@ layout: page
 title: Rar в Linux
 description: Rar в Linux
 keywords: linux, Rar в Linux
-permalink: /linux/archives/rar/
+permalink: /desktop/linux/archives/rar/
 ---
 
 # Rar в Linux

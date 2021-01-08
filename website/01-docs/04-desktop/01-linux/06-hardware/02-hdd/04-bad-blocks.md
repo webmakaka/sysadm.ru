@@ -3,7 +3,7 @@ layout: page
 title: Попытка исключения использования бэд блоков файловой системой в Ubuntu
 description: Попытка исключения использования бэд блоков файловой системой в Ubuntu
 keywords: Попытка исключения использования бэд блоков файловой системой в Ubuntu
-permalink: /linux/hardware/hdd/bad-blocks/
+permalink: /desktop/linux/hardware/hdd/bad-blocks/
 ---
 
 # Попытка исключения использования бэд блоков файловой системой в Ubuntu

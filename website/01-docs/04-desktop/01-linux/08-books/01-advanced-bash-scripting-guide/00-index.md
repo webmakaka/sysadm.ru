@@ -3,7 +3,7 @@ layout: page
 title: Advanced Bash-Scripting Guide
 description: Advanced Bash-Scripting Guide
 keywords: Advanced Bash-Scripting Guide
-permalink: /linux/books/advanced-bash-scripting-guide/
+permalink: /desktop/linux/books/advanced-bash-scripting-guide/
 ---
 
 # Advanced Bash-Scripting Guide

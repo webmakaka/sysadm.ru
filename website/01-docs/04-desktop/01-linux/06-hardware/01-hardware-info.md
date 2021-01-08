@@ -3,7 +3,7 @@ layout: page
 title: Команды для получения информации по оборудованию в linux
 description: Команды для получения информации по оборудованию в linux
 keywords: Команды для получения информации по оборудованию в linux
-permalink: /linux/hardware/info/
+permalink: /desktop/linux/hardware/info/
 ---
 
 # Команды для получения информации по оборудованию в linux
