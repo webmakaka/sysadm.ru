@@ -80,7 +80,7 @@ https://code.visualstudio.com/docs/setup/linux
 
 ### Не спрашивать каждый раз пароль при комаде с sudo
 
-[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/setup/do-not-ask-password/)
+[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/setup/do-not-ask-root-password/)
 
 <br/>
 
