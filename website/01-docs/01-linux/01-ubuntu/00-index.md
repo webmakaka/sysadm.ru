@@ -8,7 +8,7 @@ permalink: /linux/ubuntu/
 
 # Ubuntu
 
-### [Шаги после инсталляции Ubuntu](/linux/ubuntu/install/)
+### [Шаги после инсталляции Ubuntu](/linux/ubuntu/setup/)
 
 ### [Инсталляция браузера в Ubuntu](/linux/ubuntu/browsers/)
 

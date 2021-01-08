@@ -3,7 +3,7 @@ layout: page
 title: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 description: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 keywords: ubuntu, install
-permalink: /linux/ubuntu/install/steps-after-installation-ubuntu-20.04-lts/
+permalink: /linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts/
 ---
 
 # Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
@@ -74,13 +74,13 @@ https://code.visualstudio.com/docs/setup/linux
 
     $ sudo reboot
 
-Перезагружаемся, при старте выбираем - gnome (Metacity)
+Перезагружаемся, при старте выбираем - Gnome Flashback (Metacity)
 
 <br/>
 
 ### Не спрашивать каждый раз пароль при комаде с sudo
 
-[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/small-improvements/)
+[Не спрашивать каждый раз пароль при комаде с sudo](/linux/ubuntu/setup/do-not-ask-password/)
 
 <br/>
 
@@ -142,7 +142,7 @@ Appearance --> Theme -- Yaru-dark
 
 Terminal --> Preferences
 
-![Отключить противный звук при ошибке в консоли](/img/linux/ubuntu/install/disable-sound-when-error-in-the-console.png 'Отключить противный звук при ошибке в консоли'){: .center-image }
+![Отключить противный звук при ошибке в консоли](/img/linux/ubuntu/setup/disable-sound-when-error-in-the-console.png 'Отключить противный звук при ошибке в консоли'){: .center-image }
 
 Color --> Built-in schemes: Black on white
 
@@ -222,11 +222,11 @@ https://gitlab.com/quidsup/ntrk-tracker-radar/-/blob/master/ddg_tracker_radar_co
 
 **Telegram**
 
-Snap -> Telegram -> прописать автозапуск в gnome-tweaks
-
     $ sudo mv Telegram /opt/telegram
 
     $ gnome-tweaks
+
+    Прописать автозапуск
 
 <!--
 
@@ -248,6 +248,6 @@ Applications -> System Tools -> Preferences -> Startup Applications
 Name: Telegram
 Command: /opt/telegram/Telegram -startintray
 
-![Автозапуск telegram](/img/linux/ubuntu/install/autostart-telegram.png "Автозапуск telegram"){: .center-image }
+![Автозапуск telegram](/img/linux/ubuntu/setup/autostart-telegram.png "Автозапуск telegram"){: .center-image }
 
 -->

@@ -24,7 +24,6 @@ permalink: /linux/ubuntu/browsers/chrome/
 * SetupVPN
 * LanguageTool
 * Nimbus Screenshoot & Screen Video Recorder
-* GitHub dark theme
 * Доступ рутрекер
 
 <!--
