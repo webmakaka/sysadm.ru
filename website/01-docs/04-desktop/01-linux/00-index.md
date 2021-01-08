@@ -52,7 +52,7 @@ permalink: /desktop/linux/
 
 ### [Кластеризация](/adm/linux/clustering/)
 
-### [Мониторинг](/devops/devops/linux/monitoring/)
+### [Мониторинг](/devops/linux/monitoring/)
 
 ### [Logging](/devops/linux/logging/)
 
