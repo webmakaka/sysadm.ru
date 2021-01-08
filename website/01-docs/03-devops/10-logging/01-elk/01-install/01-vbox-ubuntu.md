@@ -41,11 +41,11 @@ https://sundog-education.com/elasticsearch/
 
 ### Донастройка виртуальной машины
 
-![elk ubuntu vbox 01](/img/linux/logging/elk/intall/elk-ubuntu-vbox-01.png "elk ubuntu vbox 01"){: .center-image }
+![elk ubuntu vbox 01](/img/devops/linux/logging/elk/intall/elk-ubuntu-vbox-01.png 'elk ubuntu vbox 01'){: .center-image }
 
 <br/>
 
-![elk ubuntu vbox 02](/img/linux/logging/elk/intall/elk-ubuntu-vbox-02.png "elk ubuntu vbox 02"){: .center-image }
+![elk ubuntu vbox 02](/img/devops/linux/logging/elk/intall/elk-ubuntu-vbox-02.png 'elk ubuntu vbox 02'){: .center-image }
 
 <br/>
 
@@ -87,7 +87,6 @@ https://sundog-education.com/elasticsearch/
 
 <br/>
 
-
 ```
 $ curl -XGET "http://localhost:9200/_search" -H 'Content-Type: application/json' -d'
 {
@@ -96,7 +95,6 @@ $ curl -XGET "http://localhost:9200/_search" -H 'Content-Type: application/json'
   }
 }'
 ```
-
 
 <br/>
 
@@ -112,7 +110,6 @@ server.host: 0.0.0.0
     $ sudo /bin/systemctl daemon-reload
     $ sudo /bin/systemctl enable kibana.service
     $ sudo /bin/systemctl start kibana.service
-
 
 <!--
 

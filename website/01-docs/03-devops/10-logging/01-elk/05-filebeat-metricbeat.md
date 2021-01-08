@@ -17,7 +17,7 @@ https://www.youtube.com/watch?v=JB3Pbt7ijNU&list=PL34sAs7_26wOgpqMW_0_E95k9tq2Vk
 
 <br/>
 
-![FileBeat & MetricBeat](/img/linux/logging/elk/intall/filebeat-metricbeat-01.png "FileBeat & MetricBeat"){: .center-image }
+![FileBeat & MetricBeat](/img/devops/linux/logging/elk/intall/filebeat-metricbeat-01.png 'FileBeat & MetricBeat'){: .center-image }
 
 <br/>
 
@@ -59,7 +59,7 @@ ip поставил 192.168.0.2#{i}
 
 <br/>
 
-![FileBeat & MetricBeat](/img/linux/logging/elk/intall/filebeat-metricbeat-02.png "FileBeat & MetricBeat"){: .center-image }
+![FileBeat & MetricBeat](/img/devops/linux/logging/elk/intall/filebeat-metricbeat-02.png 'FileBeat & MetricBeat'){: .center-image }
 
 <br/>
 
@@ -153,11 +153,11 @@ Dashboard -> [Filebeat System] Syslog dashboard
 
 <br/>
 
-![FileBeat & MetricBeat](/img/linux/logging/elk/intall/filebeat-metricbeat-03.png "FileBeat & MetricBeat"){: .center-image }
+![FileBeat & MetricBeat](/img/devops/linux/logging/elk/intall/filebeat-metricbeat-03.png 'FileBeat & MetricBeat'){: .center-image }
 
 <br/>
 
-![FileBeat & MetricBeat](/img/linux/logging/elk/intall/filebeat-metricbeat-04.png "FileBeat & MetricBeat"){: .center-image }
+![FileBeat & MetricBeat](/img/devops/linux/logging/elk/intall/filebeat-metricbeat-04.png 'FileBeat & MetricBeat'){: .center-image }
 
 <br/>
 
@@ -181,8 +181,8 @@ Dashboard -> [Metricbeat System] Overview
 
 <br/>
 
-![FileBeat & MetricBeat](/img/linux/logging/elk/intall/filebeat-metricbeat-05.png "FileBeat & MetricBeat"){: .center-image }
+![FileBeat & MetricBeat](/img/devops/linux/logging/elk/intall/filebeat-metricbeat-05.png 'FileBeat & MetricBeat'){: .center-image }
 
 <br/>
 
-![FileBeat & MetricBeat](/img/linux/logging/elk/intall/filebeat-metricbeat-06.png "FileBeat & MetricBeat"){: .center-image }
+![FileBeat & MetricBeat](/img/devops/linux/logging/elk/intall/filebeat-metricbeat-06.png 'FileBeat & MetricBeat'){: .center-image }
