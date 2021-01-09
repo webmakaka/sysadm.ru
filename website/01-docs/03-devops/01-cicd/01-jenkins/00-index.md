@@ -8,7 +8,7 @@ permalink: /devops/cicd/jenkins/
 
 # Jenkins
 
-### [Инсталляция Jenkins в ubuntu 18.04 из пакетов](//javadev.org/devtools/cicd/jenkins/install/ubuntu/18.04/)
+### [Инсталляция Jenkins в ubuntu 18.04 из пакетов](//javadev.org/devtools/cicd/jenkins/install/ubuntu/20.04/)
 
 <br/>
 
@@ -26,8 +26,6 @@ docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins
     // Получить пароль
     $ docker exec <container_id> cat /var/jenkins_home/secrets/initialAdminPassword
 
-
 <br/>
 
 ### [Примеры использования](https://github.com/webmakaka/Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker)
-
