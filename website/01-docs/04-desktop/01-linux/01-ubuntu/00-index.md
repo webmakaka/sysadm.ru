@@ -12,7 +12,7 @@ permalink: /desktop/linux/ubuntu/
 
 ### [Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
 
-### [Инсталляция браузеров в Ubuntu](/desktop/linux/ubuntu/setup/browsers/)
+### [Инсталляция браузеров в Ubuntu](/desktop/linux/ubuntu/browsers/)
 
 ### [Инсталляция Libre Office](/desktop/linux/ubuntu/libreoffice/)
 

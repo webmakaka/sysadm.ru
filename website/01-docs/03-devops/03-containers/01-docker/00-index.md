@@ -51,7 +51,7 @@ https://quay.io
 
 ### Инсталляция Docker
 
-[Инсталляция Docker](/devops/containers/docker/install/)
+[Инсталляция Docker](/devops/containers/docker/setup/)
 
 [Инсталляция Docker-Compose (для совместной работы контейнеров)](/devops/containers/docker/tools/docker-compose/)
 

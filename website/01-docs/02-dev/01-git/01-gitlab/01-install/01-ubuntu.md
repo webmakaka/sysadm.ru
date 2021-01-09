@@ -177,7 +177,7 @@ Git:		/opt/gitlab/embedded/bin/git
 
 <br/>
 
-Сначала устанавливаем <a href="/devops/containers/docker/install/ubuntu/">docker</a>
+Сначала устанавливаем <a href="/devops/containers/docker/setup/ubuntu/">docker</a>
 
 <br/>
 

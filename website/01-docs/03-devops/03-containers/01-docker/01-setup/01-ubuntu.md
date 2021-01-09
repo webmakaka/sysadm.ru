@@ -3,13 +3,13 @@ layout: page
 title: Инсталляция и Upgrade Docker в Ubuntu 20.04.1
 description: Инсталляция и Upgrade Docker в Ubuntu 20.04.1
 keywords: devops, docker, docker-compose, инсталляция, linux, ubuntu, bash скрипт
-permalink: /devops/containers/docker/install/ubuntu/
+permalink: /devops/containers/docker/setup/ubuntu/
 ---
 
 # Инсталляция / Upgrade Docker в Ubuntu 20.04.1
 
 Делаю:  
-04.01.2021
+09.01.2021
 
 <br/>
 
@@ -54,13 +54,14 @@ sudo chmod +x /usr/local/bin/docker-compose
 <br/>
 
     $ chmod +x ./install-docker-and-docker-compose.sh
+
     $ sudo ./install-docker-and-docker-compose.sh
 
 <br/>
 
 ```
 $ docker -v
-Docker version 20.10.1, build 831ebea
+Docker version 20.10.2, build 2291f61
 
 $ docker-compose --version
 docker-compose version 1.27.4, build 40524192

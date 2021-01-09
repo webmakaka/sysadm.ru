@@ -178,7 +178,7 @@ end
 
 ### На все виртуалки ставим docker
 
-<a href="/devops/containers/docker/install/ubuntu/">вот как</a>
+<a href="/devops/containers/docker/setup/ubuntu/">вот как</a>
 
     $ vagrant ssh manager1
     $ vagrant ssh manager2

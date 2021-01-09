@@ -161,6 +161,8 @@ Color --> Built-in schemes: Black on white
 $ sudo vi /etc/hosts
 
 ```
+81.17.30.22 nnm-club.me
+
 0.0.0.0 blackhole.beeline.ru
 0.0.0.0 mailtrack.io
 0.0.0.0 metrika.yandex.ru
@@ -182,8 +184,6 @@ $ sudo vi /etc/hosts
 0.0.0.0 winline.ru
 0.0.0.0 downloadtutorials.net
 
-
-81.17.30.22 nnm-club.me
 
 ```
 
@@ -210,14 +210,16 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 И отсюда:
 
-https://gitlab.com/quidsup/ntrk-tracker-radar/-/blob/master/ddg_tracker_radar_confirmed.hosts
+    $ curl https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts --output badwebsites.txt
+
+    # cat ./badwebsites.txt >> /etc/hosts
 
 <br/>
 
 ### Дополнительное ПО
 
-[Chrome](/desktop/linux/ubuntu/setup/browsers/chrome/)  
-[Opera](/desktop/linux/ubuntu/setup/browsers/opera/)
+[Chrome](/desktop/linux/ubuntu/browsers/chrome/)  
+[Opera](/desktop/linux/ubuntu/browsers/opera/)
 
 <br/>
 

@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Google Chrome в Ubuntu
 description: Инсталляция Google Chrome в Ubuntu
 keywords: linux, ubuntu, browser, google chrome, инсталляция
-permalink: /desktop/linux/ubuntu/setup/browsers/chrome/
+permalink: /desktop/linux/ubuntu/browsers/chrome/
 ---
 
 # Инсталляция Chrome в Ubuntu
@@ -19,12 +19,12 @@ permalink: /desktop/linux/ubuntu/setup/browsers/chrome/
 
 ### Дополнительные плагины
 
-* Quick JavaScript Switcher
-* EditThisCookie
-* SetupVPN
-* LanguageTool
-* Nimbus Screenshoot & Screen Video Recorder
-* Доступ рутрекер
+-   Quick JavaScript Switcher
+-   EditThisCookie
+-   SetupVPN
+-   LanguageTool
+-   Nimbus Screenshoot & Screen Video Recorder
+-   Доступ рутрекер
 
 <!--
 hola vpn
@@ -34,13 +34,13 @@ hola vpn
 
 ### Могут понадобиться, но необязательные
 
-* cookies.txt
+-   cookies.txt
 
 <br/>
 
 ### Дополнительные плагины для GitHub
 
-* GitHub dark theme
+-   GitHub dark theme
 
 <br/>
 
@@ -73,3 +73,9 @@ Microphone --> Blocked
 Notifications --> Blocked
 Payment Handlers --> Blocked
 ```
+
+<br/>
+
+### Язык по умолчанию
+
+Settings -> Advanced -> Language -> Order Languages based on your preferences: English, Russian

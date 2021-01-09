@@ -17,19 +17,29 @@ permalink: /desktop/linux/hardware/videocard/ubuntu/drivers/nvidia/
 Ошибка после этого пропала.  
 Изображение стало немного мягче.
 
-    $ sudo add-apt-repository ppa:xorg-edgers/ppa -y
-    $ sudo apt-get update
-    $ sudo apt-get install nvidia-current
-
 <br/>
+
+Сначала нужно попробовать:
 
     $ software-properties-gtk
 
+Additional Drivers
+
+Выбрать проприетарные драйвера и перезагрузиться.
+
 <br/>
 
-Остается выбрать проприетарные драйвера и перезагрузиться.
+Если не появятся, попробовать
 
-<br/>
+    $ sudo add-apt-repository ppa:xorg-edgers/ppa -y
+    $ sudo apt-get update
+
+    $ apt search nvidia | grep driver
+
+    $ sudo apt-get install nvidia-current
+
+    // Наверное, устанавливать так
+    // $ sudo apt install nvidia-driver-396
 
 ### Получить доп информацию при необходимости
 
