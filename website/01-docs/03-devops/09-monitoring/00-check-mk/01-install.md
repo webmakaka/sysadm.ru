@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=fixkbancVc4&list=PL34sAs7_26wODGPEgaHrhRiXkax0q7
 
 <br/>
 
-Предполагается что уже установлен <a href="/devops/linux/virtual/virtualbox/install/">VirtualBox</a>, <a href="/devops/linux/virtual/vagrant/install/ubuntu/">Vagrant</a>.
+Предполагается что уже установлен <a href="/devops/linux/virtual/virtualbox/setup/">VirtualBox</a>, <a href="/devops/linux/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
 
 <br/>
 
@@ -105,4 +105,3 @@ https://mathias-kettner.com/download_version.php?&version=1.5.0p16&edition=cre
 
     $ omd version
     OMD - Open Monitoring Distribution Version 1.5.0p16.cre
-

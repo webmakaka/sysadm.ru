@@ -16,7 +16,7 @@ permalink: /devops/linux/virtual/vagrant/
 
 ### Наработки админа сайта
 
-[Инсталляция Vargant в Ubuntu 20.04.1](/devops/linux/virtual/vagrant/install/ubuntu/)
+[Инсталляция Vargant в Ubuntu 20.04.1](/devops/linux/virtual/vagrant/setup/ubuntu/)
 
 [Знакомство с Vagrant](/devops/linux/virtual/vagrant/crash-course/)
 

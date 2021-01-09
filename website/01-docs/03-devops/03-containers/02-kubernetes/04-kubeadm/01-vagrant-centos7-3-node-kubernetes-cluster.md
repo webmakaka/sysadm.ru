@@ -11,7 +11,7 @@ permalink: /devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernet
 Делаю  
 10.04.2020
 
-Предполагается что уже установлен <a href="/devops/linux/virtual/virtualbox/install/">VirtualBox</a>, <a href="/devops/linux/virtual/vagrant/install/ubuntu/">Vagrant</a>, <a href="/devops/containers/kubernetes/install/">kubectl</a>.
+Предполагается что уже установлен <a href="/devops/linux/virtual/virtualbox/setup/">VirtualBox</a>, <a href="/devops/linux/virtual/vagrant/setup/ubuntu/">Vagrant</a>, <a href="/devops/containers/kubernetes/install/">kubectl</a>.
 
 Разворачиваются 3 виртуалки по 2GB оперативной памяти. По идее, на узлы вполне достаточно и 1GB.
 

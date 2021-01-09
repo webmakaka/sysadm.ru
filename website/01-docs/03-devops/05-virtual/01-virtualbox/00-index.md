@@ -18,7 +18,7 @@ Offtopic:
 
 ### Инсталляция
 
-[Инсталляция VirtualBox](/devops/linux/virtual/virtualbox/install/)
+[Инсталляция VirtualBox](/devops/linux/virtual/virtualbox/setup/)
 
 <br/>
 

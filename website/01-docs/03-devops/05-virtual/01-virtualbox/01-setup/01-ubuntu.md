@@ -3,13 +3,13 @@ layout: page
 title: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1
 description: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1
 keywords: linux, virtual, ubuntu, virtualbox, installation, command line
-permalink: /devops/linux/virtual/virtualbox/install/ubuntu/
+permalink: /devops/linux/virtual/virtualbox/setup/ubuntu/
 ---
 
 # Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1
 
 Делаю:  
-10.10.2020
+09.01.2021
 
 <br/>
 
@@ -42,11 +42,11 @@ permalink: /devops/linux/virtual/virtualbox/install/ubuntu/
 <br/>
 
     # vboxmanage --version
-    6.1.14r140239
+    6.1.16r140961
 
 <br/>
 
-Если ошибка:
+**Если ошибка:**
 
 ```
 Some packages could not be installed. This may mean that you have
@@ -61,6 +61,8 @@ The following packages have unmet dependencies:
 E: Unable to correct problems, you have held broken packages.
 ```
 
+<br/>
+
 Скорее всего, вы (как и я) указали неправильную версию дистрибутива.
 
 В файле /etc/apt/sources.list.d/virtualbox.list
@@ -73,6 +75,15 @@ E: Unable to correct problems, you have held broken packages.
 
 <br/>
 
+### Обновить VirtualBox в Ubuntu
+
+    $ sudo apt-get update
+    $ sudo apt-cache search virtualbox
+    $ sudo apt-get install -y virtualbox-6.0
+    $ vboxmanage --version
+
+<br/>
+
 ### Установка пакетов расширения (USB, Remote Console, etc)
 
 Делаю:  
@@ -82,10 +93,10 @@ E: Unable to correct problems, you have held broken packages.
 
 Мне иногда нужна для удаленного доступа, поэтому обычно устанавливаю сразу вместе с virtualbox
 
+<br/>
+
     -- если нужно удалить старый
     $ VBoxManage extpack uninstall  "Oracle VM VirtualBox Extension Pack"
-
-<br/>
 
 <br/>
 
@@ -113,12 +124,54 @@ E: Unable to correct problems, you have held broken packages.
 
 <br/>
 
-### Обновить VirtualBox в Ubuntu
+### Инсталляция Guest Additions в командной строке
 
-    $ sudo apt-get update
-    $ sudo apt-cache search virtualbox
-    $ sudo apt-get install -y virtualbox-6.0
-    $ vboxmanage --version
+Делаю:  
+26.09.2019
+
+**Нужно устанавливать в виртуальной машине!**
+
+Я забыл об этом и долго тупил с ошибкой. **modprobe vboxguest failed**
+
+<br/>
+
+    # modprobe vboxguest
+    modprobe: ERROR: could not insert 'vboxguest': No such device
+
+<br/>
+
+Обычно виртуалки использую без GUI.
+
+Пакет Guest Additions как минимум нужен для того, чтобы мышка по экрану нормально перемещалась, работала copy+paste и может быть что-то еще. Нужно ли устанавливать guest additions, если предстоит работать только в командной строке, наверное нет.
+
+Installation guide
+
+http://www.virtualbox.org/manual/ch04.html#idp11277648
+
+<br/>
+
+**Пример в Ubuntu:**
+
+    $ sudo su -
+
+    # apt-get install -y wget
+    # apt-get install -y gcc make perl
+    # apt-get install -y p7zip-full
+
+    # cd /tmp
+
+    # wget http://download.virtualbox.org/virtualbox/6.0.12/VBoxGuestAdditions_6.0.12.iso
+
+
+    # 7z x ./VBoxGuestAdditions_6.0.12.iso -o./VBoxGuestAdditions_6.0.12/
+
+    # cd VBoxGuestAdditions_6.0.12/
+
+    # chmod +x ./VBoxLinuxAdditions.run
+
+    # ./VBoxLinuxAdditions.run
+
+    # reboot
 
 <br/>
 
@@ -155,12 +208,11 @@ E: Unable to correct problems, you have held broken packages.
 
 ```shell
 
-############################################
-#### VirtualBox Parameters
+### VirtualBox ################
 
-    export VM_HOME=$HOME/machines
+export VM_HOME=$HOME/machines
 
-############################################
+###############################
 
 ```
 
@@ -169,53 +221,6 @@ E: Unable to correct problems, you have held broken packages.
 Применить новые параметры:
 
     $ source ~/.bash_profile
-
-<br/>
-
-### Инсталляция Guest Additions в командной строке
-
-Делаю:  
-26.09.2019
-
-**Нужно устанавливать в виртуальной машине!**
-
-Я забыл об этом и долго тупил с ошибкой. **modprobe vboxguest failed**
-
-    # modprobe vboxguest
-    modprobe: ERROR: could not insert 'vboxguest': No such device
-
-<br/>
-
-Обычно виртуалки использую без GUI.
-
-Пакет Guest Additions как минимум нужен для того, чтобы мышка по экрану нормально перемещалась, работала copy+paste и может быть что-то еще. Нужно ли устанавливать guest additions, если предстоит работать только в командной строке, наверное нет.
-
-Installation guide
-
-http://www.virtualbox.org/manual/ch04.html#idp11277648
-
-Пример в Ubuntu:
-
-    $ sudo su -
-
-    # apt-get install -y wget
-    # apt-get install -y gcc make perl
-    # apt-get install -y p7zip-full
-
-    # cd /tmp
-
-    # wget http://download.virtualbox.org/virtualbox/6.0.12/VBoxGuestAdditions_6.0.12.iso
-
-
-    # 7z x ./VBoxGuestAdditions_6.0.12.iso -o./VBoxGuestAdditions_6.0.12/
-
-    # cd VBoxGuestAdditions_6.0.12/
-
-    # chmod +x ./VBoxLinuxAdditions.run
-
-    # ./VBoxLinuxAdditions.run
-
-    # reboot
 
 <!--
 
