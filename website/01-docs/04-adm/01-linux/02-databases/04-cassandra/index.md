@@ -18,7 +18,7 @@ http://docs.datastax.com/en/cassandra/2.1/cassandra/install/installRHEL_t.html
 
 JDK должно быть установлено.
 
-<a href="https://javadev.org/devtools/jdk/install/linux/">Инсталляция JDK</a>
+<a href="https://javadev.org/devtools/jdk/setup/linux/">Инсталляция JDK</a>
 
 <br/>
 

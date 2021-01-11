@@ -12,7 +12,7 @@ permalink: /dev/
 
 ### [GIT](/dev/git/)
 
-### [JAVA](//javadev.org/devtools/jdk/install/)
+### [JAVA](//javadev.org/devtools/jdk/setup/)
 
 ### [GO](/dev/go/)
 

@@ -10,7 +10,7 @@ permalink: /bigdata/hadoop/multi-node-installation-on-centos-6-non-sucure-mode/
 
 > JDK должна быть установлена
 
-<a href="https://javadev.org/devtools/jdk/install/linux/">Инсталляция JDK</a>
+<a href="https://javadev.org/devtools/jdk/setup/linux/">Инсталляция JDK</a>
 
 Инсталляция также как и в single.
 Разница только в конфигах.
