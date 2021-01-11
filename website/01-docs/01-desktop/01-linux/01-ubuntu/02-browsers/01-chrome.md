@@ -10,6 +10,8 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 
 Данный способ работает в: 12.04, 14.04, 16.04, 18.04, 20.04
 
+<br/>
+
     $ wget -q -O - https://dl-ssl.google.com/desktop/linux/linux_signing_key.pub | sudo apt-key add -
 
     $ sudo sh -c 'echo "deb http://dl.google.com/desktop/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
