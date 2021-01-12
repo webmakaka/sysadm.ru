@@ -3,7 +3,7 @@ layout: page
 title: Monitor Kubernetes Logs using EFK stack - Elasticsearch, FluentBit & Kibana
 description: Monitor Kubernetes Logs using EFK stack - Elasticsearch, FluentBit & Kibana
 keywords: devops, linux, kubernetes, Monitor Kubernetes Logs using EFK stack - Elasticsearch, FluentBit & Kibana
-permalink: /devops/containers/kubernetes/kubeadm/monitoring/elastic/
+permalink: /devops/containers/kubernetes/monitoring/elastic/
 ---
 
 # Monitor Kubernetes Logs using EFK stack - Elasticsearch, FluentBit & Kibana

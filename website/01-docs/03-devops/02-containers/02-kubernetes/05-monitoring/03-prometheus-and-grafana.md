@@ -3,7 +3,7 @@ layout: page
 title: Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml
 description: Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml
 keywords: devops, linux, kubernetes, Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml
-permalink: /devops/containers/kubernetes/packaging/heml/prometheus-and-grafana/
+permalink: /devops/containers/kubernetes/monitoring/prometheus-and-grafana/
 ---
 
 # Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml
@@ -28,7 +28,7 @@ https://www.youtube.com/watch?v=CmPdyvgmw-A&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 -   Подняли Dynamic NFS
 -   Инсталлировали helm
 
-как <a href="/devops/containers/kubernetes/packaging/heml2/install/">здесь</a>
+как <a href="/devops/containers/kubernetes/packages/heml2/install/">здесь</a>
 
 <br/>
 
@@ -118,6 +118,8 @@ http://node1:32323
 
     // я просто создаю файл, чтобы не копаться в куче кода
     $ vi /tmp/grafana.values.final
+
+<br/>
 
 ```
 service:

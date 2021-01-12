@@ -8,14 +8,11 @@ permalink: /desktop/linux/hardware/videocard/ubuntu/drivers/nvidia/
 
 # Установить в ubuntu nvidia драйвера вместо opensource
 
-У меня после обновлений в ubuntu возникли проблемы с опенсорсными драйверами.
+Проблема такая. Опенсорсные драйвера работают хорошо. Но нестабильно. GUI может перестать отвечать на любые действия пользователей.
 
-После начала работы, через некоторое время, GUI переставал показывать рабочий стол. Только черная консоль в которой постоянно писалось сообщение об ошибке. Ошибка повторялась при перезагрузке.
+Если поставить закрытые драйвера от NVidia, то возможны случаи, когда после перезагрузки черный экран без каких-либо сообщений и ошибок, которые правда позволяет войти в консоль.
 
-Пришлось установить драйвера с закрытым исходным кодом.
-
-Ошибка после этого пропала.  
-Изображение стало немного мягче.
+UPD. Оказалось, что NVidia больше не поддерживает работу для драйверов для моей видеокарты для новых версий ядер linux и единственный вариант (если не откатывать версию ubuntu) - использовать оперсорсные драйвера. Которые у меня вешают GUI.
 
 <br/>
 
@@ -56,9 +53,11 @@ Additional Drivers
 <br/>
 
     $ sudo dpkg -P $(dpkg -l | grep nvidia-driver | awk '{print $2}')
+
     $ sudo apt autoremove
 
     $ sudo apt install xserver-xorg-video-nouveau
+
     $ sudo reboot
 
 <br/>
@@ -96,6 +95,45 @@ Additional Drivers
 
     $ modprobe -R nvidia
     nvidia_331_updates
+
+<br/>
+
+    $ dpkg -l | grep nvidia
+    iF  nvidia-340                                 340.108-0ubuntu2                    amd64        NVIDIA binary driver - version 340.108
+    ii  nvidia-opencl-icd-340                      340.108-0ubuntu2                    amd64        NVIDIA OpenCL ICD
+    ii  nvidia-settings                            440.82-0ubuntu0.20.04.1             amd64        Tool for configuring the NVIDIA graphics driver
+    ii  screen-resolution-extra                    0.18build1                          all          Extension for the nvidia-settings control panel
+
+<br/>
+
+    $ ubuntu-drivers devices
+    == /sys/devices/pci0000:00/0000:00:07.0/0000:04:00.0 ==
+    modalias : pci:v000010DEd00000612sv00001043sd000082A6bc03sc00i00
+    vendor   : NVIDIA Corporation
+    model    : G92 [GeForce 9800 GTX / 9800 GTX+]
+    driver   : nvidia-340 - distro non-free recommended
+    driver   : xserver-xorg-video-nouveau - distro free builtin
+
+<br/>
+
+    // ХЗ что делает.
+    $ sudo ubuntu-drivers install
+
+<br/>
+
+    $ nvidia-smi
+
+    Command 'nvidia-smi' not found, but can be installed with:
+
+    sudo apt install nvidia-utils-440         # version 440.100-0ubuntu0.20.04.1, or
+    sudo apt install nvidia-340               # version 340.108-0ubuntu2
+    sudo apt install nvidia-utils-435         # version 435.21-0ubuntu7
+    sudo apt install nvidia-utils-390         # version 390.141-0ubuntu0.20.04.1
+    sudo apt install nvidia-utils-450         # version 450.102.04-0ubuntu0.20.04.1
+    sudo apt install nvidia-utils-450-server  # version 450.80.02-0ubuntu0.20.04.3
+    sudo apt install nvidia-utils-460         # version 460.32.03-0ubuntu0.20.04.1
+    sudo apt install nvidia-utils-418-server  # version 418.152.00-0ubuntu0.20.04.1
+    sudo apt install nvidia-utils-440-server  # version 440.95.01-0ubuntu0.20.04.1
 
 <br/><br/><br/>
 

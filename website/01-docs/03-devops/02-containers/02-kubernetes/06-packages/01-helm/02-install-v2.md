@@ -3,7 +3,7 @@ layout: page
 title: Подготовка и установка Helm2/Tiller
 description: Подготовка и установка Helm2/Tiller
 keywords: linux, helm2, tiller, install
-permalink: /devops/containers/kubernetes/packaging/heml2/install/
+permalink: /devops/containers/kubernetes/packages/heml2/install/
 ---
 
 # Подготовка и установка Helm2/Tiller
@@ -51,7 +51,6 @@ https://www.youtube.com/watch?v=dfQIzPUW8mQ
 
     // Посмотреть релизы
     https://github.com/helm/helm/releases
-
 
 <br/>
 

@@ -91,6 +91,8 @@ docker-compose version 1.27.4, build 40524192
 
 ### (При необходимости!) Изменить каталог по умолчанию для хранения контейнеров и имиджей
 
+<br/>
+
     # mkdir -p /mnt/dsk1/docker
     # chown -R <username> /mnt/dsk1/docker
 

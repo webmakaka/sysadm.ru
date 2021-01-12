@@ -3,7 +3,7 @@ layout: page
 title: Запуск Jenkins в kuberntes с помощью heml
 description: Запуск Jenkins в kuberntes с помощью heml
 keywords: devops, linux, kubernetes, Запуск Jenkins в kuberntes с помощью heml
-permalink: /devops/containers/kubernetes/packaging/heml/jenkins/
+permalink: /devops/containers/kubernetes/packages/heml/jenkins/
 ---
 
 # Запуск Jenkins в kuberntes с помощью heml
@@ -36,7 +36,7 @@ https://www.youtube.com/watch?v=ObGR0EfVPlg&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 -   Подняли Dynamic NFS
 -   Инсталлировали helm
 
-как <a href="/devops/containers/kubernetes/packaging/heml2/install/">здесь</a>
+как <a href="/devops/containers/kubernetes/packages/heml2/install/">здесь</a>
 
 <br/>
 

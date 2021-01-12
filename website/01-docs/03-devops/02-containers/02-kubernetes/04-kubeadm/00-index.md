@@ -32,7 +32,7 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [Upgrade Kubernetes Cluster](/devops/containers/kubernetes/kubeadm/upgrade-kubernetes-cluster/)
 
-### [Визуализация и Мониторинг в Kubernetes](/devops/containers/kubernetes/kubeadm/monitoring/)
+### [Визуализация и Мониторинг в Kubernetes](/devops/containers/kubernetes/monitoring/)
 
 ### [Horizontal Pod Autoscaler in Kubernetes](/devops/containers/kubernetes/kubeadm/horizontal-pod-autoscaler/)
 

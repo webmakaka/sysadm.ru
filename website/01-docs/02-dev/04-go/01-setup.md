@@ -15,7 +15,7 @@ permalink: /dev/go/setup/
 <br/>
 
 **Делаю:**  
-08.01.2021
+11.01.2021
 
 <br/>
 
@@ -44,9 +44,9 @@ permalink: /dev/go/setup/
 #### GO 1.15 ########################
 ```
 
-    $ sudo chmod +x /etc/profile.d/golang.sh
-
 <br/>
+
+    $ sudo chmod +x /etc/profile.d/golang.sh
 
     $ source /etc/profile.d/golang.sh
 

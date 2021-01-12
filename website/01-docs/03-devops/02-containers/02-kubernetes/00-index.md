@@ -66,7 +66,7 @@ https://github.com/kelseyhightower/kubernetes-the-hard-way
 
 <br/>
 
-### [Kubernetes Package Manager (Helm)](/devops/containers/kubernetes/packaging/heml/)
+### [Kubernetes Package Manager (Helm)](/devops/containers/kubernetes/packages/heml/)
 
 ### [Service Mesh (ISTIO)](/devops/containers/kubernetes/service-mesh/istio/)
 

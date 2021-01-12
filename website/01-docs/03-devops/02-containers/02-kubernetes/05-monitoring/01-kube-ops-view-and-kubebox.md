@@ -3,7 +3,7 @@ layout: page
 title: Визуализация работы контейнеров - kube-ops-view and kubebox
 description: Визуализация работы контейнеров - kube-ops-view and kubebox
 keywords: devops, linux, kubernetes, Визуализация работы контейнеров - kube-ops-view and kubebox
-permalink: /devops/containers/kubernetes/kubeadm/kube-ops-view-and-kubebox/
+permalink: /devops/containers/kubernetes/monitoring/kube-ops-view-and-kubebox/
 ---
 
 # Визуализация работы контейнеров: kube-ops-view and kubebox
@@ -55,7 +55,7 @@ http://node1:32178/#scale=2.0
 
 <br/>
 
-![kube-ops-view](/img/devops/containers/kubernetes/kubeadm/monitoring/kube-ops-view.png 'kube-ops-view'){: .center-image }
+![kube-ops-view](/img/devops/containers/kubernetes/monitoring/kube-ops-view.png 'kube-ops-view'){: .center-image }
 
 <br/>
 
@@ -75,7 +75,7 @@ https://github.com/astefanutti/kubebox
 
 <br/>
 
-![KubeBox console](/img/devops/containers/kubernetes/kubeadm/monitoring/kubebox-console.png 'KubeBox console'){: .center-image }
+![KubeBox console](/img/devops/containers/kubernetes/monitoring/kubebox-console.png 'KubeBox console'){: .center-image }
 
 <br/>
 
@@ -112,6 +112,6 @@ https://github.com/astefanutti/kubebox
 
 <br/>
 
-![KubeBox Web](/img/devops/containers/kubernetes/kubeadm/monitoring/kubebox-web.png 'KubeBox Web'){: .center-image }
+![KubeBox Web](/img/devops/containers/kubernetes/monitoring/kubebox-web.png 'KubeBox Web'){: .center-image }
 
     $ kubectl delete -f kubernetes.yaml

@@ -55,7 +55,7 @@ backend http_back
 
 <br/>
 
-Устанавливаем helm/tiller как <a href="/devops/containers/kubernetes/packaging/heml2/install/">здесь</a>.
+Устанавливаем helm/tiller как <a href="/devops/containers/kubernetes/packages/heml2/install/">здесь</a>.
 
 <br/>
 

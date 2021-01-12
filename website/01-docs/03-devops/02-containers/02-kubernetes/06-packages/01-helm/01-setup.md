@@ -2,8 +2,8 @@
 layout: page
 title: Подготовка и установка Helm3
 description: Подготовка и установка Helm3
-keywords: linux, helm3, install
-permalink: /devops/containers/kubernetes/packaging/heml3/install/
+keywords: devops, containers, kubernetes, linux, helm3, setup
+permalink: /devops/containers/kubernetes/packes/heml/setup/
 ---
 
 # Подготовка и установка Helm3
@@ -11,16 +11,18 @@ permalink: /devops/containers/kubernetes/packaging/heml3/install/
 <br/>
 
 Делаю:  
-23.04.2020
+12.01.2021
+
+<br/>
 
     $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
     $ helm version --short --client
-    v3.2.0+ge11b7ce
+    v3.4.2+g23dd3af
 
 <br/>
 
-    $ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+    $ helm repo add stable https://charts.helm.sh/stable
 
     // To remove
     // $ helm repo remove stable
