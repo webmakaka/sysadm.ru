@@ -14,4 +14,4 @@ permalink: /devops/containers/kubernetes/packages/heml/
 
 ### [Запуск Jenkins в kuberntes с помощью heml](/devops/containers/kubernetes/packages/heml/jenkins/)
 
-### [Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml](/devops/containers/kubernetes/monitoring/rometheus-and-grafana/)
+### [Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml](/devops/containers/kubernetes/monitoring/prometheus-and-grafana/)
