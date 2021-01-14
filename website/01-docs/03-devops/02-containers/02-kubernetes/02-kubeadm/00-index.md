@@ -18,7 +18,7 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [MetalLB (Load Balancer) в Kubernetes](/devops/containers/kubernetes/kubeadm/metal-lb/)
 
-### [Ingress](/devops/containers/kubernetes/kubeadm/ingress/)
+### [Kubernetes Ingress Controller](/devops/containers/kubernetes/kubeadm/ingress/)
 
 ### [Persistent Volumes и Claims в Kubernetes Cluster](/devops/containers/kubernetes/kubeadm/persistence/)
 
@@ -43,7 +43,3 @@ Deprecated конфиги можно автоматически проапгде
 ### Examples
 
 ### [Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [ENG, 2019]](/devops/containers/kubernetes/kubeadm/grider-multi-pod-app/)
-
-<br/>
-
-## Изучаем установку и настройку Kubernetes Cluster
