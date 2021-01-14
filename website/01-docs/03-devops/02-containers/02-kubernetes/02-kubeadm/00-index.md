@@ -47,5 +47,3 @@ Deprecated конфиги можно автоматически проапгде
 <br/>
 
 ## Изучаем установку и настройку Kubernetes Cluster
-
-### [Изучаем установку и настройку Kubernetes Cluster в виртуальных машинах и контейнерах](/devops/containers/kubernetes/kubeadm/setup/)
