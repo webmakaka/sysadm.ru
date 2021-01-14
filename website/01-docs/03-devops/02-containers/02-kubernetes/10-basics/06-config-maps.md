@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=upmLONFGNBs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-Подготовили кластер и окружение как <a href="/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/">здесь</a>.
+Подготовили кластер и окружение как <a href="https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7">здесь</a>.
 
 <br/>
 

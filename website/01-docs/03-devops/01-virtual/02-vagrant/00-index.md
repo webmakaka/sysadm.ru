@@ -36,6 +36,6 @@ permalink: /devops/linux/virtual/vagrant/
 
 [Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](/devops/linux/virtual/vagrant/vagrant-gitlab/)
 
-[Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox](/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/)
+[Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox](https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7)
 
 [Скрипты для развертывания Kubernetes с помощью Ansible в Vagrant](https://bitbucket.org/sysadm-ru/vagrant-ansible-kubernetes/)

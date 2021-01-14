@@ -23,7 +23,7 @@ https://www.youtube.com/watch?v=Hwqm1D2EfFU
 
 <br/>
 
-Подготовили кластер и окружение как <a href="/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/">здесь</a>.
+Подготовили кластер и окружение как <a href="https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7">здесь</a>.
 
 <br/>
 
@@ -55,7 +55,9 @@ backend http_back
 
 <br/>
 
-Устанавливаем helm/tiller как <a href="/devops/containers/kubernetes/packages/heml2/install/">здесь</a>.
+Устанавливаем helm/tiller.
+
+UPD. Heml2 выпилен, предлагаю попробовать Helm3 как <a href="/devops/containers/kubernetes/packes/heml/setup/">здесь</a>.
 
 <br/>
 
