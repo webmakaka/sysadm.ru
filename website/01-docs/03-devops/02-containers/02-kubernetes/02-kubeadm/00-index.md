@@ -24,7 +24,7 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [Логирование, Мониторинг, Визуализация](/devops/containers/kubernetes/monitoring/)
 
-### [Устанавливаем WEB GUI для управления Kubernetes кластером (Rancher)](/devops/containers/kubernetes/kubeadm/gui/rancher/)
+### [Устанавливаем WEB GUI для управления Kubernetes кластером](/devops/containers/kubernetes/kubeadm/gui/)
 
 ### [Переименование узлов Kubernetes Cluster](/devops/containers/kubernetes/kubeadm/renaming-kubernetes-nodes/)
 
