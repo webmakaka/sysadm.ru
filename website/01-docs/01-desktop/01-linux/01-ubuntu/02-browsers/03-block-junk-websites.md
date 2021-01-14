@@ -3,7 +3,7 @@ layout: page
 title: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 description: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 keywords: ubuntu, install
-permalink: /desktop/linux/ubuntu/setup/block-junk-websites/
+permalink: /desktop/linux/ubuntu/browsers/block-junk-websites/
 ---
 
 # Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
@@ -48,11 +48,10 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 <br/>
 
-    $ cd /tmp
-    $ curl https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt --output badwebsites.txt
-
     $ sudo su -
     # cd /tmp
+
+    # curl https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt --output badwebsites.txt
 
     # cat ./badwebsites.txt >> /etc/hosts
 
@@ -60,7 +59,6 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 И отсюда:
 
-    $ curl https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts --output badwebsites.txt
+    # curl https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts --output badwebsites.txt
 
     # cat ./badwebsites.txt >> /etc/hosts
-

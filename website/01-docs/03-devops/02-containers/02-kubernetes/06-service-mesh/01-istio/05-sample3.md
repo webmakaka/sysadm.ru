@@ -31,7 +31,7 @@ https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-### [Устанавливаем Helm и Tiller](/devops/containers/kubernetes/packages/heml2/install/)
+### [Helm](/devops/containers/kubernetes/packes/heml/setup/)
 
 ### [Устанавливаем MetalLB](/devops/containers/kubernetes/kubeadm/metal-lb/)
 

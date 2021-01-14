@@ -165,7 +165,7 @@ Color --> Built-in schemes: Black on white
 
 ### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
-[Инфа здесь](/desktop/linux/ubuntu/setup/block-junk-websites/)
+[Инфа здесь](/desktop/linux/ubuntu/browsers/block-junk-websites/)
 
 <br/>
 

@@ -1,14 +1,12 @@
 ---
 layout: page
-title: Визуализация и Мониторинг в Kubernetes
-description: Визуализация и Мониторинг в Kubernetes
-keywords: devops, linux, kubernetes, Визуализация и Мониторинг в Kubernetes
+title: Логирование, Мониторинг, Визуализация
+description: Логирование, Мониторинг, Визуализация
+keywords: devops, linux, kubernetes, Логирование, Мониторинг, Визуализация
 permalink: /devops/containers/kubernetes/monitoring/
 ---
 
-# Визуализация и Мониторинг в Kubernetes
-
-### [Визуализация работы контейнеров: kube-ops-view and kubebox](/devops/containers/kubernetes/monitoring/kube-ops-view-and-kubebox/)
+# Логирование, Мониторинг, Визуализация
 
 <br/>
 
@@ -17,5 +15,9 @@ permalink: /devops/containers/kubernetes/monitoring/
 ### [Для ознакомления](/devops/containers/kubernetes/monitoring/prometheus-and-grafana-test-only/)
 
 ### [Из видеоматериалов индуса](/devops/containers/kubernetes/monitoring/prometheus-and-grafana/)
+
+<br/>
+
+### [Визуализация работы контейнеров: kube-ops-view and kubebox](/devops/containers/kubernetes/monitoring/kube-ops-view-and-kubebox/)
 
 ### [Monitor Kubernetes Logs using EFK stack - Elasticsearch, FluentBit & Kibana](/devops/containers/kubernetes/monitoring/elastic/)

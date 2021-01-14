@@ -41,6 +41,8 @@ https://github.com/kubernetes-incubator/metrics-server
 
     $ vi metrics-server-deployment.yaml
 
+<br/>
+
 После image: k8s.gcr.io/metrics-server-amd64:v0.3.1 добавили следующее
 
 ```

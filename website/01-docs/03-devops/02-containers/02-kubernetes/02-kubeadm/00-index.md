@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Kuberneters в виртуальных машинах и контейнерах
-description: Kuberneters в виртуальных машинах и контейнерах
-keywords: devops, linux, kubernetes, kubeadm
+title: Локальный kubernetes кластер
+description: Локальный kubernetes кластер
+keywords: devops, containers, kubernetes, kubeadm, локальный kubernetes кластер
 permalink: /devops/containers/kubernetes/kubeadm/
 ---
 
-# Kuberneters в виртуальных машинах и контейнерах
+# Локальный kubernetes кластер
 
 ## Практические задачи
 
@@ -16,13 +16,13 @@ Deprecated конфиги можно автоматически проапгде
 
 <br/>
 
-### [Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox](/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/)
+### [MetalLB (Load Balancer) в Kubernetes](/devops/containers/kubernetes/kubeadm/metal-lb/)
+
+### [Ingress](/devops/containers/kubernetes/kubeadm/ingress/)
 
 ### [Persistent Volumes и Claims в Kubernetes Cluster](/devops/containers/kubernetes/kubeadm/persistence/)
 
-### [MetalLB Load Balancer in Kubernetes](/devops/containers/kubernetes/kubeadm/metal-lb/)
-
-### [Ingress](/devops/containers/kubernetes/kubeadm/ingress/)
+### [Логирование, Мониторинг, Визуализация](/devops/containers/kubernetes/monitoring/)
 
 ### [Устанавливаем WEB GUI для управления Kubernetes кластером (Rancher)](/devops/containers/kubernetes/kubeadm/gui/rancher/)
 
@@ -32,11 +32,11 @@ Deprecated конфиги можно автоматически проапгде
 
 ### [Upgrade Kubernetes Cluster](/devops/containers/kubernetes/kubeadm/upgrade-kubernetes-cluster/)
 
-### [Визуализация и Мониторинг в Kubernetes](/devops/containers/kubernetes/monitoring/)
-
 ### [Horizontal Pod Autoscaler in Kubernetes](/devops/containers/kubernetes/kubeadm/horizontal-pod-autoscaler/)
 
 ### [Setup Lets Encrypt cert-manager in Kubernetes Bare Metal](/devops/containers/kubernetes/kubeadm/lets-encrypt/)
+
+### [Настроить использование DNS google на нодах kubernetes кластера](/devops/containers/kubernetes/kubeadm/dns/)
 
 <br/>
 

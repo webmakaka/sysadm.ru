@@ -77,7 +77,7 @@ https://istio.io/docs/setup/additional-setup/config-profiles/
 
 ### Добавляю Metal LB
 
-Metal LB позволит получить внешний IP в миникубе на локалхосте
+Metal LB позволит получить внешний IP в миникубе на локалхосте.
 
 <br/>
 

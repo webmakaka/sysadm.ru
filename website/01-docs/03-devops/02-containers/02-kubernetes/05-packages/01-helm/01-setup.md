@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Подготовка и установка Helm3
-description: Подготовка и установка Helm3
-keywords: devops, containers, kubernetes, linux, helm3, setup
+title: Подготовка и установка Helm
+description: Подготовка и установка Helm
+keywords: devops, containers, kubernetes, linux, helm, setup
 permalink: /devops/containers/kubernetes/packes/heml/setup/
 ---
 
-# Подготовка и установка Helm3
+# Подготовка и установка Helm
 
 <br/>
 

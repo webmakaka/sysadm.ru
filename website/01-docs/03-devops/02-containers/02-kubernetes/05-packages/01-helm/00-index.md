@@ -8,9 +8,7 @@ permalink: /devops/containers/kubernetes/packages/heml/
 
 # Kubernetes Package Manager (Helm)
 
-### [Подготовка и установка Helm3](/devops/containers/kubernetes/packes/heml/setup/)
-
-### [Подготовка и установка Helm2/Tiller](/devops/containers/kubernetes/packages/heml2/install/)
+### [Подготовка и установка Helm](/devops/containers/kubernetes/packes/heml/setup/)
 
 ### [Запуск Jenkins в kuberntes с помощью heml](/devops/containers/kubernetes/packages/heml/jenkins/)
 

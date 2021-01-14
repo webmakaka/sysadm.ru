@@ -1,12 +1,12 @@
 ---
 layout: page
-title: MetalLB (Load Balancer) in Kubernetes
-description: MetalLB (Load Balancer) in Kubernetes
+title: MetalLB (Load Balancer) в Kubernetes
+description: MetalLB (Load Balancer) в Kubernetes
 keywords: devops, linux, kubernetes, kubeadm, MetalLB
 permalink: /devops/containers/kubernetes/kubeadm/metal-lb/
 ---
 
-# MetalLB (Load Balancer) in Kubernetes
+# MetalLB (Load Balancer) в Kubernetes
 
 <br/>
 
