@@ -13,7 +13,7 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/request-routing/
 <br/>
 
 Делаю:  
-17.04.2020
+19.01.2021
 
 https://www.youtube.com/watch?v=a0Mu0hQ9zzI
 
@@ -27,36 +27,153 @@ https://github.com/carnage-sh/cloud-for-fun/tree/master/blog/istio-routing
 
 <br/>
 
-    $ kubectl convert -f helloworld-v1.yaml > helloworld-v1.1.yaml
-
-    $ kubectl apply -f helloworld-v1.1.yaml
     $ kubectl apply -f helloworld-gateway-v1.yaml
-
-<br/>
-
-    $ kubectl convert -f helloworld-v2.yaml > helloworld-v2.1.yaml
-
-    $ kubectl apply -f helloworld-v2.1.yaml
     $ kubectl apply -f helloworld-gateway-v2.yaml
 
 <br/>
 
-    $ kubectl get service -n istio-system istio-ingressgateway
-    EXTERNAL-IP --> 192.168.99.96
+Оригинальный файл helloworld-v1.yaml устарел.
 
 <br/>
 
-    $ curl 192.168.99.96
+```
+$ cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld-v1
+  labels:
+    app: helloworld
+spec:
+  ports:
+  - port: 5000
+    name: http
+  selector:
+    app: helloworld
+    version: v1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-v1
+  labels:
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld
+  template:
+    metadata:
+      labels:
+        app: helloworld
+        version: v1
+    spec:
+      containers:
+      - name: helloworld
+        image: istio/examples-helloworld-v1
+        resources:
+          requests:
+            cpu: "100m"
+        imagePullPolicy: IfNotPresent #Always
+        ports:
+        - containerPort: 5000
+EOF
+```
+
+<br/>
+
+Оригинальный файл helloworld-v2.yaml устарел.
+
+<br/>
+
+```
+$ cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld-v2
+  labels:
+    app: helloworld
+spec:
+  ports:
+  - port: 5000
+    name: http
+  selector:
+    app: helloworld
+    version: v2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-v2
+  labels:
+    version: v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld
+  template:
+    metadata:
+      labels:
+        app: helloworld
+        version: v2
+    spec:
+      containers:
+      - name: helloworld
+        image: istio/examples-helloworld-v2
+        resources:
+          requests:
+            cpu: "100m"
+        imagePullPolicy: IfNotPresent #Always
+        ports:
+        - containerPort: 5000
+EOF
+```
+
+<br/>
+
+```
+$ kubectl get pods
+NAME READY STATUS RESTARTS AGE
+helloworld-v1-7476658d4f-vpqx9 1/1 Running 0 8m7s
+helloworld-v2-786b58884c-g9vs5 1/1 Running 0 10s
+
+```
+
+<br/>
+
+```
+
+$ sudo apt install -y jq
+
+$ kubectl -n istio-system get svc istio-ingressgateway -o json | jq .status.loadBalancer.ingress
+[
+  {
+    "ip": "192.168.49.20"
+  }
+]
+```
+
+<br/>
+
+    // Или посмотреть EXTERNAL-IP
+    $ kubectl get service -n istio-system istio-ingressgateway
+
+<br/>
+
+    $ curl 192.168.49.20
     Hello version: v1, instance: helloworld-v1-7695cb4556-9dnsx
 
 <br/>
 
-    $ curl 192.168.99.96 -H 'x-user: gregory'
+    $ curl 192.168.49.20 -H 'x-user: gregory'
     Hello version: v2, instance: helloworld-v2-58b576ddf4-49zds
 
 <br/>
 
-В общем для "gregory" особый сервис, не такой как у всех. Ему повезло, он не такой как все.
+В общем для "gregory" выделенный сервис.
 
 <br/>
 

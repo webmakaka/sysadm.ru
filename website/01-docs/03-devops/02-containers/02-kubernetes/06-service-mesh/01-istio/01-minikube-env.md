@@ -11,7 +11,7 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/env/
 <br/>
 
 Делаю:  
-19.04.2020
+19.01.2021
 
 <br/>
 
@@ -19,14 +19,14 @@ https://istio.io/docs/setup/getting-started/#download
 
 ```
 $ {
-minikube --profile my-profile config set memory 8192
-minikube --profile my-profile config set cpus 4
+    minikube --profile my-profile config set memory 8192
+    minikube --profile my-profile config set cpus 4
 
-minikube --profile my-profile config set vm-driver virtualbox
-// minikube --profile my-profile config set vm-driver docker
+    // minikube --profile my-profile config set vm-driver virtualbox
+    minikube --profile my-profile config set vm-driver docker
 
-minikube --profile my-profile config set kubernetes-version v1.16.9
-minikube start --profile my-profile
+    minikube --profile my-profile config set kubernetes-version v1.20.2
+    minikube start --profile my-profile
 }
 ```
 
@@ -37,15 +37,17 @@ minikube start --profile my-profile
 
 <br/>
 
-    $ kubectl version --short
-    Client Version: v1.18.1
-    Server Version: v1.16.9
+```
+$ kubectl version --short
+Client Version: v1.20.2
+Server Version: v1.20.2
+```
 
 <br/>
 
 ### Устанавливаю istioctl на локальном хосте
 
-    $ curl -L https://istio.io/downloadIstio | sh - && chmod +x $HOME/istio-1.5.1/bin/istioctl && sudo mv $HOME/istio-1.5.1/bin/istioctl /usr/local/bin/
+    $ curl -L https://istio.io/downloadIstio | sh - && chmod +x $HOME/istio-1.8.2/bin/istioctl && sudo mv $HOME/istio-1.8.2/bin/istioctl /usr/local/bin/
 
 <br/>
 
@@ -55,10 +57,7 @@ UPD. Окалазось istio уже есть среди предустанов�
 
     $ minikube addons --profile my-profile enable istio
 
-Но чего-то не заработало из коробки на 16.9.
-
-<br/>
-
+Но чего-то ранее не заработало из коробки на 16.9. Не хочу сейчас пробовать.
 Поэтому, будем ставить сами.
 
 <br/>
@@ -66,11 +65,14 @@ UPD. Окалазось istio уже есть среди предустанов�
 **Дока:**  
 https://istio.io/docs/setup/additional-setup/config-profiles/
 
-    // $ istioctl manifest apply --set profile=demo
-    $ istioctl manifest apply --set profile=default
+<br/>
+
+    // $ istioctl manifest install --set profile=demo
+    $ istioctl manifest install --set profile=default
 
 <br/>
 
+    // Очень важно выполнить!
     $ kubectl label namespace default istio-injection=enabled
 
 <br/>
@@ -81,12 +83,19 @@ Metal LB позволит получить внешний IP в миникубе
 
 <br/>
 
-    $ kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.8.3/manifests/metallb.yaml
+```
+$ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.5/manifests/namespace.yaml
+
+$ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.5/manifests/metallb.yaml
+
+# On first install only
+$ kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
+```
 
 <br/>
 
     $ minikube --profile my-profile ip
-    192.168.99.105
+    192.168.49.2
 
 <br/>
 
@@ -103,7 +112,7 @@ data:
     - name: custom-ip-space
       protocol: layer2
       addresses:
-      - 192.168.99.105/28
+      - 192.168.49.20-192.168.49.30
 EOF
 ```
 

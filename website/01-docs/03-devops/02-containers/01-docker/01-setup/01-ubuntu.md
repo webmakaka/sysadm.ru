@@ -9,7 +9,7 @@ permalink: /devops/containers/docker/setup/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 20.04.1
 
 Делаю:  
-09.01.2021
+16.01.2021
 
 <br/>
 

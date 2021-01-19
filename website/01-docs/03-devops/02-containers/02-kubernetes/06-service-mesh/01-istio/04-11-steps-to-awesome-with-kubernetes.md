@@ -19,34 +19,6 @@ http://github.com/burrsutter/scripts-istio
 
 <br/>
 
-```
-$ {
-minikube --profile my-profile config set memory 8192
-minikube --profile my-profile config set cpus 4
-minikube --profile my-profile config set disk-size 30g
-
-minikube --profile my-profile config set vm-driver virtualbox
-// minikube --profile my-profile config set vm-driver docker
-
-minikube --profile my-profile config set kubernetes-version v1.16.9
-
-minikube start --profile my-profile
-}
-```
-
-<br/>
-
-    // Удалить
-    // $ minikube --profile my-profile stop && minikube --profile my-profile delete
-
-<br/>
-
-    $ kubectl version --short
-    Client Version: v1.18.1
-    Server Version: v1.16.9
-
-<br/>
-
     $ istioctl manifest apply --set profile=demo
 
 <br/>

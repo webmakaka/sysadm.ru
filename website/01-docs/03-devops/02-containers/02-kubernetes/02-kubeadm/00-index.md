@@ -16,7 +16,7 @@ Deprecated конфиги можно автоматически проапгде
 
 <br/>
 
-### [MetalLB (Load Balancer) в Kubernetes](/devops/containers/kubernetes/kubeadm/metal-lb/)
+### [MetalLB (Load Balancer) в Kubernetes](/devops/containers/kubernetes/metal-lb/)
 
 ### [Kubernetes Ingress Controller](/devops/containers/kubernetes/kubeadm/ingress/)
 
