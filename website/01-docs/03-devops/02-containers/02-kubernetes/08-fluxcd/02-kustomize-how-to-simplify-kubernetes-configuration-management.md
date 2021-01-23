@@ -3,7 +3,7 @@ layout: page
 title: Kustomize - How to Simplify Kubernetes Configuration Management
 description: Kustomize - How to Simplify Kubernetes Configuration Management
 keywords: linux, kubernetes, Kustomize
-permalink: /devops/containers/kubernetes/fluxcd/fluxcd-v2-with-gitops-toolkit/
+permalink: /devops/containers/kubernetes/fluxcd/kustomize-how-to-simplify-kubernetes-configuration-management/
 ---
 
 # Kustomize - How to Simplify Kubernetes Configuration Management
