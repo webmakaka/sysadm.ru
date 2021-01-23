@@ -21,6 +21,17 @@ https://github.com/carnage-sh/cloud-for-fun/tree/master/blog/istio-routing
 
 <br/>
 
+```
+$ export INGRESS_HOST=$(kubectl \
+ --namespace istio-system \
+ get service istio-ingressgateway \
+ --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+
+$ echo ${INGRESS_HOST}
+```
+
+<br/>
+
     $ cd ~/
     $ git clone https://github.com/carnage-sh/cloud-for-fun/
     $ cd cloud-for-fun/blog/istio-routing
@@ -142,33 +153,23 @@ helloworld-v2-786b58884c-g9vs5 1/1 Running 0 10s
 
 ```
 
-<br/>
-
-```
-
-$ sudo apt install -y jq
-
-$ kubectl -n istio-system get svc istio-ingressgateway -o json | jq .status.loadBalancer.ingress
-[
-  {
-    "ip": "192.168.49.20"
-  }
-]
-```
+<!--
 
 <br/>
 
     // Или посмотреть EXTERNAL-IP
     $ kubectl get service -n istio-system istio-ingressgateway
 
+-->
+
 <br/>
 
-    $ curl 192.168.49.20
+    $ curl $INGRESS_HOST
     Hello version: v1, instance: helloworld-v1-7695cb4556-9dnsx
 
 <br/>
 
-    $ curl 192.168.49.20 -H 'x-user: gregory'
+    $ curl $INGRESS_HOST -H 'x-user: gregory'
     Hello version: v2, instance: helloworld-v2-58b576ddf4-49zds
 
 <br/>

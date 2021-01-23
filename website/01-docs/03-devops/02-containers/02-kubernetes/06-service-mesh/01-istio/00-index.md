@@ -16,12 +16,6 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/
 
 ### [Istio в minikube примеры из курса "11 Steps to Awesome with Kubernetes, Istio, and Knative LiveLessons"](/devops/containers/kubernetes/service-mesh/istio/minikube/11-steps-to-awesome-with-kubernetes/)
 
-### [Istio в локальном kubernetes кластере](/devops/containers/kubernetes/service-mesh/istio/sample3/)
+### [Примеры из видеокурса Canary Deployments To Kubernetes Using Istio and Friends](/devops/containers/kubernetes/service-mesh/istio/canary-deployments/)
 
-<br/>
-
-**Istio работает:**
-
--   Monitoring - Prometheus/Grafana
--   Logging - Fluentd
--   Tracing - OpenTracing
+### [Istio в локальном kubernetes кластере (Пример от Venkat)](/devops/containers/kubernetes/service-mesh/istio/venkat-sample/)

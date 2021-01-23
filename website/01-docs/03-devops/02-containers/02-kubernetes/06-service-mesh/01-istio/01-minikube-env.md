@@ -11,7 +11,7 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/env/
 <br/>
 
 Делаю:  
-19.01.2021
+21.01.2021
 
 <br/>
 
@@ -47,13 +47,15 @@ Server Version: v1.20.2
 
 ### Устанавливаю istioctl на локальном хосте
 
-    $ curl -L https://istio.io/downloadIstio | sh - && chmod +x $HOME/istio-1.8.2/bin/istioctl && sudo mv $HOME/istio-1.8.2/bin/istioctl /usr/local/bin/
+```
+$ curl -L https://istio.io/downloadIstio | sh - && chmod +x $HOME/istio-1.8.2/bin/istioctl && sudo mv $HOME/istio-1.8.2/bin/istioctl /usr/local/bin/
+```
 
 <br/>
 
 ### Запуск сервисов istio
 
-UPD. Окалазось istio уже есть среди предустановленных расширений на minikube, и можно просто активироваь.
+UPD. Оказазось istio уже есть среди предустановленных расширений на minikube, и можно просто активироваь.
 
     $ minikube addons --profile my-profile enable istio
 
@@ -67,13 +69,40 @@ https://istio.io/docs/setup/additional-setup/config-profiles/
 
 <br/>
 
-    // $ istioctl manifest install --set profile=demo
-    $ istioctl manifest install --set profile=default
+```
+$ istioctl profile list
+Istio configuration profiles:
+    default
+    demo
+    empty
+    minimal
+    openshift
+    preview
+    remote
+```
 
 <br/>
 
-    // Очень важно выполнить!
-    $ kubectl label namespace default istio-injection=enabled
+```
+// $ istioctl manifest install -y --set profile=demo
+$ istioctl manifest install -y --set profile=default
+```
+
+<br/>
+
+```
+$ kubectl label namespace default istio-injection=enabled
+```
+
+<br/>
+
+```
+$ kubectl describe namespace default
+Name:         default
+Labels:       istio-injection=enabled
+Annotations:  <none>
+Status:       Active
+```
 
 <br/>
 
@@ -115,6 +144,33 @@ data:
       - 192.168.49.20-192.168.49.30
 EOF
 ```
+
+<br/>
+
+```
+$ export INGRESS_HOST=$(kubectl \
+ --namespace istio-system \
+ get service istio-ingressgateway \
+ --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+
+$ echo ${INGRESS_HOST}
+```
+
+<!--
+
+```
+
+$ sudo apt install -y jq
+
+$ kubectl -n istio-system get svc istio-ingressgateway -o json | jq .status.loadBalancer.ingress
+[
+  {
+    "ip": "192.168.49.20"
+  }
+]
+```
+
+-->
 
 <br/>
 

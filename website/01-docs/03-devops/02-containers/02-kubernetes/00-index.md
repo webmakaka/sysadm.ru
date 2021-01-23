@@ -60,4 +60,10 @@ https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7
 
 <br/>
 
+## FluxCD
+
+### [FluxCD](/devops/containers/kubernetes/fluxcd/)
+
+<br/>
+
 ## [Что изучать, основы, ссылки и т.д.](/devops/containers/kubernetes/info/)

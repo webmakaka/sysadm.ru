@@ -3,7 +3,7 @@ layout: page
 title: Istio в локальном kubernetes кластере
 description: Istio в локальном kubernetes кластере
 keywords: linux, kubernetes, Istio
-permalink: /devops/containers/kubernetes/service-mesh/istio/sample3/
+permalink: /devops/containers/kubernetes/service-mesh/istio/venkat-sample/
 ---
 
 # Istio в локальном kubernetes кластере

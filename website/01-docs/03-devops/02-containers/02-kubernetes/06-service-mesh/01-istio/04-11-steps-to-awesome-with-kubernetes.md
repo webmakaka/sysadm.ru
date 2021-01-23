@@ -25,46 +25,6 @@ http://github.com/burrsutter/scripts-istio
 
     $ kubectl label namespace default istio-injection=enabled
 
-<!--
-
-<br/>
-
-Копируем:
-
-https://github.com/istio/istio/releases/
-
-<br/>
-
-```
-$ export ISTIO_HOME=/home/marley/istio-1.4.0
-$ export PATH=$ISTIO_HOME/bin:$PATH
-```
-
-<br/>
-
-```
-$ cd $ISTIO_HOME
-
-$ for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
-
-$ kubectl apply -f install/kubernetes/istio-demo.yaml
-
-```
-
-<br/>
-
--->
-
-    $ kubectl get pods -n istio-system
-    NAME                                    READY   STATUS    RESTARTS   AGE
-    grafana-5cc7f86765-r9gff                1/1     Running   0          5m7s
-    istio-egressgateway-598d7ffc49-kdtck    1/1     Running   0          5m8s
-    istio-ingressgateway-7bd5586b79-kxb4m   1/1     Running   0          5m8s
-    istio-tracing-8584b4d7f9-4b5lm          1/1     Running   0          5m7s
-    istiod-646b6fcc6-ddwzq                  1/1     Running   0          5m36s
-    kiali-696bb665-l2fz4                    1/1     Running   0          5m7s
-    prometheus-6c88c4cb8-6ghq5              2/2     Running   0          5m7s
-
 <br/>
 
 ### Deploy with Istio Envoy Sidecars
@@ -225,6 +185,7 @@ customer => preference => recommendation v2 from '3cbba7a9cde5': 24
     customer-gateway   [customer-gateway]   [*]                20m
     recommendation                          [recommendation]   83s
 
+<br/>
 
     $ kubectl get destinationrules
     NAME             HOST             AGE
@@ -254,6 +215,8 @@ customer => preference => recommendation v1 from 'f11b097f1dd0': 39
 customer => preference => recommendation v1 from 'f11b097f1dd0': 40
 
 ```
+
+<br/>
 
     $ kubectl delete dr recommendation
     $ kubectl delete vs recommendation
@@ -297,10 +260,11 @@ customer => preference => recommendation v1 from 'f11b097f1dd0': 56
 customer => preference => recommendation v1 from 'f11b097f1dd0': 57
 ```
 
+<br/>
+
     $ kubectl edit vs recommendation
 
-    60 / 40
-
+60 / 40
 
     $ kubectl delete vs recommendation
     $ kubectl delete dr recommendation
@@ -311,7 +275,7 @@ customer => preference => recommendation v1 from 'f11b097f1dd0': 57
 
 <br/>
 
-Далее примеры, где в зависимости от браузера, региона, залогин пользователь или нет - отдавать контент из определенного сервиса.
+Далее примеры, где в зависимости от браузера, региона, залогинен пользователь или нет - отдавать контент из определенного сервиса.
 
 https://redhat-developer-demos.github.io/istio-tutorial/istio-tutorial/1.3.x/4advanced-routerules.html
 
@@ -351,7 +315,8 @@ customer => preference => recommendation v1 from 'f11b097f1dd0': 111
 
 -->
 
-\$ {
+```
+$ {
 kubectl patch service/grafana -p '{"spec":{"type":"NodePort"}}' -n istio-system
 
 echo http://$(minikube --profile my-profile ip):$(kubectl get svc grafana -n istio-system -o 'jsonpath={.spec.ports[0].nodePort}')
@@ -369,6 +334,8 @@ kubectl patch service/kiali -p '{"spec":{"type":"NodePort"}}' -n istio-system
 echo http://$(minikube --profile my-profile ip):$(kubectl get svc kiali -n istio-system -o 'jsonpath={.spec.ports[0].nodePort}')/kiali
 
 }
+
+```
 
 <br/>
 
