@@ -19,11 +19,13 @@ https://gist.github.com/8523efa6e7b1f0d48c1fda4f347ca55b
 
 <br/>
 
+```
 ######################
-
 # Installing Flagger
-
 ######################
+```
+
+<br/>
 
 ```
 $ kubectl apply \
@@ -32,13 +34,17 @@ $ kubectl apply \
 
 <br/>
 
+```
 #####################
-
 # Deploying The App
-
 #####################
+```
 
+<br/>
+
+```
 $ cd go-demo-7
+```
 
 <br/>
 
@@ -53,11 +59,15 @@ $ kubectl label namespace go-demo-7 \
  istio-injection=enabled
 ```
 
+<br/>
+
 ```
 $ kubectl --namespace go-demo-7 apply \
  --filename k8s/istio/flagger-full/db \
  --recursive
 ```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 apply \
@@ -65,17 +75,23 @@ $ kubectl --namespace go-demo-7 apply \
  --recursive
 ```
 
+<br/>
+
 ```
 $ kubectl --namespace go-demo-7 \
  rollout status \
  deployment go-demo-7
 ```
 
+<br/>
+
 ```
 $ kubectl --namespace go-demo-7 \
  rollout status \
  deployment go-demo-7-primary
 ```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 \
@@ -124,11 +140,13 @@ Version: 0.0.1; Release: unknown
 
 <br/>
 
+```
 ##############
-
 # The Script
-
 ##############
+```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 \
@@ -154,15 +172,27 @@ $ cat k8s/istio/flagger-status.sh
 $ chmod +x k8s/istio/flagger-status.sh
 ```
 
-#####################
+<br/>
 
+```
+#####################
 # Successful Canary
-
 #####################
+```
 
+<br/>
+
+```
 $ echo ${INGRESS_HOST}
+```
 
+<br/>
+
+```
 # Open a second terminal session
+```
+
+<br/>
 
 ```
 $ export INGRESS_HOST=[...]
@@ -174,17 +204,25 @@ $ export INGRESS_HOST=[...]
 $ echo {INGRESS_HOST}
 ```
 
+<br/>
+
 ```
 $ cd ~/go-demo-7
 ```
 
+<br/>
+
+```
 $ export ADDR="http://${INGRESS_HOST}/version"
 
 $ ./k8s/istio/flagger-status.sh "$ADDR"
+```
 
 <br/>
 
+```
 # Go back to the first terminal session
+```
 
 <br/>
 
@@ -202,23 +240,39 @@ $ kubectl --namespace go-demo-7 \
 
 <br/>
 
+```
 # Go to the second terminal session
-
-echo $?
-
-# Go back to the first terminal session
-
-# Wait for a while (e.g., 5 min.)
+```
 
 <br/>
 
-#################
+```
+echo $?
+```
 
+<br/>
+
+```
+# Go back to the first terminal session
+
+# Wait for a while (e.g., 5 min.)
+```
+
+<br/>
+
+```
+#################
 # Failed Canary
-
 #################
+```
 
+<br/>
+
+```
 # Go to the second terminal session
+```
+
+<br/>
 
 ```
 $ export ADDR="http://$INGRESS_HOST/demo/random-error"
@@ -230,7 +284,13 @@ $ export ADDR="http://$INGRESS_HOST/demo/random-error"
 $ ./k8s/istio/flagger-status.sh "$ADDR"
 ```
 
+<br/>
+
+```
 # Go back to the first terminal session
+```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 apply \
@@ -244,21 +304,33 @@ $ kubectl --namespace go-demo-7 \
  describe canary go-demo-7
 ```
 
+<br/>
+
+```
 # Go to the second terminal session
+```
+
+<br/>
 
 ```
 $ echo $?
 ```
 
+<br/>
+
+```
 # Go back to the first terminal session
+```
 
 <br/>
 
+```
 ###############
-
 # Cleaning Up
-
 ###############
+```
+
+<br/>
 
 ```
 $ cd ..

@@ -19,11 +19,15 @@ https://gist.github.com/6b3619f8fc993c0452cfae8eff0b23cc
 
 <br/>
 
+```
 #####################
-
 # Deploying The App
-
 #####################
+```
+
+<br/>
+
+```
 
 $ cd go-demo-7
 
@@ -50,6 +54,7 @@ $ kubectl --namespace go-demo-7 \
 
 $ kubectl --namespace go-demo-7 \
  get deployments
+```
 
 <br/>
 
@@ -71,6 +76,8 @@ $ INGRESS_HOST=$(\
 $ echo ${INGRESS_HOST}
 ```
 
+<br/>
+
 ```
 $ curl -H "Host: go-demo-7.acme.com" \
  "http://$INGRESS_HOST/version"
@@ -78,11 +85,13 @@ $ curl -H "Host: go-demo-7.acme.com" \
 
 <br/>
 
+```
 ##########################
-
 # Rolling Back On Errors
-
 ##########################
+```
+
+<br/>
 
 ```
 $ cat k8s/istio/flagger/exercise/flagger-error.yaml
@@ -99,9 +108,17 @@ $ kubectl --namespace go-demo-7 apply \
 $ echo $INGRESS_HOST
 ```
 
+```
 # Open a second terminal session
+```
 
+<br/>
+
+```
 $ export INGRESS_HOST=[...]
+```
+
+<br/>
 
 ```
 $ while true; do
@@ -113,7 +130,11 @@ done
 
 <br/>
 
+```
 # Go back to the first terminal session
+```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 apply \
@@ -132,17 +153,27 @@ $ kubectl --namespace go-demo-7 \
   Warning  Synced  15s                flagger  Halt go-demo-7.go-demo-7 advancement success rate 92.31% < 99%
 ```
 
+<br/>
+
+```
 # Go to the second terminal session and stop the loop with _ctrl+c_
+```
 
 <br/>
 
+```
 ########################################
-
 # Rolling Back On Max Request Duration
-
 ########################################
+```
 
+<br/>
+
+```
 # Go to the first terminal session
+```
+
+<br/>
 
 ```
 $ cat k8s/istio/flagger/exercise/flagger-max-req-duration.yaml
@@ -155,7 +186,13 @@ $ kubectl --namespace go-demo-7 apply \
  --filename k8s/istio/flagger/exercise/flagger-max-req-duration.yaml
 ```
 
+<br/>
+
+```
 # Go to second terminal session
+```
+
+<br/>
 
 ```
 $ while true; do
@@ -165,12 +202,20 @@ DELAY=$[ $RANDOM % 3000 ]
 done
 ```
 
+<br/>
+
+```
 # Go back to the first terminal session
+```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 apply \
  --filename k8s/istio/flagger/exercise/deployment-0-0-3.yaml
 ```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 \
@@ -183,15 +228,27 @@ $ kubectl --namespace go-demo-7 \
   Warning  Synced  29s                  flagger  Halt go-demo-7.go-demo-7 advancement success rate 90.19% < 99%
 ```
 
+<br/>
+
+```
 # Go to the second terminal and stop the loop with _ctrl+c_
+```
 
+<br/>
+
+```
 ###################
-
 # Rolling Forward
-
 ###################
+```
 
+<br/>
+
+```
 # Go to second terminal session
+```
+
+<br/>
 
 ```
 $ while true; do
@@ -201,28 +258,44 @@ sleep 0.5
 done
 ```
 
+<br/>
+
+```
 # Go back to the first terminal session
+```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 apply \
  --filename k8s/istio/flagger/exercise/deployment-0-0-5.yaml
 ```
 
+<br/>
+
 ```
 $ kubectl --namespace go-demo-7 \
  describe canary go-demo-7
 ```
 
+<br/>
+
+```
 # Go to the second terminal and stop the loop with _ctrl+c_
+```
 
 <br/>
 
+```
 ###############
-
 # Cleaning Up
-
 ###############
+```
 
+<br/>
+
+```
 $ cd ..
 
 $ kubectl delete namespace go-demo-7
+```

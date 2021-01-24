@@ -19,12 +19,15 @@ https://gist.github.com/5b3cd6f336e2d9e6682c1a1792c860d0
 
 <br/>
 
+```
 #####################
-
 # Deploying The App
-
 #####################
+```
 
+<br/>
+
+```
 $ cd go-demo-7
 
 $ kubectl create namespace go-demo-7
@@ -54,14 +57,15 @@ $ echo ${INGRESS_HOST}
 
 $ curl -H "Host: go-demo-7.acme.com" \
  "http://${INGRESS_HOST}/version"
+```
 
 <br/>
 
+```
 ####################
-
 # Querying Metrics
-
 ####################
+```
 
 <br/>
 
@@ -106,6 +110,8 @@ sleep 0.1
 done
 ```
 
+<br/>
+
 ```
 # Execute the following prometheus queries:
 
@@ -120,11 +126,13 @@ done
 
 <br/>
 
+```
 ##############
-
 # Error Rate
-
 ##############
+```
+
+<br/>
 
 ```
 $ for i in {1..300}; do
@@ -148,11 +156,13 @@ done
 
 <br/>
 
+```
 ############################
-
 # Average Request Duration
-
 ############################
+```
+
+<br/>
 
 ```
 $ for i in {1..100}; do
@@ -174,11 +184,11 @@ done
 
 <br/>
 
+```
 ########################
-
 # Max Request Duration
-
 ########################
+```
 
 <br/>
 
@@ -198,11 +208,11 @@ done
 
 <br/>
 
+```
 #######################
-
 # Visualizing Metrics
-
 #######################
+```
 
 <br/>
 

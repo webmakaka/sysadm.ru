@@ -18,12 +18,15 @@ https://gist.github.com/vfarcic/0ccbb3a25fa59bbf2e578776d6deb07f
 
 <br/>
 
+```
 ##################
-
 # Create Cluster
-
 ##################
+```
 
+<br/>
+
+```
 # NOTE: Jenkins X doesn't work with Docker Desktop and minikube
 
 # GKE with Istio and Flagger: https://gist.github.com/561f87ee1a32c0d80d3a1027eb8a3171 (gke-istio-flagger.sh)
@@ -31,13 +34,19 @@ https://gist.github.com/vfarcic/0ccbb3a25fa59bbf2e578776d6deb07f
 # EKS with Istio and Flagger: https://gist.github.com/4e0213715efcfb4b27be5012e15b5fe9 (eks-istio-flagger.sh)
 
 # AKS with Istio and Flagger: https://gist.github.com/fbf632e59690fe80b63204592a14218a (aks-istio-flagger.sh)
+```
 
+<br/>
+
+```
 ######################
-
 # Quickstart Project
-
 ######################
+```
 
+<br/>
+
+```
 export CLUSTER_NAME=[...] # (e.g., istio)
 
 export GH_USER=[...]
@@ -239,3 +248,4 @@ hub delete -y \
  $GH_USER/environment-$CLUSTER_NAME-production
 
 # Delete the cluster using the Gists
+```

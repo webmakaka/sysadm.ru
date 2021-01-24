@@ -33,25 +33,30 @@ $ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/sam
 
 <br/>
 
-<br/>
-
+```
 ######################
-
 # Installing Flagger
-
 ######################
+```
+
+<br/>
 
 ```
 $ kubectl apply \
  --kustomize github.com/weaveworks/flagger/kustomize/istio
 ```
 
-#####################
+<br/>
 
+```
+#####################
 # Deploying The App
-
 #####################
+```
 
+<br/>
+
+```
 $ export GH_USER=vfarcic
 
 $ cd ~
@@ -60,6 +65,7 @@ $ git clone \
  https://github.com/$GH_USER/go-demo-7.git
 
 $ cd go-demo-7
+```
 
 <br/>
 
@@ -84,9 +90,11 @@ $ kubectl --namespace go-demo-7 apply \
 
 <br/>
 
-    $ ls -l k8s/app
+```
+$ ls -l k8s/app
 
-    $ cat k8s/app/*
+$ cat k8s/app/*
+```
 
 <br/>
 
@@ -150,11 +158,13 @@ No resources found in go-demo-7 namespace.
 
 <br/>
 
+```
 ##############################
-
 # Deploying Flagger Resource
-
 ##############################
+```
+
+<br/>
 
 ```
 $ cat k8s/istio/flagger/exercise/flagger.yaml
@@ -180,10 +190,14 @@ $ kubectl --namespace go-demo-7 apply \
  --filename k8s/istio/flagger/exercise/gateway.yaml
 ```
 
+<br/>
+
 ```
 $ kubectl --namespace go-demo-7 \
  get deployments
 ```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 \
@@ -191,12 +205,20 @@ $ kubectl --namespace go-demo-7 \
  deployment go-demo-7-primary
 ```
 
+<br/>
+
 ```
 $ kubectl --namespace go-demo-7 \
  get hpa
 ```
 
+<br/>
+
+```
 # Might be `<unknown>` if metrics server is not installed
+```
+
+<br/>
 
 ```
 $ for i in {1..10}; do
@@ -235,6 +257,8 @@ go-demo-7-canary    ClusterIP   10.100.79.47     <none>        80/TCP      8m21s
 go-demo-7-db        ClusterIP   10.105.27.5      <none>        27017/TCP   50m
 go-demo-7-primary   ClusterIP   10.103.249.225   <none>        80/TCP      8m21s
 ```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 \
@@ -281,11 +305,11 @@ $ kubectl --namespace go-demo-7 \
 
 <br/>
 
+```
 ###########################
-
 # Deploying A New Release
-
 ###########################
+```
 
 <br/>
 
@@ -308,7 +332,9 @@ $ echo ${INGRESS_HOST}
 
 <br/>
 
+```
 # Open a second terminal session
+```
 
 <br/>
 
@@ -328,7 +354,9 @@ done
 
 <br/>
 
+```
 # Go back to the first terminal session
+```
 
 ```
 $ kubectl --namespace go-demo-7 apply \
@@ -418,15 +446,23 @@ $ kubectl --namespace go-demo-7 \
 
 <br/>
 
+```
 # Go to the second terminal session and stop the loop with _ctrl+c_
+```
 
+<br/>
+
+```
 #######################
-
 # Visualizing Metrics
-
 #######################
+```
 
+<br/>
+
+```
 # Go to the first terminal session
+```
 
 <br/>
 
@@ -455,22 +491,30 @@ $ cat k8s/grafana/flagger.json
 
 <br/>
 
+```
 # Copy the JSON
+```
 
 open "http://localhost:3000/dashboard/import"
 
+```
 # Paste the JSON
+```
 
 <br/>
 
+```
 ###############
-
 # Cleaning Up
-
 ###############
+```
 
+<br/>
+
+```
 $ cd ..
 
 $ killall kubectl
 
 $ kubectl delete namespace go-demo-7
+```
