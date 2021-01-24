@@ -66,4 +66,10 @@ https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7
 
 <br/>
 
+## Инструменты для визуальной работы с кластером
+
+### [k9s - в консоли linux](/devops/containers/kubernetes/k9s/)
+
+<br/>
+
 ## [Что изучать, основы, ссылки и т.д.](/devops/containers/kubernetes/info/)

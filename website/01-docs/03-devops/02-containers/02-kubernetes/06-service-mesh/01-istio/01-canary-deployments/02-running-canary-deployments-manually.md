@@ -19,6 +19,7 @@ https://gist.github.com/5aa9bb94fb9192b6865b7100534ea027
 
 <br/>
 
+```
 $ export GH_USER=vfarcic
 
 $ cd ~
@@ -27,13 +28,19 @@ $ git clone \
  https://github.com/$GH_USER/go-demo-7.git
 
 $ cd go-demo-7
+```
 
+<br/>
+
+```
 ################
-
 # Fist Release
-
 ################
+```
 
+<br/>
+
+```
 $ kubectl create namespace go-demo-7
 
 $ kubectl label namespace go-demo-7 \
@@ -54,6 +61,10 @@ $ INGRESS_HOST=$(\
  $PROVIDER)
 
 $ echo ${INGRESS_HOST}
+
+```
+
+<br/>
 
 ```
 $ for i in {1..10}; do
@@ -88,12 +99,17 @@ go-demo-7-primary-7cdff5b4f7-j9b8x   2/2     Running   2          9m3s
 go-demo-7-primary-7cdff5b4f7-vpqx9   2/2     Running   2          9m3s
 ```
 
-###############
+<br/>
 
+```
+###############
 # New Release
-
 ###############
+```
 
+<br/>
+
+```
 $ cat k8s/istio/split/exercise/app-0-0-2-canary.yaml
 
 $ diff k8s/istio/gateway/app/deployment.yaml \
@@ -105,6 +121,9 @@ $ kubectl --namespace go-demo-7 apply \
 $ kubectl --namespace go-demo-7 \
  rollout status \
  deployment go-demo-7-canary
+```
+
+<br/>
 
 ```
 $ kubectl --namespace go-demo-7 get pods
@@ -146,6 +165,9 @@ Version: 0.0.1; Release: unknown
 ***
 ```
 
+<br/>
+
+```
 $ kubectl --namespace go-demo-7 \
  describe service go-demo-7
 
@@ -154,19 +176,26 @@ $ kubectl --namespace go-demo-7 \
 
 $ kubectl --namespace go-demo-7 \
  describe gateway go-demo-7
+```
 
 <br/>
 
+```
 #####################
-
 # Splitting Traffic
-
 #####################
+```
 
+<br/>
+
+```
 $ cat k8s/istio/split/exercise/host20.yaml
 
 $ kubectl --namespace go-demo-7 apply \
  --filename k8s/istio/split/exercise/host20.yaml
+```
+
+<br/>
 
 ```
 $ for i in {1..100}; do
@@ -177,19 +206,25 @@ done
 
 <br/>
 
+```
 $ kubectl --namespace go-demo-7 delete \
  --filename k8s/istio/split/exercise/host20.yaml
+```
 
 <br/>
 
 **Better aproach**
 
+```
 $ cat k8s/istio/split/exercise/split20.yaml
 
 # NOTE: The sum of all `weight` entries must be 100
 
 $ kubectl --namespace go-demo-7 apply \
  --filename k8s/istio/split/exercise/split20.yaml
+```
+
+<br/>
 
 ```
 $ for i in {1..100}; do
@@ -198,11 +233,17 @@ curl -H "Host: go-demo-7.acme.com" \
 done
 ```
 
-###################
+<br/>
 
+```
+###################
 # Rolling Forward
-
 ###################
+```
+
+<br/>
+
+```
 
 $ cat k8s/istio/split/exercise/split40.yaml
 
@@ -210,16 +251,26 @@ $ kubectl --namespace go-demo-7 apply \
  --filename k8s/istio/split/exercise/split40.yaml
 
 ```
+
+<br/>
+
+```
 $ for i in {1..100}; do
 curl -H "Host: go-demo-7.acme.com" \
  "http://$INGRESS_HOST/version"
 done
 ```
 
+<br/>
+
+```
 $ cat k8s/istio/split/exercise/split60.yaml
 
 $ kubectl --namespace go-demo-7 apply \
  --filename k8s/istio/split/exercise/split60.yaml
+```
+
+<br/>
 
 ```
 $ for i in {1..100}; do
@@ -228,12 +279,17 @@ curl -H "Host: go-demo-7.acme.com" \
 done
 ```
 
-############################
+<br/>
 
+```
+############################
 # Finishing The Deployment
-
 ############################
+```
 
+<br/>
+
+```
 $ cat k8s/istio/split/exercise/app-0-0-2.yaml
 
 $ diff k8s/istio/gateway/app/deployment.yaml \
@@ -245,6 +301,9 @@ $ kubectl --namespace go-demo-7 apply \
 $ kubectl --namespace go-demo-7 \
  rollout status \
  deployment go-demo-7-primary
+```
+
+<br/>
 
 ```
 $ for i in {1..100}; do
@@ -267,10 +326,14 @@ Version: 0.0.2; Release: canary
 Version: 0.0.2; Release: canary
 ```
 
+<br/>
+
+```
 $ cat k8s/istio/split/exercise/split100.yaml
 
 $ kubectl --namespace go-demo-7 apply \
  --filename k8s/istio/split/exercise/split100.yaml
+```
 
 <br/>
 

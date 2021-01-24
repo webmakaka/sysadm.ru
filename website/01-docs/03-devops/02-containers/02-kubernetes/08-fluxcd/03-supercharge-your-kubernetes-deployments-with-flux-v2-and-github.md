@@ -62,6 +62,7 @@ kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && chmod +x 
 
 <br/>
 
+```
 $ mkdir -p ~/tmp && cd ~/tmp
 
 $ git clone https://github.com/webmak1/realtimeapp-infra
@@ -70,14 +71,17 @@ $ cd ~/tmp/realtimeapp-infra/deploy/overlays/dev
 $ kustomize build
 
 // $ kustomize build | kubeclt apply -f -
+```
 
 <br/>
 
 # 03-Kubernetes deployments with Flux v2 Deploying Manifests
 
-    $ mkdir -p ~/project/dev && cd ~/project/dev
-    $ git clone https://github.com/${GITHUB_USER}/flux-infra
-    $  cd flux-infra
+```
+$ mkdir -p ~/project/dev && cd ~/project/dev
+$ git clone https://github.com/${GITHUB_USER}/flux-infra
+$  cd flux-infra
+```
 
 <br/>
 
@@ -143,7 +147,9 @@ $ git push
 
 <br/>
 
-    $ watch flux get kustomizations
+```
+$ watch flux get kustomizations
+```
 
 <br/>
 
@@ -170,7 +176,9 @@ redis-dev-589977c5c6-7pccx    1/1     Running   0          115s
 
 <br/>
 
-    $ flux reconcile kustomization realtimeapp-dev
+```
+$ flux reconcile kustomization realtimeapp-dev
+```
 
 <br/>
 
@@ -190,11 +198,13 @@ Publish
 
 # 04-Kubernetes deployments with Flux v2 Monitoring and Alerting
 
-(Пропустил)
+(Пропустил этот шаг)
 
 <br/>
 
-    $ cd ~/project/dev/flux-infra
+```
+$ cd ~/project/dev/flux-infra
+```
 
 <br/>
 
@@ -221,19 +231,25 @@ $ flux create kustomization monitoring \
 
 <br/>
 
-    $ watch flux get kustomizations
+```
+$ watch flux get kustomizations
+```
 
 <br/>
 
-    $ kubectl -n flux-system port-forward svc/grafana 3000:3000
+```
+$ kubectl -n flux-system port-forward svc/grafana 3000:3000
+```
 
 <br/>
 
-Далее Alerting, какие-то teams и т.д.
+Далее Alerting, какие-то teams и т.д. Наверное, имеет смысл пересмотреть.
 
 <br/>
 
+```
 $ flux get alert-providers
+```
 
 <br/>
 
@@ -262,7 +278,9 @@ $ flux create helmrelease redis \
 
 <br/>
 
-    $ flux get sources helm
+```
+$ flux get sources helm
+```
 
 <br/>
 

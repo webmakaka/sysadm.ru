@@ -14,13 +14,19 @@ https://www.youtube.com/watch?v=Twtbg6LFnAg&t=6s
 
 https://gist.github.com/vfarcic/07b0b4642b5694d0239ee7c1629173ce
 
-#########
+<br/>
 
+```
+#########
 # Setup
-
 #########
+```
+
+<br/>
 
 https://kubectl.docs.kubernetes.io/installation/kustomize/binaries/
+
+<br/>
 
 ```
 $ curl -s "https://raw.githubusercontent.com/\
@@ -29,12 +35,15 @@ kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && chmod +x 
 
 <br/>
 
+```
 ################################
-
 # Exploring kustomization.yaml
-
 ################################
+```
 
+<br/>
+
+```
 git clone https://github.com/vfarcic/argocd-production.git
 
 cd argocd-production
@@ -54,48 +63,59 @@ https://github.com/argoproj/argo/blob/master/manifests/base/kustomization.yaml
 https://github.com/argoproj/argo/blob/master/manifests/base/workflow-controller/workflow-controller-configmap.yaml
 
 cat base/config.yaml
+```
 
 <br/>
 
+```
 ###########################
-
 # Applying base manifests
-
 ###########################
-
-kustomize build base
-
-kustomize build base \
- | kubectl apply --filename -
+```
 
 <br/>
 
-#####################
+```
+$ kustomize build base
 
+$ kustomize build base \
+ | kubectl apply --filename -
+```
+
+<br/>
+
+```
+#####################
 # Applying overlays
-
 #####################
-
-kubectl --namespace argo get ingresses
-
-ls -1 overlays/production/
-
-cat overlays/production/kustomization.yaml
-
-cat overlays/production/ingress_patch.json
-
-kustomize build overlays/production \
- | kubectl apply --filename -
-
-kubectl --namespace argo get ingresses
+```
 
 <br/>
 
-##########################
+```
+$ kubectl --namespace argo get ingresses
 
+$ ls -1 overlays/production/
+
+$ cat overlays/production/kustomization.yaml
+
+$ cat overlays/production/ingress_patch.json
+
+$ kustomize build overlays/production \
+ | kubectl apply --filename -
+
+$ kubectl --namespace argo get ingresses
+```
+
+<br/>
+
+```
+##########################
 # Upgrading applications
-
 ##########################
+```
+
+<br/>
 
 ```
 $ kubectl --namespace argo \
@@ -103,16 +123,26 @@ $ kubectl --namespace argo \
     --output yaml
 ```
 
-cd overlays/production
+<br/>
+
+```
+$ cd overlays/production
+```
+
+<br/>
 
 ```
 $ kustomize edit set image \
     argoproj/argocli=argoproj/argocli:v2.12.4
 ```
 
-cat kustomization.yaml
+<br/>
 
-cd ../../
+```
+$ cat kustomization.yaml
+
+$ cd ../../
+```
 
 <br/>
 

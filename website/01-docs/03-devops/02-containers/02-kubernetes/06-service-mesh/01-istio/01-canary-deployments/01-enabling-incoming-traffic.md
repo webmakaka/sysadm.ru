@@ -17,12 +17,17 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/canary-deployments/e
 
 https://gist.github.com/vfarcic/801c99d6acc5a1e68bcee2591fac90eb
 
-#################
+<br/>
 
+```
+#################
 # Using Gateway
-
 #################
+```
 
+<br/>
+
+```
 $ export GH_USER=vfarcic
 
 $ cd ~
@@ -33,9 +38,11 @@ $ git clone \
 $ cd go-demo-7
 
 $ git pull
+```
 
 <br/>
 
+```
 $ ls -1 k8s/istio/gateway/
 
 $ ls -1 k8s/istio/gateway/app
@@ -69,6 +76,9 @@ $ kubectl run curl \
  --generator "run-pod/v1" \
  -it --rm \
  -- sh -c "apk add -U curl && curl go-demo-7.go-demo-7/demo/hello"
+```
+
+<br/>
 
 ```
 Flag --generator has been deprecated, has no effect and will be removed in the future.
@@ -88,6 +98,7 @@ pod "curl" deleted
 
 <br/>
 
+```
 $ kubectl --namespace go-demo-7 \
  get ingress
 
@@ -96,38 +107,22 @@ $ kubectl --namespace go-demo-7 \
 
 $ kubectl --namespace go-demo-7 \
  describe gateway go-demo-7
+```
 
 <br/>
 
+```
 $ export INGRESS_HOST=$(kubectl \
  --namespace istio-system \
  get service istio-ingressgateway \
  --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
 
 $ echo ${INGRESS_HOST}
-
-<br/>
-
-<!--
-
-<br/>
-
-###  Another one variant for minikube
-
 ```
 
-$ export INGRESS_PORT=$(kubectl \
- --namespace istio-system \
- get service istio-ingressgateway \
- --output jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}')
-
-$ export INGRESS_HOST=$(minikube ip --profile my-profile ip):$INGRESS_PORT
-```
-
--->
-
 <br/>
 
+```
 $ curl -v -H "Host: go-demo-7.acme.com" \
  "http://$INGRESS_HOST/demo/hello"
 
@@ -137,15 +132,19 @@ $ curl -v -H "Host: something-else.acme.com" \
 $ kubectl --namespace go-demo-7 delete \
  --filename k8s/istio/gateway \
  --recursive
+```
 
 <br/>
 
+```
 #################
-
 # Using Ingress
-
 #################
+```
 
+<br/>
+
+```
 $ istioctl profile dump demo
 
 $ ls -1 k8s/istio/ingress/app
@@ -166,3 +165,4 @@ $ curl -H "Host: go-demo-7.acme.com" \
 $ kubectl --namespace go-demo-7 delete \
  --filename k8s/istio/ingress \
  --recursive
+```

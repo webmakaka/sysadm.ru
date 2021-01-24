@@ -40,11 +40,13 @@ $ export GITHUB_PERSONAL=true
 
 -->
 
+```
 ##############################
-
 # Creating environment repos
-
 ##############################
+```
+
+<br/>
 
 ```
 $ cd ~
@@ -64,14 +66,9 @@ GitHub
 create repo flux-staging
 create repo flux-production
 
-<!--
-
-create repo devops-toolkit
-
--->
-
 <br/>
 
+```
 $ cd flux-production/
 $ git clone https://github.com/webmak1/flux-production .
 $ mkdir apps
@@ -79,13 +76,7 @@ $ mkdir apps
 $ cd flux-staging/
 $ git clone https://github.com/webmak1/flux-staging .
 $ mkdir apps
-
-<!--
-
-$ cd devops-toolkit/
-$ git clone https://github.com/webmak1/devops-toolkit .
-
--->
+```
 
 <br/>
 
@@ -96,11 +87,13 @@ $ kubectl create namespace production
 
 <br/>
 
+```
 #################
-
-# Bootstrapping
-
+# Bootstrapping`
 #################
+```
+
+<br/>
 
 ```
 $ cd ~
@@ -153,11 +146,13 @@ $ ls -1 apps/flux-system
 
 <br/>
 
+```
 ####################
-
-# Creating sources
-
+# Creating sources`
 ####################
+```
+
+<br/>
 
 ```
 $ flux create source git staging \
@@ -189,15 +184,6 @@ $ flux create source git devops-toolkit \
     --export \
     | tee apps/devops-toolkit.yaml
 ```
-
-<!-- <br/>
-
-$ flux create source git devops-toolkit \
-    --url https://github.com/$GITHUB_USER/devops-toolkit \
-    --branch main \
-    --interval 30s \
-    --export \
-    | tee apps/devops-toolkit.yaml -->
 
 <br/>
 
@@ -236,6 +222,7 @@ $ git push
 ```
 
 <br/>
+
 ```
 $ watch flux get sources git
 
@@ -247,26 +234,30 @@ $ cd ..
 
 <br/>
 
+```
 ###############################
-# Deploying the first release #
+# Deploying the first release
 ###############################
-
-$ cd flux-staging
 
 ```
 
-$ echo "image:
-tag: 2.9.9
-ingress:
-host: staging.devops-toolkit.$INGRESS_HOST.xip.io" \
- | tee values.yaml
-
+```
+$ cd flux-staging
 ```
 
 <br/>
 
 ```
+$ echo "image:
+tag: 2.9.9
+ingress:
+host: staging.devops-toolkit.$INGRESS_HOST.xip.io" \
+ | tee values.yaml
+```
 
+<br/>
+
+```
 $ flux create helmrelease \
  devops-toolkit-staging \
  --source GitRepository/devops-toolkit \
@@ -276,14 +267,11 @@ $ flux create helmrelease \
  --interval 30s \
  --export \
  | tee apps/devops-toolkit.yaml
-
 ```
 
 <br/>
 
-
 ```
-
 $ rm values.yaml
 
 $ git add --all
@@ -291,47 +279,46 @@ $ git add --all
 $ git commit -m "Initial commit"
 
 $ git push
-
 ```
 
 <br/>
 
 ```
-
 $ watch flux get helmreleases
-
 ```
 
 need to wait
 
 ```
-
 NAME READY MESSAGE
 REVISION SUSPENDED
 devops-toolkit-staging False HelmChart 'flux-system/flux-system-devops-toolki
 t-staging' is not ready False
-
 ```
 
-
+```
 $ kubectl --namespace staging \
-    get pods
-
-```
-
-NAME READY STATUS RESTARTS AGE
-staging-devops-toolkit-staging-devops-toolkit-76b88d8899-j9b8x 1/1 Running 0 3m5s
-
+ get pods
 ```
 
 <br/>
 
-##########################
-# Deploying new releases #
-##########################
-
+```
+NAME READY STATUS RESTARTS AGE
+staging-devops-toolkit-staging-devops-toolkit-76b88d8899-j9b8x 1/1 Running 0 3m5s
 ```
 
+<br/>
+
+```
+##########################
+# Deploying new releases
+##########################
+```
+
+<br/>
+
+```
 $ cd flux-staging/
 
 $ cat apps/devops-toolkit.yaml \
@@ -353,32 +340,35 @@ $ watch kubectl --namespace staging \
  --output jsonpath="{.spec.template.spec.containers[0].image}"
 
 $ cd ..
+```
 
+<br/>
+
+```
 ###########################
-
 # Promoting to production
-
 ###########################
+```
 
+<br/>
+
+```
 $ cd flux-production
 
 $ mkdir apps
-
 ```
 
-
 ```
-
 $ echo "image:
 tag: 2.9.17
 ingress:
 host: devops-toolkit.$INGRESS_HOST.xip.io" \
  | tee values.yaml
-
 ```
 
-```
+<br/>
 
+```
 $ flux create helmrelease \
  devops-toolkit-production \
  --source GitRepository/devops-toolkit \
@@ -388,14 +378,11 @@ $ flux create helmrelease \
  --interval 30s \
  --export \
  | tee apps/devops-toolkit.yaml
-
 ```
 
 <br/>
 
-
 ```
-
 $ rm values.yaml
 
 $ git add --all
@@ -408,20 +395,19 @@ $ watch flux get helmreleases
 
 $ kubectl --namespace production \
  get pods
-
 ```
 
 <br/>
 
-
+```
+#########################
+# Destroying Everything
+#########################
 ```
 
-#########################
+<br/>
 
-# Destroying Everything
-
-#########################
-
+```
 $ minikube delete
 
 $ cd ..
@@ -455,7 +441,4 @@ $ gh repo view --web
 $ cd ..
 
 $ rm -rf flux-production
-
-```
-
 ```
