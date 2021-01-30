@@ -8,12 +8,18 @@ permalink: /databases/postgresql/
 
 # Инсталляция PostgreSQL
 
-[Ubuntu](/databases/postgresql/install/ubuntu/)  
-[Centos](/databases/postgresql/install/centos/)
+<br/>
+
+[Ubuntu](/databases/postgresql/setup/ubuntu/)  
+[Centos](/databases/postgresql/setup/centos/)
 
 <br/>
 
-**Автоустановщик PostgreSQL в режиме master-slave и standalone:**
+[Запуск PgAdmin4 WebClient в docker контейнере](/databases/postgresql/pgadmin/)
+
+<br/>
+
+### Автоустановщик PostgreSQL в режиме master-slave и standalone:
 
 <a href="https://www.linux.org.ru/news/opensource/15245410">LOR</a> |<a href="https://github.com/Anton-PG/pgsql-for-you">Git</a>
 

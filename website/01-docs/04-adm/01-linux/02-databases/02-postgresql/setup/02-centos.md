@@ -3,7 +3,7 @@ layout: page
 title: PostgreSQL инсталляция в Centos 6.X
 description: PostgreSQL инсталляция в Centos 6.X
 keywords: Linux, PostgreSQL инсталляция в Centos 6.X
-permalink: /databases/postgresql/install/centos/
+permalink: /databases/postgresql/setup/centos/
 ---
 
 # PostgreSQL инсталляция в Centos 6.X

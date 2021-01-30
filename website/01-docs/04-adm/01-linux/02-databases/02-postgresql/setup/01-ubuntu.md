@@ -2,8 +2,8 @@
 layout: page
 title: PostgreSQL инсталляция в Ubuntu
 description: PostgreSQL
-keywords: Linux, PostgreSQL инсталляция в Ubuntu
-permalink: /databases/postgresql/install/ubuntu/
+keywords: databases, linux, postgresql ubuntu, инсталляция
+permalink: /databases/postgresql/setup/ubuntu/
 ---
 
 # PostgreSQL инсталляция в Ubuntu
@@ -42,70 +42,64 @@ $ PG_VERSION=9.6
 
 Если нужно установить только psql клиент
 
-    $ sudo apt-get install -y postgresql-client
-    $ psql --version
-    PostgreSQL) 10.12 (Ubuntu 10.12-0ubuntu0.18.04.1)
-
-<br/>
-
-Можно также запустить pgadmin4 webclient
-
 ```
-$ docker run -e PGADMIN_DEFAULT_EMAIL='username' -e PGADMIN_DEFAULT_PASSWORD='password' -p 5555:80 --name pgadmin dpage/pgadmin4
+$ sudo apt-get install -y postgresql-client
+$ psql --version
+PostgreSQL) 10.12 (Ubuntu 10.12-0ubuntu0.18.04.1)
 ```
-
-<br/>
-
-http://localhost:5555/
 
 <br/>
 
 ### Подключение к базе
 
+```
 # su - postgres
 
 \$ psql
 
 postgres-# \dx
 List of installed extensions
-Name | Version | Schema | Description  
+Name | Version | Schema | Description
 ---------+---------+------------+------------------------------
 plpgsql | 1.0 | pg_catalog | PL/pgSQL procedural language
 (1 row)
+```
 
 <br/>
 
 ### Добавление расширения jsonbx-1.0.0
 
-    # apt install -y gcc make
-    # cd /home/marley/Desktop/jsonbx-1.0.0
-    # make
+```
+# apt install -y gcc make
+# cd /home/marley/Desktop/jsonbx-1.0.0
+# make
 
-    # pg_config --pkglibdir
-    /usr/lib/postgresql/9.6/lib
+# pg_config --pkglibdir
+/usr/lib/postgresql/9.6/lib
 
-    # cp jsonbx.o /usr/lib/postgresql/9.6/lib
-    # cp jsonbx.so /usr/lib/postgresql/9.6/lib
+# cp jsonbx.o /usr/lib/postgresql/9.6/lib
+# cp jsonbx.so /usr/lib/postgresql/9.6/lib
 
-    # cp jsonbx.control /usr/share/postgresql/9.6/extension/
-    # cp jsonbx--1.0.sql /usr/share/postgresql/9.6/extension/
+# cp jsonbx.control /usr/share/postgresql/9.6/extension/
+# cp jsonbx--1.0.sql /usr/share/postgresql/9.6/extension/
 
 
-    $ psql
-    psql (9.6.9)
-    Type "help" for help.
+$ psql
+psql (9.6.9)
+Type "help" for help.
 
-    postgres=# CREATE EXTENSION IF NOT EXISTS jsonbx;
-    CREATE EXTENSION
-    postgres=#
-    postgres=#
-    postgres=# \dx
-                     List of installed extensions
-      Name   | Version |   Schema   |         Description
-    ---------+---------+------------+------------------------------
-     jsonbx  | 1.0     | public     | Jsonb extension
-     plpgsql | 1.0     | pg_catalog | PL/pgSQL procedural language
-    (2 rows)
+postgres=# CREATE EXTENSION IF NOT EXISTS jsonbx;
+CREATE EXTENSION
+postgres=#
+postgres=#
+postgres=# \dx
+                    List of installed extensions
+    Name   | Version |   Schema   |         Description
+---------+---------+------------+------------------------------
+    jsonbx  | 1.0     | public     | Jsonb extension
+    plpgsql | 1.0     | pg_catalog | PL/pgSQL procedural language
+(2 rows)
+```
 
 <br/>
 

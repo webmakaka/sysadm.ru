@@ -10,17 +10,23 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 <br/>
 
-**Последний раз аналогичная проблема:**<br/>
+**Последний раз аналогичная проблема:**
 
 <br/>
 
-2020:<br/>
+<br/>
+
+**2021:**<br/>
+
+29.01.2021 - 1 hour and 53 minutes
+
+25.01.2021 - 29 + 7 minutes
 
 20.01.2021 - 3 hours, 41 minutes
 
 <br/>
 
-2020:<br/>
+**2020:**<br/>
 
 25.04.2020 - 55 minutes
 
@@ -30,7 +36,7 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 <br/>
 
-2019:<br/>
+**2019:**<br/>
 
 26.10.2019 - 4 часа, 2 минуты
 
@@ -62,7 +68,7 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 **Итого на чей стороне проблемы:**
 
-2 (Me) : 11 (Beeline)
+2 (Me) : 13 (Beeline)
 
 <br/>
 
@@ -88,17 +94,19 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 <br/>
 
-    # show dhcp lease
-    Temp IP addr: 0.0.0.0  for peer on Interface: GigabitEthernet0/0
-    Temp  sub net mask: 0.0.0.0
-       DHCP Lease server: 0.0.0.0, state: 3 Selecting
-       DHCP transaction id: 78
-       Lease: 0 secs,  Renewal: 0 secs,  Rebind: 0 secs
-       Next timer fires after: 00:00:01
-       Retry count: 1   Client-ID: cisco-a493.4cba.00a0-Gi0/0
-       Client-ID hex dump: 636973636F2D613439332E346362612E
-                           303061302D4769302F30
-       Hostname: cisco-router-1941
+```
+# show dhcp lease
+Temp IP addr: 0.0.0.0  for peer on Interface: GigabitEthernet0/0
+Temp  sub net mask: 0.0.0.0
+    DHCP Lease server: 0.0.0.0, state: 3 Selecting
+    DHCP transaction id: 78
+    Lease: 0 secs,  Renewal: 0 secs,  Rebind: 0 secs
+    Next timer fires after: 00:00:01
+    Retry count: 1   Client-ID: cisco-a493.4cba.00a0-Gi0/0
+    Client-ID hex dump: 636973636F2D613439332E346362612E
+                        303061302D4769302F30
+    Hostname: cisco-router-1941
+```
 
 <br/>
 

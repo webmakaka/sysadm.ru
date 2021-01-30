@@ -8,6 +8,7 @@ permalink: /devops/clouds/oracle/
 
 # Oracle Clouds
 
+```
 https://www.youtube.com/watch?v=nFlFswEpwnA
 
 Networking -> Virtualc Cloud Networks -> Create VCN
@@ -260,3 +261,5 @@ Profile -> User Serttings -> API Keys -> Add API Key -> Paste Public Key
 **См. Подробнее:**
 
 https://git.ir/pluralsight-provisioning-virtual-machines-on-oracle-compute-cloud/
+
+```
