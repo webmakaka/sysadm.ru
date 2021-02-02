@@ -9,7 +9,7 @@ permalink: /devops/containers/docker/registry/no-security/
 # Собственный Docker Registry без Security
 
 Делаю:  
-17.05.2019
+02.02.2021
 
 По материалам **Implementing a Self-hosted Docker Registry**. Что лежин на большом трекере.
 
@@ -27,19 +27,25 @@ permalink: /devops/containers/docker/registry/no-security/
 
     $ docker run -it -d -p 5000:5000 --restart=always --name registry_local -v registry-data:/var/lib/registry registry:2
 
-<!-- <br/>
+<br/>
 
-    // Если потом нужно будет удалить volume:
+### Проверка
 
-    $ docker volume ls
-    ***
-    local               registry-data
+    # vi /etc/docker/daemon.json
 
-    $ docker volume rm registry-data -->
+```
+{
+      "insecure-registries": ["registry.local:5000"]
+}
+```
 
 <br/>
 
-    // Проверка, если нужно
+    # systemctl daemon-reload
+    # systemctl restart docker
+
+<br/>
+
     $ docker pull busybox
     $ docker tag busybox registry.local:5000/busybox
     $ docker push registry.local:5000/busybox
@@ -51,7 +57,7 @@ permalink: /devops/containers/docker/registry/no-security/
 
 <br/>
 
-**На клиенте**
+### На клиенте, который будет отправлять имиджи в registry
 
 <br/>
 
@@ -64,13 +70,6 @@ permalink: /devops/containers/docker/registry/no-security/
     192.168.0.11 registry.local
 
 <br/>
-
-    $ curl registry.local:5000/v2/_catalog
-
-    $ docker info
-    ***
-    Insecure Registries:
-    127.0.0.0/8
 
     # vi /etc/docker/daemon.json
 
@@ -93,4 +92,12 @@ permalink: /devops/containers/docker/registry/no-security/
     registry.local:5000
     127.0.0.0/8
 
-    $ docker pull registry.local:5000/mongo
+<br/>
+
+### Если нужно будет удалить volume:
+
+    $ docker volume ls
+    ***
+    local               registry-data
+
+    $ docker volume rm registry-data

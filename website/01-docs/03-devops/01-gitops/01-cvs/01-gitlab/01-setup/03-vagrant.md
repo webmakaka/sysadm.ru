@@ -2,8 +2,8 @@
 layout: page
 title: Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами
 description: Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами
-keywords: Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами
-permalink: /devops/linux/virtual/vagrant/vagrant-gitlab/
+keywords: devops, gitops, cvs, gitlab, setup, vagrant, git runner
+permalink: /devops/gitops/cvs/gitlab/vagrant/
 ---
 
 # Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами
@@ -13,14 +13,14 @@ permalink: /devops/linux/virtual/vagrant/vagrant-gitlab/
 
 <br/>
 
-Из видеокурса "Continuous Integration on Gitlab":  
+**Из видеокурса "Continuous Integration on Gitlab":**  
 https://www.udemy.com/continuous-integration-on-gitlab/
 
 Материал нашел в интернетах.
 
 <br/>
 
-Для начала в хостах хостовой машине пропишу:
+Для начала в hosts хостовой машине прописываю:
 
     # vi /etc/hosts
 
@@ -36,7 +36,7 @@ https://www.udemy.com/continuous-integration-on-gitlab/
 
 <br/>
 
-    $ git clone https://sysadm-ru@bitbucket.org/sysadm-ru/gitlab4ci.git .
+    $ git clone https://bitbucket.org/sysadm-ru/gitlab4ci.git .
 
 <br/>
 
@@ -90,57 +90,3 @@ https://www.udemy.com/continuous-integration-on-gitlab/
 <br/>
 
 http://my-gitlab-ce
-
-<br/>
-
-Поменять пароль для пользователя root.
-
-Создать нового пользователя и залогиниться им.
-
-<br/>
-
-Settings --> SSH Keys
-
-Добавить ключ с хост машины.
-
-<br/>
-
-Можно сделать так:
-
-    $ ssh-keyget -t rsa -N ''
-    $ cat ~/.ssh/id_rsa.pub
-
-<br/>
-
-Клонирую репо в поднятый gitlab:  
-https://bitbucket.org/marley-golang/continuous-integration-on-gitlab/
-
-<br/>
-
-Войти как root --> Admin area --> Runners --> Скопировать registration token
-
-    $ sudo gitlab-runner register
-
-    Please enter the gitlab-ci coordinator URL: [http://my-gitlab-ce]
-    Please enter the gitlab-ci token for this runner: [<myToken>]
-    Please enter the gitlab-ci description for this runner: [local-docker-runner]
-    Please enter the gitlab-ci tags for this runner (comma separated): [go-runner]
-    Whether to lock Runner to current project: false
-    Please enter the executor: [docker]
-    Default docker image: [golang:1.7]
-
-<br/>
-
-    $ sudo vi /etc/gitlab-runner/config.toml
-
-В конец блока:
-
-    [runner.docker]
-
-добавить
-
-    extra_hosts = ["my-gitlab-ce:192.168.0.10"]
-
-<br/>
-
-    $ sudo gitlab-runner restart

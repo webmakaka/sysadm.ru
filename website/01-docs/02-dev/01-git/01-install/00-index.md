@@ -12,4 +12,4 @@ permalink: /dev/git/install/
 
 ### [Centos](/dev/git/install/centos/)
 
-### [шибки при работе с GIT](/dev/git/errors/)
+### [Ошибки при работе с GIT](/dev/git/errors/)

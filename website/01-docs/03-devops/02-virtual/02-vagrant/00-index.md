@@ -34,7 +34,7 @@ permalink: /devops/linux/virtual/vagrant/
 
 [Vagrant и Ansible playbook для подготовки виртуальных машин Virtualbox](/devops/linux/virtual/vagrant/vagrant-ansible-playbook/)
 
-[Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](/devops/linux/virtual/vagrant/vagrant-gitlab/)
+[Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](/devops/gitops/cvs/gitlab/vagrant/)
 
 [Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox](https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7)
 

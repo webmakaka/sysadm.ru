@@ -2,7 +2,7 @@
 layout: page
 title: Git в Linux
 description: Git в Linux
-keywords: Git в Linux
+keywords: dev, git, linux
 permalink: /dev/git/
 ---
 
@@ -22,6 +22,6 @@ permalink: /dev/git/
 
 # GitLab
 
-### [GitLab](/dev/git/gitlab/)
+### [GitLab](/devops/gitops/cvs/gitlab/)
 
 ### [GitTea Youtube](https://www.youtube.com/watch?v=dTvTBlzKqgg)
