@@ -16,6 +16,12 @@ permalink: /devops/gitops/cvs/gitlab/
 
 <br/>
 
+### Ошибки
+
+[error during connect: Post http://docker:2375/v1.24/auth: dial tcp: lookup docker on 10.0.2.3:53: server misbehaving](/devops/gitops/cvs/gitlab/errors/)
+
+<br/>
+
 ## Архив
 
 ### [Инсталляция GITLAB в Centos 6 из пакетов](/devops/gitops/cvs/gitlab/setup/centos/6/)

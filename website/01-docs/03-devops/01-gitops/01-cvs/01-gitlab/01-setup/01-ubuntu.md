@@ -53,6 +53,10 @@ $ sudo vi /etc/hosts
 
 <br/>
 
+C 4GB зависала. Накинул еще 1GB.
+
+<br/>
+
 ```
 $ cat <<EOF >> Vagrantfile
 
@@ -67,7 +71,7 @@ Vagrant.configure(2) do |config|
   config.hostmanager.include_offline = true
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "4096"
+    vb.memory = "5120"
     vb.cpus = 2
   end
 
