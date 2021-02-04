@@ -31,7 +31,7 @@ https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-### [Helm](/devops/containers/kubernetes/packes/heml/setup/)
+### [Helm](/devops/containers/kubernetes/packages/heml/setup/)
 
 ### [Устанавливаем MetalLB](/devops/containers/kubernetes/metal-lb/)
 

@@ -6,12 +6,16 @@ keywords: devops, gitops, cvs, gitlab, error during connect, server misbehaving
 permalink: /devops/gitops/cvs/gitlab/errors/
 ---
 
-# error during connect: Post http://docker:2375/v1.24/auth: dial tcp: lookup docker on 10.0.2.3:53: server misbehaving
+# [GitLab Error] error during connect: Post http://docker:2375/v1.24/auth: dial tcp: lookup docker on 10.0.2.3:53: server misbehaving
 
 <br/>
 
 Делаю:  
-02.02.2021
+03.02.2021
+
+<br/>
+
+Записываю, т.к. потерял кучу времени на решение, как мне кажется, неочевидной ошибки в логах упавшей job в gitlab, и найти сразу решение не удалось.
 
 <br/>
 
@@ -83,7 +87,7 @@ CGroup: /system.slice/docker.service
 
 <br/>
 
-Должен показывать, что теперь слуаше порт 2375.
+Должен показывать, что теперь слуашел порт 2375.
 
 <br/>
 

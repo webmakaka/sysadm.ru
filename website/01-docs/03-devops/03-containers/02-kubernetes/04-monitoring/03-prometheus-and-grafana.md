@@ -10,7 +10,8 @@ permalink: /devops/containers/kubernetes/monitoring/prometheus-and-grafana/
 
 <br/>
 
-Делаю: 11.04.2019
+Делаю:
+11.04.2019
 
 <br/>
 
@@ -30,7 +31,7 @@ https://www.youtube.com/watch?v=CmPdyvgmw-A&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
-UPD. Heml2 выпилен, предлагаю попробовать Helm3 как <a href="/devops/containers/kubernetes/packes/heml/setup/">здесь</a>.
+UPD. Heml2 выпилен, предлагаю попробовать Helm3 как <a href="/devops/containers/kubernetes/packages/heml/setup/">здесь</a>.
 
 <br/>
 

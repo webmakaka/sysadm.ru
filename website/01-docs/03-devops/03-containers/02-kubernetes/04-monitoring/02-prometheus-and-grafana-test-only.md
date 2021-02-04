@@ -11,27 +11,45 @@ permalink: /devops/containers/kubernetes/monitoring/prometheus-and-grafana-test-
 <br/>
 
 Делаю:  
-12.01.2021
+04.02.2021
 
 <br/>
 
-Запускаю [локальный kubernetes кластер](https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7)
+Запускаю [локальный kubernetes кластер](https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-ubuntu-20.04)
 
 <br/>
 
-    $ kubectl get nodes
-    NAME         STATUS   ROLES                  AGE   VERSION
-    master.k8s   Ready    control-plane,master   39h   v1.20.1
-    node1.k8s    Ready    <none>                 39h   v1.20.1
-    node2.k8s    Ready    <none>                 39h   v1.20.1
+```
+$ kubectl get nodes
+NAME     STATUS   ROLES                  AGE     VERSION
+master   Ready    control-plane,master   11m     v1.20.2
+node1    Ready    <none>                 7m1s    v1.20.2
+node2    Ready    <none>                 2m38s   v1.20.2
+```
 
 <br/>
 
-Устанавливаю [Helm3](/devops/containers/kubernetes/packes/heml/setup/) на localhost.
+Устанавливаю [Helm3](/devops/containers/kubernetes/packages/heml/setup/) на localhost.
 
 <br/>
 
-    $ mkdir ~/kubernetes-configs && cd ~/kubernetes-configs
+```
+$ mkdir ~/kubernetes-configs && cd ~/kubernetes-configs
+```
+
+<br/>
+
+**Вроде оф.дока:**
+
+https://github.com/prometheus-community/helm-charts
+
+<br/>
+
+```
+$ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+$ prometheus-community/prometheus
+```
 
 <br/>
 
@@ -50,28 +68,54 @@ server:
 
 <br/>
 
-    $ helm search repo prometheus
+```
+$ kubectl create namespace prometheus
+
+$ helm install prometheus \
+    prometheus-community/prometheus \
+    -f prometheus-values.yml \
+    --namespace prometheus
+
+$ kubectl get pods -n prometheus
+```
 
 <br/>
 
-    $ kubectl create namespace prometheus
-
-    $ helm install prometheus \
-      -f prometheus-values.yml \
-      stable/prometheus \
-      --namespace prometheus
-
-    $ kubectl get pods -n prometheus
+```
+$ helm list -n prometheus
+NAME      	NAMESPACE 	REVISION	UPDATED                                	STATUS  	CHART            	APP VERSION
+prometheus	prometheus	1       	2021-02-04 15:12:10.794089007 +0300 MSK	deployed	prometheus-13.2.1	2.24.0
+```
 
 <br/>
 
-    $ helm list -n prometheus
-    NAME      	NAMESPACE 	REVISION	UPDATED                               	STATUS  	CHART             	APP VERSION
-    prometheus	prometheus	1       	2021-01-12 15:11:13.92312402 +0300 MSK	deployed	prometheus-11.12.1	2.20.1
+```
+$ export POD_NAME=$(kubectl get pods --namespace prometheus -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}")
+
+$ kubectl --namespace prometheus port-forward $POD_NAME 9090
+```
+
+http://localhost:9090/graph
 
 <br/>
 
 ### 02. Grafana
+
+<br/>
+
+https://grafana.com/docs/loki/latest/installation/helm/
+
+```
+$ helm repo add grafana https://grafana.github.io/helm-charts
+```
+
+<br/>
+
+```
+$ helm repo update
+```
+
+<br/>
 
     $ vi grafana-values.yml
 
@@ -79,12 +123,88 @@ server:
 adminPassword: password
 ```
 
-    $ kubectl create namespace grafana
+```
 
-    $ helm install grafana \
-      -f grafana-values.yml \
-      stable/grafana \
-      --namespace grafana
+$ kubectl create namespace loki
+
+$ helm upgrade --install loki \
+    grafana/loki \
+    --namespace=loki
+```
+
+<br/>
+
+```
+$ kubectl create namespace grafana
+
+$ helm install loki-grafana \
+    grafana/grafana \
+    -f grafana-values.yml \
+    --namespace grafana
+```
+
+<br/>
+
+```
+$ helm list -n grafana
+NAME        	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART        	APP VERSION
+loki-grafana	grafana  	1       	2021-02-04 15:28:31.131428849 +0300 MSK	deployed	grafana-6.2.1	7.3.5
+```
+
+<br/>
+
+```
+$ export POD_NAME=$(kubectl get pods --namespace grafana -l "app.kubernetes.io/name=grafana,app.kubernetes.io/instance=loki-grafana" -o jsonpath="{.items[0].metadata.name}")
+
+$ kubectl --namespace grafana port-forward $POD_NAME 3000
+```
+
+<br/>
+
+http://localhost:3000/
+
+<br/>
+
+```
+admin / password
+```
+
+<br/>
+
+Add data source - Prometheus
+
+Name: Prometheus
+
+URL: http://prometheus-server.prometheus.svc.cluster.local
+
+Save and test
+
+<!--
+
+<br/>
+
+    // ISSSUE
+    $ export POD_NAME=$(kubectl get pods --namespace grafana -l "app=grafana" -o jsonpath="{.items[0].metadata.name}")
+
+
+    $ export POD_NAME=grafana-7f58b98f94-8szjv
+
+    $ kubectl --namespace grafana port-forward $POD_NAME 3000
+
+<br/>
+
+
+https://medium.com/@at_ishikawa/install-prometheus-and-grafana-by-helm-9784c73a3e97
+
+kubectl describe pod grafana-7f58b98f94-8szjv --namespace grafana
+
+-->
+
+<br/>
+
+### Пример запуска приложения с метриками:
+
+<a href="//itsimple.ru/videos/devops/implementing-a-full-ci-cd-pipeline/monitoring/">Здесь</a>
 
 <!--
 <br>
@@ -140,62 +260,3 @@ spec:
 <br/>
 
 http://node1.k8s:30001 -->
-
-<br/>
-
-    $ export POD_NAME=$(kubectl get pods --namespace prometheus -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}")
-
-    $ kubectl --namespace prometheus port-forward $POD_NAME 9090
-
-http://localhost:9090/graph
-
-<br/>
-
-    $ kubectl port-forward --namespace grafana service/grafana 3000:80
-
-<br/>
-
-http://localhost:3000/
-
-<br/>
-
-Add data source - Prometheus
-
-Name: Prometheus
-
-URL: http://prometheus-server.prometheus.svc.cluster.local
-
-Save and test
-
-<!--
-
-<br/>
-
-    // ISSSUE
-    $ export POD_NAME=$(kubectl get pods --namespace grafana -l "app=grafana" -o jsonpath="{.items[0].metadata.name}")
-
-
-    $ export POD_NAME=grafana-7f58b98f94-8szjv
-
-    $ kubectl --namespace grafana port-forward $POD_NAME 3000
-
-<br/>
-
-
-https://medium.com/@at_ishikawa/install-prometheus-and-grafana-by-helm-9784c73a3e97
-
-kubectl describe pod grafana-7f58b98f94-8szjv --namespace grafana
-
--->
-
-<br/>
-
-**Нужно будет Переделать по инструкции:**
-
-https://grafana.com/docs/loki/latest/installation/helm/
-
-<br/>
-
-### Пример запуска приложения с метриками:
-
-<a href="http://itsimple.ru/videos/devops/implementing-a-full-ci-cd-pipeline/monitoring/">Здесь</a>

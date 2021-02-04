@@ -10,7 +10,7 @@ permalink: /devops/containers/kubernetes/monitoring/
 
 <br/>
 
-### [Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml]
+## [Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml]
 
 ### [Для ознакомления](/devops/containers/kubernetes/monitoring/prometheus-and-grafana-test-only/)
 

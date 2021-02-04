@@ -57,7 +57,7 @@ backend http_back
 
 Устанавливаем helm/tiller.
 
-UPD. Heml2 выпилен, предлагаю попробовать Helm3 как <a href="/devops/containers/kubernetes/packes/heml/setup/">здесь</a>.
+UPD. Heml2 выпилен, предлагаю попробовать Helm3 как <a href="/devops/containers/kubernetes/packages/heml/setup/">здесь</a>.
 
 <br/>
 
