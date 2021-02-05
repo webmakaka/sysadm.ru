@@ -16,6 +16,10 @@ permalink: /devops/gitops/cvs/gitlab/
 
 <br/>
 
+### [Запуск Job](/devops/gitops/cvs/gitlab/run-job/)
+
+<br/>
+
 ### Ошибки
 
 [error during connect: Post http://docker:2375/v1.24/auth: dial tcp: lookup docker on 10.0.2.3:53: server misbehaving](/devops/gitops/cvs/gitlab/errors/)
