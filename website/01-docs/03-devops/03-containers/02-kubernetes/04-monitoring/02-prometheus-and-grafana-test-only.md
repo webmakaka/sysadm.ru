@@ -11,7 +11,7 @@ permalink: /devops/containers/kubernetes/monitoring/prometheus-and-grafana-test-
 <br/>
 
 Делаю:  
-04.02.2021
+08.02.2021
 
 <br/>
 
@@ -47,8 +47,6 @@ https://github.com/prometheus-community/helm-charts
 
 ```
 $ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-
-$ prometheus-community/prometheus
 ```
 
 <br/>
@@ -146,9 +144,9 @@ $ helm install loki-grafana \
 <br/>
 
 ```
-$ helm list -n grafana
-NAME        	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART        	APP VERSION
-loki-grafana	grafana  	1       	2021-02-04 15:28:31.131428849 +0300 MSK	deployed	grafana-6.2.1	7.3.5
+$ kubectl get pods -n grafana
+NAME                           READY   STATUS    RESTARTS   AGE
+loki-grafana-bd544cfcb-5rgds   1/1     Running   0          56s
 ```
 
 <br/>
