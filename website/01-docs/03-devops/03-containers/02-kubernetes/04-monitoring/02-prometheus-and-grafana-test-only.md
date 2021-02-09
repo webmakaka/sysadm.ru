@@ -11,9 +11,47 @@ permalink: /devops/containers/kubernetes/monitoring/prometheus-and-grafana-test-
 <br/>
 
 Делаю:  
-08.02.2021
+09.02.2021
 
 <br/>
+
+**Upd:**
+
+Похоже все будет в ближайшее время кучей ставится одной командой:
+
+https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#multiple-releases
+
+<br/>
+
+```
+$ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+$ helm repo update
+
+$ kubectl create namespace monitoring
+
+// Без ключа serviceMonitorSelectorNilUsesHelmValues=false
+// Не стартовали сервис мониторы и не добавлялись в target и configuration
+$ helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace monitoring \
+  --set kubelet.serviceMonitor.https=true \
+  --set prometheus.prometheusSpec.serviceMonitorSelectorNilUsesHelmValues=false \
+  --set prometheus.prometheusSpec.podMonitorSelectorNilUsesHelmValues=false \
+  --set prometheus.prometheusSpec.ruleSelectorNilUsesHelmValues=false
+
+$ export POD_NAME=prometheus-prometheus-stack-kube-prom-prometheus-0
+
+$ kubectl --namespace monitoring port-forward $POD_NAME 9090
+
+localhost:9090
+```
+
+<br/>
+**Полезный конфиг взял здесь:**  
+https://docs.fission.io/docs/observability/prometheus/
+
+<br/>
+
+### Как делалось ранее
 
 Запускаю [локальный kubernetes кластер](https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-ubuntu-20.04)
 
