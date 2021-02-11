@@ -55,6 +55,8 @@ $ flux bootstrap github \
 
 # 02-Kubernetes deployments with Flux v2 introduction to kustomize
 
+<br/>
+
 ```
 $ curl -s "https://raw.githubusercontent.com/\
 kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && chmod +x kustomize && sudo mv kustomize /usr/local/bin/

@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes
 description: Kubernetes
-keywords: DevOps, Kubernetes
+keywords: devops, containers, kubernetes
 permalink: /devops/containers/kubernetes/
 ---
 
@@ -38,29 +38,19 @@ https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7
 
 <br/>
 
-## [Kubernetes Load Balancer]
-
-### [Metal LB](/devops/containers/kubernetes/metal-lb/)
+### [Kubernetes Load Balancer (Metal LB)](/devops/containers/kubernetes/metal-lb/)
 
 <br/>
 
-## [Kubernetes Package Manager]
+### [Kubernetes Package Management (Kustomize, Helm)](/devops/containers/kubernetes/packages/)
 
-### [Helm](/devops/containers/kubernetes/packages/heml/)
-
-## [Service Mesh]
-
-### [ISTIO](/devops/containers/kubernetes/service-mesh/istio/)
+### [Service Mesh (ISTIO)](/devops/containers/kubernetes/service-mesh/istio/)
 
 <br/>
 
 ## CI/CD
 
 ### [Tekton](/devops/containers/kubernetes/cicd/)
-
-<br/>
-
-## FluxCD
 
 ### [FluxCD](/devops/containers/kubernetes/fluxcd/)
 

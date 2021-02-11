@@ -2,8 +2,8 @@
 layout: page
 title: Kustomize - How to Simplify Kubernetes Configuration Management
 description: Kustomize - How to Simplify Kubernetes Configuration Management
-keywords: linux, kubernetes, Kustomize
-permalink: /devops/containers/kubernetes/fluxcd/kustomize-how-to-simplify-kubernetes-configuration-management/
+keywords: linux, kubernetes, kustomize
+permalink: /devops/containers/kubernetes/packages/kustomize/how-to-simplify-kubernetes-configuration-management/
 ---
 
 # Kustomize - How to Simplify Kubernetes Configuration Management

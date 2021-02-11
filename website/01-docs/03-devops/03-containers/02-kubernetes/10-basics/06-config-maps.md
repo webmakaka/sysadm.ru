@@ -26,28 +26,37 @@ https://www.youtube.com/watch?v=upmLONFGNBs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 ### ConfigMaps
 
-    $ kubectl create -f https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/6-configmap-1.yaml
+```
+$ kubectl create -f https://bitbucket.org/sysadm-ru/kubernetes/raw/faf2f86a2c1bb82053c5aba9ea7c96463e4e61b0/yamls/6-configmap-1.yaml
+```
 
+<br/>
 
-    $ kubectl get configmaps
-    NAME             DATA   AGE
-    demo-configmap   2      16s
+```
+$ kubectl get configmaps
+NAME             DATA   AGE
+demo-configmap   2      16s
+```
 
-    $ kubectl describe cm demo-configmap
-    Name:         demo-configmap
-    Namespace:    default
-    Labels:       <none>
-    Annotations:  <none>
+<br/>
 
-    Data
-    ====
-    channel.name:
-    ----
-    justmeandopensource
-    channel.owner:
-    ----
-    Venkat Nagappan
-    Events:  <none>
+```
+$ kubectl describe cm demo-configmap
+Name:         demo-configmap
+Namespace:    default
+Labels:       <none>
+Annotations:  <none>
+
+Data
+====
+channel.name:
+----
+justmeandopensource
+channel.owner:
+----
+Venkat Nagappan
+Events:  <none>
+```
 
 <br/>
 
