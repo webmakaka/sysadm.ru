@@ -25,5 +25,3 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/
 ### [Istio в minikube примеры из курса "11 Steps to Awesome with Kubernetes, Istio, and Knative LiveLessons"](/devops/containers/kubernetes/service-mesh/istio/minikube/11-steps-to-awesome-with-kubernetes/)
 
 ### [Примеры из видеокурса Canary Deployments To Kubernetes Using Istio and Friends](/devops/containers/kubernetes/service-mesh/istio/canary-deployments/)
-
-### [Istio в локальном kubernetes кластере (Пример от Venkat)](/devops/containers/kubernetes/service-mesh/istio/venkat-sample/)
