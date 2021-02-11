@@ -3,7 +3,7 @@ layout: page
 title: TekTon
 description: TekTon
 keywords: linux, kubernetes, CI/CD, TekTon
-permalink: /devops/containers/kubernetes/cicd/tekton/
+permalink: /devops/containers/kubernetes/ci-cd/tekton/sample/
 ---
 
 # TekTon
@@ -41,7 +41,9 @@ https://github.com/tektoncd/cli
 
 https://github.com/tektoncd/pipeline/blob/master/docs/tutorial.md
 
-```
+<br/>
+
+```yaml
 $ cat << EOF | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task

@@ -12,6 +12,8 @@ permalink: /devops/containers/kubernetes/service-mesh/
 
 ### [Linkerd]
 
+https://www.youtube.com/watch?v=Hc-XFPHDDk4&
+
 ### [App Mesh]
 
 <br/>

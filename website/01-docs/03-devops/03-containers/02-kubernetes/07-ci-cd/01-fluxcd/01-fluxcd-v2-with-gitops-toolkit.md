@@ -3,7 +3,7 @@ layout: page
 title: Flux CD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism
 description: Flux CD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism
 keywords: linux, kubernetes, FluxCD
-permalink: /devops/containers/kubernetes/fluxcd/fluxcd-v2-with-gitops-toolkit/
+permalink: /devops/containers/kubernetes/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/
 ---
 
 # Flux CD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism

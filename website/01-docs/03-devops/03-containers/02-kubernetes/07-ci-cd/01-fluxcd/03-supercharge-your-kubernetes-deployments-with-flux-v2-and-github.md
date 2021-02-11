@@ -3,7 +3,7 @@ layout: page
 title: Supercharge your Kubernetes deployments with Flux v2 and GitHub
 description: Supercharge your Kubernetes deployments with Flux v2 and GitHub
 keywords: linux, kubernetes, FluxCD, Kustomize
-permalink: /devops/containers/kubernetes/fluxcd/supercharge-your-kubernetes-deployments-with-flux-v2-and-github/
+permalink: /devops/containers/kubernetes/ci-cd/fluxcd/supercharge-your-kubernetes-deployments-with-flux-v2-and-github/
 ---
 
 # Supercharge your Kubernetes deployments with Flux v2 and GitHub

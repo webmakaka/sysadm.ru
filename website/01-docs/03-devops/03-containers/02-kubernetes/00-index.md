@@ -48,11 +48,7 @@ https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7
 
 <br/>
 
-## CI/CD
-
-### [Tekton](/devops/containers/kubernetes/cicd/)
-
-### [FluxCD](/devops/containers/kubernetes/fluxcd/)
+### CI/CD (Tekton, FluxCD, ArgoCD) (/devops/containers/kubernetes/ci-cd/)
 
 <br/>
 
