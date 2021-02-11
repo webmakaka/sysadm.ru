@@ -28,12 +28,10 @@ https://gist.github.com/vfarcic/801c99d6acc5a1e68bcee2591fac90eb
 <br/>
 
 ```
-$ export GH_USER=vfarcic
-
 $ cd ~
 
 $ git clone \
- https://github.com/$GH_USER/go-demo-7.git
+ https://github.com/vfarcic/go-demo-7.git
 
 $ cd go-demo-7
 

@@ -8,7 +8,7 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/request-routing/
 
 # Istio Request Routing
 
-Поднята виртуальная машина с minikube <a href="/devops/containers/kubernetes/service-mesh/istio/minikube/env/">следующим образом</a>.
+Поднята виртуальная машина с minikube <a href="/devops/containers/kubernetes/service-mesh/istio/minikube/setup/">следующим образом</a>.
 
 <br/>
 

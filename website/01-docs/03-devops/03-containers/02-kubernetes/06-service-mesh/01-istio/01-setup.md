@@ -3,7 +3,7 @@ layout: page
 title: Подготовка окружения для тестов Istio в minikube
 description: Подготовка окружения для тестов Istio в minikube
 keywords: linux, kubernetes, Istio, MiniKube
-permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/env/
+permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/setup/
 ---
 
 # Подготовка окружения для тестов Istio в minikube
@@ -11,7 +11,7 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/env/
 <br/>
 
 Делаю:  
-21.01.2021
+11.02.2021
 
 <br/>
 
@@ -19,21 +19,21 @@ https://istio.io/docs/setup/getting-started/#download
 
 ```
 $ {
-    minikube --profile my-profile config set memory 8192
-    minikube --profile my-profile config set cpus 4
+    minikube --profile istio-tests config set memory 8192
+    minikube --profile istio-tests config set cpus 4
 
-    // minikube --profile my-profile config set vm-driver virtualbox
-    minikube --profile my-profile config set vm-driver docker
+    // minikube --profile istio-tests config set vm-driver virtualbox
+    minikube --profile istio-tests config set vm-driver docker
 
-    minikube --profile my-profile config set kubernetes-version v1.20.2
-    minikube start --profile my-profile
+    minikube --profile istio-tests config set kubernetes-version v1.20.2
+    minikube start --profile istio-tests --embed-certs
 }
 ```
 
 <br/>
 
     // Удалить
-    // $ minikube --profile my-profile stop && minikube --profile my-profile delete
+    // $ minikube --profile istio-tests stop && minikube --profile istio-tests delete
 
 <br/>
 
@@ -48,7 +48,8 @@ Server Version: v1.20.2
 ### Устанавливаю istioctl на локальном хосте
 
 ```
-$ curl -L https://istio.io/downloadIstio | sh - && chmod +x $HOME/istio-1.8.2/bin/istioctl && sudo mv $HOME/istio-1.8.2/bin/istioctl /usr/local/bin/
+$ cd ~/tmp/
+$ curl -L https://istio.io/downloadIstio | sh - && chmod +x ./istio-1.9.0/bin/istioctl && sudo mv ./istio-1.9.0/bin/istioctl /usr/local/bin/
 ```
 
 <br/>
@@ -57,7 +58,7 @@ $ curl -L https://istio.io/downloadIstio | sh - && chmod +x $HOME/istio-1.8.2/bi
 
 UPD. Оказазось istio уже есть среди предустановленных расширений на minikube, и можно просто активироваь.
 
-    $ minikube addons --profile my-profile enable istio
+    $ minikube addons --profile istio-tests enable istio
 
 Но чего-то ранее не заработало из коробки на 16.9. Не хочу сейчас пробовать.
 Поэтому, будем ставить сами.
@@ -97,11 +98,14 @@ $ kubectl label namespace default istio-injection=enabled
 <br/>
 
 ```
-$ kubectl describe namespace default
-Name:         default
-Labels:       istio-injection=enabled
-Annotations:  <none>
-Status:       Active
+$ kubectl get ns --show-labels
+NAME              STATUS   AGE   LABELS
+default           Active   26m   istio-injection=enabled
+istio-system      Active   19m   istio-injection=disabled
+kube-node-lease   Active   26m   <none>
+kube-public       Active   26m   <none>
+kube-system       Active   26m   <none>
+metallb-system    Active   12m   app=metallb
 ```
 
 <br/>
@@ -113,9 +117,17 @@ Metal LB позволит получить внешний IP в миникубе
 <br/>
 
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.5/manifests/namespace.yaml
+$ LATEST_VERSION=$(curl --silent "https://api.github.com/repos/metallb/metallb/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
 
-$ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.5/manifests/metallb.yaml
+$ echo ${LATEST_VERSION}
+```
+
+<br/>
+
+```
+$ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/${LATEST_VERSION}/manifests/namespace.yaml
+
+$ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/${LATEST_VERSION}/manifests/metallb.yaml
 
 # On first install only
 $ kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
@@ -123,8 +135,10 @@ $ kubectl create secret generic -n metallb-system memberlist --from-literal=secr
 
 <br/>
 
-    $ minikube --profile my-profile ip
-    192.168.49.2
+```
+$ minikube --profile istio-tests ip
+192.168.49.2
+```
 
 <br/>
 

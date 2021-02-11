@@ -2,7 +2,7 @@
 layout: page
 title: Istio
 description: Istio
-keywords: linux, kubernetes, Istio
+keywords: devops, containers, kubernetes, service mesh, istio
 permalink: /devops/containers/kubernetes/service-mesh/istio/
 ---
 
@@ -10,7 +10,13 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/
 
 <br/>
 
-### [Подготовка окружения для тестов Istio в minikube](/devops/containers/kubernetes/service-mesh/istio/minikube/env/)
+Предварительно и упрощенно: Используется для сбора метрик работающих контейнеров, canary deployment, помогает понять, что с страфиком между подами внутри kubernets. Добавляет расходов, т.к. задействуются доп ресурсы, поды работают через прокси, которые и помогают собирать метрики и вообще управлять трафиком. Постепенно разбираемся.
+
+<br/>
+
+### [Подготовка окружения для тестов Istio в minikube](/devops/containers/kubernetes/service-mesh/istio/minikube/setup/)
+
+### [Запуск демонстрационного приложения Istio - bookinfo](/devops/containers/kubernetes/service-mesh/istio/bookinfo/)
 
 ### [Istio Request Routing](/devops/containers/kubernetes/service-mesh/istio/request-routing/)
 
