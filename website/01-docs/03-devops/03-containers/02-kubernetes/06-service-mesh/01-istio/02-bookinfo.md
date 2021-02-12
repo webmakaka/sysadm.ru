@@ -11,7 +11,7 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/bookinfo/
 <br/>
 
 Делаю:  
-11.02.2021
+12.02.2021
 
 <br/>
 
@@ -20,6 +20,8 @@ Istio и minikube установлены и настроены как <a href="/
 <br/>
 
 ```
+$ cd ~/tmp/
+$ curl -L https://istio.io/downloadIstio | sh -
 $ cd ~/tmp/istio-1.9.0/
 ```
 
@@ -82,7 +84,7 @@ $ kubectl describe gateway bookinfo-gateway
 <br/>
 
 ```
-$  kubectl -n istio-system get svc istio-ingressgateway
+$ kubectl -n istio-system get svc istio-ingressgateway
 NAME                   TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)                                                                      AGE
 istio-ingressgateway   LoadBalancer   10.99.229.201   192.168.59.20   15021:30590/TCP,80:31488/TCP,443:30766/TCP,31400:32461/TCP,15443:32125/TCP   25m
 ```
@@ -95,7 +97,7 @@ $ echo EXTERNAL-IP=$(kubectl --namespace istio-system get svc istio-ingressgatew
 
 <br/>
 
-http://192.168.59.20/productpage
+http://192.168.49.20/productpage
 
 <br/>
 
@@ -107,7 +109,7 @@ http://192.168.59.20/productpage
 
 ```
 
-$ export INGRESS_HOST=$(minikube ip)
+$ export INGRESS_HOST=$(minikube ip --profile istio-tests)
 
 $ export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}')
 
@@ -116,5 +118,9 @@ $ export INGRESS_HOST=$(minikube ip --profile istio-tests)
 $ export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
 
 $ echo "http://$GATEWAY_URL/productpage"
+
+```
+
+```
 
 ```

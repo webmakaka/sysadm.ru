@@ -2,7 +2,7 @@
 layout: page
 title: Подготовка окружения для тестов Istio в minikube
 description: Подготовка окружения для тестов Istio в minikube
-keywords: linux, kubernetes, Istio, MiniKube
+keywords: devops, containers, kubernetes, service-mesh, istio, minikube, setup
 permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/setup/
 ---
 
@@ -11,7 +11,7 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/setup/
 <br/>
 
 Делаю:  
-11.02.2021
+12.02.2021
 
 <br/>
 
@@ -97,6 +97,10 @@ $ kubectl label namespace default istio-injection=enabled
 
 <br/>
 
+После этого, **новые** создаваемые pod будут "проксируемыми". Т.е. старые нужно пересоздать.
+
+<br/>
+
 ```
 $ kubectl get ns --show-labels
 NAME              STATUS   AGE   LABELS
@@ -142,7 +146,11 @@ $ minikube --profile istio-tests ip
 
 <br/>
 
-```
+Задаем диапазон ip адресов, которые можно выдать виртуальному сервису. Нужно, чтобы он был в той же подсети, что и ip minikube.
+
+<br/>
+
+```yaml
 $ cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: ConfigMap
@@ -170,22 +178,6 @@ $ export INGRESS_HOST=$(kubectl \
 $ echo ${INGRESS_HOST}
 ```
 
-<!--
-
-```
-
-$ sudo apt install -y jq
-
-$ kubectl -n istio-system get svc istio-ingressgateway -o json | jq .status.loadBalancer.ingress
-[
-  {
-    "ip": "192.168.49.20"
-  }
-]
-```
-
--->
-
 <br/>
 
 ### Всевозможные проверки
@@ -194,22 +186,94 @@ $ kubectl -n istio-system get svc istio-ingressgateway -o json | jq .status.load
 
 <br/>
 
-    // Жду пока не появится 25
+    // 12
     $ kubectl get crds | grep istio | wc -l
-    25
+    12
 
 <br/>
 
-    $ kubectl get pods -n istio-system
-    NAME                                    READY   STATUS    RESTARTS   AGE
-    grafana-5cc7f86765-8qkg2                1/1     Running   0          79s
-    istio-egressgateway-598d7ffc49-h64bn    1/1     Running   0          80s
-    istio-ingressgateway-7bd5586b79-t8khf   1/1     Running   0          80s
-    istio-tracing-8584b4d7f9-qs2hc          1/1     Running   0          78s
-    istiod-646b6fcc6-55dhd                  1/1     Running   0          108s
-    kiali-696bb665-f9sqh                    1/1     Running   0          78s
-    prometheus-6c88c4cb8-b294t              2/2     Running   0          78s
+```
+$ kubectl get pods -n istio-system
+NAME                                    READY   STATUS    RESTARTS   AGE
+istio-ingressgateway-758985db4f-d2jdh   1/1     Running   0          2m
+istiod-7c9c9d46d4-rh7fz                 1/1     Running   0          2m18s
+
+```
 
 <br/>
 
-    $ kubectl get svc -n istio-system
+```
+$ kubectl get svc -n istio-system
+NAME                   TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                                                                      AGE
+istio-ingressgateway   LoadBalancer   10.106.144.8   192.168.49.20   15021:32220/TCP,80:32270/TCP,443:31357/TCP,15012:30385/TCP,15443:30134/TCP   3m27s
+istiod                 ClusterIP      10.99.91.237   <none>          15010/TCP,15012/TCP,443/TCP,15014/TCP                                        3m45s
+```
+
+<br/>
+
+### Дополнительные сервисы (Prometheus, Grafana, Kiali, Jaeger):
+
+```
+$ cd ~/tmp/istio-1.9.0/samples/addons/
+$ kubectl apply -n istio-system -f ./
+```
+
+<br/>
+
+Чтобы запустился Kiali нужно повторить
+
+```
+$ kubectl apply -n istio-system -f ./kiali.yaml
+```
+
+<br/>
+
+```
+$ kubectl -n istio-system get pods
+NAME                                    READY   STATUS    RESTARTS   AGE
+grafana-784c89f4cf-zv7rd                1/1     Running   0          2m40s
+istio-ingressgateway-758985db4f-d2jdh   1/1     Running   0          11m
+istiod-7c9c9d46d4-rh7fz                 1/1     Running   0          11m
+jaeger-7f78b6fb65-rwjcx                 1/1     Running   0          87s
+kiali-dc84967d9-xndpn                   1/1     Running   0          87s
+prometheus-7bfddb8dbf-bnwcf             2/2     Running   0          87s
+```
+
+<br/>
+
+```
+$ kubectl -n istio-system port-forward svc/grafana 3000
+$ kubectl -n istio-system port-forward svc/prometheus 9090
+$ kubectl -n istio-system port-forward svc/kiali 20001
+```
+
+<br/>
+
+Пока непонятно как работать с jaeger
+
+```
+$ kubectl -n istio-system port-forward svc/jaeger-collector 14268
+```
+
+<br/>
+
+### Zipkin и Prometheus Operator
+
+```
+$ cd ~/tmp/istio-1.9.0/samples/addons/extras
+$ kubectl apply -n istio-system -f ./
+```
+
+<br/>
+
+```
+$ kubectl apply -n istio-system -f ./prometheus-operator.yaml
+unable to recognize "./prometheus-operator.yaml": no matches for kind "PodMonitor" in version "monitoring.coreos.com/v1"
+unable to recognize "./prometheus-operator.yaml": no matches for kind "ServiceMonitor" in version "monitoring.coreos.com/v1"
+```
+
+<br/>
+
+В общем, нужно еще и добавлять из стандартной установки компоненты, чтобы он понимал, что за ServiceMonitor и PodMonitor.
+
+Пока неактуально.

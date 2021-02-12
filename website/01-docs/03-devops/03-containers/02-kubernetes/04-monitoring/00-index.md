@@ -21,3 +21,13 @@ permalink: /devops/containers/kubernetes/monitoring/
 ### [Визуализация работы контейнеров: kube-ops-view and kubebox](/devops/containers/kubernetes/monitoring/kube-ops-view-and-kubebox/)
 
 ### [Monitor Kubernetes Logs using EFK stack - Elasticsearch, FluentBit & Kibana](/devops/containers/kubernetes/monitoring/elastic/)
+
+<br/>
+
+**That DevOps Guy**
+
+https://www.youtube.com/watch?v=MMVdkzeQ848
+
+https://www.youtube.com/watch?v=6kmHvXdAzIM
+
+https://www.youtube.com/watch?v=Gp0-7oVOtPw

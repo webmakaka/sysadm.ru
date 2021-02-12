@@ -26,6 +26,4 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/
 
 ### [Примеры из видеокурса Canary Deployments To Kubernetes Using Istio and Friends](/devops/containers/kubernetes/service-mesh/istio/canary-deployments/)
 
-### [That DevOps Guy]
-
-https://www.youtube.com/watch?v=KUHzxTCe5Uc
+### [[That DevOps Guy] Istio Service mesh explained](/devops/containers/kubernetes/service-mesh/istio/istio-service-mesh-explained/)

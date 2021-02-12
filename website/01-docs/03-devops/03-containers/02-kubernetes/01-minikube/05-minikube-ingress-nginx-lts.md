@@ -31,7 +31,7 @@ https://www.youtube.com/watch?v=7K0gAYmWWho&list=PLShDm2AZYnK3cWZpOjV7nOpL7plH2Z
 
 <br/>
 
-```
+```yaml
 $ cat <<EOF | kubectl apply -f -
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -49,10 +49,14 @@ EOF
 
 ```
 
-    $ echo "$(minikube ip) example.com" | sudo tee -a /etc/hosts
+<br/>
 
-    $ curl example.com
-    OK
+```
+$ echo "$(minikube ip) example.com" | sudo tee -a /etc/hosts
+
+$ curl example.com
+OK
+```
 
 <br/>
 
@@ -62,24 +66,28 @@ EOF
 
 ### Генерим сертификат
 
-    $ cd ~/tmp
+```
+$ cd ~/tmp
 
-    $ openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout tls.key -out tls.crt -subj "/CN=example.com" -days 365
+$ openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout tls.key -out tls.crt -subj "/CN=example.com" -days 365
+```
 
 <br/>
 
 ### Создаем секрет cо сгенерированным сертификатом
 
-    $ kubectl create secret tls example-com-tls --cert=tls.crt --key=tls.key
+```
+$ kubectl create secret tls example-com-tls --cert=tls.crt --key=tls.key
 
-    // удалить потом можно командой
-    $ kubectl delete secret example-com-tls
+// удалить потом можно командой
+$ kubectl delete secret example-com-tls
 
-    $ kubectl get secret -o yaml
+$ kubectl get secret -o yaml
+```
 
 <br/>
 
-```
+```yaml
 $ cat <<EOF | kubectl apply -f -
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -98,11 +106,14 @@ spec:
             serviceName: nginx
             servicePort: 80
 EOF
-
 ```
 
-    $ curl -k https://example.com
-    $ curl --cacert tls.crt https://example.com
+<br/>
+
+```
+$ curl -k https://example.com
+$ curl --cacert tls.crt https://example.com
+```
 
 <br/>
 
@@ -191,7 +202,7 @@ https://github.com/jetstack/cert-manager
 
 <br/>
 
-```
+```yaml
 $ cat <<EOF | kubectl apply -f -
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Issuer
@@ -213,7 +224,7 @@ EOF
 
 <br/>
 
-```
+```yaml
 $ cat <<EOF | kubectl apply -f -
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Certificate
@@ -250,7 +261,9 @@ EOF
 
     $ kubectl get secret example-com-tls -o yaml
 
-```
+<br/>
+
+```yaml
 $ cat <<EOF | kubectl apply -f -
 apiVersion: extensions/v1beta1
 kind: Ingress

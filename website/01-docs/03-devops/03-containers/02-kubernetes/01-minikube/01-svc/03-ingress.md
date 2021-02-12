@@ -2,7 +2,7 @@
 layout: page
 title: Создание службы Ingress
 description: Создание службы Ingress
-keywords: devops, linux, kubernetes, Создание службы Ingress
+keywords: devops, containers, kubernetes, minikube, Создание службы Ingress
 permalink: /devops/containers/kubernetes/minikube/svc/ingress/
 ---
 
@@ -32,9 +32,9 @@ Deployment и NodePort уже созданы как <a href="/devops/containers/
 
 ### Запускаем приложение
 
-```
+```yaml
 $ cat <<EOF | kubectl apply -f -
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nodejs-cats-app-ingress
@@ -44,9 +44,12 @@ spec:
     http:
       paths:
       - path: /
+        pathType: 'Prefix'
         backend:
-          serviceName: nodejs-cats-app-nodeport
-          servicePort: 80
+          service:
+            name: nodejs-cats-app-nodeport
+            port:
+              number: 80
 EOF
 ```
 

@@ -10,7 +10,43 @@ permalink: /devops/containers/kubernetes/ci-cd/argocd/applying-gitops-principles
 
 ### Argo CD - Applying GitOps Principles To Manage Production Environment In Kubernetes
 
+<br/>
+
+Делаю:  
+12.02.2021
+
+<br/>
+
+### Пока не работает!
+
+<br/>
+
 https://www.youtube.com/watch?v=vpWQeoaiRM4
+
+<br/>
+
+Поставил Istio, как в <a href="/devops/containers/kubernetes/service-mesh/istio/minikube/setup/">доке</a>
+
+<br/>
+
+```
+$ export INGRESS_HOST=$(kubectl \
+ --namespace istio-system \
+ get service istio-ingressgateway \
+ --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+
+$ echo ${INGRESS_HOST}
+```
+
+<br/>
+
+Получаю
+
+192.168.49.20
+
+<br/>
+
+Заменяю в скриптах.
 
 <br/>
 
@@ -20,9 +56,11 @@ $ kubectl create namespace production
 
 <br/>
 
+### Создаю repo на гитхаб "argocd-15-min"
+
 ```
-$ mkdir argo
-$ cd argo
+$ cd ~/tmp
+$ mkdir argocd-15-min && cd argocd-15-min
 ```
 
 <br/>
@@ -33,19 +71,17 @@ $ vi Chart.yaml
 
 <br/>
 
-```
+```yaml
 apiVersion: v1
 description: Production environment
 name: production
-version: "1.0.0"
+version: '1.0.0'
 ```
 
 <br/>
 
 ```
-$ cd ~/tmp
-$ mkdir argocd-15-min && cd argocd-15-min
-$ mkdir helm/templates && cd helm/templates
+$ mkdir -p templates && cd templates
 ```
 
 <br/>
@@ -73,10 +109,9 @@ spec:
         helm:
             values: |
                 image:
-#                  repository: vfarcic/devops-toolkit
                   tag: latest
                 ingress:
-                  host: devopst-toolkit.192.168.64.14.xip.io
+                  host: devops-toolkit.192.168.49.20.xip.io
             version: v3
     destination:
         namespace: production
@@ -112,10 +147,9 @@ spec:
         helm:
             values: |
                 image:
-#                  repository: vfarcic/devops-toolkit
                   tag: latest
                 ingress:
-                  host: devopst-paradox.192.168.64.14.xip.io
+                  host: devops-paradox.192.168.49.20.xip.io
             version: v3
     destination:
         namespace: production
@@ -125,6 +159,12 @@ spec:
             selfHeal: true
             prune: true
 ```
+
+<br/>
+
+Отправить репо на гитхаб.
+
+<br/>
 
 ```
 $ vi apps.yaml
@@ -144,7 +184,7 @@ spec:
     project: production
     source:
         path: helm
-        repoURL: https://github.com/vfarcic/argocd-15-min.git
+        repoURL: https://github.com/webmak1/argocd-15-min.git
         targetRevision: HEAD
     destination:
         namespace: production
@@ -157,13 +197,11 @@ spec:
 
 <br/>
 
-Отправить репо на гитхаб.
+```
+$ kubectl apply -n argocd -f ./apps.yaml
+```
 
 <br/>
-
-```
-$ kubectl apply --filename appx.yaml
-```
 
 http://argocd.$INGRESS_HOST.xip.io
 

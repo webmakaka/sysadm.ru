@@ -2,7 +2,7 @@
 layout: page
 title: Создание службы LoadBalancer
 description: Создание службы LoadBalancers
-keywords: devops, linux, kubernetes, Создание службы LoadBalancers
+keywords: devops, containers, kubernetes, minikube, Создание службы LoadBalancers
 permalink: /devops/containers/kubernetes/minikube/svc/load-balancer/
 ---
 
@@ -15,7 +15,7 @@ Deployment создан как<a href="/devops/containers/kubernetes/minikube/sv
 
 <br/>
 
-```
+```yaml
 $ cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: Service

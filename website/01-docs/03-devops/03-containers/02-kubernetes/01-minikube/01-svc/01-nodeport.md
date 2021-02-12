@@ -2,7 +2,7 @@
 layout: page
 title: Создание службы Nodeport
 description: Создание службы Nodeport
-keywords: devops, linux, kubernetes, Создание службы Nodeport
+keywords: devops, containers, kubernetes, minikube, Создание службы Nodeport
 permalink: /devops/containers/kubernetes/minikube/svc/nodeport/
 ---
 
@@ -19,22 +19,11 @@ permalink: /devops/containers/kubernetes/minikube/svc/nodeport/
 
 **Запуск minikube**
 
-```
-$ {
-minikube --profile my-profile config set memory 8192
-minikube --profile my-profile config set cpus 4
-
-minikube --profile my-profile config set vm-driver virtualbox
-// minikube --profile my-profile config set vm-driver docker
-
-minikube --profile my-profile config set kubernetes-version v1.16.9
-minikube start --profile my-profile
-}
-```
+Как <a href="/devops/containers/kubernetes/minikube/setup/">здесь</a>
 
 <br/>
 
-```
+```yaml
 $ cat <<EOF | kubectl apply -f -
 apiVersion: apps/v1
 kind: Deployment
@@ -62,7 +51,7 @@ EOF
 
 <br/>
 
-```
+```yaml
 $ cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: Service
@@ -82,7 +71,7 @@ EOF
 <br/>
 
     port: 80 - хз для чего задаем.
-    targetPort: 8080 - порт на котором работает приложение внутри pod. Или, наверное даже это из deployment.
+    targetPort: 8080 - порт на котором работает приложение внутри pod.
     nodePort: 30123 - то к какому порту обращаться на этот под.
 
 <br/>
