@@ -14,6 +14,8 @@ permalink: /desktop/linux/ubuntu/
 
 ### [Инсталляция браузеров в Ubuntu](/desktop/linux/ubuntu/browsers/)
 
+### [Инсталляция менеджера пакетов Brew (HomeBrew, LinuxBrew) в Ubuntu](/desktop/linux/ubuntu/brew/)
+
 ### [Инсталляция Libre Office](/desktop/linux/ubuntu/libreoffice/)
 
 ### [Инсталляция ACE Stream и SopCast плеера в Ubuntu](/desktop/linux/ubuntu/ace-stream-sopcast-player-install/)

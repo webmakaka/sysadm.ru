@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes ArgoCD
 description: Kubernetes ArgoCD
-keywords: linux, kubernetes, ArgoCD
+keywords: devops, contaiers, kubernetes, ci-cd, argocd
 permalink: /devops/containers/kubernetes/ci-cd/argocd/applying-gitops-principles-to-manage-production-environment-in-kubernetes/
 ---
 
@@ -29,6 +29,10 @@ https://www.youtube.com/watch?v=vpWQeoaiRM4
 
 <br/>
 
+$ minikube --profile my-profile ip
+192.168.49.2
+
+<!--
 ```
 $ export INGRESS_HOST=$(kubectl \
  --namespace istio-system \
@@ -38,11 +42,13 @@ $ export INGRESS_HOST=$(kubectl \
 $ echo ${INGRESS_HOST}
 ```
 
+-->
+
 <br/>
 
 Получаю
 
-192.168.49.20
+192.168.49.2
 
 <br/>
 
@@ -111,7 +117,7 @@ spec:
                 image:
                   tag: latest
                 ingress:
-                  host: devops-toolkit.192.168.49.20.xip.io
+                  host: devops-toolkit.192.168.49.2.xip.io
             version: v3
     destination:
         namespace: production
@@ -149,7 +155,7 @@ spec:
                 image:
                   tag: latest
                 ingress:
-                  host: devops-paradox.192.168.49.20.xip.io
+                  host: devops-paradox.192.168.49.2.xip.io
             version: v3
     destination:
         namespace: production

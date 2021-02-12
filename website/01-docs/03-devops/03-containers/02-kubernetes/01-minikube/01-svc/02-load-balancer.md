@@ -8,8 +8,8 @@ permalink: /devops/containers/kubernetes/minikube/svc/load-balancer/
 
 # Создание службы LoadBalancer
 
-Делаю:  
-21.04.2020
+Обновлено:  
+12.02.2021
 
 Deployment создан как<a href="/devops/containers/kubernetes/minikube/svc/nodeport/">здесь</a>
 

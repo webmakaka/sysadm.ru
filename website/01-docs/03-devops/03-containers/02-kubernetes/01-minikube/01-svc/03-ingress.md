@@ -8,8 +8,10 @@ permalink: /devops/containers/kubernetes/minikube/svc/ingress/
 
 # Создание службы Ingress
 
-Делаю:  
-21.04.2020
+Обновлено:  
+12.02.2021
+
+<br/>
 
 Deployment и NodePort уже созданы как <a href="/devops/containers/kubernetes/minikube/svc/nodeport/">здесь</a>
 
@@ -66,9 +68,11 @@ EOF
 
 <br/>
 
-    $ sudo vi /etc/hosts
+```
+$ sudo vi /etc/hosts
 
-    192.168.99.113 nodejs-cats-app.example.com
+192.168.99.113 nodejs-cats-app.example.com
+```
 
 <br/>
 

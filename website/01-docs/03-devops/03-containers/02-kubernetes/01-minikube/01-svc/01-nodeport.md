@@ -9,7 +9,7 @@ permalink: /devops/containers/kubernetes/minikube/svc/nodeport/
 # Создание службы Nodeport
 
 Обновлено:  
-21.04.2020
+12.02.2021
 
 <br/>
 
