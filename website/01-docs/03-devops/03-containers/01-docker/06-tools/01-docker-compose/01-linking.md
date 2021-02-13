@@ -2,13 +2,15 @@
 layout: page
 title: Линковка Docker контейнеров с помощью Docker Compose
 description: Линковка Docker контейнеров с помощью Docker Compose
-keywords: devops, docker, Линковка Docker контейнеров с помощью Docker Compose
-permalink: /devops/containers/docker/tools/docker-compose/
+keywords: devops, containers, docker, tools, docker-compose, linking
+permalink: /devops/containers/docker/tools/docker-compose/linking/
 ---
 
 # Линковка Docker контейнеров с помощью Docker Compose
 
 С помощью Docker Compose создаем файл YML с инструкциями о том, какие контейнеры запускать и как линковать их между собой.
+
+<br/>
 
     # docker-compose -v
     docker-compose version: 1.5.1

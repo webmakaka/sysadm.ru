@@ -27,7 +27,6 @@ permalink: /sitemap/
 
 ### [Clouds](/devops/clouds/)
 
-
 <br/>
 
 # BigData:
@@ -49,22 +48,6 @@ permalink: /sitemap/
 # Сетевые устройства:
 
 ### [Cisco: Switches and Routers](/devices/cisco/)
-
----
-
-<br/>
-
-# Видеокурсы:
-
-### [Видеокурсы для админов](/linux/video-courses/)
-
----
-
-<br/>
-
-# Разное:
-
-### [Истории](/stories/)
 
 ---
 

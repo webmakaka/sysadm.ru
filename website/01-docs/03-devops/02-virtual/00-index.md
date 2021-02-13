@@ -2,7 +2,7 @@
 layout: page
 title: Виртуализация в Linux
 description: Виртуализация в Linux
-keywords: Виртуализация в Linux
+keywords: devops, linux, virtual
 permalink: /devops/linux/virtual/
 ---
 
