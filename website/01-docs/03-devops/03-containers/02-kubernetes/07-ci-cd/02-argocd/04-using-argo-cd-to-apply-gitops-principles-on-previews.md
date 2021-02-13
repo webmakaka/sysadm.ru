@@ -204,3 +204,12 @@ $ git push
 ```
 $ argocd app sync previews
 ```
+
+<!--
+
+```
+$ watch 'kubectl --namespace production get deployment devops-toolkit-devops-toolkit \
+--output jsonpath="{.spec.temlate.spec.containers[0].image}"'
+```
+
+-->
