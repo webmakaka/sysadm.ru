@@ -26,8 +26,4 @@ permalink: /devops/containers/kubernetes/monitoring/
 
 **That DevOps Guy**
 
-https://www.youtube.com/watch?v=MMVdkzeQ848
-
-https://www.youtube.com/watch?v=6kmHvXdAzIM
-
-https://www.youtube.com/watch?v=Gp0-7oVOtPw
+https://www.youtube.com/watch?v=MMVdkzeQ848&list=PLHq1uqvAteVvfDxFW50Mdezk0xum-tyHT

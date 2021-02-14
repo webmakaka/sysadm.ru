@@ -11,39 +11,34 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/istio-service-mesh-e
 <br/>
 
 Делаю:  
-12.02.2021
+14.02.2021
 
 <br/>
 
-**Не заработало! Нужно разбираться!**
-
-Есил сделат так:
-
-```
-kubectl -n ingress-nginx port-forward deploy/nginx-ingress-controller 8080:80
-```
-
-Только первая страница подгружается.
+Если сначала поднять ISTIO, а потом попробовать запустить в minikube предустановленный ingress, возможно он не заведется. (Долго пытался установиться, но не судьба. М.б. нужно было ждать дольше).
 
 <br/>
 
-**YouTube**
+Поднимаю как <a href="/devops/containers/kubernetes/service-mesh/istio/minikube/setup/">здесь</a>
 
+<br/>
+
+**YouTube**  
 https://www.youtube.com/watch?v=KUHzxTCe5Uc
 
 <br/>
 
-**GitHub**
-
+**GitHub**  
 https://github.com/marcel-dempers/docker-development-youtube-series
 
 <br/>
 
-**Дока**
-
+**Дока**  
 https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/kubernetes/servicemesh/istio
 
 <br/>
+
+### Запуск приложения
 
 ```
 $ cd ~/tmp
@@ -53,12 +48,7 @@ $ cd docker-development-youtube-series/
 
 <br/>
 
-**ingress controller**
-
-```
-$ kubectl create ns ingress-nginx
-$ kubectl apply -f kubernetes/servicemesh/applications/ingress-nginx/
-```
+Ingress конфиг лежит вместе с остальными файлами в каталоге videos-web/:
 
 <br/>
 
@@ -77,36 +67,20 @@ $ kubectl apply -f kubernetes/servicemesh/applications/videos-db/
 ```
 $ kubectl get pods
 NAME                             READY   STATUS    RESTARTS   AGE
-playlists-api-684fb4c5d7-5kvhm   2/2     Running   0          84s
-playlists-db-7d68bbf5c4-jtlq8    2/2     Running   0          70s
-videos-api-ccc8f5b46-sbdhc       2/2     Running   0          65s
-videos-db-85ccd8bc-mq8rg         2/2     Running   0          51s
-videos-web-cdbc466f4-s5dnr       2/2     Running   0          58s
-
+playlists-api-684fb4c5d7-crvqk   2/2     Running   0          57s
+playlists-db-7d68bbf5c4-rvt7z    2/2     Running   0          50s
+videos-api-ccc8f5b46-qvqj6       2/2     Running   0          45s
+videos-db-85ccd8bc-xbzrr         2/2     Running   0          34s
+videos-web-cdbc466f4-nqsm6       2/2     Running   0          39s
 ```
 
 <br/>
 
 ```
-$ kubectl -n ingress-nginx get pods
-NAME                                        READY   STATUS    RESTARTS   AGE
-nginx-ingress-controller-77d9c88769-62wzn   1/1     Running   0          2m54s
-nginx-ingress-controller-77d9c88769-rm6mg   1/1     Running   0          2m54s
-```
-
-<br/>
-
-```
-$ kubectl get ing
-NAME            CLASS    HOSTS              ADDRESS   PORTS   AGE
-playlists-api   <none>   servicemesh.demo             80      21m
-videos-web      <none>   servicemesh.demo             80      20m
-```
-
-<br/>
-
-```
-$ echo EXTERNAL-IP=$(kubectl --namespace istio-system get svc istio-ingressgateway --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}")
+$  kubectl get ing
+NAME            CLASS    HOSTS              ADDRESS        PORTS   AGE
+playlists-api   <none>   servicemesh.demo   192.168.49.2   80      22m
+videos-web      <none>   servicemesh.demo   192.168.49.2   80      22m
 ```
 
 <br/>
@@ -116,19 +90,38 @@ $ sudo vi /etc/hosts
 ```
 
 ```
-192.168.49.20  servicemesh.demo
+192.168.49.2  servicemesh.demo
 ```
 
 <br/>
 
 http://servicemesh.demo/home/
 
-<br/>
-
-```
-kubectl -n ingress-nginx port-forward deploy/nginx-ingress-controller 8080:80
-```
+OK!
 
 <br/>
 
-http://servicemesh.demo:8080/home/
+### Изучаем
+
+```
+while :
+do
+    curl "http://servicemesh.demo/home/";
+    curl "http://servicemesh.demo/api/playlists";
+    sleep 10;
+done
+```
+
+<br/>
+
+Попробовали GIT Grafana (istio / Istio Mesh Dashboard) и Kiali.
+
+Поломали контейнер, чтобы он работал неправильно.
+
+<br/>
+
+Создали виртуальный сервис и поделили трафик между этими сервисами.
+
+<br/>
+
+Попробовали Canary Deployment в зависимости от cookies. Если есть на 1 сервис, если нет, на другой.

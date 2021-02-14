@@ -11,7 +11,7 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/setup/
 <br/>
 
 Делаю:  
-12.02.2021
+14.02.2021
 
 <br/>
 
@@ -19,21 +19,21 @@ https://istio.io/docs/setup/getting-started/#download
 
 ```
 $ {
-    minikube --profile istio-tests config set memory 8192
-    minikube --profile istio-tests config set cpus 4
+    minikube --profile istio-lab config set memory 8192
+    minikube --profile istio-lab config set cpus 4
 
-    // minikube --profile istio-tests config set vm-driver virtualbox
-    minikube --profile istio-tests config set vm-driver docker
+    // minikube --profile istio-lab config set vm-driver virtualbox
+    minikube --profile istio-lab config set vm-driver docker
 
-    minikube --profile istio-tests config set kubernetes-version v1.20.2
-    minikube start --profile istio-tests --embed-certs
+    minikube --profile istio-lab config set kubernetes-version v1.20.2
+    minikube start --profile istio-lab --embed-certs
 }
 ```
 
 <br/>
 
     // Удалить
-    // $ minikube --profile istio-tests stop && minikube --profile istio-tests delete
+    // $ minikube --profile istio-lab stop && minikube --profile istio-lab delete
 
 <br/>
 
@@ -58,7 +58,7 @@ $ curl -L https://istio.io/downloadIstio | sh - && chmod +x ./istio-1.9.0/bin/is
 
 UPD. Оказазось istio уже есть среди предустановленных расширений на minikube, и можно просто активироваь.
 
-    $ minikube addons --profile istio-tests enable istio
+    $ minikube addons --profile istio-lab enable istio
 
 Но чего-то ранее не заработало из коробки на 16.9. Не хочу сейчас пробовать.
 Поэтому, будем ставить сами.
@@ -140,7 +140,7 @@ $ kubectl create secret generic -n metallb-system memberlist --from-literal=secr
 <br/>
 
 ```
-$ minikube --profile istio-tests ip
+$ minikube --profile istio-lab ip
 192.168.49.2
 ```
 
@@ -214,6 +214,8 @@ istiod                 ClusterIP      10.99.91.237   <none>          15010/TCP,1
 ### Дополнительные сервисы (Prometheus, Grafana, Kiali, Jaeger):
 
 ```
+$ cd ~/tmp
+$ curl -L https://istio.io/downloadIstio | sh
 $ cd ~/tmp/istio-1.9.0/samples/addons/
 $ kubectl apply -n istio-system -f ./
 ```

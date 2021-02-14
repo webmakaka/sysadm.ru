@@ -213,7 +213,6 @@ spec:
   ca:
     secretName: ca-key-pair
 EOF
-
 ```
 
 <br/>
