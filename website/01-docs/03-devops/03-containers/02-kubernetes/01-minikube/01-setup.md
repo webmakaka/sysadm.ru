@@ -44,7 +44,7 @@ commit: 9f1e482427589ff8451c4723b6ba53bb9742fbb1
 <br/>
 
 Делаю:  
-12.02.2021
+21.02.2021
 
 Можно использовать VirtualBox или Docker. Для всех случаев, когда нужно работать не с каким-то выделенным сервером на виртуалке с minikube, стоит использовать docker.
 
@@ -63,7 +63,7 @@ $ {
     // minikube --profile my-profile config set vm-driver virtualbox
     minikube --profile my-profile config set vm-driver docker
 
-    minikube --profile my-profile config set kubernetes-version v1.20.2
+    minikube --profile my-profile config set kubernetes-version v1.20.4
     minikube start --profile my-profile --embed-certs
 }
 ```

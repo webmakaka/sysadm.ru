@@ -34,7 +34,6 @@ add command "ip ssh client algorithm encryption aes256-cbc" in your router confi
                                     ^
     % Invalid input detected at '^' marker.
 
-
 <br/>
 
 ### В Ubuntu 20.04.01 теперь такое
@@ -46,7 +45,9 @@ add command "ip ssh client algorithm encryption aes256-cbc" in your router confi
 
 Подключаюсь командой:
 
-    $ ssh \
-        -oKexAlgorithms=+diffie-hellman-group1-sha1 \
-        -c aes256-cbc \
-        192.168.1.1
+```
+$ ssh \
+    -oKexAlgorithms=+diffie-hellman-group1-sha1 \
+    -c aes256-cbc \
+    192.168.1.1
+```

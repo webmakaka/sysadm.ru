@@ -2,7 +2,7 @@
 layout: page
 title: Ubuntu
 description: Ubuntu
-keywords: Ubuntu
+keywords: desktop, linux, ubuntu
 permalink: /desktop/linux/ubuntu/
 ---
 
@@ -18,7 +18,7 @@ permalink: /desktop/linux/ubuntu/
 
 ### [Инсталляция Libre Office](/desktop/linux/ubuntu/libreoffice/)
 
-### [Инсталляция ACE Stream и SopCast плеера в Ubuntu](/desktop/linux/ubuntu/ace-stream-sopcast-player-install/)
+### [Инсталляция ACE Stream плеера в Ubuntu](/desktop/linux/ubuntu/ace-stream-player/)
 
 ### [Запись с экрана монитора в GIF](/desktop/linux/ubuntu/how-to-record-from-desktop-to-gif/)
 
@@ -34,6 +34,6 @@ permalink: /desktop/linux/ubuntu/
 
 ### [Знакомство с ipfs](/desktop/linux/ubuntu/ipfs/)
 
-### [Удаленный рабочий стол в Ubuntu 18.04](/desktop/linux/ubuntu/vnc-server/)
+### [Удаленный рабочий стол в Ubuntu 20.04](/desktop/linux/ubuntu/vnc-server/)
 
 ### [Сеть в Ubuntu](/desktop/linux/ubuntu/network/)

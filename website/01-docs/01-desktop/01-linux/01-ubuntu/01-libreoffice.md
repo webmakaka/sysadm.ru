@@ -2,7 +2,7 @@
 layout: page
 title: Инсталляция Libre Office в Ubuntu 18.04
 description: Инсталляция Libre Office в Ubuntu 18.04
-keywords: Инсталляция Libre Office в Ubuntu 18.04
+keywords: desktop, linux, ubuntu, libreoffice
 permalink: /desktop/linux/ubuntu/libreoffice/
 ---
 
