@@ -8,12 +8,10 @@ permalink: /databases/postgresql/setup/ubuntu/
 
 # PostgreSQL инсталляция в Ubuntu
 
-Делаю:
-
+**Делаю:**  
 19.08.2018
 
 ```
-
 $ sudo su -
 
 $ PG_VERSION=9.6

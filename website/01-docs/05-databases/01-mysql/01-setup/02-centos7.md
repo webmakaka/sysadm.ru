@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция MySQL на Centos 7 из пакетов
 description: Инсталляция MySQL на Centos 7 из пакетов
 keywords: Инсталляция MySQL на Centos 7 из пакетов
-permalink: /databases/mysql/installation/centos7/
+permalink: /databases/mysql/setup/centos7/
 ---
 
 # Инсталляция MySQL на Centos 7 из пакетов

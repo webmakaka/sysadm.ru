@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция MySQL в Centos 6.X
 description: Инсталляция MySQL в Centos 6.X
 keywords: Инсталляция MySQL в Centos 6.X
-permalink: /databases/mysql/installation/
+permalink: /databases/mysql/setup/centos6/
 ---
 
 # [Вариант 1] Инсталляция MySQL на Centos 6.5 из пакетов (Вариант с установкой более новой версии видится предпочтительнее)

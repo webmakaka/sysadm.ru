@@ -2,7 +2,7 @@
 layout: page
 title: MySQL
 description: MySQL
-keywords: MySQL
+keywords: databases, mysql
 permalink: /databases/mysql/
 ---
 
@@ -10,9 +10,7 @@ permalink: /databases/mysql/
 
 <br/>
 
-[Инсталляция MySQL на Centos 7 из пакетов](/databases/mysql/installation/centos7/)
-
-[Инсталляция MySQL на Centos 6.5 из пакетов](/databases/mysql/installation/)
+[Инсталляция MySQL на Centos](/databases/mysql/setup/)
 
 [Конфигурирование пользователей после инсталляции](/databases/mysql/installation/users/)
 

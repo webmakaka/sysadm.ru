@@ -8,6 +8,8 @@ permalink: /databases/mysql/installation/users/
 
 # MySQL - Конфигурирование пользователей после инсталляции
 
+<br/>
+
     // Login as root database admin to MySQL server:
     # mysql -u root
 

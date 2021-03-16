@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Логирование, Мониторинг, Визуализация
-description: Логирование, Мониторинг, Визуализация
-keywords: devops, linux, kubernetes, monitoring, prometheus
-permalink: /devops/containers/kubernetes/monitoring/prometheus/
+title: Prometheus Exporters
+description: Prometheus Exporters
+keywords: devops, linux, monitoring, prometheus
+permalink: /devops/linux/monitoring/prometheus/
 ---
 
-# Prometheus
+# Prometheus Exporters
 
-Делаю:  
+**Делаю:**  
 16.03.2021
 
 <br/>
@@ -52,9 +52,9 @@ $ cd docker-development-youtube-series/monitoring/prometheus/
 
 <br/>
 
-### Prometheus Configuration
+**Prometheus Configuration**
 
-**prometheus/prometheus.yml**
+**prometheus.yml**
 
 <br/>
 
@@ -94,11 +94,20 @@ mysqld exporter download page for link to latest file
 
 https://prometheus.io/download/#mysqld_exporter
 
+<br/>
+
+```
+$ sudo mysql
+```
+
 ```sql
 --create a user for the exporter to connect to the database
 CREATE USER 'mysqld_exporter'@'localhost' IDENTIFIED BY 'password';
+
 GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'mysqld_exporter'@'localhost';
+
 FLUSH PRIVILEGES;
+
 EXIT
 ```
 
@@ -110,6 +119,10 @@ export DATA_SOURCE_NAME='mysqld_exporter:password@(localhost:3306)/'
 <br/>
 
 ```
+
+$ mkdir ~/tmp
+$ cd ~/tmp
+
 $ wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.12.1/mysqld_exporter-0.12.1.linux-amd64.tar.gz
 
 $ tar xvfz mysqld_exporter-0.12.1.linux-amd64.tar.gz
@@ -122,15 +135,17 @@ $ curl http://localhost:9104/metrics
 
 <br/>
 
-### Prometheus Configuration
+**Prometheus Configuration**
 
-prometheus/prometheus.yml
+**prometheus.yml**
+
+<br/>
 
 ```yaml
 scrape_configs:
     - job_name: 'mysqld_exporter'
       static_configs:
-          - targets: ['172.31.20.86:9104']
+          - targets: ['192.168.0.11:9104']
 ```
 
 <br/>

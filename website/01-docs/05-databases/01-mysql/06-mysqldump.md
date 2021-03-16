@@ -2,7 +2,7 @@
 layout: page
 title: mysqldump
 description: mysqldump
-keywords: Linux, mysqldump
+keywords: databases, mysql, mysqldump
 permalink: /databases/mysql/mysqldump/
 ---
 
