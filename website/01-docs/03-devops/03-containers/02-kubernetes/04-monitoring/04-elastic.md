@@ -8,7 +8,7 @@ permalink: /devops/containers/kubernetes/monitoring/elastic/
 
 <br/>
 
-### Elastic Search
+# Elastic Search
 
 ```
 $ helm repo add elastic https://helm.elastic.co

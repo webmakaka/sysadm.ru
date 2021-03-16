@@ -44,7 +44,7 @@ permalink: /desktop/linux/
 
 ### [Proxy Servers](/adm/linux/proxy/)
 
-### [Базы данных](/adm/databases/)
+### [Базы данных](/databases/)
 
 ### [Виртуализация](/devops/linux/virtual/)
 

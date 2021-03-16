@@ -17,7 +17,7 @@ permalink: /devops/containers/kubernetes/monitoring/prometheus-and-grafana-test-
 
 **Upd:**
 
-Похоже все будет в ближайшее время кучей ставится одной командой:
+Похоже все будет в ближайшее время кучей ставиться одной командой:
 
 https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#multiple-releases
 

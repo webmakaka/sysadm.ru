@@ -124,8 +124,6 @@ https://docs.docker.com/engine/userguide/networking/
 
 [Переместить файлы Docker](/devops/containers/docker/basics/move-docker-files/)
 
-<!-- [Перенос форума в контейнеры Docker (В работе)](/devops/containers/docker/odba/) -->
-
 <br/>
 
 ### Dockerfile - скрипт для создания контейнера автоматически

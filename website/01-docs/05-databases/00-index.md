@@ -3,7 +3,7 @@ layout: page
 title: Базы Данных
 description: Базы Данных
 keywords: Базы Данных
-permalink: /adm/databases/
+permalink: /databases/
 ---
 
 # Базы Данных
