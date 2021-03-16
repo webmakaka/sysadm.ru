@@ -13,7 +13,7 @@ permalink: /devops/gitops/cvs/gitlab/setup/ubuntu/
 
 <br/>
 
-Предполагается что уже установлен <a href="/devops/linux/virtual/virtualbox/setup/">VirtualBox</a>, <a href="/devops/linux/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
+Предполагается что уже установлен <a href="/adm/virtual/virtualbox/setup/">VirtualBox</a>, <a href="/adm/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
 
 <br/>
 

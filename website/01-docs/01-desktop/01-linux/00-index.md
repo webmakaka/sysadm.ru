@@ -40,21 +40,21 @@ permalink: /desktop/linux/
 
 ### [Networks](/desktop/linux/networks/)
 
-### [Web Servers](/devops/webservers/)
+### [Web Servers](/adm/webservers/)
 
 ### [Proxy Servers](/adm/linux/proxy/)
 
-### [Базы данных](/databases/)
+### [Базы данных](/adm/databases/)
 
-### [Виртуализация](/devops/linux/virtual/)
+### [Виртуализация](/adm/virtual/)
 
 ### [Контейнеры](/devops/containers/)
 
 ### [Кластеризация](/adm/linux/clustering/)
 
-### [Мониторинг](/devops/linux/monitoring/)
+### [Мониторинг](/adm/monitoring/)
 
-### [Logging](/devops/linux/logging/)
+### [Logging](/adm/logging/)
 
 ### [DevOps](/devops/)
 
