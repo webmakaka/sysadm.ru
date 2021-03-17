@@ -13,6 +13,8 @@ permalink: /adm/monitoring/prometheus/
 
 <br/>
 
+Идеи позаимствованы из курса: "Monitoring Key Systems with Prometheus Exporters"
+
 ## Node Exporter
 
 **node_exporter**  
@@ -86,6 +88,15 @@ OK!
 
 <br/>
 
+// Вырубить, когда станет ненужно.
+
+```
+$ docker-compose stop prometheus
+$ docker-compose rm prometheus
+```
+
+<br/>
+
 ## MySQL exporter
 
 https://prometheus.io/docs/instrumenting/exporters/#databases
@@ -150,7 +161,7 @@ scrape_configs:
 
 <br/>
 
-## Blackbox exporter
+## Blackbox exporter (Monitoring Network Endpoints)
 
 Blackbox exporter download page for link to latest file
 
@@ -158,6 +169,8 @@ https://prometheus.io/download/#blackbox_exporter
 
 blackbox.yml configuration options
 https://github.com/prometheus/blackbox_exporter/blob/master/CONFIGURATION.md
+
+<br/>
 
 ```shell script
 #download, extract, view files
@@ -167,7 +180,11 @@ $ tar xvfz blackbox_exporter-0.17.0.linux-amd64.tar.gz
 $ cd blackbox_exporter-0.17.0.linux-amd64/
 ```
 
+<br/>
+
 blackbox.yml - modify http_2xx module to accept IPv4 as successful probe
+
+<br/>
 
 ```yaml
 modules:
@@ -177,13 +194,17 @@ modules:
             preferred_ip_protocol: 'ip4'
 ```
 
+<br/>
+
 ```shell script
 #Run exporter and check that it's up
 ./blackbox_exporter > blackbox.out 2>&1 &
 curl http://localhost:9115/metrics
 ```
 
-### Prometheus Configuration
+<br/>
+
+**Prometheus Configuration**
 
 prometheus/prometheus.yml
 
@@ -195,7 +216,7 @@ global:
     scrape_timeout: 10s
 ```
 
-...\<snip>...
+<br/>
 
 ```yaml
 scrape_configs:
@@ -216,7 +237,13 @@ scrape_configs:
 
 <br/>
 
-### Monitoring Kubernetes
+172.31.40.148 - Address and port of BlackBox exporter
+
+<br/>
+
+## Monitoring Kubernetes
+
+Prometheus Operator лучше установить из доки поновее.
 
 Prometheus Operator Github page
 
@@ -228,22 +255,26 @@ https://helm.sh/docs/intro/using_helm/
 
 Installing Helm and prometheus-operator chart
 
+<br/>
+
 ```shell script
 #install helm
-curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+$ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
 #add repo for prometheus-operator
-helm repo add stable https://kubernetes-charts.storage.googleapis.com
+$ helm repo add stable https://kubernetes-charts.storage.googleapis.com
 
 #install prometheus-operator chart
-helm install my-prometheus-operator stable/prometheus-operator
+$ helm install my-prometheus-operator stable/prometheus-operator
 ```
+
+<br/>
 
 Access Prometheus dashboard using preferred method (port forward, set up service, etc.)
 
 <br/>
 
-### Monitoring Messaging Systems
+## Monitoring Messaging Systems
 
 Prometheus Exporters
 
@@ -257,9 +288,11 @@ rabbitmq-plugins enable rabbitmq_prometheus
 
 <br/>
 
-### Prometheus Configuration
+**Prometheus Configuration**
 
 prometheus/prometheus.yml
+
+<br/>
 
 ```yaml
 scrape_configs:
