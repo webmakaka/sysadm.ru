@@ -15,7 +15,7 @@ permalink: /adm/monitoring/prometheus/
 
 Идеи позаимствованы из курса: "Monitoring Key Systems with Prometheus Exporters"
 
-## Node Exporter
+## 01. Node Exporter
 
 **node_exporter**  
 https://prometheus.io/download/#node_exporter
@@ -97,7 +97,7 @@ $ docker-compose rm prometheus
 
 <br/>
 
-## MySQL exporter
+## 02. MySQL exporter
 
 https://prometheus.io/docs/instrumenting/exporters/#databases
 
@@ -130,7 +130,6 @@ export DATA_SOURCE_NAME='mysqld_exporter:password@(localhost:3306)/'
 <br/>
 
 ```
-
 $ mkdir ~/tmp
 $ cd ~/tmp
 
@@ -161,7 +160,7 @@ scrape_configs:
 
 <br/>
 
-## Blackbox exporter (Monitoring Network Endpoints)
+## 03. Blackbox exporter (Monitoring Network Endpoints)
 
 Blackbox exporter download page for link to latest file
 
@@ -241,7 +240,7 @@ scrape_configs:
 
 <br/>
 
-## Monitoring Kubernetes
+## 04. Monitoring Kubernetes
 
 Prometheus Operator лучше установить из доки поновее.
 
@@ -274,7 +273,7 @@ Access Prometheus dashboard using preferred method (port forward, set up service
 
 <br/>
 
-## Monitoring Messaging Systems
+## 05. Monitoring Messaging Systems
 
 Prometheus Exporters
 

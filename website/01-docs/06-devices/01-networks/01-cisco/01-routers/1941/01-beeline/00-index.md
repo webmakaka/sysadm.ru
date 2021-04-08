@@ -24,13 +24,15 @@ permalink: /devices/cisco/routers/1941/beeline/
 
 <br/>
 
-    #show ip interface brief
-    Interface                  IP-Address      OK? Method Status                Protocol
-    Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down
-    GigabitEthernet0/0         95.31.31.8      YES DHCP   up                    up
-    GigabitEthernet0/1         192.168.1.1     YES NVRAM  up                    up
-    NVI0                       unassigned      YES unset  administratively down down
-    Virtual-PPP1               unassigned      YES IPCP   administratively down down
+```
+#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down
+GigabitEthernet0/0         95.31.31.8      YES DHCP   up                    up
+GigabitEthernet0/1         192.168.1.1     YES NVRAM  up                    up
+NVI0                       unassigned      YES unset  administratively down down
+Virtual-PPP1               unassigned      YES IPCP   administratively down down
+```
 
 Virtual-PPP1 - отключен  
 GigabitEthernet0/0 - присвоен мой статический IP. Ранее статический IP адрес назначался Virtual-PPP1, а GigabitEthernet0/0 - какой-то IP от DHCP сервера билайна.
@@ -48,7 +50,7 @@ GigabitEthernet0/0 - присвоен мой статический IP. Ране
 
 ### Настройка роутера для работы в домашней сети Билайн
 
-<a href="/devices/cisco/routers/1941/beeline-not-works/">Cisco Router 1941 отвалился интернет в локальной сети Билайн</a>
+<a href="/devices/cisco/routers/1941/beeline-not-works/">Домашний интернет от Билайн, информация по неработающему интернету</a>
 
 <a href="/devices/cisco/routers/1941/beeline-port-forwarding/">Cisco Router 1941 Проброс порта в локальную сеть Билайн</a> (WebServer)
 
@@ -64,7 +66,7 @@ GigabitEthernet0/0 - присвоен мой статический IP. Ране
 
 <br/>
 
-### Другие конфиги (может когда и кому понадобятся). Можно добавить свои.
+### Другие конфиги (может когда и кому понадобятся). Можно добавить свои
 
 <a href="/devices/cisco/routers/1941/beeline-general/">Настройка маршрутизаторов Cisco для работы в сети Корбина)</a>
 

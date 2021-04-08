@@ -1,12 +1,18 @@
 ---
 layout: page
-title: Cisco Router 1941 не работает интернет в локальной сети Билайн
-description: Cisco Router 1941 не работает интернет в локальной сети Билай
-keywords: Cisco Router 1941, Билайн, проблемы с интернетом, dhcp
+title: Домашний интернет от Билайн, информация по неработающему интернету
+description: Домашний интернет от Билайн, информация по неработающему интернету
+keywords: devices, cisco, routers, 1941, Билайн, проблемы, не работает интернет, проблемы с брасом (dhcp)
 permalink: /devices/cisco/routers/1941/beeline-not-works/
 ---
 
-# Cisco Router 1941 не работает интернет в локальной сети Билайн
+# Домашний интернет от Билайн, информация по неработающему интернету
+
+Установлено оборудование Cisco Router 1941
+
+<br/>
+
+Учет ведется с помощью сервиса проверки доступности хоста из интернета. В случае обнаружения сервисом, что хост недоступен, он собирает информацию и предоставляет отчет, сколько времени хост был недоступен.
 
 <br/>
 
@@ -14,9 +20,11 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 <br/>
 
-<br/>
-
 **2021:**<br/>
+
+08.04.2021 - 2 часа
+
+26.03.2021 - 1 час 08 минут
 
 17.03.2021 - 2 часа 17 минут
 
@@ -28,7 +36,7 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 25.01.2021 - 29 минут + 7 минут
 
-20.01.2021 - 3 часа, 41 минуту
+20.01.2021 - 3 часа, 41 минута
 
 <br/>
 
@@ -55,6 +63,10 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 05.03.2019 - Более 12 часов
 
 <br/>
+
+Более ранние записи не велись.
+
+<br/>
 <br/>
 
 **Телефон поддержки:** <br/>
@@ -74,7 +86,7 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 **Итого на чей стороне проблемы:**
 
-2 (Я) : 16 (Beeline)
+2 (Я) : 18 (Beeline)
 
 <br/>
 
@@ -99,21 +111,25 @@ $ ssh \
 
 <br/>
 
-    cisco-router-1941> en
+```
+cisco-router-1941> en
+```
 
 <br/>
 
-    # show ip interface brief
-    Interface                  IP-Address      OK? Method Status                Protocol
-    Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down
-    GigabitEthernet0/0         unassigned      YES DHCP   up                    up
-    GigabitEthernet0/1         192.168.1.1     YES NVRAM  up                    up
-    NVI0                       unassigned      YES unset  administratively down down
-    Virtual-PPP1               unassigned      YES NVRAM  administratively down down
+```
+# show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down
+GigabitEthernet0/0         unassigned      YES DHCP   up                    up
+GigabitEthernet0/1         192.168.1.1     YES NVRAM  up                    up
+NVI0                       unassigned      YES unset  administratively down down
+Virtual-PPP1               unassigned      YES NVRAM  administratively down down
+```
 
 <br/>
 
-    DHCP билайновский не хочет отдавать мне IP.
+**DHCP билайновский не хочет отдавать мне мой IP.**
 
 <br/>
 
@@ -133,17 +149,19 @@ Temp  sub net mask: 0.0.0.0
 
 <br/>
 
-    Буду интерфейсы перестартовывать.
+**Буду интерфейсы перестартовывать**
 
 <br/>
 
-    # conf t
+```
+# conf t
 
-    # interface GigabitEthernet0/0
-    # shutdown
+# interface GigabitEthernet0/0
+# shutdown
 
-    # no shutdown
+# no shutdown
+```
 
 <br/>
 
-Разумеется, не помогло!
+**Разумеется, не помогло!**
