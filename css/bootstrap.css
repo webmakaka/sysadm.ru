@@ -1,11 +1,5 @@
 /*!
  * Bootstrap v2.3.2
- *
- * Copyright 2013 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world by @mdo and @fat.
  */
 
 .clearfix {
@@ -4126,7 +4120,6 @@ input[type='submit'].btn.btn-mini {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
 }
 
 .nav-tabs > li {
@@ -4134,7 +4127,7 @@ input[type='submit'].btn.btn-mini {
 }
 
 .nav-tabs > li > a {
-  padding-top: 8px;
+  padding-top: 20px;
   padding-bottom: 8px;
   line-height: 20px;
   border: 1px solid transparent;

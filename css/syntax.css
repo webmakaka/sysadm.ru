@@ -2,7 +2,8 @@
 .highlight {
   background: #111;
   padding: 0.2em 0.9em;
-  margin-bottom: 1em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
   font: normal normal normal 115% / normal Monaco, 'Courier New',
     'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
   line-height: 1.1em;
