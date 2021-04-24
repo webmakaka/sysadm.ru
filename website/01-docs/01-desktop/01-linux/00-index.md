@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Linux
+description: Linux
+keywords: desktop, linux
 permalink: /desktop/linux/
 ---
 

@@ -8,7 +8,8 @@ permalink: /dev/git/install/ubuntu/ppa/
 
 # Обновление GIT до актуальных версий из ppa в Ubuntu
 
-Делаю 27.03.2018
+Делаю:  
+27.03.2018
 
 Была версия 1.x git нужна 2.x
 

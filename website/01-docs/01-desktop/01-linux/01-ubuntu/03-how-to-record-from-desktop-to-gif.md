@@ -10,9 +10,8 @@ permalink: /desktop/linux/ubuntu/how-to-record-from-desktop-to-gif/
 
 <br/>
 
-
     $ sudo add-apt-repository ppa:peek-developers/stable
     $ sudo apt-get update
-    $ sudo apt-get install peek
+    $ sudo apt-get install -y peek
 
     $ peek
