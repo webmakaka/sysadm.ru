@@ -35,17 +35,34 @@ permalink: /desktop/linux/linux-live-usb-flash/
 
     # dd if=./ubuntu-14.04.5-desktop-amd64.iso of=/dev/sdf
 
-<!--
-# fdisk /dev/sdd
+<br/>
 
-c
-n
-p
-1
-[Enter]
-[Enter]
-w
-# sudo mkfs.ntfs /dev/sdd1
+### Создать загрузочную флешку с Windows 10 в Linux
 
+Делаю:  
+25.04.2021
 
--->
+<br/>
+
+    $ sudo apt install gparted
+    $ gparted
+
+Выбираю флешку > Делаю unmount
+
+Device > Create partition table > GPT
+
+UnAllocated > New
+
+ext4 меняю на fat32
+
+Применить
+
+<br/>
+
+Скопировать содержимое диска с виндовс на флешку
+
+<br/>
+
+https://www.linuxbabe.com/ubuntu/easily-create-windows-10-bootable-usb-ubuntu
+
+Там же описывается, как можно и без USB установить
