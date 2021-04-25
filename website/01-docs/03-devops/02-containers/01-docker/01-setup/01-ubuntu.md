@@ -9,7 +9,7 @@ permalink: /devops/containers/docker/setup/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 20.04.1
 
 Делаю:  
-02.02.2021
+25.04.2021
 
 <br/>
 
@@ -58,17 +58,19 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 <br/>
 
-    $ chmod +x ./install-docker-and-docker-compose.sh
-    $ sudo ./install-docker-and-docker-compose.sh
+```
+$ chmod +x ./install-docker-and-docker-compose.sh
+$ sudo ./install-docker-and-docker-compose.sh
+```
 
 <br/>
 
 ```
 $ docker -v
-Docker version 20.10.3, build 48d30b5
+Docker version 20.10.6, build 370c289
 
 $ docker-compose --version
-docker-compose version 1.28.2, build 67630359
+docker-compose version 1.29.1, build c34c88b2
 ```
 
 <br/>

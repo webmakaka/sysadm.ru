@@ -22,7 +22,7 @@ Offtopic:
 
 ### Инсталляция VirtualBox 6.X
 
-[Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1](/adm/virtual/virtualbox/setup/ubuntu/)
+[Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04](/adm/virtual/virtualbox/setup/ubuntu/)
 
 <br/>
 

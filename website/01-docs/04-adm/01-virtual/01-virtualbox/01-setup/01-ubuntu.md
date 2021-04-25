@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1
-description: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1
+title: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
+description: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
 keywords: linux, virtual, ubuntu, virtualbox, installation, command line
 permalink: /adm/virtual/virtualbox/setup/ubuntu/
 ---
 
-# Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04.1
+# Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
 
 Делаю:  
-09.01.2021
+25.04.2021
 
 <br/>
 
@@ -19,11 +19,17 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 
     # cd /tmp
 
-    # echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" >> /etc/apt/sources.list.d/virtualbox.list
+<br/>
+
+```
+# echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" >> /etc/apt/sources.list.d/virtualbox.list
+```
 
 <br/>
 
-    # wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+```
+# wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+```
 
 <br/>
 
@@ -42,7 +48,7 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 <br/>
 
     # vboxmanage --version
-    6.1.16r140961
+    6.1.20r143896
 
 <br/>
 

@@ -12,27 +12,23 @@ permalink: /desktop/linux/ubuntu/network/static-ip/
 
 **Чтобы работало, сначала нужно отключить network-manager !!! Но в 99% случаев достаточно и GUI инструментов настройки**
 
-
     # apt-get remove resolvconf
 
-
 Пришлось сделать reboot
-
 
     # vi /etc/network/interfaces
 
 <br/>
 
-    auto enp2s0
-    iface enp2s0 inet static
-                 address 192.168.1.5
-                 netmask 255.255.255.0
-                 gateway 192.168.1.1
-
-
+```
+auto enp2s0
+iface enp2s0 inet static
+                address 192.168.1.5
+                netmask 255.255.255.0
+                gateway 192.168.1.1
+```
 
 <br/>
-
 
 Я пересоздавал resolv.conf, т.к. это был файл - ссылка на еще что-то.
 
@@ -49,9 +45,7 @@ permalink: /desktop/linux/ubuntu/network/static-ip/
 
 <br/>
 
-
     # /etc/init.d/networking restart
-
 
 <br/>
 
