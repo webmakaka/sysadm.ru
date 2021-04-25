@@ -52,6 +52,10 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 
 <br/>
 
+    $ sudo usermod -aG vboxusers <username>
+
+<br/>
+
 **Если ошибка:**
 
 ```
@@ -93,7 +97,7 @@ E: Unable to correct problems, you have held broken packages.
 ### Установка пакетов расширения (USB, Remote Console, etc)
 
 Делаю:  
-26.09.2019
+25.04.2021
 
 Проприетарная, по идее, требует денег за использование в организациях.
 
@@ -102,31 +106,54 @@ E: Unable to correct problems, you have held broken packages.
 <br/>
 
     -- если нужно удалить старый
-    $ VBoxManage extpack uninstall  "Oracle VM VirtualBox Extension Pack"
+    $ VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
 
 <br/>
 
     $ VBoxManage list extpacks
     Extension Packs: 0
 
-<br/>    
-    
-    $ cd /tmp/
-    $ wget http://download.virtualbox.org/virtualbox/6.0.10/Oracle_VM_VirtualBox_Extension_Pack-6.0.10.vbox-extpack
-    $ VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.0.10.vbox-extpack
+<br/>
+
+Нужно делать от root. Раньше можно было делать от пользователя.
 
 <br/>
 
-    $ VBoxManage list extpacks
-    Extension Packs: 1
-    Pack no. 0:   Oracle VM VirtualBox Extension Pack
-    Version:      6.0.10
-    Revision:     132072
-    Edition:
-    Description:  USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe.
-    VRDE Module:  VBoxVRDP
-    Usable:       true
-    Why unusable:
+**Ошибка при инсталляции от пользователя:**
+
+<br/>
+
+```
+Progress state: NS_ERROR_FAILURE
+VBoxManage: error: Failed to install "/tmp/Oracle_VM_VirtualBox_Extension_Pack-6.1.20.vbox-extpack"
+VBoxManage: error: The installer failed with exit code 127: Error creating textual authentication agent: Error opening current controlling terminal for the process (`/dev/tty'): No such device or address
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component ExtPackManagerWrap, interface IExtPackManager
+VBoxManage: error: Context: "RTEXITCODE handleExtPack(HandlerArg*)" at line 1424 of file VBoxManageMisc.cpp
+```
+
+<br/>
+
+```
+$ sudo su -
+# cd /tmp/
+# wget http://download.virtualbox.org/virtualbox/6.1.20/Oracle_VM_VirtualBox_Extension_Pack-6.1.20.vbox-extpack
+# VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.20.vbox-extpack
+```
+
+<br/>
+
+```
+$ VBoxManage list extpacks
+Extension Packs: 1
+Pack no. 0:   Oracle VM VirtualBox Extension Pack
+Version:      6.1.20
+Revision:     143896
+Edition:
+Description:  Oracle Cloud Infrastructure integration, USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe.
+VRDE Module:  VBoxVRDP
+Usable:       true
+Why unusable:
+```
 
 <br/>
 

@@ -12,17 +12,21 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts
 
 ### Обновление
 
-    $ sudo su -
-    # apt update && apt-get upgrade -y
-    # apt install -y vim curl git
+```
+$ sudo su -
+# apt update && apt-get upgrade -y
+# apt install -y vim curl git
+```
 
 <br/>
 
 ### Установка VSCODE
 
-    $ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-    $ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-    $ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+```
+$ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+$ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+$ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+```
 
 <br/>
 
@@ -39,10 +43,12 @@ https://code.visualstudio.com/docs/setup/linux
 
 ### Запуск sysadm.ru в редакторе vscode
 
-    $ mkdir ~/projects && cd ~/projects
-    $ git clone https://bitbucket.org/sysadm-ru/sysadm.ru
-    $ cd sysadm.ru
-    $ code .
+```
+$ mkdir ~/projects && cd ~/projects
+$ git clone https://bitbucket.org/sysadm-ru/sysadm.ru
+$ cd sysadm.ru
+$ code .
+```
 
 <br/>
 
@@ -52,20 +58,22 @@ https://code.visualstudio.com/docs/setup/linux
 
 <br/>
 
-    $ sudo apt install -y \
-        make \
-        openssh-server \
-        traceroute \
-        vlc \
-        mpv \
-        transmission \
-        ffmpegthumbnailer \
-        net-tools \
-        iputils-ping \
-        rar unrar-free \
-        wakeonlan \
-        whois \
-        gimp
+```
+$ sudo apt install -y \
+    make \
+    openssh-server \
+    traceroute \
+    vlc \
+    mpv \
+    transmission \
+    ffmpegthumbnailer \
+    net-tools \
+    iputils-ping \
+    rar unrar-free \
+    wakeonlan \
+    whois \
+    gimp
+```
 
 <br/>
 

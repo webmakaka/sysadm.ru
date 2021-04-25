@@ -32,6 +32,8 @@ permalink: /adm/virtual/virtualbox/vm/centos-6/
 
     $ mkdir -p ${VM_HOME}/${vm}/snapshots
 
+<br/>
+
 ### Создание и регистрация виртуальной машины:
 
 Узнать список поддерживаемых операционных систем
@@ -44,7 +46,9 @@ permalink: /adm/virtual/virtualbox/vm/centos-6/
     --basefolder ${VM_HOME}/${vm} \
     --register
 
-Должно появиться сообщение:
+<br/>
+
+**Должно появиться сообщение:**
 
     Virtual machine 'vm_serv_1_centos_66' is created and registered.
 
@@ -62,16 +66,18 @@ permalink: /adm/virtual/virtualbox/vm/centos-6/
 
 <br/>
 
-### Подключаю контроллер жестких дисков (SAS):
+### Подключаю контроллер жестких дисков (SATA):
 
-    $ VBoxManage storagectl ${vm} \
-    --add sas \
-    --name "SAS Controller" \
-    --controller LSILogicSAS
+```
+$ VBoxManage storagectl ${vm} \
+    --name "SATA Controller" \
+    --add sata \
+    --controller IntelAhci
+```
 
-Если понадобится удалить:
+**Если понадобится удалить:**
 
-    $ VBoxManage storagectl ${vm} --name "SAS Controller" --remove
+    $ VBoxManage storagectl ${vm} --name "SATA Controller" --remove
 
 ### Создание и подключение жестких дисков:
 
@@ -87,11 +93,13 @@ permalink: /adm/virtual/virtualbox/vm/centos-6/
 
 ### Подключаю диски к SAS контроллеру:
 
-    $ VBoxManage storageattach ${vm} \
-    --storagectl "SAS Controller" \
-    --port 0 \
-    --type hdd \
-    --medium ${vm}_dsk1.vdi
+```
+$ VBoxManage storageattach ${vm} \
+--storagectl "SATA Controller" \
+--port 0 \
+--type hdd \
+--medium ${vm}_dsk1.vdi
+```
 
 <br/>
 
@@ -181,19 +189,25 @@ vboxnet0 - виртуальный адаптер хостовой машины.
 
 ### Предоставим возможность подключения к машине по RDP:
 
-    $ VBoxManage modifyvm ${vm} \
+```
+$ VBoxManage modifyvm ${vm} \
     --vrde on \
     --vrdemulticon on \
     --vrdeauthtype null \
     --vrdeaddress 192.168.1.5 \
     --vrdeport 3389
+```
 
-Здесь мы указываем:
+<br/>
+
+**Здесь мы указываем:**
 
 --vrdeaddress - ip адрес машины, на которой установлен vitrualbox  
 --vrdeauthtype null - аутентификация не требуется.  
 --vrdemulticon on - разрешено множественное подключение к виртуальным машинам.  
 --vrdeport порт к которому можно будет подключиться при старте виртуальной машины.
+
+<br/>
 
 ### Показать результат созданной виртаульной машины:
 
@@ -250,7 +264,7 @@ http://manpages.ubuntu.com/manpages/lucid/man1/rdesktop.1.html
 
 ### Могут понадобиться следующие команды:
 
-    sysadm.ru/adm/virtual/virtualbox/commands/
+<a href="/adm/virtual/virtualbox/commands/">Вот</a>
 
 <br/>
 

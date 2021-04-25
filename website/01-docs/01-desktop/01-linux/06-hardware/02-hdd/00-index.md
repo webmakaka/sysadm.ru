@@ -8,7 +8,9 @@ permalink: /desktop/linux/hardware/hdd/
 
 # HDD / SSD и другие блочные устройства в Linux
 
-[Монтирование hdd](/desktop/linux/hardware/hdd/mount-disks/)
+[Монтирование нового жесткого диска](/desktop/linux/hardware/hdd/mount-disks/)
+
+[Монтирование использовавшегося жесткого диска](/desktop/linux/hardware/hdd/mount-disks-used/)
 
 [Подключаем диск 8TB в Centos 6.X](/desktop/linux/hardware/hdd/seagate/8tb/)
 

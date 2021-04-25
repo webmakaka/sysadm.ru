@@ -78,7 +78,7 @@ permalink: /desktop/linux/hardware/hdd/mount-disks/
 <br/>
 
     -- Если нужно отмонтировать
-    # mount /mnt/dsk1/
+    # umount /mnt/dsk1/
 
 <br/>
 

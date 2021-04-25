@@ -31,6 +31,8 @@ permalink: /adm/virtual/virtualbox/vm/oracle-linux-6/
     --basefolder ${VM_HOME}/${vm} \
     --register
 
+<br/>
+
 ### Устанавливаю материнскую пату:
 
 Выбираю материнскую пату с более современным чипсетом. По умолчанию piix3
@@ -53,103 +55,122 @@ permalink: /adm/virtual/virtualbox/vm/oracle-linux-6/
 
 <br/>
 
-    $ VBoxManage createhd \
+```
+$ VBoxManage createhd \
     --filename ${vm}_dsk1.vdi \
     --size 40960 \
     --format VDI \
     --variant Standard
 
-    $ VBoxManage createhd \
+$ VBoxManage createhd \
     --filename ${vm}_dsk2.vdi \
     --size 40960 \
     --format VDI \
     --variant Standard
 
-    $ VBoxManage createhd \
+$ VBoxManage createhd \
     --filename ${vm}_dsk3.vdi \
     --size 40960 \
     --format VDI \
     --variant Standard
 
-    $ VBoxManage createhd \
+$ VBoxManage createhd \
     --filename ${vm}_dsk4.vdi \
     --size 40960 \
     --format VDI \
     --variant Standard
 
-    $ VBoxManage createhd \
+$ VBoxManage createhd \
     --filename ${vm}_dsk5.vdi \
     --size 40960 \
     --format VDI \
     --variant Standard
 
-    $ VBoxManage createhd \
+$ VBoxManage createhd \
     --filename ${vm}_dsk6.vdi \
     --size 40960 \
     --format VDI \
     --variant Standard
 
-    $ VBoxManage createhd \
+$ VBoxManage createhd \
     --filename ${vm}_dsk7.vdi \
     --size 40960 \
     --format VDI \
     --variant Standard
 
-    $ VBoxManage createhd \
+$ VBoxManage createhd \
     --filename ${vm}_dsk8.vdi \
     --size 40960 \
     --format VDI \
     --variant Standard
+```
 
-### Подключаю диски к SAS контроллеру (максимум 8):
+<br/>
 
-    $ VBoxManage storageattach ${vm} \
-    --storagectl "SAS Controller" \
+### Подключаю контроллер жестких дисков (SATA):
+
+```
+$ VBoxManage storagectl ${vm} \
+    --name "SATA Controller" \
+    --add sata \
+    --controller IntelAhci
+```
+
+<br/>
+
+### Подключаю диски к SATA контроллеру (максимум 8):
+
+```
+$ VBoxManage storageattach ${vm} \
+    --storagectl "SATA Controller" \
     --port 0 \
     --type hdd \
     --medium ${vm}_dsk1.vdi
 
-    $ VBoxManage storageattach ${vm} \
-    --storagectl "SAS Controller" \
+$ VBoxManage storageattach ${vm} \
+    --storagectl "SATA Controller" \
     --port 1 \
     --type hdd \
     --medium ${vm}_dsk2.vdi
 
-    $ VBoxManage storageattach ${vm} \
-    --storagectl "SAS Controller" \
+$ VBoxManage storageattach ${vm} \
+    --storagectl "SATA Controller" \
     --port 2 \
     --type hdd \
     --medium ${vm}_dsk3.vdi
 
-    $ VBoxManage storageattach ${vm} \
-    --storagectl "SAS Controller" \
+$ VBoxManage storageattach ${vm} \
+    --storagectl "SATA Controller" \
     --port 3 \
     --type hdd \
     --medium ${vm}_dsk4.vdi
 
-    $ VBoxManage storageattach ${vm} \
-    --storagectl "SAS Controller" \
+$ VBoxManage storageattach ${vm} \
+    --storagectl "SATA Controller" \
     --port 4 \
     --type hdd \
     --medium ${vm}_dsk5.vdi
 
-    $ VBoxManage storageattach ${vm} \
-    --storagectl "SAS Controller" \
+$ VBoxManage storageattach ${vm} \
+    --storagectl "SATA Controller" \
     --port 5 \
     --type hdd \
     --medium ${vm}_dsk6.vdi
 
-    $ VBoxManage storageattach ${vm} \
-    --storagectl "SAS Controller" \
+$ VBoxManage storageattach ${vm} \
+    --storagectl "SATA Controller" \
     --port 6 \
     --type hdd \
     --medium ${vm}_dsk7.vdi
 
-    $ VBoxManage storageattach ${vm} \
-    --storagectl "SAS Controller" \
+$ VBoxManage storageattach ${vm} \
+    --storagectl "SATA Controller" \
     --port 7 \
     --type hdd \
     --medium ${vm}_dsk8.vdi
+```
+
+<br/>
 
 ### Подключение сетевых интерфейсов:
 
@@ -165,17 +186,21 @@ Name: eth0
 
 Подключаю к виртуальной машине 3 виртуальных сетевых “Intel® 82540EM Gigabit Ethernet Controller”, работающих как bridget (3 адаптера нужные в случае необходимости установить RAC):
 
-    $ VBoxManage modifyvm ${vm} \
-    --nictype1 82540EM \
-    --nic1 bridged \
-    --bridgeadapter1 eth0
+<br/>
 
-    $ VBoxManage modifyvm ${vm} \
-    --nictype2 82540EM \
-    --nic2 bridged \
-    --bridgeadapter2 eth0
+```
+$ VBoxManage modifyvm ${vm} \
+--nictype1 82540EM \
+--nic1 bridged \
+--bridgeadapter1 eth0
 
-    $ VBoxManage modifyvm ${vm} \
-    --nictype3 82540EM \
-    --nic3 bridged \
-    --bridgeadapter3 eth0
+$ VBoxManage modifyvm ${vm} \
+--nictype2 82540EM \
+--nic2 bridged \
+--bridgeadapter2 eth0
+
+$ VBoxManage modifyvm ${vm} \
+--nictype3 82540EM \
+--nic3 bridged \
+--bridgeadapter3 eth0
+```

@@ -34,3 +34,18 @@ permalink: /desktop/linux/linux-live-usb-flash/
 **С ubuntu тоже работает**
 
     # dd if=./ubuntu-14.04.5-desktop-amd64.iso of=/dev/sdf
+
+<!--
+# fdisk /dev/sdd
+
+c
+n
+p
+1
+[Enter]
+[Enter]
+w
+# sudo mkfs.ntfs /dev/sdd1
+
+
+-->
