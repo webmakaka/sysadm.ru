@@ -10,8 +10,10 @@
 
         <div align="center">
             {% if page.keywords %}
-              <p><strong>Tags:</strong> {{ page.keywords | strip_html | strip_newlines | truncate: 160 }}
-            {% endif %}</p>
+            <p>
+                <strong>Tags:</strong> {{ page.keywords | strip_html |
+                strip_newlines | truncate: 160 }} {% endif %}
+            </p>
         </div>
 
         <h2 class="footer-heading">
@@ -20,12 +22,36 @@
         </h2>
 
         <div class="footer-col-wrapper">
-            <div class="footer-col  footer-col-3">
+            <div class="footer-col footer-col-3">
+                <p class="text">
+                    OpenSource проект с исходниками на
+                    <a
+                        href="https://github.com/webmakaka/sysadm.ru"
+                        rel="nofollow"
+                        >github</a
+                    >. <br />
+                    Для работы, удобно скачать исходники к себе и локально с
+                    ними работать, например в VSCode.
+
+                    <br /><br />
+
+                    В репозитории на github можно создавать
+                    <a href="https://github.com/webmakaka/sysadm.ru/discussions"
+                        >темы для осбуждения</a
+                    >
+                    и
+                    <a href="https://github.com/webmakaka/sysadm.ru/issues"
+                        >сообщать об ошибках и неточностях</a
+                    >.
+                </p>
+
                 <p class="text">
                     <strong
-                        >Желающие поделиться своим опытом, обсудить материалы,
-                        задать вопрос, обновить, сообщить об ошибках и
-                        неточностях, пишите в телеграм чат: sysadm_ru.</strong
+                        >Желающие поделиться своим опытом, могут добавлять свои
+                        знания и исправлять ошибки, создавая
+                        <a href="https://github.com/webmakaka/sysadm.ru/pulls"
+                            >Pull Request's</a
+                        >. Также создана группа в телеграм: sysadm_ru.</strong
                     >
                 </p>
 
