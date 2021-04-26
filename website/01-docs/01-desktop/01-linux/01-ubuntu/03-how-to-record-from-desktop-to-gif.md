@@ -2,7 +2,7 @@
 layout: page
 title: Запись с экрана монитора в GIF
 description: Запись с экрана монитора в GIF
-keywords: linux, ubuntu, gif, запись, peek
+keywords: linux, ubuntu, gif, запись с экрана, peek
 permalink: /desktop/linux/ubuntu/how-to-record-from-desktop-to-gif/
 ---
 
