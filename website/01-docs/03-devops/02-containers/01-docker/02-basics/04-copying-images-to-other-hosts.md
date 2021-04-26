@@ -46,3 +46,15 @@ Docker version 20.10.6, build 370c289
     $ docker load -i /tmp/<new_image_name>.tar
 
     $ docker images | grep <new_image_name>
+
+<br/>
+
+### Как переносить базу в контейнере
+
+Для переноса базы данный вариант не работает. В результате переноса базы mysql, оказалось, что она пустая.
+
+Нужно будет поизучать:
+
+https://question-it.com/questions/184237/sohranit-tekuschee-sostojanie-obraza-dokera-i-eksportirovat-na-drugoj-server
+
+когда в слдеющий раз понадобится.
