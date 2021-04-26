@@ -2,18 +2,25 @@
 layout: page
 title: Скопировать Docker Images на другой Host
 description: Скопировать Docker Images на другой Host
-keywords: devops, docker, Скопировать Docker Images на другой Host
+keywords: devops, containers, docker, copy images, move outside
 permalink: /devops/containers/docker/basics/copying-images-to-other-hosts/
 ---
 
 # Скопировать Docker Images на другой Host
 
 Делаю:  
-17.08.2019
+26.04.2021
 
 <br/>
 
-Host 1:
+```
+$ docker -v
+Docker version 20.10.6, build 370c289
+```
+
+<br/>
+
+### Host 1:
 
 Если нужно перенести контейнер делаем commit, чтобы получить image
 
@@ -29,8 +36,7 @@ Host 1:
 
 <br/>
 
-Host 2:  
-(Старые версии docker, до веррии 1.4 так не умеют. Врочем все, что меньше 18, наверное уже старье)
+### Host 2:
 
 <!--
     // Посмотреть всяку ерунду в контейнере

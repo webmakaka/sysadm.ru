@@ -11,11 +11,10 @@
     # vi /etc/systemd/system/sysadm.ru.service
 
 вставить содержимое файла sysadm.ru.service
-    
+
     # systemctl enable sysadm.ru.service
     # systemctl start  sysadm.ru.service
     # systemctl status sysadm.ru.service
-
 
 http://localhost:4006
 
@@ -27,10 +26,9 @@ http://localhost:4006
 
     $ cd ~
     $ mkdir -p sysadm.ru && cd sysadm.ru
-    $ git clone --depth=1 https://bitbucket.org/sysadm-ru/sysadm.ru.git .
+    $ git clone --depth=1 https://github.com/webmakaka/sysadm.ru.git .
     $ docker-compose up
-    
+
 <br/>
 
 Остается в браузере подключиться к localhost:80
-
