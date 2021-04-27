@@ -57,4 +57,4 @@ Docker version 20.10.6, build 370c289
 
 https://question-it.com/questions/184237/sohranit-tekuschee-sostojanie-obraza-dokera-i-eksportirovat-na-drugoj-server
 
-когда в слдеющий раз понадобится.
+когда в следующий раз понадобится.

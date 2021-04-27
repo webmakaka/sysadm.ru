@@ -70,3 +70,7 @@ https://www.hackintoshshop.com/2810/hackintosh-big-sur-guide/
 Полезный сайт, чтобы понять по железу и д.р.
 
 https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html
+
+<br/>
+
+https://dortania.github.io/OpenCore-Install-Guide/
