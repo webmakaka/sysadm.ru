@@ -8,6 +8,10 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts
 
 # Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 
+
+Делаю:  
+27.04.2021
+
 <br/>
 
 ### Обновление
@@ -118,7 +122,7 @@ Keyboard & Mouse --> Additional Layout Options --> Switching to another layout -
 
 Appearance -> Theme
 
-    Applications -> Yaru-dark
+    Applications -> Yaru-dark  
     Icons -> Ubuntu-mono-dark
 
 <br/>
@@ -139,7 +143,7 @@ Appearance -> Theme
 
     Keyboard Shortcuts
 
-    System --> Logout
+    System --> Log out
 
     Убираем
 
@@ -154,13 +158,24 @@ Appearance -> Theme
 
 <br/>
 
-### Отключить противный звук при ошибке в консоли
+### Настройка параметров терминала
+
+**Отключить противный звук при ошибке в консоли**
 
 Terminal --> Preferences
 
+Unnamed -> Sound -> Terminal bell (disable)
+
 ![Отключить противный звук при ошибке в консоли](/img/desktop/linux/ubuntu/setup/disable-sound-when-error-in-the-console.png 'Отключить противный звук при ошибке в консоли'){: .center-image }
 
+<br/>
+
+**Шрифты, цвета и т.д.**
+
 Color --> Built-in schemes: Black on white
+
+Unnamed --> Custom font: Ubuntu Mono Regular 22
+
 
 <br/>
 
