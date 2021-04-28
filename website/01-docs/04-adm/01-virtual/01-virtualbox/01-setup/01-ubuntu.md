@@ -9,7 +9,7 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 # Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
 
 Делаю:  
-25.04.2021
+28.04.2021
 
 <br/>
 

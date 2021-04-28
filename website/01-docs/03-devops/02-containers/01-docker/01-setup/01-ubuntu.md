@@ -9,7 +9,7 @@ permalink: /devops/containers/docker/setup/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 20.04.1
 
 Делаю:  
-25.04.2021
+28.04.2021
 
 <br/>
 
@@ -81,8 +81,10 @@ docker-compose version 1.29.1, build c34c88b2
 
 в группе docker должен появиться этот пользователь
 
-    $ cat /etc/group | grep docker
-        docker:x:126:username
+```
+$ cat /etc/group | grep docker
+docker:x:126:username
+```
 
 Перелогиниваемся, иначе не будет работать
 

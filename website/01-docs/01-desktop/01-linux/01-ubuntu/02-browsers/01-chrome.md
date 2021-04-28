@@ -39,7 +39,7 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 
 ### Дополнительные плагины
 
--   Quick JavaScript Switcher
+-   
 -   EditThisCookie
 -   SetupVPN
 -   LanguageTool
@@ -60,7 +60,7 @@ hola vpn
 
 ### Дополнительные плагины для GitHub
 
--   GitHub dark theme
+-   GitHub dark theme (Github Dark theme One Dark with ligatures)
 
 <br/>
 
