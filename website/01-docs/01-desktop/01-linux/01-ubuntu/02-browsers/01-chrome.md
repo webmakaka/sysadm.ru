@@ -8,10 +8,8 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 
 # Инсталляция Chrome в Ubuntu
 
-
 Делаю:  
 27.04.2021
-
 
 <br/>
 
@@ -22,7 +20,6 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 -->
 
     $ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-
 
 <!--
     $ sudo sh -c 'echo "deb http://dl.google.com/desktop/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
@@ -39,12 +36,25 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 
 ### Дополнительные плагины
 
--   
 -   EditThisCookie
 -   SetupVPN
 -   LanguageTool
 -   Nimbus Screenshoot & Screen Video Recorder
 -   Доступ рутрекер
+
+-   uBlacklist
+    https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe
+
+<br/>
+
+Правила для uBlacklist
+
+```
+*://*.coderoad.ru/*
+*://*.qastack.ru/*
+*://*.question-it.com/*
+*://*.gitmemory.com/*
+```
 
 <!--
 hola vpn

@@ -8,6 +8,9 @@ permalink: /desktop/linux/ubuntu/how-to-record-from-desktop-to-gif/
 
 # Запись с экрана монитора в GIF
 
+Делаю:  
+07.05.2021
+
 <br/>
 
     $ sudo add-apt-repository ppa:peek-developers/stable

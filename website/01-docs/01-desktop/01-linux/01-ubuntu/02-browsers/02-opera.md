@@ -13,7 +13,6 @@ permalink: /desktop/linux/ubuntu/browsers/opera/
 
 <br/>
 
-
 ```
 $ wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -
 
@@ -21,6 +20,10 @@ $ sudo add-apt-repository "deb [arch=i386,amd64] https://deb.opera.com/opera-sta
 
 $ sudo apt install -y opera-stable
 ```
+
+<br/>
+
+https://addons.opera.com/ru/extensions/details/opera-vpn/
 
 <br/>
 

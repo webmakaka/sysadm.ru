@@ -35,8 +35,6 @@ http://info.acestream.org/#/test
 
 <br/>
 
-### Ссылки на трансляции футбола (Sopcast, Ace Stream):
+### Ссылки на трансляции футбола (Ace Stream):
 
 -   pimpletv(.)ru (Заблокировано РКН)
--   livesport(.)ws (Заблокировано РКН)
--   football-russia(.)tv (Заблокировано РКН. Похоже, здесь уже нечего ловить)

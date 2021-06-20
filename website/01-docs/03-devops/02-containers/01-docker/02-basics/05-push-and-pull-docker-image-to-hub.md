@@ -22,7 +22,7 @@ container_id и container_name как и для image в данном случа
 
 // При необходимости, можно поменять название image
 
-    $ docker tag <image_name> <your_docker_hub_login>/<image_name>:<image_version>
+    $ docker image tag <image_name> <your_docker_hub_login>/<image_name>:<image_version>
 
 <br/>
 
