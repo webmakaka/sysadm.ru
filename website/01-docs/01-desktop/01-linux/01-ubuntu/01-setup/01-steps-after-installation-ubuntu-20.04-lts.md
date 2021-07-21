@@ -8,9 +8,8 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts
 
 # Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 
-
 Делаю:  
-27.04.2021
+22.07.2021
 
 <br/>
 
@@ -122,7 +121,7 @@ Keyboard & Mouse --> Additional Layout Options --> Switching to another layout -
 
 Appearance -> Theme
 
-    Applications -> Yaru-dark  
+    Applications -> Yaru-dark
     Icons -> Ubuntu-mono-dark
 
 <br/>
@@ -131,7 +130,7 @@ Appearance -> Theme
 
 <br/>
 
-    Applications --> Preferences --> System
+    Applications --> System Tools --> Preferences --> Settings
 
     Region & Language --> Formats --> United States
 
@@ -139,7 +138,7 @@ Appearance -> Theme
 
 ### ПО CTRL + ALT + DELETE показывать текущие процессы
 
-    Applications --> Preferences --> System
+    Applications --> System Tools --> Preferences --> Settings
 
     Keyboard Shortcuts
 
@@ -162,7 +161,7 @@ Appearance -> Theme
 
 **Отключить противный звук при ошибке в консоли**
 
-Terminal --> Preferences
+Terminal --> Right Click --> Preferences
 
 Unnamed -> Sound -> Terminal bell (disable)
 
@@ -175,7 +174,6 @@ Unnamed -> Sound -> Terminal bell (disable)
 Color --> Built-in schemes: Black on white
 
 Unnamed --> Custom font: Ubuntu Mono Regular 22
-
 
 <br/>
 

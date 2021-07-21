@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция MongoDB tools в Ubuntu 18.04
 description: Инсталляция MongoDB tools в Ubuntu 18.04
 keywords: linux, ubuntu, mongodb, tools, mongoimport, install
-permalink: /adm/databases/mongodb/install/ubuntu/tools/
+permalink: /adm/databases/mongodb/setup/ubuntu/tools/
 ---
 
 # Инсталляция MongoDB tools в Ubuntu 18.04

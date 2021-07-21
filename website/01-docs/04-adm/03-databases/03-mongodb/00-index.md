@@ -26,11 +26,11 @@ RoboMongo
 
 <br/>
 
-### [MongoDB инсталляция в Ubuntu 18.04.1](/adm/databases/mongodb/install/ubuntu/)
+### [MongoDB инсталляция в Ubuntu 18.04.1](/adm/databases/mongodb/setup/ubuntu/)
 
-### [Инсталляция MongoDB tools в Ubuntu 18.04](/adm/databases/mongodb/install/ubuntu/tools/)
+### [Инсталляция MongoDB tools в Ubuntu 18.04](/adm/databases/mongodb/setup/ubuntu/tools/)
 
-### [MongoDB инсталляция в Centos 6.X](/adm/databases/mongodb/install/centos/)
+### [MongoDB инсталляция в Centos 6.X](/adm/databases/mongodb/setup/centos/)
 
 ### [Обучающие видео по работе с базой данных MongoDB](https://www.youtube.com/watch?v=LBthwZDRR-c&list=PL34sAs7_26wPvZJqUJhjyNtm7UedWR8Ps)
 

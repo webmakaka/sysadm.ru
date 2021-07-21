@@ -9,7 +9,7 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 # Инсталляция Chrome в Ubuntu
 
 Делаю:  
-27.04.2021
+22.07.2021
 
 <br/>
 
@@ -31,6 +31,26 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
     $ sudo apt-get update -y
 
     $ sudo apt-get install -y google-chrome-stable
+
+<br/>
+
+### Отключить всплывающие уведомления и всякую слежку
+
+Settings --> Advanced --> Privacy and Security --> Site Settings:
+
+```
+Location --> Blocked
+Camera --> Blocked
+Microphone --> Blocked
+Notifications --> Blocked
+```
+
+<br/>
+
+### Язык по умолчанию
+
+Settings -> Advanced -> Language -> Order Languages based on your preferences: English, Russian
+
 
 <br/>
 
@@ -66,11 +86,6 @@ hola vpn
 
 -   cookies.txt
 
-<br/>
-
-### Дополнительные плагины для GitHub
-
--   GitHub dark theme (Github Dark theme One Dark with ligatures)
 
 <br/>
 
@@ -90,21 +105,4 @@ https://adblockplus.org/
     *jivosite.com*
     ||supervisor.ext-twitch.tv/supervisor/v1/index.html
 
-<br/>
 
-### Отключить всплывающие уведомления и всякую слежку
-
-Settings --> Advanced --> Privacy and Security --> Site Settings:
-
-```
-Location --> Blocked
-Camera --> Blocked
-Microphone --> Blocked
-Notifications --> Blocked
-```
-
-<br/>
-
-### Язык по умолчанию
-
-Settings -> Advanced -> Language -> Order Languages based on your preferences: English, Russian
