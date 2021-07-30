@@ -37,6 +37,10 @@ permalink: /dev/git/commands/
 
 <br/>
 
+В настройка аккаунта github добавить public key
+
+<br/>
+
     $ ssh -T git@github.com
 
 <br/>
@@ -205,9 +209,11 @@ permalink: /dev/git/commands/
 
 ### Заменить Remote Origin
 
+<br/>
+
     $ git remote -v
-    origin	https://github.com/sysadm-ru/sysadm.ru (fetch)
-    origin	https://github.com/sysadm-ru/sysadm.ru (push)
+    origin	https://github.com/webmakaka/sysadm.ru (fetch)
+    origin	https://github.com/webmakaka/sysadm.ru (push)
 
 <br/>
 
@@ -215,8 +221,16 @@ permalink: /dev/git/commands/
 
 <br/>
 
-    $ git remote add origin https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git
+    // Меня с https на ssh
 
+    $ git remote add origin git@github.com:webmakaka/sysadm.ru.git
+    $ GIT_SSH_COMMAND='ssh -i ~/.ssh/marley_github -o IdentitiesOnly=yes' git push origin master
+
+<br/>
+
+    // Или можно переключить origin на bitbucket
+
+    $ git remote add origin https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git
     $ git push -u origin master
 
 <br/>

@@ -12,10 +12,10 @@ permalink: /dev/
 
 ### [GIT](/dev/git/)
 
-### [JAVA](//javadev.org/devtools/jdk/setup/)
-
 ### [GO](/dev/go/)
 
-### [Node.JS](/dev/nodejs/)
-
 ### [Ruby on Rails](/dev/ruby-on-rails/)
+
+### [Node.JS](//jsdev.org/env/nodejs/)
+
+### [JAVA](//javadev.org/devtools/jdk/setup/)
