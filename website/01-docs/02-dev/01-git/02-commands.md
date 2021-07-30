@@ -10,11 +10,54 @@ permalink: /dev/git/commands/
 
 <br/>
 
+### Сгенерировать ключ для GitHub
+
+    $ cd ~/.ssh/
+
+<br/>
+
+    $ ssh-keygen \
+    -t rsa \
+    -b 4096 \
+    -C "example@gmail.com" \
+    -f marley_github
+
+<br/>
+
+    $ chmod 0600 marley_github*
+    $ eval "$(ssh-agent -s)"
+
+<br/>
+
+    // Добавить ключ
+    $ ssh-add ~/.ssh/marley_github
+
+    // Проверка, что ключ добавлен
+    $ ssh-add -l -E md5
+
+<br/>
+
+    $ ssh -T git@github.com
+
+<br/>
+
+### Использовать несколько ключей для разных github аккаунтов
+
+    $ GIT_SSH_COMMAND='ssh -i ~/.ssh/marley_github -o IdentitiesOnly=yes' git push
+
+<br/>
+
+## Наиболее часто используемые мной команды при работе с git
+
+<br/>
+
 ### Глобальный конфиг
 
     $ vi ~/.gitconfig
 
 <br/>
+
+### Остальные команды
 
 // Задать парамеры идентификации git глобально (лучше использовать локально, когда много git проектов с разными пользователями)
 
@@ -278,19 +321,3 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 
     $ rm ./project2-graphql-apollo/app/client/.git
     $ git rm --cached ./project2-graphql-apollo/app/client/
-
-<!--
-
-<br/>
-
-### Для версиии GIT 1.x сделать push как и в версии Git 2.0
-
--- я пользуюсь этим
-
-git config --global push.default simple
-
--- наоборот
-
-git config --global push.default matching
-
--->

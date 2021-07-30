@@ -9,7 +9,7 @@ permalink: /desktop/linux/ubuntu/browsers/opera/
 # Инсталляция Opera в Ubuntu
 
 Делаю:  
-27.04.2021
+22.07.2021
 
 <br/>
 
@@ -27,8 +27,4 @@ https://addons.opera.com/ru/extensions/details/opera-vpn/
 
 <br/>
 
-Settings --> Advanced --> VPN --> enable
-
-<br/>
-
-Dark theme
+Settings --> Dark theme

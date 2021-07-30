@@ -8,7 +8,13 @@ permalink: /desktop/linux/ubuntu/browsers/block-junk-websites/
 
 # Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
+<br/>
+
+```
 $ sudo vi /etc/hosts
+```
+
+<br/>
 
 ```
 81.17.30.22 nnm-club.me
@@ -20,9 +26,10 @@ $ sudo vi /etc/hosts
 0.0.0.0 naydex.net
 0.0.0.0 *.naydex.net
 
+0.0.0.0 newsru.com
 0.0.0.0 rbc.ru
 0.0.0.0 lenta.ru
-0.0.0.0 betcity.ru
+
 
 0.0.0.0 jivosite.ru
 0.0.0.0 www.jivosite.ru
@@ -31,7 +38,10 @@ $ sudo vi /etc/hosts
 0.0.0.0 onlinefreecourse.net
 0.0.0.0 downloadtutorials.net
 0.0.0.0 ebookie.org
+
+0.0.0.0 betcity.ru
 0.0.0.0 winline.ru
+
 0.0.0.0 downloadtutorials.net
 
 

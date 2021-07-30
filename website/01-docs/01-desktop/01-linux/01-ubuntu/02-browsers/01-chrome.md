@@ -51,7 +51,6 @@ Notifications --> Blocked
 
 Settings -> Advanced -> Language -> Order Languages based on your preferences: English, Russian
 
-
 <br/>
 
 ### Дополнительные плагины
@@ -61,6 +60,7 @@ Settings -> Advanced -> Language -> Order Languages based on your preferences: E
 -   LanguageTool
 -   Nimbus Screenshoot & Screen Video Recorder
 -   Доступ рутрекер
+-   SponsorBlock for YouTube
 
 -   uBlacklist
     https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe
@@ -68,6 +68,8 @@ Settings -> Advanced -> Language -> Order Languages based on your preferences: E
 <br/>
 
 Правила для uBlacklist
+
+<br/>
 
 ```
 *://*.coderoad.ru/*
@@ -86,7 +88,6 @@ hola vpn
 
 -   cookies.txt
 
-
 <br/>
 
 ### Отключение рекламы, кнопок соц.сетей, отслеживания
@@ -104,5 +105,3 @@ https://adblockplus.org/
 
     *jivosite.com*
     ||supervisor.ext-twitch.tv/supervisor/v1/index.html
-
-

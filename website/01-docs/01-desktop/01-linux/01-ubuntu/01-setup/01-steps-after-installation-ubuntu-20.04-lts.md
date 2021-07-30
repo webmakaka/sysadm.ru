@@ -171,15 +171,15 @@ Unnamed -> Sound -> Terminal bell (disable)
 
 **Шрифты, цвета и т.д.**
 
-Color --> Built-in schemes: Black on white
+Unnamed --> Text --> Custom font: Ubuntu Mono Regular 22
 
-Unnamed --> Custom font: Ubuntu Mono Regular 22
+Color --> Built-in schemes: Black on white
 
 <br/>
 
 ### Убрать автовыключение монитора
 
-    Applications --> Preferences --> System -->
+    Applications --> System Tools --> Preferences --> Settings
     Power --> Power Saving --> Blank screen --> Never
 
 <br/>
@@ -203,7 +203,7 @@ Unnamed --> Custom font: Ubuntu Mono Regular 22
 
     $ gnome-tweaks
 
-    Прописать автозапуск
+    Startup Applications --> 
 
 <!--
 
