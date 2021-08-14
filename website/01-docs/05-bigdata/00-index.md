@@ -8,4 +8,6 @@ permalink: /bigdata/
 
 # BigData
 
+<br/>
+
 ### [Hadoop](/bigdata/hadoop/)

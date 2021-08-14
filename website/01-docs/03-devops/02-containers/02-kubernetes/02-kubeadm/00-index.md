@@ -42,4 +42,4 @@ Deprecated конфиги можно автоматически проапгде
 
 ### Examples
 
-### [Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [ENG, 2019]](/devops/containers/kubernetes/kubeadm/grider-multi-pod-app/)
+### [Deploy приложения из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [ENG, 2019]](/devops/containers/kubernetes/kubeadm/grider-multi-pod-app/)

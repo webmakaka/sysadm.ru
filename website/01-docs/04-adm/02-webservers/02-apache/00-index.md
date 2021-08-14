@@ -8,7 +8,7 @@ permalink: /adm/webservers/apache/
 
 # Apache Centos
 
-[Инсталляция Apache Httpd сервер на Centos 6.6 из пакетов](/adm/webservers/apache/install/)
+[Инсталляция Apache Httpd сервер на Centos 6.6 из пакетов](/adm/webservers/apache/setup/)
 
 [Apache Httpd сервер модули mod_ssl, mod_security, mod_python (Centos 6.6)](/adm/webservers/apache/mods/)
 

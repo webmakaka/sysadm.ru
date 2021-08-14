@@ -8,6 +8,8 @@ permalink: /bigdata/hadoop/loading-data-into-hdfs/
 
 # Loading Data into HDFS
 
+<br/>
+
 user hadoop
 
     $ hdfs namenode -format

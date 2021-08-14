@@ -36,7 +36,7 @@ permalink: /devops/containers/kubernetes/minikube/
 
 [Пример Ingress в minikube (Nginx) + TLS](/devops/containers/kubernetes/kubeadm/minikube-ingress-nginx/tls/)
 
-[Разворачиваем приложение из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]](/devops/containers/kubernetes/minikube/grider-multi-pod-app-minikube/)
+[Deploy приложения из видео курса [Stephen Grider] Docker and Kubernetes: The Complete Guide [2018, ENG]](/devops/containers/kubernetes/minikube/grider-multi-pod-app-minikube/)
 
 <br/>
 

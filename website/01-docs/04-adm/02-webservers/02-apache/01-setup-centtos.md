@@ -1,10 +1,14 @@
 ---
 layout: page
 title: Инсталляция Apache Httpd сервер на Centos 6.6 из пакетов
-permalink: /adm/webservers/apache/install/
+description: Инсталляция Apache Httpd сервер на Centos 6.6 из пакетов
+keywords: adm, webservers, apache, setup
+permalink: /adm/webservers/apache/setup/
 ---
 
 # Инсталляция Apache Httpd сервер на Centos 6.6 из пакетов
+
+<br/>
 
     # vi /etc/hosts
     192.168.1.202 webserv.local webserv
