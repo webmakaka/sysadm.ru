@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Deploying A DatabaseBacked Web Application
-description: Deploying A DatabaseBacked Web Application
-keywords: Deploying A DatabaseBacked Web Application
+title: Introduction to CoreOS Training Video - Deploying A DatabaseBacked Web Application
+description: Introduction to CoreOS Training Video -Deploying A DatabaseBacked Web Application
+keywords: Introduction to CoreOS Training Video, Deploying A DatabaseBacked Web Application
 permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/deploying-a-database-backed-web-application/
 ---
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: How to install EFK stack using Docker with Fluentd
+description: How to install EFK stack using Docker with Fluentd
+keywords: linux, logging, elk, docker, fluentd
 permalink: /linux/logging/elk/docker-fluentd/
 ---
 

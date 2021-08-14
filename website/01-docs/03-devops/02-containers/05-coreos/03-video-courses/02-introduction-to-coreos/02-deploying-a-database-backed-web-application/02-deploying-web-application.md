@@ -1,14 +1,18 @@
 ---
 layout: page
-title: Deploying Web Application
-description: Deploying Web Application
-keywords: Deploying Web Application
+title: Introduction to CoreOS Training Video - Deploying Web Application
+description: Introduction to CoreOS Training Video - Deploying Web Application
+keywords: Introduction to CoreOS Training Video - Deploying Web Application
 permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/deploying-web-application/
 ---
 
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Deploying A DatabaseBacked Web Application : Deploying Web Application
 
+<br/>
+
 ### Deploying Web Application
+
+<br/>
 
 core-01
 

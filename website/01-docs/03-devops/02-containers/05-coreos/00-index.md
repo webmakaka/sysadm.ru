@@ -2,7 +2,7 @@
 layout: page
 title: CoreOS
 description: CoreOS
-keywords: CoreOS
+keywords: devops, containers, coreos
 permalink: /devops/containers/coreos/
 ---
 

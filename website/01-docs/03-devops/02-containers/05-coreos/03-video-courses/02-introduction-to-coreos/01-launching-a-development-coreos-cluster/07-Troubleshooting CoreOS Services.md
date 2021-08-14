@@ -1,14 +1,18 @@
 ---
 layout: page
-title: Troubleshooting CoreOS Services
-description: Troubleshooting CoreOS Services
-keywords: Troubleshooting CoreOS Services
+title: Introduction to CoreOS Training Video, Troubleshooting CoreOS Services
+description: Introduction to CoreOS Training Video, Troubleshooting CoreOS Services
+keywords: Introduction to CoreOS Training Video, Troubleshooting CoreOS Services
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/Troubleshooting_CoreOS_Services/
 ---
 
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster : Troubleshooting CoreOS Services
 
+<br/>
+
 ### Troubleshooting CoreOS Services
+
+<br/>
 
     $ systemctl status docker
     ● docker.service - Docker Application Container Engine

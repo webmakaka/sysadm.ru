@@ -1,12 +1,16 @@
 ---
 layout: page
 title: Nagios в Linux
+description: Nagios в Linux
+keywords: adm, monitoring, nagios
 permalink: /adm/monitoring/nagios/
 ---
 
 # Nagios в Linux
 
-### [Инсталляция Nagios в Ubuntu Linux](/adm/monitoring/nagios/ubuntu/16.04/install/)
+<br/>
+
+### [Инсталляция Nagios в Ubuntu Linux](/adm/monitoring/nagios/ubuntu/16.04/setup/)
 
 ### [Конфигурирование Nagios для мониторинга хостов](/adm/monitoring/nagios/ubuntu/16.04/configure/)
 

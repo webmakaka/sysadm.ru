@@ -8,11 +8,14 @@ permalink: /devops/clouds/heroku/
 
 # Heroku clouds
 
+<br/>
 ### Установка клиента Heroku в Centos 6.X
 
 Создал аккаунт на сайте heroku.com
 
 Далее на centos инсталлирую по для работы с heroku
+
+<br/>
 
     # cd /tmp/
     # wget -qO- https://toolbelt.heroku.com/install.sh | sh
@@ -30,8 +33,8 @@ permalink: /devops/clouds/heroku/
 ```
 #### HEROKU ##############################
 
-    export HEROKU_HOME=/usr/local/heroku/bin/
-    export PATH=$PATH:$HEROKU_HOME
+export HEROKU_HOME=/usr/local/heroku/bin/
+export PATH=$PATH:$HEROKU_HOME
 
 #### HEROKU ##############################
 ```
@@ -108,6 +111,8 @@ permalink: /devops/clouds/heroku/
 
     // В админке управления доменом:
     CNAME marley.org marley-org.herokuapp.com
+
+<br/>
 
 Troubleshooting
 

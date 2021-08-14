@@ -12,9 +12,13 @@ permalink: /devops/containers/coreos/services/
 
 ### Etcd
 
+<br/>
+
 Etcd — распределенное Key-Value хранилище, которое запускается на каждой машине кластера CoreOS и обеспечивает общий доступ практически ко всем данным в масштабе всего кластера. Внутри etcd хранятся настройки служб, их текущие состояние, конфигурация самого кластера и т.д. Etcd позволяет хранить данные иерархически (хранилище древовидно), подписываться на изменения ключей или целых директорий, задавать для ключей и директорий ключей значения TTL (фактически, «экспирить» их), атомарно изменять или удалять ключи, упорядоченно хранить их (что позволяет реализовывать своеобразные очереди). Поскольку конфигурация сервисов, запущенных в масштабе кластера, хранится в etcd, узнать о запуске и остановке того или иного сервиса можно просто подписавшись на изменения соответствующих ключей в хранилище.
 
 Etcd - похоже на Consul и ZooKeeper. (Лично я ничего из этого пока не знаю).
+
+<br/>
 
     $ etcdctl set /message Hello
     $ etcdctl get /message
@@ -91,6 +95,8 @@ Fleet — (коротко и упрощенно - distributed systemd) это «
 <br/>
 
 Let's overview the specific options of fleet for the [X-Fleet] section:
+
+<br/>
 
     •	 MachineID : This unit will be scheduled on the machine identified by a given string.
     •	 MachineOf : This limits eligible machines to the one that hosts a specific unit.

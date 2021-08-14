@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Installing check_mk monitoring service in Linux
-permalink: /adm/monitoring/check-mk/install/
+description: Installing check_mk monitoring service in Linux
+keywords: adm, monitoring, check-mk, setup
+permalink: /adm/monitoring/check-mk/setup/
 ---
 
 # Installing check_mk monitoring service in Linux

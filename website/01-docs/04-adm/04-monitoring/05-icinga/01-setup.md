@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Инсталляция Icinga в Ubuntu Linux (Xenial)
-permalink: /adm/monitoring/icinga/ubuntu/16.04/install/
+description: Инсталляция Icinga в Ubuntu Linux (Xenial)
+keywords: adm, monitoring, icinga, ubuntu, setup
+permalink: /adm/monitoring/icinga/ubuntu/16.04/setup/
 ---
 
 # Инсталляция Icinga в Ubuntu Linux (Xenial)

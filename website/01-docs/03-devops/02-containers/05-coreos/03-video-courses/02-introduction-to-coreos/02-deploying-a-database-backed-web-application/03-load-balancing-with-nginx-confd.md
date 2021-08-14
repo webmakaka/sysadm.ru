@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Load balancing with NGINX
-description: Load balancing with NGINX
-keywords: Load balancing with NGINX
+title: Introduction to CoreOS Training Video - Load balancing with NGINX
+description: Introduction to CoreOS Training Video - Load balancing with NGINX
+keywords: Introduction to CoreOS Training Video - Load balancing with NGINX
 permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/load-balancing-with-nginx-confd/
 ---
 

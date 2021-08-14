@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Dockerized Service
-description: Dockerized Service
-keywords: Dockerized Service
+title: Introduction to CoreOS Training Video - Dockerized Service
+description: Introduction to CoreOS Training Video - Dockerized Service
+keywords: Introduction to CoreOS Training Video, Dockerized Service
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/Dockerized_Service/
 ---
 

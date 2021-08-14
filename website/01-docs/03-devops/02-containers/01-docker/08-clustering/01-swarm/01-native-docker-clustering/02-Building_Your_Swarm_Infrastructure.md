@@ -1,21 +1,20 @@
 ---
 layout: page
-title: Native Docker Clustering
-permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/Building_Your_Swarm_Infrastructure/
+title: Native Docker Clustering > building your swarm infrastructure
+description: Native Docker Clustering > building your swarm infrastructure
+keywords: devops, containers, docker, clustering, swarm, swarm infrastructure
+permalink: /devops/containers/docker/clustering/swarm/native-docker-clustering/building-your-swarm-infrastructure/
 ---
 
 # Docker Swarm: Native Docker Clustering [2016, ENG] > Module 4: Building your Swarm Infrastructure
 
-
 <br/>
 
-![Native Docker Clustering](/img/devops/containers//docker/clustering/swarm/native-docker-clustering/pic2.png "Native Docker Clustering"){: .center-image }
-
+![Native Docker Clustering](/img/devops/containers//docker/clustering/swarm/native-docker-clustering/pic2.png 'Native Docker Clustering'){: .center-image }
 
 <br/>
 
     $ vagrant up
-
 
 <br/>
 
@@ -25,11 +24,9 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
 
 172.17.0.1 - ip адрес docker интерфейса на хостовой машине.
 
-
 <br/>
 
 ### CONSUL BUILD COMMANDS
-
 
 <br/>
 
@@ -48,7 +45,6 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
     -p 172.17.0.1:53:53/udp \
     progrium/consul -server -advertise 10.0.11.5 -bootstrap-expect 3
 
-
 <br/>
 
 **CORE 02**
@@ -65,7 +61,6 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
     -p 10.0.12.5:8500:8500 \
     -p 172.17.0.1:53:53/udp \
     progrium/consul -server -advertise 10.0.12.5 -join 10.0.11.5
-
 
 <br/>
 
@@ -100,12 +95,9 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
     consul2  10.0.12.5:8301  alive   server  0.5.2  2         dc1
     consul3  10.0.13.5:8301  alive   server  0.5.2  2         dc1
 
-
-
 <br/>
 
 ### SWARM MANAGER BUILD COMMANDS
-
 
     **core 01**
 
@@ -121,7 +113,6 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
 
     $ docker run --restart=unless-stopped -h mgr3 --name mgr3 -d -p 3375:2375 swarm manage --replication --advertise 10.0.13.5:3375 consul://10.0.13.5:8500/
 
-
 <br/>
 
     **core 01**
@@ -132,11 +123,9 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
     time="2017-01-31T21:01:29Z" level=info msg="Leader Election: Cluster leadership lost"
     time="2017-01-31T21:01:29Z" level=info msg="Leader Election: Cluster leadership acquired"
 
-
 <br/>
 
 ### CONSUL CLIENT BUILDS ON NODES 1-3
-
 
     $ vagrant ssh core-04
 
@@ -151,14 +140,13 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
     -p 8600:8600/udp \
     progrium/consul -rejoin -advertise 10.0.14.5 -join 10.0.11.5
 
-
 <br/>
 
     $ vagrant ssh core-05
 
     **core 05**
 
-	$ docker run --restart=unless-stopped -d -h consul-agt2 --name consul-agt2 \
+    $ docker run --restart=unless-stopped -d -h consul-agt2 --name consul-agt2 \
     -p 8300:8300 \
     -p 8301:8301 -p 8301:8301/udp \
     -p 8302:8302 -p 8302:8302/udp \
@@ -166,7 +154,6 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
     -p 8500:8500 \
     -p 8600:8600/udp \
     progrium/consul -rejoin -advertise 10.0.15.5 -join 10.0.11.5
-
 
 <br/>
 
@@ -183,11 +170,9 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
     -p 8600:8600/udp \
     progrium/consul -rejoin -advertise 10.0.16.5 -join 10.0.11.5
 
-
 <br/>
 
 ### SWARM JOIN COMMANDS TO JOIN NODES TO THE CLUSTER
-
 
     **core 04**
 
@@ -222,8 +207,6 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
     consul2      10.0.12.5:8301  alive   server  0.5.2  2         dc1
     consul3      10.0.13.5:8301  alive   server  0.5.2  2         dc1
 
-
-
 <br/>
 
     $ curl http://10.0.13.5:8500/v1/catalog/nodes | python -m json.tool
@@ -256,13 +239,11 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
         }
     ]
 
-
 <br/>
 
 **На всех:**
 
     $ docker run -d --name registrator -h registrator -v /var/run/docker.sock:/tmp/docker.sock gliderlabs/registrator:latest consul://10.0.11.5:8500
-
 
 <br/>
 
@@ -288,8 +269,6 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
         ],
         "swarm": []
     }
-
-
 
 <br/>
 
@@ -325,9 +304,6 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
         }
     ]
 
-
-
-
 <br/>
 
 **CORE 04**
@@ -360,7 +336,6 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/B
         "nginx-80": [],
         "swarm": []
     }
-
 
 Чего сделали? Чего добились? ХЗ  
 Чего с этим дерьмом делать то?

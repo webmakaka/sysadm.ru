@@ -221,10 +221,10 @@ permalink: /dev/git/commands/
 
 <br/>
 
-    // Меня с https на ssh
+    // Меняю с https на ssh
 
     $ git remote add origin git@github.com:webmakaka/sysadm.ru.git
-    $ GIT_SSH_COMMAND='ssh -i ~/.ssh/marley_github -o IdentitiesOnly=yes' git push origin master
+    $ git push origin master
 
 <br/>
 

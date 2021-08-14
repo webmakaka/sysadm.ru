@@ -3,7 +3,7 @@ layout: page
 title: Обновление GIT до актуальных версий из ppa в Ubuntu
 description: Обновление GIT до актуальных версий из ppa в Ubuntu
 keywords: Обновление GIT до актуальных версий из ppa в Ubuntu
-permalink: /dev/git/install/ubuntu/ppa/
+permalink: /dev/git/setup/ubuntu/ppa/
 ---
 
 # Обновление GIT до актуальных версий из ppa в Ubuntu

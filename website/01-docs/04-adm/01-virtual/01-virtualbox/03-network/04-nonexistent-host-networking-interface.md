@@ -11,6 +11,8 @@ permalink: /adm/virtual/virtualbox/network/nonexistent-host-networking-interface
 Делаю:  
 11.08.2019
 
+<br/>
+
 Делаю импорт виртуальной машины с одного хоста на другой. Был centos 6.x стала ubuntu 18.04
 
 <br/>

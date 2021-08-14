@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Конфигурирование Nagios для мониторинга хостов
+description: Конфигурирование Nagios для мониторинга хостов
+keywords: adm, monitoring, nagios, ubuntu, configure
 permalink: /adm/monitoring/nagios/ubuntu/16.04/configure/
 ---
 

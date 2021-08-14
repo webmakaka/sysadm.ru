@@ -1,12 +1,14 @@
 ---
 layout: page
-title: Kubernetes
-description: Kubernetes
-keywords: Kubernetes
+title: Introduction to CoreOS Training Video
+description: Introduction to CoreOS Training Video
+keywords: coreos, Introduction to CoreOS Training Video
 permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/kubernetes/
 ---
 
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Kubernetes
+
+<br/>
 
 1.  Создали 1 coreOS с конфигом из master.yml и 2 с конфигом из minion.yml.  
     В minion.yml заменили IP адрес.

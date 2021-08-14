@@ -1,8 +1,8 @@
 ---
 layout: page
-title: systemd
-description: systemd
-keywords: systemd
+title: Introduction to CoreOS Training Video - Launching A Development CoreOS Cluster systemd
+description: Introduction to CoreOS Training Video - Launching A Development CoreOS Cluster systemd
+keywords: coreos, systemd
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/systemd/
 ---
 

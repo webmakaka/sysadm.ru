@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Deploying RethinkDB Database
-description: Deploying RethinkDB Database
-keywords: Deploying RethinkDB Database
+title: Introduction to CoreOS Training Video - Deploying RethinkDB Database
+description: Introduction to CoreOS Training Video - Deploying RethinkDB Database
+keywords: Introduction to CoreOS Training Video - Deploying RethinkDB Database
 permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/deploying-rethinkdb-database/
 ---
 

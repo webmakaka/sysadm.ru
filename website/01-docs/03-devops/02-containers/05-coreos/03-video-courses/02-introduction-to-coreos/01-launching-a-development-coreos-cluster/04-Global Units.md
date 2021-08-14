@@ -1,12 +1,14 @@
 ---
 layout: page
-title: Global Units
-description: Global Units
-keywords: Global Units
+title: Introduction to CoreOS Training Video - Global Units
+description: Introduction to CoreOS Training Video - Global Units
+keywords: Introduction to CoreOS Training Video - Global Units
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/Global_Units/
 ---
 
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster : Global Units
+
+<br/>
 
 ### Global Units
 

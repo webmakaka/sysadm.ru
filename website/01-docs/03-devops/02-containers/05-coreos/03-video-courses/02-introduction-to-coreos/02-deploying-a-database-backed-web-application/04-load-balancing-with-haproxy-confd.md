@@ -1,12 +1,14 @@
 ---
 layout: page
-title: Load balancing with HAPROXY & CONFD
-description: Load balancing with HAPROXY & CONFD
-keywords: Load balancing with HAPROXY & CONFD
+title: Introduction to CoreOS Training Video - Load balancing with HAPROXY & CONFD
+description: Introduction to CoreOS Training Video - Load balancing with HAPROXY & CONFD
+keywords: Introduction to CoreOS Training Video - Load balancing with HAPROXY & CONFD
 permalink: /devops/containers/coreos/introduction-to-coreos/deploying-a-database-backed-web-application/load-balancing-with-haproxy-confd/
 ---
 
 # Load balancing with HAPROXY & CONFD
+
+<br/>
 
 Имеем:
 

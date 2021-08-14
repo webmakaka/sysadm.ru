@@ -8,7 +8,12 @@ permalink: /devops/containers/docker/clustering/swarm/first-look/
 
 # Docker Swarm первый взгляд
 
-Делаю: 15.02.2018
+<br/>
+
+Делаю:  
+15.02.2018
+
+<br/>
 
 **ПО**
 
@@ -19,6 +24,8 @@ permalink: /devops/containers/docker/clustering/swarm/first-look/
 
 **Файлы для старта виртуальных машин с coreos**  
 https://bitbucket.org/sysadm-ru/native-docker-clustering
+
+<br/>
 
 Файлы готовил не я. Ну да ладно.
 

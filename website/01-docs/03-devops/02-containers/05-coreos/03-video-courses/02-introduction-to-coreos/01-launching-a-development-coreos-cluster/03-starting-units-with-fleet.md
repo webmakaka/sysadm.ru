@@ -1,12 +1,14 @@
 ---
 layout: page
-title: Starting Units with Fleet
-description: Starting Units with Fleet
-keywords: Starting Units with Fleet
+title: Introduction to CoreOS Training Video - Starting Units with Fleet
+description: Introduction to CoreOS Training Video - Starting Units with Fleet
+keywords: Introduction to CoreOS Training Video, Starting Units with Fleet
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/starting-units-with-fleet/
 ---
 
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG] : Launching A Development CoreOS Cluster : Starting Units with Fleet
+
+<br/>
 
 ### Statring Units with Fleet
 

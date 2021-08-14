@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Monitoring System Logs and Metrics in ELK Stack (FileBeat & MetricBeat)
+description: Monitoring System Logs and Metrics in ELK Stack (FileBeat & MetricBeat)
+keywords: linux, logging, elk, docker, filebeat, metricbeat
 permalink: /linux/logging/elk/filebeat-metricbeat/
 ---
 

@@ -2,7 +2,7 @@
 layout: page
 title: Logging
 description: Logging
-keywords: devops, logging
+keywords: adm, logging
 permalink: /adm/logging/
 ---
 

@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Docker Swarm > Native Docker Clustering > Configs
-permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/configs/
+description: Docker Swarm > Native Docker Clustering > Configs
+keywords: devops, containers, docker, clustering, swarm, native docker configs
+permalink: /devops/containers/docker/clustering/swarm/native-docker-clustering/configs/
 ---
 
 # Docker Swarm > Native Docker Clustering [2016, ENG] > Configs
-
 
 <br/>
 
@@ -13,13 +14,11 @@ permalink: /devops/containers/docker/clustering/swarm/Native_Docker_Clustering/c
 
 https://github.com/gliderlabs/registrator
 
-
 <br/>
 
 **Dockerfile (progrium/busybox)**
 
 https://github.com/progrium/busybox
-
 
 <br/>
 
@@ -27,7 +26,6 @@ https://github.com/progrium/busybox
 
 Возможно, тоже обновленный вариант:  
 https://github.com/gliderlabs/docker-consul
-
 
 Походу вот такой dockerfile используется, но у меня он не собрался.
 

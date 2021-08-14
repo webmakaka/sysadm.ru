@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Launching A Development CoreOS Cluster
-description: Launching A Development CoreOS Cluster
+title: Introduction to CoreOS Training Video - Launching A Development CoreOS Cluster
+description: Introduction to CoreOS Training Video - Launching A Development CoreOS Cluster
 keywords: Launching A Development CoreOS Cluster
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/
 ---

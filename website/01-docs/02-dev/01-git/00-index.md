@@ -8,9 +8,9 @@ permalink: /dev/git/
 
 # Git в Linux
 
-### [Обновление GIT до актуальных версий из ppa в Ubuntu](/dev/git/install/ubuntu/ppa/)
+### [Обновление GIT до актуальных версий из ppa в Ubuntu](/dev/git/setup/ubuntu/ppa/)
 
-### [Инсталляция GIT из исходников](/dev/git/install/)
+### [Инсталляция GIT из исходников](/dev/git/setup/)
 
 ### [Основные команды GIT](/dev/git/commands/)
 

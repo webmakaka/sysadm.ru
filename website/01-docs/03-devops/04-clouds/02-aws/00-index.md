@@ -50,7 +50,9 @@ https://github.com/localstack/localstack
     $ sudo ./aws/install
 
     $ aws --version
-    aws-cli/2.0.57 Python/3.7.3 Linux/5.4.0-51-generic exe/x86_64.ubuntu.20
+    aws-cli/2.2.27 Python/3.8.8 Linux/5.11.0-25-generic exe/x86_64.ubuntu.20 prompt/off
+
+    $ aws configure
 
 <br/>
 
@@ -61,7 +63,7 @@ https://github.com/localstack/localstack
 В новом терминале
 
     $ sls --version
-    Framework Core: 2.8.0 (standalone)
-    Plugin: 4.1.1
-    SDK: 2.3.2
-    Components: 3.2.3
+    Framework Core: 2.53.1 (standalone)
+    Plugin: 5.4.3
+    SDK: 4.2.6
+    Components: 3.14.2

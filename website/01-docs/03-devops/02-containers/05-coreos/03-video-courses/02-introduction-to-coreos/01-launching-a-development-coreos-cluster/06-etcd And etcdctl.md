@@ -1,8 +1,8 @@
 ---
 layout: page
-title: etcd And etcdctl
-description: etcd And etcdctl
-keywords: etcd And etcdctl
+title: Introduction to CoreOS Training Video - etcd And etcdctl
+description: Introduction to CoreOS Training Video - etcd And etcdctl
+keywords: Introduction to CoreOS Training Video, etcd And etcdctl
 permalink: /devops/containers/coreos/introduction-to-coreos/launching-a-development-coreos-cluster/etcd_And_etcdctl/
 ---
 

@@ -8,6 +8,8 @@ permalink: /devops/containers/coreos/introduction-to-coreos/
 
 # [O’Reilly Media / Infinite Skills] Introduction to CoreOS Training Video [2015, ENG]
 
+<br/>
+
 https://github.com/rosskukulinski/Introduction_To_CoreOS/
 
 https://github.com/coreos/coreos-vagrant/

@@ -8,6 +8,8 @@ permalink: /adm/virtual/virtualbox/commands/
 
 # VirtualBox Основные команды
 
+<br/>
+
 -- Получить список всех виртуальных машин
 
     $ vboxmanage list vms

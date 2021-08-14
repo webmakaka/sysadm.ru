@@ -1,6 +1,8 @@
 ---
 layout: page
 title: ELK stack - Elasticsearch, Logstash, Kibana
+description: ELK stack - Elasticsearch, Logstash, Kibana
+keywords: linux, logging, elk
 permalink: /linux/logging/elk/
 ---
 
@@ -24,4 +26,3 @@ permalink: /linux/logging/elk/
 
 **Offtopic docker-compose для версии elk 7.0.1)**  
 https://bitbucket.org/sysadm-ru/elk-v2/src/master/
-

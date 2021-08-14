@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Creating and Managing check_mk sites
+description: Creating and Managing check_mk sites
+keywords: adm, monitoring, check-mk, creating-and-managing-sites
 permalink: /adm/monitoring/check-mk/creating-and-managing-sites/
 ---
 
@@ -14,7 +16,7 @@ https://www.youtube.com/watch?v=VpjEZ_w4Nrw&list=PL34sAs7_26wODGPEgaHrhRiXkax0q7
 
 <br/>
 
-Предполагается что уже выполнены шаги по инсталляции <a href="/adm/monitoring/check-mk/install/">check_mk</a>.
+Предполагается что уже выполнены шаги по инсталляции <a href="/adm/monitoring/check-mk/setup/">check_mk</a>.
 
 <br/>
 

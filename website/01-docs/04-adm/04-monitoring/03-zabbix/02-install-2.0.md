@@ -1,10 +1,14 @@
 ---
 layout: page
 title: Инсталляция Zabbix 2.X в Ubuntu Linux 16.04 (Xenial)
-permalink: /adm/monitoring/zabbix/2.x/ubuntu/16.04/install/
+description: Инсталляция Zabbix 2.X в Ubuntu Linux 16.04 (Xenial)
+keywords: adm, monitoring, zabbix, 2.x, ubuntu, setup
+permalink: /adm/monitoring/zabbix/2.x/ubuntu/16.04/setup/
 ---
 
 # Инсталляция Zabbix 2.X в Ubuntu Linux 16.04 (Xenial)
+
+<br/>
 
     # apt-cache search zabbix
     grafana-zabbix - Zabbix datasource for Grafana

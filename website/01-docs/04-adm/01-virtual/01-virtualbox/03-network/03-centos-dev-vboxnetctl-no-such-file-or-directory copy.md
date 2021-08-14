@@ -8,7 +8,8 @@ permalink: /adm/virtual/virtualbox/network/centos-dev-vboxnetctl-no-such-file-or
 
 # Oracle linux 7 (тоже что и Centos 7): VBoxManage hostonlyif create - /dev/vboxnetctl No such file or directory
 
-Делаю: 15.02.2018
+Делаю:  
+15.02.2018
 
     # VBoxManage -v
     5.2.6r120293

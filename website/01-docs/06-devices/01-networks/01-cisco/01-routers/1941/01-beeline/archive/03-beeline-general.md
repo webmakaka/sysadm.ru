@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Cisco Routers in the Beeline ISP
+title: Архив - Cisco Routers в домашней локальной сети Beeline
+description: Архив - Cisco Routers в домашней локальной сети Beeline
+keywords: devices, cisco, routers, 1941, beeline general
 permalink: /devices/cisco/routers/1941/beeline-general/
 ---
 
-# Cisco Routers in the Beeline ISP
+# [Архив] Cisco Routers в домашней локальной сети Beeline
 
 <br/>
 

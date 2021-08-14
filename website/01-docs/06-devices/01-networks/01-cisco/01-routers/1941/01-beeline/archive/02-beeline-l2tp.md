@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Cisco Router 1941 настройка работы интернета в Билайн по l2tp
+title: Архив - Cisco Router 1941 настройка работы интернета в Билайн по l2tp
+description: Архив - Cisco Router 1941 настройка работы интернета в Билайн по l2tp
+keywords: devices, cisco, routers, 1941, beeline l2tp
 permalink: /devices/cisco/routers/1941/beeline-l2tp/
 ---
 
-# Cisco Router 1941 настройка работы интернета в Билайн по l2tp
+# [Архив] Cisco Router 1941 настройка работы интернета в Билайн по l2tp
 
 <br/>
 

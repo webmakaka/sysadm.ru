@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Monitoring Apache Logs and Metrics in ELK stack
+description: Monitoring Apache Logs and Metrics in ELK stack
+keywords: linux, logging, elk, docker, apache, metrics
 permalink: /linux/logging/elk/apache-logs-and-metrics/
 ---
 

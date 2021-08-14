@@ -8,6 +8,8 @@ permalink: /devops/cicd/jenkins/
 
 # Jenkins
 
+<br/>
+
 ### [Инсталляция Jenkins в ubuntu 18.04 из пакетов](//javadev.org/devtools/cicd/jenkins/setup/ubuntu/20.04/)
 
 <br/>

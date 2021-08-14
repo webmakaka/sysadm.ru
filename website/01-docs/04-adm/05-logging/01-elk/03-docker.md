@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Running ELK stack in Docker containers
+title: Запуск ELK стека в Docker контейнере
+description: Запуск ELK стека в Docker контейнере
+keywords: linux, logging, elk, docker
 permalink: /linux/logging/elk/docker/
 ---
 
-# Running ELK stack in Docker containers
+# Запуск ELK стека в Docker контейнере
 
 <br/>
 
