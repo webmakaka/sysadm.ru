@@ -16,7 +16,7 @@ permalink: /devops/
 
 <br/>
 
-### [Continuous integration / Continuous delivery (CI/CD)](/devops/cicd/)
+### [Continuous integration / Continuous delivery (CI/CD)](/devops/ci-cd/)
 
 <br/>
 

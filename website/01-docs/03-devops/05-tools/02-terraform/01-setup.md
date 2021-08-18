@@ -9,22 +9,22 @@ permalink: /devops/tools/terraform/setup/
 # Terraform Setup
 
 Делаю:  
-18.08.2021
+19.08.2021
 
 <br/>
 
-**v1.0.4**
+**v1.0.5**
 
     $ echo LATEST_VERSION=$(curl --silent "https://api.github.com/repos/hashicorp/terraform/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
 
-    $ wget https://releases.hashicorp.com/terraform/1.0.4/terraform_1.0.4_linux_amd64.zip
+    $ wget https://releases.hashicorp.com/terraform/1.0.5/terraform_1.0.5_linux_amd64.zip
 
-    $ unzip terraform_1.0.4_linux_amd64.zip
+    $ unzip terraform_1.0.5_linux_amd64.zip
 
     $ sudo mv terraform /usr/local/bin/
 
     $ terraform version
-    Terraform v1.0.4
+    Terraform v1.0.5
 
 <br/>
 
