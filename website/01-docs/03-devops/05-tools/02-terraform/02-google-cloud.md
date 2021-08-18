@@ -39,7 +39,7 @@ Complex changesets can be applied to your infrastructure with minimal human inte
 
 <br/>
 
-### [Install Terraform](/devops/tools/terraform/install/)
+### [Install Terraform](/devops/tools/terraform/setup//)
 
 <br/>
 

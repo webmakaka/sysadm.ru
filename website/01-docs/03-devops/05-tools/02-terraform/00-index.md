@@ -18,7 +18,7 @@ https://www.terraform.io/docs/providers/index.html
 
 <br/>
 
-### [Setup Terraform](/devops/tools/terraform/install/)
+### [Setup Terraform](/devops/tools/terraform/setup//)
 
 ### [Terraform Google Cloud](/devops/tools/terraform/google-cloud/)
 
@@ -33,8 +33,6 @@ $ terraform plan -out example.tfplan
 
 $ terraform apply
 $ teffaform apply example.tfplan
-
-
 
 <br/>
 
