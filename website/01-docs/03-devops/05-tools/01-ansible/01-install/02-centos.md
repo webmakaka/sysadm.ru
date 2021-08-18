@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Ansible в Centos 7.3
 description: Инсталляция Ansible в Centos 7.3
 keywords: Инсталляция Ansible в Centos 7.3
-permalink: /devops/automation/ansible/install/centos/
+permalink: /devops/tools/ansible/install/centos/
 ---
 
 # Инсталляция Ansible в Centos 7.3

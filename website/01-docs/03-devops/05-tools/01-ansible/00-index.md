@@ -3,22 +3,22 @@ layout: page
 title: Ansible
 description: Ansible
 keywords: Ansible
-permalink: /devops/automation/ansible/
+permalink: /devops/tools/ansible/
 ---
 
 # Ansible
 
 <br/>
 
-### [Инсталляция Ansible](/devops/automation/ansible/install/)
+### [Инсталляция Ansible](/devops/tools/ansible/install/)
 
 <br/>
 
-### [Разворачиваем Gitlab с помощью ansible-galaxy и ansible-playbook](/devops/automation/ansible/gitlab/)
+### [Разворачиваем Gitlab с помощью ansible-galaxy и ansible-playbook](/devops/tools/ansible/gitlab/)
 
 <br/>
 
-### [Деплой nodejs приложения на удаленный сервер с помощью ansible](/devops/automation/ansible/deploy-node-app-by-ansible/)
+### [Деплой nodejs приложения на удаленный сервер с помощью ansible](/devops/tools/ansible/deploy-node-app-by-ansible/)
 
 <br/>
 
@@ -26,7 +26,7 @@ permalink: /devops/automation/ansible/
 
 <br/>
 
-### [Обучающие видео по работе с Ansible](/devops/automation/ansible/videos/)
+### [Обучающие видео по работе с Ansible](/devops/tools/ansible/videos/)
 
 <br/>
 

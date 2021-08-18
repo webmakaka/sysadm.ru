@@ -3,7 +3,7 @@ layout: page
 title: Деплой nodejs приложения на удаленный сервер с помощью ansible
 description: Деплой nodejs приложения на удаленный сервер с помощью ansible
 keywords: Деплой nodejs приложения на удаленный сервер с помощью ansible
-permalink: /devops/automation/ansible/deploy-node-app-by-ansible/
+permalink: /devops/tools/ansible/deploy-node-app-by-ansible/
 ---
 
 # Деплой nodejs приложения на удаленный сервер с помощью ansible

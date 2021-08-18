@@ -10,10 +10,12 @@ permalink: /devops/clouds/aws/connect-to-server/
 
 Создать Key Pair в консоли AWS и с скачать ключ.
 
+<br/>
+
     $ chmod 400 /home/marley/Downloads/AWS-Key.pem
     $ ssh -i /home/marley/Downloads/AWS-Key.pem ec2-user@<ip_сервера>.
 
----
+<br/>
 
 см:  
 http://www.youtube.com/watch?v=Ix5IDuyamuY

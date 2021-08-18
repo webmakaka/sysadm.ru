@@ -3,7 +3,7 @@ layout: page
 title: Terraform Google Cloud
 description: Terraform Google Cloud
 keywords: Terraform Google Cloud
-permalink: /devops/automation/terraform/google-cloud/
+permalink: /devops/tools/terraform/google-cloud/
 ---
 
 # Terraform Google Cloud
@@ -39,7 +39,7 @@ Complex changesets can be applied to your infrastructure with minimal human inte
 
 <br/>
 
-### [Install Terraform](/devops/automation/terraform/install/)
+### [Install Terraform](/devops/tools/terraform/install/)
 
 <br/>
 

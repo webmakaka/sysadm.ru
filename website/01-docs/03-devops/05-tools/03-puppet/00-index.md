@@ -3,7 +3,7 @@ layout: page
 title: Puppet
 description: Puppet
 keywords: Puppet
-permalink: /devops/automation/puppet/
+permalink: /devops/tools/puppet/
 ---
 
 # Puppet

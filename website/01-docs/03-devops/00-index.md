@@ -20,7 +20,7 @@ permalink: /devops/
 
 <br/>
 
-### [Автоматизация Ansible, Puppet, Chef, Terraform](/devops/automation/)
+### [Автоматизация Ansible, Puppet, Chef, Terraform](/devops/tools/)
 
 <br/>
 
