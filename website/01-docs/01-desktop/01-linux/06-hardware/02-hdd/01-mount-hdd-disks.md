@@ -15,6 +15,8 @@ permalink: /desktop/linux/hardware/hdd/mount-disks/
 
 !!! На диске нет никаких данных.
 
+<br/>
+
     # fdisk -l /dev/sd*
 
 <br/>
