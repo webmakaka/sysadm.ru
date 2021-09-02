@@ -147,6 +147,9 @@ permalink: /dev/git/commands/
 
     $ git pull
 
+    // В случае, или у вас в локальной ветке уже закомиченны какие то изменения, лучше выполнить команду
+    $ git pull -rebase
+
     $ git branch -a
 
     $ git checkout myProject_branch
@@ -178,6 +181,14 @@ permalink: /dev/git/commands/
 -- посмотреть изменения только названия фалов
 
     $ git diff --name-only 06be2bf42c94c669f2c656593b10716fee7ad6dc
+
+<br/>
+
+## Отмена сделанных изменени
+
+--soft сбрасывает коммит так, будто не было git add на эти файлы
+--mixed сбрасывает коммит так, будто git add на файлы сделан, это по-умолчанию.
+--hard сбрасывает коммит и удаляет изменения.
 
 <br/>
 
@@ -326,6 +337,30 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
     git checkout a82de97faaafee458d47c60a51e12f7d7c7dba13 file_path/file_name
 
     git rebase -i HEAD~2
+
+<br/>
+
+### Создать ветку от произвольного коммита
+
+    $ git checkout -b <branch-name> <commit-id>
+
+Или
+
+    $ git branch <branch-name> <commit-id>
+
+<br/>
+
+### Cherry Pick
+
+<br/>
+
+    $ git cherry-pick 0b72ec4ba3ca997b89564d3d9c61cb10a3127ba3
+
+<br/>
+
+### Отменить комит из истории (git revert)
+
+Не приходилось использовать
 
 <br/>
 

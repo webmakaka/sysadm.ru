@@ -86,6 +86,8 @@ $ sudo apt install -y \
 
     $ sudo reboot
 
+<br/>
+
 Перезагружаемся, при старте выбираем - Gnome Flashback (Metacity)
 
 <br/>
@@ -203,7 +205,7 @@ Color --> Built-in schemes: Black on white
 
     $ gnome-tweaks
 
-    Startup Applications --> 
+    Startup Applications -->
 
 <!--
 

@@ -8,19 +8,28 @@ permalink: /desktop/windows/desktops/tweaks/skype-do-not-show-advertising/
 
 # Удалить рекламу из skype в Windows 10
 
-Последний раз делал: 09.02.2018
+Последний раз делал:  
+09.02.2018
+
+<br/>
 
 1. Выгрузить из процессов skype.
+
+<br/>
 
 2. Открыть файл хостс под администратором C:\Windows\System32\drivers\etc\hosts
 
 И прописать в нем:
+
+<br/>
 
     127.0.0.1 rad.msn.com
     127.0.0.1 adriver.ru
     127.0.0.1 api.skype.com
     127.0.0.1 static.skypeassets.com
     127.0.0.1 apps.skype.com
+
+<br/>
 
 3. Сделать копиию файла
 
@@ -32,5 +41,7 @@ C:\Users\Имя*Пользователя\AppData\Roaming\Skype\Ник*в_Skype\c
     <AdvertEastRailsEnabled>1</AdvertEastRailsEnabled>
 
 Заменить 1 на 0.
+
+<br/>
 
 4. Можно стартовать skype без рекламы.

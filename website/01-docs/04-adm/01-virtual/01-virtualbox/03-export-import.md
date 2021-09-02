@@ -298,7 +298,7 @@ $ vboxmanage startvm ${vm} -type headless &
     -r sound:local \
     -k common  \
     -g  1600x1024 \
-    192.168.1.101:3389
+    10.20.65.225:3389
 
 <br/>
 

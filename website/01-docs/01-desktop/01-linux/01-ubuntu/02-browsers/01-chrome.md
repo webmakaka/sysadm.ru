@@ -38,6 +38,8 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 
 Settings --> Advanced --> Privacy and Security --> Site Settings:
 
+<br/>
+
 ```
 Location --> Blocked
 Camera --> Blocked

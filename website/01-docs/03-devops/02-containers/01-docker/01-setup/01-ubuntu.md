@@ -9,7 +9,7 @@ permalink: /devops/containers/docker/setup/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 20.04.1
 
 Делаю:  
-24.06.2021
+01.09.2021
 
 <br/>
 
@@ -69,10 +69,10 @@ $ sudo ./install-docker-and-docker-compose.sh
 
 ```
 $ docker -v
-Docker version 20.10.6, build 370c289
+Docker version 20.10.8, build 3967b7d
 
 $ docker-compose --version
-docker-compose version 1.29.1, build c34c88b2
+docker-compose version 1.29.2, build 5becea4c
 ```
 
 <br/>
@@ -87,6 +87,8 @@ docker-compose version 1.29.1, build c34c88b2
 $ cat /etc/group | grep docker
 docker:x:126:username
 ```
+
+<br/>
 
 Перелогиниваемся, иначе не будет работать
 
