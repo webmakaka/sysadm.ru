@@ -19,6 +19,8 @@ https://openvpn.net/community-downloads/
 
     $ sudo apt install openvpn -y
 
+<!--
+
 <br/>
 
 ### Способ 2 [Недоделано]
@@ -34,6 +36,8 @@ https://openvpn.net/community-downloads/
 Наверное, configure, make, make install
 
 Пока не очень актуально. Буду юзать, что лежит в стандартных пакетах. Лень!
+
+-->
 
 <br/>
 
@@ -130,3 +134,39 @@ password
 
 **Использовалось:**  
 https://www.ivpn.net/knowledgebase/linux/linux-autostart-openvpn-in-systemd-ubuntu/
+
+<br/>
+
+### Проблема с использованием DNS OpenVPN сервера
+
+Проблема была в том, что не использовались DNS сервера внутренней сети.
+
+<br/>
+
+    $ sudo apt install openvpn-systemd-resolved
+
+<br/>
+
+    $ sudo vi /etc/openvpn/client.conf
+
+<br/>
+
+**Добавил:**
+
+<br/>
+
+```
+***
+script-security 2
+up /etc/openvpn/update-systemd-resolved
+down /etc/openvpn/update-systemd-resolved
+down-pre
+
+dhcp-option DOMAIN-ROUTE .
+***
+```
+
+<br/>
+
+**Использовалось:**  
+https://askubuntu.com/questions/1032476/ubuntu-18-04-no-dns-resolution-when-connected-to-openvpn
