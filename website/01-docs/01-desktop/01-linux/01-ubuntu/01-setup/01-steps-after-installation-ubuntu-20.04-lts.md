@@ -57,7 +57,10 @@ $ code .
 
 ### Устанавливаем дополнительное ПО
 
-    $ sudo apt install -y ubuntu-restricted-extras
+```
+$ sudo ubuntu-drivers autoinstall
+$ sudo apt install -y ubuntu-restricted-extras
+```
 
 <br/>
 

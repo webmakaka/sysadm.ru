@@ -219,6 +219,8 @@ https://hub.docker.com
 
 Более новый способ удаления всех оъектов
 
+<br/>
+
     $ docker system prune -a
     $ docker container prune
     $ docker image prune -a

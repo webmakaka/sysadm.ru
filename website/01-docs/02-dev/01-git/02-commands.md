@@ -174,12 +174,10 @@ permalink: /dev/git/commands/
 
 ### Посмотреть что поменялось
 
--- посмотреть изменения в файле
-
+    // посмотреть изменения в файле
     $ git diff website/01-docs/02-linux/08-containers/02-docker/00-index.md
 
--- посмотреть изменения только названия фалов
-
+    // посмотреть изменения в файле
     $ git diff --name-only 06be2bf42c94c669f2c656593b10716fee7ad6dc
 
 <br/>
@@ -370,3 +368,9 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 
     $ rm ./project2-graphql-apollo/app/client/.git
     $ git rm --cached ./project2-graphql-apollo/app/client/
+
+<br/>
+
+### Дополнительно
+
+https://gist.github.com/aykuli/e64b05448165d968a6c0e543451c1550

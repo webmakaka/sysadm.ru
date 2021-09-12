@@ -8,11 +8,15 @@ permalink: /devops/containers/docker/registry/mirroring/
 
 # Docker Registry Mirroring
 
+<br/>
+
     $ mkdir mirror
     $ cd mirror/
     $ vi docker-compose.yml
 
 https://bitbucket.org/sysadm-ru/self-hosted-docker-registry/raw/a901328b13688d3f9478995e4737cef5237431ea/mirror/docker-compose.yml
+
+<br/>
 
     $ docker-compose up
     $ curl registry.local:5000/v2/_catalog
@@ -25,6 +29,8 @@ https://bitbucket.org/sysadm-ru/self-hosted-docker-registry/raw/a901328b13688d3f
     # vi /etc/docker/daemon.json
 
 Возможно, что insecure-registries здесь не нужно.
+
+<br/>
 
 ```
 {

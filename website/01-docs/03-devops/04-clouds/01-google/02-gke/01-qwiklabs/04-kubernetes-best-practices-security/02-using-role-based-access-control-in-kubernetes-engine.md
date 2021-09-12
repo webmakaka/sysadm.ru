@@ -66,10 +66,10 @@ Legacy Authorization должна быть выключена.
 
 A role named kube-api-ro-xxxxxxxx has been created with the permissions below as part of the Terraform configuration in iam.tf. These permissions are the minimum required for any user that requires access to the Kubernetes API.
 
--   container.apiServices.get
--   container.apiServices.list
--   container.clusters.get
--   container.clusters.getCredentials
+- container.apiServices.get
+- container.apiServices.list
+- container.clusters.get
+- container.clusters.getCredentials
 
 <br/>
 
@@ -77,9 +77,9 @@ A role named kube-api-ro-xxxxxxxx has been created with the permissions below as
 
 Three service accounts have been created to act as Test Users:
 
--   admin: has admin permissions over the cluster and all resources
--   owner: has read-write permissions over common cluster resources
--   auditor: has read-only permissions within the dev namespace only
+- admin: has admin permissions over the cluster and all resources
+- owner: has read-write permissions over common cluster resources
+- auditor: has read-only permissions within the dev namespace only
 
 <br/>
 
@@ -94,9 +94,9 @@ Three service accounts have been created to act as Test Users:
 
 <br/>
 
--   gke-tutorial-admin: kubectl and gcloud are authenticated as a cluster administrator.
--   gke-tutorial-owner: simulates the 'owner' account
--   gke-tutorial-auditor: simulates the 'auditor'account
+- gke-tutorial-admin: kubectl and gcloud are authenticated as a cluster administrator.
+- gke-tutorial-owner: simulates the 'owner' account
+- gke-tutorial-auditor: simulates the 'auditor'account
 
 <br/>
 
@@ -456,6 +456,8 @@ spec:
 
     $ cat manifests/pod-labeler-fix-1.yaml
 
+<br/>
+
 ```
 # Create a custom role in the default namespace that grants access to
 # list pods
@@ -641,10 +643,10 @@ spec:
 
 **Key take-aways**
 
--   Container and API server logs will be your best source of clues for diagnosing RBAC issues.
+- Container and API server logs will be your best source of clues for diagnosing RBAC issues.
 
--   Use RoleBindings or ClusterRoleBindings to determine which role is specifying the permissions for a pod.
+- Use RoleBindings or ClusterRoleBindings to determine which role is specifying the permissions for a pod.
 
--   API server logs can be found in stackdriver under the Kubernetes resource.
+- API server logs can be found in stackdriver under the Kubernetes resource.
 
--   Not all API calls will be logged to stack driver. Frequent, or verbose payloads are omitted by the Kubernetes' audit policy used in Kubernetes Engine. The exact policy will vary by Kubernetes version, but can be found in the open source codebase.
+- Not all API calls will be logged to stack driver. Frequent, or verbose payloads are omitted by the Kubernetes' audit policy used in Kubernetes Engine. The exact policy will vary by Kubernetes version, but can be found in the open source codebase.

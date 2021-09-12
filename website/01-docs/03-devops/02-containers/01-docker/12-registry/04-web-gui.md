@@ -8,6 +8,8 @@ permalink: /devops/containers/docker/registry/web-gui/
 
 # Docker registry frontend (WEB GUI для registry)
 
+<br/>
+
     http://192.168.0.11:5000/v2/mongo/tags/list
 
 <br/>
@@ -20,5 +22,7 @@ $ docker run \
   -p 8080:80 \
   konradkleine/docker-registry-frontend:v2
 ```
+
+<br/>
 
 http://192.168.0.11:8080/home
