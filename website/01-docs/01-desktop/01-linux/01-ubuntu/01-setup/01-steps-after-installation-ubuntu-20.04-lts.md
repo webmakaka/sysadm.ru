@@ -78,7 +78,8 @@ $ sudo apt install -y \
     rar unrar-free \
     wakeonlan \
     whois \
-    gimp
+    gimp \
+    grub-customizer
 ```
 
 <br/>
@@ -208,7 +209,7 @@ Color --> Built-in schemes: Black on white
 
     $ gnome-tweaks
 
-    Startup Applications -->
+    Startup Applications
 
 <!--
 
@@ -233,3 +234,39 @@ Command: /opt/telegram/Telegram -startintray
 ![Автозапуск telegram](/img/desktop/linux/ubuntu/setup/autostart-telegram.png "Автозапуск telegram"){: .center-image }
 
 -->
+
+<br/>
+
+### Выбор kernel при загрузке
+
+```
+$ ./grub-customizer
+```
+
+<br/>
+
+General settings -> default entry -> prdifined -> Ubuntu with linux 5.11.0-27-generic
+
+<br/>
+
+```
+$ sudo vi /etc/default/grub
+```
+
+<br/>
+
+```
+GRUB_TIMEOUT_STYLE="hidden"
+GRUB_TIMEOUT="0"
+```
+
+<br/>
+
+Включить вывод приглашения выбора kernel при загрузке.
+
+<br/>
+
+```
+#GRUB_TIMEOUT_STYLE="hidden"
+GRUB_TIMEOUT="-1"
+```

@@ -1,18 +1,16 @@
 ---
 layout: page
-title: Linux
-description: Linux
+title: Linux Desktop
+description: Linux Desktop
 keywords: desktop, linux
 permalink: /desktop/linux/
 ---
 
-# Linux
-
-# Рабочие станции:
+# Linux Desktop
 
 <br/>
 
-# Базовые вещи
+## Базовые вещи
 
 ### [ISO образы с Linux](/desktop/linux/distribs/)
 
@@ -28,17 +26,19 @@ permalink: /desktop/linux/
 
 ### [Развернуть видео на 90 градусов в ubuntu (в командной строке)](/desktop/linux/editors/)
 
-<br/>
-
-# [Ubuntu](/desktop/linux/ubuntu/)
+### [Выбор kernel при загрузке с помощью GRUB](/desktop/linux/grub/)
 
 <br/>
 
-# [Centos](/desktop/linux/centos/)
+## [Ubuntu](/desktop/linux/ubuntu/)
 
 <br/>
 
-# Администрирование серверов:
+## [Centos](/desktop/linux/centos/)
+
+<br/>
+
+## Администрирование серверов:
 
 ### [Networks](/desktop/linux/networks/)
 
@@ -62,34 +62,24 @@ permalink: /desktop/linux/
 
 <br/>
 
-# Hardware:
+## Hardware:
 
 ### [Работа с железками в linux](/desktop/linux/hardware/)
 
----
-
 <br/>
 
-# Программирование:
+## Программирование:
 
 ### [Программирование](/dev/)
 
----
-
-<!--
-
 <br/>
 
-# 1C:
+## 1C:
 
 ### [1С:Предприятие 8.3 + PostgreSQL 9.4 на базе Debian 8 «Jessie»](http://nixway.org/2015/11/10/1c-predpriyatie-8-3+postgresql-na-baze-debian-8-jessie/)
 
--->
-
----
-
 <br/>
 
-# Документация, книги, презентации etc.:
+## Документация, книги, презентации etc.:
 
 ### [Книги по Linux](/desktop/linux/books/)
