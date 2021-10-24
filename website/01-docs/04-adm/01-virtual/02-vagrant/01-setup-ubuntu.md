@@ -9,7 +9,7 @@ permalink: /adm/virtual/vagrant/setup/ubuntu/
 # Инсталляция Vargant в Ubuntu 20.04.1
 
 Делаю  
-11.05.2021
+21.09.2021
 
 <br/>
 
@@ -21,12 +21,12 @@ https://www.vagrantup.com/downloads.html
 ### Инсталляция Vagrant
 
     $ cd /tmp
-    $ wget https://releases.hashicorp.com/vagrant/2.2.16/vagrant_2.2.16_x86_64.deb
+    $ wget https://releases.hashicorp.com/vagrant/2.2.18/vagrant_2.2.18_x86_64.deb
 
-    $ sudo dpkg -i vagrant_2.2.16_x86_64.deb
+    $ sudo dpkg -i vagrant_2.2.18_x86_64.deb
 
     $ vagrant -v
-    Vagrant 2.2.16
+    Vagrant 2.2.18
 
 <br/>
 

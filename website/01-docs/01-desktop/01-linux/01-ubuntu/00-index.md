@@ -37,3 +37,5 @@ permalink: /desktop/linux/ubuntu/
 ### [Удаленный рабочий стол в Ubuntu 20.04](/desktop/linux/ubuntu/vnc-server/)
 
 ### [Сеть в Ubuntu](/desktop/linux/ubuntu/network/)
+
+### [EPUB reader](https://johnfactotum.github.io/foliate/)

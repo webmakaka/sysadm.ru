@@ -23,9 +23,9 @@ In this lab you will learn how Kubernetes Engine security features can be used t
 
 When configuring security, applications should be granted the smallest set of privileges that still allows them to operate correctly. When applications have more privileges than they need, they are more dangerous when compromised. In a Kubernetes cluster, these privileges can be grouped into the following broad levels:
 
--   Host access: describes what permissions an application has on it's host node, outside of its container. This is controlled via Pod and Container security contexts, as well as app armor profiles.
--   Network access: describes what other resources or workloads an application can access via the network. This is controlled with NetworkPolicies.
--   Kubernetes API access: describes which API calls an application is allowed to make against. API access is controlled using the Role Based Access Control (RBAC) model via Role and RoleBinding definitions.
+- Host access: describes what permissions an application has on it's host node, outside of its container. This is controlled via Pod and Container security contexts, as well as app armor profiles.
+- Network access: describes what other resources or workloads an application can access via the network. This is controlled with NetworkPolicies.
+- Kubernetes API access: describes which API calls an application is allowed to make against. API access is controlled using the Role Based Access Control (RBAC) model via Role and RoleBinding definitions.
 
 <br/>
 
@@ -44,7 +44,7 @@ The pod-labeler deployment creates a single pod that watches all other pods in t
 
 <br/>
 
-### [Install Terraform](/devops/tools/terraform/setup//)
+### [Install Terraform](//gitops.ru/tools/terraform/setup//)
 
 <br>
 

@@ -68,6 +68,8 @@ startxfce4 &
 
 Подключаемся к <ip_server>:5901
 
+Protocol: Remmina VNC Plugin
+
 <br/>
 
 Блин, не помню откуда 5901.

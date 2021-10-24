@@ -68,6 +68,8 @@ EOF
     $ kubectl create namespace pizzahat
     $ kubectl config set-context --current --namespace=pizzahat
 
+<br/>
+
 ```
 $ cat <<EOF | kubectl apply -f -
 apiVersion: mykubernetes.burrsutter.com/v1beta2

@@ -10,11 +10,12 @@ permalink: /devops/containers/kubernetes/basics/config-maps/
 
 <br/>
 
-Делаю: 08.04.2019
+Делаю:  
+08.04.2019
 
 <br/>
 
-По материалам из видео индуса:
+**По материалам из видео индуса:**
 
 https://www.youtube.com/watch?v=upmLONFGNBs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0&index=16
 

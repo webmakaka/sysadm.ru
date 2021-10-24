@@ -41,7 +41,7 @@ https://hub.docker.com/explore/
 
 [Docker Registry (Network Storage For Docker Images)] (облачный сервис для хранения контейнеров)  
 https://hub.docker.com  
-https://quay.io
+https://quay.io (какая-то лажа, похоже теперь только за деньги)
 
 На hub.docker.com можно делать автоматически собираемые image. Для этого необходимо указать сервису проект с Dockerfile. При внесении изменений в проект, image собирается заново.
 
@@ -132,9 +132,9 @@ https://docs.docker.com/engine/userguide/networking/
 
 <br/>
 
-### Self-hosted Registry (Свой dockerhub)
+### Self-hosted Registry (Свой аналог dockerhub)
 
-[Self-hosted Registry](/devops/containers/docker/registry/)
+[Self-hosted Registry](//gitops.ru/containers/registry/)
 
 <br/>
 

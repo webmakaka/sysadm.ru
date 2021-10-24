@@ -9,7 +9,7 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 # Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
 
 Делаю:  
-28.04.2021
+21.09.2021
 
 <br/>
 
@@ -48,11 +48,16 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 <br/>
 
     # vboxmanage --version
-    6.1.20r143896
+    6.1.26r145957
 
 <br/>
 
-    $ sudo usermod -aG vboxusers <username>
+    $ ^D
+
+<br/>
+
+    // Добавить пользователя в группу vboxusers
+    $ sudo usermod -aG vboxusers $USER
 
 <br/>
 

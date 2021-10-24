@@ -8,6 +8,8 @@ permalink: /desktop/linux/ubuntu/brew/
 
 # Инсталляция менеджера пакетов Brew (HomeBrew, LinuxBrew) в Ubuntu
 
+<br/>
+
 ```
 // homebrew install
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

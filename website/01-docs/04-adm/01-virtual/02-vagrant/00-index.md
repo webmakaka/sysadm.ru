@@ -32,7 +32,7 @@ permalink: /adm/virtual/vagrant/
 
 [Vagrant c Docker внутри](/adm/virtual/vagrant/vagrant-with-docker/)
 
-[Деплой nodejs приложения на удаленный сервер с помощью ansible](/devops/tools/ansible/deploy-node-app-by-ansible/)
+[Деплой nodejs приложения на удаленный сервер с помощью ansible](//gitops.ru/tools/ansible/deploy-node-app-by-ansible/)
 
 [Vagrant и Ansible playbook для подготовки виртуальных машин Virtualbox](/adm/virtual/vagrant/vagrant-ansible-playbook/)
 

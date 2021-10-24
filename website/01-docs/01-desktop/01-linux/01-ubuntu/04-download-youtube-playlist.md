@@ -23,7 +23,7 @@ permalink: /desktop/linux/ubuntu/download-youtube-playlist/
 Т.к. 4k video downloader имеет ограничение на размер плейлиста. Буду юзать программу которая скачивает плейлисты в командной строке.
 
 Делаю:  
-13.03.2020
+16.10.2021
 
 **Программа: **
 https://rg3.github.io/youtube-dl/download.html
@@ -39,7 +39,6 @@ https://rg3.github.io/youtube-dl/download.html
     $ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
     $ sudo chmod a+rx /usr/local/bin/youtube-dl
 
-
 <!--
 
 <br/>
@@ -53,26 +52,34 @@ https://rg3.github.io/youtube-dl/download.html
 
 ### Поехали скачивать
 
+<br/>
+
     $ mkdir ~/Downloads/myPlaylist && cd ~/Downloads/myPlaylist
-
-Нужно скачать вот этот плей лист. Там про kubernetes.
-
-https://www.youtube.com/watch?v=YzaYqxW0wGs&list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0
-
-Удаляю из url v=<ID> т.е v=YPShu0H3RbM&
-
--- Скачиваю видео лучшего качества из имеющегося:
-
-    $ youtube-dl -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PL34sAs7_26wNBRWM6BDhnonoA5FMERax0 --output "%(title)s.%(ext)s"
 
 <br/>
 
-output я меняю, т.к. по умолчанию в конце добавляется id видео. Мне это не нужно.
+Нужно скачать вот этот плей лист.
+
+https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bxVRw
+
+Удаляю из url v=<ID> т.е v=yNe9Xr35n4Q&
+
+<br/>
+
+-- Скачиваю видео лучшего качества из имеющегося:
+
+    $ youtube-dl -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PL8lUUBadSMNBNKMYJpUE830tBiN6bxVRw --output "%(title)s.%(ext)s"
+
+<br/>
+
+output я меняю, т.к. по умолчанию в конце добавляется id видео. Мне это не нужно.  
 Можно, также использовать такой формат как --output "%(uploader)s%(title)s.%(ext)s"
 
 <br/>
 
 **Еще интересные параметры:**
+
+<br/>
 
     --playlist-start 1 - с какого индекса в плейлисте начать
     -i - игнорить ошибки, вроде скрытого файла.
