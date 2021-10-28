@@ -9,4 +9,4 @@ permalink: /devops/containers/kubernetes/packages/heml/setup/
 # Подготовка и установка Helm
 
 <br/>
-Перенесено <a href="//gitops.ru/containers/k8s/tools/helm/setup/">сюда</a>
+Перенесено <a href="//gitops.ru/containers/kubernetes/tools/helm/setup/">сюда</a>

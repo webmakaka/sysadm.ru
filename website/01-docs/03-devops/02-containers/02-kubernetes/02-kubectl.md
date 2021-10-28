@@ -8,4 +8,4 @@ permalink: /devops/containers/kubernetes/kubectl/
 
 # Инсталляция kubectl ubuntu 20.04
 
-### [Перенесено сюда](//gitops.ru/containers/k8s/tools/kubectl/)
+### [Перенесено сюда](//gitops.ru/containers/kubernetes/tools/kubectl/)
