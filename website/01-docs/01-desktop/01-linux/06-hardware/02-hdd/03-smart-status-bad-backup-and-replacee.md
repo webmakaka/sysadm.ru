@@ -8,13 +8,13 @@ permalink: /desktop/linux/hardware/hdd/smart-status-bad-backup-and-replace/
 
 # S.M.A.R.T. status bad backup and replace
 
-По содержанию все было понятно.
-Но было непонятно о каком диске идеть речь.
+По содержанию все было понятно.  
+Но было непонятно о каком диске идет речь.
 Когда в компьютере 5 дисков и более, не так сразу и разберешься, с какого диска нужно спасать данные.
 
 <br/>
 
-    # apt-get install -y smartmontools
+    $ sudo apt install -y smartmontools
 
 <br/>
 
