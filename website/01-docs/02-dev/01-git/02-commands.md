@@ -12,6 +12,8 @@ permalink: /dev/git/commands/
 
 ### Сгенерировать ключ для GitHub
 
+<br/>
+
     $ cd ~/.ssh/
 
 <br/>
@@ -37,11 +39,25 @@ permalink: /dev/git/commands/
 
 <br/>
 
-В настройка аккаунта github добавить public key
+```
+// Посмотреть public key
+$ cat marley_github.pub
+```
 
 <br/>
 
-    $ ssh -T git@github.com
+В настройка аккаунта github добавить public key
+
+https://github.com/settings/keys
+
+New SSH key
+
+<br/>
+
+```
+// Проверка возможности подключиться
+$ ssh -T git@github.com
+```
 
 <br/>
 
