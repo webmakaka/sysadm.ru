@@ -10,7 +10,7 @@ permalink: /devops/containers/kubernetes/
 
 <br/>
 
-### [Инсталляция клиента для работы с kubernetes кластером (kubectl)](/devops/containers/kubernetes/kubectl/)
+### [Инсталляция клиента для работы с kubernetes кластером (kubectl)](//gitops.ru/containers/kubernetes/tools/kubectl/)
 
 <br/>
 

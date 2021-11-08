@@ -48,7 +48,7 @@ $ echo ${INGRESS_HOST}
 <br/>
 
 ```
-$ cat <<EOF | kubectl apply -f -
+$ cat << EOF | kubectl apply -f -
 apiVersion: v1
 kind: Service
 metadata:
@@ -99,7 +99,7 @@ EOF
 <br/>
 
 ```
-$ cat <<EOF | kubectl apply -f -
+$ cat << EOF | kubectl apply -f -
 apiVersion: v1
 kind: Service
 metadata:

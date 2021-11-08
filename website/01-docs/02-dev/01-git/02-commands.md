@@ -10,60 +10,7 @@ permalink: /dev/git/commands/
 
 <br/>
 
-### Сгенерировать ключ для GitHub
-
-<br/>
-
-    $ cd ~/.ssh/
-
-<br/>
-
-    $ ssh-keygen \
-    -t rsa \
-    -b 4096 \
-    -C "example@gmail.com" \
-    -f marley_github
-
-<br/>
-
-    $ chmod 0600 marley_github*
-    $ eval "$(ssh-agent -s)"
-
-<br/>
-
-    // Добавить ключ
-    $ ssh-add ~/.ssh/marley_github
-
-    // Проверка, что ключ добавлен
-    $ ssh-add -l -E md5
-
-<br/>
-
-```
-// Посмотреть public key
-$ cat marley_github.pub
-```
-
-<br/>
-
-В настройка аккаунта github добавить public key
-
-https://github.com/settings/keys
-
-New SSH key
-
-<br/>
-
-```
-// Проверка возможности подключиться
-$ ssh -T git@github.com
-```
-
-<br/>
-
-### Использовать несколько ключей для разных github аккаунтов
-
-    $ GIT_SSH_COMMAND='ssh -i ~/.ssh/marley_github -o IdentitiesOnly=yes' git push
+Настройки git для работы с github перенесены [сюда](/tools/github/setup/)
 
 <br/>
 
