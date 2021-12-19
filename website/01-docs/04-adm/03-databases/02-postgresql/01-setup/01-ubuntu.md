@@ -38,12 +38,12 @@ $ PG_VERSION=9.6
 
 <br/>
 
-Если нужно установить только psql клиент
+### Если нужно установить только psql клиент
 
 ```
 $ sudo apt-get install -y postgresql-client
 $ psql --version
-PostgreSQL) 10.12 (Ubuntu 10.12-0ubuntu0.18.04.1)
+psql (PostgreSQL) 12.2 (Ubuntu 12.2-4)
 ```
 
 <br/>
@@ -97,46 +97,6 @@ postgres=# \dx
     jsonbx  | 1.0     | public     | Jsonb extension
     plpgsql | 1.0     | pg_catalog | PL/pgSQL procedural language
 (2 rows)
-```
-
-<br/>
-
-### Импорт базы
-
-Разные способы имеются
-
-```shell
-
-// Создание бекапа
-$ pg_dump database_name > database_name_20160527.sql
-
-// Восстановление
-
-$ su - postgres
-$ psql
-
--- Если база не создана
-$ CREATE DATABASE <db_name>;
-
-exit
-
-$ psql database_name < database_name_20160527.sql
-```
-
-<br/>
-
-https://www.netguru.co/tips/how-to-dump-and-restore-postgresql-database
-
-<br/>
-
-ЕЩе есть такой вариант:
-
-```shell
-
-$ cd <db_dump_dir>
-
--- Данные будут перезаписаны
-$ pg_restore -d <db_name> myDump.dump -j 4 -c
 ```
 
 <!--

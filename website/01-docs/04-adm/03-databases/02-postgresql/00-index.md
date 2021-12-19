@@ -17,6 +17,8 @@ permalink: /adm/databases/postgresql/
 
 [Запуск PgAdmin4 WebClient в docker контейнере](/adm/databases/postgresql/pgadmin/)
 
+[Экспорт / Импорты базы Postgres](/adm/databases/postgresql/export-import/)
+
 <br/>
 
 ### Автоустановщик PostgreSQL в режиме master-slave и standalone:

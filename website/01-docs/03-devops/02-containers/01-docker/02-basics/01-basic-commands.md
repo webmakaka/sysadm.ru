@@ -240,6 +240,8 @@ https://hub.docker.com
     $ docker history <image_name>
     $ docker history --no-trunc <image_name>
 
+<br/>
+
 Возможно, более наглядно.
 
 https://github.com/CenturyLinkLabs/dockerfile-from-image
@@ -250,7 +252,7 @@ https://github.com/CenturyLinkLabs/dockerfile-from-image
 
 <br/>
 
-    $ docker run -v /var/run/docker.sock:/var/run/docker.sock   centurylink/dockerfile-from-image rosskukulinski/rethinkdb:2.1.0_beta1
+    $ docker run -v /var/run/docker.sock:/var/run/docker.sock centurylink/dockerfile-from-image rosskukulinski/rethinkdb:2.1.0_beta1
     ADD file:085531d120d9b9b09174b936e2ecac25dda1f3029cfbc24751529c0c24a8e3d0 in /
     CMD ["/bin/bash"]
     MAINTAINER Stuart P. Bentley <stuart@testtrack4.com>

@@ -60,6 +60,12 @@ startxfce4 &
 
 <br/>
 
+```
+$ sudo apt-add-repository ppa:remmina-ppa-team/remmina-next ; sudo apt-get update ; sudo apt-get install -y remmina remmina-plugin-rdp
+```
+
+<br/>
+
     $ remmina
 
 После запуска, следует создать новый профиль для подключения. Стартовое окно оно не для подключения а для фильтрации уже имеющися подключений.

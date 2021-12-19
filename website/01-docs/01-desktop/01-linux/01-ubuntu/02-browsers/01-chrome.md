@@ -9,7 +9,7 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 # Инсталляция Chrome в Ubuntu
 
 Делаю:  
-22.07.2021
+19.12.2021
 
 <br/>
 
@@ -23,7 +23,6 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 
 <!--
     $ sudo sh -c 'echo "deb http://dl.google.com/desktop/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-
 -->
 
     $ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
@@ -57,15 +56,15 @@ Settings -> Advanced -> Language -> Order Languages based on your preferences: E
 
 ### Дополнительные плагины
 
--   EditThisCookie
--   SetupVPN
--   LanguageTool
--   Nimbus Screenshoot & Screen Video Recorder
--   Доступ рутрекер
--   SponsorBlock for YouTube
+- EditThisCookie
+- SetupVPN
+- LanguageTool
+- Nimbus Screenshoot & Screen Video Recorder
+- Доступ рутрекер
+- SponsorBlock for YouTube
 
--   uBlacklist
-    https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe
+- uBlacklist
+  https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe
 
 <br/>
 
@@ -88,7 +87,7 @@ hola vpn
 
 ### Могут понадобиться, но необязательные
 
--   cookies.txt
+- cookies.txt
 
 <br/>
 

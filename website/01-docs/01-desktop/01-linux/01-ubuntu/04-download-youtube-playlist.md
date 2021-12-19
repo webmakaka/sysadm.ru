@@ -10,11 +10,15 @@ permalink: /desktop/linux/ubuntu/download-youtube-playlist/
 
 <br/>
 
+В общем YouTube сделал так, чтобы видео с него скачивались очень медленно и ничего с этим пока поделать нельзя.
+
+<br/>
+
 ### Скачать playlist с youtube в GUI
 
 Я использую для этих целей 4k video downloader.
 
-Из минусов - ограничение в 25 файлов в плейлисте для бесплатной версии и реклама уг.
+Из минусов - ограничение в 10 файлов в плейлисте для бесплатной версии и реклама уг.
 
 <br/>
 
@@ -22,8 +26,10 @@ permalink: /desktop/linux/ubuntu/download-youtube-playlist/
 
 Т.к. 4k video downloader имеет ограничение на размер плейлиста. Буду юзать программу которая скачивает плейлисты в командной строке.
 
+<br/>
+
 Делаю:  
-16.10.2021
+28.11.2021
 
 **Программа: **
 https://rg3.github.io/youtube-dl/download.html
@@ -32,7 +38,11 @@ https://rg3.github.io/youtube-dl/download.html
 
 **Установить ffmpeg - иначе могут быть видео и аудио отдельно!**
 
-    $ sudo apt install -y ffmpeg
+<br/>
+
+```
+$ sudo apt install -y ffmpeg
+```
 
 <br/>
 
@@ -61,6 +71,8 @@ https://rg3.github.io/youtube-dl/download.html
 Нужно скачать вот этот плей лист.
 
 https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bxVRw
+
+<br/>
 
 Удаляю из url v=<ID> т.е v=yNe9Xr35n4Q&
 

@@ -134,6 +134,8 @@ $ curl -H "Host: go-demo-7.acme.com" \
  "http://$INGRESS_HOST/version"
 ```
 
+<br/>
+
 ```
 Version: 0.0.1; Release: unknown
 ```
