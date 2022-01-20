@@ -15,6 +15,23 @@ permalink: /adm/databases/postgresql/
 
 <br/>
 
+### Подключение к базе в командной строке:
+
+```
+$ psql "host=FQDN_хоста
+      port=6432 \
+      sslmode=verify-full \
+      dbname=<имя базы данных> \
+      user=<имя пользователя базы данных> \
+      target_session_attrs=read-write"
+```
+
+<br/>
+
+sslmode - если используется ssl
+
+<br/>
+
 [Запуск PgAdmin4 WebClient в docker контейнере](/adm/databases/postgresql/pgadmin/)
 
 [Экспорт / Импорты базы Postgres](/adm/databases/postgresql/export-import/)

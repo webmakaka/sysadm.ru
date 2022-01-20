@@ -53,6 +53,8 @@ registry_external_url 'https://registry.local'
 
 А также нужно будет добавить (т.к. в конфиге не нашел) ссылки на сертификаты. См. подробности по ссылке на установку <a href="/devops/containers/docker/registry/self-signed-tls-security/">registry</a>.
 
+<br/>
+
 ```
 registry_nginx['ssl_certificate'] = "/home/vagrant/certs/selfsigned.crt"
 registry_nginx['ssl_certificate_key'] = "/home/vagrant/certs/selfsigned.key"

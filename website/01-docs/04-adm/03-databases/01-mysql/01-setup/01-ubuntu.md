@@ -11,13 +11,14 @@ permalink: /adm/databases/mysql/setup/ubuntu/
 <br/>
 
 **Делаю:**  
-16.03.2021
+25.12.2021
 
 <br/>
 
 ```
 $ sudo apt update -y
 $ sudo apt install -y mysql-server
+$ sudo apt install -y mysql-client
 ```
 
 <br/>

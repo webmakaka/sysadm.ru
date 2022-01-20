@@ -115,6 +115,8 @@ ERRO[0000] Docker executor: prebuilt image helpers will be loaded from /var/lib/
 Running in system-mode.
 ```
 
+<br/>
+
 Пришлось переустановить runner. Ранее у меня был установлен из репозитория ubuntu.
 Установил из оф.репо. Заработало.
 

@@ -15,16 +15,16 @@ permalink: /dev/go/setup/
 <br/>
 
 **Делаю:**  
-30.10.2021
+15.01.2022
 
 <br/>
 
     $ cd ~/tmp/
-    $ wget --no-check-certificate https://golang.org/dl/go1.17.2.linux-amd64.tar.gz
+    $ wget --no-check-certificate https://golang.org/dl/go1.17.6.linux-amd64.tar.gz
 
 <br/>
 
-    $ tar -xvzpf go1.17.2.linux-amd64.tar.gz
+    $ tar -xvzpf go1.17.6.linux-amd64.tar.gz
     $ sudo mkdir -p /opt/go.1.17
     $ sudo mv go/* /opt/go.1.17/
     $ sudo ln -s /opt/go.1.17/ /opt/go
@@ -53,7 +53,7 @@ permalink: /dev/go/setup/
 <br/>
 
     $ go version
-    go version go1.17.2 linux/amd64
+    go version go1.17.6 linux/amd64
 
 <br/>
 

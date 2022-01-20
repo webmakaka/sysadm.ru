@@ -29,7 +29,7 @@ permalink: /desktop/linux/ubuntu/download-youtube-playlist/
 <br/>
 
 Делаю:  
-28.11.2021
+10.01.2022
 
 **Программа: **
 https://rg3.github.io/youtube-dl/download.html
@@ -71,16 +71,17 @@ $ sudo apt install -y ffmpeg
 Нужно скачать вот этот плей лист.
 
 https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bxVRw
+https://www.youtube.com/watch?v=XSlSk8hBtVs&list=PLIGDNOJWiL1-bKGF5lSfRDL4sIkkNI9kg
 
 <br/>
 
-Удаляю из url v=<ID> т.е v=yNe9Xr35n4Q&
+Удаляю из url v=<ID> т.е v=XSlSk8hBtVs
 
 <br/>
 
 -- Скачиваю видео лучшего качества из имеющегося:
 
-    $ youtube-dl -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PL8lUUBadSMNBNKMYJpUE830tBiN6bxVRw --output "%(title)s.%(ext)s"
+    $ youtube-dl -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PLIGDNOJWiL1-bKGF5lSfRDL4sIkkNI9kg --output "%(title)s.%(ext)s"
 
 <br/>
 
@@ -138,7 +139,7 @@ To get the best video quality (1080p DASH - format "137") and best audio quality
 
 <br/>
 
-Подробнее:  
+**Подробнее:**  
 https://unix.stackexchange.com/questions/272868/download-only-format-mp4-on-youtube-dl/272934
 
 <!-- <br/>
