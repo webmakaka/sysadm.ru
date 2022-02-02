@@ -62,7 +62,7 @@ registry_nginx['ssl_certificate_key'] = "/home/vagrant/certs/selfsigned.key"
 
 <br/>
 
-Далее:
+**Далее:**
 
     # gitlab-ctl reconfigure && gitlab-ctl restart
 
@@ -136,3 +136,9 @@ Settings --> CI/CD --> Pipelines --> Run Pipeline
 Можно, как вариант, в настройках runner указать галочку:
 
 Run untagged jobs: Indicates whether this runner can pick jobs without tags
+
+<br/>
+
+### Issue
+
+https://forum.gitlab.com/t/unable-to-enable-gitlab-container-registry-adress-in-use/23198/2

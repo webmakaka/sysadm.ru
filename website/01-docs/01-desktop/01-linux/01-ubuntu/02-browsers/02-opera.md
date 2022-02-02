@@ -13,6 +13,10 @@ permalink: /desktop/linux/ubuntu/browsers/opera/
 
 <br/>
 
+Бесплатный VPN из коробки перестал работать. 
+
+<br/>
+
 ```
 $ wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -
 

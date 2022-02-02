@@ -75,6 +75,32 @@ https://wiki.postgresql.org/wiki/Apt -->
 
 <br/>
 
+### Экспорт таблицы
+
+```
+$ pg_dump --no-owner -d <database_name> -t <table_name> > file.sql
+```
+
+<br/>
+
+```
+$ pg_dump -h <адрес сервера СУБД> \
+    -U <имя пользователя> \
+    -p <порт> \
+    --no-owner -d <database_name> -t <table_name> > file.sql
+```
+
+<br/>
+
+```
+$ pg_dump -h devops-pg \
+    -U postgres \
+    -p 5432 \
+    --no-owner -d dqiptf_dqiptf -t iptf_neural_model > iptf_neural_model.sql
+```
+
+<br/>
+
 ### Миграция данных в Облако Yandex
 
 https://practicum.yandex.ru/trainer/ycloud/lesson/7fcf670e-67d5-48ef-9456-527ba71e78f7/

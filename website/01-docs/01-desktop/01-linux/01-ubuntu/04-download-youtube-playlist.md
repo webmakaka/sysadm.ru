@@ -156,3 +156,11 @@ https://unix.stackexchange.com/questions/272868/download-only-format-mp4-on-yout
 
     $ avconv |& grep \ version | awk '{print $3}'
     11.3-6:11.3-1~trusty, -->
+
+<br/>
+
+### Передать поток в VLC
+
+```
+$ youtube-dl -o - https://www.youtube.com/watch?v=5_J7RWLLVeQ | vlc -
+```
