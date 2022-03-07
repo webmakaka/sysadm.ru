@@ -1,19 +1,17 @@
 ---
 layout: page
-title: Мелкие улучшения в Ubuntu
-description: Мелкие улучшения в Ubuntu
-keywords: Мелкие улучшения в Ubuntu
+title: Ubuntu - не спрашивать каждый раз пароль при комаде с sudo
+description: Ubuntu - не спрашивать каждый раз пароль при комаде с sudo
+keywords: Ubuntu - не спрашивать каждый раз пароль при комаде с sudo
 permalink: /desktop/linux/ubuntu/setup/do-not-ask-root-password/
 ---
 
-# Мелкие улучшения в Ubuntu
+# Ubuntu - не спрашивать каждый раз пароль при комаде с sudo
 
 <br/>
 
-### Не спрашивать каждый раз пароль при комаде с sudo
-
     -- добавить при необходимости пользователя в группу sudo
-    $ sudo usermod -aG sudo <username>
+    $ sudo usermod -aG sudo ${USER}
 
 <br/>
 

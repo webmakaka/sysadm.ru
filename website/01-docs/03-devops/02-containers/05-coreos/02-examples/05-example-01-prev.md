@@ -4,7 +4,6 @@ title: Пример запуска coreos кластера с контейнер
 permalink: /devops/containers/coreos/example/01/prev/
 ---
 
-
 # Пример запуска coreos кластера с контейнерами docker, приложением, базой данных и прокси сервером
 
 <br/>
@@ -13,23 +12,18 @@ PS. Исходники с Dockerfile, можно взять здесь:
 
 https://bitbucket.org/sysadm-ru/introduction_to_coreos
 
-
 Они могу понадобиться, если захочется собрать собственные контейнеры или просто посмотреть примеры.
-
 
 <br/>
 
 **Для запуска примеров нужно:**
 
-
-1) Установить virtualbox  
-2) Установить vagrant
-
+1. Установить virtualbox
+2. Установить vagrant
 
 <br/>
 
 ### Vagrantfile и user-data
-
 
 Скопировать файлы:
 
@@ -41,13 +35,11 @@ https://bitbucket.org/sysadm-ru/native-docker-clustering
     $ git clone https://bitbucket.org/sysadm-ru/native-docker-clustering
     $ cd Native-Docker-Clustering
 
-
 <br/>
 
 Сгенерировать ключ:
 
 https://discovery.etcd.io/new?size=7
-
 
     $ vi user-data
 
@@ -55,11 +47,9 @@ https://discovery.etcd.io/new?size=7
 
     discovery: https://discovery.etcd.io/89e341b6012e47d7e6654eea7b882418
 
-
 <br/>
 
     $ vagrant box update
-
 
 <br/>
 
@@ -67,11 +57,9 @@ https://discovery.etcd.io/new?size=7
 
 <br/>
 
-
 // Чтобы можно было по ssh ходить между узлами без пароля
 
-  $ ssh-add ~/.vagrant.d/insecure_private_key
-
+$ ssh-add ~/.vagrant.d/insecure_private_key
 
 <br/>
 
@@ -86,11 +74,9 @@ https://discovery.etcd.io/new?size=7
     core-06                   running (virtualbox)
     core-07                   running (virtualbox)
 
-
 <br/>
 
     $ vagrant ssh core-01
-
 
 <br/>
 
@@ -103,11 +89,9 @@ https://discovery.etcd.io/new?size=7
     8df586c8...	10.0.16.5	-
     b9048ab8...	10.0.13.5	-
 
-
 <br/>
 
 ### Базы данных
-
 
     $ vi rethinkdb-announce@.service
 
@@ -123,8 +107,6 @@ https://discovery.etcd.io/new?size=7
 
     [X-Fleet]
     X-Conflicts=rethinkdb-announce@*.service
-
-
 
 <br/>
 
@@ -160,7 +142,6 @@ https://discovery.etcd.io/new?size=7
     [X-Fleet]
     X-ConditionMachineOf=rethinkdb-announce@%i.service
 
-
 <br/>
 
 **Что возвращается:**
@@ -177,8 +158,6 @@ https://discovery.etcd.io/new?size=7
     >          tr "\n" " ")
     --join 10.0.13.5:29015 --join 10.0.15.5:29015
 
-
-
 <br/>
 
     $ fleetctl submit *
@@ -188,12 +167,10 @@ https://discovery.etcd.io/new?size=7
     rethinkdb-announce@.service	3f7611a	inactive	inactive	-
     rethinkdb@.service		96c6e09	inactive	inactive	-
 
-
 <br/>
 
     $ fleetctl start rethinkdb@6 rethinkdb-announce@6
     $ fleetctl start rethinkdb@7 rethinkdb-announce@7
-
 
 <br/>
 
@@ -204,18 +181,15 @@ https://discovery.etcd.io/new?size=7
     rethinkdb@6.service		09e7fca1.../10.0.13.5	active	running
     rethinkdb@7.service		16d2848f.../10.0.15.5	active	running
 
-
-
 <br/>
 
     $ curl 10.0.15.5:8080
 
 Все ок. получил контент от сервера баз данных.
 
-
 <br/>
 
-![coreos cluster example](/img/devops/containers/coreos/example/01/pic1.png "coreos cluster example"){: .center-image }
+![coreos cluster example](/img/devops/containers/coreos/example/01/pic1.png 'coreos cluster example'){: .center-image }
 
 <br/>
 
@@ -228,8 +202,6 @@ https://discovery.etcd.io/new?size=7
     /services/rethinkdb/rethinkdb-7
     /services/rethinkdb/rethinkdb-6
 
-
-
 <br/>
 
 ### Web Сервера
@@ -240,9 +212,7 @@ https://discovery.etcd.io/new?size=7
     $ etcdctl get /services/rethinkdb/rethinkdb-7
     10.0.15.5
 
-
 <br/>
-
 
     $ cd /tmp/
     $ git clone --depth=1 https://github.com/sysadm-ru/Introduction_To_CoreOS
@@ -252,17 +222,15 @@ https://discovery.etcd.io/new?size=7
 
     $ vi config.js
 
-'172.17.8.101' меняю на '10.0.15.5'    
+'172.17.8.101' меняю на '10.0.15.5'
 
 <br/>
 
 10.0.15.5 - любой coreos хост с etcd, который предоставит информацию о подключении к базе. Разумеется, лучше потом какую-нибудь DNS запись для этого использовать.
 
-
 <br/>
 
     $ docker build --rm -t marley/coreos-nodejs-web-app .
-
 
 <br/>
 
@@ -317,13 +285,11 @@ https://discovery.etcd.io/new?size=7
     [X-Fleet]
     Conflicts=todo@*.service
 
-
 <br/>
 
     $ vi todo-sk@.service
 
 <br/>
-
 
     [Unit]
     Description=ToDo Sidekick
@@ -355,7 +321,6 @@ https://discovery.etcd.io/new?size=7
     [X-Fleet]
     MachineOf=todo@%i.service
 
-
 <br/>
 
 Следующая команда должна будет возвращать порт на котором работает вебсервер.
@@ -363,11 +328,9 @@ https://discovery.etcd.io/new?size=7
     $ docker inspect --format="{{(index (index .NetworkSettings.Ports \"3000/tcp\") 0).HostPort}}" todo-4
     3000
 
-
 <br/>
 
     $ fleetctl submit todo*
-
 
 <br/>
 
@@ -381,8 +344,6 @@ https://discovery.etcd.io/new?size=7
     rethinkdb@7.service		96c6e09	launched	launched	16d2848f.../10.0.15.5
     todo-sk@.service		64bb9b6	inactive	inactive	-
     todo@.service			3dc7e5b	inactive	inactive	-
-
-
 
 <br/>
 
@@ -403,13 +364,11 @@ https://discovery.etcd.io/new?size=7
     todo@4.service			56b7dcad.../10.0.14.5	active	running
     todo@5.service			b420d775.../10.0.11.5	active	running
 
-
 <br/>
 
     $ curl 10.0.17.5:3000
 
 Все ок. получил контент приложения от вебсервера.
-
 
 <br/>
 
@@ -426,27 +385,22 @@ https://discovery.etcd.io/new?size=7
     /services/todo/todo-4
     /services/todo/todo-5
 
-
 <br/>
 
-![coreos cluster example](/img/devops/containers/coreos/example/01/pic2.png "coreos cluster example"){: .center-image }
+![coreos cluster example](/img/devops/containers/coreos/example/01/pic2.png 'coreos cluster example'){: .center-image }
 
 <br/>
-
 
 **На самом деле, с первого раза ничего не запустилось**
 
+Пришлось искать что это за виртуалка на которой располагается данный сервис.
 
-Пришлось искать что это за виртуалка на которой располагается данный сервис.  
-
-Номер, виртуалки не совпадал.  
-
+Номер, виртуалки не совпадал.
 
     // логи
 
     $ fleetctl journal -f --lines=50 todo@3
     $ fleetctl journal -f --lines=50 todo-sk@3
-
 
 Пришлось не только перестартовывать, но и удалять конфиги, удалять docker images руками.
 
@@ -458,9 +412,7 @@ https://discovery.etcd.io/new?size=7
     $ fleetctl destroy todo@.service
     $ fleetctl destroy todo-sk@.service
 
-
 И далее повторять все с начала.
-
 
 <br/>
 
@@ -482,11 +434,9 @@ https://discovery.etcd.io/new?size=7
 
 10.0.15.5 - любой coreos хост с etcd
 
-
 <br/>
 
     $ docker build --rm -t marley/coreos-nginx .
-
 
 <br/>
 
@@ -498,11 +448,11 @@ https://discovery.etcd.io/new?size=7
     nginx                     1.9.3               ea4b88a656c9        19 months ago       132.8 MB
     iojs                      2.2                 2a1868f3dfd8        20 months ago       703.8 MB
 
-
 <br/>
 
-
     $ docker login
+
+<br/>
 
 Ранее в веб интерфейсе создано репо.
 
@@ -516,9 +466,7 @@ https://discovery.etcd.io/new?size=7
 
     $ vi nginx.service
 
-
 <br/>
-
 
     [Unit]
     Description=Nginx Proxy
@@ -572,8 +520,6 @@ https://discovery.etcd.io/new?size=7
     todo@4.service			b6473ba	launched	launched	72720a60.../10.0.17.5
     todo@5.service			b6473ba	launched	launched	56b7dcad.../10.0.14.5
 
-
-
 <br/>
 
     $ fleetctl start nginx.service
@@ -600,17 +546,12 @@ https://discovery.etcd.io/new?size=7
     todo@4.service			72720a60.../10.0.17.5	active	running
     todo@5.service			56b7dcad.../10.0.14.5	active	running
 
-
-
 <br/>
 
     $ curl 10.0.17.5:80
 
 Ок. Контент от вебсервера через proxy
 
-
 <br/>
 
-
-![coreos cluster example](/img/devops/containers/coreos/example/01/pic3.png "coreos cluster example"){: .center-image }
-
+![coreos cluster example](/img/devops/containers/coreos/example/01/pic3.png 'coreos cluster example'){: .center-image }

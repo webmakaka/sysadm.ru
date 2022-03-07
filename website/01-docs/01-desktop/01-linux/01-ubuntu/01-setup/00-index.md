@@ -13,4 +13,8 @@ permalink: /desktop/linux/ubuntu/setup/
 <ul>
     <li><a href="/desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts/">Шаги после инсталляции Ubuntu 20.04 LTS</a>
     </li>
+    <li><a href="/desktop/linux/ubuntu/setup/mount-hdd/">Монтирование жестких дисков</a>
+    </li>
+    <li><a href="/desktop/linux/ubuntu/setup/choose-kernel-on-startup/">Выбор kernel при загрузке</a>
+    </li>
 </ul>

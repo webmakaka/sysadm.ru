@@ -9,7 +9,7 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts
 # Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 
 Делаю:  
-22.07.2021
+07.03.2022
 
 <br/>
 
@@ -33,9 +33,11 @@ $ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode
 
 <br/>
 
-    $ sudo apt-get install apt-transport-https
-    $ sudo apt-get update
-    $ sudo apt-get install -y code
+```
+$ sudo apt-get install apt-transport-https
+$ sudo apt-get update
+$ sudo apt-get install -y code
+```
 
 <br/>
 
@@ -48,10 +50,17 @@ https://code.visualstudio.com/docs/setup/linux
 
 ```
 $ mkdir ~/projects && cd ~/projects
-$ git clone https://bitbucket.org/sysadm-ru/sysadm.ru
-$ cd sysadm.ru
+$ git clone https://github.com/webmakaka/sysadm.ru.git
+$ cd ~/projects/sysadm.ru
 $ code .
 ```
+
+
+<br/>
+
+### Не спрашивать каждый раз пароль при комаде с sudo
+
+[Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
 
 <br/>
 
@@ -79,7 +88,8 @@ $ sudo apt install -y \
     wakeonlan \
     whois \
     gimp \
-    grub-customizer
+    grub-customizer \
+    gnome-tweak-tool
 ```
 
 <br/>
@@ -94,11 +104,7 @@ $ sudo apt install -y \
 
 Перезагружаемся, при старте выбираем - Gnome Flashback (Metacity)
 
-<br/>
 
-### Не спрашивать каждый раз пароль при комаде с sudo
-
-[Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
 
 <br/>
 
@@ -114,7 +120,6 @@ $ sudo apt install -y \
 
 Вот надо что-нибудь да испортить! По умолчанию, нужно выбрать комбинацию из 3х клваиш, чтобы сменить раскладку.
 
-    $ sudo apt-get install -y gnome-tweak-tool
     $ gnome-tweaks
 
 <br/>
@@ -235,38 +240,3 @@ Command: /opt/telegram/Telegram -startintray
 
 -->
 
-<br/>
-
-### Выбор kernel при загрузке
-
-```
-$ ./grub-customizer
-```
-
-<br/>
-
-General settings -> default entry -> prdifined -> Ubuntu with linux 5.11.0-27-generic
-
-<br/>
-
-```
-$ sudo vi /etc/default/grub
-```
-
-<br/>
-
-```
-GRUB_TIMEOUT_STYLE="hidden"
-GRUB_TIMEOUT="0"
-```
-
-<br/>
-
-Включить вывод приглашения выбора kernel при загрузке.
-
-<br/>
-
-```
-#GRUB_TIMEOUT_STYLE="hidden"
-GRUB_TIMEOUT="-1"
-```

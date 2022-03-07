@@ -29,7 +29,7 @@ permalink: /desktop/linux/ubuntu/download-youtube-playlist/
 <br/>
 
 Делаю:  
-10.01.2022
+06.02.2022
 
 **Программа: **
 https://rg3.github.io/youtube-dl/download.html

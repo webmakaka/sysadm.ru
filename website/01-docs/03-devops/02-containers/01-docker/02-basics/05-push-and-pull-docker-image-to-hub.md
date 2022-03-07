@@ -89,6 +89,8 @@ container_id и container_name как и для image в данном случа
     REPOSITORY               TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
     marley/nginx_server      1                   5a6aaa885cf2        19 minutes ago      395.3 MB
 
+<br/>
+
     $ docker login
     $ docker push marley/nginx_server:1
 
