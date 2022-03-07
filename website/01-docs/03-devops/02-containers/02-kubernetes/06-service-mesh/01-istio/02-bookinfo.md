@@ -10,4 +10,4 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/bookinfo/
 
 <br/>
 
-Перенесено [сюда](//gitops.ru/containers/kubernetes/tools/service-mesh/istio/bookinfo/)
+Перенесено [сюда](//gitops.ru/tools/containers/kubernetes/tools/service-mesh/istio/bookinfo/)
