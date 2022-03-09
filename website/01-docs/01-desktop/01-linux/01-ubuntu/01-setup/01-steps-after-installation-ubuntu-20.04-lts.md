@@ -89,7 +89,8 @@ $ sudo apt install -y \
     whois \
     gimp \
     grub-customizer \
-    gnome-tweak-tool
+    gnome-tweak-tool \
+    usb-creator-gtk
 ```
 
 <br/>
@@ -103,7 +104,6 @@ $ sudo apt install -y \
 <br/>
 
 Перезагружаемся, при старте выбираем - Gnome Flashback (Metacity)
-
 
 
 <br/>
@@ -222,12 +222,10 @@ Color --> Built-in schemes: Black on white
 
 ### Автозапуск telegram
 
-
     $ sudo mkdir -p /opt/telegram
     $ sudo mv Telegram /opt/telegram/
 
 <br/>
-
 
 Applications -> System Tools -> Preferences -> Startup Applications
 

@@ -11,33 +11,14 @@ permalink: /desktop/linux/ubuntu/vpn/openvpn/
 https://openvpn.net/community-downloads/
 
 Делаю!  
-02.09.2021
+09.03.2022
 
 <br/>
 
 ### Инсталляция openvpn
 
-    $ sudo apt install openvpn -y
+    $ sudo apt install -y openvpn 
 
-<!--
-
-<br/>
-
-### Способ 2 [Недоделано]
-
-    $ cd ~/tmp/
-    $ wget https://swupdate.openvpn.org/community/releases/openvpn-2.5.3.tar.gz
-
-    $ tar -zxvf openvpn-2.5.3.tar.gz
-    $ cd openvpn-2.5.3/
-
-Хз, что дальше.
-
-Наверное, configure, make, make install
-
-Пока не очень актуально. Буду юзать, что лежит в стандартных пакетах. Лень!
-
--->
 
 <br/>
 
@@ -108,9 +89,11 @@ auth-user-pass login.conf
 
 <br/>
 
-    // Прописываем логин и пароль
-    // Первая строка логин, вторая пароль
-    $ sudo vi /etc/openvpn/login.conf
+```
+// Прописываем логин и пароль
+// Первая строка логин, вторая пароль
+$ sudo vi /etc/openvpn/login.conf
+```
 
 <br/>
 
@@ -121,14 +104,18 @@ password
 
 <br/>
 
-    $ sudo chmod 400 /etc/openvpn/login.conf
+```
+$ sudo chmod 400 /etc/openvpn/login.conf
+```
 
 <br/>
 
-    $ sudo systemctl enable openvpn@client.service
-    $ sudo systemctl daemon-reload
-    $ sudo service openvpn@client start
-    $ sudo service openvpn@client status
+```
+$ sudo systemctl enable openvpn@client.service
+$ sudo systemctl daemon-reload
+$ sudo service openvpn@client start
+$ sudo service openvpn@client status
+```
 
 <br/>
 
