@@ -55,7 +55,6 @@ $ cd ~/projects/sysadm.ru
 $ code .
 ```
 
-
 <br/>
 
 ### Не спрашивать каждый раз пароль при комаде с sudo
@@ -104,7 +103,6 @@ $ sudo apt install -y \
 <br/>
 
 Перезагружаемся, при старте выбираем - Gnome Flashback (Metacity)
-
 
 <br/>
 
@@ -237,4 +235,3 @@ Command: /opt/telegram/Telegram -startintray
 ![Автозапуск telegram](/img/desktop/linux/ubuntu/setup/autostart-telegram.png "Автозапуск telegram"){: .center-image }
 
 -->
-

@@ -48,9 +48,14 @@ permalink: /desktop/linux/ubuntu/vnc-server/
 startxfce4 &
 ```
 
-    $ sudo chmod +x ~/.vnc/xstartup
+<br/>
 
-    $ vncserver
+
+```
+$ sudo chmod +x ~/.vnc/xstartup
+
+$ vncserver
+```
 
 <br/>
 
@@ -72,6 +77,8 @@ $ sudo apt-add-repository ppa:remmina-ppa-team/remmina-next ; sudo apt-get updat
 
 <br/>
 
+**Для linux хостов:**
+
 Подключаемся к <ip_server>:5901
 
 Protocol: Remmina VNC Plugin
@@ -79,6 +86,24 @@ Protocol: Remmina VNC Plugin
 <br/>
 
 Блин, не помню откуда 5901.
+
+
+<br/>
+
+**Для windows хостов:**
+
+RDP 
+
+В общих настройках remmina выбрать
+
+Preferences -> RDP -> Use client keyboard mapping
+
+
+<br/>
+
+В настройках подключения к хосту:
+
+Remote Desktop Preference -> Advanced -> Quality -> Best (slowest)
 
 <br/>
 
