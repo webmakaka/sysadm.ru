@@ -1,18 +1,16 @@
 ---
 layout: page
-title: Ubuntu - Выбор kernel при загрузке
-description: Ubuntu - Выбор kernel при загрузке
-keywords: Ubuntu - Выбор kernel при загрузке
+title: Ubuntu - Выбор загружаемого при старте kernel в Ubuntu 20
+description: Ubuntu - Выбор загружаемого при старте kernel в Ubuntu 20
+keywords: Ubuntu - Выбор загружаемого при старте kernel в Ubuntu 20
 permalink: /desktop/linux/ubuntu/setup/choose-kernel-on-startup/
 ---
 
-# [Ubuntu] Выбор kernel при загрузке
-
+# [Ubuntu] Выбор загружаемого при старте kernel в Ubuntu 20
 
 <br/>
 
 Были какие-то проблемы при старте. Пришлось выбрать kernel постарее.
-
 
 <br/>
 
@@ -24,14 +22,21 @@ $ sudo apt install -y \
 <br/>
 
 ```
-$ ./grub-customizer
+$ grub-customizer
 ```
 
 <br/>
 
-General settings -> default entry -> prdifined -> Ubuntu with linux 5.11.0-27-generic
+General settings -> default entry -> predefined -> Ubuntu with linux 5.13.0.35-generic
+
+<!--
+5.11.0-27-generic
+
+-->
 
 <br/>
+
+### Включить вывод приглашения выбора kernel при загрузке.
 
 ```
 $ sudo vi /etc/default/grub
@@ -43,10 +48,6 @@ $ sudo vi /etc/default/grub
 GRUB_TIMEOUT_STYLE="hidden"
 GRUB_TIMEOUT="0"
 ```
-
-<br/>
-
-Включить вывод приглашения выбора kernel при загрузке.
 
 <br/>
 

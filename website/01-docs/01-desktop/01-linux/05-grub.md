@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Выбор kernel при загрузке с помощью GRUB
-description: Выбор kernel при загрузке с помощью GRUB
+title: Выбор загружаемого при старте kernel в Ubuntu 20 с помощью GRUB
+description: Выбор загружаемого при старте kernel в Ubuntu 20 с помощью GRUB
 keywords: desktop, linux, ubuntu, setup, grub
 permalink: /desktop/linux/grub/
 ---
 
-# Выбор kernel при загрузке с помощью GRUB
+# Выбор загружаемого при старте kernel в Ubuntu 20 с помощью GRUB
 
 <br/>
 

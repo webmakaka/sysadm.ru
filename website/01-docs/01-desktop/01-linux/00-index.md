@@ -26,7 +26,7 @@ permalink: /desktop/linux/
 
 ### [Развернуть видео на 90 градусов в ubuntu (в командной строке)](/desktop/linux/editors/)
 
-### [Выбор kernel при загрузке с помощью GRUB](/desktop/linux/grub/)
+### [Выбор загружаемого при старте kernel в Ubuntu 20 с помощью GRUB](/desktop/linux/grub/)
 
 <br/>
 
