@@ -55,3 +55,9 @@ GRUB_TIMEOUT="0"
 #GRUB_TIMEOUT_STYLE="hidden"
 GRUB_TIMEOUT="-1"
 ```
+
+<br/>
+
+```
+$ sudo update-grub
+```

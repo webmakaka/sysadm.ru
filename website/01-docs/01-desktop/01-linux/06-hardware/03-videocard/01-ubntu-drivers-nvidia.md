@@ -28,7 +28,11 @@ https://www.nvidia.com/en-us/geforce/drivers/
 
     $ software-properties-gtk
 
-Additional Drivers
+<br/>
+
+> Additional Drivers
+
+<br/>
 
 Выбрать проприетарные драйвера и перезагрузиться.
 
@@ -36,13 +40,20 @@ Additional Drivers
 
 **Или в консоли:**
 
-    $ sudo add-apt-repository ppa:xorg-edgers/ppa -y
+    // $ sudo add-apt-repository ppa:xorg-edgers/ppa -y
+
+    $ sudo add-apt-repository ppa:graphics-drivers/ppa
+
     $ sudo apt-get update
 
-    $ apt search nvidia | grep driver
+    $ sudo apt purge ~nnvidia
+    $ sudo apt autoremove
+    $ sudo apt clean
 
-    // $ sudo apt install nvidia-340
-    $ sudo apt install -y nvidia-driver-340
+    $ apt search nvidia | grep nvidia-driver
+
+    // $ sudo apt install -y nvidia-driver-340
+    $ sudo apt install nvidia-driver-510
 
 <br/>
 
