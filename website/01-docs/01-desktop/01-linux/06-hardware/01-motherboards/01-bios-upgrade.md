@@ -2,11 +2,13 @@
 layout: page
 title: Upgrade BIOS в linux
 description: Upgrade BIOS в linux
-keywords: Upgrade BIOS в linux
-permalink: /desktop/linux/hardware/motherboard/bios-upgrade/
+keywords: linux, hardware, motherboards, Upgrade BIOS в linux
+permalink: /desktop/linux/hardware/motherboards/bios-upgrade/
 ---
 
 # Upgrade BIOS в linux
+
+<br/>
 
 Мне понадобилось обновить BIOS на стром компьютере.
 Простого способа прошить, выбрать Azeru или как он там называется не было.
@@ -15,8 +17,10 @@ permalink: /desktop/linux/hardware/motherboard/bios-upgrade/
 
 Смотрим какая версия биоса текущая:
 
-    # dmidecode -s bios-version
-    ASUS A8N-SLI ACPI BIOS Revision 1014
+```
+# dmidecode -s bios-version
+ASUS A8N-SLI ACPI BIOS Revision 1014
+```
 
 <br/>
 
@@ -26,9 +30,11 @@ permalink: /desktop/linux/hardware/motherboard/bios-upgrade/
 
 В общем я поставил, следующим способом.
 
-    # add-apt-repository ppa:flashrom-developers/flashrom-daily
-    # apt-get update
-    # apt-get install -y flashrom
+```
+# add-apt-repository ppa:flashrom-developers/flashrom-daily
+# apt-get update
+# apt-get install -y flashrom
+```
 
 <br/>
 

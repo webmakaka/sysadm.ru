@@ -16,7 +16,7 @@ permalink: /desktop/linux/hardware/
 
 ### MotherBoard
 
-[Upgrade BIOS в linux](/desktop/linux/hardware/motherboard/bios-upgrade/)
+[Upgrade BIOS в linux](/desktop/linux/hardware/motherboards/bios-upgrade/)
 
 <br/>
 
