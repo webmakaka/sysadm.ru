@@ -9,7 +9,7 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 # Инсталляция Chrome в Ubuntu
 
 Делаю:  
-07.03.2022
+13.05.2022
 
 <br/>
 
@@ -35,7 +35,7 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 
 ### Отключить всплывающие уведомления и всякую слежку
 
-Settings --> Security and Privacy  --> Site Settings:
+Settings -->  Privacy and Security --> Site Settings:
 
 <br/>
 
@@ -59,7 +59,13 @@ Settings -> Advanced -> Language -> Order Languages based on your preferences: E
 - EditThisCookie
 - SetupVPN
 - LanguageTool
+
+<!--
+
 - Nimbus Screenshoot & Screen Video Recorder
+
+-->
+
 - Доступ рутрекер
 - SponsorBlock for YouTube
 
