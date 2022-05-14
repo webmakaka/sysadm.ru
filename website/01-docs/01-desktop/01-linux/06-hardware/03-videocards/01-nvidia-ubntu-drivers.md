@@ -8,6 +8,28 @@ permalink: /desktop/linux/hardware/videocards/nvidia/ubuntu/drivers/
 
 # Установить в ubuntu nvidia драйвера вместо opensource
 
+<br/>
+
+
+Карточка 1650.
+
+Под минимальной нагружкой в ubuntu 20.04, 22.04 с драйверами nvidia 510 мониторы гасну и кулера начинают работать на 100%. Не знаю где баг. В линуксе или в драйверах. С опенсорсными работает оч. плохо. Но не виснет.
+
+
+<br/>
+
+С опенсорс
+
+```
+=======================
+  glmark2 Score: 279 
+=======================
+```
+
+<br/>
+
+С NVidia было 7k (если ничего не путаю)
+
 
 
 <br/>
@@ -138,15 +160,6 @@ driver   : xserver-xorg-video-nouveau - distro free builtin
     ii  nvidia-settings                            440.82-0ubuntu0.20.04.1             amd64        Tool for configuring the NVIDIA graphics driver
     ii  screen-resolution-extra                    0.18build1                          all          Extension for the nvidia-settings control panel
 
-<br/>
-
-    $ ubuntu-drivers devices
-    == /sys/devices/pci0000:00/0000:00:07.0/0000:04:00.0 ==
-    modalias : pci:v000010DEd00000612sv00001043sd000082A6bc03sc00i00
-    vendor   : NVIDIA Corporation
-    model    : G92 [GeForce 9800 GTX / 9800 GTX+]
-    driver   : nvidia-340 - distro non-free recommended
-    driver   : xserver-xorg-video-nouveau - distro free builtin
 
 <br/>
 
@@ -157,19 +170,7 @@ driver   : xserver-xorg-video-nouveau - distro free builtin
 
     $ nvidia-smi
 
-    Command 'nvidia-smi' not found, but can be installed with:
-
-    sudo apt install nvidia-utils-440         # version 440.100-0ubuntu0.20.04.1, or
-    sudo apt install nvidia-340               # version 340.108-0ubuntu2
-    sudo apt install nvidia-utils-435         # version 435.21-0ubuntu7
-    sudo apt install nvidia-utils-390         # version 390.141-0ubuntu0.20.04.1
-    sudo apt install nvidia-utils-450         # version 450.102.04-0ubuntu0.20.04.1
-    sudo apt install nvidia-utils-450-server  # version 450.80.02-0ubuntu0.20.04.3
-    sudo apt install nvidia-utils-460         # version 460.32.03-0ubuntu0.20.04.1
-    sudo apt install nvidia-utils-418-server  # version 418.152.00-0ubuntu0.20.04.1
-    sudo apt install nvidia-utils-440-server  # version 440.95.01-0ubuntu0.20.04.1
-
-<br/><br/><br/>
+<br/>
 
 **Links:**  
 http://www.binarytides.com/install-nvidia-drivers-ubuntu-14-04/
