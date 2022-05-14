@@ -23,6 +23,13 @@ $ sudo su -
 
 <br/>
 
+### Не спрашивать каждый раз пароль при комаде с sudo
+
+[Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
+
+
+<br/>
+
 ### Установка VSCODE
 
 <br/>
@@ -59,11 +66,7 @@ $ cd ~/projects/sysadm.ru
 $ code .
 ```
 
-<br/>
 
-### Не спрашивать каждый раз пароль при комаде с sudo
-
-[Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
 
 <br/>
 
