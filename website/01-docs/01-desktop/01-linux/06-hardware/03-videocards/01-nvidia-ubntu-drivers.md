@@ -2,7 +2,7 @@
 layout: page
 title: Установить в ubuntu nvidia драйвера вместо opensource
 description: Установить в ubuntu nvidia драйвера вместо opensource
-keywords: ubuntu, nvidia, drivers
+keywords: desktop, linux, hardware, videocards, nvidia, ubuntu, drivers
 permalink: /desktop/linux/hardware/videocards/nvidia/ubuntu/drivers/
 ---
 
@@ -73,6 +73,9 @@ driver   : xserver-xorg-video-nouveau - distro free builtin
 
     $ sudo apt install nvidia-driver-510
 
+
+<!--
+
 <br/>
 
 ### Удалить установленные драйвера Nvidia и установить opensource nouveau
@@ -88,6 +91,8 @@ driver   : xserver-xorg-video-nouveau - distro free builtin
     $ sudo apt install xserver-xorg-video-nouveau
 
     $ sudo reboot
+
+-->
 
 <br/>
 
