@@ -3,16 +3,12 @@ layout: page
 title: Установить в ubuntu nvidia драйвера вместо opensource
 description: Установить в ubuntu nvidia драйвера вместо opensource
 keywords: ubuntu, nvidia, drivers
-permalink: /desktop/linux/hardware/videocard/ubuntu/drivers/nvidia/
+permalink: /desktop/linux/hardware/videocards/nvidia/ubuntu/drivers/
 ---
 
 # Установить в ubuntu nvidia драйвера вместо opensource
 
-Проблема такая. Опенсорсные драйвера работают хорошо. Но нестабильно. GUI может перестать отвечать на любые действия пользователей.
 
-Если поставить закрытые драйвера от NVidia, то возможны случаи, когда после перезагрузки черный экран без каких-либо сообщений и ошибок, которые правда позволяет войти в консоль.
-
-UPD. Оказалось, что NVidia больше не поддерживает работу для драйверов для моей видеокарты для новых версий ядер linux и единственный вариант (если не откатывать версию ubuntu) - использовать оперсорсные драйвера. Которые у меня вешают GUI.
 
 <br/>
 
@@ -59,6 +55,10 @@ driver   : xserver-xorg-video-nouveau - distro free builtin
 
 **Или в консоли:**
 
+<br/>
+
+### Установить драйвера Nvidia
+
     // $ sudo add-apt-repository ppa:xorg-edgers/ppa -y
 
     $ sudo add-apt-repository ppa:graphics-drivers/ppa
@@ -71,12 +71,11 @@ driver   : xserver-xorg-video-nouveau - distro free builtin
 
     $ apt search nvidia | grep nvidia-driver
 
-    // $ sudo apt install -y nvidia-driver-340
     $ sudo apt install nvidia-driver-510
 
 <br/>
 
-### Удалить установленные драйвера Nvidia
+### Удалить установленные драйвера Nvidia и установить opensource nouveau
 
 Ченый экран GUI не стартует. В общем проблемы с драйверами от Nvidia. Пока не удалил, GUI не стартовали.
 
@@ -84,7 +83,7 @@ driver   : xserver-xorg-video-nouveau - distro free builtin
 
     $ sudo dpkg -P $(dpkg -l | grep nvidia-driver | awk '{print $2}')
 
-    $ sudo apt autoremove
+    $ sudo apt autoremove -y
 
     $ sudo apt install xserver-xorg-video-nouveau
 

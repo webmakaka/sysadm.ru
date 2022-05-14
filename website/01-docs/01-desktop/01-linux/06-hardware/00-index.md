@@ -41,7 +41,7 @@ permalink: /desktop/linux/hardware/
 
 ### VideoCard
 
-[Установить в Ubuntu nvidia драйвера вместо opensource](/desktop/linux/hardware/videocard/ubuntu/drivers/nvidia/)
+[Установить в Ubuntu nvidia драйвера вместо opensource](/desktop/linux/hardware/videocards/nvidia/ubuntu/drivers/)
 
 // Узнать сколько видеокарта использует GPU памяти
 
