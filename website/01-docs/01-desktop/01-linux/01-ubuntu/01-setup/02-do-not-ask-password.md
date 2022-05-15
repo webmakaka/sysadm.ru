@@ -15,9 +15,7 @@ permalink: /desktop/linux/ubuntu/setup/do-not-ask-root-password/
 
 <br/>
 
-    $ sudo su -
-
-    # vi /etc/sudoers
+    $ sudo vi /etc/sudoers
 
 <br/>
 
