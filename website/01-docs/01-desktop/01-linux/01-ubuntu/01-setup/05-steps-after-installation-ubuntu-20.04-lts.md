@@ -9,17 +9,23 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts
 # Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 
 Делаю:  
-07.03.2022
+15.05.2022
 
 <br/>
 
 ### Обновление
 
 ```
-$ sudo su -
-# apt update && apt-get upgrade -y
-# apt install -y vim curl git
+$ sudo apt update && apt-get upgrade -y
+$ sudo apt install -y vim curl git
 ```
+
+<br/>
+
+### Не спрашивать каждый раз пароль при комаде с sudo
+
+[Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
+
 
 <br/>
 
@@ -54,12 +60,6 @@ $ git clone https://github.com/webmakaka/sysadm.ru.git
 $ cd ~/projects/sysadm.ru
 $ code .
 ```
-
-<br/>
-
-### Не спрашивать каждый раз пароль при комаде с sudo
-
-[Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
 
 <br/>
 
