@@ -10,4 +10,4 @@ permalink: /devops/containers/kubernetes/service-mesh/istio/minikube/setup/
 
 <br/>
 
-Перенесено [сюда](//gitops.ru/tools/containers/kubernetes/tools/service-mesh/istio/setup/)
+Перенесено [сюда](//gitops.ru/containers/kubernetes/tools/service-mesh/istio/setup/)

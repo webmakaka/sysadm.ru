@@ -20,7 +20,7 @@ permalink: /devops/containers/kubernetes/minikube/
 
 ### Базовые вещи, чтобы ознакомиться как это все работает
 
-[Инсталляция kubectl ubuntu 20.04.1](//gitops.ru/tools/containers/kubernetes/tools/kubectl/)
+[Инсталляция kubectl ubuntu 20.04.1](//gitops.ru/containers/kubernetes/tools/kubectl/)
 
 [Инсталляция и подготовка minikube для работы в ubuntu 20.04.1](//gitops.ru//containers/kubernetes/minikube/setup/)
 

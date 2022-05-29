@@ -33,7 +33,7 @@ Within the cluster, provision three workloads:
 
 <br/>
 
-### [Install Terraform](//gitops.ru/tools/terraform/setup//)
+### [Install Terraform](//gitops.ru/terraform/setup//)
 
 <br>
 
