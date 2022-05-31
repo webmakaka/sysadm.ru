@@ -93,10 +93,26 @@ $ pg_dump -h <адрес сервера СУБД> \
 <br/>
 
 ```
-$ pg_dump -h devops-pg \
-    -U postgres \
+$ pg_dump -h <DataBaseName> \
+    -U <DataBaseUser> \
     -p 5432 \
     --no-owner -d dqiptf_dqiptf -t iptf_neural_model > iptf_neural_model.sql
+```
+
+<br/>
+
+### Миграция схемы
+
+```
+// Export
+$ pg_dump --host=<DataBaseName> --username=<DataBaseUser> --dbname=<DataBaseName> --schema=<SCHEMA_NAME> > /home/marley/tmp/<SCHEMA_NAME>.dmp
+```
+
+<br/>
+
+```
+// Import
+$ psql --host=<DataBaseName> --username=<DataBaseUser> --dbname=<DataBaseName> < /home/marley/tmp/<SCHEMA_NAME>.dmp
 ```
 
 <br/>
