@@ -221,11 +221,15 @@ https://hub.docker.com
 
 <br/>
 
-    $ docker system prune -a
-    $ docker container prune
-    $ docker image prune -a
-    $ docker volume prune
-    $ docker network prune
+```
+$ {
+    docker system prune -af
+    docker container prune -f
+    docker image prune -f
+    docker volume prune -f
+    docker network prune -f
+}
+```
 
 <br/>
 
@@ -247,6 +251,8 @@ https://hub.docker.com
 https://github.com/CenturyLinkLabs/dockerfile-from-image
 
 Хочу понять каким образом был сделан docker image у автора курса по CoreOS
+
+<br/>
 
     $ docker pull rosskukulinski/rethinkdb:2.1.0_beta1
 

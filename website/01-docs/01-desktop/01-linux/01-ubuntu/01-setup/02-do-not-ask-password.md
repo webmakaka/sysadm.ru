@@ -44,3 +44,12 @@ permalink: /desktop/linux/ubuntu/setup/do-not-ask-root-password/
     $ sudo whoami
     root
 
+<br/>
+
+### В Mint
+
+```
+***
+#includedir /etc/sudoers.d
+<username> ALL=(ALL:ALL) NOPASSWD: ALL
+```

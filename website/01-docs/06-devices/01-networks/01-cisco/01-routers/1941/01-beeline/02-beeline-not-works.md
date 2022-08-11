@@ -20,6 +20,12 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 <br/>
 
+**2022:**<br/>
+
+07.06.2021 - 58 минуты
+
+<br/>
+
 **2021:**<br/>
 
 08.04.2021 - 2 часа 18 минут
@@ -86,7 +92,7 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 **Итого на чей стороне проблемы:**
 
-2 (Я) : 18 (Beeline)
+2 (Я) : 19 (Beeline)
 
 <br/>
 
