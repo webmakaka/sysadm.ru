@@ -22,8 +22,8 @@ permalink: /adm/virtual/virtualbox/export-import/
 
 ```
 // Обычно у меня
-$ export VM_HOME=$HOME/machines
-$ export VM_BACKUPS=$HOME/machines/backups
+$ export VM_HOME=${HOME}/machines
+$ export VM_BACKUPS=${HOME}/machines/backups
 ```
 
 <br/>
@@ -83,25 +83,44 @@ $ export vm=<machine_name>
 ### Подготовка к Import виртуальной машины
 
 Делаю:  
-25.04.2021
+03.10.2022
+
+<br/>
+
+```
+$ vboxmanage --version
+6.1.38r153438
+```
 
 <br/>
 
 Задаем переменную с именем импортируемой виртуальной машины.
 
-    $ export vm=vm_centos_jboss_postgresql
+```
+$ export vm=vm_centos_jboss_postgresql
+```
 
 Создаем каталоги для виртуальной машины и для snapshots
 
-    $ mkdir -p ${VM_HOME}/${vm}/snapshots
+<br/>
+
+```
+$ mkdir -p ${VM_HOME}/${vm}/snapshots
+```
 
 Определяем каталог, куда следует выполнить импорт
 
-    $ VBoxManage setproperty machinefolder ${VM_HOME}/${vm}
+<br/>
+
+```
+$ VBoxManage setproperty machinefolder ${VM_HOME}/${vm}
+```
 
 Посмотреть переменные
 
-    $ vboxmanage list systemproperties | grep folder
+```
+$ vboxmanage list systemproperties | grep folder
+```
 
 <br/>
 
@@ -109,11 +128,13 @@ $ export vm=<machine_name>
 
 Переходим в каталог с бекапами виртуальных машинам
 
-    $ cd ${VM_BACKUPS}
+```
+$ cd ${VM_BACKUPS}
 
-    $ cd <machine>
+$ cd <machine>
 
-    $ VBoxManage import ./vm_centos_jboss_postgresql.ovf
+$ VBoxManage import ./vm_centos_jboss_postgresql.ovf
+```
 
 <br/>
 
@@ -139,15 +160,36 @@ Successfully imported the appliance.
 
 Посмотреть еще раз список виртуальных машин в системе и убедиться, что все ОК:
 
+<br/>
+
 ```
 $ vboxmanage list vms
 ```
 
 Запустить импортированную виртуальную машину
 
+<br/>
+
 ```
 $ vboxmanage startvm ${vm} -type headless &
 ```
+
+<br/>
+
+### Ошибока при импорте виртуальной машины
+
+<br/>
+
+```
+Progress state: NS_ERROR_INVALID_ARG
+VBoxManage: error: Appliance import failed
+VBoxManage: error: Code NS_ERROR_INVALID_ARG (0x80070057) - Invalid argument value (extended info not available)
+VBoxManage: error: Context: "RTEXITCODE handleImportAppliance(HandlerArg*)" at line 1379 of file VBoxManageAppliance.cpp
+```
+
+<br/>
+
+ХЗ что делать. В UI пепесоздавал. Был экспорт из 6.1 в последнюю 6.1.
 
 <br/>
 
@@ -251,9 +293,39 @@ $ VBoxManage storageattach ${vm} \
 
 Нужно как-то зайти в виртуалку. и отредактировать файл /etc/udev/rules.d/70-persistent-net.rules
 
-Достаточно удалить или правильно настроить соответствие между устройствами и том, какие имена им будут присвоены в системе.
+Достаточно удалить (рекомендую скопировать конфиг) или правильно настроить соответствие между устройствами и том, какие имена им будут присвоены в системе.
 
 После следует перезагрузить виртуальную машину. (Или попробовать применить правила udev без перезагрузки).
+
+<br/>
+
+Если host-only.
+Создать глобальный host-only адаптер, работающий на ip 192.168.56.1.
+
+Моя конфигурация.
+
+<br/>
+
+```
+# vi /etc/sysconfig/network-scripts/ifcfg-eth0
+```
+
+<br/>
+
+```
+DEVICE="eth0"
+BOOTPROTO="static"
+ONBOOT="yes"
+IPADDR=192.168.56.11
+NETMASK=255.255.255.0
+GATEWAY=192.168.56.1
+```
+
+<br/>
+
+```
+# service network restart
+```
 
 <br/>
 

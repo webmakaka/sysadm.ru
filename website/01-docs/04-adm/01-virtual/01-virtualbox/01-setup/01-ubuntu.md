@@ -9,7 +9,7 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 # Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
 
 Делаю:  
-21.09.2021
+03.10.2022
 
 <br/>
 
@@ -47,8 +47,10 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 
 <br/>
 
-    # vboxmanage --version
-    6.1.26r145957
+```
+# vboxmanage --version
+6.1.38r153438
+```
 
 <br/>
 
@@ -57,7 +59,7 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 <br/>
 
     // Добавить пользователя в группу vboxusers
-    $ sudo usermod -aG vboxusers $USER
+    $ sudo usermod -aG vboxusers ${USER}
 
 <br/>
 
@@ -102,7 +104,7 @@ E: Unable to correct problems, you have held broken packages.
 ### Установка пакетов расширения (USB, Remote Console, etc)
 
 Делаю:  
-25.04.2021
+03.10.2022
 
 Проприетарная, по идее, требует денег за использование в организациях.
 
@@ -141,8 +143,8 @@ VBoxManage: error: Context: "RTEXITCODE handleExtPack(HandlerArg*)" at line 1424
 ```
 $ sudo su -
 # cd /tmp/
-# wget http://download.virtualbox.org/virtualbox/6.1.20/Oracle_VM_VirtualBox_Extension_Pack-6.1.20.vbox-extpack
-# VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.20.vbox-extpack
+# wget http://download.virtualbox.org/virtualbox/6.1.38/Oracle_VM_VirtualBox_Extension_Pack-6.1.38.vbox-extpack
+# VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.38.vbox-extpack
 ```
 
 <br/>
@@ -151,8 +153,8 @@ $ sudo su -
 $ VBoxManage list extpacks
 Extension Packs: 1
 Pack no. 0:   Oracle VM VirtualBox Extension Pack
-Version:      6.1.20
-Revision:     143896
+Version:      6.1.38
+Revision:     153438
 Edition:
 Description:  Oracle Cloud Infrastructure integration, USB 2.0 and USB 3.0 Host Controller, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe.
 VRDE Module:  VBoxVRDP
@@ -173,8 +175,10 @@ Why unusable:
 
 <br/>
 
-    # modprobe vboxguest
-    modprobe: ERROR: could not insert 'vboxguest': No such device
+```
+# modprobe vboxguest
+modprobe: ERROR: could not insert 'vboxguest': No such device
+```
 
 <br/>
 
@@ -225,40 +229,47 @@ http://www.virtualbox.org/manual/ch04.html#idp11277648
 
 <br/>
 
-{% highlight shell %}
-
+```
 ###############################
 
 # USER DEFINED
 
 . ~/.bash_profile
 ###############################
-
-{% endhighlight %}
+```
 
 Отредактируйте файл ~/.bash_profile
 
-    $ vi ~/.bash_profile
+<br/>
+
+```
+$ vi ~/.bash_profile
+```
 
 <br/>
 
 Добавьте
 
 ```shell
-
 ### VirtualBox ################
 
 export VM_HOME=$HOME/machines
 
 ###############################
-
 ```
 
 <br/>
 
-Применить новые параметры:
+```
+// Применить новые параметры:
+$ source ~/.bash_profile
+```
 
-    $ source ~/.bash_profile
+<br/>
+
+```
+$ echo ${VM_HOME}
+```
 
 <!--
 
@@ -348,3 +359,5 @@ https://www.virtualbox.org/wiki/X11Clipboard
 
 
 -->
+
+
