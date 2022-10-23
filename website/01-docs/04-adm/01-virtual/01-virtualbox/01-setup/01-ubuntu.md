@@ -13,11 +13,15 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 
 <br/>
 
-    $ sudo su -
+```
+$ sudo su -
+```
 
 <br/>
 
-    # cd /tmp
+```
+# cd /tmp
+```
 
 <br/>
 
@@ -33,17 +37,23 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 
 <br/>
 
-    # apt update -y
+```
+# apt update -y
+```
 
 <br/>
 
-    # apt-cache search virtualbox*
+```
+# apt-cache search virtualbox*
+```
 
 <br/>
 
 **Последняя 6.1 ее и ставлю**
 
-    # apt install -y virtualbox-6.1
+```
+# apt install -y virtualbox-6.1
+```
 
 <br/>
 
@@ -54,12 +64,16 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 
 <br/>
 
-    $ ^D
+```
+$ ^D
+```
 
 <br/>
 
-    // Добавить пользователя в группу vboxusers
-    $ sudo usermod -aG vboxusers ${USER}
+```
+// Добавить пользователя в группу vboxusers
+$ sudo usermod -aG vboxusers ${USER}
+```
 
 <br/>
 
@@ -94,10 +108,14 @@ E: Unable to correct problems, you have held broken packages.
 
 ### Обновить VirtualBox в Ubuntu
 
-    $ sudo apt-get update
-    $ sudo apt-cache search virtualbox
-    $ sudo apt-get install -y virtualbox-6.0
-    $ vboxmanage --version
+<br/>
+
+```
+$ sudo apt-get update
+$ sudo apt-cache search virtualbox
+$ sudo apt-get install -y virtualbox-6.0
+$ vboxmanage --version
+```
 
 <br/>
 
@@ -194,26 +212,30 @@ http://www.virtualbox.org/manual/ch04.html#idp11277648
 
 **Пример в Ubuntu:**
 
-    $ sudo su -
+<br/>
 
-    # apt-get install -y wget
-    # apt-get install -y gcc make perl
-    # apt-get install -y p7zip-full
+```
+$ sudo su -
 
-    # cd /tmp
+# apt-get install -y wget
+# apt-get install -y gcc make perl
+# apt-get install -y p7zip-full
 
-    # wget http://download.virtualbox.org/virtualbox/6.0.12/VBoxGuestAdditions_6.0.12.iso
+# cd /tmp
+
+# wget http://download.virtualbox.org/virtualbox/6.0.12/VBoxGuestAdditions_6.0.12.iso
 
 
-    # 7z x ./VBoxGuestAdditions_6.0.12.iso -o./VBoxGuestAdditions_6.0.12/
+# 7z x ./VBoxGuestAdditions_6.0.12.iso -o./VBoxGuestAdditions_6.0.12/
 
-    # cd VBoxGuestAdditions_6.0.12/
+# cd VBoxGuestAdditions_6.0.12/
 
-    # chmod +x ./VBoxLinuxAdditions.run
+# chmod +x ./VBoxLinuxAdditions.run
 
-    # ./VBoxLinuxAdditions.run
+# ./VBoxLinuxAdditions.run
 
-    # reboot
+# reboot
+```
 
 <br/>
 
@@ -359,5 +381,3 @@ https://www.virtualbox.org/wiki/X11Clipboard
 
 
 -->
-
-

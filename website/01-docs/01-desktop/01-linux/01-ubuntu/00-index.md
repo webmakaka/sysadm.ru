@@ -39,3 +39,5 @@ permalink: /desktop/linux/ubuntu/
 ### [Сеть в Ubuntu](/desktop/linux/ubuntu/network/)
 
 ### [EPUB reader](https://johnfactotum.github.io/foliate/)
+
+### [Export Pdf в PNG](/desktop/linux/ubuntu/export-pdf-to-png/)

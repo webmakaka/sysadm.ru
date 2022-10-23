@@ -299,7 +299,7 @@ $ VBoxManage storageattach ${vm} \
 
 <br/>
 
-Если host-only.
+Если host-only.  
 Создать глобальный host-only адаптер, работающий на ip 192.168.56.1.
 
 Моя конфигурация.
