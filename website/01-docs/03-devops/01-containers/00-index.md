@@ -14,7 +14,7 @@ permalink: /devops/containers/
 
 ### [Docker](/devops/containers/docker/)
 
-### [Linux Containers (LXC)](/devops/containers/lxc/)
+### [Linux Containers (LXC)](/devops/containers/lxd/)
 
 ### RKT (Roket)
 

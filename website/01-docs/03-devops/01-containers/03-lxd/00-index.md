@@ -3,7 +3,7 @@ layout: page
 title: Linux Containers (LXC)
 description: Linux Containers (LXC)
 keywords: devops, containers, lxc
-permalink: /devops/containers/lxc/
+permalink: /devops/containers/lxd/
 ---
 
 # Linux Containers (LXC)
@@ -12,6 +12,6 @@ permalink: /devops/containers/lxc/
 
 <br/>
 
-### [Ubuntu](/devops/containers/lxc/ubuntu/)
+### [Ubuntu](/devops/containers/lxd/ubuntu/)
 
-### [Centos 6.5](/devops/containers/lxc/centos/)
+### [Centos 6.5](/devops/containers/lxd/centos/)

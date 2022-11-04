@@ -3,7 +3,7 @@ layout: page
 title: Ubuntu Linux Containers (lxc) (Наверное устарело по большей части)
 description: Ubuntu Linux Containers (lxc) (Наверное устарело по большей части)
 keywords: DevOps, Ubuntu Linux Containers (lxc) (Наверное устарело по большей части)
-permalink: /devops/containers/lxc/ubuntu/archive/
+permalink: /devops/containers/lxd/ubuntu/archive/
 ---
 
 # Ubuntu: Linux Containers (lxc) (Наверное устарело по большей части)

@@ -3,7 +3,7 @@ layout: page
 title: Linux Containers (lxc) в Centos 6.5 x64
 description: Linux Containers (lxc) в Centos 6.5 x64
 keywords: DevOps, Linux Containers (lxc) в Centos 6.5 x64
-permalink: /devops/containers/lxc/centos/
+permalink: /devops/containers/lxd/centos/
 ---
 
 # Linux Containers (lxc) в Centos 6.5 x64

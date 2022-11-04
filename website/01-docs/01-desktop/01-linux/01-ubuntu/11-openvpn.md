@@ -17,8 +17,9 @@ https://openvpn.net/community-downloads/
 
 ### Инсталляция openvpn
 
-    $ sudo apt install -y openvpn 
-
+```
+$ sudo apt install -y openvpn
+```
 
 <br/>
 
@@ -30,29 +31,39 @@ https://openvpn.net/community-downloads/
 
 <br/>
 
-    $ sudo su -
+```
+$ sudo su -
+```
 
 <br/>
 
-    // Будет спрашивать логин и пароль
-    # openvpn \
-        --auth-nocache \
-        --config /etc/openvpn/config.ovpn
+```
+// Будет спрашивать логин и пароль
+# openvpn \
+    --auth-nocache \
+    --config /etc/openvpn/config.ovpn
+```
 
 <br/>
 
-    // Не будет спрашивать, но пароли будут в консоли
-    // Обратить внимание на разделитель login и пароль \n
-    # openvpn \
-        --auth-nocache \
-        --config /etc/openvpn/config.ovpn \
-        --auth-user-pass <(echo -e "login\npassword")
+```
+// Не будет спрашивать, но пароли будут в консоли
+// Обратить внимание на разделитель login и пароль \n
+# openvpn \
+    --auth-nocache \
+    --config /etc/openvpn/config.ovpn \
+    --auth-user-pass <(echo -e "login\npassword")
+```
 
 <br/>
 
 ### Автостарт OpenVpn
 
-    $ sudo vi /etc/default/openvpn
+<br/>
+
+```
+$ sudo vi /etc/default/openvpn
+```
 
 <br/>
 
@@ -62,12 +73,16 @@ AUTOSTART="all"
 
 <br/>
 
-    $ sudo cp config.ovpn /etc/openvpn/client.conf
+```
+$ sudo cp config.ovpn /etc/openvpn/client.conf
+```
 
 <br/>
 
-    // Здесь можно отредактировать некоторые параметы
-    $ sudo vi /etc/openvpn/client.conf
+```
+// Здесь можно отредактировать некоторые параметы
+$ sudo vi /etc/openvpn/client.conf
+```
 
 <br/>
 
@@ -130,11 +145,15 @@ https://www.ivpn.net/knowledgebase/linux/linux-autostart-openvpn-in-systemd-ubun
 
 <br/>
 
-    $ sudo apt install openvpn-systemd-resolved
+```
+$ sudo apt install openvpn-systemd-resolved
+```
 
 <br/>
 
-    $ sudo vi /etc/openvpn/client.conf
+```
+$ sudo vi /etc/openvpn/client.conf
+```
 
 <br/>
 
