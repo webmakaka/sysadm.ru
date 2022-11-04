@@ -54,8 +54,3 @@ mod_security и mod_python можно взять из epel repo
 
 
     https://archive.today/tVJzC
-
-
-
-    odba
-    http://odba.ru/showthread.php?t=544

@@ -14,8 +14,6 @@ permalink: /adm/virtual/
 
 ### [KVM на Centos 6](/adm/virtual/kvm/)
 
-### [Proxmox](http://odba.ru/showthread.php?t=351)
-
 <br/>
 
 ### Инструменты
