@@ -23,7 +23,7 @@ permalink: /adm/virtual/virtualbox/export-import/
 ```
 // Обычно у меня
 $ export VM_HOME=${HOME}/machines
-$ export VM_BACKUPS=${HOME}/machines/backups
+$ export VM_BACKUPS=${VM_HOME}/backups
 ```
 
 <br/>
@@ -36,7 +36,7 @@ $ mkdir -p ${VM_BACKUPS}
 <br/>
 
 ```
-// Задаю еременныю с именем виртуальной машины:
+// Задаю переменную с именем виртуальной машины:
 $ vboxmanage list vms
 $ export vm=<machine_name>
 ```
@@ -46,7 +46,7 @@ $ export vm=<machine_name>
 ### Подготовка к Export'у виртуальной машины
 
 Делаю:  
-11.08.2022
+27.11.2022
 
 Может быть использован как вариант создания резервной копии или для создания копии уже работающей виртуальной машины.
 
