@@ -12,8 +12,8 @@ permalink: /adm/databases/
 
 **Реляционные**
 
-[MySQL](/adm/databases/mysql/)  
 [PostgreSQL](/adm/databases/postgresql/)  
+[MySQL](/adm/databases/mysql/)
 [Oracle](https://oracle-dba.ru/database/installation/)
 
 <br/>

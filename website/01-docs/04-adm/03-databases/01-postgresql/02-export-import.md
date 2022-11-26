@@ -105,14 +105,14 @@ $ pg_dump -h <DataBaseName> \
 
 ```
 // Export
-$ pg_dump --host=<DataBaseName> --username=<DataBaseUser> --dbname=<DataBaseName> --schema=<SCHEMA_NAME> > /home/marley/tmp/<SCHEMA_NAME>.dmp
+$ pg_dump --host=<DataBaseHostName> --username=<DataBaseUserName> --dbname=<DataBaseName> --schema=<SCHEMA_NAME> > /home/marley/tmp/<SCHEMA_NAME>.dmp
 ```
 
 <br/>
 
 ```
 // Import
-$ psql --host=<DataBaseName> --username=<DataBaseUser> --dbname=<DataBaseName> < /home/marley/tmp/<SCHEMA_NAME>.dmp
+$ psql --host=<DataBaseHostName> --username=<DataBaseUserName> --dbname=<DataBaseName> < /home/marley/tmp/<SCHEMA_NAME>.dmp
 ```
 
 <br/>

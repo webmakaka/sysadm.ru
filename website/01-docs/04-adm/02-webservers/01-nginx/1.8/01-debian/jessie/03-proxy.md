@@ -8,7 +8,7 @@ permalink: /adm/webservers/nginx/1.8/debian/jessie/proxy/
 
 # Настройка Nginx как proxy сервера
 
-Устанавливаю также как <a href="/adm/webservers/nginx/1.8/debian/jessie/install/">здесь</a>
+Устанавливаю также как <a href="/adm/webservers/nginx/1.8/debian/jessie/setup/">здесь</a>
 
 На 192.168.1.202 работает webserver и принимает и корректно обрабатывает запросы на обращение по адресу sysadm.ru на порту 8080.
 

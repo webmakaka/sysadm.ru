@@ -86,7 +86,7 @@ $ lxc image list
 ```
 
 ```
-$ lxc image import /mnt/dsk1/images/image_location --alias my-export
+$ lxc image import /mnt/dsk1/images/image_location --alias myimage
 ```
 
 ```
@@ -103,6 +103,8 @@ $ lxc list
 
 ```
 $ ssh <IP>
+
+$ cat /etc/os-release
 ```
 
 <br/>
@@ -125,9 +127,6 @@ $ lxc stop myimage
 $ lxc start myimage
 
 $ lxc delete myimage --force
-
-
-
 
 lxc storage list
 
@@ -177,6 +176,12 @@ lxc file push myfile myubuntu/root/
 
 lxc file pull first/etc/hosts .
 ```
+
+<!-- <br/>
+
+```
+// Error: Image with same fingerprint already exists
+``` -->
 
 <br/>
 

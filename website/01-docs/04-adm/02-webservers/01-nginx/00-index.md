@@ -18,7 +18,7 @@ permalink: /adm/webservers/nginx/
 
 ### Nginx 1.8.X
 
-[Инсталляция Nginx сервера на Debian из пакетов](/adm/webservers/nginx/1.8/debian/jessie/install/)
+[Инсталляция Nginx сервера на Debian из пакетов](/adm/webservers/nginx/1.8/debian/jessie/setup/)
 
 [Инсталляция PHP и настройка для работы с Nginx](/adm/webservers/nginx/1.8/debian/jessie/php/)
 

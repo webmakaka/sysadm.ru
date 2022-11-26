@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Nginx 1.8 сервера на Debian из пакетов
 description: Инсталляция Nginx 1.8 сервера на Debian из пакетов
 keywords: Инсталляция Nginx 1.8 сервера на Debian из пакетов
-permalink: /adm/webservers/nginx/1.8/debian/jessie/install/
+permalink: /adm/webservers/nginx/1.8/debian/jessie/setup/
 ---
 
 # Инсталляция Nginx 1.8 сервер на Debian из пакетов

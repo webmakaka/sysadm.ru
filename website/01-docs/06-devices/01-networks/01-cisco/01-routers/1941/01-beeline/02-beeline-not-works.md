@@ -116,6 +116,27 @@ $ ssh \
     192.168.1.1
 ```
 
+<!--
+
+ssh -o KexAlgorithms="diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1" 172.16.100.65
+
+=======
+
+
+
+echo "KexAlgorithms diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1" >>/etc/ssh/ssh_config.d/weak.conf
+
+
+Удалить файл
+
+/etc/ssh/ssh_config.d/weak.conf
+
+<br/>
+
+https://askubuntu.com/questions/1279881/ubuntu-20-04-unable-to-ssh-to-cisco-ios
+
+-->
+
 <br/>
 
 ```
