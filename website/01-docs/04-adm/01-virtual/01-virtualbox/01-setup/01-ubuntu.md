@@ -9,7 +9,7 @@ permalink: /adm/virtual/virtualbox/setup/ubuntu/
 # Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
 
 Делаю:  
-03.10.2022
+03.01.2023
 
 <br/>
 
@@ -52,14 +52,14 @@ $ sudo su -
 **Последняя 6.1 ее и ставлю**
 
 ```
-# apt install -y virtualbox-6.1
+# apt install -y virtualbox-7.0
 ```
 
 <br/>
 
 ```
 # vboxmanage --version
-6.1.38r153438
+7.0.4r154605
 ```
 
 <br/>
@@ -253,8 +253,7 @@ $ sudo su -
 
 ```
 ###############################
-
-# USER DEFINED
+# READ BASH PROFILE
 
 . ~/.bash_profile
 ###############################
@@ -274,7 +273,6 @@ $ vi ~/.bash_profile
 
 ```shell
 ### VirtualBox ################
-
 export VM_HOME=$HOME/machines
 
 ###############################
@@ -291,6 +289,7 @@ $ source ~/.bash_profile
 
 ```
 $ echo ${VM_HOME}
+$ mkdir -p ${VM_HOME}
 ```
 
 <!--
