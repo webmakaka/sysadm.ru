@@ -133,7 +133,7 @@ $ cd ${VM_BACKUPS}
 
 $ cd <machine>
 
-$ VBoxManage import ./vm_centos_jboss_postgresql.ovf
+$ VBoxManage import ./Notes.ovf
 ```
 
 <br/>
@@ -166,13 +166,137 @@ Successfully imported the appliance.
 $ vboxmanage list vms
 ```
 
-Запустить импортированную виртуальную машину
+<br/>
+
+### Запустить импортированную виртуальную машину
+
+Нужно проверить, что создана виртуальная сеть. В моем случае.
+
+File -> Network Manager -> Host-only Networks -> Create -> ip 192.168.56.1 -> DHCP Server (Disabled)
+
+<br/>
+
+```
+$ vm=Notes
+$ vboxmanage startvm ${vm} -type headless &
+```
+
+<br/>
+
+```
+$ ifconfig
+```
+
+
+```
+vboxnet0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.56.1  netmask 255.255.255.0  broadcast 192.168.56.255
+        inet6 fe80::800:27ff:fe00:0  prefixlen 64  scopeid 0x20<link>
+        ether 0a:00:27:00:00:00  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 47  bytes 6931 (6.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+
+<br/>
+
+### Дополнительно по настройке сети после импорта
+
+Иногда после импорта отсутствуют сетевые адаптеры в системе.
+По крайней мере в Centos 6.
+
+Нужно как-то зайти в виртуалку и отредактировать файл /etc/udev/rules.d/70-persistent-net.rules
+
+Достаточно удалить (рекомендую скопировать конфиг) или правильно настроить соответствие между устройствами и том, какие имена им будут присвоены в системе.
+
+После следует перезагрузить виртуальную машину. (Или попробовать применить правила udev без перезагрузки).
+
+<br/>
+
+Если host-only.  
+Создать глобальный host-only адаптер, работающий на ip 192.168.56.1.
+
+Моя конфигурация.
+
+<br/>
+
+```
+# vi /etc/sysconfig/network-scripts/ifcfg-eth0
+```
+
+<br/>
+
+```
+DEVICE="eth0"
+BOOTPROTO="static"
+ONBOOT="yes"
+IPADDR=192.168.56.11
+NETMASK=255.255.255.0
+GATEWAY=192.168.56.1
+```
+
+<br/>
+
+```
+# service network restart
+```
+
+<br/>
+
+**Как подключиться без консоли VirtubalBox**
+
+Установить <a href="/adm/virtual/virtualbox/setup/ubuntu/">Extension Packs</a> (Там присутствуют какие-то лицензионные огранчения).
+
+<br/>
+
+```
+$ VBoxManage controlvm ${vm} poweroff
+```
+
+<br/>
+
+```
+$ VBoxManage modifyvm ${vm} \
+    --vrde on \
+    --vrdemulticon on \
+    --vrdeauthtype null \
+    --vrdeaddress 192.168.1.101 \
+    --vrdeport 3389
+```
+
+<br/>
+
+192.168.1.101 - хост на котором запущен virtualbox
 
 <br/>
 
 ```
 $ vboxmanage startvm ${vm} -type headless &
 ```
+
+<br/>
+
+    $ sudo apt-get install -y rdesktop
+
+<br/>
+
+    $ rdesktop \
+    -r sound:local \
+    -k common  \
+    -g  1600x1024 \
+    10.20.65.225:3389
+
+<br/>
+
+Login
+
+    $ su - root
+    # rm /etc/udev/rules.d/70-persistent-net.rules
+    # reboot
+
+
 
 <br/>
 
@@ -284,98 +408,3 @@ $ VBoxManage storageattach ${vm} \
 --medium ${vm}-disk001.vmdk
 ```
 
-<br/>
-
-### Дополнительно по настройке сети после импорта
-
-Иногда после импорта отсутствуют сетевые адаптеры в системе.
-По крайней мере в Centos 6.
-
-Нужно как-то зайти в виртуалку. и отредактировать файл /etc/udev/rules.d/70-persistent-net.rules
-
-Достаточно удалить (рекомендую скопировать конфиг) или правильно настроить соответствие между устройствами и том, какие имена им будут присвоены в системе.
-
-После следует перезагрузить виртуальную машину. (Или попробовать применить правила udev без перезагрузки).
-
-<br/>
-
-Если host-only.  
-Создать глобальный host-only адаптер, работающий на ip 192.168.56.1.
-
-Моя конфигурация.
-
-<br/>
-
-```
-# vi /etc/sysconfig/network-scripts/ifcfg-eth0
-```
-
-<br/>
-
-```
-DEVICE="eth0"
-BOOTPROTO="static"
-ONBOOT="yes"
-IPADDR=192.168.56.11
-NETMASK=255.255.255.0
-GATEWAY=192.168.56.1
-```
-
-<br/>
-
-```
-# service network restart
-```
-
-<br/>
-
-**Всетаки, как подключиться**
-
-Установить <a href="/adm/virtual/virtualbox/setup/ubuntu/">Extension Packs</a> (Там присутствуют какие-то лицензионные огранчения).
-
-<br/>
-
-```
-$ VBoxManage controlvm ${vm} poweroff
-```
-
-<br/>
-
-```
-$ VBoxManage modifyvm ${vm} \
-    --vrde on \
-    --vrdemulticon on \
-    --vrdeauthtype null \
-    --vrdeaddress 192.168.1.101 \
-    --vrdeport 3389
-```
-
-<br/>
-
-192.168.1.101 - хост на котором запущен virtualbox
-
-<br/>
-
-```
-$ vboxmanage startvm ${vm} -type headless &
-```
-
-<br/>
-
-    $ sudo apt-get install -y rdesktop
-
-<br/>
-
-    $ rdesktop \
-    -r sound:local \
-    -k common  \
-    -g  1600x1024 \
-    10.20.65.225:3389
-
-<br/>
-
-Login
-
-    $ su - root
-    # rm /etc/udev/rules.d/70-persistent-net.rules
-    # reboot
