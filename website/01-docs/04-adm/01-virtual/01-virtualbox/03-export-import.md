@@ -83,13 +83,13 @@ $ export vm=<machine_name>
 ### Подготовка к Import виртуальной машины
 
 Делаю:  
-03.10.2022
+05.01.2023
 
 <br/>
 
 ```
 $ vboxmanage --version
-6.1.38r153438
+7.0.4r154605
 ```
 
 <br/>
@@ -97,7 +97,7 @@ $ vboxmanage --version
 Задаем переменную с именем импортируемой виртуальной машины.
 
 ```
-$ export vm=vm_centos_jboss_postgresql
+$ export vm=notes
 ```
 
 Создаем каталоги для виртуальной машины и для snapshots
