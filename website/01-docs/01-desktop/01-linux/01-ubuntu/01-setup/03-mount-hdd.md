@@ -46,8 +46,8 @@ Samsung SSD 850 PRO 512GB (EXM02B6Q)
 9b0094b9-5436-46f4-a9a4-0bf547328f36
 
 
-WDC WD5000AAKS-00UU3A0 (01.03B01)
-8e53f2c6-0c0c-4db5-89ed-4935d89c11de
+SSD 1TB
+038d3663-1d33-40ef-8012-16e23e72d159
 ```
 
 <br/>
@@ -64,8 +64,8 @@ $ sudo vi /etc/fstab
 # Samsung SSD 850 PRO 512GB (EXM02B6Q)
 UUID=9b0094b9-5436-46f4-a9a4-0bf547328f36 /mnt/dsk1 ext4 defaults 0 0
 
-# WDC WD5000AAKS-00UU3A0 (01.03B01)
-UUID=8e53f2c6-0c0c-4db5-89ed-4935d89c11de /mnt/dsk2 ext4 defaults 0 0
+# SSD 1TB
+UUID=038d3663-1d33-40ef-8012-16e23e72d159 /mnt/dsk2 ext4 defaults 0 0
 ```
 
 <br/>
