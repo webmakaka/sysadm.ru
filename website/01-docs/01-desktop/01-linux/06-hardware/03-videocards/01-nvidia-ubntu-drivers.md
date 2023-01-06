@@ -8,56 +8,58 @@ permalink: /desktop/linux/hardware/videocards/nvidia/ubuntu/drivers/
 
 # Установить в ubuntu nvidia драйвера вместо opensource
 
-<br/>
-
-
-Карточка 1650.
-
-Под минимальной нагружкой в ubuntu 20.04, 22.04 с драйверами nvidia 510 мониторы гасну и кулера начинают работать на 100%. Не знаю где баг. В линуксе или в драйверах. С опенсорсными работает оч. плохо. Но не виснет.
-
 
 <br/>
 
-С опенсорс
 
-```
-=======================
-  glmark2 Score: 279 
-=======================
-```
+Моя карточка 1650.
 
 <br/>
 
-С NVidia было 7k (если ничего не путаю)
-
-
-
-<br/>
-
-Наверное, имееет смысл зайти на сайт и посмотреть последние версии драйверов там:
-
-https://www.nvidia.com/en-us/geforce/drivers/
-
-Не все версии драйверов подходят.
-
+Делаю:  
+06.01.2023
 
 <br/>
 
 ```
-$ ubuntu-drivers devices
 == /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0 ==
 modalias : pci:v000010DEd00001F82sv000010DEsd00001F82bc03sc00i00
 vendor   : NVIDIA Corporation
 model    : TU117 [GeForce GTX 1650]
 driver   : nvidia-driver-418-server - distro non-free
-driver   : nvidia-driver-470-server - distro non-free
-driver   : nvidia-driver-510-server - distro non-free
+driver   : nvidia-driver-525-server - distro non-free
+driver   : nvidia-driver-525 - distro non-free
 driver   : nvidia-driver-450-server - distro non-free
-driver   : nvidia-driver-510 - distro non-free recommended
 driver   : nvidia-driver-470 - distro non-free
+driver   : nvidia-driver-515-open - distro non-free
+driver   : nvidia-driver-525-open - distro non-free recommended
+driver   : nvidia-driver-470-server - distro non-free
+driver   : nvidia-driver-515 - distro non-free
+driver   : nvidia-driver-510 - distro non-free
+driver   : nvidia-driver-515-server - distro non-free
 driver   : xserver-xorg-video-nouveau - distro free builtin
+``
+
+<br/>
+
+
+Не включались мониторы. Удалось выйти в консоль. Починилось установив следующую версию`. Предварительно удалив имеющиеся драйвера.
+
+
+```
+$ sudo dpkg -l | grep nvidia-driver | awk '{print $2}'
+nvidia-driver-515
+
+$ sudo dpkg -P $(dpkg -l | grep nvidia-driver | awk '{print $2}')
+
+$ sudo apt install -y nvidia-driver-515
 ```
 
+
+
+<br/>
+
+### Остальное, наверное уже неактуально.
 
 <br/>
 
