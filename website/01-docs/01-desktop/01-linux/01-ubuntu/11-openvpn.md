@@ -11,7 +11,7 @@ permalink: /desktop/linux/ubuntu/vpn/openvpn/
 https://openvpn.net/community-downloads/
 
 Делаю!  
-09.03.2022
+09.01.2023
 
 <br/>
 
@@ -146,7 +146,7 @@ https://www.ivpn.net/knowledgebase/linux/linux-autostart-openvpn-in-systemd-ubun
 <br/>
 
 ```
-$ sudo apt install openvpn-systemd-resolved
+$ sudo apt install -y openvpn-systemd-resolved
 ```
 
 <br/>

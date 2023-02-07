@@ -50,7 +50,6 @@ startxfce4 &
 
 <br/>
 
-
 ```
 $ sudo chmod +x ~/.vnc/xstartup
 
@@ -71,7 +70,9 @@ $ sudo apt-add-repository ppa:remmina-ppa-team/remmina-next ; sudo apt-get updat
 
 <br/>
 
-    $ remmina
+```
+$ remmina
+```
 
 После запуска, следует создать новый профиль для подключения. Стартовое окно оно не для подключения а для фильтрации уже имеющися подключений.
 
@@ -87,17 +88,15 @@ Protocol: Remmina VNC Plugin
 
 Блин, не помню откуда 5901.
 
-
 <br/>
 
 **Для windows хостов:**
 
-RDP 
+RDP
 
 В общих настройках remmina выбрать
 
 Preferences -> RDP -> Use client keyboard mapping
-
 
 <br/>
 
@@ -112,7 +111,9 @@ https://www.realvnc.com/en/connect/download/viewer/linux/
 
 <br/>
 
-    $ vncviewer
+```
+$ vncviewer
+```
 
 <br/>
 
