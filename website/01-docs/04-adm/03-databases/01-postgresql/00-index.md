@@ -18,7 +18,7 @@ permalink: /adm/databases/postgresql/
 ### Подключение к базе в командной строке:
 
 ```
-$ psql "host=FQDN_хоста
+$ psql "host=FQDN_хоста \
       port=6432 \
       sslmode=verify-full \
       dbname=<имя базы данных> \

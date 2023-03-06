@@ -15,20 +15,24 @@ https://www.postgresql.org/download/linux/ubuntu/
 <br/>
 
 **Делаю:**  
-19.12.2022
+17.02.2023
 
 ```
 $ PG_VERSION=9.6
 
 # Create the file repository configuration:
-sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+$ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
 # Import the repository signing key:
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+$ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
 # Update the package lists:
-sudo apt-get update
+$ sudo apt-get update
+```
 
+<br/>
+
+```
 # Install the latest version of PostgreSQL.
 # If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
 sudo apt-get -y install postgresql
@@ -42,7 +46,6 @@ sudo apt-get -y install postgresql
 # service postgresql restart
 # service postgresql status
 # systemctl enable postgresql
-
 ```
 
 <br/>
@@ -50,9 +53,10 @@ sudo apt-get -y install postgresql
 ### Если нужно установить только psql клиент
 
 ```
-$ sudo apt-get -y install postgresql-client-15
+$ apt-cache search postgresql-client
+$ sudo apt install -y  postgresql-client-15
 $ psql --version
-psql (PostgreSQL) 15.1 (Ubuntu 15.1-1.pgdg20.04+1)
+psql (PostgreSQL) 15.2 (Ubuntu 15.2-1.pgdg20.04+1)
 ```
 
 <br/>

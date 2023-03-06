@@ -13,7 +13,7 @@ permalink: /desktop/linux/ubuntu/ace-stream-player/
 ### Инсталляция ACE Stream плеера в Ubuntu 20.04.01 / 16.04 / 18.04.4
 
 Делаю:  
-01.05.2021
+04.03.2023
 
     $ sudo snap install acestreamplayer
     $ acestreamplayer
@@ -37,4 +37,4 @@ http://info.acestream.org/#/test
 
 ### Ссылки на трансляции футбола (Ace Stream):
 
--   pimpletv(.)ru (Заблокировано РКН)
+- pimpletv(.)ru (Заблокировано РКН)
