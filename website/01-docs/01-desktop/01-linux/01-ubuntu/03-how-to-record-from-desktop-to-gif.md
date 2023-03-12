@@ -9,7 +9,7 @@ permalink: /desktop/linux/ubuntu/how-to-record-from-desktop-to-gif/
 # Запись с экрана монитора в GIF
 
 Делаю:  
-07.05.2021
+07.03.2023
 
 <br/>
 
@@ -18,3 +18,9 @@ permalink: /desktop/linux/ubuntu/how-to-record-from-desktop-to-gif/
     $ sudo apt-get install -y peek
 
     $ peek
+
+<br/>
+
+Если не удается найти на большом количестве мониторов, нужно в настройках монитров менять порядок, пока окно peek не появится.
+
+https://github.com/phw/peek/issues/512

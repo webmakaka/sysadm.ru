@@ -8,81 +8,65 @@ permalink: /adm/virtual/virtualbox/export-import/
 
 # Export и Import виртуальных машин VirtualBox
 
-### Предварительные шаги
-
-Необходимо, чтобы переменные vm, VM_HOME и VM_BACKUPS были заданы.
-
-Проверить их существование, можно командами:
-
-    $ echo ${vm}
-    $ echo ${VM_HOME}
-    $ echo ${VM_BACKUPS}
-
 <br/>
 
-```
-// Обычно у меня
-$ export VM_HOME=${HOME}/machines
-$ export VM_BACKUPS=${VM_HOME}/backups
-```
+### Подготовка к Export'у виртуальной машины
 
-<br/>
+Делаю:
+12.03.2023
 
-```
-// Создаю калалог, если нужно
-$ mkdir -p ${VM_BACKUPS}
-```
+Может быть использован как вариант создания резервной копии или для создания копии уже работающей виртуальной машины.
 
 <br/>
 
 ```
 // Задаю переменную с именем виртуальной машины:
 $ vboxmanage list vms
-$ export vm=<machine_name>
+"Notes" {2e04338d-4bd9-415c-967c-65364490bcb4}
 ```
 
 <br/>
 
-### Подготовка к Export'у виртуальной машины
+```
+// Выключить виртуальную машину, при необходимости
+$ VBoxManage controlvm ${VM} poweroff
+```
 
-Делаю:  
-27.11.2022
+<br/>
 
-Может быть использован как вариант создания резервной копии или для создания копии уже работающей виртуальной машины.
+```
+$ export VM=Notes
+$ export VM_HOME=${HOME}/machines
+$ export VM_BACKUPS=${VM_HOME}/backups
+```
 
-Перед выполнением команды export необходимо выключить виртуальную машину или поставить её на паузу:
-
-Лучший вариант, штатными средствами операционной системы просто выключить ее.
-
-// Выключить
-
-    $ VBoxManage controlvm ${vm} poweroff
-
-// Или поставить на паузу
-
-    $ VBoxManage controlvm ${vm} pause
-
-// Потом можно будет снять с паузы
-
-    $ VBoxManage controlvm ${vm} resume
+```
+$ echo ${VM}
+$ echo ${VM_HOME}
+$ echo ${VM_BACKUPS}
+```
 
 <br/>
 
 ### Команды Export'a виртуальной машины
 
+```
 // Создать каталог для backup
+$ mkdir -p ${VM_BACKUPS}/${VM}
+```
 
-    $ mkdir -p ${VM_BACKUPS}/${vm}
+<br/>
 
+```
 // Экспортировать виртуальную машину
-
-    $ VBoxManage export ${vm} -o ${VM_BACKUPS}/${vm}/${vm}.ovf
+$ VBoxManage export ${VM} -o ${VM_BACKUPS}/${VM}/${VM}.ovf
+```
 
 <br/>
 
 ### Подготовка к Import виртуальной машины
 
-Делаю:  
+Делаю:
 05.01.2023
 
 <br/>
@@ -187,7 +171,6 @@ $ vboxmanage startvm ${vm} -type headless &
 $ ifconfig
 ```
 
-
 ```
 vboxnet0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 192.168.56.1  netmask 255.255.255.0  broadcast 192.168.56.255
@@ -198,7 +181,6 @@ vboxnet0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         TX packets 47  bytes 6931 (6.9 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
-
 
 <br/>
 
@@ -215,7 +197,7 @@ vboxnet0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 <br/>
 
-Если host-only.  
+Если host-only.
 Создать глобальный host-only адаптер, работающий на ip 192.168.56.1.
 
 Моя конфигурация.
@@ -295,8 +277,6 @@ Login
     $ su - root
     # rm /etc/udev/rules.d/70-persistent-net.rules
     # reboot
-
-
 
 <br/>
 
@@ -407,4 +387,3 @@ $ VBoxManage storageattach ${vm} \
 --type hdd \
 --medium ${vm}-disk001.vmdk
 ```
-
