@@ -20,22 +20,22 @@ https://www.postgresql.org/download/linux/ubuntu/
 ```
 $ PG_VERSION=9.6
 
-# Create the file repository configuration:
-$ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+// Create the file repository configuration:
+$ sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
-# Import the repository signing key:
+// Import the repository signing key:
 $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
-# Update the package lists:
+// Update the package lists
 $ sudo apt-get update
 ```
 
 <br/>
 
 ```
-# Install the latest version of PostgreSQL.
-# If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
-sudo apt-get -y install postgresql
+// Install the latest version of PostgreSQL.
+// If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
+$ sudo apt-get -y install postgresql
 ```
 
 <br/>
@@ -57,6 +57,37 @@ $ apt-cache search postgresql-client
 $ sudo apt install -y  postgresql-client-15
 $ psql --version
 psql (PostgreSQL) 15.2 (Ubuntu 15.2-1.pgdg20.04+1)
+```
+
+<br/>
+
+UPD. Если ошибка (Была в mint), что-то вроде:
+
+```
+E: The repository 'https://apt.postgresql.org/pub/repos/apt una-pgdg Release' does not have a Release file.
+```
+
+<br/>
+
+```
+$ sudo vi /etc/apt/sources.list.d/pgdg.list
+```
+
+```
+// В данном случае нужна была focal
+deb https://apt.postgresql.org/pub/repos/apt focal-pgdg main
+```
+
+<br/>
+
+```
+$ cat /etc/os-release
+NAME="Linux Mint"
+VERSION="20.3 (Una)"
+ID=linuxmint
+ID_LIKE=ubuntu
+PRETTY_NAME="Linux Mint 20.3"
+VERSION_ID="20.3"
 ```
 
 <br/>
