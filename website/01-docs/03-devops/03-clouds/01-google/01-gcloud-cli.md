@@ -17,6 +17,11 @@ http://cloud.google.com/sdk/
 
 ### Ubuntu 18.04
 
+// UPD (2023)  
+// https://cloud.google.com/storage/docs/gsutil_install#deb
+
+<br/>
+
     $ export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 
     $ echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list

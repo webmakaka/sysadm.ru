@@ -38,6 +38,10 @@ sslmode - если используется ssl
 
 <br/>
 
+[Запросы к базе PostgreSQL](/adm/databases/postgresql/queries/)
+
+<br/>
+
 ### Автоустановщик PostgreSQL в режиме master-slave и standalone:
 
 <a href="https://www.linux.org.ru/news/opensource/15245410">LOR</a> |<a href="https://github.com/Anton-PG/pgsql-for-you">Git</a>

@@ -10,6 +10,11 @@ permalink: /desktop/hackintosh/setup/
 
 <br/>
 
+**UPD: (Надо посмотреть) Как получить быструю виртуальную macOS Ventura в линуксе**  
+https://www.linux.org.ru/articles/desktop/17166844
+
+<br/>
+
 **Делаю:**  
 23.04.2021
 
