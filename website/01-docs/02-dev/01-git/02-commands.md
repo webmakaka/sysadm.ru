@@ -20,25 +20,38 @@ permalink: /dev/git/commands/
 
 ### Глобальный конфиг
 
-    $ vi ~/.gitconfig
+```
+// Глобальный конфиг
+$ vi ~/.gitconfig
+```
+
+<br/>
+
+```
+// Задать main как default branch
+$ git config --global init.defaultBranch main
+```
 
 <br/>
 
 ### Остальные команды
 
+```
 // Задать парамеры идентификации git глобально (лучше использовать локально, когда много git проектов с разными пользователями)
-
-    $ git config --global user.name "your_username"
-    $ git config --global user.email "your_email"
+$ git config --global user.name "your_username"
+$ git config --global user.email "your_email"
+```
 
 <br/>
 
+```
 // Посмотреть текущие параметры
+$ git config -l  --global
+$ git config --list
 
-    $ git config --list
-
-    $ git config user.name
-    $ git config user.email
+$ git config user.name
+$ git config user.email
+```
 
 <br/>
 
@@ -183,9 +196,11 @@ permalink: /dev/git/commands/
 
 <br/>
 
-    $ git remote -v
-    origin	https://github.com/webmakaka/sysadm.ru (fetch)
-    origin	https://github.com/webmakaka/sysadm.ru (push)
+```
+$ git remote -v
+origin	https://github.com/webmakaka/sysadm.ru (fetch)
+origin	https://github.com/webmakaka/sysadm.ru (push)
+```
 
 <br/>
 
@@ -193,29 +208,35 @@ permalink: /dev/git/commands/
 
 <br/>
 
-    // Меняю с https на ssh
-
-    $ git remote add origin git@github.com:webmakaka/sysadm.ru.git
-    $ git push origin master
+```
+// Меняю с https на ssh
+$ git remote add origin git@github.com:webmakaka/sysadm.ru.git
+$ git push origin master
+```
 
 <br/>
 
-    // Или можно переключить origin на bitbucket
-
-    $ git remote add origin https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git
-    $ git push -u origin master
+```
+// Или можно переключить origin на bitbucket
+$ git remote add origin https://sysadm-ru@bitbucket.org/sysadm-ru/sysadm.ru.git
+$ git push -u origin master
+```
 
 <br/>
 
 ### Объединить несколько коммитов в 1 с помощью rebase
 
-    // Объединить последние коммит к определенному коммиту
-    $ git rebase -i fe2aeafe3403901e37a01a7f403cee01801830c6
+```
+// Объединить последние коммит к определенному коммиту
+$ git rebase -i fe2aeafe3403901e37a01a7f403cee01801830c6
+```
 
 <br/>
 
-    // Объединить 5 последних коммитов
-    $ git rebase -i HEAD~5
+```
+// Объединить 5 последних коммитов
+$ git rebase -i HEAD~5
+```
 
 заменить pick на squash для всех кроме первого (сверху).
 
@@ -227,17 +248,19 @@ https://ru.stackoverflow.com/questions/462251/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D1
 
 ### Заменить заголовок коммита
 
--- Меняю в последнем коммите заголовок
-
-    $ git commit --amend -m "ваш заголовок"
+```
+// Поменять в последнем коммите заголовок
+$ git commit --amend -m "ваш заголовок"
+```
 
 <br/>
 
 ### Поменять автора коммита
 
+```
 -- Меняю в последнем коммите автора
-
-    $ git commit --amend --author "My Name <my-email@my-company.com>"
+$ git commit --amend --author "My Name <my-email@my-company.com>"
+```
 
 https://stackoverflow.com/questions/3042437/change-commit-author-at-one-specific-commit
 
@@ -267,7 +290,9 @@ https://stackoverflow.com/questions/10697463/resolve-git-merge-conflicts-in-favo
 
 ### Выделение цветом
 
-    $ git config --global color.ui true
+```
+$ git config --global color.ui true
+```
 
 Можно также посмотреть здесь:  
 https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
@@ -276,38 +301,50 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 
 ### Показывать текущую ветку (branch) в консоли:
 
-    $ curl -o ~/.git-prompt.sh \
-    https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+```
+$ curl -o ~/.git-prompt.sh \
+https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
-    $ source ~/.git-prompt.sh
+$ source ~/.git-prompt.sh
 
-    $ export PS1='[\W] git:$(__git_ps1 "(%s)") '
-
-или
-
-    $ export PS1='\W$(__git_ps1 "(%s)") > '
+$ export PS1='[\W] git:$(__git_ps1 "(%s)") '
+```
 
 или
 
-    $ export PS1='Geoff[\W]$(__git_ps1 "(%s)"): '
+```
+$ export PS1='\W$(__git_ps1 "(%s)") > '
+```
+
+или
+
+```
+$ export PS1='Geoff[\W]$(__git_ps1 "(%s)"): '
+```
 
 <br/>
 
 ### Откатить файлы к определенному коммиту
 
-    git checkout a82de97faaafee458d47c60a51e12f7d7c7dba13 file_path/file_name
+```
+git checkout a82de97faaafee458d47c60a51e12f7d7c7dba13 file_path/file_name
 
-    git rebase -i HEAD~2
+git rebase -i HEAD~2
+```
 
 <br/>
 
 ### Создать ветку от произвольного коммита
 
-    $ git checkout -b <branch-name> <commit-id>
+```
+$ git checkout -b <branch-name> <commit-id>
+```
 
 Или
 
-    $ git branch <branch-name> <commit-id>
+```
+$ git branch <branch-name> <commit-id>
+```
 
 <br/>
 
@@ -315,7 +352,9 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 
 <br/>
 
-    $ git cherry-pick 0b72ec4ba3ca997b89564d3d9c61cb10a3127ba3
+```
+$ git cherry-pick 0b72ec4ba3ca997b89564d3d9c61cb10a3127ba3
+```
 
 <br/>
 
@@ -329,8 +368,10 @@ https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 
 Я удалял этот submodule
 
-    $ rm ./project2-graphql-apollo/app/client/.git
-    $ git rm --cached ./project2-graphql-apollo/app/client/
+```
+$ rm ./project2-graphql-apollo/app/client/.git
+$ git rm --cached ./project2-graphql-apollo/app/client/
+```
 
 <br/>
 
