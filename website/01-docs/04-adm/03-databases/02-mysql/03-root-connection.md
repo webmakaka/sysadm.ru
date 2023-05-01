@@ -14,21 +14,23 @@ permalink: /adm/databases/mysql/root-connection/
 
 <br/>
 
-    # mysql -u root
+```
+# mysql -u root
 
-    mysql> USE mysql;
-    mysql> SELECT user,host FROM user;
+mysql> USE mysql;
+mysql> SELECT user,host FROM user;
 
-    mysql> SELECT USER(), CURRENT_USER();
+mysql> SELECT USER(), CURRENT_USER();
 
-    mysql> CREATE USER 'root'@'%' IDENTIFIED BY 'root';
+mysql> CREATE USER 'root'@'%' IDENTIFIED BY 'root';
 
-    mysql> GRANT USAGE ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+mysql> GRANT USAGE ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
 
-    mysql> GRANT USAGE ON *.* TO 'root'@'%' WITH GRANT OPTION;
+mysql> GRANT USAGE ON *.* TO 'root'@'%' WITH GRANT OPTION;
 
-    mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
 
-    mysql> FLUSH PRIVILEGES;
+mysql> FLUSH PRIVILEGES;
 
-    mysql> exit
+mysql> exit
+```

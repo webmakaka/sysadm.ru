@@ -44,7 +44,7 @@ https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7
 
 ### [Kubernetes Package Management (Kustomize, Helm)](/devops/containers/kubernetes/packages/)
 
-### [Service Mesh (ISTIO)](/devops/containers/kubernetes/service-mesh/istio/)
+### [Service Mesh (ISTIO)](//gitops.ru/courses/containers/kubernetes/service-mesh/istio/)
 
 <br/>
 
