@@ -54,9 +54,7 @@ permalink: /desktop/linux/
 
 ### [Мониторинг](/monitoring/)
 
-### [Logging](/adm/logging/)
-
-### [DevOps](/devops/)
+### [Logging](/logging/)
 
 <br/>
 

@@ -41,11 +41,11 @@ https://sundog-education.com/elasticsearch/
 
 ### Донастройка виртуальной машины
 
-![elk ubuntu vbox 01](/img/adm/logging/elk/intall/elk-ubuntu-vbox-01.png 'elk ubuntu vbox 01'){: .center-image }
+![elk ubuntu vbox 01](/img/logging/elk/intall/elk-ubuntu-vbox-01.png 'elk ubuntu vbox 01'){: .center-image }
 
 <br/>
 
-![elk ubuntu vbox 02](/img/adm/logging/elk/intall/elk-ubuntu-vbox-02.png 'elk ubuntu vbox 02'){: .center-image }
+![elk ubuntu vbox 02](/img/logging/elk/intall/elk-ubuntu-vbox-02.png 'elk ubuntu vbox 02'){: .center-image }
 
 <br/>
 

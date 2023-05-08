@@ -21,11 +21,11 @@ https://www.youtube.com/watch?v=MNId4HG0wV8&list=PL34sAs7_26wOgpqMW_0_E95k9tq2Vk
 Рисунки индуса:
 <br/>
 
-![elk docker Fluentd](/img/adm/logging/elk/intall/elk-docker-fluentd-01.png 'elk docker Fluentd'){: .center-image }
+![elk docker Fluentd](/img/logging/elk/intall/elk-docker-fluentd-01.png 'elk docker Fluentd'){: .center-image }
 
 <br/>
 
-![elk docker Fluentd](/img/adm/logging/elk/intall/elk-docker-fluentd-02.png 'elk docker Fluentd'){: .center-image }
+![elk docker Fluentd](/img/logging/elk/intall/elk-docker-fluentd-02.png 'elk docker Fluentd'){: .center-image }
 
 <br/>
 
@@ -172,13 +172,13 @@ https://docs.fluentd.org/v1.0/articles/install-by-rpm
 
 http://localhost:5601
 
-![elk docker Fluentd](/img/adm/logging/elk/intall/elk-docker-fluentd-03.png 'elk docker Fluentd'){: .center-image }
+![elk docker Fluentd](/img/logging/elk/intall/elk-docker-fluentd-03.png 'elk docker Fluentd'){: .center-image }
 
-![elk docker Fluentd](/img/adm/logging/elk/intall/elk-docker-fluentd-04.png 'elk docker Fluentd'){: .center-image }
+![elk docker Fluentd](/img/logging/elk/intall/elk-docker-fluentd-04.png 'elk docker Fluentd'){: .center-image }
 
-![elk docker Fluentd](/img/adm/logging/elk/intall/elk-docker-fluentd-05.png 'elk docker Fluentd'){: .center-image }
+![elk docker Fluentd](/img/logging/elk/intall/elk-docker-fluentd-05.png 'elk docker Fluentd'){: .center-image }
 
-![elk docker Fluentd](/img/adm/logging/elk/intall/elk-docker-fluentd-06.png 'elk docker Fluentd'){: .center-image }
+![elk docker Fluentd](/img/logging/elk/intall/elk-docker-fluentd-06.png 'elk docker Fluentd'){: .center-image }
 
 <br/>
 
@@ -187,7 +187,7 @@ http://localhost:5601
     # logger -t JUNGLE hello this is from the efkclient for testing
     # tail -f /var/log/messages
 
-![elk docker Fluentd](/img/adm/logging/elk/intall/elk-docker-fluentd-07.png 'elk docker Fluentd'){: .center-image }
+![elk docker Fluentd](/img/logging/elk/intall/elk-docker-fluentd-07.png 'elk docker Fluentd'){: .center-image }
 
 <br/>
 

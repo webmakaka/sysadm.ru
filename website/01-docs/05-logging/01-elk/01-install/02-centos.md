@@ -19,27 +19,27 @@ https://www.youtube.com/watch?v=Cfbanio3Lao&list=PL34sAs7_26wOgpqMW_0_E95k9tq2Vk
 Рисунки индуса:
 <br/>
 
-![elk install 01](/img/adm/logging/elk/intall/elk-install-01.png 'elk install 01'){: .center-image }
+![elk install 01](/img/logging/elk/intall/elk-install-01.png 'elk install 01'){: .center-image }
 
 <br/>
 
-![elk install 02](/img/adm/logging/elk/intall/elk-install-02.png 'elk install 02'){: .center-image }
+![elk install 02](/img/logging/elk/intall/elk-install-02.png 'elk install 02'){: .center-image }
 
 <br/>
 
-![elk install 03](/img/adm/logging/elk/intall/elk-install-03.png 'elk install 03'){: .center-image }
+![elk install 03](/img/logging/elk/intall/elk-install-03.png 'elk install 03'){: .center-image }
 
 <br/>
 
-![elk install 04](/img/adm/logging/elk/intall/elk-install-04.png 'elk install 04'){: .center-image }
+![elk install 04](/img/logging/elk/intall/elk-install-04.png 'elk install 04'){: .center-image }
 
 <br/>
 
-![elk install 05](/img/adm/logging/elk/intall/elk-install-05.png 'elk install 05'){: .center-image }
+![elk install 05](/img/logging/elk/intall/elk-install-05.png 'elk install 05'){: .center-image }
 
 <br/>
 
-![elk install 06](/img/adm/logging/elk/intall/elk-install-06.png 'elk install 06'){: .center-image }
+![elk install 06](/img/logging/elk/intall/elk-install-06.png 'elk install 06'){: .center-image }
 
 <br/>
 
@@ -153,4 +153,4 @@ http://server.example.com/app/kibana
 
 <br/>
 
-![elk install 07](/img/adm/logging/elk/intall/elk-install-07.png 'elk install 07'){: .center-image }
+![elk install 07](/img/logging/elk/intall/elk-install-07.png 'elk install 07'){: .center-image }

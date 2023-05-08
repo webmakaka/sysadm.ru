@@ -21,7 +21,7 @@ https://www.youtube.com/watch?v=U8Iq4vm2Ekk&list=PL34sAs7_26wOgpqMW_0_E95k9tq2Vk
 Рисунок индуса:
 <br/>
 
-![elk docker](/img/adm/logging/elk/intall/elk-docker.png 'elk docker'){: .center-image }
+![elk docker](/img/logging/elk/intall/elk-docker.png 'elk docker'){: .center-image }
 
 <br/>
 
