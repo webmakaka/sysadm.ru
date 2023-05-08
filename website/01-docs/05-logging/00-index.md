@@ -3,7 +3,7 @@ layout: page
 title: Logging
 description: Logging
 keywords: adm, logging
-permalink: /adm/logging/
+permalink: /logging/
 ---
 
 # Logging
