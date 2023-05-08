@@ -3,7 +3,7 @@ layout: page
 title: MongoDB инсталляция в Centos 6.X
 description: MongoDB инсталляция в Centos 6.X
 keywords: linux, centos, mongodb, install
-permalink: /adm/databases/mongodb/setup/centos/
+permalink: /databases/mongodb/setup/centos/
 ---
 
 # MongoDB инсталляция в Centos 6.X

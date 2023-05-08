@@ -3,7 +3,7 @@ layout: page
 title: VBoxManage error Nonexistent host networking interface name eth0 (VERR_INTERNAL_ERROR)
 description: VBoxManage error Nonexistent host networking interface name eth0 (VERR_INTERNAL_ERROR)
 keywords: VBoxManage error Nonexistent host networking interface name eth0 (VERR_INTERNAL_ERROR)
-permalink: /adm/virtual/virtualbox/network/nonexistent-host-networking-interface/
+permalink: /virtual/virtualbox/network/nonexistent-host-networking-interface/
 ---
 
 # VBoxManage: error: Nonexistent host networking interface, name 'eth0' (VERR_INTERNAL_ERROR)

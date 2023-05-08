@@ -3,7 +3,7 @@ layout: page
 title: Удаленный доступ к базе rootом с правами суперпользователя
 description: Удаленный доступ к базе rootом с правами суперпользователя
 keywords: Удаленный доступ к базе rootом с правами суперпользователя
-permalink: /adm/databases/mysql/root-connection/
+permalink: /databases/mysql/root-connection/
 ---
 
 # Удаленный доступ к базе root'ом с правами суперпользователя

@@ -3,7 +3,7 @@ layout: page
 title: Vagrant c Docker внутри
 description: Vagrant c Docker внутри
 keywords: Vagrant c Docker внутри
-permalink: /adm/virtual/vagrant/vagrant-with-docker/
+permalink: /virtual/vagrant/vagrant-with-docker/
 ---
 
 # Vagrant c Docker внутри

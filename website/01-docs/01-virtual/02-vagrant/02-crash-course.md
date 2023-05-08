@@ -3,7 +3,7 @@ layout: page
 title: Vagrant Crash Course
 description: Vagrant Crash Course
 keywords: linux, ubuntu, vagrant, youtube
-permalink: /adm/virtual/vagrant/crash-course/
+permalink: /virtual/vagrant/crash-course/
 ---
 
 # [Traversy Media] Vagrant Crash Course (ENG, May 2, 2018)

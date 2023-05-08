@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Nagios в Ubuntu Linux (Xenial)
 description: Инсталляция Nagios в Ubuntu Linux (Xenial)
 keywords: adm, monitoring, nagios, ubuntu, setup
-permalink: /adm/monitoring/nagios/ubuntu/16.04/setup/
+permalink: /monitoring/nagios/ubuntu/16.04/setup/
 ---
 
 # Инсталляция Nagios в Ubuntu Linux (Xenial)

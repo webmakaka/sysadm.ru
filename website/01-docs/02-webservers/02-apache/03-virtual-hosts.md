@@ -3,7 +3,7 @@ layout: page
 title: Настройка виртуальных хостов
 description: Настройка виртуальных хостов
 keywords: Настройка виртуальных хостов
-permalink: /adm/webservers/apache/virtual-hosts/
+permalink: /webservers/apache/virtual-hosts/
 ---
 
 # Настройка виртуальных хостов

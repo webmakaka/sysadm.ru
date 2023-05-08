@@ -3,7 +3,7 @@ layout: page
 title: Уменьшить размер занимаемого виртуальной машиной дискового пространства
 description: Уменьшить размер занимаемого виртуальной машиной дискового пространства
 keywords: Уменьшить размер занимаемого виртуальной машиной дискового пространства
-permalink: /adm/virtual/virtualbox/decrease-disk-space/
+permalink: /virtual/virtualbox/decrease-disk-space/
 ---
 
 # Уменьшить размер занимаемого виртуальной машиной дискового пространства
@@ -30,7 +30,7 @@ permalink: /adm/virtual/virtualbox/decrease-disk-space/
 
 2. Выполняю действия по уменьшению диска
 
-    vboxmanage modifyhd vm_oel62_oracle112_dsk1.vdi compact
+   vboxmanage modifyhd vm_oel62_oracle112_dsk1.vdi compact
 
 В результате мне пришлось сконвертировать vmdk в vdi.
 

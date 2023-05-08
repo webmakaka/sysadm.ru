@@ -3,7 +3,7 @@ layout: page
 title: Команды для работы с базой данных MySQL
 description: Команды для работы с базой данных MySQL
 keywords: Команды для работы с базой данных MySQL
-permalink: /adm/databases/mysql/commands/
+permalink: /databases/mysql/commands/
 ---
 
 # Команды для работы с базой данных MySQL

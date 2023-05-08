@@ -3,7 +3,7 @@ layout: page
 title: VirtialBox Подключение USB устройств
 description: VirtialBox Подключение USB устройств
 keywords: VirtialBox Подключение USB устройств
-permalink: /adm/virtual/virtualbox/usb/
+permalink: /virtual/virtualbox/usb/
 ---
 
 # VirtialBox Подключение USB устройств

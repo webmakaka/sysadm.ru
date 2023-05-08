@@ -3,7 +3,7 @@ layout: page
 title: Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
 description: Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
 keywords: Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
-permalink: /adm/virtual/virtualbox/vm/centos-6/
+permalink: /virtual/virtualbox/vm/centos-6/
 ---
 
 # Создание виртуальной машины VirtualBox с Centos 6.X. в командной строке linux
@@ -264,7 +264,7 @@ http://manpages.ubuntu.com/manpages/lucid/man1/rdesktop.1.html
 
 ### Могут понадобиться следующие команды:
 
-<a href="/adm/virtual/virtualbox/commands/">Вот</a>
+<a href="/virtual/virtualbox/commands/">Вот</a>
 
 <br/>
 
@@ -272,7 +272,7 @@ http://manpages.ubuntu.com/manpages/lucid/man1/rdesktop.1.html
 
 1. Disable SE если он не нужен.
 
-    # sed -i.bkp -e "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
+   # sed -i.bkp -e "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
 
 2. Настройка сетевых интерфейсов.
 

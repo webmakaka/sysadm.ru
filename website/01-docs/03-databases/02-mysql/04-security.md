@@ -3,7 +3,7 @@ layout: page
 title: Improving local file security
 description: Improving local file security
 keywords: Improving local file security
-permalink: /adm/databases/mysql/installation/security/
+permalink: /databases/mysql/installation/security/
 ---
 
 # Improving local file security

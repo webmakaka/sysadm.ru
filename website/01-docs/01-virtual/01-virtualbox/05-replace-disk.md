@@ -3,7 +3,7 @@ layout: page
 title: Замена виртуального диска VirtualBox в командной строке
 description: Замена виртуального диска VirtualBox в командной строке
 keywords: Замена виртуального диска VirtualBox в командной строке
-permalink: /adm/virtual/virtualbox/replace-disk/
+permalink: /virtual/virtualbox/replace-disk/
 ---
 
 # Замена виртуального диска VirtualBox в командной строке

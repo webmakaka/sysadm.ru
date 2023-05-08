@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция PHP и настройка для работы с Nginx 1.6
 description: Инсталляция PHP и настройка для работы с Nginx 1.6
 keywords: Инсталляция PHP и настройка для работы с Nginx 1.6
-permalink: /adm/webservers/nginx/1.6/debian/jessie/php/
+permalink: /webservers/nginx/1.6/debian/jessie/php/
 ---
 
 # Инсталляция PHP и настройка для работы с Nginx 1.6

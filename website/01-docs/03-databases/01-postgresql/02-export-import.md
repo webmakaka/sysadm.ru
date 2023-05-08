@@ -3,7 +3,7 @@ layout: page
 title: Экспорт / Импорты базы Postgres
 description: Экспорт / Импорты базы Postgres
 keywords: databases, linux, export, import
-permalink: /adm/databases/postgresql/export-import/
+permalink: /databases/postgresql/export-import/
 ---
 
 # Экспорт / Импорты базы Postgres

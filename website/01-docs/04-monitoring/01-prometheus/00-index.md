@@ -3,7 +3,7 @@ layout: page
 title: Prometheus Exporters
 description: Prometheus Exporters
 keywords: devops, linux, monitoring, prometheus
-permalink: /adm/monitoring/prometheus/
+permalink: /monitoring/prometheus/
 ---
 
 # Prometheus Exporters
@@ -71,7 +71,7 @@ scrape_configs:
 ```yaml
 - job_name: 'node_exporter'
   static_configs:
-      - targets: ['192.168.1.9:9100']
+    - targets: ['192.168.1.9:9100']
 ```
 
 <br/>
@@ -153,9 +153,9 @@ $ curl http://localhost:9104/metrics
 
 ```yaml
 scrape_configs:
-    - job_name: 'mysqld_exporter'
-      static_configs:
-          - targets: ['192.168.0.11:9104']
+  - job_name: 'mysqld_exporter'
+    static_configs:
+      - targets: ['192.168.0.11:9104']
 ```
 
 <br/>
@@ -187,10 +187,10 @@ blackbox.yml - modify http_2xx module to accept IPv4 as successful probe
 
 ```yaml
 modules:
-    http_2xx:
-        prober: http
-        http:
-            preferred_ip_protocol: 'ip4'
+  http_2xx:
+    prober: http
+    http:
+      preferred_ip_protocol: 'ip4'
 ```
 
 <br/>
@@ -210,28 +210,28 @@ prometheus/prometheus.yml
 ```yaml
 # my global config
 global:
-    scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
-    evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
-    scrape_timeout: 10s
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  scrape_timeout: 10s
 ```
 
 <br/>
 
 ```yaml
 scrape_configs:
-    - job_name: 'blackbox'
-      metrics_path: /probe
-      params:
-          module: [http_2xx]
-      static_configs:
-          - targets: ['https://www.pluralsight.com', 'http://www.prometheus.io']
-      relabel_configs:
-          - source_labels: [__address__]
-            target_label: __param_target
-          - source_labels: [__param_target]
-            target_label: instance
-          - target_label: __address__
-            replacement: 172.31.40.148:9115
+  - job_name: 'blackbox'
+    metrics_path: /probe
+    params:
+      module: [http_2xx]
+    static_configs:
+      - targets: ['https://www.pluralsight.com', 'http://www.prometheus.io']
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 172.31.40.148:9115
 ```
 
 <br/>
@@ -295,7 +295,7 @@ prometheus/prometheus.yml
 
 ```yaml
 scrape_configs:
-    - job_name: 'rabbitmq_exporter'
-      static_configs:
-          - targets: ['172.31.20.86:15692']
+  - job_name: 'rabbitmq_exporter'
+    static_configs:
+      - targets: ['172.31.20.86:15692']
 ```

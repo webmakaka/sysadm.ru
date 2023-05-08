@@ -3,20 +3,20 @@ layout: page
 title: MySQL
 description: MySQL
 keywords: databases, mysql
-permalink: /adm/databases/mysql/
+permalink: /databases/mysql/
 ---
 
 # MySQL
 
 <br/>
 
-[Инсталляция MySQL на Centos](/adm/databases/mysql/setup/)
+[Инсталляция MySQL на Centos](/databases/mysql/setup/)
 
-[Конфигурирование пользователей после инсталляции](/adm/databases/mysql/installation/users/)
+[Конфигурирование пользователей после инсталляции](/databases/mysql/installation/users/)
 
-[Удаленный доступ к базе root'ом с правами суперпользователя](/adm/databases/mysql/root-connection/)
+[Удаленный доступ к базе root'ом с правами суперпользователя](/databases/mysql/root-connection/)
 
-[Improving local file security](/adm/databases/mysql/installation/security/)
+[Improving local file security](/databases/mysql/installation/security/)
 
 <br/>
 
@@ -28,6 +28,6 @@ permalink: /adm/databases/mysql/
 
 ### Команды для работы с базой данных MySQL
 
-[Команды для работы с базой данных MySQL](/adm/databases/mysql/commands/)
+[Команды для работы с базой данных MySQL](/databases/mysql/commands/)
 
-[mysqldump](/adm/databases/mysql/mysqldump/)
+[mysqldump](/databases/mysql/mysqldump/)

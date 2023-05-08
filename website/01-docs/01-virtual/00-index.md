@@ -3,19 +3,19 @@ layout: page
 title: Виртуализация в Linux
 description: Виртуализация в Linux
 keywords: devops, linux, virtual
-permalink: /adm/virtual/
+permalink: /virtual/
 ---
 
 # Виртуализация в Linux
 
 <br/>
 
-### [Virtual Box](/adm/virtual/virtualbox/)
+### [Virtual Box](/virtual/virtualbox/)
 
-### [KVM на Centos 6](/adm/virtual/kvm/)
+### [KVM на Centos 6](/virtual/kvm/)
 
 <br/>
 
 ### Инструменты
 
-### [Vagrant](/adm/virtual/vagrant/)
+### [Vagrant](/virtual/vagrant/)

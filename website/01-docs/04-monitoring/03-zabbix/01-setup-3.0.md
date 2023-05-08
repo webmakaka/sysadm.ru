@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Zabbix 3.X в Ubuntu Linux 16.04 (Xenial)
 description: Инсталляция Zabbix 3.X в Ubuntu Linux 16.04 (Xenial)
 keywords: adm, monitoring, zabbix, ubuntu, setup
-permalink: /adm/monitoring/zabbix/3.x/ubuntu/16.04/setup/
+permalink: /monitoring/zabbix/3.x/ubuntu/16.04/setup/
 ---
 
 # Инсталляция Zabbix 3.X в Ubuntu Linux 16.04 (Xenial)

@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Vargant в Ubuntu 20.04.1
 description: Инсталляция Vargant в Ubuntu 20.04.1
 keywords: linux, ubuntu, vagrant, install
-permalink: /adm/virtual/vagrant/setup/ubuntu/
+permalink: /virtual/vagrant/setup/ubuntu/
 ---
 
 # Инсталляция Vargant в Ubuntu 20.04.1

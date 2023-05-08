@@ -3,7 +3,7 @@ layout: page
 title: Настройка сети в Centos 6, когда используется несколько адаптеров
 description: Настройка сети в Centos 6, когда используется несколько адаптеров
 keywords: Настройка сети в Centos 6, когда используется несколько адаптеров
-permalink: /adm/virtual/virtualbox/network/centos-nat-host-only-internal/
+permalink: /virtual/virtualbox/network/centos-nat-host-only-internal/
 ---
 
 # Настройка сети в Centos 6, когда используется несколько адаптеров

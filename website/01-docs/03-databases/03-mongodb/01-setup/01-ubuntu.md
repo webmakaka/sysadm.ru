@@ -3,7 +3,7 @@ layout: page
 title: MongoDB инсталляция в Ubuntu 18.04.1
 description: MongoDB инсталляция в Ubuntu 18.04.1
 keywords: linux, ubuntu, mongodb, install
-permalink: /adm/databases/mongodb/setup/ubuntu/
+permalink: /databases/mongodb/setup/ubuntu/
 ---
 
 # MongoDB инсталляция в Ubuntu 18.04.1

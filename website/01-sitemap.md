@@ -24,20 +24,6 @@ permalink: /sitemap/
 
 <br/>
 
-# Облака:
-
-### [Clouds](/devops/clouds/)
-
-<br/>
-
-# BigData:
-
-### [Hadoop, Hive, etc.](/bigdata/)
-
----
-
-<br/>
-
 # HardWare:
 
 ### [HardWare](/hardware/)

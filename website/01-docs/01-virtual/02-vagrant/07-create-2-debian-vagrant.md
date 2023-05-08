@@ -3,7 +3,7 @@ layout: page
 title: Создание с помощью Vagrant 2-х виртуальных машин Debian
 description: Создание с помощью Vagrant 2-х виртуальных машин Debian
 keywords: Создание с помощью Vagrant 2-х виртуальных машин Debian
-permalink: /adm/virtual/vagrant/create-2-debian-vagrant/
+permalink: /virtual/vagrant/create-2-debian-vagrant/
 ---
 
 # Создание с помощью Vagrant 2-х виртуальных машин Debian

@@ -3,7 +3,7 @@ layout: page
 title: Запросы к базе PostgreSQL
 description: Запросы к базе PostgreSQL
 keywords: Linux, Запросы к базе PostgreSQL
-permalink: /adm/databases/postgresql/queries/
+permalink: /databases/postgresql/queries/
 ---
 
 # Запросы к базе PostgreSQL

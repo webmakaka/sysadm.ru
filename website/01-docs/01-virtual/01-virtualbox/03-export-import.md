@@ -3,7 +3,7 @@ layout: page
 title: Export и Import виртуальных машин VirtualBox
 description: Export и Import виртуальных машин VirtualBox
 keywords: virtualbox, export, import
-permalink: /adm/virtual/virtualbox/export-import/
+permalink: /virtual/virtualbox/export-import/
 ---
 
 # Export и Import виртуальных машин VirtualBox
@@ -229,7 +229,7 @@ GATEWAY=192.168.56.1
 
 **Как подключиться без консоли VirtubalBox**
 
-Установить <a href="/adm/virtual/virtualbox/setup/ubuntu/">Extension Packs</a> (Там присутствуют какие-то лицензионные огранчения).
+Установить <a href="/virtual/virtualbox/setup/ubuntu/">Extension Packs</a> (Там присутствуют какие-то лицензионные огранчения).
 
 <br/>
 

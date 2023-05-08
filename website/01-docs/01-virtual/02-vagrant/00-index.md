@@ -3,7 +3,7 @@ layout: page
 title: Vagrant в Linux
 description: Vagrant в Linux
 keywords: linux, ubuntu, vagrant
-permalink: /adm/virtual/vagrant/
+permalink: /virtual/vagrant/
 ---
 
 # Vagrant в Linux
@@ -18,23 +18,23 @@ permalink: /adm/virtual/vagrant/
 
 ### Наработки админа сайта
 
-[Инсталляция Vargant в Ubuntu 20.04.1](/adm/virtual/vagrant/setup/ubuntu/)
+[Инсталляция Vargant в Ubuntu 20.04.1](/virtual/vagrant/setup/ubuntu/)
 
-[Знакомство с Vagrant](/adm/virtual/vagrant/crash-course/)
+[Знакомство с Vagrant](/virtual/vagrant/crash-course/)
 
-[Команды Vagrant](/adm/virtual/vagrant/commands/)
+[Команды Vagrant](/virtual/vagrant/commands/)
 
-[SSH keys](/adm/virtual/vagrant/ssh-keygen/)
+[SSH keys](/virtual/vagrant/ssh-keygen/)
 
-[Создание с помощью Vagrant виртуальной машины Ubuntu](/adm/virtual/vagrant/create-ubuntu-vm-by-vagrant/)
+[Создание с помощью Vagrant виртуальной машины Ubuntu](/virtual/vagrant/create-ubuntu-vm-by-vagrant/)
 
-[Создание с помощью Vagrant 2-х виртуальных машин Debian](/adm/virtual/vagrant/create-2-debian-vagrant/)
+[Создание с помощью Vagrant 2-х виртуальных машин Debian](/virtual/vagrant/create-2-debian-vagrant/)
 
-[Vagrant c Docker внутри](/adm/virtual/vagrant/vagrant-with-docker/)
+[Vagrant c Docker внутри](/virtual/vagrant/vagrant-with-docker/)
 
 [Деплой nodejs приложения на удаленный сервер с помощью ansible](//gitops.ru/ansible/deploy-node-app-by-ansible/)
 
-[Vagrant и Ansible playbook для подготовки виртуальных машин Virtualbox](/adm/virtual/vagrant/vagrant-ansible-playbook/)
+[Vagrant и Ansible playbook для подготовки виртуальных машин Virtualbox](/virtual/vagrant/vagrant-ansible-playbook/)
 
 [Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](//gitops.ru/tools/cvs/gitlab/vagrant/)
 

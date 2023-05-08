@@ -3,7 +3,7 @@ layout: page
 title: Installing check_mk monitoring service in Linux
 description: Installing check_mk monitoring service in Linux
 keywords: adm, monitoring, check-mk, setup
-permalink: /adm/monitoring/check-mk/setup/
+permalink: /monitoring/check-mk/setup/
 ---
 
 # Installing check_mk monitoring service in Linux
@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=fixkbancVc4&list=PL34sAs7_26wODGPEgaHrhRiXkax0q7
 
 <br/>
 
-Предполагается что уже установлен <a href="/adm/virtual/virtualbox/setup/">VirtualBox</a>, <a href="/adm/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
+Предполагается что уже установлен <a href="/virtual/virtualbox/setup/">VirtualBox</a>, <a href="/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
 
 <br/>
 

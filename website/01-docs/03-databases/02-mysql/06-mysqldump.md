@@ -3,7 +3,7 @@ layout: page
 title: mysqldump
 description: mysqldump
 keywords: databases, mysql, mysqldump
-permalink: /adm/databases/mysql/mysqldump/
+permalink: /databases/mysql/mysqldump/
 ---
 
 # mysqldump

@@ -3,7 +3,7 @@ layout: page
 title: Vagrant машины для Docker Swarm
 description: Vagrant машины для Docker Swarm
 keywords: Vagrant машины для Docker Swarm
-permalink: /adm/virtual/vagrant/for-docker-swarm/
+permalink: /virtual/vagrant/for-docker-swarm/
 ---
 
 # Vagrant машины для Docker Swarm

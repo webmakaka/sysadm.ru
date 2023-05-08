@@ -3,7 +3,7 @@ layout: page
 title: MySQL - Конфигурирование пользователей после инсталляции
 description: MySQL - Конфигурирование пользователей после инсталляции
 keywords: MySQL - Конфигурирование пользователей после инсталляции
-permalink: /adm/databases/mysql/installation/users/
+permalink: /databases/mysql/installation/users/
 ---
 
 # MySQL - Конфигурирование пользователей после инсталляции

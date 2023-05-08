@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
 description: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
 keywords: linux, virtual, ubuntu, virtualbox, installation, command line
-permalink: /adm/virtual/virtualbox/setup/ubuntu/
+permalink: /virtual/virtualbox/setup/ubuntu/
 ---
 
 # Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04

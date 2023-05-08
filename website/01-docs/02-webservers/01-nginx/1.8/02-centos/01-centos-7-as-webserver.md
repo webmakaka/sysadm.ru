@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Nginx как web сервер из пакетов в Centos 7
 description: Инсталляция Nginx как web сервер из пакетов в Centos 7
 keywords: Инсталляция Nginx как web сервер из пакетов в Centos 7
-permalink: /adm/webservers/nginx/1.8/centos/7/webserver/
+permalink: /webservers/nginx/1.8/centos/7/webserver/
 ---
 
 # Инсталляция Nginx как web сервер из пакетов в Centos 7

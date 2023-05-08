@@ -3,7 +3,7 @@ layout: page
 title: Регистрация виртуальной машины VirtualBox
 description: Регистрация виртуальной машины VirtualBox
 keywords: Регистрация виртуальной машины VirtualBox
-permalink: /adm/virtual/virtualbox/register/
+permalink: /virtual/virtualbox/register/
 ---
 
 # Регистрация виртуальной машины VirtualBox

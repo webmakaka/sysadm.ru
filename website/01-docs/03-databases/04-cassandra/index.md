@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Apache Cassandra (DataStax Community Edition) в Centos 6.7
 description: Инсталляция Apache Cassandra (DataStax Community Edition) в Centos 6.7
 keywords: Инсталляция Apache Cassandra (DataStax Community Edition) в Centos 6.7
-permalink: /adm/databases/cassandra/centos/6.7/
+permalink: /databases/cassandra/centos/6.7/
 ---
 
 # Инсталляция Apache Cassandra (DataStax Community Edition) в Centos 6.7

@@ -3,7 +3,7 @@ layout: page
 title: Настройка работы своего сайта Nginx 1.8, PHP
 description: Настройка работы своего сайта Nginx 1.8, PHP
 keywords: Настройка работы своего сайта Nginx 1.8, PHP
-permalink: /adm/webservers/nginx/1.8/debian/jessie/mysite/
+permalink: /webservers/nginx/1.8/debian/jessie/mysite/
 ---
 
 # Настройка работы своего сайта Nginx 1.8, PHP

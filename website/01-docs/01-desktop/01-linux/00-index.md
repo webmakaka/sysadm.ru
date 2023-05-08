@@ -42,19 +42,17 @@ permalink: /desktop/linux/
 
 ### [Networks](/desktop/linux/networks/)
 
-### [Web Servers](/adm/webservers/)
+### [Web Servers](/webservers/)
 
-### [Proxy Servers](/adm/linux/proxy/)
+### [Proxy Servers](/linux/proxy/)
 
-### [Базы данных](/adm/databases/)
+### [Базы данных](/databases/)
 
-### [Виртуализация](/adm/virtual/)
+### [Виртуализация](/virtual/)
 
-### [Контейнеры](/devops/containers/)
+### [Кластеризация](/linux/clustering/)
 
-### [Кластеризация](/adm/linux/clustering/)
-
-### [Мониторинг](/adm/monitoring/)
+### [Мониторинг](/monitoring/)
 
 ### [Logging](/adm/logging/)
 
@@ -65,12 +63,6 @@ permalink: /desktop/linux/
 ## Hardware:
 
 ### [Работа с железками в linux](/desktop/linux/hardware/)
-
-<br/>
-
-## Программирование:
-
-### [Программирование](/dev/)
 
 <br/>
 

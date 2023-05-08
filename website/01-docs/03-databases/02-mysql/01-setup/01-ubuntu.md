@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция MySQL на Ubuntu
 description: Инсталляция MySQL на Ubuntu
 keywords: databases, mysql, setup, ubuntu
-permalink: /adm/databases/mysql/setup/ubuntu/
+permalink: /databases/mysql/setup/ubuntu/
 ---
 
 # Инсталляция MySQL на Ubuntu

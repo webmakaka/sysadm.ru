@@ -3,7 +3,7 @@ layout: page
 title: Web Servers
 description: Web Servers
 keywords: Web Servers
-permalink: /adm/webservers/
+permalink: /webservers/
 ---
 
 # Web Servers
@@ -12,13 +12,13 @@ permalink: /adm/webservers/
 
 ### Nginx
 
-[Nginx](/adm/webservers/nginx/)
+[Nginx](/webservers/nginx/)
 
 <br/>
 
 ### Apache
 
-[Apache](/adm/webservers/apache/)
+[Apache](/webservers/apache/)
 
 <br/>
 
@@ -42,7 +42,7 @@ permalink: /adm/webservers/
 
 ### Бесплатные сертификаты для сайта
 
-[Бесплатные сертификаты для сайта](/adm/webservers/cert-for-free/)
+[Бесплатные сертификаты для сайта](/webservers/cert-for-free/)
 
 <!-- <br/>
 

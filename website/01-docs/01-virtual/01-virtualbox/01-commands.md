@@ -3,7 +3,7 @@ layout: page
 title: VirtualBox Основные команды
 description: VirtualBox Основные команды
 keywords: VirtualBox Основные команды
-permalink: /adm/virtual/virtualbox/commands/
+permalink: /virtual/virtualbox/commands/
 ---
 
 # VirtualBox Основные команды

@@ -3,7 +3,7 @@ layout: page
 title: Centos 7 VBoxManage hostonlyif create - /dev/vboxnetctl No such file or directory
 description: Centos 7 VBoxManage hostonlyif create - /dev/vboxnetctl No such file or directory
 keywords: Centos 7 VBoxManage hostonlyif create - /dev/vboxnetctl No such file or directory
-permalink: /adm/virtual/virtualbox/network/centos-dev-vboxnetctl-no-such-file-or-directory/
+permalink: /virtual/virtualbox/network/centos-dev-vboxnetctl-no-such-file-or-directory/
 ---
 
 # Oracle linux 7 (тоже что и Centos 7): VBoxManage hostonlyif create - /dev/vboxnetctl No such file or directory

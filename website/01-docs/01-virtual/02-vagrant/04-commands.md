@@ -3,7 +3,7 @@ layout: page
 title: Команды Vagrant
 description: Команды Vagrant
 keywords: Команды Vagrant
-permalink: /adm/virtual/vagrant/commands/
+permalink: /virtual/vagrant/commands/
 ---
 
 # Команды Vagrant

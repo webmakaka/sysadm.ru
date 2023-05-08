@@ -3,7 +3,7 @@ layout: page
 title: Oracle Linux 7 (ака Centos 7) Создание hostonly интерфейса руками, если он по какой-то причине не создался сам
 description: Oracle Linux 7 (ака Centos 7) Создание hostonly интерфейса руками, если он по какой-то причине не создался сам
 keywords: Oracle Linux 7 (ака Centos 7) Создание hostonly интерфейса руками, если он по какой-то причине не создался сам
-permalink: /adm/virtual/virtualbox/network/centos-nat-host-only/
+permalink: /virtual/virtualbox/network/centos-nat-host-only/
 ---
 
 # Oracle Linux 7 (ака Centos 7): Создание hostonly интерфейса руками, если он по какой-то причине не создался сам
@@ -38,7 +38,7 @@ vboxnet0 - виртуальный адаптер хостовой машины.
 
 <br/>
 
-[/dev/vboxnetctl No such file or directory](/adm/virtual/virtualbox/network/centos-dev-vboxnetctl-no-such-file-or-directory/)
+[/dev/vboxnetctl No such file or directory](/virtual/virtualbox/network/centos-dev-vboxnetctl-no-such-file-or-directory/)
 
 <br/>
 

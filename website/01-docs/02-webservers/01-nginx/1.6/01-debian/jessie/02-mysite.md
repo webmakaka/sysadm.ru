@@ -3,7 +3,7 @@ layout: page
 title: Настройка работы своего сайта Nginx 1.6, PHP
 description: Настройка работы своего сайта Nginx 1.6, PHP
 keywords: Настройка работы своего сайта Nginx 1.6, PHP
-permalink: /adm/webservers/nginx/1.6/debian/jessie/mysite/
+permalink: /webservers/nginx/1.6/debian/jessie/mysite/
 ---
 
 # Настройка работы своего сайта Nginx 1.6, PHP

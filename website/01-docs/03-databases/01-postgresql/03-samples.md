@@ -3,7 +3,7 @@ layout: page
 title: Примеры команд Postgres
 description: Примеры команд Postgres
 keywords: databases, linux, export, samples
-permalink: /adm/databases/postgresql/samples/
+permalink: /databases/postgresql/samples/
 ---
 
 # Примеры команд Postgres

@@ -3,7 +3,7 @@ layout: page
 title: Запуск PgAdmin4 WebClient в docker контейнере
 description: Запуск PgAdmin4 WebClient в docker контейнере
 keywords: databases, postgresql, linux, pgadmin, docker
-permalink: /adm/databases/postgresql/pgadmin/
+permalink: /databases/postgresql/pgadmin/
 ---
 
 # Запуск PgAdmin4 WebClient в docker контейнере

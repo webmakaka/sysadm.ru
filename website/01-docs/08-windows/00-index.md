@@ -22,5 +22,5 @@ permalink: /adm/windows/servers/
 ### Базы данных
 
 <ul>
-    <li><a href="/windows/adm/databases/">Базы данных</a></li>
+    <li><a href="/windows/databases/">Базы данных</a></li>
 </ul>

@@ -3,7 +3,7 @@ layout: page
 title: MongoDB
 description: MongoDB
 keywords: linux, MongoDB
-permalink: /adm/databases/mongodb/
+permalink: /databases/mongodb/
 ---
 
 # MongoDB
@@ -26,12 +26,12 @@ RoboMongo
 
 <br/>
 
-### [MongoDB инсталляция в Ubuntu 18.04.1](/adm/databases/mongodb/setup/ubuntu/)
+### [MongoDB инсталляция в Ubuntu 18.04.1](/databases/mongodb/setup/ubuntu/)
 
-### [Инсталляция MongoDB tools в Ubuntu 18.04](/adm/databases/mongodb/setup/ubuntu/tools/)
+### [Инсталляция MongoDB tools в Ubuntu 18.04](/databases/mongodb/setup/ubuntu/tools/)
 
-### [MongoDB инсталляция в Centos 6.X](/adm/databases/mongodb/setup/centos/)
+### [MongoDB инсталляция в Centos 6.X](/databases/mongodb/setup/centos/)
 
 ### [Обучающие видео по работе с базой данных MongoDB](https://www.youtube.com/watch?v=LBthwZDRR-c&list=PL34sAs7_26wPvZJqUJhjyNtm7UedWR8Ps)
 
-### [How to deploy mongodb replica set with authentification](/adm/databases/deploy-mongodb-replica-set-with-authentification/)
+### [How to deploy mongodb replica set with authentification](/databases/deploy-mongodb-replica-set-with-authentification/)

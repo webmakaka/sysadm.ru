@@ -3,7 +3,7 @@ layout: page
 title: Конвертировать wmdk в vdi
 description: Конвертировать wmdk в vdi
 keywords: Конвертировать wmdk в vdi
-permalink: /adm/virtual/virtualbox/convert-vmdk-vdi/
+permalink: /virtual/virtualbox/convert-vmdk-vdi/
 ---
 
 # Конвертировать wmdk в vdi

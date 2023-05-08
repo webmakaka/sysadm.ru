@@ -3,15 +3,15 @@ layout: page
 title: PostgreSQL
 description: PostgreSQL
 keywords: Linux, PostgreSQL
-permalink: /adm/databases/postgresql/
+permalink: /databases/postgresql/
 ---
 
 # Инсталляция PostgreSQL
 
 <br/>
 
-[Ubuntu](/adm/databases/postgresql/setup/ubuntu/)  
-[Centos](/adm/databases/postgresql/setup/centos/)
+[Ubuntu](/databases/postgresql/setup/ubuntu/)  
+[Centos](/databases/postgresql/setup/centos/)
 
 <br/>
 
@@ -32,13 +32,13 @@ sslmode - если используется ssl
 
 <br/>
 
-[Запуск PgAdmin4 WebClient в docker контейнере](/adm/databases/postgresql/pgadmin/)
+[Запуск PgAdmin4 WebClient в docker контейнере](/databases/postgresql/pgadmin/)
 
-[Экспорт / Импорты базы Postgres](/adm/databases/postgresql/export-import/)
+[Экспорт / Импорты базы Postgres](/databases/postgresql/export-import/)
 
 <br/>
 
-[Запросы к базе PostgreSQL](/adm/databases/postgresql/queries/)
+[Запросы к базе PostgreSQL](/databases/postgresql/queries/)
 
 <br/>
 
@@ -60,4 +60,4 @@ sslmode - если используется ssl
 
 <br/>
 
-![no pg_hba.conf entry for host](/img/adm/databases/postgresql/datagrip-postgresql-heroku.png 'no pg_hba.conf entry for host'){: .center-image }
+![no pg_hba.conf entry for host](/img/databases/postgresql/datagrip-postgresql-heroku.png 'no pg_hba.conf entry for host'){: .center-image }

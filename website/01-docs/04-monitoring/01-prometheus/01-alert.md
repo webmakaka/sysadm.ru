@@ -3,7 +3,7 @@ layout: page
 title: Prometheus Exporters
 description: Prometheus Exporters
 keywords: devops, linux, monitoring, prometheus
-permalink: /adm/monitoring/prometheus/alerts/
+permalink: /monitoring/prometheus/alerts/
 ---
 
 # Prometheus Exporters
@@ -19,7 +19,7 @@ Alertmanager download - [https://prometheus.io/download/#alertmanager](https://p
 
 <br/>
 
-### [Запускаю Node Exporter](/adm/monitoring/prometheus/)
+### [Запускаю Node Exporter](/monitoring/prometheus/)
 
 <br/>
 
@@ -49,15 +49,15 @@ $ ./alertmanager --config.file=alertmanager.yml > alert.out 2>&1 &
 
 ```yaml
 groups:
-    - name: example
-      rules:
-          - alert: InstanceDown
-            expr: up == 0
-            for: 1m
-            labels:
-                severity: critical
-            annotations:
-                summary: Instance is down
+  - name: example
+    rules:
+      - alert: InstanceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: Instance is down
 ```
 
 <br/>
@@ -69,38 +69,38 @@ prometheus.yml
 ```yaml
 # my global config
 global:
-    scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
-    evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
-    # scrape_timeout is set to the global default (10s).
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
 
 # Alertmanager configuration
 alerting:
-    alertmanagers:
-        - static_configs:
-              - targets:
-                # - alertmanager:9093
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
 
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
-    # - "first_rules.yml"
-    # - "second_rules.yml"
+  # - "first_rules.yml"
+  # - "second_rules.yml"
 
 # A scrape configuration containing exactly one endpoint to scrape:
 # Here it's Prometheus itself.
 scrape_configs:
-    # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-    - job_name: 'prometheus'
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'prometheus'
 
-      # metrics_path defaults to '/metrics'
-      # scheme defaults to 'http'.
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
 
-      static_configs:
-          - targets: ['localhost:9090']
+    static_configs:
+      - targets: ['localhost:9090']
 
-    - job_name: 'node_exporter'
+  - job_name: 'node_exporter'
 
-      static_configs:
-          - targets: ['172.31.27.27:9100']
+    static_configs:
+      - targets: ['172.31.27.27:9100']
 ```
 
 <br/>
@@ -112,28 +112,28 @@ prometheus.yml
 ```yaml
 # my global config
 global:
-    scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
-    evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
-    # scrape_timeout is set to the global default (10s).
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
 
 # Alertmanager configuration
 alerting:
-    alertmanagers:
-        - static_configs:
-              - targets:
-                    - 192.168.1.9:9093
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - 192.168.1.9:9093
 
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
-    - 'rules.yml'
+  - 'rules.yml'
 
 # A scrape configuration containing exactly one endpoint to scrape:
 # Here it's Prometheus itself.
 scrape_configs:
-    - job_name: 'node_exporter'
+  - job_name: 'node_exporter'
 
-      static_configs:
-          - targets: ['192.168.1.9:9100']
+    static_configs:
+      - targets: ['192.168.1.9:9100']
 ```
 
 <br/>
