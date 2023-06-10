@@ -29,10 +29,22 @@ permalink: /desktop/linux/ubuntu/download-youtube-playlist/
 <br/>
 
 Делаю:  
-06.02.2022
+02.06.2023 - Перестало работать!
 
 **Программа: **
 https://rg3.github.io/youtube-dl/download.html
+
+<br/>
+
+```
+$ youtube-dl -U
+youtube-dl is up-to-date (2021.12.17)
+```
+
+<br/>
+
+Возможно решение проблемы в следующем ролике:  
+https://www.youtube.com/watch?v=tMtszkwxo48
 
 <br/>
 
@@ -46,8 +58,10 @@ $ sudo apt install -y ffmpeg
 
 <br/>
 
-    $ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-    $ sudo chmod a+rx /usr/local/bin/youtube-dl
+```
+$ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+$ sudo chmod a+rx /usr/local/bin/youtube-dl
+```
 
 <!--
 
@@ -64,24 +78,27 @@ $ sudo apt install -y ffmpeg
 
 <br/>
 
-    $ mkdir ~/Downloads/myPlaylist && cd ~/Downloads/myPlaylist
+```
+$ mkdir ~/Downloads/myPlaylist && cd ~/Downloads/myPlaylist
+```
 
 <br/>
 
 Нужно скачать вот этот плей лист.
 
-https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bxVRw
-https://www.youtube.com/watch?v=XSlSk8hBtVs&list=PLIGDNOJWiL1-bKGF5lSfRDL4sIkkNI9kg
+https://www.youtube.com/watch?v=DU9K1rIUWrY&list=PLhgRAQ8BwWFaxlkNNtO0NDPmaVO9txRg8
 
 <br/>
 
-Удаляю из url v=<ID> т.е v=XSlSk8hBtVs
+Удаляю из url v=<ID> т.е v=DU9K1rIUWrY
 
 <br/>
 
 -- Скачиваю видео лучшего качества из имеющегося:
 
-    $ youtube-dl -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PLIGDNOJWiL1-bKGF5lSfRDL4sIkkNI9kg --output "%(title)s.%(ext)s"
+```
+$ youtube-dl -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PLhgRAQ8BwWFaxlkNNtO0NDPmaVO9txRg8 --output "%(title)s.%(ext)s"
+```
 
 <br/>
 
