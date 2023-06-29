@@ -9,64 +9,94 @@ permalink: /desktop/linux/ubuntu/vnc-server/
 # Удаленный рабочий стол в Ubuntu 20.04
 
 Последний раз делаю:  
-01.05.2021
+29.06.2023
 
 <br/>
 
-### Рекомендация!
-
-Посмотреть видео с ютбуба внизу.
-
-<br/>
-
-В общем у меня изначально было серое окно с курсором. И я ничего не мог с этим поделать.
-
-Нашел рабочее решение с использованием xfce4
+По этой статье.
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04
 
 <br/>
 
-### Решение с использованием xfce4
-
-    $ sudo apt install -y xfce4 xfce4-goodies
-    $ sudo apt install -y tightvncserver
+Для компьюетера во внтренней сети.
 
 <br/>
-
-    $ vncserver
-
-    $ vncserver -kill :1
-
-    $ cp ~/.vnc/xstartup ~/.vnc/xstartup.orig
-
-    $ vi ~/.vnc/xstartup
-
-<br/>
-
-После строки: “xrdb $HOME/.Xresources” добавляю строку
 
 ```
+$ sudo apt install xfce4 xfce4-goodies
+$ sudo apt install tightvncserver
+```
+
+<br/>
+
+```
+$ vi ~/.vnc/xstartup
+```
+
+<br/>
+
+```
+#!/bin/bash
+xrdb $HOME/.Xresources
 startxfce4 &
 ```
 
 <br/>
 
 ```
-$ sudo chmod +x ~/.vnc/xstartup
-
-$ vncserver
+$ chmod +x ~/.vnc/xstartup
 ```
 
 <br/>
 
-### На клиенте:
+```
+$ sudo vi /etc/systemd/system/vncserver@.service
+```
 
-Можно подключиться с помощью reminna. Которая в моем дистрибутиве, похоже, что предустановлена.
+<br/>
+
+Нужно marley заменить на своего пользователя.
 
 <br/>
 
 ```
-$ sudo apt-add-repository ppa:remmina-ppa-team/remmina-next ; sudo apt-get update ; sudo apt-get install -y remmina remmina-plugin-rdp
+[Unit]
+Description=Start TightVNC server at startup
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=marley
+Group=marley
+WorkingDirectory=/home/marley
+
+PIDFile=/home/marley/.vnc/%H:%i.pid
+ExecStartPre=-/usr/bin/vncserver -kill :%i > /dev/null 2>&1
+ExecStart=/usr/bin/vncserver -depth 24 -geometry 2560x1440 :%i
+ExecStop=/usr/bin/vncserver -kill :%i
+
+[Install]
+WantedBy=multi-user.target
 ```
+
+<br/>
+
+```
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable vncserver@1.service
+$ sudo systemctl start vncserver@1
+```
+
+<br/>
+
+```
+$ systemctl status vncserver@1.service
+$ sudo systemctl restart vncserver@1.service
+```
+
+<br/>
+
+### Удаленное подключение с клиента с помощью remmina:
 
 <br/>
 
@@ -84,11 +114,7 @@ $ remmina
 
 Protocol: Remmina VNC Plugin
 
-<br/>
-
-Блин, не помню откуда 5901.
-
-<br/>
+<!-- <br/>
 
 **Для windows хостов:**
 
@@ -96,7 +122,7 @@ RDP
 
 В общих настройках remmina выбрать
 
-Preferences -> RDP -> Use client keyboard mapping
+Preferences -> RDP -> Use client keyboard mapping -->
 
 <br/>
 
@@ -106,59 +132,18 @@ Remote Desktop Preference -> Advanced -> Quality -> Best (slowest)
 
 <br/>
 
-Альтернативно, можно использовать вот этот клиент (на данный момент бесплатный)  
-https://www.realvnc.com/en/connect/download/viewer/linux/
+### tigervnc
+
+Альтернативно, можно использовать как вариант.
 
 <br/>
 
 ```
-$ vncviewer
+sudo apt install tigervnc-viewer
 ```
 
 <br/>
 
-**По материалам отсюда:**
-
-https://www.linuxbuzz.com/setup-vnc-server-ubuntu-18-04-debian-9/
-
-<br/>
-
-### Вариант с Gnome Desktop (Заработал так себе. Серый экран на background'е)
-
-Если знаете как победить, напишите.  
-Но менюшки и программы рабочие.
-
 ```
-$ sudo apt-get install -y ubuntu-gnome-desktop
-
-// Хз нужны или нет
-$ sudo apt-get install -y xfonts-100dpi xfonts-100dpi-transcoded xfonts-75dpi xfonts-75dpi-transcoded xfonts-base
-
-$ sudo apt install -y tightvncserver
+$ vncviewer 192.168.1.8:5901
 ```
-
-Далее, тоже самое, что и выше, только добавить вместо startxfce4 нужно:
-
-```
-gnome-session &
-gnome-panel &
-gnome-settings-daemon &
-metacity &
-nautilus &
-gnome-terminal &
-```
-
-Может здесь что лишнее, или чего-то не хватает.
-Пока буду юзать первый вариант. Но и второй победить бы тоже хотелось.
-
-<br/>
-
-**Наверное полезная статья:**
-
-https://www.digitalocean.com/community/tutorials/vnc-ubuntu-16-04-ru
-
-<br/>
-
-### Ubuntu VNC Server
-
-https://www.youtube.com/watch?v=3K1hUwxxYek
