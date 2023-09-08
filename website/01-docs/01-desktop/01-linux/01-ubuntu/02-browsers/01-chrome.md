@@ -9,10 +9,9 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 # Инсталляция Chrome в Ubuntu
 
 Делаю:  
-05.01.2023
+30.06.2023
 
 <br/>
-
 
 ```
 $ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -25,7 +24,7 @@ $ sudo apt-get install -y google-chrome-stable
 
 ### Отключить всплывающие уведомления и всякую слежку
 
-Settings -->  Privacy and Security --> Site Settings:
+Settings --> Privacy and Security --> Site Settings:
 
 <br/>
 

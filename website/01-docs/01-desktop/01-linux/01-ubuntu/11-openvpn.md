@@ -176,3 +176,17 @@ dhcp-option DOMAIN-ROUTE .
 
 **Использовалось:**  
 https://askubuntu.com/questions/1032476/ubuntu-18-04-no-dns-resolution-when-connected-to-openvpn
+
+<br/>
+
+### Обновление
+
+```
+$ sudo cp /etc/openvpn/client.conf /etc/openvpn/client.conf.prev
+$ sudo vi /etc/openvpn/client.conf
+
+меняем сертификат
+
+$ sudo service openvpn@client restart
+$ route -n
+```
