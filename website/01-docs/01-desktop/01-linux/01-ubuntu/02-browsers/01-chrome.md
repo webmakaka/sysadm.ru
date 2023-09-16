@@ -9,7 +9,7 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 # Инсталляция Chrome в Ubuntu
 
 Делаю:  
-30.06.2023
+16.09.2023
 
 <br/>
 

@@ -1,24 +1,23 @@
 ---
 layout: page
-title: Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
-description: Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
+title: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
+description: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 keywords: ubuntu, install
-permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts/
+permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts/
 ---
 
-# Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
+# Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 
-**Делаю:**  
-14.05.2022
+Делаю:  
+15.05.2022
 
 <br/>
 
 ### Обновление
 
 ```
-$ sudo su -
-# apt update && apt-get upgrade -y
-# apt install -y vim curl git
+$ sudo apt update && apt-get upgrade -y
+$ sudo apt install -y vim curl git
 ```
 
 <br/>
@@ -30,8 +29,6 @@ $ sudo su -
 <br/>
 
 ### Установка VSCODE
-
-<br/>
 
 ```
 $ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -56,8 +53,6 @@ https://code.visualstudio.com/docs/setup/linux
 
 ### Запуск sysadm.ru в редакторе vscode
 
-<br/>
-
 ```
 $ mkdir ~/projects && cd ~/projects
 $ git clone https://github.com/webmakaka/sysadm.ru.git
@@ -69,14 +64,15 @@ $ code .
 
 ### Устанавливаем дополнительное ПО
 
-<br/>
-
 ```
 $ sudo ubuntu-drivers autoinstall
 $ sudo apt install -y ubuntu-restricted-extras
 ```
 
 <br/>
+
+    grub-customizer \
+        gnome-tweak-tool \
 
 ```
 $ sudo apt install -y \
@@ -94,13 +90,8 @@ $ sudo apt install -y \
     whois \
     gimp \
     usb-creator-gtk \
-    gnome-tweaks \
     python-is-python3
 ```
-
-<!--
-    grub-customizer \
--->
 
 <br/>
 
@@ -122,8 +113,6 @@ $ sudo apt install -y \
 
     $ gsettings set org.gnome.desktop.background primary-color '#548080'
 
-    $ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-
 <br/>
 
 ### Смена раскладки клавиатуры по Alt + Shift
@@ -142,7 +131,7 @@ Keyboard & Mouse --> Additional Layout Options --> Switching to another layout -
 
 Appearance -> Theme
 
-    Legacy Applications -> Yaru-dark
+    Applications -> Yaru-dark
     Icons -> Ubuntu-mono-dark
 
 <br/>
@@ -151,17 +140,17 @@ Appearance -> Theme
 
 <br/>
 
-```
-$ gnome-control-center
-```
+    Applications --> System Tools --> Preferences --> Settings
 
-    Region & Language --> Formats --> United Kingdom
+    Region & Language --> Formats --> United States
 
 <br/>
 
 ### ПО CTRL + ALT + DELETE показывать текущие процессы
 
-    Kyeboard --> Keyboard Shortcuts --> View and Customize Shortcuts
+    Applications --> System Tools --> Preferences --> Settings
+
+    Keyboard Shortcuts
 
     System --> Log out
 
@@ -178,13 +167,7 @@ $ gnome-control-center
 
 <br/>
 
-### Убрать автовыключение монитора
-
-    Power --> Power Saving Options --> Blank screen --> Never
-
-<br/>
-
-## Настройка параметров терминала
+### Настройка параметров терминала
 
 **Отключить противный звук при ошибке в консоли**
 
@@ -204,13 +187,20 @@ Color --> Built-in schemes: Black on white
 
 <br/>
 
-## Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
+### Убрать автовыключение монитора
+
+    Applications --> System Tools --> Preferences --> Settings
+    Power --> Power Saving --> Blank screen --> Never
+
+<br/>
+
+### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
 [Инфа здесь](/desktop/linux/ubuntu/browsers/block-junk-websites/)
 
 <br/>
 
-## Дополнительное ПО
+### Дополнительное ПО
 
 [Chrome](/desktop/linux/ubuntu/browsers/chrome/)  
 [Opera](/desktop/linux/ubuntu/browsers/opera/)

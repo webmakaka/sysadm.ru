@@ -1,23 +1,24 @@
 ---
 layout: page
-title: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
-description: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
+title: Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
+description: Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
 keywords: ubuntu, install
-permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-20.04-lts/
+permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts/
 ---
 
-# Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
+# Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
 
-Делаю:  
-15.05.2022
+**Делаю:**  
+16.09.2023
 
 <br/>
 
 ### Обновление
 
 ```
-$ sudo apt update && apt-get upgrade -y
-$ sudo apt install -y vim curl git
+$ sudo su -
+# apt update && apt-get upgrade -y
+# apt install -y vim curl git
 ```
 
 <br/>
@@ -29,6 +30,8 @@ $ sudo apt install -y vim curl git
 <br/>
 
 ### Установка VSCODE
+
+<br/>
 
 ```
 $ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -53,8 +56,11 @@ https://code.visualstudio.com/docs/setup/linux
 
 ### Запуск sysadm.ru в редакторе vscode
 
+<br/>
+
 ```
 $ mkdir ~/projects && cd ~/projects
+// $ GIT_SSH_COMMAND='ssh -i ~/.ssh/webmakaka -o IdentitiesOnly=yes' git clone git@github.com:webmakaka/sysadm.ru.git
 $ git clone https://github.com/webmakaka/sysadm.ru.git
 $ cd ~/projects/sysadm.ru
 $ code .
@@ -63,6 +69,8 @@ $ code .
 <br/>
 
 ### Устанавливаем дополнительное ПО
+
+<br/>
 
 ```
 $ sudo ubuntu-drivers autoinstall
@@ -86,11 +94,14 @@ $ sudo apt install -y \
     wakeonlan \
     whois \
     gimp \
-    grub-customizer \
-    gnome-tweak-tool \
     usb-creator-gtk \
+    gnome-tweaks \
     python-is-python3
 ```
+
+<!--
+    grub-customizer \
+-->
 
 <br/>
 
@@ -112,11 +123,15 @@ $ sudo apt install -y \
 
     $ gsettings set org.gnome.desktop.background primary-color '#548080'
 
+    $ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
 <br/>
 
 ### Смена раскладки клавиатуры по Alt + Shift
 
 Вот надо что-нибудь да испортить! По умолчанию, нужно выбрать комбинацию из 3х клваиш, чтобы сменить раскладку.
+
+<br/>
 
     $ gnome-tweaks
 
@@ -130,7 +145,7 @@ Keyboard & Mouse --> Additional Layout Options --> Switching to another layout -
 
 Appearance -> Theme
 
-    Applications -> Yaru-dark
+    Legacy Applications -> Yaru-dark
     Icons -> Ubuntu-mono-dark
 
 <br/>
@@ -139,17 +154,17 @@ Appearance -> Theme
 
 <br/>
 
-    Applications --> System Tools --> Preferences --> Settings
+```
+$ gnome-control-center
+```
 
-    Region & Language --> Formats --> United States
+    Region & Language --> Formats --> United Kingdom
 
 <br/>
 
 ### ПО CTRL + ALT + DELETE показывать текущие процессы
 
-    Applications --> System Tools --> Preferences --> Settings
-
-    Keyboard Shortcuts
+    Kyeboard --> Keyboard Shortcuts --> View and Customize Shortcuts
 
     System --> Log out
 
@@ -166,7 +181,13 @@ Appearance -> Theme
 
 <br/>
 
-### Настройка параметров терминала
+### Убрать автовыключение монитора
+
+    Power --> Power Saving Options --> Blank screen --> Never
+
+<br/>
+
+## Настройка параметров терминала
 
 **Отключить противный звук при ошибке в консоли**
 
@@ -186,20 +207,13 @@ Color --> Built-in schemes: Black on white
 
 <br/>
 
-### Убрать автовыключение монитора
-
-    Applications --> System Tools --> Preferences --> Settings
-    Power --> Power Saving --> Blank screen --> Never
-
-<br/>
-
-### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
+## Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
 [Инфа здесь](/desktop/linux/ubuntu/browsers/block-junk-websites/)
 
 <br/>
 
-### Дополнительное ПО
+## Дополнительное ПО
 
 [Chrome](/desktop/linux/ubuntu/browsers/chrome/)  
 [Opera](/desktop/linux/ubuntu/browsers/opera/)

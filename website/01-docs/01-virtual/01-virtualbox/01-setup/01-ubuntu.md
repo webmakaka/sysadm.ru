@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
-description: Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
+title: Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04
+description: Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04
 keywords: linux, virtual, ubuntu, virtualbox, installation, command line
 permalink: /virtual/virtualbox/setup/ubuntu/
 ---
 
-# Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04
+# Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04
 
 Делаю:  
-03.01.2023
+16.09.2023
 
 <br/>
 
@@ -20,10 +20,21 @@ $ sudo su -
 <br/>
 
 ```
-# cd /tmp
+$ mkdir ~/tmp
+$ cd ~/tmp/
+$ wget https://www.virtualbox.org/download/oracle_vbox_2016.asc 
+
+
+$ cat oracle_vbox_2016.asc | gpg --dearmor | sudo tee /usr/share/keyrings/virtualbox.gpg > /dev/null 2>&1
+
+
+ $ vi /etc/apt/sources.list.d/virtualbox.list  
+
+ deb [arch=amd64 signed-by=/usr/share/keyrings/virtualbox.gpg] https://download.virtualbox.org/virtualbox/debian jammy contrib
+
 ```
 
-<br/>
+<!-- <br/>
 
 ```
 # echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" >> /etc/apt/sources.list.d/virtualbox.list
@@ -33,32 +44,32 @@ $ sudo su -
 
 ```
 # wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+``` -->
+
+<br/>
+
+```
+$ sudo apt update -y
 ```
 
 <br/>
 
 ```
-# apt update -y
+$ apt-cache search virtualbox*
+```
+
+<br/>
+
+**Последняя 7.0 ее и ставлю**
+
+```
+$ sudo apt install -y virtualbox-7.0
 ```
 
 <br/>
 
 ```
-# apt-cache search virtualbox*
-```
-
-<br/>
-
-**Последняя 6.1 ее и ставлю**
-
-```
-# apt install -y virtualbox-7.0
-```
-
-<br/>
-
-```
-# vboxmanage --version
+$ vboxmanage --version
 7.0.4r154605
 ```
 
@@ -99,6 +110,7 @@ E: Unable to correct problems, you have held broken packages.
 В файле /etc/apt/sources.list.d/virtualbox.list
 
 ```
+Для 22.04 jammy
 Для 20.04 focal
 Для 18.04 bionic
 и т.д.
@@ -113,7 +125,7 @@ E: Unable to correct problems, you have held broken packages.
 ```
 $ sudo apt-get update
 $ sudo apt-cache search virtualbox
-$ sudo apt-get install -y virtualbox-6.0
+$ sudo apt-get install -y virtualbox-7.0
 $ vboxmanage --version
 ```
 

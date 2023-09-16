@@ -20,9 +20,9 @@ Offtopic:
 
 <br/>
 
-### Инсталляция VirtualBox 6.X
+### Инсталляция VirtualBox 7.X
 
-[Инсталляция VirtualBox 6.X в командной строке в Ubuntu 20.04](/virtual/virtualbox/setup/ubuntu/)
+[Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04](/virtual/virtualbox/setup/ubuntu/)
 
 <br/>
 
