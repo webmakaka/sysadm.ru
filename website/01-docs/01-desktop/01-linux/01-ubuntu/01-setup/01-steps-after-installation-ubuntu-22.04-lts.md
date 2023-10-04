@@ -9,7 +9,7 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts
 # Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
 
 **Делаю:**  
-16.09.2023
+17.09.2023
 
 <br/>
 
@@ -94,6 +94,7 @@ $ sudo apt install -y \
     wakeonlan \
     whois \
     gimp \
+    krita \
     usb-creator-gtk \
     gnome-tweaks \
     python-is-python3
@@ -107,9 +108,11 @@ $ sudo apt install -y \
 
 ### Gnome Panel
 
-    $ sudo apt install -y gnome-panel
+```
+$ sudo apt install -y gnome-panel
 
-    $ sudo reboot
+$ sudo reboot
+```
 
 <br/>
 
@@ -119,46 +122,23 @@ $ sudo apt install -y \
 
 ### Установить нормальный background
 
-    $ gsettings set org.gnome.desktop.background picture-options 'none'
+```
+$ gsettings set org.gnome.desktop.background picture-options 'none'
 
-    $ gsettings set org.gnome.desktop.background primary-color '#548080'
+$ gsettings set org.gnome.desktop.background primary-color '#548080'
 
-    $ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-
-<br/>
-
-### Смена раскладки клавиатуры по Alt + Shift
-
-Вот надо что-нибудь да испортить! По умолчанию, нужно выбрать комбинацию из 3х клваиш, чтобы сменить раскладку.
+$ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+```
 
 <br/>
 
-    $ gnome-tweaks
-
-<br/>
-
-Keyboard & Mouse --> Additional Layout Options --> Switching to another layout --> Alt + Shift
-
-<br/>
-
-### Настройка цветовой темы
-
-Appearance -> Theme
-
-    Legacy Applications -> Yaru-dark
-    Icons -> Ubuntu-mono-dark
-
-<br/>
-
-### Установить формат дат в консоли на английский
-
-<br/>
+### Добавление русского языка
 
 ```
 $ gnome-control-center
 ```
 
-    Region & Language --> Formats --> United Kingdom
+    Keyboard -> Input Sources -> +Russian
 
 <br/>
 
@@ -181,9 +161,38 @@ $ gnome-control-center
 
 <br/>
 
+### Установить формат дат в консоли на английский
+
+    Region & Language --> Formats --> United Kingdom
+
+<br/>
+
+### Смена раскладки клавиатуры по Alt + Shift
+
+Вот надо что-нибудь да испортить! По умолчанию, нужно выбрать комбинацию из 3х клваиш, чтобы сменить раскладку.
+
+<br/>
+
+    $ gnome-tweaks
+
+<br/>
+
+Keyboard & Mouse --> Additional Layout Options --> Switching to another layout --> Alt + Shift
+
+<br/>
+
+### Настройка цветовой темы
+
+Appearance -> Themes
+
+    Applications -> Yaru-dark
+    Icons -> Ubuntu-mono-dark
+
+<br/>
+
 ### Убрать автовыключение монитора
 
-    Power --> Power Saving Options --> Blank screen --> Never
+    Power --> Power Saving Options --> Screen Blank --> Never
 
 <br/>
 
@@ -191,7 +200,7 @@ $ gnome-control-center
 
 **Отключить противный звук при ошибке в консоли**
 
-Terminal --> Right Click --> Preferences
+Terminal --> Значек 3 линии --> Preferences
 
 Unnamed -> Sound -> Terminal bell (disable)
 
@@ -201,9 +210,11 @@ Unnamed -> Sound -> Terminal bell (disable)
 
 **Шрифты, цвета и т.д.**
 
-Unnamed --> Text --> Custom font: Ubuntu Mono Regular 22
+Unnamed --> Text --> Custom font: Ubuntu Mono 22
 
 Color --> Built-in schemes: Black on white
+
+Cursor --> Cursor shape: I-Beam
 
 <br/>
 
@@ -220,9 +231,9 @@ Color --> Built-in schemes: Black on white
 
 <br/>
 
-**Telegram**
+### Telegram
 
-    $ sudo mv Telegram /opt/telegram
+    $ sudo mv telegram /opt/telegram
 
     $ gnome-tweaks
 
@@ -244,7 +255,7 @@ Applications -> System Tools -> Preferences -> Startup Applications
 <br/>
 
 Name: Telegram
-Command: /opt/telegram/Telegram -startintray
+Command: /opt/telegram/telegram -startintray
 
 ![Автозапуск telegram](/img/desktop/linux/ubuntu/setup/autostart-telegram.png "Автозапуск telegram"){: .center-image }
 

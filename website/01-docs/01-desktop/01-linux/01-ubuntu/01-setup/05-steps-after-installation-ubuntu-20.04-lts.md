@@ -71,8 +71,7 @@ $ sudo apt install -y ubuntu-restricted-extras
 
 <br/>
 
-    grub-customizer \
-        gnome-tweak-tool \
+
 
 ```
 $ sudo apt install -y \
@@ -89,6 +88,8 @@ $ sudo apt install -y \
     wakeonlan \
     whois \
     gimp \
+    grub-customizer \
+    gnome-tweak-tool \
     usb-creator-gtk \
     python-is-python3
 ```

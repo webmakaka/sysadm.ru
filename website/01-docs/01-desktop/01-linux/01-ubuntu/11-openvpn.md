@@ -10,8 +10,11 @@ permalink: /desktop/linux/ubuntu/vpn/openvpn/
 
 https://openvpn.net/community-downloads/
 
+
+<br/>
+
 Делаю!  
-09.01.2023
+2023.09.01
 
 <br/>
 
@@ -189,4 +192,58 @@ $ sudo vi /etc/openvpn/client.conf
 
 $ sudo service openvpn@client restart
 $ route -n
+```
+
+<br/>
+
+### Backup конфигов
+
+Нужно скопировать куда-нибудь:
+
+<br/>
+
+```
+login.conf 
+client.conf
+```
+
+
+<br/>
+
+### Восстановление после переустановки операционной системы
+
+
+<br/>
+
+Делаю!  
+2023.10.03
+
+<br/>
+
+```
+$ sudo apt install -y openvpn-systemd-resolved
+```
+
+<br/>
+
+```
+$ sudo cp ./login.conf /etc/openvpn/
+$ sudo cp ./client.conf /etc/openvpn/
+```
+
+
+<br/>
+
+```
+$ sudo cp ./login.conf /etc/openvpn/
+$ sudo cp ./client.conf /etc/openvpn/
+```
+
+<br/>
+
+```
+$ sudo systemctl enable openvpn@client.service
+$ sudo systemctl daemon-reload
+$ sudo service openvpn@client start
+$ sudo service openvpn@client status
 ```
