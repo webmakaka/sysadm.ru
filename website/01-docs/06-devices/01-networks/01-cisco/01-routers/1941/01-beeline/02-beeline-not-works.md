@@ -109,11 +109,37 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 <br/>
 
 ```
+// Чтобы подключиться с 22 ubuntu
+// marley - пользователь под которым работаю
+
+$ vi ~/.ssh/config
+Host cosco-router
+  User marley
+  Hostname 192.168.1.1
+  HostKeyAlgorithms +ssh-rsa
+
+
+$ ssh \
+    -oKexAlgorithms=+diffie-hellman-group1-sha1 \
+    -c aes256-cbc \
+    cosco-router
+```
+
+<br/>
+
+```
 // Чтобы подключиться с 20 ubuntu
 $ ssh \
     -oKexAlgorithms=+diffie-hellman-group1-sha1 \
     -c aes256-cbc \
     192.168.1.1
+```
+
+<br/>
+
+```
+// Так можно подключиться с 18 ubuntu, с 20 уже нет.
+$ ssh -c aes256-cbc 192.168.1.1
 ```
 
 <!--
