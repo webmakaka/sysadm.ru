@@ -97,7 +97,8 @@ $ sudo apt install -y \
     krita \
     usb-creator-gtk \
     gnome-tweaks \
-    python-is-python3
+    python-is-python3 \
+    gnome-screenshot
 ```
 
 <!--

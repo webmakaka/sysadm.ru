@@ -8,6 +8,8 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 # Домашний интернет от Билайн, информация по неработающему интернету
 
+<br/>
+
 Установлено оборудование Cisco Router 1941
 
 <br/>
@@ -92,13 +94,19 @@ permalink: /devices/cisco/routers/1941/beeline-not-works/
 
 **Итого на чей стороне проблемы:**
 
-2 (Я) : 19 (Beeline)
+3 (Я) : 19 (Beeline)
 
 <br/>
 
-+1 (Я)
+- (До Cisco) 1 Домашние из роутера вырвали Lan кабель.
 
-Не открывался сайт. Было сообщение от яндекса, что "сайт содержит материалы для взрослых". Обратился в техподдержку. Думал beeline мне добавил "родительский контроль", "безопасный интернет", etc.
+<br/>
+
+- (До Cisco) 1 раз бочку, что у меня в квартире, поменял сотрудник. Походу с ней было не все хорошо.
+
+<br/>
+
+- 1 Не открывался сайт. Было сообщение от яндекса, что "сайт содержит материалы для взрослых". Обратился в техподдержку. Думал beeline мне добавил "родительский контроль", "безопасный интернет", etc.
 
 Оказалось, что у меня включен openvpn и мой сайт с клипами с ютуба, просто пытается использовать корпоративный маршрут, за который ни я, ни beeline не отвечаем. А уж там и настроены фильтры для сотрудников.
 
@@ -134,34 +142,6 @@ $ ssh \
     -c aes256-cbc \
     192.168.1.1
 ```
-
-<br/>
-
-```
-// Так можно подключиться с 18 ubuntu, с 20 уже нет.
-$ ssh -c aes256-cbc 192.168.1.1
-```
-
-<!--
-
-ssh -o KexAlgorithms="diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1" 172.16.100.65
-
-=======
-
-
-
-echo "KexAlgorithms diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1" >>/etc/ssh/ssh_config.d/weak.conf
-
-
-Удалить файл
-
-/etc/ssh/ssh_config.d/weak.conf
-
-<br/>
-
-https://askubuntu.com/questions/1279881/ubuntu-20-04-unable-to-ssh-to-cisco-ios
-
--->
 
 <br/>
 
@@ -226,3 +206,15 @@ Temp  sub net mask: 0.0.0.0
 <br/>
 
 **Разумеется, не помогло!**
+
+<br/>
+
+### М.б. что полезное можно посмотреть
+
+```
+$ debug ip dhcp server events
+$ debug ip dhcp server packet
+
+$ undebug ip dhcp server events
+$ undebug ip dhcp server packet
+```

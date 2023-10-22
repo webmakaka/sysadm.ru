@@ -17,24 +17,32 @@ permalink: /desktop/linux/hardware/hdd/seagate/8tb/
 
 В общем для нормальной работы дисков большего объема, придется использовать parted.
 
-    # fdisk -l /dev/sdc
+<br/>
 
-    Disk /dev/sdc: 8001.6 GB, 8001563222016 bytes
-    255 heads, 63 sectors/track, 972801 cylinders
-    Units = cylinders of 16065 * 512 = 8225280 bytes
-    Sector size (logical/physical): 512 bytes / 4096 bytes
-    I/O size (minimum/optimal): 4096 bytes / 4096 bytes
-    Disk identifier: 0xbed6eb22
+```
+# fdisk -l /dev/sdc
 
-       Device Boot      Start         End      Blocks   Id  System
+Disk /dev/sdc: 8001.6 GB, 8001563222016 bytes
+255 heads, 63 sectors/track, 972801 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk identifier: 0xbed6eb22
+
+    Device Boot      Start         End      Blocks   Id  System
+```
 
 <br/>
 
-    # yum install -y parted
+```
+# yum install -y parted
+```
 
 <br/>
 
-    # parted -a optimal /dev/sdc mkpart primary 0% 100%
+```
+# parted -a optimal /dev/sdc mkpart primary 0% 100%
+```
 
 <!--
 # parted /dev/sdc
@@ -78,34 +86,50 @@ Number  Start   End     Size    File system  Name     Flags
 
 <br/>
 
-    # mkfs.ext4 /dev/sdc1
+```
+# mkfs.ext4 /dev/sdc1
+```
 
 <br>
 
 Получаю UUID диска.
 
-    # blkid /dev/sdc1
-    /dev/sdc1: UUID="8e53f2c6-0c0c-4db5-89ed-4935d89c11de" TYPE="ext4"
+```
+# blkid /dev/sdc1
+/dev/sdc1: UUID="8e53f2c6-0c0c-4db5-89ed-4935d89c11de" TYPE="ext4"
+```
 
 Добавляю запись в fstab, чтобы после перезагрузки раздел диска автоматически смонтировался в файловой системе.
 
-    # vi /etc/fstab
+<br/>
+
+```
+# vi /etc/fstab
+```
 
 Собственно запись
 
-    # 8 TB HDD
-    UUID=8e53f2c6-0c0c-4db5-89ed-4935d89c11de /mnt/dsk4 ext4 defaults 0 0
-
-Далее уже команды как вводил в консоль.
-
-    # mount /mnt/dsk4
+```
+# 8 TB HDD
+UUID=8e53f2c6-0c0c-4db5-89ed-4935d89c11de /mnt/dsk4 ext4 defaults 0 0
+```
 
 <br/>
 
-    # df -h
-    ***
-    /dev/sdc1             7.2T   51M  6.8T   1% /mnt/dsk4
-    ***
+Далее уже команды как вводил в консоль.
+
+```
+# mount /mnt/dsk4
+```
+
+<br/>
+
+```
+# df -h
+***
+/dev/sdc1             7.2T   51M  6.8T   1% /mnt/dsk4
+***
+```
 
 Чего-то овердохуя потеряно места!
 
@@ -115,8 +139,14 @@ Number  Start   End     Size    File system  Name     Flags
 
 Отменяем резервирование 5% для суперпользователя следующей командой.
 
-    # tune2fs /dev/sdc1 -m 0
+<br/>
+
+```
+# tune2fs /dev/sdc1 -m 0
+```
 
 После этого:
 
-    /dev/sdc1             7.2T   51M  7.2T   1% /mnt/dsk4
+```
+/dev/sdc1             7.2T   51M  7.2T   1% /mnt/dsk4
+```
