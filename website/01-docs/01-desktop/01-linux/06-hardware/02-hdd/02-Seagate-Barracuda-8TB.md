@@ -41,7 +41,7 @@ Disk identifier: 0xbed6eb22
 <br/>
 
 ```
-# parted -a optimal /dev/sdc mkpart primary 0% 100%
+# parted -a optimal /dev/sdc mklabel gpt mkpart primary 0% 100%
 ```
 
 <!--
@@ -130,6 +130,8 @@ UUID=8e53f2c6-0c0c-4db5-89ed-4935d89c11de /mnt/dsk4 ext4 defaults 0 0
 /dev/sdc1             7.2T   51M  6.8T   1% /mnt/dsk4
 ***
 ```
+
+<br/>
 
 Чего-то овердохуя потеряно места!
 

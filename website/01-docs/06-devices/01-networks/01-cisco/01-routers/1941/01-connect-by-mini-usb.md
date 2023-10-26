@@ -3,7 +3,7 @@ layout: page
 title: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
 description: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
 keywords: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
-permalink: /devices/cisco/routers/1941/connetc-to-mini-usb/
+permalink: /devices/cisco/routers/1941/connect-by-mini-usb/
 ---
 
 # Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
@@ -12,7 +12,7 @@ permalink: /devices/cisco/routers/1941/connetc-to-mini-usb/
 
 <br/>
 
-![cicso mini usb console cable](/img//devices/cisco/routers/1941/connetc-to-mini-usb/cicso-mini-usb-console-cable.jpg 'cicso mini usb console cable'){: .center-image }
+![cicso mini usb console cable](/img//devices/cisco/routers/1941/connect-by-mini-usb/cicso-mini-usb-console-cable.jpg 'cicso mini usb console cable'){: .center-image }
 
 <br/>
 
@@ -94,6 +94,8 @@ Sorry, could not find a PTY.
 <br/>
 
 ### Собственно настройки
+
+<br/>
 
     Router> enable
     Router# configure terminal
@@ -188,7 +190,9 @@ Router(config-line)# escape-character 3
     Password:
     cisco-router-1941#
 
-Сохраняю конфиг:
+<br/>
+
+**Сохраняю конфиг:**
 
     cisco-router-1941# copy running-config startup-config
     Destination filename [startup-config]? startup-config

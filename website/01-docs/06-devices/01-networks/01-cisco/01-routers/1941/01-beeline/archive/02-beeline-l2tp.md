@@ -54,7 +54,7 @@ GigabitEthernet0/1 - внутренняя сеть<br/>
 -- To enable the Domain Name System (DNS) server on a router
 
 <pre>
-<strong>cisco-router-1941(config)# <code>ip dns server </code></strong>
+<strong>cisco-router-1941(config)# <code>ip dns server</code></strong>
 </pre>
 
 <pre>
@@ -285,6 +285,7 @@ PPS Поменял брас на "новый" 78.107.1.246 (tp.internet.beeline.
 </pre>
 
 <br/>
+
 -- В следующих 2-х командах, нужно руками вводить свой логин и пароль для доступа в интернет.
 
 <pre>
