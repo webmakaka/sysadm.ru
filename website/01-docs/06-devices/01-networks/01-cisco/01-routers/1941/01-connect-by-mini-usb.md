@@ -12,7 +12,7 @@ permalink: /devices/cisco/routers/1941/connect-by-mini-usb/
 
 <br/>
 
-![cicso mini usb console cable](/img//devices/cisco/routers/1941/connect-by-mini-usb/cicso-mini-usb-console-cable.jpg 'cicso mini usb console cable'){: .center-image }
+![cicso mini usb console cable](/img/devices/cisco/routers/1941/connect-by-mini-usb/cicso-mini-usb-console-cable.jpg 'cicso mini usb console cable'){: .center-image }
 
 <br/>
 
