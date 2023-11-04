@@ -1,41 +1,44 @@
 ---
 layout: page
-title: Удаленный рабочий стол в Ubuntu 20.04
-description: Удаленный рабочий стол в Ubuntu 20.04
+title: Удаленный рабочий стол в Ubuntu 22.04
+description: Удаленный рабочий стол в Ubuntu 22.04
 keywords: linux, vncserver, vncviewer
 permalink: /desktop/linux/ubuntu/vnc-server/
 ---
 
-# Удаленный рабочий стол в Ubuntu 20.04
-
-Последний раз делаю:  
-29.06.2023
+# Удаленный рабочий стол в Ubuntu 22.04
 
 <br/>
 
-По этой статье.
+**Последний раз делаю:**  
+2023.11.04
+
+<br/>
+
+По этой статье:  
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04
 
 <br/>
 
-Для компьюетера во внтренней сети.
+Для компьюетера во внутренней сети.
 
 <br/>
 
 ```
-$ sudo apt install xfce4 xfce4-goodies
-$ sudo apt install tightvncserver
+$ sudo apt install -y xfce4 xfce4-goodies
+$ sudo apt install -y tightvncserver
 ```
 
 <br/>
 
 ```
+$ mkdir ~/.vnc/
 $ vi ~/.vnc/xstartup
 ```
 
 <br/>
 
-```
+```bash
 #!/bin/bash
 xrdb $HOME/.Xresources
 startxfce4 &
@@ -50,6 +53,12 @@ $ chmod +x ~/.vnc/xstartup
 <br/>
 
 ```
+$ vncserver
+```
+
+<br/>
+
+```
 $ sudo vi /etc/systemd/system/vncserver@.service
 ```
 
@@ -59,7 +68,7 @@ $ sudo vi /etc/systemd/system/vncserver@.service
 
 <br/>
 
-```
+```bash
 [Unit]
 Description=Start TightVNC server at startup
 After=syslog.target network.target
@@ -96,7 +105,7 @@ $ sudo systemctl restart vncserver@1.service
 
 <br/>
 
-### Удаленное подключение с клиента с помощью remmina:
+### Удаленное подключение с клиента с помощью remmina
 
 <br/>
 
@@ -104,15 +113,21 @@ $ sudo systemctl restart vncserver@1.service
 $ remmina
 ```
 
+<br/>
+
 После запуска, следует создать новый профиль для подключения. Стартовое окно оно не для подключения а для фильтрации уже имеющися подключений.
 
 <br/>
 
 **Для linux хостов:**
 
-Подключаемся к <ip_server>:5901
+```
+Name: home-download
 
 Protocol: Remmina VNC Plugin
+
+Server: <ip_server>:5901
+```
 
 <!-- <br/>
 

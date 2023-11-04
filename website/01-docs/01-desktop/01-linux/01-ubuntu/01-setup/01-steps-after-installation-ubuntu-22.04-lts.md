@@ -80,24 +80,33 @@ $ sudo apt install -y ubuntu-restricted-extras
 <br/>
 
 ```
+// Основные
 $ sudo apt install -y \
-    make \
+    vim \
     openssh-server \
+    net-tools \
     traceroute \
+    iputils-ping \
+    rar unrar-free \
+    wakeonlan \
+    python-is-python3 \
+    make
+```
+
+<br/>
+
+```
+// Дополнительные
+$ sudo apt install -y \
     vlc \
     mpv \
     transmission \
     ffmpegthumbnailer \
-    net-tools \
-    iputils-ping \
-    rar unrar-free \
-    wakeonlan \
     whois \
     gimp \
     krita \
     usb-creator-gtk \
     gnome-tweaks \
-    python-is-python3 \
     gnome-screenshot
 ```
 

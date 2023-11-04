@@ -1,15 +1,17 @@
 ---
 layout: page
-title: Инсталляция Google Chrome в Ubuntu
-description: Инсталляция Google Chrome в Ubuntu
+title: Инсталляция Google Chrome в Ubuntu 22.04
+description: Инсталляция Google Chrome в Ubuntu 22.04
 keywords: linux, ubuntu, browser, google chrome, инсталляция
 permalink: /desktop/linux/ubuntu/browsers/chrome/
 ---
 
-# Инсталляция Chrome в Ubuntu
+# Инсталляция Chrome в Ubuntu 22.04
 
-Делаю:  
-2023.09.17
+<br/>
+
+**Последний раз делаю:**  
+2023.11.04
 
 <br/>
 

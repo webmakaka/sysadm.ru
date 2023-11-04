@@ -10,16 +10,22 @@ permalink: /desktop/linux/ubuntu/setup/do-not-ask-root-password/
 
 <br/>
 
-    -- добавить при необходимости пользователя в группу sudo
-    $ sudo usermod -aG sudo ${USER}
+```
+-- добавить при необходимости пользователя в группу sudo
+$ sudo usermod -aG sudo ${USER}
+```
 
 <br/>
 
-    $ sudo vi /etc/sudoers
+```
+$ sudo vi /etc/sudoers
+```
 
 <br/>
 
-    %sudo   ALL=(ALL:ALL) ALL
+```
+%sudo   ALL=(ALL:ALL) ALL
+```
 
 меняю на:
 

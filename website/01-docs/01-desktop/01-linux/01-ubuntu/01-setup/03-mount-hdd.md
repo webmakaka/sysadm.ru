@@ -8,7 +8,7 @@ permalink: /desktop/linux/ubuntu/setup/mount-hdd/
 
 # [Ubuntu] Монтирование жестких дисков
 
-
+<br/>
 
 ```
 // Можно все здесь посмотреть
@@ -17,29 +17,22 @@ $ gnome-disks
 
 <br/>
 
-
 ```
 $ sudo fdisk -l /dev/sd*
 ```
 
-
-
 <br/>
-
 
 ```
 $ sudo mkdir -p /mnt/dsk1
 $ sudo mkdir -p /mnt/dsk2
 ```
 
-
-
 ```
 $ blkid /dev/sda1
 ```
 
 <br/>
-
 
 ```
 Samsung SSD 850 PRO 512GB (EXM02B6Q)
@@ -51,7 +44,6 @@ SSD 1TB
 ```
 
 <br/>
-
 
 ```
 $ sudo vi /etc/fstab
@@ -70,12 +62,10 @@ UUID=038d3663-1d33-40ef-8012-16e23e72d159 /mnt/dsk2 ext4 defaults 0 0
 
 <br/>
 
-
 ```
 $ sudo mount /mnt/dsk1/
 $ sudo mount /mnt/dsk2/
 ```
-
 
 <br/>
 
