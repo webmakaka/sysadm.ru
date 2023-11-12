@@ -3,9 +3,9 @@ layout: page
 title: Виртуализация в Windows
 description: Виртуализация в Windows
 keywords: Виртуализация в Windows
-permalink: /windows/servers/virtual/
+permalink: /server/windows/virtual/
 ---
 
 # Виртуализация в Windows
 
-### [VirtualBox](/windows/servers/virtual/virtualbox/)
+### [VirtualBox](/server/windows/virtual/virtualbox/)

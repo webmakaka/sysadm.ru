@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Docker в Windows
 description: Инсталляция Docker в Windows
 keywords: Инсталляция Docker в Windows
-permalink: /windows/servers/containers/docker/installation/
+permalink: /server/windows/container/docker/installation/
 ---
 
 # Инсталляция Docker в Windows
@@ -18,13 +18,13 @@ https://docs.docker.com/windows/
 
 3. Проверяю (от нечего делать):
 
-    \$ docker pull hello-world
-    Using default tag: latest
-    latest: Pulling from library/hello-world
-    03f4658f8b78: Pull complete
-    a3ed95caeb02: Pull complete
-    Digest: sha256:8be990ef2aeb16dbcb9271ddfe2610fa6658d13f6dfb8bc72074cc1ca36966a7
-    Status: Downloaded newer image for hello-world:latest
+   \$ docker pull hello-world
+   Using default tag: latest
+   latest: Pulling from library/hello-world
+   03f4658f8b78: Pull complete
+   a3ed95caeb02: Pull complete
+   Digest: sha256:8be990ef2aeb16dbcb9271ddfe2610fa6658d13f6dfb8bc72074cc1ca36966a7
+   Status: Downloaded newer image for hello-world:latest
 
 <br/>
 

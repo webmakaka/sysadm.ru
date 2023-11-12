@@ -3,7 +3,7 @@ layout: page
 title: Практический пример запуска приложения в docker под Windows
 description: Практический пример запуска приложения в docker под Windows
 keywords: Практический пример запуска приложения в docker под Windows
-permalink: /windows/servers/containers/docker/run-container/
+permalink: /server/windows/container/docker/run-container/
 ---
 
 # Практический пример запуска приложения в docker под Windows

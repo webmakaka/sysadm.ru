@@ -3,7 +3,7 @@ layout: page
 title: Docker в Windows первое знакомство
 description: Docker в Windows первое знакомство
 keywords: Docker в Windows первое знакомство
-permalink: /windows/servers/containers/docker/first-look/
+permalink: /server/windows/container/docker/first-look/
 ---
 
 # Docker в Windows первое знакомство

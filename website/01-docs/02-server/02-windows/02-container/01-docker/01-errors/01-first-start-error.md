@@ -3,7 +3,7 @@ layout: page
 title: Ошибки при работе с Docker в Windows - Ошибка при запуске Docker Quick Start Terminal
 description: Ошибки при работе с Docker в Windows - Ошибка при запуске Docker Quick Start Terminal
 keywords: Ошибки при работе с Docker в Windows - Ошибка при запуске Docker Quick Start Terminal
-permalink: /windows/servers/containers/docker/errors/first-start-error/
+permalink: /server/windows/container/docker/errors/first-start-error/
 ---
 
 # Ошибка при запуске Docker Quick Start Terminal
@@ -16,4 +16,4 @@ permalink: /windows/servers/containers/docker/errors/first-start-error/
 Пробуем стартануть ее из консоли virtualbox.
 
 Если появится ошибка Failed to open/create the internal network 'HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter'.
-Смотри ее решение <a href="/windows/servers/virtual/virtualbox/errors/failed-to-open-create-the-internal-network/">здесь</a>.
+Смотри ее решение <a href="/server/windows/virtual/virtualbox/errors/failed-to-open-create-the-internal-network/">здесь</a>.

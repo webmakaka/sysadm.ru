@@ -3,7 +3,7 @@ layout: page
 title: Администрирование серверов Windows
 description: Администрирование серверов Windows
 keywords: Администрирование серверов Windows
-permalink: /adm/windows/servers/
+permalink: /server/windows/
 ---
 
 # Администрирование серверов Windows:
@@ -13,8 +13,8 @@ permalink: /adm/windows/servers/
 ### Виртуализация и контейнеры
 
 <ul>
-    <li><a href="/windows/servers/virtual/">Виртуализация</a></li>
-    <li><a href="/windows/servers/containers/">Контейнеры</a></li>
+    <li><a href="/server/windows/virtual/">Виртуализация</a></li>
+    <li><a href="/server/windows/container/">Контейнеры</a></li>
 </ul>
 
 <br/>
@@ -22,5 +22,5 @@ permalink: /adm/windows/servers/
 ### Базы данных
 
 <ul>
-    <li><a href="/windows/databases/">Базы данных</a></li>
+    <li><a href="/server/windows/database/">Базы данных</a></li>
 </ul>

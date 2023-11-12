@@ -3,28 +3,28 @@ layout: page
 title: Docker в Windows
 description: Docker в Windows
 keywords: Docker в Windows
-permalink: /windows/servers/containers/docker/
+permalink: /server/windows/container/docker/
 ---
 
 # Docker в Windows
 
 <br/>
 
-[Docker в Windows первое знакомство](/windows/servers/containers/docker/first-look/)
+[Docker в Windows первое знакомство](/server/windows/container/docker/first-look/)
 
-[Инсталляция Docker в Windows](/windows/servers/containers/docker/installation/)
+[Инсталляция Docker в Windows](/server/windows/container/docker/installation/)
 
-[Практический пример запуска приложения в docker под Windows](/windows/servers/containers/docker/run-container/)
+[Практический пример запуска приложения в docker под Windows](/server/windows/container/docker/run-container/)
 
-[Запустить docker контейнер и выполнить команду npm start](/windows/servers/containers/docker/run-container-v2/)
+[Запустить docker контейнер и выполнить команду npm start](/server/windows/container/docker/run-container-v2/)
 
-[Запустить asp.net приложение в docker контейнере](/windows/servers/containers/docker/run-asp-net-app-in-docker/)
+[Запустить asp.net приложение в docker контейнере](/server/windows/container/docker/run-asp-net-app-in-docker/)
 
 <br/>
 
 ### Ошибки:
 
-[Ошибки при работе с Docker в Windows](/windows/servers/containers/docker/errors/)
+[Ошибки при работе с Docker в Windows](/server/windows/container/docker/errors/)
 
 <br/>
 
