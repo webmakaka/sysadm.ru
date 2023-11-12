@@ -42,19 +42,19 @@ permalink: /desktop/linux/
 
 ### [Networks](/desktop/linux/networks/)
 
-### [Web Servers](/webservers/)
+### [Web Servers](/server/linux/webserver/)
 
-### [Proxy Servers](/linux/proxy/)
+### [Proxy Servers](/server/linux/proxy/)
 
-### [Базы данных](/databases/)
+### [Базы данных](/server/linux/database/)
 
-### [Виртуализация](/virtual/)
+### [Виртуализация](/server/linux/virtual/)
 
-### [Кластеризация](/linux/clustering/)
+### [Кластеризация](/server/linux/clustering/)
 
-### [Мониторинг](/monitoring/)
+### [Мониторинг](/server/linux/monitoring/)
 
-### [Logging](/logging/)
+### [Logging](/server/linux/logging/)
 
 <br/>
 
