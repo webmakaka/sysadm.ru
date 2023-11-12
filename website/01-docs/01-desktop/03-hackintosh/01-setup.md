@@ -10,6 +10,10 @@ permalink: /desktop/hackintosh/setup/
 
 <br/>
 
+**Ничего у меня не заработало, т.к. железо старое, мотивация слабая, а руки кривые**
+
+<br/>
+
 **UPD: (Надо посмотреть) Как получить быструю виртуальную macOS Ventura в линуксе**  
 https://www.linux.org.ru/articles/desktop/17166844
 
@@ -28,7 +32,9 @@ magnet:?xt=urn:btih:5ee8b32c1d6cfc12cc1f55fc67b704a8a9f3092a
 
 <br/>
 
-    $ sudo apt-get install dmg2img
+```
+$ sudo apt-get install dmg2img
+```
 
 <br/>
 
@@ -36,7 +42,9 @@ magnet:?xt=urn:btih:5ee8b32c1d6cfc12cc1f55fc67b704a8a9f3092a
 
 <br/>
 
-    $ dmg2img -v -i /home/marley/Downloads/Hackintosh.dmg -o /home/marley/Downloads/Hackintosh.iso
+```
+$ dmg2img -v -i /home/marley/Downloads/Hackintosh.dmg -o /home/marley/Downloads/Hackintosh.iso
+```
 
 <br/>
 
@@ -44,7 +52,9 @@ magnet:?xt=urn:btih:5ee8b32c1d6cfc12cc1f55fc67b704a8a9f3092a
 
 <br/>
 
-    $ sudo fdisk -l
+```
+$ sudo fdisk -l
+```
 
 <br/>
 
@@ -54,11 +64,15 @@ magnet:?xt=urn:btih:5ee8b32c1d6cfc12cc1f55fc67b704a8a9f3092a
 
 <br/>
 
-    $ sudo fdisk -l /dev/sdd
+```
+$ sudo fdisk -l /dev/sdd
+```
 
 <br/>
 
-    $ sudo dd if=/home/marley/Downloads/Hackintosh.iso of=/dev/sdd bs=1M
+```
+$ sudo dd if=/home/marley/Downloads/Hackintosh.iso of=/dev/sdd bs=1M
+```
 
 <br/>
 
