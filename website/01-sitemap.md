@@ -34,7 +34,7 @@ permalink: /sitemap/
 
 # Сетевые устройства:
 
-### [Cisco: Switches and Routers](/devices/cisco/)
+### [Cisco: Switches and Routers](/device/network/cisco/)
 
 ---
 
