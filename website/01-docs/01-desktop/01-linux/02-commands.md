@@ -30,6 +30,13 @@ permalink: /desktop/linux/commands/
 
     $ grep -rl 'ApplicationContext' ./
 
+<br/>
+
+```
+// Какие порты слушаются
+$ sudo ss -tulpn
+```
+
 <!--
 Какие порты используются приложениями:
 ps -ef | grep java | grep "netcracker/config" | sed 's/^[a-zA-Z]\{1,\}[[:space:]]*\([0-9]\{1,5\}\).*\(\-Xmx[0-9]*m\).*t3.\{3\}\([a-zA-Z\.0-9]*:[0-9]\{4\}\)[[:space:]].*\-Dnetcracker\.home=\([^[:space:]]\{1,\}\).*$/\1\t\2\t\3\t\4/' | sort
