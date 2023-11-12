@@ -24,7 +24,7 @@ permalink: /device/kvm-over-ip/networks/lantronix-securelinx-spider/
 <br/><br/>
 
 <div align="center">
-	<img src="/img/devices/networks/kvm-over-ip/lantronix-securelinx/Lantronix-SecureLinx-Spider.jpg" border="0" alt="Lantronix SecureLinx Spider">
+	<img src="/img/device/network/kvm-over-ip/lantronix-securelinx/Lantronix-SecureLinx-Spider.jpg" border="0" alt="Lantronix SecureLinx Spider">
 </div>
 
 <br/>
@@ -39,23 +39,23 @@ permalink: /device/kvm-over-ip/networks/lantronix-securelinx-spider/
 
 <div align="center">
 
-<img src="/img/devices/networks/kvm-over-ip/lantronix-securelinx/Lantronix_SecureLinx_Spider_pic1.png" border="0" alt="Lantronix SecureLinx Spider Window">
+<img src="/img/device/network/kvm-over-ip/lantronix-securelinx/Lantronix_SecureLinx_Spider_pic1.png" border="0" alt="Lantronix SecureLinx Spider Window">
 
 <br/><br/>
 
-<img src="/img/devices/networks/kvm-over-ip/lantronix-securelinx/Lantronix_SecureLinx_Spider_pic2.png" border="0" alt="Lantronix SecureLinx Spider Window">
+<img src="/img/device/network/kvm-over-ip/lantronix-securelinx/Lantronix_SecureLinx_Spider_pic2.png" border="0" alt="Lantronix SecureLinx Spider Window">
 
 <br/><br/>
 
-<img src="/img/devices/networks/kvm-over-ip/lantronix-securelinx/Lantronix_SecureLinx_Spider_pic3.png" border="0" alt="Lantronix SecureLinx Spider Window">
+<img src="/img/device/network/kvm-over-ip/lantronix-securelinx/Lantronix_SecureLinx_Spider_pic3.png" border="0" alt="Lantronix SecureLinx Spider Window">
 
 <br/><br/>
 
-<img src="/img/devices/networks/kvm-over-ip/lantronix-securelinx/Lantronix_SecureLinx_Spider_pic4.png" border="0" alt="Lantronix SecureLinx Spider Window">
+<img src="/img/device/network/kvm-over-ip/lantronix-securelinx/Lantronix_SecureLinx_Spider_pic4.png" border="0" alt="Lantronix SecureLinx Spider Window">
 
 <br/><br/>
 
-<img src="/img/devices/networks/kvm-over-ip/lantronix-securelinx/Lantronix_SecureLinx_Spider_pic5.png" border="0" alt="Lantronix SecureLinx Spider Window">
+<img src="/img/device/network/kvm-over-ip/lantronix-securelinx/Lantronix_SecureLinx_Spider_pic5.png" border="0" alt="Lantronix SecureLinx Spider Window">
 
 </div>
 

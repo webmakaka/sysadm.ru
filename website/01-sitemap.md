@@ -26,7 +26,7 @@ permalink: /sitemap/
 
 # HardWare:
 
-### [HardWare](/hardware/)
+### [HardWare](/device/hardware/)
 
 ---
 
