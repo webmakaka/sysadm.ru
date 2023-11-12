@@ -21,8 +21,8 @@ permalink: /device/hardware/
 <br/>
 
 <ul>
-    <li><a href="/img/hardware/cpu-chpisets-1.png" rel="nofollow">1156, 1155, 1150, 1151, 1151 v2</a></li>
-    <li><a href="/img/hardware/cpu-chpisets-2.png" rel="nofollow">1366, 2011, 20011-3, 2066</a></li>
+    <li><a href="/img/device/hardware/cpu-chpisets-1.png" rel="nofollow">1156, 1155, 1150, 1151, 1151 v2</a></li>
+    <li><a href="/img/device/hardware/cpu-chpisets-2.png" rel="nofollow">1366, 2011, 20011-3, 2066</a></li>
 </ul>
 
 <br/>
