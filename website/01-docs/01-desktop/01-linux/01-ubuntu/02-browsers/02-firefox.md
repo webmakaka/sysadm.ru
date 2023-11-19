@@ -18,7 +18,7 @@ permalink: /desktop/linux/ubuntu/browsers/firefox/
 <br/>
 
 ```
-$  firefox
+$ firefox
 2023/11/19 17:56:18.690125 cmd_run.go:1055: WARNING: cannot start document portal: Expected portal at "/run/user/1000/doc", got "/home/marley/.cache/doc"
 /system.slice/system-vncserver.slice/vncserver@1.service is not a snap cgroup
 ```
@@ -42,7 +42,7 @@ $ sudo add-apt-repository ppa:mozillateam/ppa
 <br/>
 
 ```
-echo '
+$ echo '
 Package: *
 Pin: release o=LP-PPA-mozillateam
 Pin-Priority: 1001
@@ -52,7 +52,7 @@ Pin-Priority: 1001
 <br/>
 
 ```
-echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
+$ echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
 ```
 
 <br/>
