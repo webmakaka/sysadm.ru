@@ -25,6 +25,10 @@ $  firefox
 
 <br/>
 
+Собственно, удалил firefox из snap и установил из apt репозитория.
+
+<br/>
+
 ```
 $ sudo snap remove firefox
 ```
