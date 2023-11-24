@@ -2,7 +2,7 @@
 layout: page
 title: PostgreSQL инсталляция в Ubuntu
 description: PostgreSQL
-keywords: databases, linux, postgresql ubuntu, инсталляция
+keywords: server, linux, database, postgresql, setup, ubuntu
 permalink: /server/linux/database/postgresql/setup/ubuntu/
 ---
 
@@ -15,13 +15,11 @@ https://www.postgresql.org/download/linux/ubuntu/
 <br/>
 
 **Делаю:**  
-17.02.2023
+2023.11.24
 
 ```
-$ PG_VERSION=9.6
-
 // Create the file repository configuration:
-$ sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+$ sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" >
 
 // Import the repository signing key:
 $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -41,16 +39,19 @@ $ sudo apt-get -y install postgresql
 <br/>
 
 ```
-# apt-get install -y postgresql-$PG_VERSION postgresql-server-dev-$PG_VERSION
+$ PG_VERSION=9.6
+$ sudo apt-get install -y postgresql-$PG_VERSION postgresql-server-dev-$PG_VERSION
 
-# service postgresql restart
-# service postgresql status
-# systemctl enable postgresql
+$ sudo service postgresql restart
+$ sudo service postgresql status
+$ sudo systemctl enable postgresql
 ```
 
 <br/>
 
 ### Если нужно установить только psql клиент
+
+Репо должно быть подключено.
 
 ```
 $ apt-cache search postgresql-client
@@ -61,7 +62,7 @@ psql (PostgreSQL) 15.2 (Ubuntu 15.2-1.pgdg20.04+1)
 
 <br/>
 
-UPD. Если ошибка (Была в mint), что-то вроде:
+### UPD. Если ошибка (Была в mint), что-то вроде:
 
 ```
 E: The repository 'https://apt.postgresql.org/pub/repos/apt una-pgdg Release' does not have a Release file.
@@ -74,7 +75,7 @@ $ sudo vi /etc/apt/sources.list.d/pgdg.list
 ```
 
 ```
-// В данном случае нужна была focal
+// В моем случае нужна была focal
 deb https://apt.postgresql.org/pub/repos/apt focal-pgdg main
 ```
 
