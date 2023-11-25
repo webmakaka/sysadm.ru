@@ -71,8 +71,6 @@ $ sudo apt install -y ubuntu-restricted-extras
 
 <br/>
 
-
-
 ```
 $ sudo apt install -y \
     make \
@@ -197,14 +195,14 @@ Color --> Built-in schemes: Black on white
 
 ### Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
-[Инфа здесь](/desktop/linux/ubuntu/browsers/block-junk-websites/)
+[Инфа здесь](/desktop/linux/ubuntu/browser/block-junk-websites/)
 
 <br/>
 
 ### Дополнительное ПО
 
-[Chrome](/desktop/linux/ubuntu/browsers/chrome/)  
-[Opera](/desktop/linux/ubuntu/browsers/opera/)
+[Chrome](/desktop/linux/ubuntu/browser/chrome/)  
+[Opera](/desktop/linux/ubuntu/browser/opera/)
 
 <br/>
 

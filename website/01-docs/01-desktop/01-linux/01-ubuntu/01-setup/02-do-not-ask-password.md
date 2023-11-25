@@ -2,7 +2,7 @@
 layout: page
 title: Ubuntu - не спрашивать каждый раз пароль при комаде с sudo
 description: Ubuntu - не спрашивать каждый раз пароль при комаде с sudo
-keywords: Ubuntu - не спрашивать каждый раз пароль при комаде с sudo
+keywords: desktop, linux, ubuntu, setup, не спрашивать каждый раз пароль при комаде с sudo
 permalink: /desktop/linux/ubuntu/setup/do-not-ask-root-password/
 ---
 
@@ -10,8 +10,13 @@ permalink: /desktop/linux/ubuntu/setup/do-not-ask-root-password/
 
 <br/>
 
+**Делаю:**  
+2023.11.25
+
+<br/>
+
 ```
--- добавить при необходимости пользователя в группу sudo
+// добавить при необходимости пользователя в группу sudo
 $ sudo usermod -aG sudo ${USER}
 ```
 
@@ -44,11 +49,13 @@ $ sudo vi /etc/sudoers
 
 <br/>
 
-    $ whoami
-    marley
+```
+$ whoami
+marley
 
-    $ sudo whoami
-    root
+$ sudo whoami
+root
+```
 
 <br/>
 

@@ -2,14 +2,14 @@
 layout: page
 title: Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
 description: Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
-keywords: ubuntu, install
+keywords: desktop, linux, ubuntu, setup, steps aftr installation
 permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts/
 ---
 
 # Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
 
 **Делаю:**  
-17.09.2023
+2023.11.25
 
 <br/>
 
@@ -17,8 +17,8 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts
 
 ```
 $ sudo su -
-# apt update && apt-get upgrade -y
-# apt install -y vim curl git
+$ sud apt update -y && sudo apt upgrade -y
+$ sudo apt install -y vim curl git
 ```
 
 <br/>
@@ -42,9 +42,9 @@ $ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode
 <br/>
 
 ```
-$ sudo apt-get install apt-transport-https
-$ sudo apt-get update
-$ sudo apt-get install -y code
+$ sudo apt install apt-transport-https
+$ sudo apt update
+$ sudo apt install -y code
 ```
 
 <br/>
@@ -230,14 +230,14 @@ Cursor --> Cursor shape: I-Beam
 
 ## Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.
 
-[Инфа здесь](/desktop/linux/ubuntu/browsers/block-junk-websites/)
+[Инфа здесь](/desktop/linux/ubuntu/browser/block-junk-websites/)
 
 <br/>
 
 ## Дополнительное ПО
 
-[Chrome](/desktop/linux/ubuntu/browsers/chrome/)  
-[Opera](/desktop/linux/ubuntu/browsers/opera/)
+[Chrome](/desktop/linux/ubuntu/browser/chrome/)  
+[Opera](/desktop/linux/ubuntu/browser/opera/)
 
 <br/>
 

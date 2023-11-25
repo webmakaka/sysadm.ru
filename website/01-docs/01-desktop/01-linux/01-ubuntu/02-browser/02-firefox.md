@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Firefox в Ubuntu
 description: Инсталляция Firefox в Ubuntu
 keywords: linux, ubuntu, firefox, browser, инсталляция
-permalink: /desktop/linux/ubuntu/browsers/firefox/
+permalink: /desktop/linux/ubuntu/browser/firefox/
 ---
 
 # Инсталляция Firefox в Ubuntu

@@ -3,7 +3,7 @@ layout: page
 title: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 description: Шаги после инсталляции Ubuntu 20.04 LTS (для себя)
 keywords: ubuntu, install
-permalink: /desktop/linux/ubuntu/browsers/block-junk-websites/
+permalink: /desktop/linux/ubuntu/browser/block-junk-websites/
 ---
 
 # Заблокировать дерьмовые сайты с рекламой казино, ставок и т.д.

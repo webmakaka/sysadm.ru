@@ -2,20 +2,14 @@
 layout: page
 title: Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04
 description: Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04
-keywords: linux, virtual, ubuntu, virtualbox, installation, command line
+keywords: server, linux, virtual, virtualbox, setup, ubuntu,command line
 permalink: /server/linux/virtual/virtualbox/setup/ubuntu/
 ---
 
 # Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04
 
 Делаю:  
-17.09.2023
-
-<br/>
-
-```
-$ sudo su -
-```
+2023.11.25
 
 <br/>
 
@@ -36,20 +30,7 @@ $ sudo vi /etc/apt/sources.list.d/virtualbox.list
 
 ```
 deb [arch=amd64 signed-by=/usr/share/keyrings/virtualbox.gpg] https://download.virtualbox.org/virtualbox/debian jammy contrib
-
 ```
-
-<!-- <br/>
-
-```
-# echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" >> /etc/apt/sources.list.d/virtualbox.list
-```
-
-<br/>
-
-```
-# wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-``` -->
 
 <br/>
 
@@ -65,9 +46,8 @@ $ apt-cache search virtualbox*
 
 <br/>
 
-**Последняя 7.0 ее и ставлю**
-
 ```
+// Последняя 7.0 ее и ставлю
 $ sudo apt install -y virtualbox-7.0
 ```
 
@@ -75,7 +55,7 @@ $ sudo apt install -y virtualbox-7.0
 
 ```
 $ vboxmanage --version
-7.0.10r158379
+7.0.12r159484
 ```
 
 <br/>
@@ -147,13 +127,17 @@ $ vboxmanage --version
 
 <br/>
 
-    -- если нужно удалить старый
-    $ VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
+```
+-- если нужно удалить старый
+$ VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
+```
 
 <br/>
 
-    $ VBoxManage list extpacks
-    Extension Packs: 0
+```
+$ VBoxManage list extpacks
+Extension Packs: 0
+```
 
 <br/>
 

@@ -2,8 +2,8 @@
 layout: page
 title: Инсталляция Google Chrome в Ubuntu 22.04
 description: Инсталляция Google Chrome в Ubuntu 22.04
-keywords: linux, ubuntu, browser, google chrome, инсталляция
-permalink: /desktop/linux/ubuntu/browsers/chrome/
+keywords: desktop, linux, ubuntu, browser, google chrome, инсталляция
+permalink: /desktop/linux/ubuntu/browser/chrome/
 ---
 
 # Инсталляция Chrome в Ubuntu 22.04
@@ -11,15 +11,15 @@ permalink: /desktop/linux/ubuntu/browsers/chrome/
 <br/>
 
 **Последний раз делаю:**  
-2023.11.04
+2023.11.25
 
 <br/>
 
 ```
 $ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 $ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-$ sudo apt-get update -y
-$ sudo apt-get install -y google-chrome-stable
+$ sudo apt update -y
+$ sudo apt install -y google-chrome-stable
 ```
 
 <br/>

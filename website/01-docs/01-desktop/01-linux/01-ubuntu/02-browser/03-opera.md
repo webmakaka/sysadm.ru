@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Opera в Ubuntu
 description: Инсталляция Opera в Ubuntu
 keywords: linux, ubuntu, opera, browser, инсталляция
-permalink: /desktop/linux/ubuntu/browsers/opera/
+permalink: /desktop/linux/ubuntu/browser/opera/
 ---
 
 # Инсталляция Opera в Ubuntu
