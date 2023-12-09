@@ -3,30 +3,35 @@ layout: page
 title: OpenVPN в Ubuntu
 description: OpenVPN в Ubuntu
 keywords: desktop, linux, ubuntu, vpn, openvpn, autostart
-permalink: /desktop/linux/ubuntu/vpn/openvpn/
+permalink: /desktop/linux/ubuntu/vpn/openvpn-client/
 ---
 
-# OpenVPN
+# OpenVPN клиент
 
 https://openvpn.net/community-downloads/
-
 
 <br/>
 
 Делаю!  
-2023.09.01
+2023.12.09
 
 <br/>
 
-### Инсталляция openvpn
+### Инсталляция клиента openvpn
+
+<br/>
 
 ```
 $ sudo apt install -y openvpn
+
+// Дополнительный необязательный пакет
+// Понадобился, чтобы использовались DNS сервера внутренней сети компании
+$ sudo apt install -y openvpn-systemd-resolved
 ```
 
 <br/>
 
-### Подключаемся
+### Проверка возможности подключиться
 
 <br/>
 
@@ -89,7 +94,7 @@ $ sudo vi /etc/openvpn/client.conf
 
 <br/>
 
-Например, для того, чтобы задать login и пароль (правда в откртом виде).
+Например, для того, чтобы задать login и пароль (правда в открытом виде).
 
 ```
 auth-user-pass
@@ -143,6 +148,8 @@ https://www.ivpn.net/knowledgebase/linux/linux-autostart-openvpn-in-systemd-ubun
 <br/>
 
 ### Проблема с использованием DNS OpenVPN сервера
+
+<br/>
 
 Проблема была в том, что не использовались DNS сервера внутренней сети.
 
@@ -203,26 +210,18 @@ $ route -n
 <br/>
 
 ```
-login.conf 
+login.conf
 client.conf
 ```
-
 
 <br/>
 
 ### Восстановление после переустановки операционной системы
 
-
 <br/>
 
 Делаю!  
-2023.10.03
-
-<br/>
-
-```
-$ sudo apt install -y openvpn-systemd-resolved
-```
+2023.12.09
 
 <br/>
 
@@ -231,12 +230,11 @@ $ sudo cp ./login.conf /etc/openvpn/
 $ sudo cp ./client.conf /etc/openvpn/
 ```
 
-
 <br/>
 
 ```
-$ sudo cp ./login.conf /etc/openvpn/
-$ sudo cp ./client.conf /etc/openvpn/
+$ sudo chmod 400 /etc/openvpn/login.conf
+$ sudo chmod 400 /etc/openvpn/client.conf
 ```
 
 <br/>
@@ -246,4 +244,6 @@ $ sudo systemctl enable openvpn@client.service
 $ sudo systemctl daemon-reload
 $ sudo service openvpn@client start
 $ sudo service openvpn@client status
+
+$ route -n
 ```

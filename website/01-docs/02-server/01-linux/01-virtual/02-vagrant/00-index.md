@@ -18,7 +18,7 @@ permalink: /server/linux/virtual/vagrant/
 
 ### Наработки админа сайта
 
-[Инсталляция Vargant в Ubuntu 20.04.1](/server/linux/virtual/vagrant/setup/ubuntu/)
+[Инсталляция Vargant в Ubuntu 20.04.1](//gitops.ru/tools/virtual/vagrant/setup/ubuntu/)
 
 [Знакомство с Vagrant](/server/linux/virtual/vagrant/crash-course/)
 

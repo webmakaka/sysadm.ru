@@ -137,7 +137,7 @@ mylocationnow.io показывал, что я в Смоленске.
 // marley - пользователь под которым работаю
 
 $ vi ~/.ssh/config
-Host cosco-router
+Host cisco-router
   User marley
   Hostname 192.168.1.1
   HostKeyAlgorithms +ssh-rsa
@@ -146,7 +146,7 @@ Host cosco-router
 $ ssh \
     -oKexAlgorithms=+diffie-hellman-group1-sha1 \
     -c aes256-cbc \
-    cosco-router
+    cisco-router
 ```
 
 <br/>

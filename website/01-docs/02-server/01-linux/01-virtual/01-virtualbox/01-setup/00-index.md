@@ -22,7 +22,7 @@ Offtopic:
 
 ### Инсталляция VirtualBox 7.X
 
-[Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04](/server/linux/virtual/virtualbox/setup/ubuntu/)
+[Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04](//gitops.ru/tools/virtual/virtualbox/setup/ubuntu/)
 
 <br/>
 
