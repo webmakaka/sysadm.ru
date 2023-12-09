@@ -3,7 +3,7 @@ layout: page
 title: Ошибки при работе с Docker в Windows - Error checking context
 description: Ошибки при работе с Docker в Windows - Error checking context
 keywords: Ошибки при работе с Docker в Windows - Error checking context
-permalink: /server/windows/container/docker/errors/error-checking-context/
+permalink: /server/windows/containers/docker/errors/error-checking-context/
 ---
 
 # Ошибки при работе с Docker в Windows - Error checking context: 'can't stat '\\?\C:\Users\UserName\AppData\Local\Application Data''.

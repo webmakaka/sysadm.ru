@@ -14,7 +14,7 @@ permalink: /server/windows/
 
 <ul>
     <li><a href="/server/windows/virtual/">Виртуализация</a></li>
-    <li><a href="/server/windows/container/">Контейнеры</a></li>
+    <li><a href="/server/windows/containers/">Контейнеры</a></li>
 </ul>
 
 <br/>

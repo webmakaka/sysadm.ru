@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Docker в Windows
 description: Инсталляция Docker в Windows
 keywords: Инсталляция Docker в Windows
-permalink: /server/windows/container/docker/installation/
+permalink: /server/windows/containers/docker/installation/
 ---
 
 # Инсталляция Docker в Windows

@@ -3,7 +3,7 @@ layout: page
 title: Запустить docker контейнер и выполнить команду npm start
 description: Запустить docker контейнер и выполнить команду npm start
 keywords: Запустить docker контейнер и выполнить команду npm start
-permalink: /server/windows/container/docker/run-container-v2/
+permalink: /server/windows/containers/docker/run-container-v2/
 ---
 
 # Запустить docker контейнер и выполнить команду npm start

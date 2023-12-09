@@ -3,7 +3,7 @@ layout: page
 title: Запустить asp.net приложение в docker контейнере
 description: Запустить asp.net приложение в docker контейнере
 keywords: Запустить asp.net приложение в docker контейнере
-permalink: /server/windows/container/docker/run-asp-net-app-in-docker/
+permalink: /server/windows/containers/docker/run-asp-net-app-in-docker/
 ---
 
 # Запустить asp.net приложение в docker контейнере
