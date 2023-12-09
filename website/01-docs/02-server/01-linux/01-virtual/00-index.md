@@ -10,7 +10,7 @@ permalink: /server/linux/virtual/
 
 <br/>
 
-### [Virtual Box](/server/linux/virtual/virtualbox/)
+### [VirtualBox](/server/linux/virtual/virtualbox/)
 
 ### [KVM на Centos 6](/server/linux/virtual/kvm/)
 

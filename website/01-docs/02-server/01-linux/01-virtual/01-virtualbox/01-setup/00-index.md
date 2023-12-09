@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Virtual Box
+title: VirtualBox
 description: Инсталляция VirtualBox
 keywords: linux, virtual, virtualbox, install
 permalink: /server/linux/virtual/virtualbox/setup/
 ---
 
-# Virtual Box
+# VirtualBox
 
 Offtopic:
 

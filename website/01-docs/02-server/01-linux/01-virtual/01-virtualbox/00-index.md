@@ -6,7 +6,7 @@ keywords: linux, VirtualBox
 permalink: /server/linux/virtual/virtualbox/
 ---
 
-# Virtual Box
+# VirtualBox
 
 Offtopic:
 
