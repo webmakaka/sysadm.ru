@@ -24,6 +24,14 @@ $ sudo apt install -y google-chrome-stable
 
 <br/>
 
+```
+// Если в 2 списка одинаковое, одно лучше удалить
+/etc/apt/sources.list.d/google-chrome.list
+/etc/apt/sources.list.d/google.list
+```
+
+<br/>
+
 ### Отключить всплывающие уведомления и всякую слежку
 
 Settings --> Privacy and Security --> Site Settings:

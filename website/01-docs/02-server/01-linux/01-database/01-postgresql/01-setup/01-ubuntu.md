@@ -14,12 +14,20 @@ https://www.postgresql.org/download/linux/ubuntu/
 
 <br/>
 
+```
+// Нужно будет подумать, как улучшить перед следующей установкой когда-нибудь в будущем
+W: https://apt.postgresql.org/pub/repos/apt/dists/jammy-pgdg/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease' doesn't support architecture 'i386'
+```
+
+<br/>
+
 **Делаю:**  
-2023.11.24
+2023.12.09
 
 ```
 // Create the file repository configuration:
-$ sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" >
+$ sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
 // Import the repository signing key:
 $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -55,9 +63,9 @@ $ sudo systemctl enable postgresql
 
 ```
 $ apt-cache search postgresql-client
-$ sudo apt install -y  postgresql-client-15
+$ sudo apt install -y  postgresql-client-16
 $ psql --version
-psql (PostgreSQL) 15.2 (Ubuntu 15.2-1.pgdg20.04+1)
+psql (PostgreSQL) 16.1 (Ubuntu 16.1-1.pgdg22.04+1)
 ```
 
 <br/>
