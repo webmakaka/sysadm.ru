@@ -10,11 +10,76 @@ permalink: /server/linux/database/postgresql/export-import/
 
 <br/>
 
+Делаю!  
+2023.12.19
+
+<br/>
+
+```
+$ psql --version
+psql (PostgreSQL) 14.10 (Ubuntu 14.10-0ubuntu0.22.04.1)
+
+$ pg_dump --version
+pg_dump (PostgreSQL) 14.10 (Ubuntu 14.10-0ubuntu0.22.04.1)
+```
+
+<br/>
+
+### pg_dump - снять дамп БД
+
+```
+// Если удаленный хост
+// Значение в  <>  меняем на актуальные. После запуска утилиты будет запрошен пароль пользователя для доступа к СУБД.
+$ pg_dump --host=<ServerName> --port=<5432> --dbname=<DBName> --username=<postgres> --format=c --file=<FullDumpName>
+```
+
+<br/>
+
+### pg_restore - поднять дамп БД
+
+```
+// Если удаленный хост
+//  Значение в  <>  меняем на актуальные. После запуска утилиты будет запрошен пароль пользователя для доступа к СУБД
+$ pg_restore --host=<ServerName> --port=<5432> --dbname=<DBName> --username=<postgres> --format=c <FullDumpName>
+```
+
+<br/>
+
+### pg_dumpAll - снять полный дамп сервера с одномоментной упаковкой в архив GZip
+
+При использовании данного решения на сервере куда будет поднят данный дамп ВСЕ БД будут обновлены.
+
+Здесь приведен пример снятия полного дампа СУБД с копированием его на другую машину средствами Linux и последующим подъемом.
+
+<br/>
+
+```
+// снятие дампа в архив
+$ pg_dumpall -U postgres | gzip > /data/dump/dumpall.gz
+
+// копирование дампа между серверами Linux, команду выполнять на сервере источнике дампа
+$ scp /data/dump/dumpall.gz postgres@releasepg.testnet.local:/data/dump/dumpall.gz
+
+// подъем дампа без предварительной распаковки
+$ zcat /data/dump/dumpall.gz | psql -U postgres postgres
+```
+
+<br/>
+
+## Предыдущая дока
+
+<br/>
+
 ### Экспорт базы Postgres
 
 ```
 // Создание бекапа
 $ pg_dump database_name > database_name_20160527.sql
+
+
+// Если удаленный хост
+// Значение в  <>  меняем на актуальные. После запуска утилиты будет запрошен пароль пользователя для доступа к СУБД.
+$ pg_dump --host=<ServerName> --port=<5432> --dbname=<DBName> --username=<postgres> --format=c --file=<FullDumpName>
 ```
 
 <br/>
@@ -103,7 +168,7 @@ $ pg_dump --host=<DataBaseHostName> --dbname=<DataBaseName> --schema=<SCHEMA_NAM
 
 ```
 // Import
-$ psql --host=<DataBaseHostName>  --dbname=<DataBaseName> --username=<DataBaseUserName> < ~/tmp/<SCHEMA_NAME>.dmp
+$ psql --host=<DataBaseHostName> --dbname=<DataBaseName> --username=<DataBaseUserName> < ~/tmp/<SCHEMA_NAME>.dmp
 ```
 
 <br/>
