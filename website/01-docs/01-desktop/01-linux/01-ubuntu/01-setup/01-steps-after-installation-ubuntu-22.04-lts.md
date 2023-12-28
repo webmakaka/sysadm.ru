@@ -220,11 +220,15 @@ Unnamed -> Sound -> Terminal bell (disable)
 
 **Шрифты, цвета и т.д.**
 
-Unnamed --> Text --> Custom font: Ubuntu Mono 22
+Unnamed --> 
 
-Color --> Built-in schemes: Black on white
+Text --> Text Apperarance --> Custom font: Ubuntu Mono 22
 
-Cursor --> Cursor shape: I-Beam
+Text --> Cursor --> Cursor shape: I-Beam
+
+Colors --> Built-in schemes: Black on white
+
+
 
 <br/>
 

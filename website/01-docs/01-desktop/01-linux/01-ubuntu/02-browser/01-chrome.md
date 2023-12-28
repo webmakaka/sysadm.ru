@@ -111,3 +111,21 @@ https://adblockplus.org/
 
     *jivosite.com*
     ||supervisor.ext-twitch.tv/supervisor/v1/index.html
+
+
+
+<br/>
+
+### Для symply linux
+
+<br/>
+
+**Последний раз делаю:**  
+2023.12.27
+
+<br/>
+
+```
+$ apt-get install eepm
+$ epm play chrome -y
+```
