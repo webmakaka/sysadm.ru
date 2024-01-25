@@ -16,6 +16,10 @@ permalink: /desktop/linux/grub/
 
 <br/>
 
+VirtualBox не запускался с последней версией. Пришлось искать постарше.
+
+<br/>
+
 ```
 $ sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 $ sudo apt-get update
@@ -26,11 +30,11 @@ $ grub-customizer
 
 <br/>
 
-General settings -> default entry -> predefined -> Ubuntu with linux 5.11.0-27-generic
+General settings -> default entry -> predefined -> Ubuntu with linux 6.5.0-14-generic
 
 <br/>
 
-### С помощью коммандной строки (Не заработало в последний раз!)
+### С помощью командной строки (Не заработало в последний раз!)
 
 <br/>
 
