@@ -112,11 +112,9 @@ https://adblockplus.org/
     *jivosite.com*
     ||supervisor.ext-twitch.tv/supervisor/v1/index.html
 
-
-
 <br/>
 
-### Для symply linux
+### Для Symply linux
 
 <br/>
 
