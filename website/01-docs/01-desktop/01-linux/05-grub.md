@@ -12,10 +12,16 @@ permalink: /desktop/linux/grub/
 
 ### С помощью GUI
 
+**Делаю: 2024.01.25**
+
 <br/>
 
 ```
-$ ./grub-customizer
+$ sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+$ sudo apt-get update
+$ sudo apt-get install -y grub-customizer
+
+$ grub-customizer
 ```
 
 <br/>
@@ -24,7 +30,7 @@ General settings -> default entry -> predefined -> Ubuntu with linux 5.11.0-27-g
 
 <br/>
 
-### С помощью коммандной строки
+### С помощью коммандной строки (Не заработало в последний раз!)
 
 <br/>
 

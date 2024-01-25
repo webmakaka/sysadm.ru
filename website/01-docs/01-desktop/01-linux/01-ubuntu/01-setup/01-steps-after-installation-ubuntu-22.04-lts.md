@@ -90,7 +90,8 @@ $ sudo apt install -y \
     rar unrar-free \
     wakeonlan \
     python-is-python3 \
-    make
+    make \
+    p7zip-full
 ```
 
 <br/>
