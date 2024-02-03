@@ -14,6 +14,8 @@ permalink: /devices/
 
 ### [Cisco: Switches and Routers](/device/network/cisco/)
 
+### [Wi-Fi роутер Mikrotik hAP ax2](/device/network/mikrotik/)
+
 # KVM over IP
 
 ### [Lantronix SecureLinx Spider](/device/kvm-over-ip/networks/lantronix-securelinx-spider/)
