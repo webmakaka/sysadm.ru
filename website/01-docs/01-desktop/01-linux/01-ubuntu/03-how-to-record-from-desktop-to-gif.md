@@ -11,7 +11,21 @@ permalink: /desktop/linux/ubuntu/how-to-record-from-desktop-to-gif/
 Делаю:  
 2024.02.06
 
-На Ubuntu 22.04.3 LTS в ноуте не работает.
+На Ubuntu 22.04.3 LTS у меня уже не работает.
+
+Пишет ошибку:
+
+```
+Segmentation fault (core dumped)
+```
+
+Я так понял (из написанного в интернетах), что поддержку свернули.
+
+Но появился https://github.com/firatkiral/pypeek
+
+Норм запустился и записал кран.
+
+<br/>
 
 Делаю:  
 07.03.2023
