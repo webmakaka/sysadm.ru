@@ -9,18 +9,25 @@ permalink: /desktop/linux/ubuntu/how-to-record-from-desktop-to-gif/
 # Запись с экрана монитора в GIF
 
 Делаю:  
+2024.02.06
+
+На Ubuntu 22.04.3 LTS в ноуте не работает.
+
+Делаю:  
 07.03.2023
 
 <br/>
 
-    $ sudo add-apt-repository ppa:peek-developers/stable
-    $ sudo apt-get update
-    $ sudo apt-get install -y peek
+```
+$ sudo add-apt-repository ppa:peek-developers/stable
+$ sudo apt-get update
+$ sudo apt-get install -y peek
 
-    $ peek
+$ peek
+```
 
 <br/>
 
-Если не удается найти на большом количестве мониторов, нужно в настройках монитров менять порядок, пока окно peek не появится.
+Если не удается найти на большом количестве мониторов, нужно в настройках монитров менять порядок, пока окно peek не появится. Наверное, стоит попробовать расположить в настройках дисплеи вертикально.
 
 https://github.com/phw/peek/issues/512
