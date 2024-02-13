@@ -27,6 +27,13 @@ Segmentation fault (core dumped)
 
 <br/>
 
+```
+$ export PATH=$PATH:/home/marley/.local/bin
+$ pypeek
+```
+
+<br/>
+
 Делаю:  
 07.03.2023
 
