@@ -18,7 +18,7 @@ permalink: /devices/
 
 # KVM over IP
 
-### [Lantronix SecureLinx Spider](/device/kvm-over-ip/networks/lantronix-securelinx-spider/)
+### [Lantronix SecureLinx Spider](/device/network/kvm-over-ip/lantronix-securelinx-spider/)
 
 # Источники бесперебойного питания (ИБП)
 
