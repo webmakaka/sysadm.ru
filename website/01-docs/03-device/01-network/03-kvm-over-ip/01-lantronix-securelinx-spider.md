@@ -116,5 +116,8 @@ $ sudo ln -s /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/IcedTeaPlugin.so
 <br/>
 
 См также:
+
+```
 http://www.java.com/ru/download/help/enable_browser_ubuntu.xml
 http://www.youtube.com/watch?v=1Q_ivIjn5ww
+```
