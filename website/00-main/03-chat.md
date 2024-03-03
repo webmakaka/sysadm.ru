@@ -12,4 +12,4 @@ permalink: /chat/
 
 ### Telegram группа
 
-https://t.me/sysadm_ru
+https://t.me/techline_ru
