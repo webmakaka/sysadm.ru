@@ -34,7 +34,7 @@ permalink: /desktop/linux/ubuntu/
 
 ### [Знакомство с ipfs](/desktop/linux/ubuntu/ipfs/)
 
-### [Удаленный рабочий стол в Ubuntu 20.04](/desktop/linux/ubuntu/vnc-server/)
+### [Удаленный рабочий стол в Ubuntu 20.04](/desktop/linux/remote-desktop/ubuntu/vnc-server/)
 
 ### [Сеть в Ubuntu](/desktop/linux/ubuntu/network/)
 
