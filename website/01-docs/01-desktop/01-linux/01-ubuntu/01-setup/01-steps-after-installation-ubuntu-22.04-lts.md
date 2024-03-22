@@ -17,7 +17,7 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts
 
 ```
 $ sudo su -
-$ sud apt update -y && sudo apt upgrade -y
+$ sudo apt update -y && sudo apt upgrade -y
 $ sudo apt install -y vim curl git
 ```
 
