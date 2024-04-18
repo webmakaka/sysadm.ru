@@ -101,7 +101,6 @@ Security --> Security Level --> Medium
 Ранее на ubuntu 12 проблемы решались следующим образом:
 
 ```
-
 $ sudo apt-get install icedtea-plugin
 
 Если не поможет:

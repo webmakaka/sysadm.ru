@@ -9,7 +9,7 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts
 # Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
 
 **Делаю:**  
-2023.11.25
+2024.03.10
 
 <br/>
 
@@ -17,7 +17,7 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts
 
 ```
 $ sudo su -
-$ sud apt update -y && sudo apt upgrade -y
+$ sudo apt update -y && sudo apt upgrade -y
 $ sudo apt install -y vim curl git
 ```
 
@@ -90,7 +90,7 @@ $ sudo apt install -y \
     rar unrar-free \
     wakeonlan \
     python-is-python3 \
-    make \
+    make gcc perl \
     p7zip-full
 ```
 
@@ -221,15 +221,13 @@ Unnamed -> Sound -> Terminal bell (disable)
 
 **Шрифты, цвета и т.д.**
 
-Unnamed --> 
+Unnamed -->
 
 Text --> Text Apperarance --> Custom font: Ubuntu Mono 22
 
 Text --> Cursor --> Cursor shape: I-Beam
 
 Colors --> Built-in schemes: Black on white
-
-
 
 <br/>
 

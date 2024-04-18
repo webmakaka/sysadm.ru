@@ -11,7 +11,7 @@ permalink: /desktop/linux/ubuntu/browser/chrome/
 <br/>
 
 **Последний раз делаю:**  
-2023.11.25
+2024.03.10
 
 <br/>
 
