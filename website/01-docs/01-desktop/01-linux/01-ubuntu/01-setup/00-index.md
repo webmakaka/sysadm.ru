@@ -15,6 +15,6 @@ permalink: /desktop/linux/ubuntu/setup/
     </li>
     <li><a href="/desktop/linux/ubuntu/setup/mount-hdd/">Монтирование жестких дисков</a>
     </li>
-    <li><a href="/desktop/linux/ubuntu/setup/choose-kernel-on-startup/">Выбор загружаемого при старте kernel в Ubuntu 20</a>
+    <li><a href="/desktop/linux/grub/">Выбор загружаемого при старте kernel в Ubuntu 20</a>
     </li>
 </ul>
