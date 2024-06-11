@@ -10,15 +10,19 @@ permalink: /desktop/linux/ubuntu/ace-stream-player/
 
 <br/>
 
-### Инсталляция ACE Stream плеера в Ubuntu 20.04.01 / 16.04 / 18.04.4
+### Инсталляция ACE Stream плеера в Ubuntu 22.04.01
 
 Делаю:  
-04.03.2023
+2024.05.18
 
-    $ sudo snap install acestreamplayer
-    $ acestreamplayer
+<br/>
 
-На вопрос о возрасте, я указал, что мне меньше 13 лет и рекламу всякого УГ мне вроде стали показывать меньше.
+```
+$ sudo snap install acestreamplayer
+$ acestreamplayer
+```
+
+На вопрос о возрасте, я указал, что мне меньше 13 лет и рекламу всякого УГ мне (вроде) стали показывать меньше.
 
 <br/>
 
