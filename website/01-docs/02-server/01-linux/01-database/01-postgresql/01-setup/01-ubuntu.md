@@ -23,7 +23,7 @@ N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository
 <br/>
 
 **Делаю:**  
-2023.12.09
+2024.06.12
 
 ```
 // Create the file repository configuration:
@@ -63,9 +63,9 @@ $ sudo systemctl enable postgresql
 
 ```
 $ apt-cache search postgresql-client
-$ sudo apt install -y  postgresql-client-16
+$ sudo apt install -y  postgresql-client-15
 $ psql --version
-psql (PostgreSQL) 16.1 (Ubuntu 16.1-1.pgdg22.04+1)
+psql (PostgreSQL) 15.7 (Ubuntu 15.7-1.pgdg22.04+1)
 ```
 
 <br/>

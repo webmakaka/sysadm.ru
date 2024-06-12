@@ -17,9 +17,11 @@ permalink: /server/linux/database/postgresql/
 
 ### Подключение к базе в командной строке:
 
+<br/>
+
 ```
 $ psql "host=FQDN_хоста \
-      port=6432 \
+      port=5432 \
       sslmode=verify-full \
       dbname=<имя базы данных> \
       user=<имя пользователя базы данных> \
