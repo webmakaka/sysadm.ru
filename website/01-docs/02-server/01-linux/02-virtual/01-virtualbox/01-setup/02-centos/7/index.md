@@ -8,17 +8,21 @@ permalink: /server/linux/virtual/virtualbox/setup/centos/7/
 
 # Инсталляция VirtualBox в командной строке в Centos / Oracle Linux
 
-    # yum install -y dnf
-    # dnf update -y
+```
+# yum install -y dnf
+# dnf update -y
+```
 
 <br/>
 
-    # dnf install -y \
-    wget  \
-    make \
-    gcc \
-    kernel-devel \
-    perl
+```
+# dnf install -y \
+wget  \
+make \
+gcc \
+kernel-devel \
+perl
+```
 
 <br/>
 
@@ -41,48 +45,58 @@ permalink: /server/linux/virtual/virtualbox/setup/centos/7/
 
 ### The vboxdrv kernel module is not loaded.
 
-    # vboxmanage list vms
-    WARNING: The vboxdrv kernel module is not loaded. Either there is no module
-             available for the current kernel (4.1.12-61.1.18.el7uek.x86_64) or it failed to
-             load. Please recompile the kernel module and install it by
+```
+# vboxmanage list vms
+WARNING: The vboxdrv kernel module is not loaded. Either there is no module
+            available for the current kernel (4.1.12-61.1.18.el7uek.x86_64) or it failed to
+            load. Please recompile the kernel module and install it by
 
-               sudo /sbin/vboxconfig
+            sudo /sbin/vboxconfig
 
-             You will not be able to start VMs until this problem is fixed.
-
-<br/>
-
-    # /sbin/vboxconfig
-    vboxdrv.sh: Stopping VirtualBox services.
-    vboxdrv.sh: Building VirtualBox kernel modules.
-    This system is currently not set up to build kernel modules.
-    Please install the Linux kernel "header" files matching the current kernel
-    for adding new hardware support to the system.
-    The distribution packages containing the headers are probably:
-        kernel-uek-devel kernel-uek-devel-4.1.12-61.1.18.el7uek.x86_64
-    This system is currently not set up to build kernel modules.
-    Please install the Linux kernel "header" files matching the current kernel
-    for adding new hardware support to the system.
-    The distribution packages containing the headers are probably:
-        kernel-uek-devel kernel-uek-devel-4.1.12-61.1.18.el7uek.x86_64
-
-    There were problems setting up VirtualBox.  To re-start the set-up process, run
-      /sbin/vboxconfig
-    as root.
+            You will not be able to start VMs until this problem is fixed.
+```
 
 <br/>
 
-    -- закопипаситл пакеты, которые нужно поставить из информационного сообщения
-    # dnf install -y kernel-uek-devel-4.1.12-61.1.18.el7uek.x86_64
+```
+# /sbin/vboxconfig
+vboxdrv.sh: Stopping VirtualBox services.
+vboxdrv.sh: Building VirtualBox kernel modules.
+This system is currently not set up to build kernel modules.
+Please install the Linux kernel "header" files matching the current kernel
+for adding new hardware support to the system.
+The distribution packages containing the headers are probably:
+    kernel-uek-devel kernel-uek-devel-4.1.12-61.1.18.el7uek.x86_64
+This system is currently not set up to build kernel modules.
+Please install the Linux kernel "header" files matching the current kernel
+for adding new hardware support to the system.
+The distribution packages containing the headers are probably:
+    kernel-uek-devel kernel-uek-devel-4.1.12-61.1.18.el7uek.x86_64
+
+There were problems setting up VirtualBox.  To re-start the set-up process, run
+    /sbin/vboxconfig
+as root.
+```
 
 <br/>
 
-    # /sbin/vboxconfig
+```
+-- закопипаситл пакеты, которые нужно поставить из информационного сообщения
+# dnf install -y kernel-uek-devel-4.1.12-61.1.18.el7uek.x86_64
+```
 
 <br/>
 
-    # vboxmanage --version
-    5.2.0r118431
+```
+# /sbin/vboxconfig
+```
+
+<br/>
+
+```
+# vboxmanage --version
+5.2.0r118431
+```
 
 <br/>
 

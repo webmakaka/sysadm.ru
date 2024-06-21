@@ -32,8 +32,10 @@ where: suplibOsInit what: 3 VERR_VM_DRIVER_NOT_INSTALLED (-1908) - The support d
 Запустилось с ядром:
 
 ```
-Linux workstation 6.5.0-27-generic
+Linux workstation 6.5.0-41-generic
 ```
+
+Наверное любой generic подойдет
 
 [По доке](/desktop/linux/grub/)
 
@@ -61,6 +63,8 @@ To opt out of these messages, run the command:
 
 <br/>
 
-    $ VBoxManage list -l hostonlyifs
+```
+$ VBoxManage list -l hostonlyifs
 
-    $ VBoxManage hostonlyif remove vboxnet1
+$ VBoxManage hostonlyif remove vboxnet1
+```

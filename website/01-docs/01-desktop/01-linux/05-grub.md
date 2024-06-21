@@ -15,7 +15,7 @@ permalink: /desktop/linux/grub/
 <br/>
 
 **Делаю:**  
-2024.04.18
+2024.06.21
 
 <br/>
 
@@ -25,22 +25,26 @@ $  sudo grub-mkconfig | grep -iE "menuentry 'Ubuntu, with Linux" | awk '{print i
 
 ```
 ***
-0 : menuentry 'Ubuntu, with Linux 6.5.0-1019-oem' --class ubuntu
-1 : menuentry 'Ubuntu, with Linux 6.5.0-1019-oem (recovery mode)'
-2 : menuentry 'Ubuntu, with Linux 6.5.0-27-generic' --class ubuntu
-3 : menuentry 'Ubuntu, with Linux 6.5.0-27-generic (recovery mode)'
-4 : menuentry 'Ubuntu, with Linux 6.2.0-39-generic' --class ubuntu
-5 : menuentry 'Ubuntu, with Linux 6.2.0-39-generic (recovery mode)'
-6 : menuentry 'Ubuntu, with Linux 6.1.0-1036-oem' --class ubuntu
-7 : menuentry 'Ubuntu, with Linux 6.1.0-1036-oem (recovery mode)'
-8 : menuentry 'Ubuntu, with Linux 5.17.0-1035-oem' --class ubuntu
-9 : menuentry 'Ubuntu, with Linux 5.17.0-1035-oem (recovery mode)'
+0 : menuentry 'Ubuntu, with Linux 6.5.0-1024-oem' --class ubuntu
+1 : menuentry 'Ubuntu, with Linux 6.5.0-1024-oem (recovery mode)'
+2 : menuentry 'Ubuntu, with Linux 6.5.0-1023-oem' --class ubuntu
+3 : menuentry 'Ubuntu, with Linux 6.5.0-1023-oem (recovery mode)'
+4 : menuentry 'Ubuntu, with Linux 6.5.0-41-generic' --class ubuntu
+5 : menuentry 'Ubuntu, with Linux 6.5.0-41-generic (recovery mode)'
+6 : menuentry 'Ubuntu, with Linux 6.2.0-39-generic' --class ubuntu
+7 : menuentry 'Ubuntu, with Linux 6.2.0-39-generic (recovery mode)'
+8 : menuentry 'Ubuntu, with Linux 6.1.0-1036-oem' --class ubuntu
+9 : menuentry 'Ubuntu, with Linux 6.1.0-1036-oem (recovery mode)'
+10 : menuentry 'Ubuntu, with Linux 5.17.0-1035-oem' --class ubuntu
+11 : menuentry 'Ubuntu, with Linux 5.17.0-1035-oem (recovery mode)'
 ```
+
+<br/>
 
 ```
 // Текущее
 $ uname -srn
-Linux workstation 6.5.0-1019-oem
+Linux workstation 6.5.0-1023-oem
 ```
 
 <br/>
@@ -59,18 +63,22 @@ $ sudo vi /etc/default/grub
 <br/>
 
 ```
-GRUB_DEFAULT="1>2"
+// Хитрый синтаксис по ссылке что ниже, вроде объясняетяс
+// Но вообще 1 д.б. и 4 это пункт из меню, что представлен выше
+GRUB_DEFAULT="1>4"
 ```
 
+<br/>
+
 ```
-sudo update-grub
+$ sudo update-grub
 ```
 
 <br/>
 
 ```
 $ grep GRUB_DEFAULT /etc/default/grub
-GRUB_DEFAULT="1>2"
+GRUB_DEFAULT="1>4"
 ```
 
 <br/>
@@ -83,7 +91,7 @@ $ sudo reboot
 
 ```
 $ uname -srn
-Linux workstation 6.5.0-27-generic
+Linux workstation 6.5.0-41-generic
 ```
 
 <br/>
