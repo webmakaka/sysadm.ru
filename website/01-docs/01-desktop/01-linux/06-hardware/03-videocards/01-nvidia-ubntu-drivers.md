@@ -15,7 +15,7 @@ permalink: /desktop/linux/hardware/videocards/nvidia/ubuntu/drivers/
 
 <br/>
 
-Моя карточка nvidia 1650
+Моя карточка NVIDIA GeForce GTX 1650
 
 <br/>
 
