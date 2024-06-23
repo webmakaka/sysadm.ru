@@ -36,6 +36,8 @@ NVI0                       unassigned      YES unset  administratively down down
 Virtual-PPP1               unassigned      YES IPCP   administratively down down
 ```
 
+<br/>
+
 Virtual-PPP1 - отключен  
 GigabitEthernet0/0 - присвоен мой статический IP. Ранее статический IP адрес назначался Virtual-PPP1, а GigabitEthernet0/0 - какой-то IP от DHCP сервера билайна.
 
