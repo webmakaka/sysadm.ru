@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Установить в ubuntu nvidia драйвера вместо opensource
-description: Установить в ubuntu nvidia драйвера вместо opensource
+title: Переустановка драйверов Nvidia в Ubuntu 22.04
+description: Переустановка драйверов Nvidia в Ubuntu 22.04
 keywords: desktop, linux, hardware, videocards, nvidia, ubuntu, drivers
 permalink: /desktop/linux/hardware/videocards/nvidia/ubuntu/drivers/
 ---
 
-# Установить в ubuntu nvidia драйвера вместо opensource
+# Переустановка драйверов Nvidia в Ubuntu 22.04
 
 <br/>
 
@@ -19,51 +19,13 @@ permalink: /desktop/linux/hardware/videocards/nvidia/ubuntu/drivers/
 
 <br/>
 
-Не включались мониторы. Удалось выйти в консоль. Починилось установкой следующей версии. Предварительно удалив имеющиеся драйвера.
+После очередного автоматического обновления не включились мониторы подключенные к видеокарте. Точнее при включении 1 монитор показывал что-то, но видео было только с мониторов, водключенных к мамке.
+
+Переустанавливал следующими командами:
 
 <br/>
 
-```
-$ sudo dpkg -l | grep nvidia-driver | awk '{print $2}'
-nvidia-driver-535
-```
-
-<br/>
-
-```
-// Удаление
-$ sudo dpkg -P $(dpkg -l | grep nvidia-driver | awk '{print $2}')
-
-$ sudo apt install -y nvidia-driver-510
-```
-
-<br/>
-
-### Остальное, наверное уже неактуально.
-
-<br/>
-
-Можно также попробовать:
-
-```
-$ software-properties-gtk
-```
-
-<br/>
-
-> Additional Drivers
-
-<br/>
-
-Выбрать проприетарные драйвера и перезагрузиться.
-
-<br/>
-
-**Или в консоли:**
-
-<br/>
-
-### Установить драйвера Nvidia
+### Выполнял следующие команды
 
 ```
 // $ sudo add-apt-repository ppa:xorg-edgers/ppa -y
@@ -80,6 +42,42 @@ $ apt search nvidia | grep nvidia-driver
 
 $ sudo apt install nvidia-driver-510 -y
 ```
+
+<br/>
+
+### Можно попробовать тоже самое в GUI
+
+<br/>
+
+```
+$ software-properties-gtk
+```
+
+<br/>
+
+> Additional Drivers
+
+<br/>
+
+Выбрать проприетарные драйвера и перезагрузиться.
+
+<!--
+<br/>
+
+```
+$ sudo dpkg -l | grep nvidia-driver | awk '{print $2}'
+nvidia-driver-510
+nvidia-driver-535
+```
+
+<br/>
+
+```
+// Удаление
+$ sudo dpkg -P $(dpkg -l | grep nvidia-driver | awk '{print $2}')
+
+$ sudo apt install -y nvidia-driver-510
+``` -->
 
 <!--
 
@@ -103,7 +101,13 @@ $ sudo apt install nvidia-driver-510 -y
 
 <br/>
 
+## Остальное, наверное уже неактуально и хз как давно делалось
+
+<br/>
+
 ### Получить доп информацию при необходимости
+
+<br/>
 
 ```
 $ lspci -vnn | grep -i VGA -A 12
