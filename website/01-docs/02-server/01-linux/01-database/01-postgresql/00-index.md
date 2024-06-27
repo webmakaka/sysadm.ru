@@ -34,7 +34,7 @@ sslmode - если используется ssl
 
 <br/>
 
-[Запуск PgAdmin4 WebClient в docker контейнере](/server/linux/database/postgresql/pgadmin/)
+[Запуск PgAdmin4 WebClient](/server/linux/database/postgresql/pgadmin/)
 
 [Экспорт / Импорты базы Postgres](/server/linux/database/postgresql/export-import/)
 
@@ -56,7 +56,9 @@ sslmode - если используется ssl
 
 Собственно строка подключения должна быть следующей:
 
-    jdbc:postgresql://<hostname>:<port>/<database>?sslmode=require
+```
+jdbc:postgresql://<hostname>:<port>/<database>?sslmode=require
+```
 
 т.е. нужно явно добавить ?sslmode=require. Обращаю внимание на последний слеш в строке. Его не должно быть. Я минут 40 искал решение и поэтому решил записать, может кому еще понадобится.
 

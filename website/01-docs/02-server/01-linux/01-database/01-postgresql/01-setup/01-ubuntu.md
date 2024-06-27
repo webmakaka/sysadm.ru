@@ -63,7 +63,7 @@ $ sudo systemctl enable postgresql
 
 ```
 $ apt-cache search postgresql-client
-$ sudo apt install -y  postgresql-client-15
+$ sudo apt install -y postgresql-client-15
 $ psql --version
 psql (PostgreSQL) 15.7 (Ubuntu 15.7-1.pgdg22.04+1)
 ```
@@ -101,12 +101,20 @@ VERSION_ID="20.3"
 
 <br/>
 
+### Для Astra Linux 1.8 и Debian 12 (Bookworm)
+
+```
+$ sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt bookworm-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+```
+
+<br/>
+
 ### Подключение к базе
 
 ```
 # su - postgres
 
-\$ psql
+$ psql
 
 postgres-# \dx
 List of installed extensions
