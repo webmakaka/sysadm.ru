@@ -11,7 +11,7 @@ permalink: /desktop/linux/astra/
 <br/>
 
 Делаю:  
-2024.06.28
+2024.07.05
 
 <br/>
 
@@ -39,18 +39,19 @@ deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmware
 <br/>
 
 ```
-$ sudo apt-get update -y
-```
-
-<br/>
-
-```
-$ gpg --keyserver pgp.mit.edu --recv-keys 54404762BBB6E853 BDE6D2B9216EC7A8 E98404D386FA1D9 6ED0E7B82643E131
+// keyserver.ubuntu.com
+$ gpg --keyserver keyring.debian.org --recv-keys 54404762BBB6E853 BDE6D2B9216EC7A8 E98404D386FA1D9 6ED0E7B82643E131
 
 $ gpg --armor --export 54404762BBB6E853 | sudo apt-key add -
 $ gpg --armor --export BDE6D2B9216EC7A8 | sudo apt-key add -
 $ gpg --armor --export 0E98404D386FA1D9 | sudo apt-key add -
 $ gpg --armor --export 6ED0E7B82643E131 | sudo apt-key add -
+```
+
+<br/>
+
+```
+$ sudo apt-get update -y
 ```
 
 <br/>
