@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Публичные репозитории Centos 7
-description: Публичные репозитории Centos 7
+description: Информация о публичных репозиториях Centos 7
 keywords: linux, centos, repositories, epel
 permalink: /desktop/linux/centos/7.x/repos/
 ---
@@ -12,7 +12,9 @@ permalink: /desktop/linux/centos/7.x/repos/
 
 Стандартный репо:
 
-    # vi /etc/yum.repos.d/centos7.repo
+```
+# vi /etc/yum.repos.d/centos7.repo
+```
 
 <br/>
 
@@ -31,13 +33,17 @@ enabled=1
 
 <br/>
 
-    // Оказывается достаточно
-    # yum install epel-release
+```
+// Оказывается достаточно
+# yum install epel-release
+```
 
 <br/>
 
-    // Но можно и руками
-    # vi /etc/yum.repos.d/Epel-Centos7.repo
+```
+// Но можно и руками
+# vi /etc/yum.repos.d/Epel-Centos7.repo
+```
 
 <br/>
 
@@ -54,17 +60,23 @@ enabled=1
 
 Или можно
 
-    # rpm -Uvh http://fedora-mirror01.rbc.ru/pub/epel/epel-release-latest-7.noarch.rpm
+```
+# rpm -Uvh http://fedora-mirror01.rbc.ru/pub/epel/epel-release-latest-7.noarch.rpm
+```
 
 <br/>
 
 ### rpmfusion
 
-    # yum localinstall -y --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
+```
+# yum localinstall -y --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
+```
 
 Подробнее:
 
-    https://rpmfusion.org/Configuration/
+```
+https://rpmfusion.org/Configuration/
+```
 
 <br/>
 
@@ -78,33 +90,40 @@ enabled=1
 
 -- получить список
 
-    # yum repolist
-    # yum repolist all
+```
+# yum repolist
+# yum repolist all
+```
 
 <br/>
 
 -- Получить информацию по пакету
 
-    # yum info vlc
+```
+# yum info vlc
+```
 
 <br/>
 
--- удалить репо
-
-    # ls /etc/yum.repos.d/
+```
+// удалить репо
+# ls /etc/yum.repos.d/
+```
 
 Просто удалить ненужный файл.
 
 <br/>
 
--- обновить
-
-    # yum clean all && yum update
+```
+// обновить
+# yum clean all && yum update
+```
 
 <br/>
 
--- найти из какого репозитория установлен пакет
-
-    # find-repos-of-install p7zip
+```
+// найти из какого репозитория установлен пакет
+# find-repos-of-install p7zip
+```
 
 https://habrahabr.ru/post/301292/

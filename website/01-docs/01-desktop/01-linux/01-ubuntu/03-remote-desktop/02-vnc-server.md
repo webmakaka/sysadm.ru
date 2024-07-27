@@ -10,6 +10,10 @@ permalink: /desktop/linux/remote-desktop/ubuntu/vnc-server/
 
 <br/>
 
+Думаю, лучше делать [Удаленный рабочий стол xrdp в Ubuntu Linux 22.04](/desktop/linux/remote-desktop/ubuntu/xrdp/)
+
+<br/>
+
 **Последний раз делаю:**  
 2023.11.04
 

@@ -1,21 +1,17 @@
 ---
 layout: page
-title: Подключаю debian репы в astra linux 1.8
-description: Подключаю debian репы в astra linux 1.8
+title: Подключаю debian репы в Astra Linux 1.8 (Debian 12 / Bookworm)
+description: Вариант подключения репозиториев с пакетами debian  (Debian 12 /Bookworm) в Astra Linux 1.8
 keywords: desktop, linux, astra, repos, debian, bookworm
 permalink: /desktop/linux/astra/
 ---
 
-# Astra Linux 1.8 (Debian 12/Bookworm)
+# Подключаю debian репы в Astra Linux 1.8 (Debian 12 / Bookworm)
 
 <br/>
 
 Делаю:  
 2024.07.05
-
-<br/>
-
-### Подключаю debian репы в astra linux 1.8
 
 <br/>
 
