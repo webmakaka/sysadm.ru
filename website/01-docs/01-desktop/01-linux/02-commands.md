@@ -10,6 +10,21 @@ permalink: /desktop/linux/commands/
 
 <br/>
 
+```
+// Use this as root and you can get a clear output for memory usage by each process
+# ps -eo size,pid,user,command --sort -size | \
+    awk '{ hr=$1/1024 ; printf("%13.2f Mb ",hr) } { for ( x=4 ; x<=NF ; x++ ) { printf("%s ",$x) } print "" }' |\
+    cut -d "" -f2 | cut -d "-" -f1
+```
+
+<br/>
+
+Отсортировать файлы по размеру:
+
+    $ ls -s | sort -n
+
+<br/>
+
 Отсортировать файлы по размеру:
 
     $ ls -s | sort -n
