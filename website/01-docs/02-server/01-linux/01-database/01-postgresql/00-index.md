@@ -36,7 +36,7 @@ sslmode - если используется ssl
 
 [Запуск PgAdmin4 WebClient](/server/linux/database/postgresql/pgadmin/)
 
-[Экспорт / Импорты базы Postgres](/server/linux/database/postgresql/export-import/)
+[Экспорт / Импорт базы Postgres](/server/linux/database/postgresql/export-import/)
 
 <br/>
 

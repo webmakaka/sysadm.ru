@@ -198,6 +198,8 @@ $ sudo gedit /etc/openvpn/client.conf
 меняем сертификат
 
 $ sudo service openvpn@client restart
+
+// Посмотреть, появились ли нужные роуты
 $ route -n
 ```
 

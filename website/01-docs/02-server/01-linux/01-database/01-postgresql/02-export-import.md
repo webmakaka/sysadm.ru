@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Экспорт / Импорты базы Postgres
-description: Экспорт / Импорты базы Postgres
+title: Экспорт / Импорт базы Postgres
+description: Экспорт / Импорт базы Postgres
 keywords: server, linux, database, postgresql, export, import
 permalink: /server/linux/database/postgresql/export-import/
 ---
 
-# Экспорт / Импорты базы Postgres
+# Экспорт / Импорт базы Postgres
 
 <br/>
 
