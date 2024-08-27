@@ -10,6 +10,10 @@ permalink: /device/network/cisco/no-matching-cipher-found/
 
 <br/>
 
+[Для ubuntu 22.04](/device/network/cisco/routers/1941/unassigned-ip-address/)
+
+<br/>
+
 В ubuntu 18.04 появилась ошибка при попытке подключения по ssh. При этом на клиенте с centos не помню какой версии, подключалось нормально.
 
 <br/>
