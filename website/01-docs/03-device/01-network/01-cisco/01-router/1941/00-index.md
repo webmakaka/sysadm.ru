@@ -10,7 +10,7 @@ permalink: /device/network/cisco/router/1941/
 
 <br/>
 
-<a href="/device/network/cisco/router/1941/connect-by-mini-usb/">Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64</a>
+<a href="/device/network/cisco/router/1941/connect-by-mini-usb/">Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 22.04 x64</a>
 
 <a href="/device/network/cisco/router/1941/cisco-ssh-connection/">Cisco Router 1941 настройка SSH</a>
 

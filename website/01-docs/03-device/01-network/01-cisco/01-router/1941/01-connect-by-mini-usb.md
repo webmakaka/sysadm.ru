@@ -1,14 +1,16 @@
 ---
 layout: page
-title: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
-description: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
-keywords: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
+title: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 22.04 x64
+description: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 22.04 x64
+keywords: Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 22.04 x64
 permalink: /device/network/cisco/router/1941/connect-by-mini-usb/
 ---
 
-# Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 12.04 x64
+# Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 22.04 x64
 
-Подключил Cisco с помощью голубого консольного кабеля, что шел в комплекте с устройством. (К интерфейсам RJ-45 ничего не подключал.) к компьютеру.
+<br/>
+
+Подключил Cisco с помощью голубого консольного кабеля, что шел в комплекте с устройством к компьютеру. (К интерфейсам RJ-45 ничего не подключал).
 
 <br/>
 
@@ -16,26 +18,11 @@ permalink: /device/network/cisco/router/1941/connect-by-mini-usb/
 
 <br/>
 
-ВНИМАНИЕ !!!
-
-Перед тем как работать с новыми Cisco надо помнить, что изначально они идут со стандартным паролем для первого входа:
-
-Логин:cisco  
-Пароль:cisco
-
-Если после первого входа, вы не укажете новый логин и пароль командой
+Выполнял команды под учетной записью root, под учетной записью обычного пользователя получал сообщения об ошибке:
 
 ```
-username admin privilege 15 password cisco12345
+Sorry, could not find a PTY
 ```
-
-, либо не удалите команду login в настройках консоли, то произойдет маленькая неприятность - стандартного пароля уже не будет, нового вы не создали, а маршрутизатор спрашивает пароль, даже не зная с чем его сравнивать.
-
-Перед началом работы, я рекомендую предварительно узнать как и что сделать, чтобы избежать вожможных дополнительных проблем.
-Впрочем, у меня самого возникли проблемы такого рода и мне без особых проблем удалось их решить.
-После авторизации, мою сессию разорвал роутер по таймауту, и войти под старым паролем мне не удавалось. Так происходили мои первые знакомства с оборудованием от компании cisco.
-
-(Если не ошибаюсь, я перезагружал роутер и вводит в консоли какие-то команды, которые легко гуглятся на хабре, вроде сброс пароля на циске. После этого прошло значительное время, поэтому совсем не помню, что за команды я вводил.)
 
 <br/>
 
@@ -65,58 +52,11 @@ Bus 009 Device 003: ID 05a6:0009 Cisco Systems, Inc.
 
 <br/>
 
-Подключаюсь под учетной записью root, под учетной записью обычного пользователя получаю сообщение об ошибке:
-
-```
-Sorry, could not find a PTY
-```
-
-Иногда в консоли появляется всякий мусор, приходится откючать и включать usb кабель заново.
-
-Не удавалось подключиться с помощью telnet к маршрутизатору.
-
-Проблема решилась сбросом всех настроек.
+Иногда в консоли появляется всякий мусор, приходилось откючать и включать usb кабель заново.
 
 <br/>
 
-Для этого выполнил команды:
-
-```
-cisco-router-1941>enable
-```
-
-<br/>
-
-```
-cisco-router#erase startup-config
-Erasing the nvram filesystem will remove all configuration files! Continue? [confirm]y[OK]
-Erase of nvram: complete
-
-cisco-router#reload
-
-Proceed with reload? [confirm]y
-
-******
-
-Cisco CISCO1941/K9 (revision 1.0) with 491520K/32768K bytes of memory.
-Processor board ID FGL162612RB
-2 Gigabit Ethernet interfaces
-1 terminal line
-DRAM configuration is 64 bits wide with parity disabled.
-255K bytes of non-volatile configuration memory.
-250880K bytes of ATA System CompactFlash 0 (Read/Write)
-
-%Error opening tftp://192.168.1.1/network-confg (Timed out)
-
-            --- System Configuration Dialog ---
-
-Would you like to enter the initial configuration dialog? [yes/no]: no
-Router>
-```
-
-<br/>
-
-### Собственно настройки
+### Настройки
 
 <br/>
 
@@ -144,7 +84,6 @@ cisco-router-1941(config)# ip domain lookup
 <!--
 int loopback 0
 cisco-router-1941(config-if)# ip address 192.168.1.100 255.255.255.0
-
 -->
 
 <br/>
