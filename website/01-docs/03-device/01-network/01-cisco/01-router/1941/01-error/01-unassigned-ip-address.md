@@ -3,7 +3,7 @@ layout: page
 title: Домашний интернет. Cisco. Пропал интернет
 description: Домашний интернет. Cisco. Пропал интернет
 keywords: devices, cisco, routers, 1941, dhcp, unassigned IP-Address
-permalink: /device/network/cisco/router/1941/unassigned-ip-address/
+permalink: /device/network/cisco/router/1941/error/unassigned-ip-address/
 ---
 
 <br/>
