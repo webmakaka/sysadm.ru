@@ -3,7 +3,7 @@ layout: page
 title: Cisco Router 1941 Проброс порта в локальную сеть Билайн
 description: Cisco Router 1941 Проброс порта в локальную сеть Билайн
 keywords: Cisco Router 1941, Проброс порта в локальную сеть Билайн
-permalink: /device/network/cisco/routers/1941/beeline-port-forwarding/
+permalink: /device/network/cisco/router/1941/beeline-port-forwarding/
 ---
 
 # Cisco Router 1941 Проброс порта в локальную сеть Билайн

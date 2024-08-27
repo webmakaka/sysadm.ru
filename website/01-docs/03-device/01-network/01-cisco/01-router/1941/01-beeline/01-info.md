@@ -3,7 +3,7 @@ layout: page
 title: Билай - Техническая информация на сайте провайдера по подключеню
 description: Билай - Техническая информация на сайте провайдера по подключеню
 keywords: Cisco Router 1941, Билайн, проблемы с интернетом, dhcp
-permalink: /device/network/cisco/routers/1941/info/
+permalink: /device/network/cisco/router/1941/info/
 ---
 
 # Билай - Техническая информация на сайте провайдера по подключеню
@@ -12,7 +12,7 @@ permalink: /device/network/cisco/routers/1941/info/
 
 <div align="center" style="border-width: 4px; padding: 10px; border-style: inset; border-color: red; ">
 
-Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее <a href="/device/network/cisco/routers/1941/beeline/">здесь</a>
+Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее <a href="/device/network/cisco/router/1941/beeline/">здесь</a>
 
 </div>
 

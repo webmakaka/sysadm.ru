@@ -3,7 +3,7 @@ layout: page
 title: Cisco Switch Catalyst-WS-C2960G-8TC-L
 description: Cisco Switch Catalyst-WS-C2960G-8TC-L
 keywords: Cisco Switch Catalyst-WS-C2960G-8TC-L
-permalink: /device/network/cisco/switches/catalyst-ws-c2960g-8tc-l/
+permalink: /device/network/cisco/switch/catalyst-ws-c2960g-8tc-l/
 ---
 
 # Cisco Switch Catalyst-WS-C2960G-8TC-L

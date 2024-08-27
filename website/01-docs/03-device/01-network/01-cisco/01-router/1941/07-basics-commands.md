@@ -3,7 +3,7 @@ layout: page
 title: Cisco Router 1941 Basics Commands
 description: Cisco Router 1941 Basics Commands
 keywords: Cisco Router 1941 Basics Commands
-permalink: /device/network/cisco/routers/1941/basics-commands/
+permalink: /device/network/cisco/router/1941/basics-commands/
 ---
 
 # Cisco Router 1941 Basics Commands

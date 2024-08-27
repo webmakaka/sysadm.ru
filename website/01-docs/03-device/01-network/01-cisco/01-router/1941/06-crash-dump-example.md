@@ -3,7 +3,7 @@ layout: page
 title: Cisco Router 1941 Crash Dump Example
 description: Cisco Router 1941 Crash Dump Example
 keywords: Cisco Router 1941 Crash Dump Example
-permalink: /device/network/cisco/routers/1941/crash-dump-example/
+permalink: /device/network/cisco/router/1941/crash-dump-example/
 ---
 
 # Cisco Router 1941 Crash Dump Example

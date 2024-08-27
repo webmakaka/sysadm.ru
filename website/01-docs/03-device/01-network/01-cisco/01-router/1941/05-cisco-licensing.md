@@ -3,7 +3,7 @@ layout: page
 title: Cisco Router 1941 Licensing
 description: Cisco Router 1941 Licensing
 keywords: Cisco Router 1941 Licensing
-permalink: /device/network/cisco/routers/1941/cisco-licensing/
+permalink: /device/network/cisco/router/1941/cisco-licensing/
 ---
 
 # Cisco Router 1941 Licensing

@@ -3,7 +3,7 @@ layout: page
 title: Cisco Router 1941 обновление IOS
 description: Cisco Router 1941 обновление IOS
 keywords: Cisco Router 1941 обновление IOS
-permalink: /device/network/cisco/routers/1941/cisco-how-to-update-ios/
+permalink: /device/network/cisco/router/1941/cisco-how-to-update-ios/
 ---
 
 # Cisco Router 1941 обновление IOS
@@ -23,7 +23,7 @@ MD5 Checksum:	1c7c1b1ba2bb4f04cb081f069e8f5523
 <strong>UPD: с этим ios возникли проблемы!!!</strong>
 При попытке выполнить команду ip nat inside / outside роутер перезагружался, на флеше появлялись краш дампы.
 
-Со следующими ios у меня были <a href="/device/network/cisco/routers/1941/crash-dump-example/">краши</a>:
+Со следующими ios у меня были <a href="/device/network/cisco/router/1941/crash-dump-example/">краши</a>:
 c1900-universalk9-mz.SPA.154-1.T.bin
 c1900-universalk9-mz.SPA.153-3.M.bin
 

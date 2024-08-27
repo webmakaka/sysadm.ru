@@ -3,7 +3,7 @@ layout: page
 title: Cisco Router 1941 включение и выключение debugging
 description: Cisco Router 1941 включение и выключение debugging
 keywords: Cisco Router 1941 включение и выключение debugging
-permalink: /device/network/cisco/routers/1941/debugging/
+permalink: /device/network/cisco/router/1941/debugging/
 ---
 
 # Cisco Router 1941 включение и выключение debugging

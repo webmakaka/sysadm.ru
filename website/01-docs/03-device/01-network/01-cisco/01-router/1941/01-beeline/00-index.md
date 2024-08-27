@@ -3,7 +3,7 @@ layout: page
 title: Cisco Router 1941 в домашней сети Билайн
 description: Cisco Router 1941 в домашней сети Билайн
 keywords: Cisco Router 1941 в домашней сети Билайн
-permalink: /device/network/cisco/routers/1941/beeline/
+permalink: /device/network/cisco/router/1941/beeline/
 ---
 
 # Cisco Router 1941 в домашней сети Билайн
@@ -22,7 +22,7 @@ permalink: /device/network/cisco/routers/1941/beeline/
 
 <br/>
 
-![beeline login](/img/device/network/cisco/routers/1941/beeline/login_beeline.png 'beeline login'){: .center-image }
+![beeline login](/img/device/network/cisco/router/1941/beeline/login_beeline.png 'beeline login'){: .center-image }
 
 <br/>
 
@@ -56,23 +56,23 @@ GigabitEthernet0/0 - присвоен мой статический IP. Ране
 
 <a href="/providers/internet/beeline/">Домашний интернет от Билайн, информация по неработающему интернету</a>
 
-<a href="/device/network/cisco/routers/1941/beeline-port-forwarding/">Cisco Router 1941 Проброс порта в локальную сеть Билайн</a> (WebServer)
+<a href="/device/network/cisco/router/1941/beeline-port-forwarding/">Cisco Router 1941 Проброс порта в локальную сеть Билайн</a> (WebServer)
 
 <br/>
 
 ### Архив:
 
-<a href="/device/network/cisco/routers/1941/info/">Техническая информация на сайте провайдера по подключеню</a>
+<a href="/device/network/cisco/router/1941/info/">Техническая информация на сайте провайдера по подключеню</a>
 
-<a href="/device/network/cisco/routers/1941/beeline-l2tp-first-problem/">Cisco Router 1941 проблемы с подключением к сети Билайн по l2tp</a> (Необходима лицензия data license имеем ipbase)
+<a href="/device/network/cisco/router/1941/beeline-l2tp-first-problem/">Cisco Router 1941 проблемы с подключением к сети Билайн по l2tp</a> (Необходима лицензия data license имеем ipbase)
 
-<a href="/device/network/cisco/routers/1941/beeline-l2tp/">Cisco Router 1941 настройка работы интернета в Билайн по l2tp</a>
+<a href="/device/network/cisco/router/1941/beeline-l2tp/">Cisco Router 1941 настройка работы интернета в Билайн по l2tp</a>
 
 <br/>
 
 ### Другие конфиги (может когда и кому понадобятся). Можно добавить свои
 
-<a href="/device/network/cisco/routers/1941/beeline-general/">Настройка маршрутизаторов Cisco для работы в сети Корбина)</a>
+<a href="/device/network/cisco/router/1941/beeline-general/">Настройка маршрутизаторов Cisco для работы в сети Корбина)</a>
 
 <!--
 <a href="https://gist.github.com/sysadm-ru/034b841e24a0412c70ba">Cisco 871W (version 12.4)</a>

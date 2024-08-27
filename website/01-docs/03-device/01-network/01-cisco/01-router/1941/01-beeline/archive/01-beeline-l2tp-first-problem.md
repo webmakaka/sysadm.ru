@@ -3,7 +3,7 @@ layout: page
 title: Архив - Cisco Router 1941 проблемы с подключением к сети Билайн по l2tp
 description: Архив - Cisco Router 1941 проблемы с подключением к сети Билайн по l2tp
 keywords: devices, cisco, routers, 1941, beeline l2tp first problem
-permalink: /device/network/cisco/routers/1941/beeline-l2tp-first-problem/
+permalink: /device/network/cisco/router/1941/beeline-l2tp-first-problem/
 ---
 
 # [Архив] Cisco Router 1941 проблемы с подключением к сети Билайн по l2tp
@@ -12,7 +12,7 @@ permalink: /device/network/cisco/routers/1941/beeline-l2tp-first-problem/
 
 <div align="center" style="border-width: 4px; padding: 10px; border-style: inset; border-color: red; ">
 
-Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее <a href="/device/network/cisco/routers/1941/beeline/">здесь</a>
+Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее <a href="/device/network/cisco/router/1941/beeline/">здесь</a>
 
 </div>
 
@@ -56,4 +56,4 @@ https://supportforums.cisco.com/thread/2036850
 
 </pre>
 
-Далее делал, как <a href="/device/network/cisco/routers/1941/cisco-licensing/">здесь</a>
+Далее делал, как <a href="/device/network/cisco/router/1941/cisco-licensing/">здесь</a>

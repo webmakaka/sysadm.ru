@@ -3,7 +3,7 @@ layout: page
 title: Cisco Router 1941 данные о железе
 description: Cisco Router 1941 данные о железе
 keywords: Cisco Router 1941 данные о железе
-permalink: /device/network/cisco/routers/1941/device-hardware/
+permalink: /device/network/cisco/router/1941/device-hardware/
 ---
 
 # Cisco Router 1941 данные о железе

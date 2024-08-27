@@ -3,7 +3,7 @@ layout: page
 title: Cisco Router 1941 настройка NAT (PAT) и проброс портов во внутреннюю сеть
 description: Cisco Router 1941 настройка NAT (PAT) и проброс портов во внутреннюю сеть
 keywords: Cisco Router 1941 настройка NAT (PAT) и проброс портов во внутреннюю сеть
-permalink: /device/network/cisco/routers/1941/cisco-nat-and-port-forwarding/
+permalink: /device/network/cisco/router/1941/cisco-nat-and-port-forwarding/
 ---
 
 # Cisco Router 1941 настройка NAT (PAT) и проброс портов во внутреннюю сеть

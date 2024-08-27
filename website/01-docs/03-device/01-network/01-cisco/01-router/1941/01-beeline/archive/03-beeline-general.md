@@ -3,7 +3,7 @@ layout: page
 title: Архив - Cisco Routers в домашней локальной сети Beeline
 description: Архив - Cisco Routers в домашней локальной сети Beeline
 keywords: devices, cisco, routers, 1941, beeline general
-permalink: /device/network/cisco/routers/1941/beeline-general/
+permalink: /device/network/cisco/router/1941/beeline-general/
 ---
 
 # [Архив] Cisco Routers в домашней локальной сети Beeline
@@ -12,7 +12,7 @@ permalink: /device/network/cisco/routers/1941/beeline-general/
 
 <div align="center" style="border-width: 4px; padding: 10px; border-style: inset; border-color: red; ">
 
-Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее <a href="/device/network/cisco/routers/1941/beeline/">здесь</a>
+Многое поменялось. Теперь не нуно настраивать l2tp. Смотри подробнее <a href="/device/network/cisco/router/1941/beeline/">здесь</a>
 
 </div>
 
