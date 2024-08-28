@@ -12,7 +12,9 @@ permalink: /device/network/cisco/router/1941/
 
 <a href="/device/network/cisco/router/1941/connect-by-mini-usb/">Cisco Router 1941 подключение по mini usb и первичная настройка в консоли Ubuntu 22.04 x64</a>
 
-<a href="/device/network/cisco/router/1941/cisco-ssh-connection/">Cisco Router 1941 настройка SSH</a>
+<a href="/device/network/cisco/router/1941/cisco-ssh-connection/">Настройка подключения по SSH</a>
+
+<a href="/device/network/cisco/router/1941/cisco-telnet-connection/">Настройка подключения по telnet</a>
 
 <a href="/device/network/cisco/router/1941/cisco-nat-and-port-forwarding/">Cisco Router 1941 настройка NAT (PAT) и проброс портов во внутреннюю сеть</a>
 
@@ -34,11 +36,13 @@ permalink: /device/network/cisco/router/1941/
 
 ### Наиболее полезные команды: (чтобы были всегда под рукой)
 
-    -- Узнать uptime
-    # sh ver | s uptime
+```
+-- Узнать uptime
+# sh ver | s uptime
 
-    -- Информация по интерфейсам
-    # show ip interface brief
+-- Информация по интерфейсам
+# show ip interface brief
+```
 
 <br/>
 

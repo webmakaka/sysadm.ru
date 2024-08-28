@@ -56,6 +56,15 @@ Bus 009 Device 003: ID 05a6:0009 Cisco Systems, Inc.
 
 <br/>
 
+В интернетах пишут, что лучше сразу задать администратора.
+
+```
+Router> conf t
+Router> username admin privilege 15 password cisco12345
+```
+
+<br/>
+
 ### Настройки
 
 <br/>
@@ -117,81 +126,3 @@ Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down
 GigabitEthernet0/0         192.168.1.100   YES NVRAM  up                    up
 GigabitEthernet0/1         192.168.2.100   YES NVRAM  up                    up
 ```
-
-<br/>
-
-### Настройка подключения по telnet
-
-```
-cisco-router-1941# conf t
-```
-
-<br/>
-
-```
-cisco-router-1941(config)#service password-encryption
-```
-
-<br/>
-
-```
-cisco-router(config)# line vty 0 4
-cisco-router-1941(config-line)# password your_password
-cisco-router-1941(config-line)# enable secret your_password
-```
-
-<br/>
-
-```
-// чтобы работало ctrl + c
-cisco-router-1941(config-line)# escape-character 3
-```
-
-<!--
-Router(config)# line con 0
-Router(config-line)# escape-character 3
--->
-
-<br/>
-
-```
-cisco-router(config-line)# login
-cisco-router(config)# end
-```
-
-<br/>
-
-### Проверка возможности подключиться по telnet к маршрутизатору Cisco 1941 в консоли Ubuntu:
-
-```
-$ telnet 192.168.1.100
-Trying 192.168.1.100...
-Connected to 192.168.1.100.
-Escape character is '^]'.
-
-
-User Access Verification
-
-Password:
-cisco-router-1941>enable
-Password:
-cisco-router-1941#
-```
-
-<br/>
-
-**Сохраняю конфиг:**
-
-```
-cisco-router-1941# copy running-config startup-config
-Destination filename [startup-config]? startup-config
-Building configuration...
-[OK]
-cisco-router-1941#
-```
-
-<br/>
-
-http://www.cisco1900router.com/full-overview-of-cisco-1941-k9-router-cisco-1941-sec-k9-router.html  
-http://www.cisco.com/en/US/docs/routers/access/1900/hardware/installation/guide/19pwrup.html  
-http://www.networkworld.com/community/node/22066
