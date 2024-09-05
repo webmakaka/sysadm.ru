@@ -10,15 +10,19 @@ permalink: /device/network/cisco/
 
 <br/>
 
+### [Подключение к cisco в ubuntu 22.04](/device/network/cisco/connect/)
+
+<br/>
+
 ### Routers:
 
-<a href="/device/network/cisco/router/1941/">Cisco Router 1941</a>
+### [Cisco Router 1941](/device/network/cisco/router/1941/)
 
 <br/>
 
 ### Switches:
 
-<a href="/device/network/cisco/switch/catalyst-ws-c2960g-8tc-l/">Catalyst-WS-C2960G-8TC-L</a>
+### [Catalyst-WS-C2960G-8TC-L](/device/network/cisco/switch/catalyst-ws-c2960g-8tc-l/)
 
 <br/>
 

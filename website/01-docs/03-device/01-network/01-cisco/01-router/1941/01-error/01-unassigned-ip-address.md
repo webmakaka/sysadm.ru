@@ -16,35 +16,7 @@ permalink: /device/network/cisco/router/1941/error/unassigned-ip-address/
 
 <br/>
 
-```
-// Чтобы подключиться с 22 ubuntu
-// marley - пользователь под которым работаю
-// конфиг на несколько устройств
-$ vi ~/.ssh/config
-```
-
-<br/>
-
-```
-Host cisco-router-1941
-  User marley
-  Hostname 192.168.1.1
-  HostKeyAlgorithms +ssh-rsa
-  KexAlgorithms +diffie-hellman-group1-sha1
-  Ciphers +aes256-cbc
-Host cisco-switch-2960
-  User marley
-  Hostname 192.168.1.2
-  HostKeyAlgorithms +ssh-rsa
-  KexAlgorithms +diffie-hellman-group1-sha1
-  Ciphers +aes256-cbc
-Host cisco-router-2921
-  User marley
-  Hostname 192.168.1.4
-  HostKeyAlgorithms +ssh-rsa
-  KexAlgorithms +diffie-hellman-group1-sha1
-  Ciphers +aes256-cbc
-```
+[Подключение к cisco в ubuntu 22.04](/device/network/cisco/connect/)
 
 <br/>
 
