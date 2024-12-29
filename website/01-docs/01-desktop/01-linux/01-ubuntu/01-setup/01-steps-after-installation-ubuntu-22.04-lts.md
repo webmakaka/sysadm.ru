@@ -84,14 +84,10 @@ $ sudo apt install -y ubuntu-restricted-extras
 $ sudo apt install -y \
     vim \
     openssh-server \
-    net-tools \
-    traceroute \
-    iputils-ping \
-    rar unrar-free \
-    wakeonlan \
-    python-is-python3 \
+    net-tools traceroute iputils-ping wakeonlan \
+    rar unrar-free bzip2 tar p7zip-full \
     make gcc perl \
-    p7zip-full
+    python-is-python3
 ```
 
 <br/>
@@ -120,9 +116,7 @@ $ sudo apt install -y \
 ### Gnome Panel
 
 ```
-$ sudo apt install -y gnome-panel
-
-$ sudo reboot
+$ sudo apt install -y gnome-panel && sudo reboot
 ```
 
 <br/>

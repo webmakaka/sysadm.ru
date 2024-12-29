@@ -249,3 +249,20 @@ $ sudo service openvpn@client status
 
 $ route -n
 ```
+
+<br/>
+
+### Отключить автозапуск openvpn
+
+<br/>
+
+Делаю!  
+2024.12.29
+
+```
+$ sudo service --status-all
+
+// Непонятно отработала или нет
+// $ sudo systemctl stop openvpn
+$ sudo systemctl disable openvpn
+```
