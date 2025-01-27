@@ -8,6 +8,8 @@ permalink: /desktop/linux/ubuntu/export-pdf-to-png/
 
 # Export Pdf в PNG
 
+<br/>
+
 ```
 $ pdftoppm MLPF.pdf MLPF -png -r 300
 ```
