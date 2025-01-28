@@ -11,7 +11,7 @@ permalink: /desktop/linux/ubuntu/keyboard-remap-keys/
 <br/>
 
 Делаю!  
-2025.01.27
+2025.01.28
 
 <br/>
 
@@ -48,7 +48,7 @@ keycode 117 (keysym 0xff56, Next)
 <br/>
 
 ```
-$ vi ~/.Xmodmap
+$ sudo vi /opt/xmodmap.config
 ```
 
 <br/>
@@ -64,8 +64,37 @@ keycode 117 = End
 
 ```
 // This will only work for the current session, after rebooting the key mapping will be restored to the default
-$ xmodmap ~/.Xmodmap
+$ xmodmap /opt/xmodmap.config
 ```
+
+<br/>
+
+```
+$ sudo vi /etc/profile.d/xmodmap.sh
+```
+
+<br/>
+
+```bash
+#!/bin/bash
+if [ -f /opt/xmodmap.config ]; then
+  /usr/bin/xmodmap /opt/xmodmap.config
+else
+  echo "Файл /opt/xmodmap.config не найден."
+fi
+```
+
+<br/>
+
+```
+$ sudo chmod 755 /etc/profile.d/xmodmap.sh
+$ source /etc/profile.d/xmodmap.sh
+```
+
+<!--
+
+
+# =====================
 
 <br/>
 
@@ -83,17 +112,13 @@ Add
 
 ```
 Name: xmodmap
-Command: /usr/bin/xmodmap /home/marley/.Xmodmap
+Command: /usr/bin/xmodmap /opt/xmodmap
 Comment: remaps keys
 ```
 
 <br/>
 
-Указать, разумеется нужно своего пользователя и ребутнуться.
-
-<br/>
-
-Посмотрим, что получится.
+Указать, разумеется нужно своего пользователя и ребутнуться. -->
 
 <br/>
 
