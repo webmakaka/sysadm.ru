@@ -11,33 +11,85 @@ permalink: /desktop/linux/ubuntu/skype/
 <br/>
 
 **Последний раз делаю:**  
-2023.12.28
-
+2025.02.06
 
 <br/>
 
-На ноуте с процессором AMD, по правой кнопке не появляется меню, при этом подвисает skype. Skype установлен из SNAP. 
+### С помощью flatpak (впервые работаю с flatpak)
 
-На форуме reddit у пользователей были аналогичные проблемы и они им предложили установить skype из deb пакета.
+Вроде установилось и норм работает.
 
+```
+$ sudo apt install -y flatpak
+
+$ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+
+$ flatpak install flathub com.skype.Client
+
+$ flatpak run com.skype.Client
+```
+
+<br/>
+
+https://flathub.org/apps/com.skype.Client
+
+<br/>
+
+### С помощью Snap
+
+<br/>
+
+**Последний раз делаю:**  
+2025.02.06
+
+На ноуте с процессором AMD, по правой кнопке не появляется меню, при этом подвисает skype.
+
+Версия которая устанавливается, криво работает. За более чем год так и не поправили!
+Работающую версию Microsoft запретил использовать.
 
 <br/>
 
 ```
-// Удаляю skype, установленный ранее с помощью snap
-$ snap remove skype
+// $ sudo snap remove skype
+$ sudo snap install skype
 ```
 
 <br/>
 
+### Deb пакет
+
+**Последний раз делаю:**  
+2025.02.06
+
+<br/>
+
+Устанавливается версия 8.109.0.209, которая отказывается стартовать и требует обновиться
+
+<br/>
 
 ```
 // Прямая ссылка на deb пакет
 $ wget https://go.skype.com/skypeforlinux-64.deb
-$ sudo dpkg -i ./skypeforlinux-64.deb
 ```
-
 
 <br/>
 
-После переустановки стало работать
+```
+// инсталлировать .deb пакет с skype
+$ sudo dpkg -i ./skypeforlinux-64.deb
+```
+
+<br/>
+
+```
+// Найти ранее установленный skype
+$ dpkg --list | grep skype
+```
+
+<br/>
+
+```
+// Удалить skype
+$ sudo dpkg --remove skypeforlinux
+```
