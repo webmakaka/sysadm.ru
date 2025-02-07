@@ -11,7 +11,7 @@ permalink: /desktop/linux/ubuntu/keyboard-remap-keys/
 <br/>
 
 Делаю!  
-2025.01.28
+2025.02.07
 
 <br/>
 
@@ -24,6 +24,92 @@ permalink: /desktop/linux/ubuntu/keyboard-remap-keys/
 <br/>
 
 Ранее использовал длительное время клавиатуру попроще, и привык к расположению кнопок. А на новой клавиши End, PgUp, PgDn расположены для меня непривычно. Благо можно клавиши вытащить и местами поменять. Остается перенастроить назначение клавишь в операционной системе.
+
+<br/>
+
+### xremap
+
+<br/>
+
+https://github.com/xremap/xremap
+
+<br/>
+
+```
+// Скачал с github
+$ sudo mv xremap /usr/bin/
+```
+
+<br/>
+
+```
+$ sudo vi /etc/xremap-config.yml
+```
+
+<br/>
+
+```
+modmap:
+  - name: End
+    remap:
+      KEY_PAGEDOWN: KEY_END
+  - name: PgUp
+    remap:
+      KEY_END: KEY_PAGEUP
+  - name: PgDn
+    remap:
+      KEY_PAGEUP: KEY_PAGEDOWN
+```
+
+<br/>
+
+```
+// Клавиши
+https://github.com/emberian/evdev/blob/1d020f11b283b0648427a2844b6b980f1a268221/src/scancodes.rs#L26-L572
+```
+
+<br/>
+
+```
+$ sudo vi /etc/systemd/system/xremap.service
+```
+
+<br/>
+
+```
+[Unit]
+Description=xremap
+
+[Service]
+Restart=always
+TimeoutStartSec=2
+ExecStart=/bin/sh -c '/usr/bin/xremap /etc/xremap-config.yml'
+ExecStop=/usr/bin/pkill -f /usr/bin/xremap
+
+[Install]
+WantedBy=multi-user.target
+```
+
+<br/>
+
+```
+$ sudo systemctl enable xremap.service
+$ sudo systemctl start  xremap.service
+$ sudo systemctl status xremap.service
+```
+
+<br/>
+
+### Xmodmap
+
+<br/>
+
+Делаю!  
+2025.01.28
+
+<br/>
+
+При старте работы в браузере, сбрасывалось.
 
 <br/>
 
@@ -131,3 +217,26 @@ https://www.youtube.com/watch?v=g_WUusDluLw
 <br/>
 
 https://www.thequantizer.com/remap-keys-startup-ubuntu/
+
+<br/>
+
+### input-remapper
+
+Не заработал. Возникала непонятная ошибка, которую не удалось победить.
+
+<br/>
+
+https://github.com/sezanzeb/input-remapper
+
+<br/>
+
+```
+$ input-remapper-gtk
+```
+
+<br/>
+
+```
+// Удаляем
+$ sudo apt remove -y input-remapper
+```
