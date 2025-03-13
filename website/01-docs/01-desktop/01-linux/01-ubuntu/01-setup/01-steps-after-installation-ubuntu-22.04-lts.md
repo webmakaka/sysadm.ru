@@ -18,7 +18,7 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts
 ```
 $ sudo su -
 $ sudo apt update -y && sudo apt upgrade -y
-$ sudo apt install -y vim curl git
+$ sudo apt install -y openssh-server vim curl git
 ```
 
 <br/>
