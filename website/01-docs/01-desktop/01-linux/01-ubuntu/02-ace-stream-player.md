@@ -13,7 +13,7 @@ permalink: /desktop/linux/ubuntu/ace-stream-player/
 ### Инсталляция ACE Stream плеера в Ubuntu 22.04.01
 
 Делаю:  
-2024.05.18
+2025.02.19
 
 <br/>
 

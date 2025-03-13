@@ -15,7 +15,7 @@ permalink: /desktop/linux/ubuntu/keyboard-remap-keys/
 
 <br/>
 
-Купил клавиатуру "Redragon игровая клавиатура механическая проводная Elf"
+Купил в интернете клавиатуру "Redragon игровая клавиатура механическая проводная Elf".
 
 <br/>
 
@@ -23,14 +23,19 @@ permalink: /desktop/linux/ubuntu/keyboard-remap-keys/
 
 <br/>
 
-Ранее использовал длительное время клавиатуру попроще, и привык к расположению кнопок. А на новой клавиши End, PgUp, PgDn расположены для меня непривычно. Благо можно клавиши вытащить и местами поменять. Остается перенастроить назначение клавишь в операционной системе.
+Ранее использовал длительное время клавиатуру попроще, и привык к расположению кнопок.
+А на новой клавиши End, PgUp, PgDn расположены для меня непривычно.
+Благо можно клавиши вытащить и местами поменять.
+Остается перенастроить назначение клавиш в операционной системе.
+Какое-то время я на поиски подходящего решения все-таки потерял и чтобы в следующий раз не потерять еще, лучше записать.
 
 <br/>
 
-### xremap
+### Xremap (Рекомендую этот вариант)
 
 <br/>
 
+**github:**  
 https://github.com/xremap/xremap
 
 <br/>
@@ -70,6 +75,10 @@ https://github.com/emberian/evdev/blob/1d020f11b283b0648427a2844b6b980f1a268221/
 
 <br/>
 
+**Добавлю в сервис при запуске;**
+
+<br/>
+
 ```
 $ sudo vi /etc/systemd/system/xremap.service
 ```
@@ -100,7 +109,7 @@ $ sudo systemctl status xremap.service
 
 <br/>
 
-### Xmodmap
+### Xmodmap (Не рекомендую)
 
 <br/>
 
@@ -109,7 +118,7 @@ $ sudo systemctl status xremap.service
 
 <br/>
 
-При старте работы в браузере, сбрасывалось.
+При старте работы в браузере, переставало работать.
 
 <br/>
 
@@ -206,9 +215,9 @@ Comment: remaps keys
 
 Указать, разумеется нужно своего пользователя и ребутнуться. -->
 
-<br/>
+<!-- <br/>
 
-### How to remap keys in Ubuntu xmodmap [+Video]
+How to remap keys in Ubuntu xmodmap [+Video]
 
 <br/>
 
@@ -216,11 +225,11 @@ https://www.youtube.com/watch?v=g_WUusDluLw
 
 <br/>
 
-https://www.thequantizer.com/remap-keys-startup-ubuntu/
+https://www.thequantizer.com/remap-keys-startup-ubuntu/ -->
 
 <br/>
 
-### input-remapper
+### Input-remapper (Не рекомендую)
 
 Не заработал. Возникала непонятная ошибка, которую не удалось победить.
 
