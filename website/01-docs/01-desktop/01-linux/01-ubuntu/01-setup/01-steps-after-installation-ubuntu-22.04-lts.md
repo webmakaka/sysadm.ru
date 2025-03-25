@@ -23,34 +23,9 @@ $ sudo apt install -y openssh-server vim curl git
 
 <br/>
 
-### Не спрашивать каждый раз пароль при комаде с sudo
+### [Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
 
-[Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
-
-<br/>
-
-### Установка VSCODE
-
-<br/>
-
-```
-$ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-$ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-$ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-```
-
-<br/>
-
-```
-$ sudo apt install apt-transport-https
-$ sudo apt update
-$ sudo apt install -y code
-```
-
-<br/>
-
-Дока:  
-https://code.visualstudio.com/docs/setup/linux
+### [Установка VSCODE в Ubuntu Linux](/desktop/linux/ubuntu/editors/vscode/)
 
 <br/>
 
