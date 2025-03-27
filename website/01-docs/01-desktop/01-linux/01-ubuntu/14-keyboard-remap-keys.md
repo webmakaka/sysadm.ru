@@ -85,13 +85,15 @@ $ sudo vi /etc/systemd/system/xremap.service
 
 <br/>
 
-```
+```bash
 [Unit]
 Description=xremap
+After=network.target
 
 [Service]
-Restart=always
 TimeoutStartSec=2
+Restart=always
+RestartSec=60s
 ExecStart=/bin/sh -c '/usr/bin/xremap /etc/xremap-config.yml'
 ExecStop=/usr/bin/pkill -f /usr/bin/xremap
 
