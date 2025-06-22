@@ -257,12 +257,16 @@ $ route -n
 <br/>
 
 Делаю!  
-2024.12.29
+2025.06.22
 
 ```
-$ sudo service --status-all
-
-// Непонятно отработала или нет
-// $ sudo systemctl stop openvpn
+$ sudo systemctl stop openvpn
 $ sudo systemctl disable openvpn
+```
+
+<br/>
+
+```
+$ sudo service --status-all | grep openvpn
+ [ - ]  openvpn
 ```
