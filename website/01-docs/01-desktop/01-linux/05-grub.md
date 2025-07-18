@@ -1,12 +1,73 @@
 ---
 layout: page
-title: Выбор загружаемого при старте kernel в Ubuntu 20 с помощью GRUB
-description: Выбор загружаемого при старте kernel в Ubuntu 20 с помощью GRUB
+title: Выбор загружаемого при старте kernel в Ubuntu 22 с помощью GRUB
+description: Выбор загружаемого при старте kernel в Ubuntu 22 с помощью GRUB
 keywords: desktop, linux, ubuntu, setup, grub
 permalink: /desktop/linux/grub/
 ---
 
-# Выбор загружаемого при старте kernel в Ubuntu 20 с помощью GRUB
+# Выбор загружаемого при старте kernel в Ubuntu 22 с помощью GRUB
+
+<br/>
+
+### С помощью GUI
+
+После обновления ubuntu командами sudo apt update и sudo apt upgrade и рубута, при логине ничего не происходило и возвращалось окно логина.
+
+Удалось залогиниться, выбрав интерфейс пользователя Unity (не тот который мне нужен). При этом мониторы подключенные к видеокарте не включились. Решил поменять ядро.
+
+<br/>
+
+**Делаю:**  
+2025.07.18
+
+<br/>
+
+```
+$ sudo apt install -y \
+    grub-customizer
+```
+
+**Выпилено в версии 22.04**
+
+Можно установить следующим образом в 22.04
+
+<br/>
+
+https://itsubuntu.com/how-to-install-grub-customizer-on-ubuntu-22-04-lts/
+
+<br/>
+
+```
+$ sudo add-apt-repository ppa:trebelnik-stefina/grub-customizer
+$ sudo apt update
+$ sudo apt install grub-customizer
+```
+
+или
+
+```
+// Вот этот вариант не пробовал
+$ sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+$ sudo apt-get update
+$ sudo apt-get install -y grub-customizer
+```
+
+<br/>
+
+```
+$ grub-customizer
+```
+
+<br/>
+
+General settings -> default entry -> predefined -> Ubuntu -> Linux workstation 6.5.0-45-generic
+
+Save
+
+Reboot
+
+Норм запустилось
 
 <br/>
 
@@ -63,7 +124,7 @@ $ sudo vi /etc/default/grub
 <br/>
 
 ```
-// Хитрый синтаксис по ссылке что ниже, вроде объясняетяс
+// Хитрый синтаксис по ссылке что ниже, вроде объясняется
 // Но вообще 1 д.б. и 4 это пункт из меню, что представлен выше
 GRUB_DEFAULT="1>4"
 ```
@@ -97,58 +158,3 @@ Linux workstation 6.5.0-41-generic
 <br/>
 
 https://askubuntu.com/questions/82140/how-can-i-boot-with-an-older-kernel-version
-
-<br/>
-
-### С помощью GUI
-
-**Делаю:**  
-2024.04.18
-
-Не установилось. Репо не подключилось. Ошибка какая-то.
-
-<br/>
-
-**Делаю:**  
-2024.01.25
-
-<br/>
-
-```
-$ sudo apt install -y \
-    grub-customizer
-```
-
-**Выпилено в версии 22.04**
-
-Пишут, что можно установить следующим образом в 22.04
-
-<br/>
-
-https://itsubuntu.com/how-to-install-grub-customizer-on-ubuntu-22-04-lts/
-
-<br/>
-
-```
-$ sudo add-apt-repository ppa:trebelnik-stefina/grub-customizer
-$ sudo apt update
-$ sudo apt install grub-customizer
-```
-
-или
-
-```
-$ sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-$ sudo apt-get update
-$ sudo apt-get install -y grub-customizer
-```
-
-<br/>
-
-```
-$ grub-customizer
-```
-
-<br/>
-
-General settings -> default entry -> predefined -> Ubuntu with linux 6.5.0-14-generic
